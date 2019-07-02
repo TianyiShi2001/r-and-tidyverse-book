@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>R与tidyverse——数据分析入门</title>
+  <meta name="description" content="这是我b站R与tidyverse教程的配套资源" />
+  <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="R与tidyverse——数据分析入门" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="这是我b站R与tidyverse教程的配套资源" />
+  <meta name="github-repo" content="TianyiShi2001/R-Tutorial-Resorces" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="R与tidyverse——数据分析入门" />
+  
+  <meta name="twitter:description" content="这是我b站R与tidyverse教程的配套资源" />
+  
+
+<meta name="author" content="石天熠" />
+
+
+<meta name="date" content="2019-07-02" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="intro-and-installation.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'tob8xaq',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<script src="https://hypothes.is/embed.js" async></script>
+<style>
+.book.font-family-0 {
+  font-family: Georgia, source-han-serif-sc, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.book.font-family-1 {
+  font-family: Arial, Helvetica, source-han-sans-simplified-c, sans-serif, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+</style>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>欢迎</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#简介"><i class="fa fa-check"></i>简介</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#说明"><i class="fa fa-check"></i>使用说明</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i>Colophon</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R和RStudio介绍和安装教程</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro-and-installation.html"><a href="intro-and-installation.html#r"><i class="fa fa-check"></i><b>1.1</b> 什么是R</a></li>
+<li class="chapter" data-level="1.2" data-path="intro-and-installation.html"><a href="intro-and-installation.html#rrstudio"><i class="fa fa-check"></i><b>1.2</b> 安装R和RStudio</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="intro-and-installation.html"><a href="intro-and-installation.html#r"><i class="fa fa-check"></i><b>1.2.1</b> 安装R</a></li>
+<li class="chapter" data-level="1.2.2" data-path="intro-and-installation.html"><a href="intro-and-installation.html#rstudio"><i class="fa fa-check"></i><b>1.2.2</b> 安装RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="intro-and-installation.html"><a href="intro-and-installation.html#youshi"><i class="fa fa-check"></i><b>1.3</b> 为什么使用R，R与其他统计软件的比较[^0]</a></li>
+<li class="chapter" data-level="1.4" data-path="intro-and-installation.html"><a href="intro-and-installation.html#section-1.4"><i class="fa fa-check"></i><b>1.4</b> 论坛类（解答实际操作中的问题）</a></li>
+<li class="chapter" data-level="1.5" data-path="intro-and-installation.html"><a href="intro-and-installation.html#referencefunctionpackage"><i class="fa fa-check"></i><b>1.5</b> Reference类（查找特定的function/package的用法，就像查字典一样）</a></li>
+<li class="chapter" data-level="1.6" data-path="intro-and-installation.html"><a href="intro-and-installation.html#section-1.6"><i class="fa fa-check"></i><b>1.6</b> 教程和书籍类（用来系统地学习）</a></li>
+<li class="chapter" data-level="1.7" data-path="intro-and-installation.html"><a href="intro-and-installation.html#-cheat-sheets"><i class="fa fa-check"></i><b>1.7</b> 速查表 (Cheat sheets)（用来贴墙上）</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="ch2.html"><a href="ch2.html"><i class="fa fa-check"></i><b>2</b> RStudio界面介绍，基本操作，和创建新项目</a><ul>
+<li class="chapter" data-level="2.1" data-path="ch2.html"><a href="ch2.html#section-2.1"><i class="fa fa-check"></i><b>2.1</b> 界面</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="ch2.html"><a href="ch2.html#section-2.1.1"><i class="fa fa-check"></i><b>2.1.1</b> 概览</a></li>
+<li class="chapter" data-level="2.1.2" data-path="ch2.html"><a href="ch2.html#console"><i class="fa fa-check"></i><b>2.1.2</b> 左下角：Console（控制台）</a></li>
+<li class="chapter" data-level="2.1.3" data-path="ch2.html"><a href="ch2.html#source"><i class="fa fa-check"></i><b>2.1.3</b> 左上角：Source（源）</a></li>
+<li class="chapter" data-level="2.1.4" data-path="ch2.html"><a href="ch2.html#environment"><i class="fa fa-check"></i><b>2.1.4</b> 右上角：Environment（环境），</a></li>
+<li class="chapter" data-level="2.1.5" data-path="ch2.html"><a href="ch2.html#plotshelpfilespackages"><i class="fa fa-check"></i><b>2.1.5</b> 右下角：Plots（绘图），Help（帮助），Files（文件）和Packages（包）</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="ch2.html"><a href="ch2.html#section-2.2"><i class="fa fa-check"></i><b>2.2</b> 基本操作</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="ch2.html"><a href="ch2.html#section-2.2.1"><i class="fa fa-check"></i><b>2.2.1</b> 执行代码</a></li>
+<li class="chapter" data-level="2.2.2" data-path="ch2.html"><a href="ch2.html#manage"><i class="fa fa-check"></i><b>2.2.2</b> 记录和管理代码</a></li>
+<li class="chapter" data-level="2.2.3" data-path="ch2.html"><a href="ch2.html#r-script"><i class="fa fa-check"></i><b>2.2.3</b> 写/保存/运行R script</a></li>
+<li class="chapter" data-level="2.2.4" data-path="ch2.html"><a href="ch2.html#section-2.2.4"><i class="fa fa-check"></i><b>2.2.4</b> 关于换行</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>3</b> 安装和使用packages (包)</a><ul>
+<li class="chapter" data-level="3.1" data-path="packages.html"><a href="packages.html#package"><i class="fa fa-check"></i><b>3.1</b> Package是什么，为什么使用它们？</a></li>
+<li class="chapter" data-level="3.2" data-path="packages.html"><a href="packages.html#packages"><i class="fa fa-check"></i><b>3.2</b> 如何安装packages</a></li>
+<li class="chapter" data-level="3.3" data-path="packages.html"><a href="packages.html#packages"><i class="fa fa-check"></i><b>3.3</b> 如何使用packages</a></li>
+<li class="chapter" data-level="3.4" data-path="packages.html"><a href="packages.html#section-3.4"><i class="fa fa-check"></i><b>3.4</b> 其它</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="packages.html"><a href="packages.html#require-and-library"><i class="fa fa-check"></i><b>3.4.1</b> <code>library()</code>和<code>require</code>的区别；如何使用一行指令读取多个packages</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>4</b> 向量，逻辑，循环和函数</a><ul>
+<li class="chapter" data-level="4.1" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-4.1"><i class="fa fa-check"></i><b>4.1</b> 向量的概念，操作和优越性</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#create-vector"><i class="fa fa-check"></i><b>4.1.1</b> 创建向量（赋值）</a></li>
+<li class="chapter" data-level="4.1.2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#indexing"><i class="fa fa-check"></i><b>4.1.2</b> 索引/取子集 (indexing/subsetting)</a></li>
+<li class="chapter" data-level="4.1.3" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-4.1.3"><i class="fa fa-check"></i><b>4.1.3</b> 生成器</a></li>
+<li class="chapter" data-level="4.1.4" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-4.1.4"><i class="fa fa-check"></i><b>4.1.4</b> 向量的其它操作</a></li>
+<li class="chapter" data-level="4.1.5" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#youyuexing"><i class="fa fa-check"></i><b>4.1.5</b> R向量的优越性</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#-data-types"><i class="fa fa-check"></i><b>4.2</b> 数据类型 (Data Types)</a></li>
+<li class="chapter" data-level="4.3" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-4.3"><i class="fa fa-check"></i><b>4.3</b> 数学表达和运算</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-4.3.1"><i class="fa fa-check"></i><b>4.3.1</b> 数的表达</a></li>
+<li class="chapter" data-level="4.3.2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#arithmetic"><i class="fa fa-check"></i><b>4.3.2</b> 运算</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#logical-operation"><i class="fa fa-check"></i><b>4.4</b> 逻辑</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#logical-values"><i class="fa fa-check"></i><b>4.4.1</b> Logical Values（逻辑值）</a></li>
+<li class="chapter" data-level="4.4.2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#logical-operations"><i class="fa fa-check"></i><b>4.4.2</b> Logical Operations（逻辑运算）</a></li>
+<li class="chapter" data-level="4.4.3" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-4.4.3"><i class="fa fa-check"></i><b>4.4.3</b> 逻辑运算详解</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-4.5"><i class="fa fa-check"></i><b>4.5</b> 判断和循环（控制流程）</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#if-else-else-if-"><i class="fa fa-check"></i><b>4.5.1</b> <code>if</code>, <code>else</code>, <code>else if</code> 语句</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-4.6"><i class="fa fa-check"></i><b>4.6</b> 函数</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#abbr"><i class="fa fa-check"></i><b>4.6.1</b> 调用函数时的简写</a></li>
+<li class="chapter" data-level="4.6.2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#..."><i class="fa fa-check"></i><b>4.6.2</b> 关于<code>...</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-4.7"><i class="fa fa-check"></i><b>4.7</b> 简易的统计学计算</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#t"><i class="fa fa-check"></i><b>4.7.1</b> t分布</a></li>
+<li class="chapter" data-level="4.7.2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#z"><i class="fa fa-check"></i><b>4.7.2</b> z分布</a></li>
+<li class="chapter" data-level="4.7.3" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#t"><i class="fa fa-check"></i><b>4.7.3</b> t检验</a></li>
+<li class="chapter" data-level="4.7.4" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#chi2-"><i class="fa fa-check"></i><b>4.7.4</b> <span class="math inline">\(\chi^2\)</span> 检验</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="tibble.html"><a href="tibble.html"><i class="fa fa-check"></i><b>5</b> dataframe（数据框）和tibble</a><ul>
+<li class="chapter" data-level="5.1" data-path="tibble.html"><a href="tibble.html#dataframetibble"><i class="fa fa-check"></i><b>5.1</b> 查看dataframe/tibble并了解它们的结构</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="tibble.html"><a href="tibble.html#dataframetibble"><i class="fa fa-check"></i><b>5.1.1</b> dataframe/tibble的基本概念</a></li>
+<li class="chapter" data-level="5.1.2" data-path="tibble.html"><a href="tibble.html#section-5.1.2"><i class="fa fa-check"></i><b>5.1.2</b> 查看更多数据</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="tibble.html"><a href="tibble.html#tibble"><i class="fa fa-check"></i><b>5.2</b> tibble的创建和基础操作</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="tibble.html"><a href="tibble.html#tibble"><i class="fa fa-check"></i><b>5.2.1</b> 创建tibble</a></li>
+<li class="chapter" data-level="5.2.2" data-path="tibble.html"><a href="tibble.html#section-5.2.2"><i class="fa fa-check"></i><b>5.2.2</b> 取子集（抓取行，列）</a></li>
+<li class="chapter" data-level="5.2.3" data-path="tibble.html"><a href="tibble.html#factor"><i class="fa fa-check"></i><b>5.2.3</b> 关于Factor</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="tibble.html"><a href="tibble.html#list-arraymatrix"><i class="fa fa-check"></i><b>5.3</b> 进阶内容：list, array和matrix</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="tibble.html"><a href="tibble.html#list"><i class="fa fa-check"></i><b>5.3.1</b> list（列表）简介</a></li>
+<li class="chapter" data-level="5.3.2" data-path="tibble.html"><a href="tibble.html#base-r-dataframe--tidyverse-tibble"><i class="fa fa-check"></i><b>5.3.2</b> Base R dataframe 和 Tidyverse tibble的区别</a></li>
+<li class="chapter" data-level="5.3.3" data-path="tibble.html"><a href="tibble.html#arraymatrix"><i class="fa fa-check"></i><b>5.3.3</b> array（数组）和matrix（矩阵）简介</a></li>
+<li class="chapter" data-level="5.3.4" data-path="tibble.html"><a href="tibble.html#matricesarrays"><i class="fa fa-check"></i><b>5.3.4</b> 给matrices和arrays命名</a></li>
+<li class="chapter" data-level="5.3.5" data-path="tibble.html"><a href="tibble.html#apply"><i class="fa fa-check"></i><b>5.3.5</b> <code>apply</code></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>6</b> 使用ggplot绘图</a><ul>
+<li class="chapter" data-level="6.1" data-path="graphics.html"><a href="graphics.html#section-6.1"><i class="fa fa-check"></i><b>6.1</b> 哲理</a></li>
+<li class="chapter" data-level="6.2" data-path="graphics.html"><a href="graphics.html#section-6.2"><i class="fa fa-check"></i><b>6.2</b> 基础</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="graphics.html"><a href="graphics.html#section-6.2.1"><i class="fa fa-check"></i><b>6.2.1</b> 基本语法</a></li>
+<li class="chapter" data-level="6.2.2" data-path="graphics.html"><a href="graphics.html#section-6.2.2"><i class="fa fa-check"></i><b>6.2.2</b> 图像类型</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="graphics.html"><a href="graphics.html#section-6.3"><i class="fa fa-check"></i><b>6.3</b> 进阶</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="graphics.html"><a href="graphics.html#section-6.3.1"><i class="fa fa-check"></i><b>6.3.1</b> 逐层作图</a></li>
+<li class="chapter" data-level="6.3.2" data-path="graphics.html"><a href="graphics.html#section-6.3.2"><i class="fa fa-check"></i><b>6.3.2</b> 尺寸，轴，和图例</a></li>
+<li class="chapter" data-level="6.3.3" data-path="graphics.html"><a href="graphics.html#section-6.3.3"><i class="fa fa-check"></i><b>6.3.3</b> 位置</a></li>
+<li class="chapter" data-level="6.3.4" data-path="graphics.html"><a href="graphics.html#section-6.3.4"><i class="fa fa-check"></i><b>6.3.4</b> 背景/主题的修改</a></li>
+<li class="chapter" data-level="6.3.5" data-path="graphics.html"><a href="graphics.html#ggplot"><i class="fa fa-check"></i><b>6.3.5</b> 与ggplot编程</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="graphics.html"><a href="graphics.html#base-r"><i class="fa fa-check"></i><b>6.4</b> 附：Base R中的作图</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="wrangle.html"><a href="wrangle.html"><i class="fa fa-check"></i><b>7</b> 数据处理</a><ul>
+<li class="chapter" data-level="7.1" data-path="wrangle.html"><a href="wrangle.html#untidy-datatidy-data"><i class="fa fa-check"></i><b>7.1</b> 把“untidy data”整成“tidy data”</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="wrangle.html"><a href="wrangle.html#untidy-data"><i class="fa fa-check"></i><b>7.1.1</b> “untidy data”的主要问题</a></li>
+<li class="chapter" data-level="7.1.2" data-path="wrangle.html"><a href="wrangle.html#section-7.1.2"><i class="fa fa-check"></i><b>7.1.2</b> 解决方案</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="wrangle.html"><a href="wrangle.html#section-7.2"><i class="fa fa-check"></i><b>7.2</b> 数据的导入和导出</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="wrangle.html"><a href="wrangle.html#data-import"><i class="fa fa-check"></i><b>7.2.1</b> 导入</a></li>
+<li class="chapter" data-level="7.2.2" data-path="wrangle.html"><a href="wrangle.html#section-7.2.2"><i class="fa fa-check"></i><b>7.2.2</b> 导出</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="python.html"><a href="python.html"><i class="fa fa-check"></i><b>8</b> 与Python的联合使用</a><ul>
+<li class="chapter" data-level="8.1" data-path="python.html"><a href="python.html#rpython-reticulate"><i class="fa fa-check"></i><b>8.1</b> 在R中使用Python: <code>reticulate</code></a></li>
+<li class="chapter" data-level="8.2" data-path="python.html"><a href="python.html#pythonr-rpy"><i class="fa fa-check"></i><b>8.2</b> 在Python中使用R: <code>rpy</code></a></li>
+<li class="chapter" data-level="8.3" data-path="python.html"><a href="python.html#beaker-notebook"><i class="fa fa-check"></i><b>8.3</b> Beaker Notebook</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="bibiolography.html"><a href="bibiolography.html"><i class="fa fa-check"></i>Bibiolography</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R与tidyverse——数据分析入门</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">R与tidyverse——数据分析入门</h1>
+<p class="author"><em>石天熠</em></p>
+<p class="date"><em>2019-07-02</em></p>
+</div>
+<div id="welcome" class="section level1 unnumbered">
+<h1>欢迎</h1>
+<div id="简介" class="section level3 unnumbered">
+<h3>简介</h3>
+<p>本书为R<span class="citation">(R Core Team <a href="#ref-R-base">2019</a>)</span>和tidyverse<span class="citation">(Wickham <a href="#ref-R-tidyverse">2017</a>)</span>的入门向教程。教学视频在b站（）。</p>
+</div>
+<div id="说明" class="section level3 unnumbered">
+<h3>使用说明</h3>
+<p>左上角的菜单可以选择收起/展开目录，搜索，和外观，字体调整。</p>
+<p>如果你对某一段文字有修改意见，可以选择那段文字，并通过Hypothesis留言（选择“annotate”）。右上角可以展开显示公开的留言。</p>
+<p>如果你熟悉<a href="https://bookdown.org">Bookdown</a>和Github，可以<a href="https://github.com/TianyiShi2001/R-Tutorial-Resorces">在此提交pull request</a>.</p>
+</div>
+<div id="colophon" class="section level3 unnumbered">
+<h3>Colophon</h3>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+<pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw">session_info</span>(<span class="kw">c</span>(<span class="st">&quot;tidyverse&quot;</span>))</code></pre>
+<pre><code>## ─ Session info ──────────────────────────────────────────────────────────
+##  setting  value                       
+##  version  R version 3.5.3 (2019-03-11)
+##  os       macOS  10.15                
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_GB.UTF-8                 
+##  ctype    en_GB.UTF-8                 
+##  tz       Asia/Shanghai               
+##  date     2019-07-02                  
+## 
+## ─ Packages ──────────────────────────────────────────────────────────────
+##  package      * version  date       lib source                        
+##  askpass        1.1      2019-01-13 [2] CRAN (R 3.5.2)                
+##  assertthat     0.2.1    2019-03-21 [2] CRAN (R 3.5.2)                
+##  backports      1.1.4    2019-04-10 [2] CRAN (R 3.5.2)                
+##  base64enc      0.1-3    2015-07-28 [2] CRAN (R 3.5.0)                
+##  BH             1.69.0-1 2019-01-07 [2] CRAN (R 3.5.2)                
+##  broom          0.5.2    2019-04-07 [2] CRAN (R 3.5.2)                
+##  callr          3.2.0    2019-03-15 [2] CRAN (R 3.5.1)                
+##  cellranger     1.1.0    2016-07-27 [2] CRAN (R 3.5.0)                
+##  cli            1.1.0    2019-03-19 [2] CRAN (R 3.5.2)                
+##  clipr          0.6.0    2019-04-15 [2] CRAN (R 3.5.2)                
+##  colorspace     1.4-1    2019-03-18 [2] CRAN (R 3.5.2)                
+##  crayon         1.3.4    2017-09-16 [2] CRAN (R 3.5.0)                
+##  curl           3.3      2019-01-10 [2] CRAN (R 3.5.2)                
+##  DBI            1.0.0    2018-05-02 [2] CRAN (R 3.5.0)                
+##  dbplyr         1.4.2    2019-06-17 [2] CRAN (R 3.5.3)                
+##  digest         0.6.19   2019-05-20 [2] CRAN (R 3.5.2)                
+##  dplyr          0.8.1    2019-05-14 [2] CRAN (R 3.5.2)                
+##  ellipsis       0.1.0    2019-02-19 [2] CRAN (R 3.5.2)                
+##  evaluate       0.14     2019-05-28 [2] CRAN (R 3.5.2)                
+##  fansi          0.4.0    2018-10-05 [2] CRAN (R 3.5.0)                
+##  forcats        0.4.0    2019-02-17 [2] CRAN (R 3.5.2)                
+##  fs             1.3.1    2019-05-06 [2] CRAN (R 3.5.2)                
+##  generics       0.0.2    2018-11-29 [2] CRAN (R 3.5.0)                
+##  ggplot2        3.2.0    2019-06-16 [2] CRAN (R 3.5.2)                
+##  glue           1.3.1    2019-03-12 [2] CRAN (R 3.5.2)                
+##  gtable         0.3.0    2019-03-25 [2] CRAN (R 3.5.2)                
+##  haven          2.1.0    2019-02-19 [2] CRAN (R 3.5.2)                
+##  highr          0.8      2019-03-20 [2] CRAN (R 3.5.2)                
+##  hms            0.4.2    2018-03-10 [2] CRAN (R 3.5.0)                
+##  htmltools      0.3.6    2017-04-28 [2] CRAN (R 3.5.0)                
+##  httr           1.4.0    2018-12-11 [2] CRAN (R 3.5.0)                
+##  jsonlite       1.6      2018-12-07 [2] CRAN (R 3.5.0)                
+##  knitr          1.23     2019-05-18 [2] CRAN (R 3.5.2)                
+##  labeling       0.3      2014-08-23 [2] CRAN (R 3.5.0)                
+##  lattice        0.20-38  2018-11-04 [2] CRAN (R 3.5.3)                
+##  lazyeval       0.2.2    2019-03-15 [2] CRAN (R 3.5.2)                
+##  lubridate      1.7.4    2018-04-11 [2] CRAN (R 3.5.0)                
+##  magrittr       1.5      2014-11-22 [2] CRAN (R 3.5.0)                
+##  markdown       1.0      2019-06-07 [2] CRAN (R 3.5.2)                
+##  MASS           7.3-51.4 2019-03-31 [2] CRAN (R 3.5.2)                
+##  Matrix         1.2-17   2019-03-22 [2] CRAN (R 3.5.2)                
+##  mgcv           1.8-28   2019-03-21 [1] CRAN (R 3.5.2)                
+##  mime           0.7      2019-06-11 [2] CRAN (R 3.5.2)                
+##  modelr         0.1.4    2019-02-18 [2] CRAN (R 3.5.2)                
+##  munsell        0.5.0    2018-06-12 [2] CRAN (R 3.5.0)                
+##  nlme           3.1-140  2019-05-12 [1] CRAN (R 3.5.2)                
+##  openssl        1.4      2019-05-31 [2] CRAN (R 3.5.2)                
+##  pillar         1.4.1    2019-05-28 [2] CRAN (R 3.5.2)                
+##  pkgconfig      2.0.2    2018-08-16 [2] CRAN (R 3.5.0)                
+##  plogr          0.2.0    2018-03-25 [2] CRAN (R 3.5.0)                
+##  plyr           1.8.4    2016-06-08 [2] CRAN (R 3.5.0)                
+##  prettyunits    1.0.2    2015-07-13 [2] CRAN (R 3.5.0)                
+##  processx       3.3.1    2019-05-08 [2] CRAN (R 3.5.2)                
+##  progress       1.2.2    2019-05-16 [2] CRAN (R 3.5.2)                
+##  ps             1.3.0    2018-12-21 [2] CRAN (R 3.5.0)                
+##  purrr          0.3.2    2019-03-15 [2] CRAN (R 3.5.2)                
+##  R6             2.4.0    2019-02-14 [2] CRAN (R 3.5.2)                
+##  RColorBrewer   1.1-2    2014-12-07 [1] CRAN (R 3.5.0)                
+##  Rcpp           1.0.1    2019-03-17 [2] CRAN (R 3.5.2)                
+##  readr          1.3.1    2018-12-21 [2] CRAN (R 3.5.0)                
+##  readxl         1.3.1    2019-03-13 [2] CRAN (R 3.5.2)                
+##  rematch        1.0.1    2016-04-21 [2] CRAN (R 3.5.0)                
+##  reprex         0.3.0    2019-05-16 [2] CRAN (R 3.5.2)                
+##  reshape2       1.4.3    2017-12-11 [2] CRAN (R 3.5.0)                
+##  rlang          0.3.4    2019-04-07 [2] CRAN (R 3.5.2)                
+##  rmarkdown      1.13     2019-05-22 [2] CRAN (R 3.5.2)                
+##  rstudioapi     0.10     2019-03-19 [2] CRAN (R 3.5.2)                
+##  rvest          0.3.4    2019-05-15 [2] CRAN (R 3.5.2)                
+##  scales         1.0.0    2018-08-09 [2] CRAN (R 3.5.0)                
+##  selectr        0.4-1    2018-04-06 [2] CRAN (R 3.5.0)                
+##  stringi        1.4.3    2019-03-12 [2] CRAN (R 3.5.2)                
+##  stringr        1.4.0    2019-02-10 [2] CRAN (R 3.5.2)                
+##  sys            3.2      2019-04-23 [2] CRAN (R 3.5.2)                
+##  tibble         2.1.3    2019-06-06 [2] CRAN (R 3.5.3)                
+##  tidyr          0.8.3    2019-03-01 [2] CRAN (R 3.5.2)                
+##  tidyselect     0.2.5    2018-10-11 [2] CRAN (R 3.5.0)                
+##  tidyverse      1.2.1    2017-11-14 [2] CRAN (R 3.5.0)                
+##  tinytex        0.13.5   2019-06-19 [1] Github (yihui/tinytex@cfc729c)
+##  utf8           1.1.4    2018-05-24 [2] CRAN (R 3.5.0)                
+##  vctrs          0.1.0    2018-11-29 [2] CRAN (R 3.5.0)                
+##  viridisLite    0.3.0    2018-02-01 [2] CRAN (R 3.5.0)                
+##  whisker        0.3-2    2013-04-28 [2] CRAN (R 3.5.0)                
+##  withr          2.1.2    2018-03-15 [2] CRAN (R 3.5.0)                
+##  xfun           0.7      2019-05-14 [2] CRAN (R 3.5.2)                
+##  xml2           1.2.0    2018-01-24 [2] CRAN (R 3.5.0)                
+##  yaml           2.2.0    2018-07-25 [2] CRAN (R 3.5.0)                
+##  zeallot        0.1.0    2018-01-28 [2] CRAN (R 3.5.0)                
+## 
+## [1] /Users/tianyishi/Library/R/3.5/library
+## [2] /Library/Frameworks/R.framework/Versions/3.5/Resources/library</code></pre>
+
+</div>
+</div>
+<h3>Bibiolography</h3>
+<div id="refs" class="references">
+<div id="ref-R-base">
+<p>R Core Team. 2019. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.</p>
+</div>
+<div id="ref-R-tidyverse">
+<p>Wickham, Hadley. 2017. <em>Tidyverse: Easily Install and Load the ’Tidyverse’</em>. <a href="https://CRAN.R-project.org/package=tidyverse">https://CRAN.R-project.org/package=tidyverse</a>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="intro-and-installation.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["R与tidyverse——数据分析入门.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
