@@ -178,7 +178,7 @@ This work is licensed under a Creative Commons Attribution-NonCommercial-NoDeriv
 
 本作品采用\href{https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh}{知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议}进行许可。
 
-本书使用R Markdown (\url{http://rmarkdown.rstudio.com/)在RStudio} (\url{http://www.rstudio.com/ide/)中编写。knitr} (httpL//yihui.name/knitr/)和pandoc (\url{https://pandoc.org/)把Rmd文件编译成html和pdf}
+本书使用R Markdown (\url{http://rmarkdown.rstudio.com/} )在RStudio (\url{http://www.rstudio.com/ide/} )中编写。knitr (httpL//yihui.name/knitr/ )和pandoc (\url{https://pandoc.org/} )把Rmd文件编译成html和pdf
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2473,10 +2473,10 @@ base
 ## # A tibble: 4 x 11
 ##   manufacturer model  displ  year   cyl trans drv     cty   hwy fl    class
 ##   <chr>        <chr>  <dbl> <int> <int> <chr> <chr> <int> <int> <chr> <chr>
-## 1 dodge        duran~   5.2  1999     8 auto~ 4        11    16 r     suv  
-## 2 ford         f150 ~   5.4  1999     8 auto~ 4        11    15 r     pick~
-## 3 pontiac      grand~   3.8  1999     6 auto~ f        17    27 r     mids~
-## 4 dodge        carav~   3.3  1999     6 auto~ f        16    22 r     mini~
+## 1 chevrolet    k1500~   5.3  2008     8 auto~ 4        14    19 r     suv  
+## 2 audi         a4       2    2008     4 manu~ f        20    31 p     comp~
+## 3 volkswagen   new b~   2.5  2008     5 auto~ f        20    29 r     subc~
+## 4 nissan       maxima   3    1999     6 auto~ f        18    26 r     mids~
 \end{verbatim}
 
 \hypertarget{factor}{%
@@ -2579,7 +2579,7 @@ R中的list是一种特殊的数据存储形式。使用\texttt{list()}函数来
 ## [[5]]
 ## function (x, ...) 
 ## UseMethod("t.test")
-## <bytecode: 0x7fcfae8c8020>
+## <bytecode: 0x7fdcf9c23518>
 ## <environment: namespace:stats>
 \end{verbatim}
 
@@ -2728,6 +2728,8 @@ Tibble既有list的特征，也有matrix的特征。
 \subsection{Base R dataframe 和 Tidyverse tibble的区别}\label{base-r-dataframe--tidyverse-tibble}}
 
 你可能已经注意到，上面\texttt{mpg{[}3,\ {]}}和\texttt{select(mpg,\ 3)}是等效的；\texttt{mpg{[}3,\ {]}}显然更精简，那么为什么要使用\texttt{select()}函数呢？
+
+zaocheng(Gentleman \protect\hyperlink{ref-Gentleman2009R-Programming-Bioinfo}{2009}, 33; Wickham \protect\hyperlink{ref-Wickham:2019}{2019})
 
 \hypertarget{arraymatrix}{%
 \subsection{array（数组）和matrix（矩阵）简介}\label{arraymatrix}}
@@ -2927,33 +2929,33 @@ Dataframe不是matrix（虽然都是方的）. Matrix是二维的，\textbf{仅�
 \begin{verbatim}
 ## , , 1
 ## 
-##            [,1]      [,2]       [,3]       [,4]      [,5]
-## [1,] 0.41434308 0.4711039 0.52351186 0.24397207 0.4625603
-## [2,] 0.15769432 0.6805976 0.61237873 0.87682343 0.5571892
-## [3,] 0.94001228 0.9190032 0.33773087 0.78464163 0.5326318
-## [4,] 0.15331747 0.7203922 0.06009472 0.06504344 0.8711724
-## [5,] 0.31464623 0.7447924 0.61182622 0.29551607 0.8208334
-## [6,] 0.08620387 0.4059124 0.08478483 0.30622528 0.3560613
+##            [,1]       [,2]       [,3]      [,4]       [,5]
+## [1,] 0.01747660 0.03621864 0.56893107 0.7107867 0.92292923
+## [2,] 0.44482824 0.63668167 0.26120390 0.1727626 0.28614734
+## [3,] 0.49571255 0.88220111 0.61098565 0.6035374 0.52372891
+## [4,] 0.10029230 0.75338966 0.34910396 0.1498189 0.07531753
+## [5,] 0.05230998 0.91573193 0.01627236 0.6020531 0.32535215
+## [6,] 0.50577164 0.01805035 0.43037513 0.1123572 0.06993512
 ## 
 ## , , 2
 ## 
-##            [,1]      [,2]      [,3]      [,4]      [,5]
-## [1,] 0.30572878 0.7109056 0.8285097 0.1512264 0.1364098
-## [2,] 0.58939743 0.7827361 0.9920996 0.6964091 0.8213966
-## [3,] 0.78398957 0.2038322 0.6339607 0.3883223 0.6107262
-## [4,] 0.83339878 0.3359570 0.5056570 0.8003802 0.2552703
-## [5,] 0.58338802 0.9891593 0.5527622 0.9193629 0.6708516
-## [6,] 0.02926021 0.8434040 0.7502204 0.1120765 0.5984930
+##            [,1]      [,2]       [,3]      [,4]      [,5]
+## [1,] 0.87670022 0.1305317 0.94578483 0.5824832 0.1068476
+## [2,] 0.87619427 0.5689510 0.50839892 0.3380869 0.3687583
+## [3,] 0.04695704 0.3322171 0.24968495 0.4082315 0.3204315
+## [4,] 0.90537457 0.7567612 0.06957588 0.5448623 0.9323420
+## [5,] 0.73482149 0.6743771 0.65996082 0.1082526 0.2888702
+## [6,] 0.26957467 0.2940170 0.32492553 0.3434087 0.2275641
 ## 
 ## , , 3
 ## 
-##            [,1]       [,2]        [,3]      [,4]      [,5]
-## [1,] 0.35012960 0.84427517 0.371783353 0.9731701 0.8114402
-## [2,] 0.02750938 0.79724164 0.679812154 0.8952902 0.2046514
-## [3,] 0.03439413 0.05004879 0.489619261 0.2140061 0.9397663
-## [4,] 0.43359605 0.68806399 0.717347769 0.1830532 0.3205851
-## [5,] 0.40261460 0.86628986 0.002737983 0.2492440 0.5619048
-## [6,] 0.64570339 0.98411626 0.436186512 0.2754077 0.1139996
+##            [,1]      [,2]      [,3]      [,4]      [,5]
+## [1,] 0.54128484 0.2624738 0.2797684 0.4970809 0.9469957
+## [2,] 0.62453043 0.7971279 0.1483188 0.7246349 0.1599331
+## [3,] 0.09203005 0.4197473 0.2139433 0.9175193 0.8625735
+## [4,] 0.61698465 0.2668436 0.7263040 0.8050640 0.8832949
+## [5,] 0.96395614 0.8687073 0.5053677 0.3782621 0.7882524
+## [6,] 0.73065462 0.6275487 0.2931764 0.5843281 0.9170792
 \end{verbatim}
 
 然后我们用\texttt{dimnames()}来命名：
@@ -2968,33 +2970,33 @@ Dataframe不是matrix（虽然都是方的）. Matrix是二维的，\textbf{仅�
 \begin{verbatim}
 ## , , chloroquine
 ## 
-##          P. falciparum P. malariae   P. ovale   P. vivax P. knowlesi
-## trial. 1    0.41434308   0.4711039 0.52351186 0.24397207   0.4625603
-## trial. 2    0.15769432   0.6805976 0.61237873 0.87682343   0.5571892
-## trial. 3    0.94001228   0.9190032 0.33773087 0.78464163   0.5326318
-## trial. 4    0.15331747   0.7203922 0.06009472 0.06504344   0.8711724
-## trial. 5    0.31464623   0.7447924 0.61182622 0.29551607   0.8208334
-## trial. 6    0.08620387   0.4059124 0.08478483 0.30622528   0.3560613
+##          P. falciparum P. malariae   P. ovale  P. vivax P. knowlesi
+## trial. 1    0.01747660  0.03621864 0.56893107 0.7107867  0.92292923
+## trial. 2    0.44482824  0.63668167 0.26120390 0.1727626  0.28614734
+## trial. 3    0.49571255  0.88220111 0.61098565 0.6035374  0.52372891
+## trial. 4    0.10029230  0.75338966 0.34910396 0.1498189  0.07531753
+## trial. 5    0.05230998  0.91573193 0.01627236 0.6020531  0.32535215
+## trial. 6    0.50577164  0.01805035 0.43037513 0.1123572  0.06993512
 ## 
 ## , , artemisinin
 ## 
-##          P. falciparum P. malariae  P. ovale  P. vivax P. knowlesi
-## trial. 1    0.30572878   0.7109056 0.8285097 0.1512264   0.1364098
-## trial. 2    0.58939743   0.7827361 0.9920996 0.6964091   0.8213966
-## trial. 3    0.78398957   0.2038322 0.6339607 0.3883223   0.6107262
-## trial. 4    0.83339878   0.3359570 0.5056570 0.8003802   0.2552703
-## trial. 5    0.58338802   0.9891593 0.5527622 0.9193629   0.6708516
-## trial. 6    0.02926021   0.8434040 0.7502204 0.1120765   0.5984930
+##          P. falciparum P. malariae   P. ovale  P. vivax P. knowlesi
+## trial. 1    0.87670022   0.1305317 0.94578483 0.5824832   0.1068476
+## trial. 2    0.87619427   0.5689510 0.50839892 0.3380869   0.3687583
+## trial. 3    0.04695704   0.3322171 0.24968495 0.4082315   0.3204315
+## trial. 4    0.90537457   0.7567612 0.06957588 0.5448623   0.9323420
+## trial. 5    0.73482149   0.6743771 0.65996082 0.1082526   0.2888702
+## trial. 6    0.26957467   0.2940170 0.32492553 0.3434087   0.2275641
 ## 
 ## , , doxycycline
 ## 
-##          P. falciparum P. malariae    P. ovale  P. vivax P. knowlesi
-## trial. 1    0.35012960  0.84427517 0.371783353 0.9731701   0.8114402
-## trial. 2    0.02750938  0.79724164 0.679812154 0.8952902   0.2046514
-## trial. 3    0.03439413  0.05004879 0.489619261 0.2140061   0.9397663
-## trial. 4    0.43359605  0.68806399 0.717347769 0.1830532   0.3205851
-## trial. 5    0.40261460  0.86628986 0.002737983 0.2492440   0.5619048
-## trial. 6    0.64570339  0.98411626 0.436186512 0.2754077   0.1139996
+##          P. falciparum P. malariae  P. ovale  P. vivax P. knowlesi
+## trial. 1    0.54128484   0.2624738 0.2797684 0.4970809   0.9469957
+## trial. 2    0.62453043   0.7971279 0.1483188 0.7246349   0.1599331
+## trial. 3    0.09203005   0.4197473 0.2139433 0.9175193   0.8625735
+## trial. 4    0.61698465   0.2668436 0.7263040 0.8050640   0.8832949
+## trial. 5    0.96395614   0.8687073 0.5053677 0.3782621   0.7882524
+## trial. 6    0.73065462   0.6275487 0.2931764 0.5843281   0.9170792
 \end{verbatim}
 
 \textbf{清清楚楚，一目了然。}
@@ -3092,6 +3094,9 @@ Inspired by Jupyter, Beaker Notebook allows you to switch from one language in o
 \leavevmode\hypertarget{ref-Coghlan:2016}{}%
 Coghlan, Avril. 2016. ``A Little Book of R for Biomedical Statistics.''
 
+\leavevmode\hypertarget{ref-Gentleman2009R-Programming-Bioinfo}{}%
+Gentleman, Robert. 2009. \emph{R Programming for Bioinformatics}. Book. Boca Raton, FL: CRC Press.
+
 \leavevmode\hypertarget{ref-Kernighan1988The-C-Programming-La}{}%
 Kernighan, Brain W., and Ednnis M. Ritchie. 1988. \emph{The C Programming Language}. 2nd ed. Prentice Hall.
 
@@ -3103,6 +3108,9 @@ RStudio Team. 2015. \emph{RStudio: Integrated Development Environment for R}. Bo
 
 \leavevmode\hypertarget{ref-Wickham2015ggplot2-Elegant-Gra}{}%
 Wickham, Hadley. 2015. \emph{Ggplot2: Elegant Graphics for Data Analysis}. Use R! Springer.
+
+\leavevmode\hypertarget{ref-Wickham:2019}{}%
+---------. 2019. \emph{Advanced R}. 2nd ed. CRC Press.
 
 \leavevmode\hypertarget{ref-Ziemann2016Gene-name-errors}{}%
 Ziemann, Mark, Yotam Eren, and Assam El-Osta. 2016. ``Gene Name Errors Are Widespread in the Scientific Literature.'' Journal Article. \emph{Genome Biology} 17 (1): 177. \url{https://doi.org/10.1186/s13059-016-1044-7}.

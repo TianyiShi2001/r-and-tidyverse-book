@@ -1,6 +1,6 @@
 ---
 nocite: |
- @Gentleman2009R-Programming-Bioinfo
+ @Gentleman2009R-Programming-Bioinfo, @Grolemund:2016
 ---
 
 # dataframe（数据框）和tibble {#tibble}
@@ -265,6 +265,9 @@ mpg[3, ]
 ### Base R dataframe 和 Tidyverse tibble的区别
 
 你可能已经注意到，上面`mpg[3, ]`和`select(mpg, 3)`是等效的；`mpg[3, ]`显然更精简，那么为什么要使用`select()`函数呢？
+
+
+zaocheng[@Gentleman2009R-Programming-Bioinfo, p. 33; @Wickham:2019]
 
 
 

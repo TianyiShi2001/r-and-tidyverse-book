@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.10.15)  2 JUL 2019 10:42
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.10.15)  2 JUL 2019 11:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1817,37 +1817,6 @@ LaTeX Font Info:    Font shape `TU/SourceHanSerifSC-Regular(0)/bx/n' will be
 (Font)              scaled to size 10.06238pt on input line 157.
 File: doclicense-CC-by-nc-nd.pdf Graphic file (type pdf)
 <use doclicense-CC-by-nc-nd.pdf>
-Missing character: There is no 在 in font CMU Serif Roman/OT:script=latn;languag
-e=DFLT;mapping=tex-text;!
-Missing character: There is no 中 in font CMU Serif Roman/OT:script=latn;languag
-e=DFLT;mapping=tex-text;!
-Missing character: There is no 编 in font CMU Serif Roman/OT:script=latn;languag
-e=DFLT;mapping=tex-text;!
-Missing character: There is no 写 in font CMU Serif Roman/OT:script=latn;languag
-e=DFLT;mapping=tex-text;!
-Missing character: There is no 。 in font CMU Serif Roman/OT:script=latn;languag
-e=DFLT;mapping=tex-text;!
-Missing character: There is no 把 in font CMU Serif Roman/OT:script=latn;languag
-e=DFLT;mapping=tex-text;!
-Missing character: There is no 文 in font CMU Serif Roman/OT:script=latn;languag
-e=DFLT;mapping=tex-text;!
-Missing character: There is no 件 in font CMU Serif Roman/OT:script=latn;languag
-e=DFLT;mapping=tex-text;!
-Missing character: There is no 编 in font CMU Serif Roman/OT:script=latn;languag
-e=DFLT;mapping=tex-text;!
-Missing character: There is no 译 in font CMU Serif Roman/OT:script=latn;languag
-e=DFLT;mapping=tex-text;!
-Missing character: There is no 成 in font CMU Serif Roman/OT:script=latn;languag
-e=DFLT;mapping=tex-text;!
-Missing character: There is no 和 in font CMU Serif Roman/OT:script=latn;languag
-e=DFLT;mapping=tex-text;!
-
-Underfull \hbox (badness 2875) in paragraph at lines 181--182
-[]\TU/SourceHanSerifSC-Regular(0)/m/n/10 本 书 使 用 \TU/CMUSerif(0)/m/n/10 R Markd
-own ([]$[][][][] [] [] [] [][][][][][][][][] [] [][][][][][][] [] [][][] [] [][
-][][][][][][][]$[] ([]$[][][][] []
- []
-
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 185.
 LaTeX Font Info:    Font shape `TU/STFangsong(0)/m/n' will be
@@ -2597,26 +2566,26 @@ Overfull \hbox (64.5pt too wide) in paragraph at lines 2475--2475
 
 
 Overfull \hbox (54.0pt too wide) in paragraph at lines 2476--2476
-[]\TU/lmtt/m/n/10 ## 1 dodge        duran~   5.2  1999     8 auto~ 4        11 
-   16 r     suv[] 
+[]\TU/lmtt/m/n/10 ## 1 chevrolet    k1500~   5.3  2008     8 auto~ 4        14 
+   19 r     suv[] 
  []
 
 
 Overfull \hbox (64.5pt too wide) in paragraph at lines 2477--2477
-[]\TU/lmtt/m/n/10 ## 2 ford         f150 ~   5.4  1999     8 auto~ 4        11 
-   15 r     pick~[] 
+[]\TU/lmtt/m/n/10 ## 2 audi         a4       2    2008     4 manu~ f        20 
+   31 p     comp~[] 
  []
 
 
 Overfull \hbox (64.5pt too wide) in paragraph at lines 2478--2478
-[]\TU/lmtt/m/n/10 ## 3 pontiac      grand~   3.8  1999     6 auto~ f        17 
-   27 r     mids~[] 
+[]\TU/lmtt/m/n/10 ## 3 volkswagen   new b~   2.5  2008     5 auto~ f        20 
+   29 r     subc~[] 
  []
 
 
 Overfull \hbox (64.5pt too wide) in paragraph at lines 2479--2479
-[]\TU/lmtt/m/n/10 ## 4 dodge        carav~   3.3  1999     6 auto~ f        16 
-   22 r     mini~[] 
+[]\TU/lmtt/m/n/10 ## 4 nissan       maxima   3    1999     6 auto~ f        18 
+   26 r     mids~[] 
  []
 
 [50]
@@ -2662,129 +2631,129 @@ Overfull \hbox (64.5pt too wide) in paragraph at lines 2722--2722
  []
 
 [54] [55] [56] [57]
-Overfull \hbox (27.75pt too wide) in paragraph at lines 2971--2971
-[]\TU/lmtt/m/n/10 ##          P. falciparum P. malariae   P. ovale   P. vivax P
-. knowlesi[] 
+Overfull \hbox (22.5pt too wide) in paragraph at lines 2973--2973
+[]\TU/lmtt/m/n/10 ##          P. falciparum P. malariae   P. ovale  P. vivax P.
+ knowlesi[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 2972--2972
-[]\TU/lmtt/m/n/10 ## trial. 1    0.41434308   0.4711039 0.52351186 0.24397207  
- 0.4625603[] 
+Overfull \hbox (22.5pt too wide) in paragraph at lines 2974--2974
+[]\TU/lmtt/m/n/10 ## trial. 1    0.01747660  0.03621864 0.56893107 0.7107867  0
+.92292923[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 2973--2973
-[]\TU/lmtt/m/n/10 ## trial. 2    0.15769432   0.6805976 0.61237873 0.87682343  
- 0.5571892[] 
+Overfull \hbox (22.5pt too wide) in paragraph at lines 2975--2975
+[]\TU/lmtt/m/n/10 ## trial. 2    0.44482824  0.63668167 0.26120390 0.1727626  0
+.28614734[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 2974--2974
-[]\TU/lmtt/m/n/10 ## trial. 3    0.94001228   0.9190032 0.33773087 0.78464163  
- 0.5326318[] 
+Overfull \hbox (22.5pt too wide) in paragraph at lines 2976--2976
+[]\TU/lmtt/m/n/10 ## trial. 3    0.49571255  0.88220111 0.61098565 0.6035374  0
+.52372891[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 2975--2975
-[]\TU/lmtt/m/n/10 ## trial. 4    0.15331747   0.7203922 0.06009472 0.06504344  
- 0.8711724[] 
+Overfull \hbox (22.5pt too wide) in paragraph at lines 2977--2977
+[]\TU/lmtt/m/n/10 ## trial. 4    0.10029230  0.75338966 0.34910396 0.1498189  0
+.07531753[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 2976--2976
-[]\TU/lmtt/m/n/10 ## trial. 5    0.31464623   0.7447924 0.61182622 0.29551607  
- 0.8208334[] 
+Overfull \hbox (22.5pt too wide) in paragraph at lines 2978--2978
+[]\TU/lmtt/m/n/10 ## trial. 5    0.05230998  0.91573193 0.01627236 0.6020531  0
+.32535215[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 2977--2977
-[]\TU/lmtt/m/n/10 ## trial. 6    0.08620387   0.4059124 0.08478483 0.30622528  
- 0.3560613[] 
+Overfull \hbox (22.5pt too wide) in paragraph at lines 2979--2979
+[]\TU/lmtt/m/n/10 ## trial. 6    0.50577164  0.01805035 0.43037513 0.1123572  0
+.06993512[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 2981--2981
+Overfull \hbox (22.5pt too wide) in paragraph at lines 2983--2983
+[]\TU/lmtt/m/n/10 ##          P. falciparum P. malariae   P. ovale  P. vivax P.
+ knowlesi[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 2984--2984
+[]\TU/lmtt/m/n/10 ## trial. 1    0.87670022   0.1305317 0.94578483 0.5824832   
+0.1068476[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 2985--2985
+[]\TU/lmtt/m/n/10 ## trial. 2    0.87619427   0.5689510 0.50839892 0.3380869   
+0.3687583[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 2986--2986
+[]\TU/lmtt/m/n/10 ## trial. 3    0.04695704   0.3322171 0.24968495 0.4082315   
+0.3204315[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 2987--2987
+[]\TU/lmtt/m/n/10 ## trial. 4    0.90537457   0.7567612 0.06957588 0.5448623   
+0.9323420[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 2988--2988
+[]\TU/lmtt/m/n/10 ## trial. 5    0.73482149   0.6743771 0.65996082 0.1082526   
+0.2888702[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 2989--2989
+[]\TU/lmtt/m/n/10 ## trial. 6    0.26957467   0.2940170 0.32492553 0.3434087   
+0.2275641[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 2993--2993
 []\TU/lmtt/m/n/10 ##          P. falciparum P. malariae  P. ovale  P. vivax P. 
 knowlesi[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 2982--2982
-[]\TU/lmtt/m/n/10 ## trial. 1    0.30572878   0.7109056 0.8285097 0.1512264   0
-.1364098[] 
+Overfull \hbox (17.25pt too wide) in paragraph at lines 2994--2994
+[]\TU/lmtt/m/n/10 ## trial. 1    0.54128484   0.2624738 0.2797684 0.4970809   0
+.9469957[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 2983--2983
-[]\TU/lmtt/m/n/10 ## trial. 2    0.58939743   0.7827361 0.9920996 0.6964091   0
-.8213966[] 
+Overfull \hbox (17.25pt too wide) in paragraph at lines 2995--2995
+[]\TU/lmtt/m/n/10 ## trial. 2    0.62453043   0.7971279 0.1483188 0.7246349   0
+.1599331[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 2984--2984
-[]\TU/lmtt/m/n/10 ## trial. 3    0.78398957   0.2038322 0.6339607 0.3883223   0
-.6107262[] 
+Overfull \hbox (17.25pt too wide) in paragraph at lines 2996--2996
+[]\TU/lmtt/m/n/10 ## trial. 3    0.09203005   0.4197473 0.2139433 0.9175193   0
+.8625735[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 2985--2985
-[]\TU/lmtt/m/n/10 ## trial. 4    0.83339878   0.3359570 0.5056570 0.8003802   0
-.2552703[] 
+Overfull \hbox (17.25pt too wide) in paragraph at lines 2997--2997
+[]\TU/lmtt/m/n/10 ## trial. 4    0.61698465   0.2668436 0.7263040 0.8050640   0
+.8832949[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 2986--2986
-[]\TU/lmtt/m/n/10 ## trial. 5    0.58338802   0.9891593 0.5527622 0.9193629   0
-.6708516[] 
+Overfull \hbox (17.25pt too wide) in paragraph at lines 2998--2998
+[]\TU/lmtt/m/n/10 ## trial. 5    0.96395614   0.8687073 0.5053677 0.3782621   0
+.7882524[] 
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 2987--2987
-[]\TU/lmtt/m/n/10 ## trial. 6    0.02926021   0.8434040 0.7502204 0.1120765   0
-.5984930[] 
- []
-
-
-Overfull \hbox (27.75pt too wide) in paragraph at lines 2991--2991
-[]\TU/lmtt/m/n/10 ##          P. falciparum P. malariae    P. ovale  P. vivax P
-. knowlesi[] 
- []
-
-
-Overfull \hbox (27.75pt too wide) in paragraph at lines 2992--2992
-[]\TU/lmtt/m/n/10 ## trial. 1    0.35012960  0.84427517 0.371783353 0.9731701  
- 0.8114402[] 
- []
-
-
-Overfull \hbox (27.75pt too wide) in paragraph at lines 2993--2993
-[]\TU/lmtt/m/n/10 ## trial. 2    0.02750938  0.79724164 0.679812154 0.8952902  
- 0.2046514[] 
- []
-
-
-Overfull \hbox (27.75pt too wide) in paragraph at lines 2994--2994
-[]\TU/lmtt/m/n/10 ## trial. 3    0.03439413  0.05004879 0.489619261 0.2140061  
- 0.9397663[] 
- []
-
-
-Overfull \hbox (27.75pt too wide) in paragraph at lines 2995--2995
-[]\TU/lmtt/m/n/10 ## trial. 4    0.43359605  0.68806399 0.717347769 0.1830532  
- 0.3205851[] 
- []
-
-
-Overfull \hbox (27.75pt too wide) in paragraph at lines 2996--2996
-[]\TU/lmtt/m/n/10 ## trial. 5    0.40261460  0.86628986 0.002737983 0.2492440  
- 0.5619048[] 
- []
-
-
-Overfull \hbox (27.75pt too wide) in paragraph at lines 2997--2997
-[]\TU/lmtt/m/n/10 ## trial. 6    0.64570339  0.98411626 0.436186512 0.2754077  
- 0.1139996[] 
+Overfull \hbox (17.25pt too wide) in paragraph at lines 2999--2999
+[]\TU/lmtt/m/n/10 ## trial. 6    0.73065462   0.6275487 0.2931764 0.5843281   0
+.9170792[] 
  []
 
 [58]
@@ -2803,9 +2772,9 @@ Chapter 8.
 ]
 Chapter 9.
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 3075.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 3077.
 
-Overfull \hbox (62.94351pt too wide) in paragraph at lines 3083--3084
+Overfull \hbox (62.94351pt too wide) in paragraph at lines 3085--3086
 []$[][][][][] [] [] [] [][][][][][][][][][][][][] [] [][][] [] [][][][] [] [][]
  [] [][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][]$[] 
@@ -2814,12 +2783,12 @@ Overfull \hbox (62.94351pt too wide) in paragraph at lines 3083--3084
 [63] [64
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3111.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3119.
 [65]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3111.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3119.
 (./R与tidyverse——数据分析入门.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3111.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3111.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3119.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3119.
 
 Package rerunfilecheck Info: File `R与tidyverse——数据分析入门.out' has not changed.
 (rerunfilecheck)             Checksum: 8627F79A132A5A47AA79A251BB3B0412.

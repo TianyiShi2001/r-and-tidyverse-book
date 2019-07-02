@@ -7,13 +7,13 @@
     "folds" : "",
     "hash" : "0",
     "id" : "BD26BF5",
-    "lastKnownWriteTime" : 1562035016,
-    "last_content_update" : 1562035016345,
+    "lastKnownWriteTime" : 1562053514,
+    "last_content_update" : 1562053514205,
     "path" : "~/Documents/GitHub/r-and-tidyverse-book/05-list-dataframe-tibble.Rmd",
     "project_path" : "05-list-dataframe-tibble.Rmd",
     "properties" : {
-        "cursorPosition" : "265,0",
-        "scrollLine" : "261"
+        "cursorPosition" : "8,0",
+        "scrollLine" : "0"
     },
     "relative_order" : 3,
     "source_on_save" : false,
