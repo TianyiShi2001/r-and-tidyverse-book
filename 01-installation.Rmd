@@ -40,6 +40,10 @@ SAS，SPSS和Prism都是收费的，而且不便宜。比如SAS第一年需要[1
 
 R比SAS功能更强大。所有SAS中的功能，都能在R中实现，而很多R中的功能无法在SAS中实现[^1]。
 
+R有巨大的用户社群[^users]，并且有很多乐于助人的大佬在各个论坛上解决问题，或是编写免费获取的教程。SAS等软件虽然有客户支持，但是如果你用的是盗版……
+
+[users]: https://blog.revolutionanalytics.com/2014/04/a-world-map-of-r-user-activity.html
+
 R和Python（NumPy和SciPy）是开源、免费的。在数据分析的应用中，R比Python历史更悠久，因此积攒了很多很棒的packages（包）。一般来说，python的强项是数据挖掘，而R的强项是数据分析，它们都是强大的工具。不用担心需要在二者之中做选择，因为rpy, reticulate等packages可以让你在python中使用R，在R中使用python，详情请见第\@ref(python)章。无论你是数据分析零基础，还是有python数据分析的经验，都能从本书中获益。
 
 至于Excel，它的定位原本就是办公（而不是学术）软件，用作数据收集和初步整理是可以的，但是做不了严谨的数据分析和大数据，功能也非常局限。有五分之一的使用了Excel的遗传学论文，数据都出现了偏差 [@Ziemann2016Gene-name-errors]。
