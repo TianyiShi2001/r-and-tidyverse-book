@@ -1,0 +1,5 @@
+*.DS_Store
+*.Rhistory
+*.log
+.Rproj.user
+_bookdown_files
