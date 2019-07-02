@@ -42,7 +42,7 @@ R比SAS功能更强大。所有SAS中的功能，都能在R中实现，而很多
 
 R有巨大的用户社群[^users]，并且有很多乐于助人的大佬在各个论坛上解决问题，或是编写免费获取的教程。SAS等软件虽然有客户支持，但是如果你用的是盗版……
 
-[users]: https://blog.revolutionanalytics.com/2014/04/a-world-map-of-r-user-activity.html
+[^users]: https://blog.revolutionanalytics.com/2014/04/a-world-map-of-r-user-activity.html
 
 R和Python（NumPy和SciPy）是开源、免费的。在数据分析的应用中，R比Python历史更悠久，因此积攒了很多很棒的packages（包）。一般来说，python的强项是数据挖掘，而R的强项是数据分析，它们都是强大的工具。不用担心需要在二者之中做选择，因为rpy, reticulate等packages可以让你在python中使用R，在R中使用python，详情请见第\@ref(python)章。无论你是数据分析零基础，还是有python数据分析的经验，都能从本书中获益。
 
@@ -55,7 +55,7 @@ R是GNU计划的一部分，因此R是一个自由软件 (Libre software)。你�
 
 [^0]: Gentleman, R. (2009). *R Programming for Bioinformatics*. Boca Raton, FL: CRC Press.
 [^1]: https://thomaswdinsmore.com/2014/12/15/sas-versus-r-part-two/
-[^Excel]: Ziemann, M., Eren, Y., & El-Osta, A. (2016). Gene name errors are widespread in the scientific literature. Genome Biology, 17(1), 177. Retrieved from https://doi.org/10.1186/s13059-016-1044-7. doi:10.1186/s13059-016-1044-7
+
 
 # 获取资源与帮助（重要！） {#getting-help}
 

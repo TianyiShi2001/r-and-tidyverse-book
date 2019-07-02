@@ -27,8 +27,8 @@ description: "这是我b站R与tidyverse教程的配套资源"
 
 本书有Gitbook版本 (https://tianyishi2001.github.io/r-and-tidyverse-book/ )和[通过XeLaTeX排版的PDF版本](https://tianyishi2001.github.io/r-and-tidyverse-book/R与tidyverse——数据分析入门.pdf)。
 
-### 使用说明 {-#说明}
-左上角的菜单可以选择收起/展开目录，搜索，和外观，字体调整。
+### Gitbook版本使用说明 {-#说明}
+左上角的菜单可以选择收起/展开目录，搜索，和外观，字体调整。中文衬线体使用的是思源宋体，非常好看，建议尝试。
 
 如果你对某一段文字有修改意见，可以选择那段文字，并通过Hypothesis留言（选择"annotate"）。右上角可以展开显示公开的留言。首次使用需要注册。
 
