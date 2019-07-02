@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1562028208654.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1885807615",
+    "id" : "499AF11B",
+    "lastKnownWriteTime" : 1561973740,
+    "last_content_update" : 1561973740,
+    "path" : "~/Documents/GitHub/r-and-tidyverse-book/01-installation.Rmd",
+    "project_path" : "01-installation.Rmd",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

@@ -125,9 +125,14 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2019-07-01}
+    \date{2019-07-02}
 
 \usepackage[UTF8]{ctex}
+\usepackage[
+    type={CC},
+    modifier={by-nc-nd},
+    version={4.0}
+ ]{doclicense}
 
 \begin{document}
 \maketitle
@@ -156,13 +161,135 @@
 
 如果你熟悉\href{https://bookdown.org}{Bookdown}和Github，可以\href{https://github.com/TianyiShi2001/R-Tutorial-Resorces}{在此提交pull request}.
 
+\hypertarget{colophon}{%
+\subsection*{Colophon}\label{colophon}}
+\addcontentsline{toc}{subsection}{Colophon}
+
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+\doclicenseThis
+
+本书使用R Markdown (\url{http://rmarkdown.rstudio.com/)在RStudio} (\url{http://www.rstudio.com/ide/)中编写。knitr} (httpL//yihui.name/knitr/)和pandoc (\url{https://pandoc.org/)把Rmd文件编译成html和pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{devtools}\OperatorTok{::}\KeywordTok{session_info}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"tidyverse"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## - Session info ----------------------------------------------------------
+##  setting  value                       
+##  version  R version 3.5.3 (2019-03-11)
+##  os       macOS  10.15                
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_GB.UTF-8                 
+##  ctype    en_GB.UTF-8                 
+##  tz       Asia/Shanghai               
+##  date     2019-07-02                  
+## 
+## - Packages --------------------------------------------------------------
+##  package      * version  date       lib source        
+##  askpass        1.1      2019-01-13 [2] CRAN (R 3.5.2)
+##  assertthat     0.2.1    2019-03-21 [2] CRAN (R 3.5.2)
+##  backports      1.1.4    2019-04-10 [2] CRAN (R 3.5.2)
+##  base64enc      0.1-3    2015-07-28 [2] CRAN (R 3.5.0)
+##  BH             1.69.0-1 2019-01-07 [2] CRAN (R 3.5.2)
+##  broom          0.5.2    2019-04-07 [2] CRAN (R 3.5.2)
+##  callr          3.2.0    2019-03-15 [2] CRAN (R 3.5.1)
+##  cellranger     1.1.0    2016-07-27 [2] CRAN (R 3.5.0)
+##  cli            1.1.0    2019-03-19 [2] CRAN (R 3.5.2)
+##  clipr          0.6.0    2019-04-15 [2] CRAN (R 3.5.2)
+##  colorspace     1.4-1    2019-03-18 [2] CRAN (R 3.5.2)
+##  crayon         1.3.4    2017-09-16 [2] CRAN (R 3.5.0)
+##  curl           3.3      2019-01-10 [2] CRAN (R 3.5.2)
+##  DBI            1.0.0    2018-05-02 [2] CRAN (R 3.5.0)
+##  dbplyr         1.4.2    2019-06-17 [2] CRAN (R 3.5.3)
+##  digest         0.6.19   2019-05-20 [2] CRAN (R 3.5.2)
+##  dplyr        * 0.8.2    2019-06-29 [2] CRAN (R 3.5.2)
+##  ellipsis       0.2.0    2019-06-20 [2] CRAN (R 3.5.2)
+##  evaluate       0.14     2019-05-28 [2] CRAN (R 3.5.2)
+##  fansi          0.4.0    2018-10-05 [2] CRAN (R 3.5.0)
+##  forcats      * 0.4.0    2019-02-17 [2] CRAN (R 3.5.2)
+##  fs             1.3.1    2019-05-06 [2] CRAN (R 3.5.2)
+##  generics       0.0.2    2018-11-29 [2] CRAN (R 3.5.0)
+##  ggplot2      * 3.2.0    2019-06-16 [2] CRAN (R 3.5.2)
+##  glue           1.3.1    2019-03-12 [2] CRAN (R 3.5.2)
+##  gtable         0.3.0    2019-03-25 [2] CRAN (R 3.5.2)
+##  haven          2.1.0    2019-02-19 [2] CRAN (R 3.5.2)
+##  highr          0.8      2019-03-20 [2] CRAN (R 3.5.2)
+##  hms            0.4.2    2018-03-10 [2] CRAN (R 3.5.0)
+##  htmltools      0.3.6    2017-04-28 [2] CRAN (R 3.5.0)
+##  httr           1.4.0    2018-12-11 [2] CRAN (R 3.5.0)
+##  jsonlite       1.6      2018-12-07 [2] CRAN (R 3.5.0)
+##  knitr          1.23     2019-05-18 [2] CRAN (R 3.5.2)
+##  labeling       0.3      2014-08-23 [2] CRAN (R 3.5.0)
+##  lattice        0.20-38  2018-11-04 [2] CRAN (R 3.5.3)
+##  lazyeval       0.2.2    2019-03-15 [2] CRAN (R 3.5.2)
+##  lubridate      1.7.4    2018-04-11 [2] CRAN (R 3.5.0)
+##  magrittr       1.5      2014-11-22 [2] CRAN (R 3.5.0)
+##  markdown       1.0      2019-06-07 [2] CRAN (R 3.5.2)
+##  MASS           7.3-51.4 2019-03-31 [2] CRAN (R 3.5.2)
+##  Matrix         1.2-17   2019-03-22 [2] CRAN (R 3.5.2)
+##  mgcv           1.8-28   2019-03-21 [1] CRAN (R 3.5.2)
+##  mime           0.7      2019-06-11 [2] CRAN (R 3.5.2)
+##  modelr         0.1.4    2019-02-18 [2] CRAN (R 3.5.2)
+##  munsell        0.5.0    2018-06-12 [2] CRAN (R 3.5.0)
+##  nlme           3.1-140  2019-05-12 [1] CRAN (R 3.5.2)
+##  openssl        1.4      2019-05-31 [2] CRAN (R 3.5.2)
+##  pillar         1.4.2    2019-06-29 [2] CRAN (R 3.5.2)
+##  pkgconfig      2.0.2    2018-08-16 [2] CRAN (R 3.5.0)
+##  plogr          0.2.0    2018-03-25 [2] CRAN (R 3.5.0)
+##  plyr           1.8.4    2016-06-08 [2] CRAN (R 3.5.0)
+##  prettyunits    1.0.2    2015-07-13 [2] CRAN (R 3.5.0)
+##  processx       3.3.1    2019-05-08 [2] CRAN (R 3.5.2)
+##  progress       1.2.2    2019-05-16 [2] CRAN (R 3.5.2)
+##  ps             1.3.0    2018-12-21 [2] CRAN (R 3.5.0)
+##  purrr        * 0.3.2    2019-03-15 [2] CRAN (R 3.5.2)
+##  R6             2.4.0    2019-02-14 [2] CRAN (R 3.5.2)
+##  RColorBrewer   1.1-2    2014-12-07 [1] CRAN (R 3.5.0)
+##  Rcpp           1.0.1    2019-03-17 [2] CRAN (R 3.5.2)
+##  readr        * 1.3.1    2018-12-21 [2] CRAN (R 3.5.0)
+##  readxl         1.3.1    2019-03-13 [2] CRAN (R 3.5.2)
+##  rematch        1.0.1    2016-04-21 [2] CRAN (R 3.5.0)
+##  reprex         0.3.0    2019-05-16 [2] CRAN (R 3.5.2)
+##  reshape2       1.4.3    2017-12-11 [2] CRAN (R 3.5.0)
+##  rlang          0.4.0    2019-06-25 [2] CRAN (R 3.5.2)
+##  rmarkdown      1.13     2019-05-22 [2] CRAN (R 3.5.2)
+##  rstudioapi     0.10     2019-03-19 [2] CRAN (R 3.5.2)
+##  rvest          0.3.4    2019-05-15 [2] CRAN (R 3.5.2)
+##  scales         1.0.0    2018-08-09 [2] CRAN (R 3.5.0)
+##  selectr        0.4-1    2018-04-06 [2] CRAN (R 3.5.0)
+##  stringi        1.4.3    2019-03-12 [2] CRAN (R 3.5.2)
+##  stringr      * 1.4.0    2019-02-10 [2] CRAN (R 3.5.2)
+##  sys            3.2      2019-04-23 [2] CRAN (R 3.5.2)
+##  tibble       * 2.1.3    2019-06-06 [2] CRAN (R 3.5.3)
+##  tidyr        * 0.8.3    2019-03-01 [2] CRAN (R 3.5.2)
+##  tidyselect     0.2.5    2018-10-11 [2] CRAN (R 3.5.0)
+##  tidyverse    * 1.2.1    2017-11-14 [2] CRAN (R 3.5.0)
+##  tinytex        0.14     2019-06-25 [1] CRAN (R 3.5.2)
+##  utf8           1.1.4    2018-05-24 [2] CRAN (R 3.5.0)
+##  vctrs          0.1.0    2018-11-29 [2] CRAN (R 3.5.0)
+##  viridisLite    0.3.0    2018-02-01 [2] CRAN (R 3.5.0)
+##  whisker        0.3-2    2013-04-28 [2] CRAN (R 3.5.0)
+##  withr          2.1.2    2018-03-15 [2] CRAN (R 3.5.0)
+##  xfun           0.8      2019-06-25 [2] CRAN (R 3.5.2)
+##  xml2           1.2.0    2018-01-24 [2] CRAN (R 3.5.0)
+##  yaml           2.2.0    2018-07-25 [2] CRAN (R 3.5.0)
+##  zeallot        0.1.0    2018-01-28 [2] CRAN (R 3.5.0)
+## 
+## [1] /Users/tianyishi/Library/R/3.5/library
+## [2] /Library/Frameworks/R.framework/Versions/3.5/Resources/library
+\end{verbatim}
+
 \hypertarget{intro-and-installation}{%
 \chapter{R和RStudio介绍和安装教程}\label{intro-and-installation}}
 
 \hypertarget{r}{%
 \section{什么是R}\label{r}}
 
-R(R Core Team \protect\hyperlink{ref-R-base}{2019})包含R语言和一个有着强大的统计分析及作图功能的软件系统，由新西兰奥克兰大学的Ross Ihaka和Robert Gentleman共同开发。R语言虽然看起来只能做统计，实际上它麻雀虽小，五脏俱全，编程语言该有的特性它基本都有（\href{https://adv-r.hadley.nz/oo.html}{甚至支持OPP}）。
+R(R Core Team \protect\hyperlink{ref-R-base}{2019})包含R语言和一个有着强大的统计分析及作图功能的软件系统，由新西兰奥克兰大学的Ross Ihaka和Robert Gentleman共同开发。R语言虽然看起来只能做统计，实际上它麻雀虽小，五脏俱全，编程语言该有的特性它基本都有（\href{https://adv-r.hadley.nz/oo.html}{甚至支持OOP}）。
 
 安装了R之后，你可以在其自带的``R''软件中（也可以直接在命令行使用），但是那个软件界面比较简单，需要记住一些命令来执行``查看当前存储的数据''，``导出jpg格式的图像''等操作，对新手不太友好。因此我们使用RStudio.
 
@@ -356,7 +483,7 @@ Packages是安装/查看/更新packages（包）的区域。详情请看第\ref{
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-3-1.pdf}
+\includegraphics{R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-4-1.pdf}
 
 可以看到，在plots区，生成了一副漂亮的图。（先别在意每行代码具体的作用，在之后的章节我会一一讲述）
 
@@ -496,7 +623,7 @@ Packages可以增加在基础R语言中没有的功能，可以精简你代码�
 \end{Highlighting}
 \end{Shaded}
 
-在console中运行以上代码，R就会从CRAN中下载tidyverse并安装到你电脑上的默认位置。因此安装packages需要网络连接。
+在console中运行以上代码，R就会从\href{https://cran.r-project.org}{CRAN}中下载tidyverse并安装到你电脑上的默认位置。因此安装packages需要网络连接。
 
 如果想安装多个packages，你可以一行一行地安装，或是把多个packages的名字合成一列，同时安装，比如：
 
@@ -506,7 +633,7 @@ Packages可以增加在基础R语言中没有的功能，可以精简你代码�
 \end{Highlighting}
 \end{Shaded}
 
-它其中包含一系列小
+绝大多数的packages都能用这个方法安装，因为它们是被存储在CRAN上的。Bioconductor packages请看第\ref{Bioconductor}节。
 
 \hypertarget{packages}{%
 \section{如何使用packages}\label{packages}}
@@ -578,6 +705,26 @@ Packages可以增加在基础R语言中没有的功能，可以精简你代码�
 ## [[2]]
 ## [1] TRUE
 \end{verbatim}
+
+\hypertarget{Bioconductor}{%
+\subsection{安装Bioconductor packages}\label{Bioconductor}}
+
+\href{https://bioconductor.org}{Bioconductor}是一系列用于生物信息学的R packages. 截止2019年7月2日，共有1741个可用的bioconductor packages. 它们没有被存储在CRAN上，因此需要用特殊的方法安装。首先，安装一系列Bioconductor的核心packages（可能需要几分钟）：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{source}\NormalTok{(}\StringTok{"http://bioconductor.org/biocLite.R"}\NormalTok{)}
+\KeywordTok{biocLite}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+然后，通过\texttt{biocLite()}函数安装其它packages，比如：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{biocLite}\NormalTok{(}\StringTok{"RforProteomics"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
 \hypertarget{vectors-logicals-and-functions}{%
 \chapter{向量，逻辑，循环和函数}\label{vectors-logicals-and-functions}}
@@ -655,10 +802,29 @@ R没有标量，它通过各种类型的向量 (vector)来存储数据。
 
 （每个被引号包围的一串字符，都只算做一个元素，因此长度为1；多元素的向量请看第\ref{create-vector}节）
 
-\hypertarget{indexing}{%
-\subsection{索引}\label{indexing}}
+还是通过\texttt{c()}函数，可以把多个向量拼接起来：
 
-索引 (index)就是一个元素在向量中的位置。R是从1开始索引的，即索引为1的元素是第一个元素（因此用熟了Python和C可能会有些不适应）。在向量后方使用方括号进行索引。
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{cities_}\DecValTok{1}\NormalTok{ <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"Zürich", "}\NormalTok{上海}\StringTok{", "}\NormalTok{Tehrān}\StringTok{")}
+\StringTok{cities_2 <- c("}\NormalTok{大阪}\StringTok{", "}\NormalTok{Poznań}\StringTok{", "}\NormalTok{Екатеринбу́рг}\StringTok{")}
+
+\StringTok{cities <- c(cities_1, cities_2, c("}\NormalTok{Jyväskylä}\StringTok{", "}\NormalTok{부산}\StringTok{", "}\NormalTok{เชียงใหม่}\StringTok{"))}
+
+\StringTok{cities}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Zürich"       "上海"         "Tehrān"       "大阪"        
+## [5] "Poznań"       "Екатеринбу́рг" "Jyväskylä"    "부산"        
+## [9] "เชียงใหม่"
+\end{verbatim}
+
+\hypertarget{indexing}{%
+\subsection{索引/取子集 (indexing/subsetting)}\label{indexing}}
+
+索引 (index)就是一个元素在向量中的位置。R是从1开始索引的，即索引为1的元素是第一个元素（因此用熟了Python和C可能会有些不适应）。在向量后方使用方括号进行取子集运算（即抓取索引为对应数字的元素；虽然subsetting翻译成``取子集''有点怪，但是没毛病；不知大家有没有更好的翻译方法，或是不翻译更好）。
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -788,7 +954,7 @@ R没有标量，它通过各种类型的向量 (vector)来存储数据。
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-24-1.pdf}
+\includegraphics{R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-28-1.pdf}
 
 正态分布随机数用\texttt{rnorm(n,\ mean,\ sd)}, 三个参数分别为数量，平均值，标准差。默认mean为0，sd为1。
 
@@ -799,7 +965,7 @@ R没有标量，它通过各种类型的向量 (vector)来存储数据。
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-25-1.pdf}
+\includegraphics{R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-29-1.pdf}
 
 \subsection{向量的其它操作}
 
@@ -1586,6 +1752,8 @@ seq(from = 1, to = 1, by = ((to - from)/(length.out - 1)),
 
 \section{简易的统计学计算}
 
+本小节简要解释了R中的t分布，t检验和\(\chi^2\)检验。统计学方法并不是本书的重点，因此可以酌情跳到\protect\hyperlink{tibble}{下一章}。
+
 \hypertarget{t}{%
 \subsection{t分布}\label{t}}
 
@@ -1714,7 +1882,7 @@ seq(from = 1, to = 1, by = ((to - from)/(length.out - 1)),
 ## <a4>
 \end{verbatim}
 
-\includegraphics{R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-55-1.pdf}
+\includegraphics{R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-59-1.pdf}
 
 阴影面积为\(P(t<T)\)，虚线对应的\(t\)为\(T\).
 \texttt{qt()}可以把\(P(t≤T)\)的值转化成\(T\),\texttt{pt()}则相反。
@@ -1782,7 +1950,7 @@ t检验分为以下几种：
   \begin{itemize}
   \tightlist
   \item
-    Unequal variance t test（不等方差）
+    Unequal variance (Welch) t test（不等方差）
   \item
     Equal variance t test（等方差）
   \end{itemize}
@@ -1891,6 +2059,97 @@ R的默认是non-paired, unequal variance，你可以通过增加\texttt{paired\
 \hypertarget{chi2-}{%
 \subsection{\texorpdfstring{\(\chi^2\) 检验}{\textbackslash{}chi\^{}2 检验}}\label{chi2-}}
 
+\(\chi^2\)检验有两种，goodness of fit test（适配度检验）和contigency table test/test of independence（列联表分析/独立性检验）。都是用\texttt{chisq.test()}函数去完成。
+
+\subsubsection{适配度检验}
+
+假设我们制造了一个有问题的骰子，使1至6朝上的概率分别为：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{expected_probs <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\FloatTok{0.05}\NormalTok{, }\FloatTok{0.1}\NormalTok{, }\FloatTok{0.15}\NormalTok{, }\FloatTok{0.2}\NormalTok{, }\FloatTok{0.2}\NormalTok{, }\FloatTok{0.3}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+然后我们投掷了100次，实际1至6朝上的次数分别为：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{observed_vals <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{6}\NormalTok{, }\DecValTok{9}\NormalTok{, }\DecValTok{14}\NormalTok{, }\DecValTok{24}\NormalTok{, }\DecValTok{18}\NormalTok{, }\DecValTok{29}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+通过\texttt{chisq.test()}，检验实际的1至6朝上概率是否与预期有偏差：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{chisq.test}\NormalTok{(observed_vals, }\DataTypeTok{p =}\NormalTok{ expected_probs) }\CommentTok{# 参数p是指概率}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Chi-squared test for given probabilities
+## 
+## data:  observed_vals
+## X-squared = 1.4, df = 5, p-value = 0.9243
+\end{verbatim}
+
+p值很大（远大于0.05），因此结论是骰子各面朝上的概率符合预期。
+
+如果不指定p参数，默认为检测是否所有值相等（即骰子的所有面朝上的概率相等）：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{chisq.test}\NormalTok{(observed_vals)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Chi-squared test for given probabilities
+## 
+## data:  observed_vals
+## X-squared = 23.24, df = 5, p-value = 0.0003037
+\end{verbatim}
+
+这时p值小于0.05. 得出``骰子各面朝上的概率不等''的结论。
+
+\subsubsection{列联表分析/独立性检验}
+
+假设我们有一组不同年级的学生参加社团的人数数据：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{(社团参与 <-}\StringTok{ }\KeywordTok{matrix}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{28}\NormalTok{,}\DecValTok{36}\NormalTok{,}\DecValTok{40}\NormalTok{,}\DecValTok{40}\NormalTok{,}\DecValTok{32}\NormalTok{,}\DecValTok{33}\NormalTok{,}\DecValTok{38}\NormalTok{,}\DecValTok{29}\NormalTok{,}\DecValTok{36}\NormalTok{), }\DataTypeTok{nrow =} \DecValTok{3}\NormalTok{, }\DataTypeTok{dimnames =} \KeywordTok{list}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"一年级"}\NormalTok{, }\StringTok{"二年级"}\NormalTok{, }\StringTok{"三年级"}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\StringTok{"棒球"}\NormalTok{, }\StringTok{"足球"}\NormalTok{, }\StringTok{"网球"}\NormalTok{))))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##        棒球 足球 网球
+## 一年级   28   40   38
+## 二年级   36   32   29
+## 三年级   40   33   36
+\end{verbatim}
+
+我们想知道社团的参与，与所在年级是否是独立事件：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{chisq.test}\NormalTok{(社团参与)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Pearson's Chi-squared test
+## 
+## data:  社团参与
+## X-squared = 3.7587, df = 4, p-value = 0.4396
+\end{verbatim}
+
+p值不小于0.05，无法拒绝``社团的参与，与所在年级是独立事件''的虚无假设。
+
 彩蛋：用R代码实现卡方分布的概率密度函数的图像：
 
 \begin{Shaded}
@@ -1923,12 +2182,15 @@ R的默认是non-paired, unequal variance，你可以通过增加\texttt{paired\
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-63-1.pdf}
+\includegraphics{R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-73-1.pdf}
 
-\(\chi^2\)检验有两种，goodness of fit
+\hypertarget{-1}{%
+\subsubsection{其它}\label{-1}}
 
-\hypertarget{ch5}{%
-\chapter{dataframe（数据框）和tibble}\label{ch5}}
+R自带的检验还有\texttt{Box.test()}, \texttt{PP.test()}, \texttt{ansari.test()}, \texttt{bartlett.test()}, \texttt{wilcox.test}等共31种。查看帮助文件或利用网络资源以了解更多/
+
+\hypertarget{tibble}{%
+\chapter{dataframe（数据框）和tibble}\label{tibble}}
 
 \hypertarget{dataframetibble}{%
 \section{查看dataframe/tibble并了解它们的结构}\label{dataframetibble}}
@@ -2073,9 +2335,10 @@ R默认显示dataframe/tibble的前10行。如果想看最后6行，可以使用
 
 参见第\ref{data-import}节（数据的导入）
 
-\subsection{抓取行，列}
+\subsection{取子集（抓取行，列）}
 
-\subsubsection{抓取单列}
+\hypertarget{single-column}{%
+\subsubsection{抓取单列}\label{single-column}}
 
 抓取单列很简单，也很常用（比如我们只想从一个大的tibble中抓两个变量研究它们之间的关系）。 有两个符号可以用于抓取列，\texttt{\$}（仅用于变量名称）与\texttt{{[}{[}{]}{]}}（变量名称或索引）。还是以\texttt{mpg}为例，假设我们要抓取第3列 (\texttt{displ})：
 
@@ -2099,6 +2362,8 @@ R默认显示dataframe/tibble的前10行。如果想看最后6行，可以使用
 ##  [1] 1.8 1.8 2.0 2.0 2.8 2.8 3.1 1.8 1.8 2.0 2.0 2.8 2.8 3.1 3.1 2.8 3.1
 ## [18] 4.2 5.3 5.3
 \end{verbatim}
+
+如果使用单方括号，得到的是一个tibble（试试\texttt{mpg{[}3{]}}）这个特性在第\ref{dataframe-subsetting}节中有解释。
 
 \subsubsection{抓取多列}
 
@@ -2130,6 +2395,8 @@ R默认显示dataframe/tibble的前10行。如果想看最后6行，可以使用
 ## 10   2    2008     4    20    28
 ## # ... with 224 more rows
 \end{verbatim}
+
+base
 
 \hypertarget{filter}{%
 \subsubsection{\texorpdfstring{通过\texttt{filter()}，抓取满足某条件的行}{通过filter()，抓取满足某条件的行}}\label{filter}}
@@ -2196,10 +2463,10 @@ R默认显示dataframe/tibble的前10行。如果想看最后6行，可以使用
 ## # A tibble: 4 x 11
 ##   manufacturer model  displ  year   cyl trans drv     cty   hwy fl    class
 ##   <chr>        <chr>  <dbl> <int> <int> <chr> <chr> <int> <int> <chr> <chr>
-## 1 nissan       maxima   3.5  2008     6 auto~ f        19    25 p     mids~
-## 2 dodge        dakot~   4.7  2008     8 auto~ 4        14    19 r     pick~
-## 3 toyota       4runn~   4.7  2008     8 auto~ 4        14    17 r     suv  
-## 4 chevrolet    malibu   3.6  2008     6 auto~ f        17    26 r     mids~
+## 1 dodge        dakot~   3.7  2008     6 manu~ 4        15    19 r     pick~
+## 2 land rover   range~   4.4  2008     8 auto~ 4        12    18 r     suv  
+## 3 volkswagen   passat   1.8  1999     4 manu~ f        21    29 p     mids~
+## 4 dodge        carav~   2.4  1999     4 auto~ f        18    24 r     mini~
 \end{verbatim}
 
 \hypertarget{factor}{%
@@ -2252,18 +2519,145 @@ R默认显示dataframe/tibble的前10行。如果想看最后6行，可以使用
 \end{Highlighting}
 \end{Shaded}
 
-\section{进阶内容}
+\hypertarget{list-arraymatrix}{%
+\section{进阶内容：list, array和matrix}\label{list-arraymatrix}}
 
 这一节为进阶内容，不用看。可以直接跳到下一章（第\ref{graphics}
 
 其中的很多操作和dataframe或tibble中的操作是等效的。一般，tibble中的操作更直观，更容易上手。
 
-\hypertarget{arraysmatrices}{%
-\subsection{arrays（数组）和matrices（矩阵）简介}\label{arraysmatrices}}
+\hypertarget{list}{%
+\subsection{list（列表）简介}\label{list}}
+
+R中的list是一种特殊的数据存储形式。使用\texttt{list()}函数来创建lists.
+
+尝试对lists和vectors使用\texttt{is.vector()}, \texttt{is.list()}, \texttt{is.atomic()}和\texttt{is.recursive()}函数，你会发现list虽然也是``vector''，但我们一般说的``vector''都是指只能存储一种数据类型的atomic vector；而lists是recursive vector.
+
+这意味着\textbf{一个list能存储多种类型的数据，且可以包含子list}。list中的每个元素是可以是一个(atomic) vector（如以下例子中的\texttt{{[}{[}1{]}{]}}和\texttt{{[}{[}3{]}{]}{[}{[}2{]}{]}}），也可以是一个list（如以下例子中的{[}{[}3{]}{]}，它包含了有两个list元素的list；{[}{[}3{]}{]}是一个子list）。
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{y <-}\StringTok{ }\KeywordTok{list}\NormalTok{(}\DecValTok{1}\NormalTok{, }\KeywordTok{c}\NormalTok{(}\StringTok{"a"}\NormalTok{,}\StringTok{"あ"}\NormalTok{), }\KeywordTok{list}\NormalTok{(}\DecValTok{1}\OperatorTok{+}\NormalTok{3i, }\KeywordTok{c}\NormalTok{(}\OtherTok{FALSE}\NormalTok{, }\OtherTok{NA}\NormalTok{, }\OtherTok{TRUE}\NormalTok{)))}
+\NormalTok{y}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [[1]]
+## [1] 1
+## 
+## [[2]]
+## [1] "a"  "あ"
+## 
+## [[3]]
+## [[3]][[1]]
+## [1] 1+3i
+## 
+## [[3]][[2]]
+## [1] FALSE    NA  TRUE
+\end{verbatim}
+
+\hypertarget{list}{%
+\subsubsection{list的索引/取子集}\label{list}}
+
+使用上面的例子：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{y[}\DecValTok{2}\NormalTok{] }\CommentTok{# 使用单方括号，得到的是一个只有一个list元素的list}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [[1]]
+## [1] "a"  "あ"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{y[[}\DecValTok{2}\NormalTok{]] }\CommentTok{# 使用双方括号，得到的是一个vector}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "a"  "あ"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{y[[}\DecValTok{3}\NormalTok{]][[}\DecValTok{2}\NormalTok{]] }\CommentTok{# 得到的也是一个vector；母list的索引在前，子list的在后}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] FALSE    NA  TRUE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{y[[}\DecValTok{3}\NormalTok{]] }\CommentTok{# 这个位置包含两个子list，因此得到一个有两个list元素的list}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [[1]]
+## [1] 1+3i
+## 
+## [[2]]
+## [1] FALSE    NA  TRUE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{y[[}\DecValTok{3}\NormalTok{]][[}\DecValTok{2}\NormalTok{]][}\DecValTok{2}\NormalTok{] }\CommentTok{# 得到vector时，直接在后面用单方括号}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] NA
+\end{verbatim}
+
+\hypertarget{dataframetibble}{%
+\subsubsection{Dataframe和tibble的本质}\label{dataframetibble}}
+
+聪明的你也许已经注意到了，dataframe/tibble\protect\hyperlink{single-column}{抓取单列的方法}和list的取子集惊人地相似（我曾经的语文老师喜欢调侃抄作业的同学的答案与参考答案``惊人地相似''）。
+
+事实上，dataframe的本质正是list，而tibble也是dataframe（只是进化了一些功能）：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{is.list}\NormalTok{(mpg)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{class}\NormalTok{(mpg)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "tbl_df"     "tbl"        "data.frame"
+\end{verbatim}
+
+\hypertarget{base-r-dataframe--tidyverse-tibble}{%
+\subsection{Base R dataframe 和 Tidyverse tibble的区别}\label{base-r-dataframe--tidyverse-tibble}}
+
+\hypertarget{dataframe-subsetting}{%
+\subsubsection{Subsetting}\label{dataframe-subsetting}}
+
+请查看\href{https://adv-r.hadley.nz/subsetting.html\#simplify-preserve}{Advanced R}了解更多。
+
+\hypertarget{arraymatrix}{%
+\subsection{array（数组）和matrix（矩阵）简介}\label{arraymatrix}}
 
 Vector是一维的数据。Array是多维的数据。Matrix是二维的数据，因此matrix是array的一种特殊情况。
 
-Dataframe不是matrix. A matrix is a two-dimensional \textbf{array} containing numbers. A dataframe is a two-dimensional \textbf{list} containing (potentially a mix of) numbers, text or logical variables in different columns.
+Dataframe不是matrix（虽然都是方的）. Matrix是二维的，\textbf{仅包含数字}的\textbf{array}. Dataframe是一个二维的\textbf{list}，不同列（即list元素）\textbf{可以存储不同的数据类型}。
 
 我们可以用\texttt{dim()}来创建arrays：
 
@@ -2456,33 +2850,33 @@ Dataframe不是matrix. A matrix is a two-dimensional \textbf{array} containing n
 \begin{verbatim}
 ## , , 1
 ## 
-##            [,1]        [,2]      [,3]       [,4]       [,5]
-## [1,] 0.58465913 0.411543822 0.5229381 0.33774133 0.36108337
-## [2,] 0.59706046 0.001882315 0.1448231 0.77708837 0.05548725
-## [3,] 0.64424007 0.484417212 0.6129137 0.12768178 0.50509562
-## [4,] 0.05309066 0.232503542 0.6002260 0.06999473 0.08550179
-## [5,] 0.16051710 0.365727232 0.4090031 0.40737592 0.56673090
-## [6,] 0.73765849 0.477518012 0.1316686 0.23747798 0.68886257
+##           [,1]       [,2]      [,3]       [,4]      [,5]
+## [1,] 0.2733328 0.55216833 0.2414834 0.17121533 0.4099636
+## [2,] 0.7684922 0.12266266 0.9883322 0.28112454 0.2438085
+## [3,] 0.3333403 0.91729563 0.9449892 0.75163812 0.2076522
+## [4,] 0.3293185 0.82260952 0.3200493 0.03729585 0.2311832
+## [5,] 0.7770377 0.64489886 0.7179226 0.91205527 0.8527781
+## [6,] 0.5006249 0.01798556 0.1103572 0.23300807 0.7673886
 ## 
 ## , , 2
 ## 
-##           [,1]      [,2]      [,3]       [,4]       [,5]
-## [1,] 0.5174832 0.2502680 0.4246518 0.29761643 0.31878212
-## [2,] 0.4978283 0.4084635 0.1016966 0.76539023 0.01889915
-## [3,] 0.2945068 0.8306994 0.2556662 0.83633423 0.23315197
-## [4,] 0.9331716 0.5328390 0.3441119 0.02826425 0.81139108
-## [5,] 0.7093689 0.6179052 0.3670174 0.10060410 0.71320141
-## [6,] 0.1584265 0.6340381 0.7916810 0.52864813 0.95571655
+##            [,1]      [,2]       [,3]      [,4]      [,5]
+## [1,] 0.03168819 0.9358690 0.30319995 0.8111589 0.4821811
+## [2,] 0.68437211 0.9767348 0.93120194 0.7343984 0.7931656
+## [3,] 0.09698453 0.9391623 0.08573336 0.1064778 0.1418348
+## [4,] 0.01410627 0.8535771 0.11346088 0.1066444 0.1656295
+## [5,] 0.14722911 0.3634736 0.32963875 0.0399176 0.8894229
+## [6,] 0.85356769 0.9552780 0.33517983 0.2251467 0.1432204
 ## 
 ## , , 3
 ## 
-##            [,1]      [,2]       [,3]      [,4]      [,5]
-## [1,] 0.43226546 0.4417577 0.11597405 0.5817256 0.3014991
-## [2,] 0.75425033 0.1776285 0.42267708 0.3160539 0.4241575
-## [3,] 0.29641795 0.4397804 0.02949093 0.1227839 0.6228744
-## [4,] 0.02011518 0.9124565 0.11960832 0.9057653 0.6899027
-## [5,] 0.04756832 0.7187895 0.57601574 0.5077660 0.2373382
-## [6,] 0.92889201 0.3898345 0.63519976 0.6951076 0.8813403
+##           [,1]      [,2]      [,3]      [,4]      [,5]
+## [1,] 0.2292650 0.3607208 0.9184092 0.9354233 0.5562962
+## [2,] 0.2181959 0.5978566 0.3005676 0.3990182 0.4547201
+## [3,] 0.1544659 0.8980517 0.3700370 0.9026410 0.2504877
+## [4,] 0.5162325 0.3463473 0.1741535 0.2305774 0.9751043
+## [5,] 0.9737084 0.1882738 0.1466204 0.1805194 0.5386562
+## [6,] 0.2281510 0.3142199 0.4600185 0.2674532 0.2398798
 \end{verbatim}
 
 然后我们用\texttt{dimnames()}来命名：
@@ -2498,32 +2892,32 @@ Dataframe不是matrix. A matrix is a two-dimensional \textbf{array} containing n
 ## , , chloroquine
 ## 
 ##          P. falciparum P. malariae  P. ovale   P. vivax P. knowlesi
-## trial. 1    0.58465913 0.411543822 0.5229381 0.33774133  0.36108337
-## trial. 2    0.59706046 0.001882315 0.1448231 0.77708837  0.05548725
-## trial. 3    0.64424007 0.484417212 0.6129137 0.12768178  0.50509562
-## trial. 4    0.05309066 0.232503542 0.6002260 0.06999473  0.08550179
-## trial. 5    0.16051710 0.365727232 0.4090031 0.40737592  0.56673090
-## trial. 6    0.73765849 0.477518012 0.1316686 0.23747798  0.68886257
+## trial. 1     0.2733328  0.55216833 0.2414834 0.17121533   0.4099636
+## trial. 2     0.7684922  0.12266266 0.9883322 0.28112454   0.2438085
+## trial. 3     0.3333403  0.91729563 0.9449892 0.75163812   0.2076522
+## trial. 4     0.3293185  0.82260952 0.3200493 0.03729585   0.2311832
+## trial. 5     0.7770377  0.64489886 0.7179226 0.91205527   0.8527781
+## trial. 6     0.5006249  0.01798556 0.1103572 0.23300807   0.7673886
 ## 
 ## , , artemisinin
 ## 
-##          P. falciparum P. malariae  P. ovale   P. vivax P. knowlesi
-## trial. 1     0.5174832   0.2502680 0.4246518 0.29761643  0.31878212
-## trial. 2     0.4978283   0.4084635 0.1016966 0.76539023  0.01889915
-## trial. 3     0.2945068   0.8306994 0.2556662 0.83633423  0.23315197
-## trial. 4     0.9331716   0.5328390 0.3441119 0.02826425  0.81139108
-## trial. 5     0.7093689   0.6179052 0.3670174 0.10060410  0.71320141
-## trial. 6     0.1584265   0.6340381 0.7916810 0.52864813  0.95571655
+##          P. falciparum P. malariae   P. ovale  P. vivax P. knowlesi
+## trial. 1    0.03168819   0.9358690 0.30319995 0.8111589   0.4821811
+## trial. 2    0.68437211   0.9767348 0.93120194 0.7343984   0.7931656
+## trial. 3    0.09698453   0.9391623 0.08573336 0.1064778   0.1418348
+## trial. 4    0.01410627   0.8535771 0.11346088 0.1066444   0.1656295
+## trial. 5    0.14722911   0.3634736 0.32963875 0.0399176   0.8894229
+## trial. 6    0.85356769   0.9552780 0.33517983 0.2251467   0.1432204
 ## 
 ## , , doxycycline
 ## 
-##          P. falciparum P. malariae   P. ovale  P. vivax P. knowlesi
-## trial. 1    0.43226546   0.4417577 0.11597405 0.5817256   0.3014991
-## trial. 2    0.75425033   0.1776285 0.42267708 0.3160539   0.4241575
-## trial. 3    0.29641795   0.4397804 0.02949093 0.1227839   0.6228744
-## trial. 4    0.02011518   0.9124565 0.11960832 0.9057653   0.6899027
-## trial. 5    0.04756832   0.7187895 0.57601574 0.5077660   0.2373382
-## trial. 6    0.92889201   0.3898345 0.63519976 0.6951076   0.8813403
+##          P. falciparum P. malariae  P. ovale  P. vivax P. knowlesi
+## trial. 1     0.2292650   0.3607208 0.9184092 0.9354233   0.5562962
+## trial. 2     0.2181959   0.5978566 0.3005676 0.3990182   0.4547201
+## trial. 3     0.1544659   0.8980517 0.3700370 0.9026410   0.2504877
+## trial. 4     0.5162325   0.3463473 0.1741535 0.2305774   0.9751043
+## trial. 5     0.9737084   0.1882738 0.1466204 0.1805194   0.5386562
+## trial. 6     0.2281510   0.3142199 0.4600185 0.2674532   0.2398798
 \end{verbatim}
 
 \textbf{清清楚楚，一目了然。}
@@ -2592,8 +2986,8 @@ Dataframe不是matrix. A matrix is a two-dimensional \textbf{array} containing n
 \hypertarget{excel}{%
 \subsubsection{excel}\label{excel}}
 
-\hypertarget{-1}{%
-\subsubsection{其它}\label{-1}}
+\hypertarget{-2}{%
+\subsubsection{其它}\label{-2}}
 
 \subsection{导出}
 
@@ -2618,6 +3012,9 @@ Inspired by Jupyter, Beaker Notebook allows you to switch from one language in o
 \addcontentsline{toc}{chapter}{Bibiolography}
 
 \hypertarget{refs}{}
+\leavevmode\hypertarget{ref-Gentleman2009R-Programming-Bioinfo}{}%
+Gentleman, Robert. 2009. \emph{R Programming for Bioinformatics}. Book. Boca Raton, FL: CRC Press.
+
 \leavevmode\hypertarget{ref-Kernighan1988The-C-Programming-La}{}%
 Kernighan, Brain W., and Ednnis M. Ritchie. 1988. \emph{The C Programming Language}. 2nd ed. Prentice Hall.
 

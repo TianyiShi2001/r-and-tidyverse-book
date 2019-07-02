@@ -24,14 +24,14 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-01" />
+<meta name="date" content="2019-07-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="ch5.html">
+<link rel="prev" href="tibble.html">
 <link rel="next" href="wrangle.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -152,6 +152,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>欢迎</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#简介"><i class="fa fa-check"></i>简介</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#说明"><i class="fa fa-check"></i>使用说明</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i>Colophon</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R和RStudio介绍和安装教程</a><ul>
 <li class="chapter" data-level="1.1" data-path="intro-and-installation.html"><a href="intro-and-installation.html#r"><i class="fa fa-check"></i><b>1.1</b> 什么是R</a></li>
@@ -188,12 +189,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3" data-path="packages.html"><a href="packages.html#packages"><i class="fa fa-check"></i><b>4.3</b> 如何使用packages</a></li>
 <li class="chapter" data-level="4.4" data-path="packages.html"><a href="packages.html#section-4.4"><i class="fa fa-check"></i><b>4.4</b> 其它</a><ul>
 <li class="chapter" data-level="4.4.1" data-path="packages.html"><a href="packages.html#require-and-library"><i class="fa fa-check"></i><b>4.4.1</b> <code>library()</code>和<code>require</code>的区别；如何使用一行指令读取多个packages</a></li>
+<li class="chapter" data-level="4.4.2" data-path="packages.html"><a href="packages.html#Bioconductor"><i class="fa fa-check"></i><b>4.4.2</b> 安装Bioconductor packages</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>5</b> 向量，逻辑，循环和函数</a><ul>
 <li class="chapter" data-level="5.1" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-5.1"><i class="fa fa-check"></i><b>5.1</b> 向量的概念，操作和优越性</a><ul>
 <li class="chapter" data-level="5.1.1" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#create-vector"><i class="fa fa-check"></i><b>5.1.1</b> 创建向量（赋值）</a></li>
-<li class="chapter" data-level="5.1.2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#indexing"><i class="fa fa-check"></i><b>5.1.2</b> 索引</a></li>
+<li class="chapter" data-level="5.1.2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#indexing"><i class="fa fa-check"></i><b>5.1.2</b> 索引/取子集 (indexing/subsetting)</a></li>
 <li class="chapter" data-level="5.1.3" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-5.1.3"><i class="fa fa-check"></i><b>5.1.3</b> 生成器</a></li>
 <li class="chapter" data-level="5.1.4" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-5.1.4"><i class="fa fa-check"></i><b>5.1.4</b> 向量的其它操作</a></li>
 <li class="chapter" data-level="5.1.5" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#youyuexing"><i class="fa fa-check"></i><b>5.1.5</b> R向量的优越性</a></li>
@@ -222,20 +224,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.7.4" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#chi2-"><i class="fa fa-check"></i><b>5.7.4</b> <span class="math inline">\(\chi^2\)</span> 检验</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="ch5.html"><a href="ch5.html"><i class="fa fa-check"></i><b>6</b> dataframe（数据框）和tibble</a><ul>
-<li class="chapter" data-level="6.1" data-path="ch5.html"><a href="ch5.html#dataframetibble"><i class="fa fa-check"></i><b>6.1</b> 查看dataframe/tibble并了解它们的结构</a><ul>
-<li class="chapter" data-level="6.1.1" data-path="ch5.html"><a href="ch5.html#dataframetibble"><i class="fa fa-check"></i><b>6.1.1</b> dataframe/tibble的基本概念</a></li>
-<li class="chapter" data-level="6.1.2" data-path="ch5.html"><a href="ch5.html#section-6.1.2"><i class="fa fa-check"></i><b>6.1.2</b> 查看更多数据</a></li>
+<li class="chapter" data-level="6" data-path="tibble.html"><a href="tibble.html"><i class="fa fa-check"></i><b>6</b> dataframe（数据框）和tibble</a><ul>
+<li class="chapter" data-level="6.1" data-path="tibble.html"><a href="tibble.html#dataframetibble"><i class="fa fa-check"></i><b>6.1</b> 查看dataframe/tibble并了解它们的结构</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="tibble.html"><a href="tibble.html#dataframetibble"><i class="fa fa-check"></i><b>6.1.1</b> dataframe/tibble的基本概念</a></li>
+<li class="chapter" data-level="6.1.2" data-path="tibble.html"><a href="tibble.html#section-6.1.2"><i class="fa fa-check"></i><b>6.1.2</b> 查看更多数据</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="ch5.html"><a href="ch5.html#tibble"><i class="fa fa-check"></i><b>6.2</b> tibble的创建和基础操作</a><ul>
-<li class="chapter" data-level="6.2.1" data-path="ch5.html"><a href="ch5.html#tibble"><i class="fa fa-check"></i><b>6.2.1</b> 创建tibble</a></li>
-<li class="chapter" data-level="6.2.2" data-path="ch5.html"><a href="ch5.html#section-6.2.2"><i class="fa fa-check"></i><b>6.2.2</b> 抓取行，列</a></li>
-<li class="chapter" data-level="6.2.3" data-path="ch5.html"><a href="ch5.html#factor"><i class="fa fa-check"></i><b>6.2.3</b> 关于Factor</a></li>
+<li class="chapter" data-level="6.2" data-path="tibble.html"><a href="tibble.html#tibble"><i class="fa fa-check"></i><b>6.2</b> tibble的创建和基础操作</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="tibble.html"><a href="tibble.html#tibble"><i class="fa fa-check"></i><b>6.2.1</b> 创建tibble</a></li>
+<li class="chapter" data-level="6.2.2" data-path="tibble.html"><a href="tibble.html#section-6.2.2"><i class="fa fa-check"></i><b>6.2.2</b> 取子集（抓取行，列）</a></li>
+<li class="chapter" data-level="6.2.3" data-path="tibble.html"><a href="tibble.html#factor"><i class="fa fa-check"></i><b>6.2.3</b> 关于Factor</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="ch5.html"><a href="ch5.html#section-6.3"><i class="fa fa-check"></i><b>6.3</b> 进阶内容</a><ul>
-<li class="chapter" data-level="6.3.1" data-path="ch5.html"><a href="ch5.html#arraysmatrices"><i class="fa fa-check"></i><b>6.3.1</b> arrays（数组）和matrices（矩阵）简介</a></li>
-<li class="chapter" data-level="6.3.2" data-path="ch5.html"><a href="ch5.html#matricesarrays"><i class="fa fa-check"></i><b>6.3.2</b> 给matrices和arrays命名</a></li>
-<li class="chapter" data-level="6.3.3" data-path="ch5.html"><a href="ch5.html#apply"><i class="fa fa-check"></i><b>6.3.3</b> <code>apply</code></a></li>
+<li class="chapter" data-level="6.3" data-path="tibble.html"><a href="tibble.html#list-arraymatrix"><i class="fa fa-check"></i><b>6.3</b> 进阶内容：list, array和matrix</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="tibble.html"><a href="tibble.html#list"><i class="fa fa-check"></i><b>6.3.1</b> list（列表）简介</a></li>
+<li class="chapter" data-level="6.3.2" data-path="tibble.html"><a href="tibble.html#base-r-dataframe--tidyverse-tibble"><i class="fa fa-check"></i><b>6.3.2</b> Base R dataframe 和 Tidyverse tibble的区别</a></li>
+<li class="chapter" data-level="6.3.3" data-path="tibble.html"><a href="tibble.html#arraymatrix"><i class="fa fa-check"></i><b>6.3.3</b> array（数组）和matrix（矩阵）简介</a></li>
+<li class="chapter" data-level="6.3.4" data-path="tibble.html"><a href="tibble.html#matricesarrays"><i class="fa fa-check"></i><b>6.3.4</b> 给matrices和arrays命名</a></li>
+<li class="chapter" data-level="6.3.5" data-path="tibble.html"><a href="tibble.html#apply"><i class="fa fa-check"></i><b>6.3.5</b> <code>apply</code></a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>7</b> 使用ggplot绘图</a><ul>
@@ -335,7 +339,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="ch5.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="tibble.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="wrangle.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

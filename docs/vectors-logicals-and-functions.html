@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-01" />
+<meta name="date" content="2019-07-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="packages.html">
-<link rel="next" href="ch5.html">
+<link rel="next" href="tibble.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -152,6 +152,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>欢迎</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#简介"><i class="fa fa-check"></i>简介</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#说明"><i class="fa fa-check"></i>使用说明</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i>Colophon</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R和RStudio介绍和安装教程</a><ul>
 <li class="chapter" data-level="1.1" data-path="intro-and-installation.html"><a href="intro-and-installation.html#r"><i class="fa fa-check"></i><b>1.1</b> 什么是R</a></li>
@@ -188,12 +189,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3" data-path="packages.html"><a href="packages.html#packages"><i class="fa fa-check"></i><b>4.3</b> 如何使用packages</a></li>
 <li class="chapter" data-level="4.4" data-path="packages.html"><a href="packages.html#section-4.4"><i class="fa fa-check"></i><b>4.4</b> 其它</a><ul>
 <li class="chapter" data-level="4.4.1" data-path="packages.html"><a href="packages.html#require-and-library"><i class="fa fa-check"></i><b>4.4.1</b> <code>library()</code>和<code>require</code>的区别；如何使用一行指令读取多个packages</a></li>
+<li class="chapter" data-level="4.4.2" data-path="packages.html"><a href="packages.html#Bioconductor"><i class="fa fa-check"></i><b>4.4.2</b> 安装Bioconductor packages</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>5</b> 向量，逻辑，循环和函数</a><ul>
 <li class="chapter" data-level="5.1" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-5.1"><i class="fa fa-check"></i><b>5.1</b> 向量的概念，操作和优越性</a><ul>
 <li class="chapter" data-level="5.1.1" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#create-vector"><i class="fa fa-check"></i><b>5.1.1</b> 创建向量（赋值）</a></li>
-<li class="chapter" data-level="5.1.2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#indexing"><i class="fa fa-check"></i><b>5.1.2</b> 索引</a></li>
+<li class="chapter" data-level="5.1.2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#indexing"><i class="fa fa-check"></i><b>5.1.2</b> 索引/取子集 (indexing/subsetting)</a></li>
 <li class="chapter" data-level="5.1.3" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-5.1.3"><i class="fa fa-check"></i><b>5.1.3</b> 生成器</a></li>
 <li class="chapter" data-level="5.1.4" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-5.1.4"><i class="fa fa-check"></i><b>5.1.4</b> 向量的其它操作</a></li>
 <li class="chapter" data-level="5.1.5" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#youyuexing"><i class="fa fa-check"></i><b>5.1.5</b> R向量的优越性</a></li>
@@ -222,20 +224,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.7.4" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#chi2-"><i class="fa fa-check"></i><b>5.7.4</b> <span class="math inline">\(\chi^2\)</span> 检验</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="ch5.html"><a href="ch5.html"><i class="fa fa-check"></i><b>6</b> dataframe（数据框）和tibble</a><ul>
-<li class="chapter" data-level="6.1" data-path="ch5.html"><a href="ch5.html#dataframetibble"><i class="fa fa-check"></i><b>6.1</b> 查看dataframe/tibble并了解它们的结构</a><ul>
-<li class="chapter" data-level="6.1.1" data-path="ch5.html"><a href="ch5.html#dataframetibble"><i class="fa fa-check"></i><b>6.1.1</b> dataframe/tibble的基本概念</a></li>
-<li class="chapter" data-level="6.1.2" data-path="ch5.html"><a href="ch5.html#section-6.1.2"><i class="fa fa-check"></i><b>6.1.2</b> 查看更多数据</a></li>
+<li class="chapter" data-level="6" data-path="tibble.html"><a href="tibble.html"><i class="fa fa-check"></i><b>6</b> dataframe（数据框）和tibble</a><ul>
+<li class="chapter" data-level="6.1" data-path="tibble.html"><a href="tibble.html#dataframetibble"><i class="fa fa-check"></i><b>6.1</b> 查看dataframe/tibble并了解它们的结构</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="tibble.html"><a href="tibble.html#dataframetibble"><i class="fa fa-check"></i><b>6.1.1</b> dataframe/tibble的基本概念</a></li>
+<li class="chapter" data-level="6.1.2" data-path="tibble.html"><a href="tibble.html#section-6.1.2"><i class="fa fa-check"></i><b>6.1.2</b> 查看更多数据</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="ch5.html"><a href="ch5.html#tibble"><i class="fa fa-check"></i><b>6.2</b> tibble的创建和基础操作</a><ul>
-<li class="chapter" data-level="6.2.1" data-path="ch5.html"><a href="ch5.html#tibble"><i class="fa fa-check"></i><b>6.2.1</b> 创建tibble</a></li>
-<li class="chapter" data-level="6.2.2" data-path="ch5.html"><a href="ch5.html#section-6.2.2"><i class="fa fa-check"></i><b>6.2.2</b> 抓取行，列</a></li>
-<li class="chapter" data-level="6.2.3" data-path="ch5.html"><a href="ch5.html#factor"><i class="fa fa-check"></i><b>6.2.3</b> 关于Factor</a></li>
+<li class="chapter" data-level="6.2" data-path="tibble.html"><a href="tibble.html#tibble"><i class="fa fa-check"></i><b>6.2</b> tibble的创建和基础操作</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="tibble.html"><a href="tibble.html#tibble"><i class="fa fa-check"></i><b>6.2.1</b> 创建tibble</a></li>
+<li class="chapter" data-level="6.2.2" data-path="tibble.html"><a href="tibble.html#section-6.2.2"><i class="fa fa-check"></i><b>6.2.2</b> 取子集（抓取行，列）</a></li>
+<li class="chapter" data-level="6.2.3" data-path="tibble.html"><a href="tibble.html#factor"><i class="fa fa-check"></i><b>6.2.3</b> 关于Factor</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="ch5.html"><a href="ch5.html#section-6.3"><i class="fa fa-check"></i><b>6.3</b> 进阶内容</a><ul>
-<li class="chapter" data-level="6.3.1" data-path="ch5.html"><a href="ch5.html#arraysmatrices"><i class="fa fa-check"></i><b>6.3.1</b> arrays（数组）和matrices（矩阵）简介</a></li>
-<li class="chapter" data-level="6.3.2" data-path="ch5.html"><a href="ch5.html#matricesarrays"><i class="fa fa-check"></i><b>6.3.2</b> 给matrices和arrays命名</a></li>
-<li class="chapter" data-level="6.3.3" data-path="ch5.html"><a href="ch5.html#apply"><i class="fa fa-check"></i><b>6.3.3</b> <code>apply</code></a></li>
+<li class="chapter" data-level="6.3" data-path="tibble.html"><a href="tibble.html#list-arraymatrix"><i class="fa fa-check"></i><b>6.3</b> 进阶内容：list, array和matrix</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="tibble.html"><a href="tibble.html#list"><i class="fa fa-check"></i><b>6.3.1</b> list（列表）简介</a></li>
+<li class="chapter" data-level="6.3.2" data-path="tibble.html"><a href="tibble.html#base-r-dataframe--tidyverse-tibble"><i class="fa fa-check"></i><b>6.3.2</b> Base R dataframe 和 Tidyverse tibble的区别</a></li>
+<li class="chapter" data-level="6.3.3" data-path="tibble.html"><a href="tibble.html#arraymatrix"><i class="fa fa-check"></i><b>6.3.3</b> array（数组）和matrix（矩阵）简介</a></li>
+<li class="chapter" data-level="6.3.4" data-path="tibble.html"><a href="tibble.html#matricesarrays"><i class="fa fa-check"></i><b>6.3.4</b> 给matrices和arrays命名</a></li>
+<li class="chapter" data-level="6.3.5" data-path="tibble.html"><a href="tibble.html#apply"><i class="fa fa-check"></i><b>6.3.5</b> <code>apply</code></a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>7</b> 使用ggplot绘图</a><ul>
@@ -313,10 +317,20 @@ cities &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">
 <span class="kw">length</span>(<span class="kw">c</span>(<span class="st">&quot;Guten Morgen&quot;</span>)) </code></pre>
 <pre><code>## [1] 1</code></pre>
 <p>（每个被引号包围的一串字符，都只算做一个元素，因此长度为1；多元素的向量请看第<a href="vectors-logicals-and-functions.html#create-vector">5.1.1</a>节）</p>
+<p>还是通过<code>c()</code>函数，可以把多个向量拼接起来：</p>
+<pre class="sourceCode r"><code class="sourceCode r">cities_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Zürich&quot;, &quot;</span>上海<span class="st">&quot;, &quot;</span>Tehrān<span class="st">&quot;)</span>
+<span class="st">cities_2 &lt;- c(&quot;</span>大阪<span class="st">&quot;, &quot;</span>Poznań<span class="st">&quot;, &quot;</span>Екатеринбу́рг<span class="st">&quot;)</span>
+
+<span class="st">cities &lt;- c(cities_1, cities_2, c(&quot;</span>Jyväskylä<span class="st">&quot;, &quot;</span>부산<span class="st">&quot;, &quot;</span>เชียงใหม่<span class="st">&quot;))</span>
+
+<span class="st">cities</span></code></pre>
+<pre><code>## [1] &quot;Zürich&quot;       &quot;上海&quot;         &quot;Tehrān&quot;       &quot;大阪&quot;        
+## [5] &quot;Poznań&quot;       &quot;Екатеринбу́рг&quot; &quot;Jyväskylä&quot;    &quot;부산&quot;        
+## [9] &quot;เชียงใหม่&quot;</code></pre>
 </div>
 <div id="indexing" class="section level3">
-<h3><span class="header-section-number">5.1.2</span> 索引</h3>
-<p>索引 (index)就是一个元素在向量中的位置。R是从1开始索引的，即索引为1的元素是第一个元素（因此用熟了Python和C可能会有些不适应）。在向量后方使用方括号进行索引。</p>
+<h3><span class="header-section-number">5.1.2</span> 索引/取子集 (indexing/subsetting)</h3>
+<p>索引 (index)就是一个元素在向量中的位置。R是从1开始索引的，即索引为1的元素是第一个元素（因此用熟了Python和C可能会有些不适应）。在向量后方使用方括号进行取子集运算（即抓取索引为对应数字的元素；虽然subsetting翻译成“取子集”有点怪，但是没毛病；不知大家有没有更好的翻译方法，或是不翻译更好）。</p>
 <pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;one&quot;</span>, <span class="st">&quot;two&quot;</span>, <span class="st">&quot;three&quot;</span>, <span class="st">&quot;four&quot;</span>, <span class="st">&quot;five&quot;</span>, <span class="st">&quot;six&quot;</span>, <span class="st">&quot;seven&quot;</span>, <span class="st">&quot;eight&quot;</span>, <span class="st">&quot;nine&quot;</span>)
 x[<span class="dv">3</span>]</code></pre>
 <pre><code>## [1] &quot;three&quot;</code></pre>
@@ -367,11 +381,11 @@ y</code></pre>
 <p>连续型均匀分布随机数用<code>runif(n, min, max)</code>，n是数量，min是最小值，max是最大值。默认min为0，max为1。</p>
 <pre class="sourceCode r"><code class="sourceCode r">x_unif &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">100000</span>, <span class="dv">40</span>, <span class="dv">60</span>) <span class="co"># 生成100000个40到60之间，连续均匀分布的的随机数</span>
 <span class="kw">hist</span>(x_unif) <span class="co"># 画直方图</span></code></pre>
-<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
 <p>正态分布随机数用<code>rnorm(n, mean, sd)</code>, 三个参数分别为数量，平均值，标准差。默认mean为0，sd为1。</p>
 <pre class="sourceCode r"><code class="sourceCode r">x_norm &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">100000</span>, <span class="dv">250</span>, <span class="dv">20</span>) <span class="co"># 按照平均值为250，标准差为20的正态分布的概率密度函数生成100000个随机数</span>
 <span class="kw">hist</span>(x_norm) <span class="co"># 画直方图</span></code></pre>
-<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
 </div>
 </div>
 <div id="section-5.1.4" class="section level3">
@@ -854,7 +868,7 @@ seq(from = 1, to = 1, by = ((to - from)/(length.out - 1)),
 </div>
 <div id="..." class="section level3">
 <h3><span class="header-section-number">5.6.2</span> 关于<code>...</code></h3>
-<p>有时候，你想写的函数可能有数量不定的参数，或是有需要传递给另一个函数的“其它参数”（即本函数不需要的参数），这时候可以在函数定义时加入一个名为<code>...</code>的参数，然后用<code>list()</code>来读取它们。list是进阶内容，在第<a href="#list"><strong>??</strong></a>节有说明。</p>
+<p>有时候，你想写的函数可能有数量不定的参数，或是有需要传递给另一个函数的“其它参数”（即本函数不需要的参数），这时候可以在函数定义时加入一个名为<code>...</code>的参数，然后用<code>list()</code>来读取它们。list是进阶内容，在第<a href="tibble.html#list">6.3.1</a>节有说明。</p>
 <p>比如我写一个很无聊的函数：</p>
 <pre class="sourceCode r"><code class="sourceCode r">my_func &lt;-<span class="st"> </span><span class="cf">function</span>(arg1, <span class="dt">arg2 =</span> <span class="dv">100</span>, ...){
   other_args &lt;-<span class="st"> </span><span class="kw">list</span>(...)
@@ -876,10 +890,11 @@ seq(from = 1, to = 1, by = ((to - from)/(length.out - 1)),
 </div>
 <div id="section-5.7" class="section level2">
 <h2><span class="header-section-number">5.7</span> 简易的统计学计算</h2>
+<p>本小节简要解释了R中的t分布，t检验和<span class="math inline">\(\chi^2\)</span>检验。统计学方法并不是本书的重点，因此可以酌情跳到<a href="tibble.html#tibble">下一章</a>。</p>
 <div id="t" class="section level3">
 <h3><span class="header-section-number">5.7.1</span> t分布</h3>
 <p>众所周知，t分布长这样：</p>
-<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
+<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-59-1.png" width="672" /></p>
 <p>阴影面积为<span class="math inline">\(P(t&lt;T)\)</span>，虚线对应的<span class="math inline">\(t\)</span>为<span class="math inline">\(T\)</span>.
 <code>qt()</code>可以把<span class="math inline">\(P(t≤T)\)</span>的值转化成<span class="math inline">\(T\)</span>,<code>pt()</code>则相反。</p>
 <p>假设你需要算一个confidence interval（置信区间），confidence level（置信等级）为<span class="math inline">\(95\%\)</span>，即<span class="math inline">\(\alpha=0.05\)</span>，degrees of freedom(自由度)为<span class="math inline">\(12\)</span>，那么怎么算<span class="math inline">\(t^*\)</span>呢？</p>
@@ -907,7 +922,7 @@ p</code></pre>
 <li>paired t test（配对）</li>
 <li>Two sample…（双样本）
 <ul>
-<li>Unequal variance t test（不等方差）</li>
+<li>Unequal variance (Welch) t test（不等方差）</li>
 <li>Equal variance t test（等方差）</li>
 </ul></li>
 </ul>
@@ -975,6 +990,46 @@ y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">2.27<
 </div>
 <div id="chi2-" class="section level3">
 <h3><span class="header-section-number">5.7.4</span> <span class="math inline">\(\chi^2\)</span> 检验</h3>
+<p><span class="math inline">\(\chi^2\)</span>检验有两种，goodness of fit test（适配度检验）和contigency table test/test of independence（列联表分析/独立性检验）。都是用<code>chisq.test()</code>函数去完成。</p>
+<div id="section-5.7.4.1" class="section level4">
+<h4><span class="header-section-number">5.7.4.1</span> 适配度检验</h4>
+<p>假设我们制造了一个有问题的骰子，使1至6朝上的概率分别为：</p>
+<pre class="sourceCode r"><code class="sourceCode r">expected_probs &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">0.05</span>, <span class="fl">0.1</span>, <span class="fl">0.15</span>, <span class="fl">0.2</span>, <span class="fl">0.2</span>, <span class="fl">0.3</span>)</code></pre>
+<p>然后我们投掷了100次，实际1至6朝上的次数分别为：</p>
+<pre class="sourceCode r"><code class="sourceCode r">observed_vals &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">6</span>, <span class="dv">9</span>, <span class="dv">14</span>, <span class="dv">24</span>, <span class="dv">18</span>, <span class="dv">29</span>)</code></pre>
+<p>通过<code>chisq.test()</code>，检验实际的1至6朝上概率是否与预期有偏差：</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">chisq.test</span>(observed_vals, <span class="dt">p =</span> expected_probs) <span class="co"># 参数p是指概率</span></code></pre>
+<pre><code>## 
+##  Chi-squared test for given probabilities
+## 
+## data:  observed_vals
+## X-squared = 1.4, df = 5, p-value = 0.9243</code></pre>
+<p>p值很大（远大于0.05），因此结论是骰子各面朝上的概率符合预期。</p>
+<p>如果不指定p参数，默认为检测是否所有值相等（即骰子的所有面朝上的概率相等）：</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">chisq.test</span>(observed_vals)</code></pre>
+<pre><code>## 
+##  Chi-squared test for given probabilities
+## 
+## data:  observed_vals
+## X-squared = 23.24, df = 5, p-value = 0.0003037</code></pre>
+<p>这时p值小于0.05. 得出“骰子各面朝上的概率不等”的结论。</p>
+</div>
+<div id="section-5.7.4.2" class="section level4">
+<h4><span class="header-section-number">5.7.4.2</span> 列联表分析/独立性检验</h4>
+<p>假设我们有一组不同年级的学生参加社团的人数数据：</p>
+<pre class="sourceCode r"><code class="sourceCode r">(社团参与 &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">28</span>,<span class="dv">36</span>,<span class="dv">40</span>,<span class="dv">40</span>,<span class="dv">32</span>,<span class="dv">33</span>,<span class="dv">38</span>,<span class="dv">29</span>,<span class="dv">36</span>), <span class="dt">nrow =</span> <span class="dv">3</span>, <span class="dt">dimnames =</span> <span class="kw">list</span>(<span class="kw">c</span>(<span class="st">&quot;一年级&quot;</span>, <span class="st">&quot;二年级&quot;</span>, <span class="st">&quot;三年级&quot;</span>), <span class="kw">c</span>(<span class="st">&quot;棒球&quot;</span>, <span class="st">&quot;足球&quot;</span>, <span class="st">&quot;网球&quot;</span>))))</code></pre>
+<pre><code>##        棒球 足球 网球
+## 一年级   28   40   38
+## 二年级   36   32   29
+## 三年级   40   33   36</code></pre>
+<p>我们想知道社团的参与，与所在年级是否是独立事件：</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">chisq.test</span>(社团参与)</code></pre>
+<pre><code>## 
+##  Pearson&#39;s Chi-squared test
+## 
+## data:  社团参与
+## X-squared = 3.7587, df = 4, p-value = 0.4396</code></pre>
+<p>p值不小于0.05，无法拒绝“社团的参与，与所在年级是独立事件”的虚无假设。</p>
 <p>彩蛋：用R代码实现卡方分布的概率密度函数的图像：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co">#其实还可以更精简，但是为了易读性不得不牺牲一点精简度。</span>
 Z &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">rep</span>(<span class="kw">rnorm</span>(<span class="dv">1000000</span>), <span class="dv">6</span>), <span class="dt">nrow =</span> <span class="dv">6</span>)<span class="op">^</span><span class="dv">2</span>
@@ -1001,9 +1056,13 @@ colors &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">
 }
 <span class="kw">legend</span>(<span class="st">&#39;topright&#39;</span>,<span class="kw">c</span>(<span class="st">&#39;k=1&#39;</span>,<span class="st">&#39;k=2&#39;</span>,<span class="st">&#39;k=3&#39;</span>,<span class="st">&#39;k=4&#39;</span>,<span class="st">&#39;k=5&#39;</span>,<span class="st">&#39;k=6&#39;</span>),
        <span class="dt">fill =</span> colors)</code></pre>
-<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-63-1.png" width="672" /></p>
-<p><span class="math inline">\(\chi^2\)</span>检验有两种，goodness of fit</p>
+<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-73-1.png" width="672" /></p>
+</div>
+<div id="-1" class="section level4">
+<h4><span class="header-section-number">5.7.4.3</span> 其它</h4>
+<p>R自带的检验还有<code>Box.test()</code>, <code>PP.test()</code>, <code>ansari.test()</code>, <code>bartlett.test()</code>, <code>wilcox.test</code>等共31种。查看帮助文件或利用网络资源以了解更多/</p>
 
+</div>
 </div>
 </div>
 </div>
@@ -1025,7 +1084,7 @@ colors &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">
         </div>
       </div>
 <a href="packages.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="ch5.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="tibble.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
