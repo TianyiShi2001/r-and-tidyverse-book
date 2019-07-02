@@ -36,6 +36,8 @@ description: "这是我b站R与tidyverse教程的配套资源"
 
 Hadley Wickham写R for Data Science的时候把绘图放在了第一章，随后再讲加减乘除和数据处理，他认为这样可以降低新人被劝退的概率。我虽然很喜欢他的书，但是我是一个比较保守的人，把所有我认为是基础的内容放在了前6章。
 
+本书的每一章有基础部分和（相对）进阶部分；基础部分的段落中会有“可酌情跳过进阶部分”的提示。仅阅读基础部分即可学到最重要的知识；如学有余力可阅读进阶部分。
+
 ### 版权页 {-}
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
