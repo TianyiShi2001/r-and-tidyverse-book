@@ -7,12 +7,12 @@
     "folds" : "",
     "hash" : "0",
     "id" : "3CF5730A",
-    "lastKnownWriteTime" : 1562055407,
-    "last_content_update" : 1562055407702,
+    "lastKnownWriteTime" : 1562058747,
+    "last_content_update" : 1562058747696,
     "path" : "~/Documents/GitHub/r-and-tidyverse-book/index.Rmd",
     "project_path" : "index.Rmd",
     "properties" : {
-        "cursorPosition" : "37,0",
+        "cursorPosition" : "36,120",
         "scrollLine" : "35"
     },
     "relative_order" : 4,
