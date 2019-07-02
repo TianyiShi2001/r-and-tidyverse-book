@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1562031307252.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "BD26BF5",
+    "lastKnownWriteTime" : 1562035016,
+    "last_content_update" : 1562035016345,
+    "path" : "~/Documents/GitHub/r-and-tidyverse-book/05-list-dataframe-tibble.Rmd",
+    "project_path" : "05-list-dataframe-tibble.Rmd",
+    "properties" : {
+        "cursorPosition" : "265,0",
+        "scrollLine" : "261"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

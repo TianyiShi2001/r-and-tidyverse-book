@@ -127,12 +127,20 @@
   \postdate{\par}
     \date{2019-07-02}
 
-\usepackage[UTF8]{ctex}
+%\usepackage[UTF8]{ctex}
+
+\usepackage{fontspec,xunicode, xltxtra}
+\usepackage{xeCJK}
 \usepackage[
     type={CC},
     modifier={by-nc-nd},
     version={4.0}
  ]{doclicense}
+
+\setmainfont{CMU Serif}
+\setCJKmainfont{SourceHanSerifSC-Regular}
+\setCJKsansfont{STKaitiSC-Regular}
+\setCJKmonofont{STFangsong}
 
 \begin{document}
 \maketitle
@@ -149,7 +157,7 @@
 \subsection*{简介}\label{ux7b80ux4ecb}}
 \addcontentsline{toc}{subsection}{简介}
 
-本书为R(R Core Team \protect\hyperlink{ref-R-base}{2019})和tidyverse(Wickham \protect\hyperlink{ref-R-tidyverse}{2017})的入门向教程。教学视频在b站（）。
+本书为R和tidyverse的入门向教程。教学视频在b站（）。
 
 \hypertarget{ux8bf4ux660e}{%
 \subsection*{使用说明}\label{ux8bf4ux660e}}
@@ -165,8 +173,10 @@
 \subsection*{Colophon}\label{colophon}}
 \addcontentsline{toc}{subsection}{Colophon}
 
-This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
 \doclicenseThis
+
+本作品采用\href{https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh}{知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议}进行许可。
 
 本书使用R Markdown (\url{http://rmarkdown.rstudio.com/)在RStudio} (\url{http://www.rstudio.com/ide/)中编写。knitr} (httpL//yihui.name/knitr/)和pandoc (\url{https://pandoc.org/)把Rmd文件编译成html和pdf}
 
@@ -289,11 +299,11 @@ This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAl
 \hypertarget{r}{%
 \section{什么是R}\label{r}}
 
-R(R Core Team \protect\hyperlink{ref-R-base}{2019})包含R语言和一个有着强大的统计分析及作图功能的软件系统，由新西兰奥克兰大学的Ross Ihaka和Robert Gentleman共同开发。R语言虽然看起来只能做统计，实际上它麻雀虽小，五脏俱全，编程语言该有的特性它基本都有（\href{https://adv-r.hadley.nz/oo.html}{甚至支持OOP}）。
+R (R Core Team \protect\hyperlink{ref-R-base}{2019})包含R语言和一个有着强大的统计分析及作图功能的软件系统，由新西兰奥克兰大学的Ross Ihaka和Robert Gentleman共同开发。R语言虽然看起来只能做统计，实际上它麻雀虽小，五脏俱全，编程语言该有的特性它基本都有（\href{https://adv-r.hadley.nz/oo.html}{甚至支持OOP}）。
 
 安装了R之后，你可以在其自带的``R''软件中（也可以直接在命令行使用），但是那个软件界面比较简单，需要记住一些命令来执行``查看当前存储的数据''，``导出jpg格式的图像''等操作，对新手不太友好。因此我们使用RStudio.
 
-RStudio(RStudio Team \protect\hyperlink{ref-R-rstudio}{2015})是R语言官方的IDE（集成开发环境），它的一系列功能使得编辑，整理和管理R代码和项目方便很多。
+RStudio (RStudio Team \protect\hyperlink{ref-R-rstudio}{2015})是R语言官方的IDE（集成开发环境），它的一系列功能使得编辑，整理和管理R代码和项目方便很多。
 
 了解R的优势，请看第\ref{youshi}节
 
@@ -327,7 +337,7 @@ R比SAS功能更强大。所有SAS中的功能，都能在R中实现，而很多
 
 R和Python（NumPy和SciPy）是开源、免费的。在数据分析的应用中，R比Python历史更悠久，因此积攒了很多很棒的packages（包）。一般来说，python的强项是数据挖掘，而R的强项是数据分析，它们都是强大的工具。不用担心需要在二者之中做选择，因为rpy, reticulate等packages可以让你在python中使用R，在R中使用python，详情请见第\ref{python}章。无论你是数据分析零基础，还是有python数据分析的经验，都能从本书中获益。
 
-至于Excel，它的定位原本就是办公（而不是学术）软件，用作数据收集和初步整理是可以的，但是做不了严谨的数据分析和大数据，功能也非常局限。有五分之一的使用了Excel的遗传学论文，数据都出现了偏差(Ziemann, Eren, and El-Osta \protect\hyperlink{ref-Ziemann2016Gene-name-errors}{2016})。
+至于Excel，它的定位原本就是办公（而不是学术）软件，用作数据收集和初步整理是可以的，但是做不了严谨的数据分析和大数据，功能也非常局限。有五分之一的使用了Excel的遗传学论文，数据都出现了偏差 (Ziemann, Eren, and El-Osta \protect\hyperlink{ref-Ziemann2016Gene-name-errors}{2016})。
 
 R是GNU计划的一部分，因此R是一个自由软件 (Libre software)。你可以 在\href{https://www.gnu.org/philosophy/free-sw.zh-cn.html}{GNU官网}了解更多。
 
@@ -2463,10 +2473,10 @@ base
 ## # A tibble: 4 x 11
 ##   manufacturer model  displ  year   cyl trans drv     cty   hwy fl    class
 ##   <chr>        <chr>  <dbl> <int> <int> <chr> <chr> <int> <int> <chr> <chr>
-## 1 dodge        dakot~   3.7  2008     6 manu~ 4        15    19 r     pick~
-## 2 land rover   range~   4.4  2008     8 auto~ 4        12    18 r     suv  
-## 3 volkswagen   passat   1.8  1999     4 manu~ f        21    29 p     mids~
-## 4 dodge        carav~   2.4  1999     4 auto~ f        18    24 r     mini~
+## 1 dodge        duran~   5.2  1999     8 auto~ 4        11    16 r     suv  
+## 2 ford         f150 ~   5.4  1999     8 auto~ 4        11    15 r     pick~
+## 3 pontiac      grand~   3.8  1999     6 auto~ f        17    27 r     mids~
+## 4 dodge        carav~   3.3  1999     6 auto~ f        16    22 r     mini~
 \end{verbatim}
 
 \hypertarget{factor}{%
@@ -2533,11 +2543,13 @@ R中的list是一种特殊的数据存储形式。使用\texttt{list()}函数来
 
 尝试对lists和vectors使用\texttt{is.vector()}, \texttt{is.list()}, \texttt{is.atomic()}和\texttt{is.recursive()}函数，你会发现list虽然也是``vector''，但我们一般说的``vector''都是指只能存储一种数据类型的atomic vector；而lists是recursive vector.
 
-这意味着\textbf{一个list能存储多种类型的数据，且可以包含子list}。list中的每个元素是可以是一个(atomic) vector（如以下例子中的\texttt{{[}{[}1{]}{]}}和\texttt{{[}{[}3{]}{]}{[}{[}2{]}{]}}），也可以是一个list（如以下例子中的{[}{[}3{]}{]}，它包含了有两个list元素的list；{[}{[}3{]}{]}是一个子list）。
+这意味着\textbf{一个list能存储多种类型的数据，且可以包含子list}。list中的每个元素可以是\textbf{任何R中的物件} (object)：除了常用的 (atomic) vector和另外一个（子）list以外，还可以有dataframe/tibble和函数：
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{y <-}\StringTok{ }\KeywordTok{list}\NormalTok{(}\DecValTok{1}\NormalTok{, }\KeywordTok{c}\NormalTok{(}\StringTok{"a"}\NormalTok{,}\StringTok{"あ"}\NormalTok{), }\KeywordTok{list}\NormalTok{(}\DecValTok{1}\OperatorTok{+}\NormalTok{3i, }\KeywordTok{c}\NormalTok{(}\OtherTok{FALSE}\NormalTok{, }\OtherTok{NA}\NormalTok{, }\OtherTok{TRUE}\NormalTok{)))}
+\NormalTok{y <-}\StringTok{ }\KeywordTok{list}\NormalTok{(}\DecValTok{1}\NormalTok{, }\KeywordTok{c}\NormalTok{(}\StringTok{"a"}\NormalTok{,}\StringTok{"あ"}\NormalTok{), }\KeywordTok{list}\NormalTok{(}\DecValTok{1}\OperatorTok{+}\NormalTok{3i, }\KeywordTok{c}\NormalTok{(}\OtherTok{FALSE}\NormalTok{, }\OtherTok{NA}\NormalTok{, }\OtherTok{TRUE}\NormalTok{)), }
+          \KeywordTok{tibble}\NormalTok{(}\DataTypeTok{x =} \KeywordTok{c}\NormalTok{(}\StringTok{"阿拉木图"}\NormalTok{, }\StringTok{"什切青"}\NormalTok{), }\DataTypeTok{y =} \KeywordTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{)),}
+\NormalTok{          t.test)}
 \NormalTok{y}
 \end{Highlighting}
 \end{Shaded}
@@ -2555,6 +2567,20 @@ R中的list是一种特殊的数据存储形式。使用\texttt{list()}函数来
 ## 
 ## [[3]][[2]]
 ## [1] FALSE    NA  TRUE
+## 
+## 
+## [[4]]
+## # A tibble: 2 x 2
+##   x            y
+##   <chr>    <dbl>
+## 1 阿拉木图     2
+## 2 什切青       3
+## 
+## [[5]]
+## function (x, ...) 
+## UseMethod("t.test")
+## <bytecode: 0x7fcfae8c8020>
+## <environment: namespace:stats>
 \end{verbatim}
 
 \hypertarget{list}{%
@@ -2617,6 +2643,36 @@ R中的list是一种特殊的数据存储形式。使用\texttt{list()}函数来
 ## [1] NA
 \end{verbatim}
 
+list里的元素可以有名字；被命名的元素可以通过\texttt{\$}符号抓取：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{z <-}\StringTok{ }\KeywordTok{list}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{3}\NormalTok{), }\DataTypeTok{z2 =} \KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\StringTok{"a"}\NormalTok{, }\StringTok{"b"}\NormalTok{))}
+\NormalTok{z }\CommentTok{# `[[2]]`被`$z2`所取代}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [[1]]
+## [1] 1 3
+## 
+## $z2
+## [1] 4 5 6
+## 
+## [[3]]
+## [1] "a" "b"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{z}\OperatorTok{$}\NormalTok{z2 }\OperatorTok{==}\StringTok{ }\NormalTok{z[[}\DecValTok{2}\NormalTok{]] }\CommentTok{# `z[[2]]`仍然是可用的，结果和`z$z2`一样}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] TRUE TRUE TRUE
+\end{verbatim}
+
 \hypertarget{dataframetibble}{%
 \subsubsection{Dataframe和tibble的本质}\label{dataframetibble}}
 
@@ -2644,13 +2700,34 @@ R中的list是一种特殊的数据存储形式。使用\texttt{list()}函数来
 ## [1] "tbl_df"     "tbl"        "data.frame"
 \end{verbatim}
 
+\hypertarget{dataframe-subsetting}{%
+\subsubsection{Dataframe/tibble的取子集}\label{dataframe-subsetting}}
+
+Tibble既有list的特征，也有matrix的特征。
+
+当使用一个参数取子集的时候，比如\texttt{mpg{[}{[}3{]}{]}}，\texttt{mpg{[}{[}"displ"{]}{]}}或\texttt{mpg\$displ}，tibble表现得像list，其中每一列是一个有命名的list element；
+
+当使用两个参数取子集的时候，比如\texttt{mpg{[}3,4{]}}, \texttt{mpg{[}3,\ {]}}, \texttt{mpg{[}\ ,4{]}}，tibble表现得像matrix
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mpg[}\DecValTok{3}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 1 x 11
+##   manufacturer model displ  year   cyl trans  drv     cty   hwy fl    class
+##   <chr>        <chr> <dbl> <int> <int> <chr>  <chr> <int> <int> <chr> <chr>
+## 1 audi         a4        2  2008     4 manua~ f        20    31 p     comp~
+\end{verbatim}
+
+请查看\href{https://adv-r.hadley.nz/subsetting.html\#simplify-preserve}{Advanced R}了解更多。
+
 \hypertarget{base-r-dataframe--tidyverse-tibble}{%
 \subsection{Base R dataframe 和 Tidyverse tibble的区别}\label{base-r-dataframe--tidyverse-tibble}}
 
-\hypertarget{dataframe-subsetting}{%
-\subsubsection{Subsetting}\label{dataframe-subsetting}}
-
-请查看\href{https://adv-r.hadley.nz/subsetting.html\#simplify-preserve}{Advanced R}了解更多。
+你可能已经注意到，上面\texttt{mpg{[}3,\ {]}}和\texttt{select(mpg,\ 3)}是等效的；\texttt{mpg{[}3,\ {]}}显然更精简，那么为什么要使用\texttt{select()}函数呢？
 
 \hypertarget{arraymatrix}{%
 \subsection{array（数组）和matrix（矩阵）简介}\label{arraymatrix}}
@@ -2850,33 +2927,33 @@ Dataframe不是matrix（虽然都是方的）. Matrix是二维的，\textbf{仅�
 \begin{verbatim}
 ## , , 1
 ## 
-##           [,1]       [,2]      [,3]       [,4]      [,5]
-## [1,] 0.2733328 0.55216833 0.2414834 0.17121533 0.4099636
-## [2,] 0.7684922 0.12266266 0.9883322 0.28112454 0.2438085
-## [3,] 0.3333403 0.91729563 0.9449892 0.75163812 0.2076522
-## [4,] 0.3293185 0.82260952 0.3200493 0.03729585 0.2311832
-## [5,] 0.7770377 0.64489886 0.7179226 0.91205527 0.8527781
-## [6,] 0.5006249 0.01798556 0.1103572 0.23300807 0.7673886
+##            [,1]      [,2]       [,3]       [,4]      [,5]
+## [1,] 0.41434308 0.4711039 0.52351186 0.24397207 0.4625603
+## [2,] 0.15769432 0.6805976 0.61237873 0.87682343 0.5571892
+## [3,] 0.94001228 0.9190032 0.33773087 0.78464163 0.5326318
+## [4,] 0.15331747 0.7203922 0.06009472 0.06504344 0.8711724
+## [5,] 0.31464623 0.7447924 0.61182622 0.29551607 0.8208334
+## [6,] 0.08620387 0.4059124 0.08478483 0.30622528 0.3560613
 ## 
 ## , , 2
 ## 
-##            [,1]      [,2]       [,3]      [,4]      [,5]
-## [1,] 0.03168819 0.9358690 0.30319995 0.8111589 0.4821811
-## [2,] 0.68437211 0.9767348 0.93120194 0.7343984 0.7931656
-## [3,] 0.09698453 0.9391623 0.08573336 0.1064778 0.1418348
-## [4,] 0.01410627 0.8535771 0.11346088 0.1066444 0.1656295
-## [5,] 0.14722911 0.3634736 0.32963875 0.0399176 0.8894229
-## [6,] 0.85356769 0.9552780 0.33517983 0.2251467 0.1432204
+##            [,1]      [,2]      [,3]      [,4]      [,5]
+## [1,] 0.30572878 0.7109056 0.8285097 0.1512264 0.1364098
+## [2,] 0.58939743 0.7827361 0.9920996 0.6964091 0.8213966
+## [3,] 0.78398957 0.2038322 0.6339607 0.3883223 0.6107262
+## [4,] 0.83339878 0.3359570 0.5056570 0.8003802 0.2552703
+## [5,] 0.58338802 0.9891593 0.5527622 0.9193629 0.6708516
+## [6,] 0.02926021 0.8434040 0.7502204 0.1120765 0.5984930
 ## 
 ## , , 3
 ## 
-##           [,1]      [,2]      [,3]      [,4]      [,5]
-## [1,] 0.2292650 0.3607208 0.9184092 0.9354233 0.5562962
-## [2,] 0.2181959 0.5978566 0.3005676 0.3990182 0.4547201
-## [3,] 0.1544659 0.8980517 0.3700370 0.9026410 0.2504877
-## [4,] 0.5162325 0.3463473 0.1741535 0.2305774 0.9751043
-## [5,] 0.9737084 0.1882738 0.1466204 0.1805194 0.5386562
-## [6,] 0.2281510 0.3142199 0.4600185 0.2674532 0.2398798
+##            [,1]       [,2]        [,3]      [,4]      [,5]
+## [1,] 0.35012960 0.84427517 0.371783353 0.9731701 0.8114402
+## [2,] 0.02750938 0.79724164 0.679812154 0.8952902 0.2046514
+## [3,] 0.03439413 0.05004879 0.489619261 0.2140061 0.9397663
+## [4,] 0.43359605 0.68806399 0.717347769 0.1830532 0.3205851
+## [5,] 0.40261460 0.86628986 0.002737983 0.2492440 0.5619048
+## [6,] 0.64570339 0.98411626 0.436186512 0.2754077 0.1139996
 \end{verbatim}
 
 然后我们用\texttt{dimnames()}来命名：
@@ -2891,33 +2968,33 @@ Dataframe不是matrix（虽然都是方的）. Matrix是二维的，\textbf{仅�
 \begin{verbatim}
 ## , , chloroquine
 ## 
-##          P. falciparum P. malariae  P. ovale   P. vivax P. knowlesi
-## trial. 1     0.2733328  0.55216833 0.2414834 0.17121533   0.4099636
-## trial. 2     0.7684922  0.12266266 0.9883322 0.28112454   0.2438085
-## trial. 3     0.3333403  0.91729563 0.9449892 0.75163812   0.2076522
-## trial. 4     0.3293185  0.82260952 0.3200493 0.03729585   0.2311832
-## trial. 5     0.7770377  0.64489886 0.7179226 0.91205527   0.8527781
-## trial. 6     0.5006249  0.01798556 0.1103572 0.23300807   0.7673886
+##          P. falciparum P. malariae   P. ovale   P. vivax P. knowlesi
+## trial. 1    0.41434308   0.4711039 0.52351186 0.24397207   0.4625603
+## trial. 2    0.15769432   0.6805976 0.61237873 0.87682343   0.5571892
+## trial. 3    0.94001228   0.9190032 0.33773087 0.78464163   0.5326318
+## trial. 4    0.15331747   0.7203922 0.06009472 0.06504344   0.8711724
+## trial. 5    0.31464623   0.7447924 0.61182622 0.29551607   0.8208334
+## trial. 6    0.08620387   0.4059124 0.08478483 0.30622528   0.3560613
 ## 
 ## , , artemisinin
 ## 
-##          P. falciparum P. malariae   P. ovale  P. vivax P. knowlesi
-## trial. 1    0.03168819   0.9358690 0.30319995 0.8111589   0.4821811
-## trial. 2    0.68437211   0.9767348 0.93120194 0.7343984   0.7931656
-## trial. 3    0.09698453   0.9391623 0.08573336 0.1064778   0.1418348
-## trial. 4    0.01410627   0.8535771 0.11346088 0.1066444   0.1656295
-## trial. 5    0.14722911   0.3634736 0.32963875 0.0399176   0.8894229
-## trial. 6    0.85356769   0.9552780 0.33517983 0.2251467   0.1432204
+##          P. falciparum P. malariae  P. ovale  P. vivax P. knowlesi
+## trial. 1    0.30572878   0.7109056 0.8285097 0.1512264   0.1364098
+## trial. 2    0.58939743   0.7827361 0.9920996 0.6964091   0.8213966
+## trial. 3    0.78398957   0.2038322 0.6339607 0.3883223   0.6107262
+## trial. 4    0.83339878   0.3359570 0.5056570 0.8003802   0.2552703
+## trial. 5    0.58338802   0.9891593 0.5527622 0.9193629   0.6708516
+## trial. 6    0.02926021   0.8434040 0.7502204 0.1120765   0.5984930
 ## 
 ## , , doxycycline
 ## 
-##          P. falciparum P. malariae  P. ovale  P. vivax P. knowlesi
-## trial. 1     0.2292650   0.3607208 0.9184092 0.9354233   0.5562962
-## trial. 2     0.2181959   0.5978566 0.3005676 0.3990182   0.4547201
-## trial. 3     0.1544659   0.8980517 0.3700370 0.9026410   0.2504877
-## trial. 4     0.5162325   0.3463473 0.1741535 0.2305774   0.9751043
-## trial. 5     0.9737084   0.1882738 0.1466204 0.1805194   0.5386562
-## trial. 6     0.2281510   0.3142199 0.4600185 0.2674532   0.2398798
+##          P. falciparum P. malariae    P. ovale  P. vivax P. knowlesi
+## trial. 1    0.35012960  0.84427517 0.371783353 0.9731701   0.8114402
+## trial. 2    0.02750938  0.79724164 0.679812154 0.8952902   0.2046514
+## trial. 3    0.03439413  0.05004879 0.489619261 0.2140061   0.9397663
+## trial. 4    0.43359605  0.68806399 0.717347769 0.1830532   0.3205851
+## trial. 5    0.40261460  0.86628986 0.002737983 0.2492440   0.5619048
+## trial. 6    0.64570339  0.98411626 0.436186512 0.2754077   0.1139996
 \end{verbatim}
 
 \textbf{清清楚楚，一目了然。}
@@ -3012,8 +3089,8 @@ Inspired by Jupyter, Beaker Notebook allows you to switch from one language in o
 \addcontentsline{toc}{chapter}{Bibiolography}
 
 \hypertarget{refs}{}
-\leavevmode\hypertarget{ref-Gentleman2009R-Programming-Bioinfo}{}%
-Gentleman, Robert. 2009. \emph{R Programming for Bioinformatics}. Book. Boca Raton, FL: CRC Press.
+\leavevmode\hypertarget{ref-Coghlan:2016}{}%
+Coghlan, Avril. 2016. ``A Little Book of R for Biomedical Statistics.''
 
 \leavevmode\hypertarget{ref-Kernighan1988The-C-Programming-La}{}%
 Kernighan, Brain W., and Ednnis M. Ritchie. 1988. \emph{The C Programming Language}. 2nd ed. Prentice Hall.
@@ -3026,9 +3103,6 @@ RStudio Team. 2015. \emph{RStudio: Integrated Development Environment for R}. Bo
 
 \leavevmode\hypertarget{ref-Wickham2015ggplot2-Elegant-Gra}{}%
 Wickham, Hadley. 2015. \emph{Ggplot2: Elegant Graphics for Data Analysis}. Use R! Springer.
-
-\leavevmode\hypertarget{ref-R-tidyverse}{}%
----------. 2017. \emph{Tidyverse: Easily Install and Load the 'Tidyverse'}. \url{https://CRAN.R-project.org/package=tidyverse}.
 
 \leavevmode\hypertarget{ref-Ziemann2016Gene-name-errors}{}%
 Ziemann, Mark, Yotam Eren, and Assam El-Osta. 2016. ``Gene Name Errors Are Widespread in the Scientific Literature.'' Journal Article. \emph{Genome Biology} 17 (1): 177. \url{https://doi.org/10.1186/s13059-016-1044-7}.

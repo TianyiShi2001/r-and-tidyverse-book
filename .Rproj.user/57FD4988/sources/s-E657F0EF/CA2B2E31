@@ -1,21 +1,21 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1562028324556.000,
+    "created" : 1562035143846.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "0",
-    "id" : "EFEA42F9",
-    "lastKnownWriteTime" : 1562027604,
-    "last_content_update" : 1562027604,
+    "id" : "CA2B2E31",
+    "lastKnownWriteTime" : 1562035314,
+    "last_content_update" : 1562035314800,
     "path" : "~/Documents/GitHub/r-and-tidyverse-book/index.Rmd",
     "project_path" : "index.Rmd",
     "properties" : {
-        "cursorPosition" : "39,16",
-        "scrollLine" : "30"
+        "cursorPosition" : "39,95",
+        "scrollLine" : "35"
     },
-    "relative_order" : 2,
+    "relative_order" : 4,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_markdown"

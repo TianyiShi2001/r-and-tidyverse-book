@@ -1,12 +1,18 @@
+---
+nocite: |
+  @Coghlan:2016
+---
+
+
 # R和RStudio介绍和安装教程 {#intro-and-installation}
 
 ## 什么是R
 
-R[@R-base]包含R语言和一个有着强大的统计分析及作图功能的软件系统，由新西兰奥克兰大学的Ross Ihaka和Robert Gentleman共同开发。R语言虽然看起来只能做统计，实际上它麻雀虽小，五脏俱全，编程语言该有的特性它基本都有（[甚至支持OOP](https://adv-r.hadley.nz/oo.html)）。
+R [@R-base]包含R语言和一个有着强大的统计分析及作图功能的软件系统，由新西兰奥克兰大学的Ross Ihaka和Robert Gentleman共同开发。R语言虽然看起来只能做统计，实际上它麻雀虽小，五脏俱全，编程语言该有的特性它基本都有（[甚至支持OOP](https://adv-r.hadley.nz/oo.html)）。
 
 安装了R之后，你可以在其自带的“R”软件中（也可以直接在命令行使用），但是那个软件界面比较简单，需要记住一些命令来执行“查看当前存储的数据”，“导出jpg格式的图像”等操作，对新手不太友好。因此我们使用RStudio. 
 
-RStudio[@R-rstudio]是R语言官方的IDE（集成开发环境），它的一系列功能使得编辑，整理和管理R代码和项目方便很多。
+RStudio [@R-rstudio]是R语言官方的IDE（集成开发环境），它的一系列功能使得编辑，整理和管理R代码和项目方便很多。
 
 了解R的优势，请看第\@ref(youshi)节
 
@@ -36,7 +42,7 @@ R比SAS功能更强大。所有SAS中的功能，都能在R中实现，而很多
 
 R和Python（NumPy和SciPy）是开源、免费的。在数据分析的应用中，R比Python历史更悠久，因此积攒了很多很棒的packages（包）。一般来说，python的强项是数据挖掘，而R的强项是数据分析，它们都是强大的工具。不用担心需要在二者之中做选择，因为rpy, reticulate等packages可以让你在python中使用R，在R中使用python，详情请见第\@ref(python)章。无论你是数据分析零基础，还是有python数据分析的经验，都能从本书中获益。
 
-至于Excel，它的定位原本就是办公（而不是学术）软件，用作数据收集和初步整理是可以的，但是做不了严谨的数据分析和大数据，功能也非常局限。有五分之一的使用了Excel的遗传学论文，数据都出现了偏差[@Ziemann2016Gene-name-errors]。
+至于Excel，它的定位原本就是办公（而不是学术）软件，用作数据收集和初步整理是可以的，但是做不了严谨的数据分析和大数据，功能也非常局限。有五分之一的使用了Excel的遗传学论文，数据都出现了偏差 [@Ziemann2016Gene-name-errors]。
 
 
 R是GNU计划的一部分，因此R是一个自由软件 (Libre software)。你可以 在[GNU官网](https://www.gnu.org/philosophy/free-sw.zh-cn.html)了解更多。

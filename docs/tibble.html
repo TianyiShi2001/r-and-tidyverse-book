@@ -385,7 +385,7 @@ mpg[[<span class="dv">3</span>]]</code></pre>
 <p>以上三种方法都应得到同样的结果（是一个vector）：</p>
 <pre><code>##  [1] 1.8 1.8 2.0 2.0 2.8 2.8 3.1 1.8 1.8 2.0 2.0 2.8 2.8 3.1 3.1 2.8 3.1
 ## [18] 4.2 5.3 5.3</code></pre>
-<p>如果使用单方括号，得到的是一个tibble（试试<code>mpg[3]</code>）这个特性在第<a href="tibble.html#dataframe-subsetting">6.3.2.1</a>节中有解释。</p>
+<p>如果使用单方括号，得到的是一个tibble（试试<code>mpg[3]</code>）这个特性在第<a href="tibble.html#dataframe-subsetting">6.3.1.3</a>节中有解释。</p>
 </div>
 <div id="section-6.2.2.2" class="section level4">
 <h4><span class="header-section-number">6.2.2.2</span> 抓取多列</h4>
@@ -450,10 +450,10 @@ mpg_random4</code></pre>
 <pre><code>## # A tibble: 4 x 11
 ##   manufacturer model  displ  year   cyl trans drv     cty   hwy fl    class
 ##   &lt;chr&gt;        &lt;chr&gt;  &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
-## 1 subaru       fores…   2.5  2008     4 auto… 4        20    26 r     suv  
-## 2 toyota       corol…   1.8  1999     4 manu… f        26    35 r     comp…
-## 3 dodge        carav…   3.3  1999     6 auto… f        16    22 r     mini…
-## 4 dodge        ram 1…   5.2  1999     8 manu… 4        11    16 r     pick…</code></pre>
+## 1 dodge        ram 1…   4.7  2008     8 auto… 4        13    17 r     pick…
+## 2 volkswagen   passat   3.6  2008     6 auto… f        17    26 p     mids…
+## 3 hyundai      tibur…   2    2008     4 manu… f        20    28 r     subc…
+## 4 nissan       pathf…   3.3  1999     6 manu… 4        15    17 r     suv</code></pre>
 </div>
 </div>
 <div id="factor" class="section level3">
@@ -484,8 +484,10 @@ mpg_random4</code></pre>
 <h3><span class="header-section-number">6.3.1</span> list（列表）简介</h3>
 <p>R中的list是一种特殊的数据存储形式。使用<code>list()</code>函数来创建lists.</p>
 <p>尝试对lists和vectors使用<code>is.vector()</code>, <code>is.list()</code>, <code>is.atomic()</code>和<code>is.recursive()</code>函数，你会发现list虽然也是“vector”，但我们一般说的“vector”都是指只能存储一种数据类型的atomic vector；而lists是recursive vector.</p>
-<p>这意味着<strong>一个list能存储多种类型的数据，且可以包含子list</strong>。list中的每个元素是可以是一个(atomic) vector（如以下例子中的<code>[[1]]</code>和<code>[[3]][[2]]</code>），也可以是一个list（如以下例子中的[[3]]，它包含了有两个list元素的list；[[3]]是一个子list）。</p>
-<pre class="sourceCode r"><code class="sourceCode r">y &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dv">1</span>, <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;あ&quot;</span>), <span class="kw">list</span>(<span class="dv">1</span><span class="op">+</span>3i, <span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">NA</span>, <span class="ot">TRUE</span>)))
+<p>这意味着<strong>一个list能存储多种类型的数据，且可以包含子list</strong>。list中的每个元素可以是<strong>任何R中的物件</strong> (object)：除了常用的 (atomic) vector和另外一个（子）list以外，还可以有dataframe/tibble和函数：</p>
+<pre class="sourceCode r"><code class="sourceCode r">y &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dv">1</span>, <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;あ&quot;</span>), <span class="kw">list</span>(<span class="dv">1</span><span class="op">+</span>3i, <span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">NA</span>, <span class="ot">TRUE</span>)), 
+          <span class="kw">tibble</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="st">&quot;阿拉木图&quot;</span>, <span class="st">&quot;什切青&quot;</span>), <span class="dt">y =</span> <span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">3</span>)),
+          t.test)
 y</code></pre>
 <pre><code>## [[1]]
 ## [1] 1
@@ -498,7 +500,21 @@ y</code></pre>
 ## [1] 1+3i
 ## 
 ## [[3]][[2]]
-## [1] FALSE    NA  TRUE</code></pre>
+## [1] FALSE    NA  TRUE
+## 
+## 
+## [[4]]
+## # A tibble: 2 x 2
+##   x            y
+##   &lt;chr&gt;    &lt;dbl&gt;
+## 1 阿拉木图     2
+## 2 什切青       3
+## 
+## [[5]]
+## function (x, ...) 
+## UseMethod(&quot;t.test&quot;)
+## &lt;bytecode: 0x7fcfae8c8020&gt;
+## &lt;environment: namespace:stats&gt;</code></pre>
 <div id="list" class="section level4">
 <h4><span class="header-section-number">6.3.1.1</span> list的索引/取子集</h4>
 <p>使用上面的例子：</p>
@@ -517,6 +533,19 @@ y</code></pre>
 ## [1] FALSE    NA  TRUE</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">y[[<span class="dv">3</span>]][[<span class="dv">2</span>]][<span class="dv">2</span>] <span class="co"># 得到vector时，直接在后面用单方括号</span></code></pre>
 <pre><code>## [1] NA</code></pre>
+<p>list里的元素可以有名字；被命名的元素可以通过<code>$</code>符号抓取：</p>
+<pre class="sourceCode r"><code class="sourceCode r">z &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>), <span class="dt">z2 =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>), <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>))
+z <span class="co"># `[[2]]`被`$z2`所取代</span></code></pre>
+<pre><code>## [[1]]
+## [1] 1 3
+## 
+## $z2
+## [1] 4 5 6
+## 
+## [[3]]
+## [1] &quot;a&quot; &quot;b&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">z<span class="op">$</span>z2 <span class="op">==</span><span class="st"> </span>z[[<span class="dv">2</span>]] <span class="co"># `z[[2]]`仍然是可用的，结果和`z$z2`一样</span></code></pre>
+<pre><code>## [1] TRUE TRUE TRUE</code></pre>
 </div>
 <div id="dataframetibble" class="section level4">
 <h4><span class="header-section-number">6.3.1.2</span> Dataframe和tibble的本质</h4>
@@ -527,13 +556,22 @@ y</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(mpg)</code></pre>
 <pre><code>## [1] &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</code></pre>
 </div>
+<div id="dataframe-subsetting" class="section level4">
+<h4><span class="header-section-number">6.3.1.3</span> Dataframe/tibble的取子集</h4>
+<p>Tibble既有list的特征，也有matrix的特征。</p>
+<p>当使用一个参数取子集的时候，比如<code>mpg[[3]]</code>，<code>mpg[[&quot;displ&quot;]]</code>或<code>mpg$displ</code>，tibble表现得像list，其中每一列是一个有命名的list element；</p>
+<p>当使用两个参数取子集的时候，比如<code>mpg[3,4]</code>, <code>mpg[3, ]</code>, <code>mpg[ ,4]</code>，tibble表现得像matrix</p>
+<pre class="sourceCode r"><code class="sourceCode r">mpg[<span class="dv">3</span>, ]</code></pre>
+<pre><code>## # A tibble: 1 x 11
+##   manufacturer model displ  year   cyl trans  drv     cty   hwy fl    class
+##   &lt;chr&gt;        &lt;chr&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;  &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
+## 1 audi         a4        2  2008     4 manua… f        20    31 p     comp…</code></pre>
+<p>请查看<a href="https://adv-r.hadley.nz/subsetting.html#simplify-preserve">Advanced R</a>了解更多。</p>
+</div>
 </div>
 <div id="base-r-dataframe--tidyverse-tibble" class="section level3">
 <h3><span class="header-section-number">6.3.2</span> Base R dataframe 和 Tidyverse tibble的区别</h3>
-<div id="dataframe-subsetting" class="section level4">
-<h4><span class="header-section-number">6.3.2.1</span> Subsetting</h4>
-<p>请查看<a href="https://adv-r.hadley.nz/subsetting.html#simplify-preserve">Advanced R</a>了解更多。</p>
-</div>
+<p>你可能已经注意到，上面<code>mpg[3, ]</code>和<code>select(mpg, 3)</code>是等效的；<code>mpg[3, ]</code>显然更精简，那么为什么要使用<code>select()</code>函数呢？</p>
 </div>
 <div id="arraymatrix" class="section level3">
 <h3><span class="header-section-number">6.3.3</span> array（数组）和matrix（矩阵）简介</h3>
@@ -641,65 +679,65 @@ A</code></pre>
 B</code></pre>
 <pre><code>## , , 1
 ## 
-##            [,1]      [,2]       [,3]       [,4]      [,5]
-## [1,] 0.98993673 0.4442498 0.41058390 0.16925043 0.6726596
-## [2,] 0.17093717 0.1010249 0.51289956 0.66465584 0.6366200
-## [3,] 0.35321048 0.8202545 0.44284155 0.88387912 0.3621723
-## [4,] 0.33532945 0.1646536 0.05580181 0.02435384 0.3079479
-## [5,] 0.04150176 0.1035764 0.57765376 0.93223966 0.9628250
-## [6,] 0.53653081 0.0731758 0.16051228 0.06710293 0.8539596
+##           [,1]        [,2]      [,3]      [,4]       [,5]
+## [1,] 0.1334267 0.266524846 0.6227430 0.9847957 0.66363485
+## [2,] 0.4189530 0.707006096 0.2089454 0.3262761 0.84089508
+## [3,] 0.6354381 0.696217674 0.1226550 0.2947125 0.76089447
+## [4,] 0.1065249 0.772291018 0.9697497 0.6034255 0.05817063
+## [5,] 0.9811132 0.162316249 0.6915749 0.3770268 0.75111247
+## [6,] 0.8246810 0.002309866 0.1693663 0.3807588 0.77441144
 ## 
 ## , , 2
 ## 
-##           [,1]      [,2]       [,3]      [,4]      [,5]
-## [1,] 0.6582924 0.4853163 0.34198311 0.5209592 0.3588128
-## [2,] 0.4245164 0.3375138 0.18546227 0.8012921 0.7511102
-## [3,] 0.7457895 0.5033791 0.17942883 0.8992609 0.9144545
-## [4,] 0.7776140 0.9977487 0.08917016 0.3068819 0.1506947
-## [5,] 0.3076778 0.9234079 0.46061229 0.1676567 0.2757162
-## [6,] 0.7493719 0.8059244 0.69557123 0.8858246 0.7761992
+##            [,1]      [,2]      [,3]        [,4]      [,5]
+## [1,] 0.48997812 0.9750217 0.1458199 0.591757811 0.2389201
+## [2,] 0.46259201 0.7207168 0.6191921 0.004908079 0.4409890
+## [3,] 0.72862107 0.7404784 0.7695326 0.195835653 0.1082606
+## [4,] 0.84979975 0.3651378 0.3173429 0.824058828 0.8814316
+## [5,] 0.08931567 0.9024100 0.1741047 0.666815636 0.6141411
+## [6,] 0.42222118 0.7064412 0.3708055 0.845101166 0.3837670
 ## 
 ## , , 3
 ## 
-##           [,1]      [,2]      [,3]       [,4]      [,5]
-## [1,] 0.5724714 0.9228745 0.6368829 0.97903625 0.6561482
-## [2,] 0.9837468 0.6430103 0.1348027 0.91589338 0.5344513
-## [3,] 0.5912429 0.4589617 0.0774094 0.06349737 0.1168682
-## [4,] 0.1346581 0.1756834 0.4748297 0.91659923 0.4762176
-## [5,] 0.3054545 0.7281216 0.2689439 0.64101011 0.1147562
-## [6,] 0.1049776 0.6679161 0.4972282 0.09248967 0.8749028</code></pre>
+##            [,1]      [,2]      [,3]      [,4]       [,5]
+## [1,] 0.02383087 0.8518868 0.1827192 0.1230670 0.49641140
+## [2,] 0.99528531 0.5424545 0.2705064 0.2171868 0.65154507
+## [3,] 0.34980318 0.5432312 0.9822926 0.6271626 0.80782609
+## [4,] 0.63026336 0.1515682 0.6988988 0.7182981 0.59847153
+## [5,] 0.51289596 0.9739322 0.5984645 0.8960697 0.82063228
+## [6,] 0.19598179 0.3528435 0.1989738 0.6178889 0.05451889</code></pre>
 <p>然后我们用<code>dimnames()</code>来命名：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dimnames</span>(B) &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="kw">paste</span>(<span class="st">&quot;trial.&quot;</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">6</span>), <span class="kw">c</span>(<span class="st">&#39;P. falciparum&#39;</span>, <span class="st">&#39;P. malariae&#39;</span>, <span class="st">&#39;P. ovale&#39;</span>, <span class="st">&#39;P. vivax&#39;</span>, <span class="st">&#39;P. knowlesi&#39;</span>), <span class="kw">c</span>(<span class="st">&#39;chloroquine&#39;</span>, <span class="st">&#39;artemisinin&#39;</span>, <span class="st">&#39;doxycycline&#39;</span>))
 B</code></pre>
 <pre><code>## , , chloroquine
 ## 
-##          P. falciparum P. malariae   P. ovale   P. vivax P. knowlesi
-## trial. 1    0.98993673   0.4442498 0.41058390 0.16925043   0.6726596
-## trial. 2    0.17093717   0.1010249 0.51289956 0.66465584   0.6366200
-## trial. 3    0.35321048   0.8202545 0.44284155 0.88387912   0.3621723
-## trial. 4    0.33532945   0.1646536 0.05580181 0.02435384   0.3079479
-## trial. 5    0.04150176   0.1035764 0.57765376 0.93223966   0.9628250
-## trial. 6    0.53653081   0.0731758 0.16051228 0.06710293   0.8539596
+##          P. falciparum P. malariae  P. ovale  P. vivax P. knowlesi
+## trial. 1     0.1334267 0.266524846 0.6227430 0.9847957  0.66363485
+## trial. 2     0.4189530 0.707006096 0.2089454 0.3262761  0.84089508
+## trial. 3     0.6354381 0.696217674 0.1226550 0.2947125  0.76089447
+## trial. 4     0.1065249 0.772291018 0.9697497 0.6034255  0.05817063
+## trial. 5     0.9811132 0.162316249 0.6915749 0.3770268  0.75111247
+## trial. 6     0.8246810 0.002309866 0.1693663 0.3807588  0.77441144
 ## 
 ## , , artemisinin
 ## 
-##          P. falciparum P. malariae   P. ovale  P. vivax P. knowlesi
-## trial. 1     0.6582924   0.4853163 0.34198311 0.5209592   0.3588128
-## trial. 2     0.4245164   0.3375138 0.18546227 0.8012921   0.7511102
-## trial. 3     0.7457895   0.5033791 0.17942883 0.8992609   0.9144545
-## trial. 4     0.7776140   0.9977487 0.08917016 0.3068819   0.1506947
-## trial. 5     0.3076778   0.9234079 0.46061229 0.1676567   0.2757162
-## trial. 6     0.7493719   0.8059244 0.69557123 0.8858246   0.7761992
+##          P. falciparum P. malariae  P. ovale    P. vivax P. knowlesi
+## trial. 1    0.48997812   0.9750217 0.1458199 0.591757811   0.2389201
+## trial. 2    0.46259201   0.7207168 0.6191921 0.004908079   0.4409890
+## trial. 3    0.72862107   0.7404784 0.7695326 0.195835653   0.1082606
+## trial. 4    0.84979975   0.3651378 0.3173429 0.824058828   0.8814316
+## trial. 5    0.08931567   0.9024100 0.1741047 0.666815636   0.6141411
+## trial. 6    0.42222118   0.7064412 0.3708055 0.845101166   0.3837670
 ## 
 ## , , doxycycline
 ## 
-##          P. falciparum P. malariae  P. ovale   P. vivax P. knowlesi
-## trial. 1     0.5724714   0.9228745 0.6368829 0.97903625   0.6561482
-## trial. 2     0.9837468   0.6430103 0.1348027 0.91589338   0.5344513
-## trial. 3     0.5912429   0.4589617 0.0774094 0.06349737   0.1168682
-## trial. 4     0.1346581   0.1756834 0.4748297 0.91659923   0.4762176
-## trial. 5     0.3054545   0.7281216 0.2689439 0.64101011   0.1147562
-## trial. 6     0.1049776   0.6679161 0.4972282 0.09248967   0.8749028</code></pre>
+##          P. falciparum P. malariae  P. ovale  P. vivax P. knowlesi
+## trial. 1    0.02383087   0.8518868 0.1827192 0.1230670  0.49641140
+## trial. 2    0.99528531   0.5424545 0.2705064 0.2171868  0.65154507
+## trial. 3    0.34980318   0.5432312 0.9822926 0.6271626  0.80782609
+## trial. 4    0.63026336   0.1515682 0.6988988 0.7182981  0.59847153
+## trial. 5    0.51289596   0.9739322 0.5984645 0.8960697  0.82063228
+## trial. 6    0.19598179   0.3528435 0.1989738 0.6178889  0.05451889</code></pre>
 <p><strong>清清楚楚，一目了然。</strong></p>
 </div>
 <div id="apply" class="section level3">
