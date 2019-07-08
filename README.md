@@ -1,5 +1,6 @@
 # R与tidyverse——数据分析入门
-http://github-release-version.herokuapp.com/github/TianyiShi2001/r-and-tidyverse-book.svg[?style=flat]
+[![made-with-Bookdown](https://img.shields.io/badge/Made%20with-bookdown-1f425f.svg)](https://bookdown.org)
+[![made-with-XeLaTeX](https://img.shields.io/badge/Made%20with-XeLaTeX-1f425f.svg)]https://ctan.org/pkg/xetex)
 
 [Gitbook版本](https://tianyishi2001.github.io/r-and-tidyverse-book/index.html)
 
