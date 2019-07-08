@@ -1,5 +1,5 @@
 # R与tidyverse——数据分析入门
-[![release](http://github-release-version.herokuapp.com/github/allure-framework/allure-core/release.svg?style=flat)](https://github.com/allure-framework/allure-core/releases/latest)
+http://github-release-version.herokuapp.com/github/TianyiShi2001/r-and-tidyverse-book.svg[?style=flat]
 
 [Gitbook版本](https://tianyishi2001.github.io/r-and-tidyverse-book/index.html)
 
