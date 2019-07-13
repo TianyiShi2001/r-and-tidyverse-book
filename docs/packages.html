@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 安装和使用packages (包) | R与tidyverse——数据分析入门</title>
+  <title>1.4 安装和使用packages (包) | R与tidyverse——数据分析入门</title>
   <meta name="description" content="这是我b站R与tidyverse教程的配套资源" />
   <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 安装和使用packages (包) | R与tidyverse——数据分析入门" />
+  <meta property="og:title" content="1.4 安装和使用packages (包) | R与tidyverse——数据分析入门" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="TianyiShi2001/R-Tutorial-Resorces" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 安装和使用packages (包) | R与tidyverse——数据分析入门" />
+  <meta name="twitter:title" content="1.4 安装和使用packages (包) | R与tidyverse——数据分析入门" />
   
   <meta name="twitter:description" content="这是我b站R与tidyverse教程的配套资源" />
   
@@ -24,14 +24,14 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-02" />
+<meta name="date" content="2019-07-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="ch2.html">
+<link rel="prev" href="interface-basics-project.html">
 <link rel="next" href="vectors-logicals-and-functions.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -47,6 +47,15 @@
 
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143786170-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-143786170-1');
+</script>
 <script>
   (function(d) {
     var config = {
@@ -149,132 +158,144 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
+<li><strong>R for Data Science</strong></li>
+
+<li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>欢迎</a><ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#简介"><i class="fa fa-check"></i>简介</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#说明"><i class="fa fa-check"></i>Gitbook版本使用说明</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#e69cace4b9a6e79a84e7bb93e69e84"><i class="fa fa-check"></i>本书的结构</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#e59ca8e69cace4b9a6e4bda0e4b88de4bc9ae5ada6e588b0efbc9a"><i class="fa fa-check"></i>在本书你不会学到：</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#e78988e69d83e9a1b5"><i class="fa fa-check"></i>版权页</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#intro"><i class="fa fa-check"></i>简介</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#man"><i class="fa fa-check"></i>Gitbook版本使用说明</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#structure"><i class="fa fa-check"></i>本书的结构</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#no"><i class="fa fa-check"></i>在本书你不会学到：</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i>版权页</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical"><i class="fa fa-check"></i>技术信息</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R和RStudio介绍和安装教程</a><ul>
-<li class="chapter" data-level="1.1" data-path="intro-and-installation.html"><a href="intro-and-installation.html#r"><i class="fa fa-check"></i><b>1.1</b> 什么是R</a></li>
-<li class="chapter" data-level="1.2" data-path="intro-and-installation.html"><a href="intro-and-installation.html#rrstudio"><i class="fa fa-check"></i><b>1.2</b> 安装R和RStudio</a><ul>
-<li class="chapter" data-level="1.2.1" data-path="intro-and-installation.html"><a href="intro-and-installation.html#r"><i class="fa fa-check"></i><b>1.2.1</b> 安装R</a></li>
-<li class="chapter" data-level="1.2.2" data-path="intro-and-installation.html"><a href="intro-and-installation.html#rstudio"><i class="fa fa-check"></i><b>1.2.2</b> 安装RStudio</a></li>
+<li class="chapter" data-level="" data-path="intro-and-installation.html"><a href="intro-and-installation.html#intro-overview"><i class="fa fa-check"></i>本章内容速览</a></li>
+<li class="chapter" data-level="1.1" data-path="what-is-R.html"><a href="what-is-R.html"><i class="fa fa-check"></i><b>1.1</b> 什么是R</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="what-is-R.html"><a href="what-is-R.html#R-and-RStudio-install"><i class="fa fa-check"></i><b>1.1.1</b> 安装R和RStudio</a></li>
+<li class="chapter" data-level="1.1.2" data-path="what-is-R.html"><a href="what-is-R.html#youshi"><i class="fa fa-check"></i><b>1.1.2</b> 为什么使用R，R与其他统计软件的比较</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="intro-and-installation.html"><a href="intro-and-installation.html#youshi"><i class="fa fa-check"></i><b>1.3</b> 为什么使用R，R与其他统计软件的比较</a></li>
+<li class="chapter" data-level="1.2" data-path="getting-help.html"><a href="getting-help.html"><i class="fa fa-check"></i><b>1.2</b> 获取资源与帮助（重要！）</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="getting-help.html"><a href="getting-help.html#section-1.2.1"><i class="fa fa-check"></i><b>1.2.1</b> 核心/入门资源</a></li>
+<li class="chapter" data-level="1.2.2" data-path="getting-help.html"><a href="getting-help.html#section-1.2.2"><i class="fa fa-check"></i><b>1.2.2</b> 进阶资源</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="getting-help.html"><a href="getting-help.html"><i class="fa fa-check"></i><b>2</b> 获取资源与帮助（重要！）</a><ul>
-<li class="chapter" data-level="2.1" data-path="getting-help.html"><a href="getting-help.html#section-2.1"><i class="fa fa-check"></i><b>2.1</b> 论坛类（解答实际操作中的问题）</a></li>
-<li class="chapter" data-level="2.2" data-path="getting-help.html"><a href="getting-help.html#referencefunctionpackage"><i class="fa fa-check"></i><b>2.2</b> Reference类（查找特定的function/package的用法，就像查字典一样）</a></li>
-<li class="chapter" data-level="2.3" data-path="getting-help.html"><a href="getting-help.html#section-2.3"><i class="fa fa-check"></i><b>2.3</b> 教程和书籍类（用来系统地学习）</a></li>
-<li class="chapter" data-level="2.4" data-path="getting-help.html"><a href="getting-help.html#-cheat-sheets"><i class="fa fa-check"></i><b>2.4</b> 速查表 (Cheat sheets)（用来贴墙上）</a></li>
+<li class="chapter" data-level="1.3" data-path="interface-basics-project.html"><a href="interface-basics-project.html"><i class="fa fa-check"></i><b>1.3</b> RStudio界面介绍，基本操作，和创建新项目</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="interface-basics-project.html"><a href="interface-basics-project.html#interface"><i class="fa fa-check"></i><b>1.3.1</b> 界面</a></li>
+<li class="chapter" data-level="1.3.2" data-path="interface-basics-project.html"><a href="interface-basics-project.html#execution"><i class="fa fa-check"></i><b>1.3.2</b> 执行代码</a></li>
+<li class="chapter" data-level="1.3.3" data-path="interface-basics-project.html"><a href="interface-basics-project.html#code-management"><i class="fa fa-check"></i><b>1.3.3</b> 管理代码</a></li>
+<li class="chapter" data-level="1.3.4" data-path="interface-basics-project.html"><a href="interface-basics-project.html#rstudio-rstudio-fuli"><i class="fa fa-check"></i><b>1.3.4</b> RStudio的额外福利 {rstudio-fuli}</a></li>
+<li class="chapter" data-level="1.3.5" data-path="interface-basics-project.html"><a href="interface-basics-project.html#misc"><i class="fa fa-check"></i><b>1.3.5</b> 其他</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="ch2.html"><a href="ch2.html"><i class="fa fa-check"></i><b>3</b> RStudio界面介绍，基本操作，和创建新项目</a><ul>
-<li class="chapter" data-level="3.1" data-path="ch2.html"><a href="ch2.html#section-3.1"><i class="fa fa-check"></i><b>3.1</b> 界面</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="ch2.html"><a href="ch2.html#section-3.1.1"><i class="fa fa-check"></i><b>3.1.1</b> 概览</a></li>
-<li class="chapter" data-level="3.1.2" data-path="ch2.html"><a href="ch2.html#console"><i class="fa fa-check"></i><b>3.1.2</b> 左下角：Console（控制台）</a></li>
-<li class="chapter" data-level="3.1.3" data-path="ch2.html"><a href="ch2.html#source"><i class="fa fa-check"></i><b>3.1.3</b> 左上角：Source（源）</a></li>
-<li class="chapter" data-level="3.1.4" data-path="ch2.html"><a href="ch2.html#environment"><i class="fa fa-check"></i><b>3.1.4</b> 右上角：Environment（环境），</a></li>
-<li class="chapter" data-level="3.1.5" data-path="ch2.html"><a href="ch2.html#plotshelpfilespackages"><i class="fa fa-check"></i><b>3.1.5</b> 右下角：Plots（绘图），Help（帮助），Files（文件）和Packages（包）</a></li>
-</ul></li>
-<li class="chapter" data-level="3.2" data-path="ch2.html"><a href="ch2.html#section-3.2"><i class="fa fa-check"></i><b>3.2</b> 基本操作</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="ch2.html"><a href="ch2.html#section-3.2.1"><i class="fa fa-check"></i><b>3.2.1</b> 执行代码</a></li>
-<li class="chapter" data-level="3.2.2" data-path="ch2.html"><a href="ch2.html#manage"><i class="fa fa-check"></i><b>3.2.2</b> 记录和管理代码</a></li>
-<li class="chapter" data-level="3.2.3" data-path="ch2.html"><a href="ch2.html#r-script"><i class="fa fa-check"></i><b>3.2.3</b> 写/保存/运行R script</a></li>
-<li class="chapter" data-level="3.2.4" data-path="ch2.html"><a href="ch2.html#section-3.2.4"><i class="fa fa-check"></i><b>3.2.4</b> 关于换行</a></li>
+<li class="chapter" data-level="1.4" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>1.4</b> 安装和使用packages (包)</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="packages.html"><a href="packages.html#packages-what"><i class="fa fa-check"></i><b>1.4.1</b> Package是什么，为什么使用它们？</a></li>
+<li class="chapter" data-level="1.4.2" data-path="packages.html"><a href="packages.html#package-install"><i class="fa fa-check"></i><b>1.4.2</b> 如何安装packages</a></li>
+<li class="chapter" data-level="1.4.3" data-path="packages.html"><a href="packages.html#package-use"><i class="fa fa-check"></i><b>1.4.3</b> 如何使用packages</a></li>
+<li class="chapter" data-level="1.4.4" data-path="packages.html"><a href="packages.html#package-misc"><i class="fa fa-check"></i><b>1.4.4</b> 其它</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>4</b> 安装和使用packages (包)</a><ul>
-<li class="chapter" data-level="4.1" data-path="packages.html"><a href="packages.html#package"><i class="fa fa-check"></i><b>4.1</b> Package是什么，为什么使用它们？</a></li>
-<li class="chapter" data-level="4.2" data-path="packages.html"><a href="packages.html#packages"><i class="fa fa-check"></i><b>4.2</b> 如何安装packages</a></li>
-<li class="chapter" data-level="4.3" data-path="packages.html"><a href="packages.html#packages"><i class="fa fa-check"></i><b>4.3</b> 如何使用packages</a></li>
-<li class="chapter" data-level="4.4" data-path="packages.html"><a href="packages.html#section-4.4"><i class="fa fa-check"></i><b>4.4</b> 其它</a><ul>
-<li class="chapter" data-level="4.4.1" data-path="packages.html"><a href="packages.html#require-and-library"><i class="fa fa-check"></i><b>4.4.1</b> <code>library()</code>和<code>require</code>的区别；如何使用一行指令读取多个packages</a></li>
-<li class="chapter" data-level="4.4.2" data-path="packages.html"><a href="packages.html#Bioconductor"><i class="fa fa-check"></i><b>4.4.2</b> 安装Bioconductor packages</a></li>
+<li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> 向量，逻辑，循环和函数</a><ul>
+<li class="chapter" data-level="" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#intro-overview-vector"><i class="fa fa-check"></i>本章内容速览</a></li>
+<li class="chapter" data-level="2.1" data-path="vector-section.html"><a href="vector-section.html"><i class="fa fa-check"></i><b>2.1</b> 向量的概念，操作和优越性</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="vector-section.html"><a href="vector-section.html#create-vector"><i class="fa fa-check"></i><b>2.1.1</b> 创建向量（赋值）</a></li>
+<li class="chapter" data-level="2.1.2" data-path="vector-section.html"><a href="vector-section.html#indexing"><i class="fa fa-check"></i><b>2.1.2</b> 索引/取子集 (indexing/subsetting)</a></li>
+<li class="chapter" data-level="2.1.3" data-path="vector-section.html"><a href="vector-section.html#generator"><i class="fa fa-check"></i><b>2.1.3</b> 生成器</a></li>
+<li class="chapter" data-level="2.1.4" data-path="vector-section.html"><a href="vector-section.html#vector-misc"><i class="fa fa-check"></i><b>2.1.4</b> 向量的其他操作</a></li>
+<li class="chapter" data-level="2.1.5" data-path="vector-section.html"><a href="vector-section.html#vectorization-basics"><i class="fa fa-check"></i><b>2.1.5</b> R向量的优越性</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>2.2</b> 数据/对象类型 (Data/Object Types)</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="data-types.html"><a href="data-types.html#data-types-basics"><i class="fa fa-check"></i><b>2.2.1</b> 基础的数据/对象类型</a></li>
+<li class="chapter" data-level="2.2.2" data-path="data-types.html"><a href="data-types.html#data-types-advanced"><i class="fa fa-check"></i><b>2.2.2</b> 数据类型（严谨版）</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="math.html"><a href="math.html"><i class="fa fa-check"></i><b>2.3</b> 数学表达和运算</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="math.html"><a href="math.html#math-notation"><i class="fa fa-check"></i><b>2.3.1</b> 数的表达</a></li>
+<li class="chapter" data-level="2.3.2" data-path="math.html"><a href="math.html#arithmetic"><i class="fa fa-check"></i><b>2.3.2</b> 运算</a></li>
+<li class="chapter" data-level="2.3.3" data-path="math.html"><a href="math.html#statistics"><i class="fa fa-check"></i><b>2.3.3</b> 简易的统计学计算</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="logical-operation.html"><a href="logical-operation.html"><i class="fa fa-check"></i><b>2.4</b> 逻辑</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="logical-operation.html"><a href="logical-operation.html#-logical-values"><i class="fa fa-check"></i><b>2.4.1</b> 逻辑值 {logical-values}</a></li>
+<li class="chapter" data-level="2.4.2" data-path="logical-operation.html"><a href="logical-operation.html#logical-operations"><i class="fa fa-check"></i><b>2.4.2</b> 关系运算符和简单的逻辑运算</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="control-flow.html"><a href="control-flow.html"><i class="fa fa-check"></i><b>2.5</b> 判断和循环（流程控制）</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="control-flow.html"><a href="control-flow.html#section-2.5.1"><i class="fa fa-check"></i><b>2.5.1</b> 给有编程基础者的快速指南</a></li>
+<li class="chapter" data-level="2.5.2" data-path="control-flow.html"><a href="control-flow.html#kickstart"><i class="fa fa-check"></i><b>2.5.2</b> 无编程基础者的快速指南</a></li>
+<li class="chapter" data-level="2.5.3" data-path="control-flow.html"><a href="control-flow.html#section-2.5.3"><i class="fa fa-check"></i><b>2.5.3</b> 严谨版</a></li>
+<li class="chapter" data-level="2.5.4" data-path="control-flow.html"><a href="control-flow.html#apply"><i class="fa fa-check"></i><b>2.5.4</b> 如何避免for循环——<code>apply()</code>家族函数</a></li>
+<li class="chapter" data-level="2.5.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.5.5</b> <code>foreach</code> package：for循环的进化版</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.6</b> 函数</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="functions.html"><a href="functions.html#functions-in-R"><i class="fa fa-check"></i><b>2.6.1</b> R中的函数</a></li>
+<li class="chapter" data-level="2.6.2" data-path="functions.html"><a href="functions.html#abbr"><i class="fa fa-check"></i><b>2.6.2</b> 调用函数</a></li>
+<li class="chapter" data-level="2.6.3" data-path="functions.html"><a href="functions.html#create-functions"><i class="fa fa-check"></i><b>2.6.3</b> 创建函数</a></li>
+<li class="chapter" data-level="2.6.4" data-path="functions.html"><a href="functions.html#..."><i class="fa fa-check"></i><b>2.6.4</b> 关于<code>...</code></a></li>
+<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.5</b> 测速</a></li>
+<li class="chapter" data-level="2.6.6" data-path="functions.html"><a href="functions.html#list-intro"><i class="fa fa-check"></i><b>2.6.6</b> 列表 (list)</a></li>
+<li class="chapter" data-level="2.6.7" data-path="functions.html"><a href="functions.html#matrix-array"><i class="fa fa-check"></i><b>2.6.7</b> array（数组）和matrix（矩阵）简介</a></li>
+<li class="chapter" data-level="2.6.8" data-path="functions.html"><a href="functions.html#matricesarrays"><i class="fa fa-check"></i><b>2.6.8</b> 给matrices和arrays命名</a></li>
+<li class="chapter" data-level="2.6.9" data-path="functions.html"><a href="functions.html#test-base"><i class="fa fa-check"></i><b>2.6.9</b> 小测</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>5</b> 向量，逻辑，循环和函数</a><ul>
-<li class="chapter" data-level="5.1" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-5.1"><i class="fa fa-check"></i><b>5.1</b> 向量的概念，操作和优越性</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#create-vector"><i class="fa fa-check"></i><b>5.1.1</b> 创建向量（赋值）</a></li>
-<li class="chapter" data-level="5.1.2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#indexing"><i class="fa fa-check"></i><b>5.1.2</b> 索引/取子集 (indexing/subsetting)</a></li>
-<li class="chapter" data-level="5.1.3" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-5.1.3"><i class="fa fa-check"></i><b>5.1.3</b> 生成器</a></li>
-<li class="chapter" data-level="5.1.4" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-5.1.4"><i class="fa fa-check"></i><b>5.1.4</b> 向量的其它操作</a></li>
-<li class="chapter" data-level="5.1.5" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#youyuexing"><i class="fa fa-check"></i><b>5.1.5</b> R向量的优越性</a></li>
+<li class="chapter" data-level="3" data-path="tibble.html"><a href="tibble.html"><i class="fa fa-check"></i><b>3</b> dataframe（数据框）和tibble</a><ul>
+<li class="chapter" data-level="3.1" data-path="tibble-view.html"><a href="tibble-view.html"><i class="fa fa-check"></i><b>3.1</b> 查看dataframe/tibble并了解它们的结构</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="tibble-view.html"><a href="tibble-view.html#tibble-concept"><i class="fa fa-check"></i><b>3.1.1</b> dataframe/tibble的基本概念</a></li>
+<li class="chapter" data-level="3.1.2" data-path="tibble-view.html"><a href="tibble-view.html#tibble-more-data"><i class="fa fa-check"></i><b>3.1.2</b> 查看更多数据</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#-data-types"><i class="fa fa-check"></i><b>5.2</b> 数据类型 (Data Types)</a></li>
-<li class="chapter" data-level="5.3" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-5.3"><i class="fa fa-check"></i><b>5.3</b> 数学表达和运算</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-5.3.1"><i class="fa fa-check"></i><b>5.3.1</b> 数的表达</a></li>
-<li class="chapter" data-level="5.3.2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#arithmetic"><i class="fa fa-check"></i><b>5.3.2</b> 运算</a></li>
+<li class="chapter" data-level="3.2" data-path="tibble-basics.html"><a href="tibble-basics.html"><i class="fa fa-check"></i><b>3.2</b> tibble的创建和基础操作</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="tibble-basics.html"><a href="tibble-basics.html#tibble-create"><i class="fa fa-check"></i><b>3.2.1</b> 创建tibble</a></li>
+<li class="chapter" data-level="3.2.2" data-path="tibble-basics.html"><a href="tibble-basics.html#tbl-subsetting"><i class="fa fa-check"></i><b>3.2.2</b> 取子集（抓取行，列）{tbl-subsetting}</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#logical-operation"><i class="fa fa-check"></i><b>5.4</b> 逻辑</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#logical-values"><i class="fa fa-check"></i><b>5.4.1</b> Logical Values（逻辑值）</a></li>
-<li class="chapter" data-level="5.4.2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#logical-operations"><i class="fa fa-check"></i><b>5.4.2</b> Logical Operations（逻辑运算）</a></li>
-<li class="chapter" data-level="5.4.3" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-5.4.3"><i class="fa fa-check"></i><b>5.4.3</b> 逻辑运算详解</a></li>
-</ul></li>
-<li class="chapter" data-level="5.5" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-5.5"><i class="fa fa-check"></i><b>5.5</b> 判断和循环（控制流程）</a><ul>
-<li class="chapter" data-level="5.5.1" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#if-else-else-if-"><i class="fa fa-check"></i><b>5.5.1</b> <code>if</code>, <code>else</code>, <code>else if</code> 语句</a></li>
-</ul></li>
-<li class="chapter" data-level="5.6" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-5.6"><i class="fa fa-check"></i><b>5.6</b> 函数</a><ul>
-<li class="chapter" data-level="5.6.1" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#abbr"><i class="fa fa-check"></i><b>5.6.1</b> 调用函数时的简写</a></li>
-<li class="chapter" data-level="5.6.2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#..."><i class="fa fa-check"></i><b>5.6.2</b> 关于<code>...</code></a></li>
-</ul></li>
-<li class="chapter" data-level="5.7" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#section-5.7"><i class="fa fa-check"></i><b>5.7</b> 简易的统计学计算</a><ul>
-<li class="chapter" data-level="5.7.1" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#t"><i class="fa fa-check"></i><b>5.7.1</b> t分布</a></li>
-<li class="chapter" data-level="5.7.2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#z"><i class="fa fa-check"></i><b>5.7.2</b> z分布</a></li>
-<li class="chapter" data-level="5.7.3" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#t"><i class="fa fa-check"></i><b>5.7.3</b> t检验</a></li>
-<li class="chapter" data-level="5.7.4" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#chi2-"><i class="fa fa-check"></i><b>5.7.4</b> <span class="math inline">\(\chi^2\)</span> 检验</a></li>
+<li class="chapter" data-level="3.3" data-path="tibble-misc.html"><a href="tibble-misc.html"><i class="fa fa-check"></i><b>3.3</b> 其它</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="tibble-misc.html"><a href="tibble-misc.html#listdataframetibble"><i class="fa fa-check"></i><b>3.3.1</b> list和dataframe/tibble</a></li>
+<li class="chapter" data-level="3.3.2" data-path="tibble-misc.html"><a href="tibble-misc.html#tibble-df-diff"><i class="fa fa-check"></i><b>3.3.2</b> Base R dataframe 和 Tidyverse tibble的区别</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="tibble.html"><a href="tibble.html"><i class="fa fa-check"></i><b>6</b> dataframe（数据框）和tibble</a><ul>
-<li class="chapter" data-level="6.1" data-path="tibble.html"><a href="tibble.html#dataframetibble"><i class="fa fa-check"></i><b>6.1</b> 查看dataframe/tibble并了解它们的结构</a><ul>
-<li class="chapter" data-level="6.1.1" data-path="tibble.html"><a href="tibble.html#dataframetibble"><i class="fa fa-check"></i><b>6.1.1</b> dataframe/tibble的基本概念</a></li>
-<li class="chapter" data-level="6.1.2" data-path="tibble.html"><a href="tibble.html#section-6.1.2"><i class="fa fa-check"></i><b>6.1.2</b> 查看更多数据</a></li>
+<li class="chapter" data-level="4" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>4</b> 使用ggplot绘图</a><ul>
+<li class="chapter" data-level="4.1" data-path="g-phil.html"><a href="g-phil.html"><i class="fa fa-check"></i><b>4.1</b> 哲理</a></li>
+<li class="chapter" data-level="4.2" data-path="g-basics.html"><a href="g-basics.html"><i class="fa fa-check"></i><b>4.2</b> 基础</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="g-basics.html"><a href="g-basics.html#g-basics-grammar"><i class="fa fa-check"></i><b>4.2.1</b> 基本语法</a></li>
+<li class="chapter" data-level="4.2.2" data-path="g-basics.html"><a href="g-basics.html#g-basics-types"><i class="fa fa-check"></i><b>4.2.2</b> 图像类型</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="tibble.html"><a href="tibble.html#tibble"><i class="fa fa-check"></i><b>6.2</b> tibble的创建和基础操作</a><ul>
-<li class="chapter" data-level="6.2.1" data-path="tibble.html"><a href="tibble.html#tibble"><i class="fa fa-check"></i><b>6.2.1</b> 创建tibble</a></li>
-<li class="chapter" data-level="6.2.2" data-path="tibble.html"><a href="tibble.html#section-6.2.2"><i class="fa fa-check"></i><b>6.2.2</b> 取子集（抓取行，列）</a></li>
-<li class="chapter" data-level="6.2.3" data-path="tibble.html"><a href="tibble.html#factor"><i class="fa fa-check"></i><b>6.2.3</b> 关于Factor</a></li>
+<li class="chapter" data-level="4.3" data-path="g-intermediate.html"><a href="g-intermediate.html"><i class="fa fa-check"></i><b>4.3</b> 进阶</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="g-intermediate.html"><a href="g-intermediate.html#g-lay"><i class="fa fa-check"></i><b>4.3.1</b> 逐层作图</a></li>
+<li class="chapter" data-level="4.3.2" data-path="g-intermediate.html"><a href="g-intermediate.html#g-legend"><i class="fa fa-check"></i><b>4.3.2</b> 尺寸，轴，和图例</a></li>
+<li class="chapter" data-level="4.3.3" data-path="g-intermediate.html"><a href="g-intermediate.html#g-pos"><i class="fa fa-check"></i><b>4.3.3</b> 位置</a></li>
+<li class="chapter" data-level="4.3.4" data-path="g-intermediate.html"><a href="g-intermediate.html#g-theme"><i class="fa fa-check"></i><b>4.3.4</b> 背景/主题的修改</a></li>
+<li class="chapter" data-level="4.3.5" data-path="g-intermediate.html"><a href="g-intermediate.html#g-programming"><i class="fa fa-check"></i><b>4.3.5</b> 与ggplot编程</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="tibble.html"><a href="tibble.html#list-arraymatrix"><i class="fa fa-check"></i><b>6.3</b> 进阶内容：list, array和matrix</a><ul>
-<li class="chapter" data-level="6.3.1" data-path="tibble.html"><a href="tibble.html#list"><i class="fa fa-check"></i><b>6.3.1</b> list（列表）简介</a></li>
-<li class="chapter" data-level="6.3.2" data-path="tibble.html"><a href="tibble.html#base-r-dataframe--tidyverse-tibble"><i class="fa fa-check"></i><b>6.3.2</b> Base R dataframe 和 Tidyverse tibble的区别</a></li>
-<li class="chapter" data-level="6.3.3" data-path="tibble.html"><a href="tibble.html#arraymatrix"><i class="fa fa-check"></i><b>6.3.3</b> array（数组）和matrix（矩阵）简介</a></li>
-<li class="chapter" data-level="6.3.4" data-path="tibble.html"><a href="tibble.html#matricesarrays"><i class="fa fa-check"></i><b>6.3.4</b> 给matrices和arrays命名</a></li>
-<li class="chapter" data-level="6.3.5" data-path="tibble.html"><a href="tibble.html#apply"><i class="fa fa-check"></i><b>6.3.5</b> <code>apply</code></a></li>
+<li class="chapter" data-level="4.4" data-path="g-base.html"><a href="g-base.html"><i class="fa fa-check"></i><b>4.4</b> 附：Base R中的作图</a></li>
 </ul></li>
+<li class="chapter" data-level="5" data-path="wrangle.html"><a href="wrangle.html"><i class="fa fa-check"></i><b>5</b> 数据处理</a><ul>
+<li class="chapter" data-level="5.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html"><i class="fa fa-check"></i><b>5.1</b> 把“untidy data”整成“tidy data”</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#untidy-data"><i class="fa fa-check"></i><b>5.1.1</b> “untidy data”的主要问题</a></li>
+<li class="chapter" data-level="5.1.2" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#section-5.1.2"><i class="fa fa-check"></i><b>5.1.2</b> 解决方案</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>7</b> 使用ggplot绘图</a><ul>
-<li class="chapter" data-level="7.1" data-path="graphics.html"><a href="graphics.html#section-7.1"><i class="fa fa-check"></i><b>7.1</b> 哲理</a></li>
-<li class="chapter" data-level="7.2" data-path="graphics.html"><a href="graphics.html#section-7.2"><i class="fa fa-check"></i><b>7.2</b> 基础</a><ul>
-<li class="chapter" data-level="7.2.1" data-path="graphics.html"><a href="graphics.html#section-7.2.1"><i class="fa fa-check"></i><b>7.2.1</b> 基本语法</a></li>
-<li class="chapter" data-level="7.2.2" data-path="graphics.html"><a href="graphics.html#section-7.2.2"><i class="fa fa-check"></i><b>7.2.2</b> 图像类型</a></li>
+<li class="chapter" data-level="5.2" data-path="import-export.html"><a href="import-export.html"><i class="fa fa-check"></i><b>5.2</b> 数据的导入和导出</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="import-export.html"><a href="import-export.html#data-import"><i class="fa fa-check"></i><b>5.2.1</b> 导入</a></li>
+<li class="chapter" data-level="5.2.2" data-path="import-export.html"><a href="import-export.html#section-5.2.2"><i class="fa fa-check"></i><b>5.2.2</b> 导出</a></li>
 </ul></li>
-<li class="chapter" data-level="7.3" data-path="graphics.html"><a href="graphics.html#section-7.3"><i class="fa fa-check"></i><b>7.3</b> 进阶</a><ul>
-<li class="chapter" data-level="7.3.1" data-path="graphics.html"><a href="graphics.html#section-7.3.1"><i class="fa fa-check"></i><b>7.3.1</b> 逐层作图</a></li>
-<li class="chapter" data-level="7.3.2" data-path="graphics.html"><a href="graphics.html#section-7.3.2"><i class="fa fa-check"></i><b>7.3.2</b> 尺寸，轴，和图例</a></li>
-<li class="chapter" data-level="7.3.3" data-path="graphics.html"><a href="graphics.html#section-7.3.3"><i class="fa fa-check"></i><b>7.3.3</b> 位置</a></li>
-<li class="chapter" data-level="7.3.4" data-path="graphics.html"><a href="graphics.html#section-7.3.4"><i class="fa fa-check"></i><b>7.3.4</b> 背景/主题的修改</a></li>
-<li class="chapter" data-level="7.3.5" data-path="graphics.html"><a href="graphics.html#ggplot"><i class="fa fa-check"></i><b>7.3.5</b> 与ggplot编程</a></li>
+<li class="chapter" data-level="5.3" data-path="strings.html"><a href="strings.html"><i class="fa fa-check"></i><b>5.3</b> 字符串的处理</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="strings.html"><a href="strings.html#-1"><i class="fa fa-check"></i><b>5.3.1</b> 基础</a></li>
+<li class="chapter" data-level="5.3.2" data-path="strings.html"><a href="strings.html#str_sub"><i class="fa fa-check"></i><b>5.3.2</b> 使用<code>str_sub()</code>取子集</a></li>
+<li class="chapter" data-level="5.3.3" data-path="strings.html"><a href="strings.html#str_c"><i class="fa fa-check"></i><b>5.3.3</b> 使用<code>str_c()</code>进行字符串的合并</a></li>
+<li class="chapter" data-level="5.3.4" data-path="strings.html"><a href="strings.html#str_view"><i class="fa fa-check"></i><b>5.3.4</b> 使用<code>str_view()</code>来查找特定的字符组合</a></li>
+<li class="chapter" data-level="5.3.5" data-path="strings.html"><a href="strings.html#str_detect"><i class="fa fa-check"></i><b>5.3.5</b> <code>str_detect()</code></a></li>
 </ul></li>
-<li class="chapter" data-level="7.4" data-path="graphics.html"><a href="graphics.html#base-r"><i class="fa fa-check"></i><b>7.4</b> 附：Base R中的作图</a></li>
+<li class="chapter" data-level="5.4" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>5.4</b> Factors</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="factors.html"><a href="factors.html#-2"><i class="fa fa-check"></i><b>5.4.1</b> 基础</a></li>
+<li class="chapter" data-level="5.4.2" data-path="factors.html"><a href="factors.html#section-5.4.2"><i class="fa fa-check"></i><b>5.4.2</b> 在绘图中的应用</a></li>
+<li class="chapter" data-level="5.4.3" data-path="factors.html"><a href="factors.html#section-5.4.3"><i class="fa fa-check"></i><b>5.4.3</b> 高端操作</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="wrangle.html"><a href="wrangle.html"><i class="fa fa-check"></i><b>8</b> 数据处理</a><ul>
-<li class="chapter" data-level="8.1" data-path="wrangle.html"><a href="wrangle.html#untidy-datatidy-data"><i class="fa fa-check"></i><b>8.1</b> 把“untidy data”整成“tidy data”</a><ul>
-<li class="chapter" data-level="8.1.1" data-path="wrangle.html"><a href="wrangle.html#untidy-data"><i class="fa fa-check"></i><b>8.1.1</b> “untidy data”的主要问题</a></li>
-<li class="chapter" data-level="8.1.2" data-path="wrangle.html"><a href="wrangle.html#section-8.1.2"><i class="fa fa-check"></i><b>8.1.2</b> 解决方案</a></li>
-</ul></li>
-<li class="chapter" data-level="8.2" data-path="wrangle.html"><a href="wrangle.html#section-8.2"><i class="fa fa-check"></i><b>8.2</b> 数据的导入和导出</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="wrangle.html"><a href="wrangle.html#data-import"><i class="fa fa-check"></i><b>8.2.1</b> 导入</a></li>
-<li class="chapter" data-level="8.2.2" data-path="wrangle.html"><a href="wrangle.html#section-8.2.2"><i class="fa fa-check"></i><b>8.2.2</b> 导出</a></li>
+<li class="chapter" data-level="5.5" data-path="dttm.html"><a href="dttm.html"><i class="fa fa-check"></i><b>5.5</b> 日期和时间</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="dttm.html"><a href="dttm.html#-3"><i class="fa fa-check"></i><b>5.5.1</b> 基础</a></li>
+<li class="chapter" data-level="5.5.2" data-path="dttm.html"><a href="dttm.html#section-5.5.2"><i class="fa fa-check"></i><b>5.5.2</b> 计算</a></li>
+<li class="chapter" data-level="5.5.3" data-path="strings.html"><a href="strings.html#-1"><i class="fa fa-check"></i><b>5.5.3</b> 在绘图中的应用</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="python.html"><a href="python.html"><i class="fa fa-check"></i><b>9</b> 与Python的联合使用</a><ul>
-<li class="chapter" data-level="9.1" data-path="python.html"><a href="python.html#rpython-reticulate"><i class="fa fa-check"></i><b>9.1</b> 在R中使用Python: <code>reticulate</code></a></li>
-<li class="chapter" data-level="9.2" data-path="python.html"><a href="python.html#pythonr-rpy"><i class="fa fa-check"></i><b>9.2</b> 在Python中使用R: <code>rpy</code></a></li>
-<li class="chapter" data-level="9.3" data-path="python.html"><a href="python.html#beaker-notebook"><i class="fa fa-check"></i><b>9.3</b> Beaker Notebook</a></li>
+<li class="chapter" data-level="6" data-path="python.html"><a href="python.html"><i class="fa fa-check"></i><b>6</b> 与Python的联合使用</a><ul>
+<li class="chapter" data-level="6.1" data-path="reticulate.html"><a href="reticulate.html"><i class="fa fa-check"></i><b>6.1</b> 在R中使用Python: <code>reticulate</code></a></li>
+<li class="chapter" data-level="6.2" data-path="rpy.html"><a href="rpy.html"><i class="fa fa-check"></i><b>6.2</b> 在Python中使用R: <code>rpy</code></a></li>
+<li class="chapter" data-level="6.3" data-path="beaker.html"><a href="beaker.html"><i class="fa fa-check"></i><b>6.3</b> Beaker Notebook</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="bibiolography.html"><a href="bibiolography.html"><i class="fa fa-check"></i>Bibiolography</a></li>
+<li class="chapter" data-level="" data-path="References.html"><a href="References.html"><i class="fa fa-check"></i>References</a></li>
 </ul>
 
       </nav>
@@ -292,68 +313,64 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="packages" class="section level1">
-<h1><span class="header-section-number">Chapter 4</span> 安装和使用packages (包)</h1>
-<div id="package" class="section level2">
-<h2><span class="header-section-number">4.1</span> Package是什么，为什么使用它们？</h2>
+<div id="packages" class="section level2">
+<h2><span class="header-section-number">1.4</span> 安装和使用packages (包)</h2>
+<div id="packages-what" class="section level3">
+<h3><span class="header-section-number">1.4.1</span> Package是什么，为什么使用它们？</h3>
 <p>Package是别人写好的在R中运行的程序（以及附带的数据和文档），你可以免费安装和使用它们。</p>
-<p>Packages可以增加在基础R语言中没有的功能，可以精简你代码的语句，或是提升使用体验。比如有个叫做<code>tikzDevice</code>的package可以将R中的图表导出成tikz语法的矢量图，方便在LaTeX中使用。本书的编写和排版也是使用R中的一个叫做<code>bookdown</code>的package完成的（真的超棒）.</p>
+<p>Packages可以增加在基础R语言中没有的功能，可以精简你代码的语句，或是提升使用体验。比如有个叫做<code>tikzDevice</code>的package可以将R中的图表导出成tikz语法的矢量图，方便在LaTeX中使用。本书的编写和排版也是使用R中的一个叫做<code>bookdown</code>的package完成的.</p>
 <p>这个课程主要是学习<code>tidyverse</code>这个package，</p>
 </div>
-<div id="packages" class="section level2">
-<h2><span class="header-section-number">4.2</span> 如何安装packages</h2>
+<div id="package-install" class="section level3">
+<h3><span class="header-section-number">1.4.2</span> 如何安装packages</h3>
 <p>首先我们安装tidyverse（<strong>很重要，本书接下来的部分都要使用这个package</strong>）：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</code></pre>
 <p>在console中运行以上代码，R就会从<a href="https://cran.r-project.org">CRAN</a>中下载tidyverse并安装到你电脑上的默认位置。因此安装packages需要网络连接。</p>
 <p>如果想安装多个packages，你可以一行一行地安装，或是把多个packages的名字合成一列，同时安装，比如：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="kw">c</span>(<span class="st">&quot;nycflights13&quot;</span>, <span class="st">&quot;gapminder&quot;</span>, <span class="st">&quot;Lahman&quot;</span>)</code></pre>
-<p>绝大多数的packages都能用这个方法安装，因为它们是被存储在CRAN上的。Bioconductor packages请看第<a href="packages.html#Bioconductor">4.4.2</a>节。</p>
+<p>绝大多数的packages都能用这个方法安装，因为它们是被存储在CRAN上的。Bioconductor packages请看第<a href="packages.html#Bioconductor">1.4.4.2</a>节。</p>
 </div>
-<div id="packages" class="section level2">
-<h2><span class="header-section-number">4.3</span> 如何使用packages</h2>
+<div id="package-use" class="section level3">
+<h3><span class="header-section-number">1.4.3</span> 如何使用packages</h3>
+<div id="pkg-load" class="section level4">
+<h4><span class="header-section-number">1.4.3.1</span> 加载packages</h4>
 <p>安装packages后，有两种方法使用它们。以<code>tidyverse</code>为例：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&#39;tidyverse&#39;</span>)</code></pre>
 <p>或</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(<span class="st">&#39;tidyverse&#39;</span>)</code></pre>
-<p>两者的效果很大程度上都是一样的，都可以用来读取<strong>单个</strong>package。它们的不同，以及如何通过一行指令读取多个packages，请参看第<a href="packages.html#require-and-library">4.4.1</a>节。</p>
-<p>每次重启R的时候，上一次使用的packages都会被清空，所以需要重新读取。因此我们要在R script里面记录此script需要使用的packages（这个特性可以帮助你养成好习惯：当你把你的代码分享给别人的时候，要保证在别人的电脑上也能正常运行，就必须要指明要使用哪些packages）</p>
+<p>两者的效果很大程度上都是一样的，都可以用来读取<strong>单个</strong>package。它们的不同，以及如何通过一行指令读取多个packages，请参看第<a href="packages.html#require-and-library">1.4.4.1</a>节。</p>
+<p>每次重启R的时候，上一次使用的packages都会被清空，所以需要重新读取。因此我们要在R script里面记录此script需要使用的packages（这个特性可以帮助你养成好习惯：当你把你的代码分享给别人的时候，要保证在别人的电脑上也能正常运行，就必须要指明要使用哪些packages）.<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a></p>
 </div>
-<div id="section-4.4" class="section level2">
-<h2><span class="header-section-number">4.4</span> 其它</h2>
-<p>这小节是一些不重要的内容，因此<strong>可酌情跳到下一章（第<a href="vectors-logicals-and-functions.html#vectors-logicals-and-functions">5</a>章。</strong></p>
-<div id="require-and-library" class="section level3">
-<h3><span class="header-section-number">4.4.1</span> <code>library()</code>和<code>require</code>的区别；如何使用一行指令读取多个packages</h3>
+<div id="pkg-colon" class="section level4">
+<h4><span class="header-section-number">1.4.3.2</span> 使用packages里的内容</h4>
+<p>刚才加载<code>tidyverse</code>的时候，你也许注意到了这样一条提示：</p>
+<pre><code>── Conflicts ─────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()</code></pre>
+<p>这是因为R本来自带了一个叫做<code>stats</code>的package，有俩函数名曰<code>filter()</code>和<code>lag()</code>，而<code>dplyr</code>（<code>tidyverse</code>的一部分）也有同名的俩函数，把原来的覆盖了。所以它提示你，当你使用<code>filter()</code>和<code>lag()</code>时，使用的是<code>dplyr</code>的版本，而不是原来<code>stats</code>里的。</p>
+<p>这不意味着<code>stats</code>里的这两个函数就不能用了。要使用他们，用这个格式就好了：</p>
+<pre class="sourceCode r"><code class="sourceCode r">stats<span class="op">::</span><span class="kw">filter</span>()</code></pre>
+<p>同样的道理也适用于其他的packages. 你可以通过</p>
+<pre class="sourceCode r"><code class="sourceCode r">dplyr<span class="op">::</span><span class="kw">filter</span>()</code></pre>
+<p>使用<code>dplyr</code>版本的<code>filter()</code>。虽然这看起来是个好习惯，但是很少人这么做。Python里每使用一次NumPy里的函数都要加上<code>np_</code>的前缀，虽然严谨，但是麻烦。R的一大便利之处就是使用packages里的内容时，不强制要求指定packages的名称。如果函数/对象名称有重叠，以packages的加载顺序决定优先度；最近（即最后）被加载的package里的函数/对象胜出，而其余的要通过<code>packageName::object</code>的形式调取。</p>
+</div>
+</div>
+<div id="package-misc" class="section level3">
+<h3><span class="header-section-number">1.4.4</span> 其它</h3>
+<p>这小节是一些不重要的内容，因此<strong>可酌情跳到下一章（第<a href="vectors-logicals-and-functions.html#vectors-logicals-and-functions">2</a>章）。</strong></p>
+<div id="require-and-library" class="section level4">
+<h4><span class="header-section-number">1.4.4.1</span> <code>library()</code>和<code>require</code>的区别；如何使用一行指令读取多个packages</h4>
 <ol style="list-style-type: decimal">
 <li><code>require()</code>会返回一个逻辑值。如果package读取成功，会返回<code>TRUE</code>，反之则返回<code>FALSE</code>.</li>
 <li><code>library()</code>如果读取试图读取不存在的package，会直接造成错误(error)，而<code>require()</code>不会造成错误，只会产生一个警告(warning).</li>
 </ol>
 <p>这意味着<code>require()</code>可以用来同时读取多个packages：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lapply</span>(<span class="kw">c</span>(<span class="st">&quot;dplyr&quot;</span>,<span class="st">&quot;ggplot2&quot;</span>), require, <span class="dt">character.only =</span> <span class="ot">TRUE</span>)</code></pre>
-<pre><code>## Loading required package: dplyr</code></pre>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<pre><code>## Loading required package: ggplot2</code></pre>
-<pre><code>## [[1]]
-## [1] TRUE
-## 
-## [[2]]
-## [1] TRUE</code></pre>
 <p>或者更精简一点，</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lapply</span>(<span class="kw">c</span>(<span class="st">&quot;dplyr&quot;</span>,<span class="st">&quot;ggplot2&quot;</span>), require, <span class="dt">c =</span> T)</code></pre>
-<pre><code>## [[1]]
-## [1] TRUE
-## 
-## [[2]]
-## [1] TRUE</code></pre>
 </div>
-<div id="Bioconductor" class="section level3">
-<h3><span class="header-section-number">4.4.2</span> 安装Bioconductor packages</h3>
+<div id="Bioconductor" class="section level4">
+<h4><span class="header-section-number">1.4.4.2</span> 安装Bioconductor packages</h4>
 <p><a href="https://bioconductor.org">Bioconductor</a>是一系列用于生物信息学的R packages. 截止2019年7月2日，共有1741个可用的bioconductor packages. 它们没有被存储在CRAN上，因此需要用特殊的方法安装。首先，安装一系列Bioconductor的核心packages（可能需要几分钟）：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">source</span>(<span class="st">&quot;http://bioconductor.org/biocLite.R&quot;</span>)
 <span class="kw">biocLite</span>()</code></pre>
@@ -363,12 +380,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
+<!-- </div> -->
+<div class="footnotes">
+<hr />
+<ol start="12">
+<li id="fn12"><p>另一个主要原因是，寻找对象时，R需要搜索所有已加载的packages，而且，packages都被加载在RAM里，因此加载过多的packages会使R显著变慢。（虽然有一些开挂的方法）<a href="packages.html#fnref12" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="ch2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="interface-basics-project.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="vectors-logicals-and-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -399,8 +423,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/TianyiShi2001/r-and-tidyverse-book/01-installation.Rmd",
+"text": "Edit"
 },
 "history": {
 "link": null,
@@ -408,7 +432,7 @@ gitbook.start({
 },
 "download": ["R与tidyverse——数据分析入门.pdf"],
 "toc": {
-"collapse": "subsection"
+"collapse": "section"
 }
 });
 });

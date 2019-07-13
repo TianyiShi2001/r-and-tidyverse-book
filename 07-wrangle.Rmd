@@ -1,12 +1,12 @@
 # 数据处理 {#wrangle}
 
-## 把“untidy data”整成“tidy data”
+## 把“untidy data”整成“tidy data” {#untidy-to-tidy}
 
 ### “untidy data”的主要问题
 
 ### 解决方案
 
-## 数据的导入和导出
+## 数据的导入和导出 {#import-export}
 
 ### 导入 {#data-import}
 
@@ -17,3 +17,181 @@
 #### 其它
 
 ### 导出
+
+## 字符串的处理 {#strings}
+
+Base R中有一些用于操作字符串的函数，但是因为各种原因它们很难用。因此我们使用一系列`stringr`中的函数（`stringr`是`tidyverse`的一部分）。`stringr`的函数都以`str_`开头。
+
+### 基础
+
+#### 引号的使用
+
+字符串可以用单引号和双引号包围。在双引号包围的环境下，可以很容易打出英澳常用的单引号和欧洲语言中的“撇”；在单引号包围的环境下，可以很容易打出北美和中国常用的双引号。否则需要使用转义字符 (escape character), `\`. 以下是几个正确的例子。
+
+```{r}
+"'The unexamined life is not worth living' —Socrates"
+"La science n'a pas de patrie."
+'"老子曰：“知不知，尚矣；不知知，病矣。"'
+'l\'homme'
+```
+
+#### 换行符和制表符
+
+假设你想显示以下效果：
+
+```{r echo=FALSE}
+writeLines("Guten\n\n\tMorgen.")
+```
+
+即"Guten"后有两次换行，第三行开头有一个制表符 (TAB)
+
+你需要的源代码是：
+
+```{r eval=FALSE}
+"Guten\n\n\tMorgen."
+```
+
+`\n` (newline)为换行符，`\t` (tab)为制表符。所有可用的通过`\`实现的符号请参见`help("'")`（关于引号的帮助）.
+
+#### `print()`和`writeLines()`
+
+`print()`只显示源码，`writeLines()`显示真实效果。
+
+```{r}
+print(c("Guten\n\n\tMorgen.", "Guten\n\n\tTag"))
+```
+
+```{r}
+writeLines(c("Guten\n\n\tMorgen.", "Guten\n\n\tTag"))
+```
+
+索引和引号消失了，不同的元素之间有换行。
+
+### 使用`str_sub()`取子集
+
+```{r}
+A <- "D. rerio"
+str_sub(A, 1, 5) # 第1到第5个字母。计入符号和空格。
+str_sub(A, 4, 4) # 抓取一个字母
+str_sub(A, -4, -2) # 倒数第4至倒数第2
+```
+
+我们还可以通过索引修改某个位置的字符：
+
+```{r}
+W <- "D. Rerio"
+str_sub(W, 4, 4) <- str_to_lower(str_sub(W, 4, 4))
+W
+```
+
+和`str_to_lower()`相关的函数还有`str_to_upper()`, `str_to_title()`和`str_to_sentence()`. 它们的作用都顾名思义。
+
+### 使用`str_c()`进行字符串的合并
+
+一个简单的例子：
+
+```{r}
+str_c("a", "b", "c", sep = "")
+```
+
+其中参数`sep`是被合并的字符串之间的连接字符；它可以是任何字符，包括空格和无（比如上面的例子；用`sep = ""`表示无连接字符）。
+
+当需要合并的字符串保存在一个向量里时，用`collapse`而不是`sep`：
+
+```{r}
+str_c(c("a", "b", "c"), collapse = "[x@")
+```
+
+`str_c()`可以执行向量化运算：
+
+```{r}
+str_c("prefix", c("a", "b", "c"), "suffix", sep = "-")
+```
+
+所以我们可以这么玩：
+
+```{r}
+
+混沌在各地的称呼 <- str_c(
+  str_c(
+    "地区",
+    c("北京", "湖北", "巴蜀", "两广", "闽台"),
+    sep = "："
+  ),
+  str_c(
+    "称呼",
+    c("混沌", "包面", "抄手", "云吞", "扁食"),
+    sep = "："
+  ),
+  sep = " "
+)
+
+writeLines(混沌在各地的称呼)
+```
+
+它还可以和`if`语句联用：
+
+```{r}
+win <- 2
+score <- str_c(
+  "张三", 
+  if (win == 1) "赢\n" else "输\n",
+  "李四",
+  if (win == 2) "赢" else "输",
+  sep = ""
+)
+writeLines(score)
+```
+
+### 使用`str_view()`来查找特定的字符组合
+
+### `str_detect()`
+
+```{r}
+suomi <- "Suomen kieli on uralilaisten kielten itämerensuomalaiseen ryhmään kuuluva kieli."
+```
+
+## Factors {#factors}
+
+### 基础
+
+有时候，我们的变量是以文字的形式呈现，但是它们不是单纯的文字，而是有大小的差别，或是能以一定顺序排列，比如十二个月份 (Jan, Feb, ...)，成绩的“优、良、中、差”，衣服的尺寸 (XS, S, M, XL, ...). 假设我们在做客户满意度调查，七位客户的反馈是
+
+```{r}
+满意度_v <- c("满意", "非常满意", "满意", "不满意", "满意", "非常不满",  "不满意")
+```
+
+我们试图用`sort()`把七个反馈按满意度从小到大排列：
+
+```{r}
+sort(满意度_v)
+```
+
+可见其排序并不是有意义的。（因为默认英语根据'abcde...'排序，中文根据笔画排序）
+
+我们可以把这个vector做成factor，并用参数`levels`规定排序顺序：
+
+```{r}
+# 按照惯例，小的值在前，大的在后；“非常不满”应为满意度最低的值。
+满意度_f <- factor(满意度_v, levels = c("非常不满", "不满意", "满意", "非常满意"))
+sort(满意度_f)
+```
+
+这样排序就是正确的了。
+
+```{r eval=FALSE}
+class(满意度_f) # "factor"
+is.vector(满意度_f) # FALSE
+```
+
+### 在绘图中的应用
+
+### 高端操作
+
+## 日期和时间 {#dttm}
+
+### 基础
+
+### 计算
+
+### 在绘图中的应用

@@ -1,10 +1,10 @@
 # 与Python的联合使用 {#python}
 
-## 在R中使用Python: `reticulate`
+## 在R中使用Python: `reticulate` {#reticulate}
 
-## 在Python中使用R: `rpy`
+## 在Python中使用R: `rpy` {#rpy}
 
-## Beaker Notebook
+## Beaker Notebook {#beaker}
 
 https://decisionstats.com/2015/12/07/decisionstats-interview-scott-draves-beaker-notebook/
 

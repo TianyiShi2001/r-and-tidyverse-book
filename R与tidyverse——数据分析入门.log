@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.10.15)  2 JUL 2019 20:31
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.10.15)  13 JUL 2019 18:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1577,46 +1577,13 @@ File: csquotes.cfg
 Package: ccicons 2017/10/30 v1.6 LaTeX support for Creative Commons icons
 ) (./R与tidyverse——数据分析入门.aux
 
-LaTeX Warning: Label `r' multiply defined.
-
-
-LaTeX Warning: Label `r-project' multiply defined.
-
-
-LaTeX Warning: Label `packages' multiply defined.
-
-
-LaTeX Warning: Label `packages' multiply defined.
-
-
-LaTeX Warning: Label `r' multiply defined.
-
-
 LaTeX Warning: Label `t' multiply defined.
 
 
-LaTeX Warning: Label `dataframetibble' multiply defined.
-
-
 LaTeX Warning: Label `tibble' multiply defined.
 
 
-LaTeX Warning: Label `tibble' multiply defined.
-
-
-LaTeX Warning: Label `tibble' multiply defined.
-
-
-LaTeX Warning: Label `dataframetibble' multiply defined.
-
-
-LaTeX Warning: Label `tibble' multiply defined.
-
-
-LaTeX Warning: Label `list' multiply defined.
-
-
-LaTeX Warning: Label `dataframetibble' multiply defined.
+LaTeX Warning: Label `-1' multiply defined.
 
 )
 \openout1 = `R与tidyverse——数据分析入门.aux'.
@@ -1722,8 +1689,8 @@ LaTeX Font Info:    Font shape `TU/CMUSerif(0)/bx/n' will be
 LaTeX Font Info:    Font shape `TU/SourceHanSerifSC-Regular(0)/bx/n' will be
 (Font)              scaled to size 8.38531pt on input line 1.
 LaTeX Font Info:    Font shape `TU/SourceHanSerifSC-Regular(0)/m/n' will be
-(Font)              scaled to size 8.38531pt on input line 8.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 8.
+(Font)              scaled to size 8.38531pt on input line 10.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 10.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1731,31 +1698,33 @@ File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 File: mt-LatinModernRoman.cfg 2013/03/13 v1.0 microtype config. file: Latin Mod
 ern Roman (RS)
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 8.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 10.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 8.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 10.
+
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 8.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 10.
+
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 8.
+(Font)              <10> on input line 10.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 8.
+(Font)              <7> on input line 10.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 8.
-LaTeX Font Info:    Try loading font information for U+msa on input line 8.
+(Font)              <5> on input line 10.
+LaTeX Font Info:    Try loading font information for U+msa on input line 10.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 8.
+LaTeX Font Info:    Try loading font information for U+msb on input line 10.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -1820,777 +1789,820 @@ LaTeX Font Info:    Font shape `TU/SourceHanSerifSC-Regular(0)/bx/n' will be
 ]
 File: doclicense-CC-by-nc-nd.pdf Graphic file (type pdf)
 <use doclicense-CC-by-nc-nd.pdf>
-LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 207.
-LaTeX Font Info:    Font shape `TU/STFangsong(0)/m/n' will be
-(Font)              scaled to size 9.70718pt on input line 211.
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 212--212
-[]\TU/lmtt/m/n/10 ## - Session info -------------------------------------------
----------------[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 224--224
-[]\TU/lmtt/m/n/10 ## - Packages -----------------------------------------------
----------------[] 
- []
-
-[6] [7]
-Overfull \hbox (17.25pt too wide) in paragraph at lines 315--315
-[]\TU/lmtt/m/n/10 ## [2] /Library/Frameworks/R.framework/Versions/3.5/Resources
-/library[] 
- []
-
-[8]
-Chapter 1.
-LaTeX Font Info:    Font shape `TU/CMUSerif(0)/bx/n' will be
-(Font)              scaled to size 20.13966pt on input line 319.
 LaTeX Font Info:    Font shape `TU/CMUSerif(0)/m/n' will be
-(Font)              scaled to size 14.39493pt on input line 322.
-LaTeX Font Info:    Font shape `TU/CMUSerif(0)/bx/n' will be
-(Font)              scaled to size 13.98317pt on input line 322.
-LaTeX Font Info:    Font shape `TU/SourceHanSerifSC-Regular(0)/bx/n' will be
-(Font)              scaled to size 12.07484pt on input line 322.
-[9
+(Font)              scaled to size 6.99754pt on input line 212.
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 220.
+LaTeX Font Info:    Font shape `TU/STFangsong(0)/m/n' will be
+(Font)              scaled to size 9.70718pt on input line 224.
+
+Overfull \hbox (96.0pt too wide) in paragraph at lines 230--230
+[]\TU/lmtt/m/n/10 ## BLAS: /Library/Frameworks/R.framework/Versions/3.5/Resourc
+es/lib/libRblas.0.dylib[] 
+ []
+
+
+Overfull \hbox (106.5pt too wide) in paragraph at lines 231--231
+[]\TU/lmtt/m/n/10 ## LAPACK: /Library/Frameworks/R.framework/Versions/3.5/Resou
+rces/lib/libRlapack.dylib[] 
+ []
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 234--234
+[]\TU/lmtt/m/n/10 ## [1] en_GB.UTF-8/en_GB.UTF-8/en_GB.UTF-8/C/en_GB.UTF-8/en_G
+B.UTF-8[] 
+ []
+
+[6]
+Overfull \hbox (43.5pt too wide) in paragraph at lines 247--247
+[]\TU/lmtt/m/n/10 ##  [1] tidyselect_0.2.5 xfun_0.8         haven_2.1.1      la
+ttice_0.20-38[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 248--248
+[]\TU/lmtt/m/n/10 ##  [5] vctrs_0.2.0      colorspace_1.4-1 generics_0.0.2   ht
+mltools_0.3.6[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 249--249
+[]\TU/lmtt/m/n/10 ##  [9] grDevices_3.5.3  utf8_1.1.4       rlang_0.4.0      pi
+llar_1.4.2[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 250--250
+[]\TU/lmtt/m/n/10 ## [13] glue_1.3.1       withr_2.1.2      tidyverse_1.2.1  mo
+delr_0.1.4[] 
+ []
+
+
+Overfull \hbox (48.75pt too wide) in paragraph at lines 251--251
+[]\TU/lmtt/m/n/10 ## [17] readxl_1.3.1     munsell_0.5.0    gtable_0.3.0     ce
+llranger_1.1.0[] 
+ []
+
+
+Overfull \hbox (38.25pt too wide) in paragraph at lines 252--252
+[]\TU/lmtt/m/n/10 ## [21] rvest_0.3.4      codetools_0.2-16 evaluate_0.14    pa
+rallel_3.5.3[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 253--253
+[]\TU/lmtt/m/n/10 ## [25] fansi_0.4.0      broom_0.5.2      methods_3.5.3    Rc
+pp_1.0.1[] 
+ []
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 254--254
+[]\TU/lmtt/m/n/10 ## [29] scales_1.0.0     backports_1.1.4  jsonlite_1.6     pn
+g_0.1-7[] 
+ []
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 255--255
+[]\TU/lmtt/m/n/10 ## [33] stats_3.5.3      datasets_3.5.3   graphics_3.5.3   hm
+s_0.4.2[] 
+ []
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 256--256
+[]\TU/lmtt/m/n/10 ## [37] digest_0.6.20    stringi_1.4.3    grid_3.5.3       cl
+i_1.1.0[] 
+ []
+
+
+Overfull \hbox (33.0pt too wide) in paragraph at lines 257--257
+[]\TU/lmtt/m/n/10 ## [41] tools_3.5.3      magrittr_1.5     lazyeval_0.2.2   ze
+allot_0.1.0[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 258--258
+[]\TU/lmtt/m/n/10 ## [45] crayon_1.3.4     pkgconfig_2.0.2  xml2_1.2.0       ut
+ils_3.5.3[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 259--259
+[]\TU/lmtt/m/n/10 ## [49] assertthat_0.2.1 base_3.5.3       httr_1.4.0       rs
+tudioapi_0.10[] 
+ []
+
+
+Overfull \hbox (38.25pt too wide) in paragraph at lines 260--260
+[]\TU/lmtt/m/n/10 ## [53] iterators_1.0.10 R6_2.4.0         nlme_3.1-140     co
+mpiler_3.5.3[] 
+ []
+
+[7] [8
 
 ]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 350.
+Chapter 1.
+LaTeX Font Info:    Font shape `TU/CMUSerif(0)/bx/n' will be
+(Font)              scaled to size 20.13966pt on input line 264.
 LaTeX Font Info:    Font shape `TU/CMUSerif(0)/m/n' will be
-(Font)              scaled to size 7.9972pt on input line 350.
+(Font)              scaled to size 14.39493pt on input line 279.
+LaTeX Font Info:    Font shape `TU/CMUSerif(0)/bx/n' will be
+(Font)              scaled to size 13.98317pt on input line 279.
+LaTeX Font Info:    Font shape `TU/SourceHanSerifSC-Regular(0)/bx/n' will be
+(Font)              scaled to size 12.07484pt on input line 279.
+[9]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 350.
+(Font)              <12> on input line 307.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 350.
+(Font)              <8> on input line 307.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 307.
 LaTeX Font Info:    Font shape `TU/CMUSerif(0)/m/n' will be
-(Font)              scaled to size 5.9979pt on input line 350.
+(Font)              scaled to size 7.9972pt on input line 307.
+LaTeX Font Info:    Font shape `TU/CMUSerif(0)/m/n' will be
+(Font)              scaled to size 5.9979pt on input line 307.
 LaTeX Font Info:    Font shape `TU/CMUSerif(0)/m/it' will be
-(Font)              scaled to size 7.80273pt on input line 350.
-LaTeX Font Info:    Font shape `TU/CMUSerif(0)/m/n' will be
-(Font)              scaled to size 6.99754pt on input line 358.
+(Font)              scaled to size 7.80273pt on input line 307.
 
 LaTeX Font Warning: Font shape `TU/SourceHanSerifSC-Regular(0)/m/sl' undefined
 (Font)              using `TU/SourceHanSerifSC-Regular(0)/m/n' instead on input
- line 371.
+ line 326.
 
 [10]
-Chapter 2.
-[11
+Underfull \hbox (badness 1460) in paragraph at lines 355--357
+\TU/SourceHanSerifSC-Regular(0)/m/n/10 如\TU/lmtt/m/n/10 ?t.test\TU/SourceHanSer
+ifSC-Regular(0)/m/n/10 ，|  可 以 查 看 对 应 函 数 的 帮 助 文 档  |（\TU/CMUSerif(0)/m/n/10 
+documentation\TU/SourceHanSerifSC-Regular(0)/m/n/10 ）|  有 一 些 函
+ []
 
-] [12]
-Chapter 3.
+[11]
 File: img/01-interface.png Graphic file (type bmp)
 <img/01-interface.png>
 
-Overfull \hbox (535.03975pt too wide) in paragraph at lines 439--440
+Overfull \hbox (535.03975pt too wide) in paragraph at lines 424--425
 [] 
  []
 
 
+Underfull \vbox (badness 1817) has occurred while \output is active []
+
+[12]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[13
+[13]
+Overfull \vbox (78.78018pt too high) has occurred while \output is active []
 
-]
-Overfull \vbox (285.26825pt too high) has occurred while \output is active []
-
-[14] [15]
-File: R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-4-1.pdf Graphic file
- (type pdf)
-<use R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-4-1.pdf>
+[14]
+LaTeX Font Info:    Font shape `TU/SourceHanSerifSC-Regular(0)/m/n' will be
+(Font)              scaled to size 6.70825pt on input line 463.
+[15]
+LaTeX Font Info:    Font shape `TU/CMUSerif(0)/bx/n' will be
+(Font)              scaled to size 7.76843pt on input line 514.
+LaTeX Font Info:    Font shape `TU/SourceHanSerifSC-Regular(0)/bx/n' will be
+(Font)              scaled to size 6.70825pt on input line 514.
 [16]
+File: R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-9-1.pdf Graphic file
+ (type pdf)
+<use R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-9-1.pdf>
+[17] [18]
 
 LaTeX Font Warning: Font shape `TU/STFangsong(0)/m/it' undefined
-(Font)              using `TU/STFangsong(0)/m/n' instead on input line 573.
+(Font)              using `TU/STFangsong(0)/m/n' instead on input line 635.
 
-[17] [18]
-Chapter 4.
-[19
+File: img/rstudio-fuli/auto.png Graphic file (type bmp)
+<img/rstudio-fuli/auto.png>
 
-]
-LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 700.
-[20] [21] [22
-
-]
-Chapter 5.
-LaTeX Font Info:    Font shape `TU/SourceHanSerifSC-Regular(0)/m/it' will be
-(Font)              scaled to size 8.38531pt on input line 766.
-LaTeX Font Info:    Font shape `TU/SourceHanSerifSC-Regular(0)/m/n' will be
-(Font)              scaled to size 6.70825pt on input line 766.
-LaTeX Font Info:    Font shape `TU/STFangsong(0)/m/n' will be
-(Font)              scaled to size 7.76575pt on input line 766.
-[23]
-Missing character: There is no Е in font [lmmono10-regular]:!
-Missing character: There is no к in font [lmmono10-regular]:!
-Missing character: There is no а in font [lmmono10-regular]:!
-Missing character: There is no т in font [lmmono10-regular]:!
-Missing character: There is no е in font [lmmono10-regular]:!
-Missing character: There is no р in font [lmmono10-regular]:!
-Missing character: There is no и in font [lmmono10-regular]:!
-Missing character: There is no н in font [lmmono10-regular]:!
-Missing character: There is no б in font [lmmono10-regular]:!
-Missing character: There is no у in font [lmmono10-regular]:!
-Missing character: There is no р in font [lmmono10-regular]:!
-Missing character: There is no г in font [lmmono10-regular]:!
-Missing character: There is no 부 in font STFangsong/OT:mapping=tex-text;!
-Missing character: There is no 산 in font STFangsong/OT:mapping=tex-text;!
-Missing character: There is no เ in font [lmmono10-regular]:!
-Missing character: There is no ช in font [lmmono10-regular]:!
-Missing character: There is no ี in font [lmmono10-regular]:!
-Missing character: There is no ย in font [lmmono10-regular]:!
-Missing character: There is no ง in font [lmmono10-regular]:!
-Missing character: There is no ใ in font [lmmono10-regular]:!
-Missing character: There is no ห in font [lmmono10-regular]:!
-Missing character: There is no ม in font [lmmono10-regular]:!
-Missing character: There is no ่ in font [lmmono10-regular]:!
-Missing character: There is no Е in font [lmmono10-regular]:!
-Missing character: There is no к in font [lmmono10-regular]:!
-Missing character: There is no а in font [lmmono10-regular]:!
-Missing character: There is no т in font [lmmono10-regular]:!
-Missing character: There is no е in font [lmmono10-regular]:!
-Missing character: There is no р in font [lmmono10-regular]:!
-Missing character: There is no и in font [lmmono10-regular]:!
-Missing character: There is no н in font [lmmono10-regular]:!
-Missing character: There is no б in font [lmmono10-regular]:!
-Missing character: There is no у in font [lmmono10-regular]:!
-Missing character: There is no р in font [lmmono10-regular]:!
-Missing character: There is no г in font [lmmono10-regular]:!
-Missing character: There is no 부 in font STFangsong/OT:mapping=tex-text;!
-Missing character: There is no 산 in font STFangsong/OT:mapping=tex-text;!
-Missing character: There is no เ in font [lmmono10-regular]:!
-Missing character: There is no ช in font [lmmono10-regular]:!
-Missing character: There is no ี in font [lmmono10-regular]:!
-Missing character: There is no ย in font [lmmono10-regular]:!
-Missing character: There is no ง in font [lmmono10-regular]:!
-Missing character: There is no ใ in font [lmmono10-regular]:!
-Missing character: There is no ห in font [lmmono10-regular]:!
-Missing character: There is no ม in font [lmmono10-regular]:!
-Missing character: There is no ่ in font [lmmono10-regular]:!
-[24]
-Overfull \hbox (48.75pt too wide) in paragraph at lines 928--928
-[]\TU/lmtt/m/n/10 ##  [1]   7   8   9  10  11  12  13  14  15  16  17  18  19  
-20  21  22  23[] 
+Overfull \hbox (604.594pt too wide) in paragraph at lines 669--670
+[][] 
  []
 
-
-Overfull \hbox (48.75pt too wide) in paragraph at lines 929--929
-[]\TU/lmtt/m/n/10 ## [18]  24  25  26  27  28  29  30  31  32  33  34  35  36  
-37  38  39  40[] 
- []
-
-
-Overfull \hbox (48.75pt too wide) in paragraph at lines 930--930
-[]\TU/lmtt/m/n/10 ## [35]  41  42  43  44  45  46  47  48  49  50  51  52  53  
-54  55  56  57[] 
- []
-
-
-Overfull \hbox (48.75pt too wide) in paragraph at lines 931--931
-[]\TU/lmtt/m/n/10 ## [52]  58  59  60  61  62  63  64  65  66  67  68  69  70  
-71  72  73  74[] 
- []
-
-
-Overfull \hbox (48.75pt too wide) in paragraph at lines 932--932
-[]\TU/lmtt/m/n/10 ## [69]  75  76  77  78  79  80  81  82  83  84  85  86  87  
-88  89  90  91[] 
- []
-
-[25]
-File: R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-28-1.pdf Graphic fil
-e (type pdf)
-<use R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-28-1.pdf>
-File: R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-29-1.pdf Graphic fil
-e (type pdf)
-<use R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-29-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[26] [27] [28] [29]
-Missing character: There is no � in font [lmmono10-italic]:!
-[30] [31] [32]
-Underfull \vbox (badness 1147) has occurred while \output is active []
-
-[33] [34]
-Overfull \hbox (59.25pt too wide) in paragraph at lines 1646--1646
-[]\TU/lmtt/m/n/10 ##  [1]    4   16   36   64  100  144  196  256  324  400  48
-4  576  676  784[] 
- []
-
-[35] [36]
-Missing character: There is no θ in font [lmmono10-regular]:!
-Missing character: There is no ή in font [lmmono10-regular]:!
-Missing character: There is no ν in font [lmmono10-regular]:!
-Missing character: There is no α in font [lmmono10-regular]:!
-Missing character: There is no θ in font [lmmono10-regular]:!
-Missing character: There is no ή in font [lmmono10-regular]:!
-Missing character: There is no ν in font [lmmono10-regular]:!
-Missing character: There is no α in font [lmmono10-regular]:!
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1797--1797
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$labe
-l), x$x, x$y, :[] 
- []
-
-[37]
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (46.3pt too wide) in paragraph at lines 1798--1798
-[]\TU/lmtt/m/n/10 ## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substi
-tuted for <e2>[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1802--1802
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$labe
-l), x$x, x$y, :[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (46.3pt too wide) in paragraph at lines 1803--1803
-[]\TU/lmtt/m/n/10 ## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substi
-tuted for <89>[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1807--1807
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$labe
-l), x$x, x$y, :[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (46.3pt too wide) in paragraph at lines 1808--1808
-[]\TU/lmtt/m/n/10 ## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substi
-tuted for <a4>[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1812--1812
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$labe
-l), x$x, x$y, :[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (46.3pt too wide) in paragraph at lines 1813--1813
-[]\TU/lmtt/m/n/10 ## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substi
-tuted for <e2>[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1817--1817
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$labe
-l), x$x, x$y, :[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (46.3pt too wide) in paragraph at lines 1818--1818
-[]\TU/lmtt/m/n/10 ## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substi
-tuted for <89>[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1822--1822
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$labe
-l), x$x, x$y, :[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (46.3pt too wide) in paragraph at lines 1823--1823
-[]\TU/lmtt/m/n/10 ## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substi
-tuted for <a4>[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1827--1827
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$labe
-l), x$x, x$y, :[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (46.3pt too wide) in paragraph at lines 1828--1828
-[]\TU/lmtt/m/n/10 ## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substi
-tuted for <e2>[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1832--1832
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$labe
-l), x$x, x$y, :[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (46.3pt too wide) in paragraph at lines 1833--1833
-[]\TU/lmtt/m/n/10 ## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substi
-tuted for <89>[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1837--1837
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$labe
-l), x$x, x$y, :[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (46.3pt too wide) in paragraph at lines 1838--1838
-[]\TU/lmtt/m/n/10 ## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substi
-tuted for <a4>[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1842--1842
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$labe
-l), x$x, x$y, :[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (46.3pt too wide) in paragraph at lines 1843--1843
-[]\TU/lmtt/m/n/10 ## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substi
-tuted for <e2>[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1847--1847
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$labe
-l), x$x, x$y, :[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (46.3pt too wide) in paragraph at lines 1848--1848
-[]\TU/lmtt/m/n/10 ## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substi
-tuted for <89>[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1852--1852
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$labe
-l), x$x, x$y, :[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (46.3pt too wide) in paragraph at lines 1853--1853
-[]\TU/lmtt/m/n/10 ## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substi
-tuted for <a4>[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1857--1857
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$labe
-l), x$x, x$y, :[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (46.3pt too wide) in paragraph at lines 1858--1858
-[]\TU/lmtt/m/n/10 ## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substi
-tuted for <e2>[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1862--1862
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$labe
-l), x$x, x$y, :[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (46.3pt too wide) in paragraph at lines 1863--1863
-[]\TU/lmtt/m/n/10 ## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substi
-tuted for <89>[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1867--1867
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$labe
-l), x$x, x$y, :[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (46.3pt too wide) in paragraph at lines 1868--1868
-[]\TU/lmtt/m/n/10 ## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substi
-tuted for <a4>[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1872--1872
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$labe
-l), x$x, x$y, :[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (46.3pt too wide) in paragraph at lines 1873--1873
-[]\TU/lmtt/m/n/10 ## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substi
-tuted for <e2>[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1877--1877
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$labe
-l), x$x, x$y, :[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (46.3pt too wide) in paragraph at lines 1878--1878
-[]\TU/lmtt/m/n/10 ## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substi
-tuted for <89>[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1882--1882
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$labe
-l), x$x, x$y, :[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (46.3pt too wide) in paragraph at lines 1883--1883
-[]\TU/lmtt/m/n/10 ## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substi
-tuted for <a4>[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1887--1887
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$labe
-l), x$x, x$y, :[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (46.3pt too wide) in paragraph at lines 1888--1888
-[]\TU/lmtt/m/n/10 ## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substi
-tuted for <e2>[] 
- []
-
-[38]
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1892--1892
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$labe
-l), x$x, x$y, :[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (46.3pt too wide) in paragraph at lines 1893--1893
-[]\TU/lmtt/m/n/10 ## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substi
-tuted for <89>[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1897--1897
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$labe
-l), x$x, x$y, :[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (46.3pt too wide) in paragraph at lines 1898--1898
-[]\TU/lmtt/m/n/10 ## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substi
-tuted for <a4>[] 
- []
-
-
-Overfull \hbox (33.0pt too wide) in paragraph at lines 1902--1902
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$l
-abel), x$x,[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (56.8pt too wide) in paragraph at lines 1903--1903
-[]\TU/lmtt/m/n/10 ## x$y, : conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot
- substituted for[] 
- []
-
-
-Overfull \hbox (33.0pt too wide) in paragraph at lines 1908--1908
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$l
-abel), x$x,[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (56.8pt too wide) in paragraph at lines 1909--1909
-[]\TU/lmtt/m/n/10 ## x$y, : conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot
- substituted for[] 
- []
-
-
-Overfull \hbox (33.0pt too wide) in paragraph at lines 1914--1914
-[]\TU/lmtt/m/n/10 ## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$l
-abel), x$x,[] 
- []
-
-Missing character: There is no ≤ in font [lmmono10-regular]:!
-
-Overfull \hbox (56.8pt too wide) in paragraph at lines 1915--1915
-[]\TU/lmtt/m/n/10 ## x$y, : conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot
- substituted for[] 
- []
-
-File: R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-59-1.pdf Graphic fil
-e (type pdf)
-<use R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-59-1.pdf>
-Missing character: There is no ≤ in font rm-lmr10!
-Missing character: There is no ≤ in font rm-lmr10!
-[39]
-Missing character: There is no ≤ in font rm-lmr10!
-[40]
-Missing character: There is no μ in font [lmmono10-italic]:!
-
-Overfull \hbox (17.25pt too wide) in paragraph at lines 2063--2063
-[]\TU/lmtt/m/n/10 ## alternative hypothesis: true difference in means is not eq
-ual to 0[] 
- []
-
-[41]
-Overfull \hbox (17.25pt too wide) in paragraph at lines 2085--2085
-[]\TU/lmtt/m/n/10 ## alternative hypothesis: true difference in means is not eq
-ual to 0[] 
- []
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 2094.
-[42] [43]
-File: R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-73-1.pdf Graphic fil
-e (type pdf)
-<use R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-73-1.pdf>
-[44]
-Chapter 6.
-File: img/tibble-intro.png Graphic file (type bmp)
-<img/tibble-intro.png>
-
-Overfull \hbox (938.85905pt too wide) in paragraph at lines 2257--2258
+[19]
+File: img/rstudio-fuli/auto-sub.png Graphic file (type bmp)
+<img/rstudio-fuli/auto-sub.png>
+
+Overfull \hbox (934.84393pt too wide) in paragraph at lines 677--678
 [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[45
+[20]
+LaTeX Font Info:    Font shape `TU/SourceHanSerifSC-Regular(0)/m/it' will be
+(Font)              scaled to size 8.38531pt on input line 686.
+[21] [22]
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+[23]
+Missing character: There is no ✖ in font [lmmono10-regular]:!
+Missing character: There is no ✖ in font [lmmono10-regular]:!
+[24] [25] [26
 
 ]
+Chapter 2.
+
+LaTeX Warning: Reference `(' on page 27 undefined on input line 928.
+
+LaTeX Font Info:    Font shape `TU/STFangsong(0)/m/n' will be
+(Font)              scaled to size 7.76575pt on input line 931.
+[27]
+Missing character: There is no Е in font [lmmono10-regular]:!
+Missing character: There is no к in font [lmmono10-regular]:!
+Missing character: There is no а in font [lmmono10-regular]:!
+Missing character: There is no т in font [lmmono10-regular]:!
+Missing character: There is no е in font [lmmono10-regular]:!
+Missing character: There is no р in font [lmmono10-regular]:!
+Missing character: There is no и in font [lmmono10-regular]:!
+Missing character: There is no н in font [lmmono10-regular]:!
+Missing character: There is no б in font [lmmono10-regular]:!
+Missing character: There is no у in font [lmmono10-regular]:!
+Missing character: There is no р in font [lmmono10-regular]:!
+Missing character: There is no г in font [lmmono10-regular]:!
+Missing character: There is no 부 in font STFangsong/OT:mapping=tex-text;!
+Missing character: There is no 산 in font STFangsong/OT:mapping=tex-text;!
+Missing character: There is no เ in font [lmmono10-regular]:!
+Missing character: There is no ช in font [lmmono10-regular]:!
+Missing character: There is no ี in font [lmmono10-regular]:!
+Missing character: There is no ย in font [lmmono10-regular]:!
+Missing character: There is no ง in font [lmmono10-regular]:!
+Missing character: There is no ใ in font [lmmono10-regular]:!
+Missing character: There is no ห in font [lmmono10-regular]:!
+Missing character: There is no ม in font [lmmono10-regular]:!
+Missing character: There is no ่ in font [lmmono10-regular]:!
+Missing character: There is no Е in font [lmmono10-regular]:!
+Missing character: There is no к in font [lmmono10-regular]:!
+Missing character: There is no а in font [lmmono10-regular]:!
+Missing character: There is no т in font [lmmono10-regular]:!
+Missing character: There is no е in font [lmmono10-regular]:!
+Missing character: There is no р in font [lmmono10-regular]:!
+Missing character: There is no и in font [lmmono10-regular]:!
+Missing character: There is no н in font [lmmono10-regular]:!
+Missing character: There is no б in font [lmmono10-regular]:!
+Missing character: There is no у in font [lmmono10-regular]:!
+Missing character: There is no р in font [lmmono10-regular]:!
+Missing character: There is no г in font [lmmono10-regular]:!
+Missing character: There is no 부 in font STFangsong/OT:mapping=tex-text;!
+Missing character: There is no 산 in font STFangsong/OT:mapping=tex-text;!
+Missing character: There is no เ in font [lmmono10-regular]:!
+Missing character: There is no ช in font [lmmono10-regular]:!
+Missing character: There is no ี in font [lmmono10-regular]:!
+Missing character: There is no ย in font [lmmono10-regular]:!
+Missing character: There is no ง in font [lmmono10-regular]:!
+Missing character: There is no ใ in font [lmmono10-regular]:!
+Missing character: There is no ห in font [lmmono10-regular]:!
+Missing character: There is no ม in font [lmmono10-regular]:!
+Missing character: There is no ่ in font [lmmono10-regular]:!
+
+Underfull \vbox (badness 1769) has occurred while \output is active []
+
+[28]
+Overfull \hbox (48.75pt too wide) in paragraph at lines 1093--1093
+[]\TU/lmtt/m/n/10 ##  [1]   7   8   9  10  11  12  13  14  15  16  17  18  19  
+20  21  22  23[] 
+ []
+
+
+Overfull \hbox (48.75pt too wide) in paragraph at lines 1094--1094
+[]\TU/lmtt/m/n/10 ## [18]  24  25  26  27  28  29  30  31  32  33  34  35  36  
+37  38  39  40[] 
+ []
+
+
+Overfull \hbox (48.75pt too wide) in paragraph at lines 1095--1095
+[]\TU/lmtt/m/n/10 ## [35]  41  42  43  44  45  46  47  48  49  50  51  52  53  
+54  55  56  57[] 
+ []
+
+
+Overfull \hbox (48.75pt too wide) in paragraph at lines 1096--1096
+[]\TU/lmtt/m/n/10 ## [52]  58  59  60  61  62  63  64  65  66  67  68  69  70  
+71  72  73  74[] 
+ []
+
+
+Overfull \hbox (48.75pt too wide) in paragraph at lines 1097--1097
+[]\TU/lmtt/m/n/10 ## [69]  75  76  77  78  79  80  81  82  83  84  85  86  87  
+88  89  90  91[] 
+ []
+
+[29]
+File: R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-40-1.pdf Graphic fil
+e (type pdf)
+<use R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-40-1.pdf>
+[30]
+File: R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-41-1.pdf Graphic fil
+e (type pdf)
+<use R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-41-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[31] [32] [33] [34]
+
+LaTeX Warning: Reference `math-NA' on page 35 undefined on input line 1478.
+
+
+LaTeX Warning: Reference `(' on page 35 undefined on input line 1480.
+
+
+LaTeX Warning: Reference `(' on page 35 undefined on input line 1489.
+
+
+LaTeX Warning: Reference `list' on page 35 undefined on input line 1495.
+
+[35] [36]
+Missing character: There is no � in font [lmmono10-italic]:!
+[37]
+Underfull \vbox (badness 1173) has occurred while \output is active []
+
+[38] [39] [40] [41]
+File: img/graphics/t-distribution.png Graphic file (type bmp)
+<img/graphics/t-distribution.png>
+
+Overfull \hbox (632.80106pt too wide) in paragraph at lines 2068--2069
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[42] [43]
+Missing character: There is no ≤ in font rm-lmr10!
+Missing character: There is no ≤ in font rm-lmr10!
+Missing character: There is no ≤ in font rm-lmr10!
+[44]
+Missing character: There is no μ in font [lmmono10-italic]:!
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 2212--2212
+[]\TU/lmtt/m/n/10 ## alternative hypothesis: true difference in means is not eq
+ual to 0[] 
+ []
+
+[45]
+Overfull \hbox (17.25pt too wide) in paragraph at lines 2234--2234
+[]\TU/lmtt/m/n/10 ## alternative hypothesis: true difference in means is not eq
+ual to 0[] 
+ []
+
+[46] [47]
+File: R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-93-1.pdf Graphic fil
+e (type pdf)
+<use R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-93-1.pdf>
+[48] [49] [50] [51] [52]
+Overfull \vbox (0.84003pt too high) detected at line 2723
+ []
+
+[53]
+Overfull \hbox (59.25pt too wide) in paragraph at lines 2726--2726
+[]\TU/lmtt/m/n/10 ##  [1]   10  100 1000   20  200 2000   30  300 3000   40  40
+0 4000   50  500[] 
+ []
+
+[54]
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2847.
+
+Underfull \vbox (badness 1466) has occurred while \output is active []
+
+[55]
+Overfull \hbox (62.022pt too wide) in alignment at lines 2872--2876
+ [] [] [] 
+ []
+
+
+Overfull \hbox (62.022pt too wide) in alignment at lines 2876--2885
+ [] [] [] 
+ []
+
+
+Overfull \vbox (8.8795pt too high) has occurred while \output is active []
+
+[56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66]
+
+LaTeX Warning: Reference `list' on page 67 undefined on input line 3621.
+
+Missing character: There is no θ in font [lmmono10-regular]:!
+Missing character: There is no ή in font [lmmono10-regular]:!
+Missing character: There is no ν in font [lmmono10-regular]:!
+Missing character: There is no α in font [lmmono10-regular]:!
+[67]
+Missing character: There is no θ in font [lmmono10-regular]:!
+Missing character: There is no ή in font [lmmono10-regular]:!
+Missing character: There is no ν in font [lmmono10-regular]:!
+Missing character: There is no α in font [lmmono10-regular]:!
+[68]
+Underfull \hbox (badness 1997) in paragraph at lines 3704--3705
+[]\TU/SourceHanSerifSC-Regular(0)/m/it/10 尝 试 对 \TU/CMUSerif(0)/m/n/10 lists \T
+U/SourceHanSerifSC-Regular(0)/m/it/10 和 \TU/CMUSerif(0)/m/n/10 vectors \TU/Sour
+ceHanSerifSC-Regular(0)/m/it/10 使 用 \TU/lmtt/m/n/10 is.vector()\TU/CMUSerif(0)/
+m/n/10 , \TU/lmtt/m/n/10 is.list()\TU/CMUSerif(0)/m/n/10 , \TU/lmtt/m/n/10 is.a
+tomic() \TU/SourceHanSerifSC-Regular(0)/m/it/10 和
+ []
+
+[69] [70] [71] [72] [73] [74] [75]
+Overfull \hbox (22.5pt too wide) in paragraph at lines 4157--4157
+[]\TU/lmtt/m/n/10 ##          P. falciparum P. malariae  P. ovale   P. vivax P.
+ knowlesi[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 4158--4158
+[]\TU/lmtt/m/n/10 ## trial. 1     0.6718315   0.4770758 0.2446106 0.86823106   
+0.7428044[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 4159--4159
+[]\TU/lmtt/m/n/10 ## trial. 2     0.4101549   0.2141378 0.6973227 0.31838107   
+0.8595585[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 4160--4160
+[]\TU/lmtt/m/n/10 ## trial. 3     0.4380271   0.9520504 0.8705479 0.57497412   
+0.4063315[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 4161--4161
+[]\TU/lmtt/m/n/10 ## trial. 4     0.7047464   0.7772618 0.7139401 0.95823908   
+0.4899111[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 4162--4162
+[]\TU/lmtt/m/n/10 ## trial. 5     0.3364387   0.4288986 0.1960972 0.04000405   
+0.6076336[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 4163--4163
+[]\TU/lmtt/m/n/10 ## trial. 6     0.9677286   0.7396727 0.7087386 0.01501767   
+0.3936719[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 4167--4167
+[]\TU/lmtt/m/n/10 ##          P. falciparum P. malariae  P. ovale    P. vivax P
+. knowlesi[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 4168--4168
+[]\TU/lmtt/m/n/10 ## trial. 1     0.9006686   0.7380892 0.5167960 0.703028908  
+ 0.9207938[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 4169--4169
+[]\TU/lmtt/m/n/10 ## trial. 2     0.1635478   0.2071612 0.5997855 0.001126975  
+ 0.1751163[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 4170--4170
+[]\TU/lmtt/m/n/10 ## trial. 3     0.2380316   0.4814276 0.2912440 0.277010770  
+ 0.9268620[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 4171--4171
+[]\TU/lmtt/m/n/10 ## trial. 4     0.3115802   0.9184094 0.6297072 0.915726600  
+ 0.2515638[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 4172--4172
+[]\TU/lmtt/m/n/10 ## trial. 5     0.7631003   0.3687141 0.1921361 0.405785865  
+ 0.2536388[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 4173--4173
+[]\TU/lmtt/m/n/10 ## trial. 6     0.8835738   0.4548185 0.3347968 0.816077598  
+ 0.6582365[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 4177--4177
+[]\TU/lmtt/m/n/10 ##          P. falciparum P. malariae   P. ovale   P. vivax P
+. knowlesi[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 4178--4178
+[]\TU/lmtt/m/n/10 ## trial. 1     0.2833486   0.7377325 0.24121750 0.07658559  
+ 0.5553004[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 4179--4179
+[]\TU/lmtt/m/n/10 ## trial. 2     0.7801159   0.8058647 0.57364324 0.30177394  
+ 0.5410325[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 4180--4180
+[]\TU/lmtt/m/n/10 ## trial. 3     0.9237641   0.8137241 0.06959596 0.47938977  
+ 0.1998257[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 4181--4181
+[]\TU/lmtt/m/n/10 ## trial. 4     0.3830497   0.8257545 0.54016980 0.35242275  
+ 0.6334874[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 4182--4182
+[]\TU/lmtt/m/n/10 ## trial. 5     0.6706461   0.6323191 0.92935551 0.08920604  
+ 0.7562945[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 4183--4183
+[]\TU/lmtt/m/n/10 ## trial. 6     0.2686587   0.7297881 0.59177542 0.95546656  
+ 0.7247634[] 
+ []
+
+[76] [77] [78
+
+]
+Chapter 3.
+File: img/tibble-intro.png Graphic file (type bmp)
+<img/tibble-intro.png>
+
+Overfull \hbox (938.85905pt too wide) in paragraph at lines 4267--4268
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[79]
 Underfull \vbox (badness 6542) has occurred while \output is active []
 
-[46]
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2273--2273
+[80]
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4284--4284
 []\TU/lmtt/m/n/10 ##   manufacturer model  displ  year   cyl trans drv     cty 
   hwy fl    class[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2274--2274
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4285--4285
 []\TU/lmtt/m/n/10 ##   <chr>        <chr>  <dbl> <int> <int> <chr> <chr> <int> 
 <int> <chr> <chr>[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2275--2275
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4286--4286
 []\TU/lmtt/m/n/10 ## 1 volkswagen   passat   1.8  1999     4 auto~ f        18 
    29 p     mids~[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2276--2276
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4287--4287
 []\TU/lmtt/m/n/10 ## 2 volkswagen   passat   2    2008     4 auto~ f        19 
    28 p     mids~[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2277--2277
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4288--4288
 []\TU/lmtt/m/n/10 ## 3 volkswagen   passat   2    2008     4 manu~ f        21 
    29 p     mids~[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2278--2278
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4289--4289
 []\TU/lmtt/m/n/10 ## 4 volkswagen   passat   2.8  1999     6 auto~ f        16 
    26 p     mids~[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2279--2279
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4290--4290
 []\TU/lmtt/m/n/10 ## 5 volkswagen   passat   2.8  1999     6 manu~ f        18 
    26 p     mids~[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2280--2280
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4291--4291
 []\TU/lmtt/m/n/10 ## 6 volkswagen   passat   3.6  2008     6 auto~ f        17 
    26 p     mids~[] 
  []
 
-[47] [48]
-Overfull \hbox (48.75pt too wide) in paragraph at lines 2396--2396
+[81] [82]
+Overfull \hbox (48.75pt too wide) in paragraph at lines 4411--4411
 []\TU/lmtt/m/n/10 ##  [1] 1.8 1.8 2.0 2.0 2.8 2.8 3.1 1.8 1.8 2.0 2.0 2.8 2.8 3
 .1 3.1 2.8 3.1[] 
  []
 
-[49]
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2452--2452
+[83]
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4470--4470
 []\TU/lmtt/m/n/10 ##   manufacturer model  displ  year   cyl trans drv     cty 
   hwy fl    class[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2453--2453
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4471--4471
 []\TU/lmtt/m/n/10 ##   <chr>        <chr>  <dbl> <int> <int> <chr> <chr> <int> 
 <int> <chr> <chr>[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2454--2454
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4472--4472
 []\TU/lmtt/m/n/10 ## 1 audi         a4       2.8  1999     6 auto~ f        16 
    26 p     comp~[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2455--2455
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4473--4473
 []\TU/lmtt/m/n/10 ## 2 audi         a4       2.8  1999     6 manu~ f        18 
    26 p     comp~[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2456--2456
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4474--4474
 []\TU/lmtt/m/n/10 ## 3 audi         a4       3.1  2008     6 auto~ f        18 
    27 p     comp~[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2457--2457
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4475--4475
 []\TU/lmtt/m/n/10 ## 4 audi         a4 qu~   2.8  1999     6 auto~ 4        15 
    25 p     comp~[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2458--2458
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4476--4476
 []\TU/lmtt/m/n/10 ## 5 audi         a4 qu~   2.8  1999     6 manu~ 4        17 
    25 p     comp~[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2459--2459
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4477--4477
 []\TU/lmtt/m/n/10 ## 6 audi         a4 qu~   3.1  2008     6 auto~ 4        17 
    25 p     comp~[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2460--2460
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4478--4478
 []\TU/lmtt/m/n/10 ## 7 audi         a4 qu~   3.1  2008     6 manu~ 4        15 
    25 p     comp~[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2461--2461
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4479--4479
 []\TU/lmtt/m/n/10 ## 8 audi         a6 qu~   2.8  1999     6 auto~ 4        15 
    24 p     mids~[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2462--2462
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4480--4480
 []\TU/lmtt/m/n/10 ## 9 audi         a6 qu~   3.1  2008     6 auto~ 4        17 
    25 p     mids~[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2477--2477
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4495--4495
 []\TU/lmtt/m/n/10 ##   manufacturer model  displ  year   cyl trans drv     cty 
   hwy fl    class[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2478--2478
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4496--4496
 []\TU/lmtt/m/n/10 ##   <chr>        <chr>  <dbl> <int> <int> <chr> <chr> <int> 
 <int> <chr> <chr>[] 
  []
 
 
-Overfull \hbox (54.0pt too wide) in paragraph at lines 2479--2479
+Overfull \hbox (54.0pt too wide) in paragraph at lines 4497--4497
 []\TU/lmtt/m/n/10 ## 1 chevrolet    c1500~   5.3  2008     8 auto~ r        14 
    20 r     suv[] 
  []
 
 
-Overfull \hbox (54.0pt too wide) in paragraph at lines 2480--2480
+Overfull \hbox (54.0pt too wide) in paragraph at lines 4498--4498
 []\TU/lmtt/m/n/10 ## 2 chevrolet    c1500~   5.7  1999     8 auto~ r        13 
    17 r     suv[] 
  []
 
 
-Overfull \hbox (54.0pt too wide) in paragraph at lines 2481--2481
+Overfull \hbox (54.0pt too wide) in paragraph at lines 4499--4499
 []\TU/lmtt/m/n/10 ## 3 chevrolet    c1500~   6    2008     8 auto~ r        12 
    17 r     suv[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2482--2482
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4500--4500
 []\TU/lmtt/m/n/10 ## 4 chevrolet    corve~   5.7  1999     8 manu~ r        16 
    26 p     2sea~[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2483--2483
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4501--4501
 []\TU/lmtt/m/n/10 ## 5 chevrolet    corve~   5.7  1999     8 auto~ r        15 
    23 p     2sea~[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2484--2484
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4502--4502
 []\TU/lmtt/m/n/10 ## 6 chevrolet    corve~   6.2  2008     8 manu~ r        16 
    26 p     2sea~[] 
  []
 
-
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2498--2498
+[84]
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4516--4516
 []\TU/lmtt/m/n/10 ##   manufacturer model  displ  year   cyl trans drv     cty 
   hwy fl    class[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2499--2499
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4517--4517
 []\TU/lmtt/m/n/10 ##   <chr>        <chr>  <dbl> <int> <int> <chr> <chr> <int> 
 <int> <chr> <chr>[] 
  []
 
 
-Overfull \hbox (54.0pt too wide) in paragraph at lines 2500--2500
-[]\TU/lmtt/m/n/10 ## 1 chevrolet    k1500~   5.3  2008     8 auto~ 4        14 
-   19 r     suv[] 
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4518--4518
+[]\TU/lmtt/m/n/10 ## 1 audi         a4 qu~   2.8  1999     6 manu~ 4        17 
+   25 p     comp~[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2501--2501
-[]\TU/lmtt/m/n/10 ## 2 subaru       impre~   2.5  2008     4 auto~ 4        20 
-   27 r     comp~[] 
+Overfull \hbox (54.0pt too wide) in paragraph at lines 4519--4519
+[]\TU/lmtt/m/n/10 ## 2 lincoln      navig~   5.4  2008     8 auto~ r        12 
+   18 r     suv[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2502--2502
-[]\TU/lmtt/m/n/10 ## 3 hyundai      sonata   3.3  2008     6 auto~ f        19 
-   28 r     mids~[] 
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4520--4520
+[]\TU/lmtt/m/n/10 ## 3 ford         f150 ~   5.4  2008     8 auto~ 4        13 
+   17 r     pick~[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2503--2503
-[]\TU/lmtt/m/n/10 ## 4 audi         a4       2.8  1999     6 auto~ f        16 
-   26 p     comp~[] 
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4521--4521
+[]\TU/lmtt/m/n/10 ## 4 dodge        dakot~   4.7  2008     8 auto~ 4        14 
+   19 r     pick~[] 
  []
 
-[50]
-Overfull \hbox (33.0pt too wide) in paragraph at lines 2526--2526
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4572--4572
+[]\TU/lmtt/m/n/10 ##   manufacturer model displ  year   cyl trans  drv     cty 
+  hwy fl    class[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4573--4573
+[]\TU/lmtt/m/n/10 ##   <chr>        <chr> <dbl> <int> <int> <chr>  <chr> <int> 
+<int> <chr> <chr>[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 4574--4574
+[]\TU/lmtt/m/n/10 ## 1 audi         a4        2  2008     4 manua~ f        20 
+   31 p     comp~[] 
+ []
+
+[85] [86]
+Chapter 4.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[87
+
+] [88]
+Chapter 5.
+[89
+
+] [90]
+Underfull \hbox (badness 1231) in paragraph at lines 4812--4813
+[]\TU/SourceHanSerifSC-Regular(0)/m/it/10 和 \TU/lmtt/m/n/10 str_to_lower() \TU/
+SourceHanSerifSC-Regular(0)/m/it/10 相 关 的 函 数 还 有 \TU/lmtt/m/n/10 str_to_upper(
+)\TU/CMUSerif(0)/m/n/10 , \TU/lmtt/m/n/10 str_to_title() \TU/SourceHanSerifSC-R
+egular(0)/m/it/10 和
+ []
+
+[91]
+Underfull \vbox (badness 5403) has occurred while \output is active []
+
+[92]
+Overfull \hbox (33.0pt too wide) in paragraph at lines 4941--4941
 []\TU/lmtt/m/n/10 ## [1] " \TU/STFangsong(0)/m/n/10 不 满 意 \TU/lmtt/m/n/10 "   "
  \TU/STFangsong(0)/m/n/10 不 满 意 \TU/lmtt/m/n/10 "   " \TU/STFangsong(0)/m/n/10 
 满 意 \TU/lmtt/m/n/10 "     " \TU/STFangsong(0)/m/n/10 满 意 \TU/lmtt/m/n/10 "     
@@ -2599,214 +2611,56 @@ Overfull \hbox (33.0pt too wide) in paragraph at lines 2526--2526
  []
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 2543--2543
+Overfull \hbox (17.25pt too wide) in paragraph at lines 4958--4958
 []\TU/lmtt/m/n/10 ## [1]  \TU/STFangsong(0)/m/n/10 非 常 不 满   不 满 意     不 满 意   
   满 意       满 意       满 意       非 常 满 意 [] 
  []
 
 
-Underfull \hbox (badness 1997) in paragraph at lines 2568--2569
-[]\TU/SourceHanSerifSC-Regular(0)/m/it/10 尝 试 对 \TU/CMUSerif(0)/m/n/10 lists \T
-U/SourceHanSerifSC-Regular(0)/m/it/10 和 \TU/CMUSerif(0)/m/n/10 vectors \TU/Sour
-ceHanSerifSC-Regular(0)/m/it/10 使 用 \TU/lmtt/m/n/10 is.vector()\TU/CMUSerif(0)/
-m/n/10 , \TU/lmtt/m/n/10 is.list()\TU/CMUSerif(0)/m/n/10 , \TU/lmtt/m/n/10 is.a
-tomic() \TU/SourceHanSerifSC-Regular(0)/m/it/10 和
- []
+Underfull \vbox (badness 5862) has occurred while \output is active []
 
-[51] [52] [53]
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2744--2744
-[]\TU/lmtt/m/n/10 ##   manufacturer model displ  year   cyl trans  drv     cty 
-  hwy fl    class[] 
- []
-
-
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2745--2745
-[]\TU/lmtt/m/n/10 ##   <chr>        <chr> <dbl> <int> <int> <chr>  <chr> <int> 
-<int> <chr> <chr>[] 
- []
-
-
-Overfull \hbox (64.5pt too wide) in paragraph at lines 2746--2746
-[]\TU/lmtt/m/n/10 ## 1 audi         a4        2  2008     4 manua~ f        20 
-   31 p     comp~[] 
- []
-
-[54] [55] [56] [57]
-Overfull \hbox (22.5pt too wide) in paragraph at lines 2997--2997
-[]\TU/lmtt/m/n/10 ##          P. falciparum P. malariae   P. ovale  P. vivax P.
- knowlesi[] 
- []
-
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 2998--2998
-[]\TU/lmtt/m/n/10 ## trial. 1     0.3034727   0.8784722 0.35557786 0.6002456  0
-.20864379[] 
- []
-
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 2999--2999
-[]\TU/lmtt/m/n/10 ## trial. 2     0.9314530   0.5980476 0.32059644 0.6327177  0
-.23947509[] 
- []
-
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 3000--3000
-[]\TU/lmtt/m/n/10 ## trial. 3     0.0215070   0.2555033 0.06692238 0.2094677  0
-.08296955[] 
- []
-
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 3001--3001
-[]\TU/lmtt/m/n/10 ## trial. 4     0.2588125   0.3936804 0.56226369 0.7456136  0
-.54193515[] 
- []
-
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 3002--3002
-[]\TU/lmtt/m/n/10 ## trial. 5     0.3098640   0.9683803 0.79812908 0.1927551  0
-.04579420[] 
- []
-
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 3003--3003
-[]\TU/lmtt/m/n/10 ## trial. 6     0.7470949   0.6810479 0.66899801 0.7002111  0
-.59069703[] 
- []
-
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 3007--3007
-[]\TU/lmtt/m/n/10 ##          P. falciparum P. malariae  P. ovale   P. vivax P.
- knowlesi[] 
- []
-
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 3008--3008
-[]\TU/lmtt/m/n/10 ## trial. 1     0.6168838   0.1294128 0.5434755 0.94058855   
-0.8026451[] 
- []
-
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 3009--3009
-[]\TU/lmtt/m/n/10 ## trial. 2     0.6471846   0.9512479 0.8764131 0.86265025   
-0.5119355[] 
- []
-
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 3010--3010
-[]\TU/lmtt/m/n/10 ## trial. 3     0.9987154   0.9125513 0.9199706 0.83937284   
-0.2871230[] 
- []
-
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 3011--3011
-[]\TU/lmtt/m/n/10 ## trial. 4     0.4080803   0.2785156 0.6107068 0.14657101   
-0.5298951[] 
- []
-
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 3012--3012
-[]\TU/lmtt/m/n/10 ## trial. 5     0.2149751   0.9484414 0.4241208 0.74322043   
-0.9960876[] 
- []
-
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 3013--3013
-[]\TU/lmtt/m/n/10 ## trial. 6     0.7707224   0.2828778 0.9433693 0.07537418   
-0.5180949[] 
- []
-
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 3017--3017
-[]\TU/lmtt/m/n/10 ##          P. falciparum P. malariae  P. ovale   P. vivax P.
- knowlesi[] 
- []
-
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 3018--3018
-[]\TU/lmtt/m/n/10 ## trial. 1     0.3726515  0.25755037 0.5202015 0.73931255  0
-.22672036[] 
- []
-
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 3019--3019
-[]\TU/lmtt/m/n/10 ## trial. 2     0.6832773  0.30342532 0.9971883 0.68190266  0
-.12515938[] 
- []
-
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 3020--3020
-[]\TU/lmtt/m/n/10 ## trial. 3     0.5408214  0.60274192 0.4831202 0.45793986  0
-.63308885[] 
- []
-
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 3021--3021
-[]\TU/lmtt/m/n/10 ## trial. 4     0.5913479  0.09345759 0.2939420 0.04236595  0
-.15857911[] 
- []
-
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 3022--3022
-[]\TU/lmtt/m/n/10 ## trial. 5     0.1457845  0.32734642 0.7453021 0.28958635  0
-.03226909[] 
- []
-
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 3023--3023
-[]\TU/lmtt/m/n/10 ## trial. 6     0.8179054  0.34010863 0.2640034 0.06849237  0
-.40593126[] 
- []
-
-[58]
-Chapter 7.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[59
-
-] [60]
-Chapter 8.
-[61
-
-] [62
-
-]
-Chapter 9.
+[93] [94]
+Chapter 6.
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 3101.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 4990.
 
-Overfull \hbox (62.94351pt too wide) in paragraph at lines 3109--3110
+Overfull \hbox (62.94351pt too wide) in paragraph at lines 4998--4999
 []$[][][][][] [] [] [] [][][][][][][][][][][][][] [] [][][] [] [][][][] [] [][]
  [] [][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][]$[] 
  []
 
-[63] [64
+[95
+
+] [96
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3143.
-[65]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3143.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5032.
+[97]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5032.
 (./R与tidyverse——数据分析入门.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3143.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3143.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 5032.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5032.
 
 Package rerunfilecheck Info: File `R与tidyverse——数据分析入门.out' has not changed.
-(rerunfilecheck)             Checksum: 5A13071D7DCB643C8766558553A2884D.
+(rerunfilecheck)             Checksum: 269E9DF4EA27BE64FA16DD3B89E0EDAC.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 30589 strings out of 492970
- 616899 string characters out of 6133937
- 695699 words of memory out of 5000000
- 34208 multiletter control sequences out of 15000+600000
- 559406 words of font info for 105 fonts, out of 8000000 for 9000
+ 30872 strings out of 492970
+ 631711 string characters out of 6133937
+ 702602 words of memory out of 5000000
+ 34485 multiletter control sequences out of 15000+600000
+ 555405 words of font info for 102 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  63i,11n,134p,10460b,892s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on R与tidyverse——数据分析入门.pdf (65 pages).
+Output written on R与tidyverse——数据分析入门.pdf (97 pages).

@@ -125,7 +125,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2019-07-02}
+    \date{2019-07-13}
 
 %\usepackage[UTF8]{ctex}
 
@@ -153,32 +153,34 @@
 \chapter*{欢迎}\label{welcome}}
 \addcontentsline{toc}{chapter}{欢迎}
 
-\hypertarget{ux7b80ux4ecb}{%
-\subsection*{简介}\label{ux7b80ux4ecb}}
+\hypertarget{intro}{%
+\subsection*{简介}\label{intro}}
 \addcontentsline{toc}{subsection}{简介}
 
 本书为R和tidyverse的入门向教程。教学视频在b站（还没开播）。附加资源在\href{https://github.com/TianyiShi2001/R-Tutorial-Resorces}{R-Tutorial-Resources Github仓库}。
 
 本书有Gitbook版本 (\url{https://tianyishi2001.github.io/r-and-tidyverse-book/} )和\href{https://tianyishi2001.github.io/r-and-tidyverse-book/R与tidyverse——数据分析入门.pdf}{通过XeLaTeX排版的PDF版本}。
 
-\hypertarget{ux8bf4ux660e}{%
-\subsection*{Gitbook版本使用说明}\label{ux8bf4ux660e}}
+\hypertarget{man}{%
+\subsection*{Gitbook版本使用说明}\label{man}}
 \addcontentsline{toc}{subsection}{Gitbook版本使用说明}
 
-左上角的菜单可以选择收起/展开目录，搜索，和外观，字体调整。中文衬线体使用的是思源宋体，非常好看，建议尝试。
+左上角的菜单可以选择收起/展开目录，搜索，和外观，字体调整。中文衬线体使用的是思源宋体。
 
 如果你对某一段文字有修改意见，可以选择那段文字，并通过Hypothesis留言（选择``annotate''）。右上角可以展开显示公开的留言。首次使用需要注册。
 
 如果你熟悉\href{https://bookdown.org}{Bookdown}和Github，可以\href{https://github.com/TianyiShi2001/r-and-tidyverse-book}{在此提交pull request}.
 
-\subsection*{本书的结构}
+\hypertarget{structure}{%
+\subsection*{本书的结构}\label{structure}}
 \addcontentsline{toc}{subsection}{本书的结构}
 
 Hadley Wickham写R for Data Science的时候把绘图放在了第一章，随后再讲加减乘除和数据处理，他认为这样可以降低新人被劝退的概率。我虽然很喜欢他的书，但是我是一个比较保守的人，把所有我认为是基础的内容放在了前6章。
 
 本书的每一章有基础部分和（相对）进阶部分；基础部分的段落中会有``可酌情跳过进阶部分''的提示。仅阅读基础部分即可学到最重要的知识；如学有余力可阅读进阶部分。
 
-\subsection*{在本书你不会学到：}
+\hypertarget{no}{%
+\subsection*{在本书你不会学到：}\label{no}}
 \addcontentsline{toc}{subsection}{在本书你不会学到：}
 
 \begin{enumerate}
@@ -192,7 +194,8 @@ Hadley Wickham写R for Data Science的时候把绘图放在了第一章，随后
   \textbf{SAS, SPSS, STATA等软件}。它们是万恶的资本主义的邪恶产物。R和Python代表着自由，真正的自由。
 \end{enumerate}
 
-\subsection*{版权页}
+\hypertarget{colophon}{%
+\subsection*{版权页}\label{colophon}}
 \addcontentsline{toc}{subsection}{版权页}
 
 This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
@@ -200,179 +203,140 @@ This work is licensed under a Creative Commons Attribution-NonCommercial-NoDeriv
 
 本作品采用\href{https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh}{知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议}进行许可。
 
-本书使用R Markdown (\url{http://rmarkdown.rstudio.com/} )在RStudio (\url{http://www.rstudio.com/ide/} )中编写。knitr (\url{http://yihui.name/knitr/} )和pandoc (\url{https://pandoc.org/} )把Rmd文件编译成html和pdf.
+\hypertarget{technical}{%
+\subsection*{技术信息}\label{technical}}
+\addcontentsline{toc}{subsection}{技术信息}
+
+本书以R Markdown格式 (\url{http://rmarkdown.rstudio.com/} )在RStudio (\url{http://www.rstudio.com/ide/} )中编写。
+
+knitr (\url{http://yihui.name/knitr/} )和pandoc (\url{https://pandoc.org/} )把\texttt{Rmd}文件编译成\texttt{html}和\texttt{tex}，\XeLaTeX {XeLaTeX}将\texttt{tex}排版为PDF；这一系列操作是使用bookdown (\url{https://bookdown.org} )自动完成的。
+
+本书的源码，Gitbook和PDF版本的书保存在https://github.com/TianyiShi2001/r-and-tidyverse-book/ ，其中Gitbook和PDF保存在\texttt{/docs/}目录下，由GitHub Pages生成静态网页，通过https://TianyiShi2001.github.io/r-and-tidyverse-book/ 访问。
+
+编写本书使用的R packages，和排版本书时R的sessionInfo显示如下：
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{devtools}\OperatorTok{::}\KeywordTok{session_info}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"tidyverse"}\NormalTok{))}
+\NormalTok{utils}\OperatorTok{::}\KeywordTok{sessionInfo}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"tibble"}\NormalTok{, }\StringTok{"dplyr"}\NormalTok{, }\StringTok{"forcats"}\NormalTok{, }\StringTok{"ggplot2"}\NormalTok{, }\StringTok{"stringr"}\NormalTok{, }\StringTok{"tidyr"}\NormalTok{, }\StringTok{"readr"}\NormalTok{, }\StringTok{"purrr"}\NormalTok{, }\StringTok{"yaml"}\NormalTok{, }\StringTok{"lubridate"}\NormalTok{, }\StringTok{"rmarkdown"}\NormalTok{, }\StringTok{"knitr"}\NormalTok{, }\StringTok{"bookdown"}\NormalTok{, }\StringTok{"doParallel"}\NormalTok{, }\StringTok{"foreach"}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## - Session info ----------------------------------------------------------
-##  setting  value                       
-##  version  R version 3.5.3 (2019-03-11)
-##  os       macOS  10.15                
-##  system   x86_64, darwin15.6.0        
-##  ui       X11                         
-##  language (EN)                        
-##  collate  en_GB.UTF-8                 
-##  ctype    en_GB.UTF-8                 
-##  tz       Asia/Shanghai               
-##  date     2019-07-02                  
+## R version 3.5.3 (2019-03-11)
+## Platform: x86_64-apple-darwin15.6.0 (64-bit)
+## Running under: macOS  10.15
 ## 
-## - Packages --------------------------------------------------------------
-##  package      * version  date       lib source        
-##  askpass        1.1      2019-01-13 [2] CRAN (R 3.5.2)
-##  assertthat     0.2.1    2019-03-21 [2] CRAN (R 3.5.2)
-##  backports      1.1.4    2019-04-10 [2] CRAN (R 3.5.2)
-##  base64enc      0.1-3    2015-07-28 [2] CRAN (R 3.5.0)
-##  BH             1.69.0-1 2019-01-07 [2] CRAN (R 3.5.2)
-##  broom          0.5.2    2019-04-07 [2] CRAN (R 3.5.2)
-##  callr          3.2.0    2019-03-15 [2] CRAN (R 3.5.1)
-##  cellranger     1.1.0    2016-07-27 [2] CRAN (R 3.5.0)
-##  cli            1.1.0    2019-03-19 [2] CRAN (R 3.5.2)
-##  clipr          0.6.0    2019-04-15 [2] CRAN (R 3.5.2)
-##  colorspace     1.4-1    2019-03-18 [2] CRAN (R 3.5.2)
-##  crayon         1.3.4    2017-09-16 [2] CRAN (R 3.5.0)
-##  curl           3.3      2019-01-10 [2] CRAN (R 3.5.2)
-##  DBI            1.0.0    2018-05-02 [2] CRAN (R 3.5.0)
-##  dbplyr         1.4.2    2019-06-17 [2] CRAN (R 3.5.3)
-##  digest         0.6.19   2019-05-20 [2] CRAN (R 3.5.2)
-##  dplyr        * 0.8.2    2019-06-29 [2] CRAN (R 3.5.2)
-##  ellipsis       0.2.0    2019-06-20 [2] CRAN (R 3.5.2)
-##  evaluate       0.14     2019-05-28 [2] CRAN (R 3.5.2)
-##  fansi          0.4.0    2018-10-05 [2] CRAN (R 3.5.0)
-##  forcats      * 0.4.0    2019-02-17 [2] CRAN (R 3.5.2)
-##  fs             1.3.1    2019-05-06 [2] CRAN (R 3.5.2)
-##  generics       0.0.2    2018-11-29 [2] CRAN (R 3.5.0)
-##  ggplot2      * 3.2.0    2019-06-16 [2] CRAN (R 3.5.2)
-##  glue           1.3.1    2019-03-12 [2] CRAN (R 3.5.2)
-##  gtable         0.3.0    2019-03-25 [2] CRAN (R 3.5.2)
-##  haven          2.1.0    2019-02-19 [2] CRAN (R 3.5.2)
-##  highr          0.8      2019-03-20 [2] CRAN (R 3.5.2)
-##  hms            0.4.2    2018-03-10 [2] CRAN (R 3.5.0)
-##  htmltools      0.3.6    2017-04-28 [2] CRAN (R 3.5.0)
-##  httr           1.4.0    2018-12-11 [2] CRAN (R 3.5.0)
-##  jsonlite       1.6      2018-12-07 [2] CRAN (R 3.5.0)
-##  knitr          1.23     2019-05-18 [2] CRAN (R 3.5.2)
-##  labeling       0.3      2014-08-23 [2] CRAN (R 3.5.0)
-##  lattice        0.20-38  2018-11-04 [2] CRAN (R 3.5.3)
-##  lazyeval       0.2.2    2019-03-15 [2] CRAN (R 3.5.2)
-##  lubridate      1.7.4    2018-04-11 [2] CRAN (R 3.5.0)
-##  magrittr       1.5      2014-11-22 [2] CRAN (R 3.5.0)
-##  markdown       1.0      2019-06-07 [2] CRAN (R 3.5.2)
-##  MASS           7.3-51.4 2019-03-31 [2] CRAN (R 3.5.2)
-##  Matrix         1.2-17   2019-03-22 [2] CRAN (R 3.5.2)
-##  mgcv           1.8-28   2019-03-21 [1] CRAN (R 3.5.2)
-##  mime           0.7      2019-06-11 [2] CRAN (R 3.5.2)
-##  modelr         0.1.4    2019-02-18 [2] CRAN (R 3.5.2)
-##  munsell        0.5.0    2018-06-12 [2] CRAN (R 3.5.0)
-##  nlme           3.1-140  2019-05-12 [1] CRAN (R 3.5.2)
-##  openssl        1.4      2019-05-31 [2] CRAN (R 3.5.2)
-##  pillar         1.4.2    2019-06-29 [2] CRAN (R 3.5.2)
-##  pkgconfig      2.0.2    2018-08-16 [2] CRAN (R 3.5.0)
-##  plogr          0.2.0    2018-03-25 [2] CRAN (R 3.5.0)
-##  plyr           1.8.4    2016-06-08 [2] CRAN (R 3.5.0)
-##  prettyunits    1.0.2    2015-07-13 [2] CRAN (R 3.5.0)
-##  processx       3.3.1    2019-05-08 [2] CRAN (R 3.5.2)
-##  progress       1.2.2    2019-05-16 [2] CRAN (R 3.5.2)
-##  ps             1.3.0    2018-12-21 [2] CRAN (R 3.5.0)
-##  purrr        * 0.3.2    2019-03-15 [2] CRAN (R 3.5.2)
-##  R6             2.4.0    2019-02-14 [2] CRAN (R 3.5.2)
-##  RColorBrewer   1.1-2    2014-12-07 [1] CRAN (R 3.5.0)
-##  Rcpp           1.0.1    2019-03-17 [2] CRAN (R 3.5.2)
-##  readr        * 1.3.1    2018-12-21 [2] CRAN (R 3.5.0)
-##  readxl         1.3.1    2019-03-13 [2] CRAN (R 3.5.2)
-##  rematch        1.0.1    2016-04-21 [2] CRAN (R 3.5.0)
-##  reprex         0.3.0    2019-05-16 [2] CRAN (R 3.5.2)
-##  reshape2       1.4.3    2017-12-11 [2] CRAN (R 3.5.0)
-##  rlang          0.4.0    2019-06-25 [2] CRAN (R 3.5.2)
-##  rmarkdown      1.13     2019-05-22 [2] CRAN (R 3.5.2)
-##  rstudioapi     0.10     2019-03-19 [2] CRAN (R 3.5.2)
-##  rvest          0.3.4    2019-05-15 [2] CRAN (R 3.5.2)
-##  scales         1.0.0    2018-08-09 [2] CRAN (R 3.5.0)
-##  selectr        0.4-1    2018-04-06 [2] CRAN (R 3.5.0)
-##  stringi        1.4.3    2019-03-12 [2] CRAN (R 3.5.2)
-##  stringr      * 1.4.0    2019-02-10 [2] CRAN (R 3.5.2)
-##  sys            3.2      2019-04-23 [2] CRAN (R 3.5.2)
-##  tibble       * 2.1.3    2019-06-06 [2] CRAN (R 3.5.3)
-##  tidyr        * 0.8.3    2019-03-01 [2] CRAN (R 3.5.2)
-##  tidyselect     0.2.5    2018-10-11 [2] CRAN (R 3.5.0)
-##  tidyverse    * 1.2.1    2017-11-14 [2] CRAN (R 3.5.0)
-##  tinytex        0.14     2019-06-25 [1] CRAN (R 3.5.2)
-##  utf8           1.1.4    2018-05-24 [2] CRAN (R 3.5.0)
-##  vctrs          0.1.0    2018-11-29 [2] CRAN (R 3.5.0)
-##  viridisLite    0.3.0    2018-02-01 [2] CRAN (R 3.5.0)
-##  whisker        0.3-2    2013-04-28 [2] CRAN (R 3.5.0)
-##  withr          2.1.2    2018-03-15 [2] CRAN (R 3.5.0)
-##  xfun           0.8      2019-06-25 [2] CRAN (R 3.5.2)
-##  xml2           1.2.0    2018-01-24 [2] CRAN (R 3.5.0)
-##  yaml           2.2.0    2018-07-25 [2] CRAN (R 3.5.0)
-##  zeallot        0.1.0    2018-01-28 [2] CRAN (R 3.5.0)
+## Matrix products: default
+## BLAS: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRblas.0.dylib
+## LAPACK: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRlapack.dylib
 ## 
-## [1] /Users/tianyishi/Library/R/3.5/library
-## [2] /Library/Frameworks/R.framework/Versions/3.5/Resources/library
+## locale:
+## [1] en_GB.UTF-8/en_GB.UTF-8/en_GB.UTF-8/C/en_GB.UTF-8/en_GB.UTF-8
+## 
+## attached base packages:
+## character(0)
+## 
+## other attached packages:
+##  [1] tibble_2.1.3      dplyr_0.8.3       forcats_0.4.0    
+##  [4] ggplot2_3.2.0     stringr_1.4.0     tidyr_0.8.3      
+##  [7] readr_1.3.1       purrr_0.3.2       yaml_2.2.0       
+## [10] lubridate_1.7.4   rmarkdown_1.13.6  knitr_1.23       
+## [13] bookdown_0.11     doParallel_1.0.14 foreach_1.4.4    
+## 
+## loaded via a namespace (and not attached):
+##  [1] tidyselect_0.2.5 xfun_0.8         haven_2.1.1      lattice_0.20-38 
+##  [5] vctrs_0.2.0      colorspace_1.4-1 generics_0.0.2   htmltools_0.3.6 
+##  [9] grDevices_3.5.3  utf8_1.1.4       rlang_0.4.0      pillar_1.4.2    
+## [13] glue_1.3.1       withr_2.1.2      tidyverse_1.2.1  modelr_0.1.4    
+## [17] readxl_1.3.1     munsell_0.5.0    gtable_0.3.0     cellranger_1.1.0
+## [21] rvest_0.3.4      codetools_0.2-16 evaluate_0.14    parallel_3.5.3  
+## [25] fansi_0.4.0      broom_0.5.2      methods_3.5.3    Rcpp_1.0.1      
+## [29] scales_1.0.0     backports_1.1.4  jsonlite_1.6     png_0.1-7       
+## [33] stats_3.5.3      datasets_3.5.3   graphics_3.5.3   hms_0.4.2       
+## [37] digest_0.6.20    stringi_1.4.3    grid_3.5.3       cli_1.1.0       
+## [41] tools_3.5.3      magrittr_1.5     lazyeval_0.2.2   zeallot_0.1.0   
+## [45] crayon_1.3.4     pkgconfig_2.0.2  xml2_1.2.0       utils_3.5.3     
+## [49] assertthat_0.2.1 base_3.5.3       httr_1.4.0       rstudioapi_0.10 
+## [53] iterators_1.0.10 R6_2.4.0         nlme_3.1-140     compiler_3.5.3
 \end{verbatim}
 
 \hypertarget{intro-and-installation}{%
 \chapter{R和RStudio介绍和安装教程}\label{intro-and-installation}}
 
-\hypertarget{r}{%
-\section{什么是R}\label{r}}
+\hypertarget{intro-overview}{%
+\subsection*{本章内容速览}\label{intro-overview}}
+\addcontentsline{toc}{subsection}{本章内容速览}
+
+第\ref{what-is-R}节：对R和RStudio进行概念和功能介绍，并介绍安装方式。
+
+第\ref{getting-help}节：\textbf{很重要}的一节。介绍了常用的帮助和学习资源获取方式。
+
+第\ref{interface-basics-project}节：带你快速熟悉RStudio界面和基本操作。
+
+第\ref{packages}节：也\textbf{很重要}。介绍packages（包）的概念和功能，并引导安装本书需要使用的packages.
+
+\hypertarget{what-is-R}{%
+\section{什么是R}\label{what-is-R}}
 
 R (R Core Team \protect\hyperlink{ref-R-base}{2019})包含R语言和一个有着强大的统计分析及作图功能的软件系统，由新西兰奥克兰大学的Ross Ihaka和Robert Gentleman共同开发。R语言虽然看起来只能做统计，实际上它麻雀虽小，五脏俱全，编程语言该有的特性它基本都有（\href{https://adv-r.hadley.nz/oo.html}{甚至支持OOP}）。
 
-安装了R之后，你可以在其自带的``R''软件中（也可以直接在命令行使用），但是那个软件界面比较简单，需要记住一些命令来执行``查看当前存储的数据''，``导出jpg格式的图像''等操作，对新手不太友好。因此我们使用RStudio.
+不要看到编程就害怕。\textbf{使用R不需要懂编程}。R语言最重要的特性之一就是，不懂编程的人可以轻松地用R自带的和和其他人编写的packages，实现99.9\%他们想要的功能（主要是数据分析）；而懂编程的人可以轻松地使用编程，在R中实现他们想要的剩余的0.1\%的功能。同时，R的编程语言非常简单易学，尤其是对于编程0基础的R使用者。像SAS，STATA这些商业软件，只能实现你95\%的需求，且剩下的5\%很难解决。
 
-RStudio (RStudio Team \protect\hyperlink{ref-R-rstudio}{2015})是R语言官方的IDE（集成开发环境），它的一系列功能使得编辑，整理和管理R代码和项目方便很多。
+安装了R之后，你可以在其自带的``R''软件中使用（也可以直接在命令行使用），但是那个软件对新手的友好度不如RStudio. RStudio (RStudio Team \protect\hyperlink{ref-R-rstudio}{2015})是广受欢迎的R语言IDE（集成开发环境），它的一系列功能使得编辑，整理和管理R代码和项目方便很多。
 
-了解R的优势，请看第\ref{youshi}节
+了解更多R的优势，请看第\ref{youshi}节
 
-\hypertarget{rrstudio}{%
-\section{安装R和RStudio}\label{rrstudio}}
+\hypertarget{R-and-RStudio-install}{%
+\subsection{安装R和RStudio}\label{R-and-RStudio-install}}
 
-\hypertarget{r}{%
-\subsection{安装R}\label{r}}
+\hypertarget{R-install}{%
+\subsubsection{安装R}\label{R-install}}
 
 \url{https://cran.r-project.org}
 
 前往\href{https://cran.r-project.org}{CRAN}，根据自己的操作系统（Linux，MacOS或Windows）选择下载安装R. (Linux用户亦可参考\href{https://blog.zenggyu.com/en/post/2018-01-29/installing-r-r-packages-e-g-tidyverse-and-rstudio-on-ubuntu-linux/}{此处})
 
-\hypertarget{rstudio}{%
-\subsection{安装RStudio}\label{rstudio}}
+\hypertarget{RStudio-install}{%
+\subsubsection{安装RStudio}\label{RStudio-install}}
 
 \url{https://www.rstudio.com/products/rstudio/download/}
 
 前往\href{https://www.rstudio.com/products/rstudio/download/}{RStudio下载页}，选择最左边免费的开源版本，然后选择对应自己的操作系统的版本，下载并安装。
 
 \hypertarget{youshi}{%
-\section[为什么使用R，R与其他统计软件的比较]{\texorpdfstring{为什么使用R，R与其他统计软件的比较\footnote{Gentleman, R. (2009). \emph{R Programming for Bioinformatics}. Boca Raton, FL: CRC Press.}}{为什么使用R，R与其他统计软件的比较}}\label{youshi}}
+\subsection[为什么使用R，R与其他统计软件的比较]{\texorpdfstring{为什么使用R，R与其他统计软件的比较\footnote{Gentleman, R. (2009). \emph{R Programming for Bioinformatics}. Boca Raton, FL: CRC Press.}}{为什么使用R，R与其他统计软件的比较}}\label{youshi}}
 
-（这一小节不影响R的学习进度，可以直接跳过到下一章）
+（这一小节不影响R的学习进度，可以直接跳过到\protect\hyperlink{getting-help}{下一章}）
 
 SAS，SPSS，Prism，R和Python是数据分析和科研作图常用的软件。
 
 SAS，SPSS和Prism都是收费的，而且不便宜。比如SAS第一年需要\href{http://www.sas.com/store/products-solutions/cSoftware-p1.html}{10000多美元}，随后每年要缴纳几千美元的年费。
 
-R比SAS功能更强大。所有SAS中的功能，都能在R中实现，而很多R中的功能无法在SAS中实现\footnote{\url{https://thomaswdinsmore.com/2014/12/15/sas-versus-r-part-two/}}。
+R是GNU计划的一部分，因此R是一个自由软件 (Libre software)。它不仅免费，还允许用户自由地学习，运行该软件；拷贝，分发，修改并改进该软件，以帮助其他人。你可以 在\href{https://www.gnu.org/philosophy/free-sw.zh-cn.html}{GNU官网}了解更多。
 
-R有巨大的用户社群\footnote{\url{https://blog.revolutionanalytics.com/2014/04/a-world-map-of-r-user-activity.html}}，并且有很多乐于助人的大佬在各个论坛上解决问题，或是编写免费获取的教程。SAS等软件虽然有客户支持，但是如果你用的是盗版\ldots{}\ldots{}
+R比各种商业统计软件功能更强大。没错，\textbf{免费的R比昂贵的商业软件功能更强大}。所有SAS中的功能，都能在R中实现，而很多R中的功能无法在SAS中实现\footnote{\url{https://thomaswdinsmore.com/2014/12/15/sas-versus-r-part-two/}}。
 
-R和Python（NumPy和SciPy）是开源、免费的。在数据分析的应用中，R比Python历史更悠久，因此积攒了很多很棒的packages（包）。一般来说，python的强项是数据挖掘，而R的强项是数据分析，它们都是强大的工具。不用担心需要在二者之中做选择，因为rpy, reticulate等packages可以让你在python中使用R，在R中使用python，详情请见第\ref{python}章。无论你是数据分析零基础，还是有python数据分析的经验，都能从本书中获益。
+R有巨大的用户社群\footnote{\url{https://blog.revolutionanalytics.com/2014/04/a-world-map-of-r-user-activity.html}}，其中有很多热心的使用者/开发者在论坛上解答问题，或是编写免费获取的教程。SAS等软件虽然有客户支持，但是如果你用的是盗版\ldots{}\ldots{}
 
-至于Excel，它的定位原本就是办公（而不是学术）软件，用作数据收集和初步整理是可以的，但是做不了严谨的数据分析和大数据，功能也非常局限。有五分之一的使用了Excel的遗传学论文，数据都出现了偏差 (Ziemann, Eren, and El-Osta \protect\hyperlink{ref-Ziemann2016Gene-name-errors}{2016})。
+R（RStudio）非常稳定。闪退率极低，而且就算闪退了，也完全不会丢失上一次工作中的数据，可以无缝衔接上一次的工作。我经常会创建一两个实验用的R script文件，我不需要把它们命名并保存在我的工作目录，重启RStudio的时候仍然可以使用它们。总之，关闭RStudio的时候，你甚至可以什么都不用保存；关闭，重启，无忧无虑地继续工作。设置Git后体验更佳。
 
-R是GNU计划的一部分，因此R是一个自由软件 (Libre software)。你可以 在\href{https://www.gnu.org/philosophy/free-sw.zh-cn.html}{GNU官网}了解更多。
+R与其它编程语言/数据库之间有很好的接口。
 
-此外，R可以完美地在Linux中运行。
+Python（NumPy和SciPy）是近几年兴起的数据分析处理方案。在数据分析的应用中，R比Python历史更悠久，因此积攒了很多很棒的packages（包）。一般来说，python的强项是数据挖掘，而R的强项是数据分析，它们都是强大的工具。不用担心需要在二者之中做选择，因为rpy, reticulate等packages可以让你在python中使用R，在R中使用python，详情请见第\ref{python}章。无论你是数据分析零基础，还是有python数据分析的经验，都能从本书中获益。
+
+至于Excel，它的定位原本就是办公（而不是学术）软件，数据分析的严谨性，大数据的处理能力，和功能的拓展非常局限。有五分之一的使用了Excel的遗传学论文，数据都出现了偏差 (Ziemann, Eren, and El-Osta \protect\hyperlink{ref-Ziemann2016Gene-name-errors}{2016})。不是说不能用Excel（或者其它可用的工具），而是要清楚各种工具的优势和局限，物尽其用。比如当需要从PDF文件中提取表格数据时，我会把它们复制到Excel（因为兼容性强）；我也会用Excel做一些数据的初步处理，比如删除数量不多的冗余的行和列，重命名变量名等。
+
+虽然R是自由软件，但是我们要记得感激所有位R贡献智慧的奉献者。出于对知识劳动的尊重和，以及保持R的发展壮大，我呼吁有能力出资的使用者在https://www.r-project.org/foundation/donations.html 对R进行捐赠。
 
 \hypertarget{getting-help}{%
-\chapter{获取资源与帮助（重要！）}\label{getting-help}}
+\section{获取资源与帮助（重要！）}\label{getting-help}}
 
 这本书可以帮助你快速学会R和tidyverse的最常用和最重要的操作，但这仅仅是冰山一角。当你在做自己的研究的时候，会用到很多这本书中没有讲到的方法，因此学会获取资源和帮助是很重要的。以下列举几个常用的获取R的帮助的网站/方法：
 
-\section{论坛类（解答实际操作中的问题）}
+\subsection{核心/入门资源}
+
+\hypertarget{forum}{%
+\subsubsection{论坛类（解答实际操作中的问题）}\label{forum}}
 
 \begin{itemize}
 \tightlist
@@ -382,44 +346,43 @@ R是GNU计划的一部分，因此R是一个自由软件 (Libre software)。你�
   由谢益辉大佬在2006年（竟然比爆栈网更早！）创建的\href{https://d.cosx.org}{``统计之都''论坛}，是做的最好的一个面向R的中文论坛（但是客观地来说活跃度还是没爆栈网高）同样不要忘记读新手指引。
 \end{itemize}
 
-\hypertarget{referencefunctionpackage}{%
-\section{Reference类（查找特定的function/package的用法，就像查字典一样）}\label{referencefunctionpackage}}
+\hypertarget{reference}{%
+\subsubsection{Reference类（查找特定的function/package的用法）}\label{reference}}
 
 \begin{itemize}
 \tightlist
 \item
-  直接在R console中执行\texttt{?}+函数名称，比如\texttt{?t.test}
+  直接在R console中执行\texttt{?}+\texttt{函数名称或者package名或者其它}，比如\texttt{?t.test}，可以查看对应函数的帮助文档（documentation）有一些函数/packages/内容名需要加上引号，比如\texttt{?"+"}, \texttt{?"if"}。有一个相似的方法，\texttt{??}+\texttt{"内容"}可以根据你输入的内容搜索帮助文档，比如\texttt{??"probability\ distrubution"}。
 \item
   \href{https://www.rdocumentation.org}{RDocumentation}上有基础R语言和来自CRAN，GitHub和Bioconductor上的近18000个packages的所有的函数的说明和使用例。
 \item
   有些packages会在官网/github仓库提供使用说明，比如\href{https://www.tidyverse.org}{tidyverse}
 \item
-  有些packages会提供vignettes，它们类似于使用指南，相比于函数的documentation更为详细且更易读。\texttt{vignette()}（无参数）以查看全部可用vignettes. 你可以试试\texttt{vignette("Sweave")}， 它是用LaTeX排版的，很漂亮。
+  有些packages会提供vignettes，它们类似于使用指南，相比于函数的帮助文档更为详细且更易读。\texttt{vignette()}（无参数）以查看全部可用vignettes. 试试\texttt{vignette("Sweave")}。
 \end{itemize}
 
-\section{教程和书籍类（用来系统地学习）}
+\hypertarget{manual-type}{%
+\subsubsection{教程和书籍类（用来系统地学习）}\label{manual-type}}
 
 \begin{itemize}
 \tightlist
 \item
-  R的\href{https://cran.r-project.org/manuals.html}{官方Manuals}.
-  其中新手只需要看\emph{An Introduction to R}，随后选看\emph{R Language Definition}即可。部分由\href{https://github.com/dingguohui}{丁国徽}翻译成中文（点击量其实并不高\ldots{}\ldots{}要想把握前沿信息还是需要阅读英语的能力的）。
-\item
   \href{https://r4ds.had.co.nz}{\emph{R for Data Science} by Garrett Grolemund \& Hadley Wickham}. \texttt{tidyverse}的作者写的一本书，较为详细地介绍了\texttt{tidyverse}的用法以及一些更高深的关于编程的内容。（\href{https://jrnold.github.io/r4ds-exercise-solutions/}{练习题答案}）
 \item
-  \href{https://resources.rstudio.com}{RStudio Resources}是RStudio的资源区，有关于R和RStudio的高质量教程，还可以下载很多方便实用的Cheat Sheet.
+  \href{https://cran.r-project.org/doc/contrib/Paradis-rdebuts_en.pdf}{\emph{R for Beginners} by Emmanuel Paradis}及其\href{https://github.com/DingGuohui/R-for-beginer/blob/master/rdebuts_cn\%200.2.pdf}{中文译本}
 \item
-  \href{https://github.com/TianyiShi2001/R-Tutorial-Resorces/blob/master/资源/书籍/TheRBook.pdf}{\emph{The R Book} by Michael J. Crawley}
+  R的\href{https://cran.r-project.org/manuals.html}{官方Manuals}.
+  是一组严谨，全面但略微枯燥的文档，可能不太适合零基础的新手，但是对于精通R有很大的帮助。部分由\href{https://github.com/dingguohui}{丁国徽}翻译成中文。
+\item
+  \href{https://resources.rstudio.com}{RStudio Resources}是RStudio的资源区，有关于R和RStudio的高质量教程，还可以下载很多方便实用的Cheat Sheet.
 \item
   R的\href{https://cran.r-project.org}{官方FAQ}（在左侧菜单栏中找到``FAQ''）
 \item
   存储在CRAN上的\href{https://cran.r-project.org/doc/contrib/Liu-FAQ.pdf}{中文FAQ}（注意这不是英文FAQ的翻译，而是一本独立的R入门教程）
-\item
-  \href{https://adv-r.hadley.nz/index.html}{\emph{Advanced} R by Hadley Wickham}及其\href{https://advanced-r-solutions.rbind.io}{练习题答案}。
 \end{itemize}
 
-\hypertarget{-cheat-sheets}{%
-\section{速查表 (Cheat sheets)（用来贴墙上）}\label{-cheat-sheets}}
+\hypertarget{cheatsheet}{%
+\subsubsection{速查表 (Cheat sheets)（用来贴墙上）}\label{cheatsheet}}
 
 \begin{itemize}
 \tightlist
@@ -429,36 +392,58 @@ R是GNU计划的一部分，因此R是一个自由软件 (Libre software)。你�
   \href{https://www.rstudio.com/resources/cheatsheets/}{RStudio Cheat Sheets}包含了RStudio IDE和常用packages的cheat sheets。2019年版的合集\href{https://www.rstudio.com/wp-content/uploads/2019/01/Cheatsheets_2019.pdf}{在这里}。
 \end{itemize}
 
-\hypertarget{ch2}{%
-\chapter{RStudio界面介绍，基本操作，和创建新项目}\label{ch2}}
+\subsection{进阶资源}
 
-\section{界面}
+\subsubsection{较为深入}
 
-\subsection{概览}
+\begin{itemize}
+\tightlist
+\item
+  \href{https://github.com/TianyiShi2001/R-Tutorial-Resorces/blob/master/资源/书籍/TheRBook.pdf}{\emph{The R Book} by Michael J. Crawley}
+\item
+  \href{https://adv-r.hadley.nz/index.html}{\emph{Advanced} R by Hadley Wickham}及其\href{https://advanced-r-solutions.rbind.io}{练习题答案}。
+\end{itemize}
+
+\subsubsection{真·老司机}
+
+\begin{itemize}
+\tightlist
+\item
+  Springer的\href{https://www.springer.com/series/6991?detailsPage=titles}{\emph{Use R!}系列}。
+\end{itemize}
+
+\hypertarget{interface-basics-project}{%
+\section{RStudio界面介绍，基本操作，和创建新项目}\label{interface-basics-project}}
+
+\hypertarget{interface}{%
+\subsection{界面}\label{interface}}
+
+\hypertarget{interface-overview}{%
+\subsubsection{概览}\label{interface-overview}}
 
 \includegraphics[width=46.67in]{img/01-interface}
 
 \hypertarget{console}{%
-\subsection{左下角：Console（控制台）}\label{console}}
+\subsubsection{左下角：Console（控制台）}\label{console}}
 
 Console是执行代码的地方。试试在里面输入\texttt{1\ +\ 1}并按回车以执行。
 
 \hypertarget{source}{%
-\subsection{左上角：Source（源）}\label{source}}
+\subsubsection{左上角：Source（源）}\label{source}}
 
-Source是写代码的地方。请看第\ref{manage}节。
+Source是写代码的地方。请看第\ref{Rscript}节。
 
 这个位置也是用来查看文件和数据的地方。试试在console中执行\texttt{View(airquality)}或\texttt{library(help\ =\ "stats")}.
 
 \hypertarget{environment}{%
-\subsection{右上角：Environment（环境），}\label{environment}}
+\subsubsection{右上角：Environment（环境）}\label{environment}}
 
-Environment 是一个列表，显示了所有当前工作环境中所有的变量（``values''和``data''）和自定义的函数（functions）。
+Environment 是一个列表，显示了所有当前工作环境中所有的对象，包括变量（``values''和``data''）和自定义的函数（functions），并简要显示了它们对应的值。
 
 History（历史）和 Connections（连接）不太常使用。
 
-\hypertarget{plotshelpfilespackages}{%
-\subsection{右下角：Plots（绘图），Help（帮助），Files（文件）和Packages（包）}\label{plotshelpfilespackages}}
+\hypertarget{bottomright}{%
+\subsubsection{右下角：Plots（绘图），Help（帮助），Files（文件）和Packages（包）}\label{bottomright}}
 
 Plots是预览图像的区域。试试在console中执行\texttt{hist(rnorm(10000))}.
 
@@ -468,11 +453,22 @@ Files是查看文件的区域，默认显示工作目录 (working directory)。
 
 Packages是安装/查看/更新packages（包）的区域。详情请看第\ref{packages}章。
 
-\section{基本操作}
+\hypertarget{execution}{%
+\subsection{执行代码}\label{execution}}
 
-\subsection{执行代码}
+\subsubsection{计算和赋值}
 
-试着在console里输入\texttt{1\ +\ 1}，并按回车以执行。你的console会显示：
+我本来不想在开篇就写一小节使用较多的术语的文字，但是R中计算和赋值的概念实在太重要了，我不得不把它放在这里。
+
+\textbf{几乎所有R中的指令可以归为两种。计算 (evaluation)或者赋值 (assignment).\footnote{准确地说，赋值也是一种计算。赋值符号本身就是一个函数，你可以用\texttt{"\textless{}-"(x,\ 5)}把\texttt{5}赋值给\texttt{x}。}}
+
+没有\texttt{\textless{}-}符号的为计算，有\texttt{\textless{}-}符号的为赋值。
+
+大多数情况下，计算仅仅会产生效果（或是在console输出结果，或是在plot区产生图像，或是在工作目录新建一个pdf文件），赋值会且仅会改变一个对象（变量）的值（包括新建一个对象），并且不会产生其他的效果。\footnote{有一些计算不支持赋值。当强行赋值的时候，会产生效果，但赋值的值为\texttt{NULL}，比如\texttt{x\ \textless{}-\ pdf()}会在工作目录新建一个pdf，并新建了对象\texttt{x}，但x的值为\texttt{NULL}. 有一些计算支持赋值，但是同时也会产生效果，比如\texttt{hist(rnorm(1000))}（以list的形式赋值）。}
+
+首先我们来做一个\textbf{计算}。
+
+在console里输入\texttt{1\ +\ 1}，并按回车以执行。你的console会显示：
 
 \begin{verbatim}
 > 1 + 1
@@ -493,9 +489,81 @@ Packages是安装/查看/更新packages（包）的区域。详情请看第\ref{
 ## [1] 2
 \end{verbatim}
 
-注意input中的\texttt{\textgreater{}}被省略了，这意味着你可以直接把代码从本书复制到你的console并按回车执行（因为console本身自带了\texttt{\textgreater{}})，类似地，你从其他各种网站上找到的说明书，教程和论坛帖子中看到的R代码，大多数也都是这种形式呈现，便于复制粘贴。
+注意input中的\texttt{\textgreater{}}被省略了，这意味着你可以很方便地直接把代码从本书复制到你的console并按回车执行（因为console本身自带了\texttt{\textgreater{}})。
 
-再来一个例子，试着在console里输入（或者复制）以下代码并执行：
+再执行以下指令（在RStudio中，可以用\texttt{Alt}+\texttt{-} (Mac是 \texttt{option}+\texttt{-}) 这个快捷键打出这个符号。）：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x <-}\StringTok{ }\DecValTok{5}\OperatorTok{*}\DecValTok{5}\OperatorTok{+}\DecValTok{1}
+\end{Highlighting}
+\end{Shaded}
+
+这是一个\textbf{赋值}指令。计算结果不会显示，但是你新建了一个名为\texttt{x}的变量（准确地说，是``对象''），值为\texttt{5*5+1}的计算结果，即\texttt{26}. 你可以执行\texttt{x}来查看\texttt{x}的值：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 26
+\end{verbatim}
+
+像一个小箭头的赋值符号（\texttt{\textless{}-}）的作用是\footnote{其实你还可以把这个小箭头反过来，试试\texttt{5\ -\textgreater{}\ x}. 但是不建议这么做。代码易读性会变差。}，\textbf{首先}计算出其右边的指令（必须是一个计算指令；即同一条指令不可以出现两个\texttt{\textless{}-}符号），然后把\textbf{计算结果的值}作为一个\textbf{拷贝}赋予给左边的名字，这样就新建了一个对象 (object)。每个对象有一个名称和一个值。\footnote{每个对象还可以有一些（可选的）attributes（属性）。}左右是很重要的；绝大多数其他的编程语言，虽然赋值符号是\texttt{=}，但也是从右往左赋值，R使用\texttt{\textless{}-}作为赋值符号更形象，避免新手写出像\texttt{5\ =\ x}之类的指令。当然，如果你喜欢，也可以在R中使用\texttt{=}。\footnote{其实可以用\texttt{=}替代\texttt{\textless{}-}作为赋值符号，但是更多的R用户还是采用传统的的\texttt{\textless{}-}符号，而\texttt{=}则用于给\textbf{函数的参数}赋值。这种区分可以使代码可读性更强（更容易看出哪些语句是赋值，哪些是计算）。当然，如果你真的非常非常想用\texttt{=}符号，也是可以接受的。}
+
+\texttt{\textless{}-}用于给任何对象赋值，包括常用的向量 (vector)，列表 (list)，数据框 (dataframe)和函数 (function)。
+
+谨记，赋值符号只是把右边的\textbf{计算结果}作为一个\textbf{拷贝}赋予给左边，而不会做任何其它的事情\footnote{一个特例是environment（环境）的赋值。初学者不需要知道。}。变化的仅仅是左边的变量（对象），右边的计算中所用到的任何变量（对象）\textbf{不会改变}！
+
+为什么强调是一个拷贝呢？举个例子，我们现在把\texttt{x}的值赋予给\texttt{y}，不出所料，\texttt{y}的值将为\texttt{26}。那么要是我们在这之后重定义\texttt{x}为\texttt{40}，y的值是多少呢？
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{y <-}\StringTok{ }\NormalTok{x}
+\NormalTok{x <-}\StringTok{ }\DecValTok{40}
+\NormalTok{y}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 26
+\end{verbatim}
+
+还是26（而不是40）。赋值是一次性的，每次被赋值的对象都将成为独立自主的个体。对象y虽然在被赋值的时候需要用到对象x，但是在那之后y和x半毛钱关系都没有了（除非再次赋值），所以x的变化不会影响y，y的变化也不会影响x。
+
+\textbf{所有的变化，只可能发生在赋值。}
+
+\subsubsection{计算和函数}
+
+所有的计算都是通过函数实现的，包括当你输入\texttt{x}然后按回车时。\footnote{查看\texttt{x}的值，我们只需要输入\texttt{x}然后按回车，然后我们在console看到了\texttt{x}的值。这其实也是用函数实现的。当一个指令不是赋值时，R默认会对整个指令使用\texttt{print()}函数。因此，\texttt{2\ +\ 4}等同于\texttt{print(2\ +\ 4)}, \texttt{x}等同于\texttt{print(x)}. 当一个指令是赋值是，R默认会对右边的整个指令使用\texttt{invisible()}函数，因此，\texttt{y\ \textless{}-\ x}等同于\texttt{y\ \textless{}-\ invisible(x)}.}像\texttt{+}, \texttt{-}这样的运算符也是函数（参见第\ref{functions-in-R}节）。
+
+函数的标志是小（圆）括号，比如\texttt{sum(6,\ 7,\ 8)}是求\texttt{6}, \texttt{7}和\texttt{8}的和；其中\texttt{sum()}是函数，\texttt{6,\ 7,\ 8}是（三个参数）。
+
+函数可以嵌套使用，而且很常见。
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{prod}\NormalTok{(}\KeywordTok{sqrt}\NormalTok{(}\KeywordTok{sum}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{)), }\DecValTok{2}\NormalTok{, }\DecValTok{5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 30
+\end{verbatim}
+
+最``内部的''函数先运行，然后把计算结果作为它外面的函数的参数。这里，\texttt{sum(2,\ 3,\ 4)}得到\texttt{9}, \texttt{sqrt(9)}得到\texttt{3}, \texttt{prod(3,\ 2,\ 5)}得到\texttt{30}. 就像小学的时候学的括号运算规则一样。
+
+更多关于函数的知识请参阅第\ref{functions}节。
+
+\hypertarget{code-management}{%
+\subsection{管理代码}\label{code-management}}
+
+\hypertarget{project-create}{%
+\subsubsection{创建R Project}\label{project-create}}
+
+试着在console里输入（或者复制）以下代码并执行：
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -504,7 +572,7 @@ Packages是安装/查看/更新packages（包）的区域。详情请看第\ref{
 \end{Shaded}
 
 \begin{verbatim}
-## The following objects are masked from airquality (pos = 12):
+## The following objects are masked from airquality (pos = 3):
 ## 
 ##     Day, Month, Ozone, Solar.R, Temp, Wind
 \end{verbatim}
@@ -517,19 +585,13 @@ Packages是安装/查看/更新packages（包）的区域。详情请看第\ref{
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-4-1.pdf}
+\includegraphics{R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-9-1.pdf}
 
 可以看到，在plots区，生成了一副漂亮的图。（先别在意每行代码具体的作用，在之后的章节我会一一讲述）
 
 这时，把RStudio关掉，再重新启动，你会发现你的图没了。因此我们需要记录和管理代码。
 
-\hypertarget{manage}{%
-\subsection{记录和管理代码}\label{manage}}
-
 初学者经常会在console里写代码，或者从别处复制代码，并执行。这对于一次性的计算（比如写统计学作业时用R来算线性回归的参数）很方便，但是如果你想保存你的工作，你需要把它们记录在R script文件里。如果你的工作比较复杂，比如有一个excel表格作为数据源，然后在R中用不同的方法分析，导出图表，这时候你会希望这些文件都集中在一起。你可以使用R Project来管理它们。
-
-\hypertarget{r-project}{%
-\subsubsection{创建R Project}\label{r-project}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -542,8 +604,8 @@ Packages是安装/查看/更新packages（包）的区域。详情请看第\ref{
   输入名称和目录并Create Project
 \end{enumerate}
 
-\hypertarget{r-project}{%
-\subsubsection{使用R Project}\label{r-project}}
+\hypertarget{project-use}{%
+\subsubsection{使用R Project}\label{project-use}}
 
 在创建R project的文件夹中打开\texttt{.Rproj}文件。或者，RStudio启动的时候默认会使用上一次所使用的R project.
 
@@ -559,8 +621,8 @@ Packages是安装/查看/更新packages（包）的区域。详情请看第\ref{
 
 一个正态分布的图像便以pdf格式保存在了工作目录。你可以在系统的文件管理器中，或是在RStudio右下角File面板中找到。
 
-\hypertarget{r-script}{%
-\subsection{写/保存/运行R script}\label{r-script}}
+\hypertarget{Rscript}{%
+\subsubsection{写/保存/运行R script}\label{Rscript}}
 
 在console中运行代码，代码得不到保存。代码需保存在R script文件（后缀为\texttt{.R}）里。
 
@@ -582,15 +644,65 @@ Packages是安装/查看/更新packages（包）的区域。详情请看第\ref{
 \end{Highlighting}
 \end{Shaded}
 
-\texttt{Ctrl}+\texttt{Enter} (\texttt{command}+\texttt{return})以执行一``句''代码（比如上面的例子中，从\texttt{plot(Wind...}到\texttt{pch\ =\ 20)}有三行，但是它是一``句''）。
+点击你想执行的语句，按\texttt{Ctrl}+\texttt{Enter} (\texttt{command}+\texttt{return})以执行那一``句''语句（比如上面的例子中，从\texttt{plot(Wind...}到\texttt{pch\ =\ 20)}有三行，但是它是一``句''），然后光标会跳至下一句开头。
 
 \texttt{Ctrl}+\texttt{Shift}+\texttt{Enter} (\texttt{command}+\texttt{shift}+\texttt{return})以从头到尾执行所有代码。
+
+通过\texttt{Ctrl}（+\texttt{Shift}）+\texttt{Enter}执行代码时，相关代码相当于是从R script中复制到了console并执行。
 
 试试复制并执行以上代码吧。
 
 \texttt{Ctrl}+\texttt{S} (\texttt{command}+\texttt{S})以保存R script. 保存后会在工作目录找到你新保存的\texttt{.R}文件。重新启动RStudio的时候，便可以打开对应的R script文件以重复/继续之前的工作。
 
-\subsection{关于换行}
+\hypertarget{rstudio-rstudio-fuli}{%
+\subsection{RStudio的额外福利 \{rstudio-fuli\}}\label{rstudio-rstudio-fuli}}
+
+\subsubsection{括号自动补齐；换行自动缩进}
+
+在RStudio中，除非你故意，否则很难出现括号不完整的错误。当你打出
+
+\hypertarget{autocomplete}{%
+\subsubsection{自动完成/建议提示/快速帮助 (autocomplete)}\label{autocomplete}}
+
+当你在console或者source区输入三个\footnote{可以在设置中，自定义所需输入的最少字母和延迟。默认分别为3个字母和250毫秒。}或更多字母时，R会提示以这三个字母开头的所有对象（不一定是packages里的函数，也可以自定义的向量，列表，函数等等）。
+
+\includegraphics[width=26.28in]{img/rstudio-fuli/auto}
+
+然后，你可以用键盘的``上''，``下''键去选择，然后按回车键完成（或者用鼠标点选）。如果对象是一个函数，会自动帮你补齐括号。
+
+注意，当你选中一个函数时，右边会有一个黄色的方框，提示这个函数的参数名称和参数选项，以及一段简要说明。如果你这时想查看此函数的帮助文档，按\texttt{F1}即可。
+
+通过\texttt{\$}符号取子集的时候，R会自动列举所有可用的子集（用于列表和数据框/tibble）。类似地，在package名后输入\texttt{::}准备调用函数时，R会列举该package所有可用函数（见第\ref{pkg-colon}节）。
+
+\includegraphics[width=35.42in]{img/rstudio-fuli/auto-sub}
+
+\hypertarget{misc}{%
+\subsection{其他}\label{misc}}
+
+\subsubsection{``一句''的概念}
+
+一次（一句）计算执行且执行一个函数（不包括里面嵌套着的函数）。
+
+当你通过\texttt{函数名} + \texttt{(}``开启''一次运算时，从这里开始到\emph{这个函数所对应的}反括号，即\texttt{)}之前的内容，即使再多，都只是这个函数的参数。
+
+当你在R script里敲击\texttt{Ctrl}+\texttt{Enter}时，光标所在的位置的那一句指令将会被执行（无需在那一句的开头，可以在那一句之中的任何位置）；如果那句命令不完整，很可能会在console中用\texttt{+}提示（见下一小节）。
+
+句与句之间必须换行，或者用分号（\texttt{;}）连接：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{sum}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{9}\NormalTok{)}
+\KeywordTok{sum}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{)}
+\CommentTok{# 和}
+\KeywordTok{sum}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{9}\NormalTok{); }\KeywordTok{sum}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{)}
+\CommentTok{# 都是可以的，而}
+\KeywordTok{sum}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{9}\NormalTok{) }\KeywordTok{sum}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{)}
+\CommentTok{# 不可以，会出错}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{newline}{%
+\subsubsection{关于换行}\label{newline}}
 
 Console 中每个命令开头的\texttt{\textgreater{}}叫做prompt（命令提示符），当它出现在你所编辑的那一行的开头时，按下回车的时候那行的命令才会被执行。有时候它会消失，这时候按\texttt{esc}可以将其恢复。
 
@@ -620,34 +732,20 @@ prompt消失的主要原因是你的代码没有写完，比如括号不完整�
 
 便可以完成计算。
 
-这意味着我们可以把一条很长的命令分成很多行。比如我们可以写这样的代码（在R script编辑器中！）
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\ControlFlowTok{if}\NormalTok{(}\OtherTok{TRUE}\NormalTok{)\{}
-  \KeywordTok{print}\NormalTok{(}\DecValTok{2}\NormalTok{)}
-\NormalTok{\} }\ControlFlowTok{else}\NormalTok{\{}
-  \KeywordTok{print}\NormalTok{(}\DecValTok{3}\NormalTok{)}
-\NormalTok{\}}
-\end{Highlighting}
-\end{Shaded}
-
-然后\texttt{Ctrl}+\texttt{Enter}执行。你会发现在console中，从第二行开始每行开头都有一个\texttt{+}号。
-
 \hypertarget{packages}{%
-\chapter{安装和使用packages (包)}\label{packages}}
+\section{安装和使用packages (包)}\label{packages}}
 
-\hypertarget{package}{%
-\section{Package是什么，为什么使用它们？}\label{package}}
+\hypertarget{packages-what}{%
+\subsection{Package是什么，为什么使用它们？}\label{packages-what}}
 
 Package是别人写好的在R中运行的程序（以及附带的数据和文档），你可以免费安装和使用它们。
 
-Packages可以增加在基础R语言中没有的功能，可以精简你代码的语句，或是提升使用体验。比如有个叫做\texttt{tikzDevice}的package可以将R中的图表导出成tikz语法的矢量图，方便在LaTeX中使用。本书的编写和排版也是使用R中的一个叫做\texttt{bookdown}的package完成的（真的超棒）.
+Packages可以增加在基础R语言中没有的功能，可以精简你代码的语句，或是提升使用体验。比如有个叫做\texttt{tikzDevice}的package可以将R中的图表导出成tikz语法的矢量图，方便在LaTeX中使用。本书的编写和排版也是使用R中的一个叫做\texttt{bookdown}的package完成的.
 
 这个课程主要是学习\texttt{tidyverse}这个package，
 
-\hypertarget{packages}{%
-\section{如何安装packages}\label{packages}}
+\hypertarget{package-install}{%
+\subsection{如何安装packages}\label{package-install}}
 
 首先我们安装tidyverse（\textbf{很重要，本书接下来的部分都要使用这个package}）：
 
@@ -669,8 +767,11 @@ Packages可以增加在基础R语言中没有的功能，可以精简你代码�
 
 绝大多数的packages都能用这个方法安装，因为它们是被存储在CRAN上的。Bioconductor packages请看第\ref{Bioconductor}节。
 
-\hypertarget{packages}{%
-\section{如何使用packages}\label{packages}}
+\hypertarget{package-use}{%
+\subsection{如何使用packages}\label{package-use}}
+
+\hypertarget{pkg-load}{%
+\subsubsection{加载packages}\label{pkg-load}}
 
 安装packages后，有两种方法使用它们。以\texttt{tidyverse}为例：
 
@@ -690,14 +791,46 @@ Packages可以增加在基础R语言中没有的功能，可以精简你代码�
 
 两者的效果很大程度上都是一样的，都可以用来读取\textbf{单个}package。它们的不同，以及如何通过一行指令读取多个packages，请参看第\ref{require-and-library}节。
 
-每次重启R的时候，上一次使用的packages都会被清空，所以需要重新读取。因此我们要在R script里面记录此script需要使用的packages（这个特性可以帮助你养成好习惯：当你把你的代码分享给别人的时候，要保证在别人的电脑上也能正常运行，就必须要指明要使用哪些packages）
+每次重启R的时候，上一次使用的packages都会被清空，所以需要重新读取。因此我们要在R script里面记录此script需要使用的packages（这个特性可以帮助你养成好习惯：当你把你的代码分享给别人的时候，要保证在别人的电脑上也能正常运行，就必须要指明要使用哪些packages）.\footnote{另一个主要原因是，寻找对象时，R需要搜索所有已加载的packages，而且，packages都被加载在RAM里，因此加载过多的packages会使R显著变慢。（虽然有一些开挂的方法）}
 
-\section{其它}
+\hypertarget{pkg-colon}{%
+\subsubsection{使用packages里的内容}\label{pkg-colon}}
 
-这小节是一些不重要的内容，因此\textbf{可酌情跳到下一章（第\ref{vectors-logicals-and-functions}章。}
+刚才加载\texttt{tidyverse}的时候，你也许注意到了这样一条提示：
+
+\begin{verbatim}
+── Conflicts ─────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+\end{verbatim}
+
+这是因为R本来自带了一个叫做\texttt{stats}的package，有俩函数名曰\texttt{filter()}和\texttt{lag()}，而\texttt{dplyr}（\texttt{tidyverse}的一部分）也有同名的俩函数，把原来的覆盖了。所以它提示你，当你使用\texttt{filter()}和\texttt{lag()}时，使用的是\texttt{dplyr}的版本，而不是原来\texttt{stats}里的。
+
+这不意味着\texttt{stats}里的这两个函数就不能用了。要使用他们，用这个格式就好了：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{stats}\OperatorTok{::}\KeywordTok{filter}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+同样的道理也适用于其他的packages. 你可以通过
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dplyr}\OperatorTok{::}\KeywordTok{filter}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+使用\texttt{dplyr}版本的\texttt{filter()}。虽然这看起来是个好习惯，但是很少人这么做。Python里每使用一次NumPy里的函数都要加上\texttt{np\_}的前缀，虽然严谨，但是麻烦。R的一大便利之处就是使用packages里的内容时，不强制要求指定packages的名称。如果函数/对象名称有重叠，以packages的加载顺序决定优先度；最近（即最后）被加载的package里的函数/对象胜出，而其余的要通过\texttt{packageName::object}的形式调取。
+
+\hypertarget{package-misc}{%
+\subsection{其它}\label{package-misc}}
+
+这小节是一些不重要的内容，因此\textbf{可酌情跳到下一章（第\ref{vectors-logicals-and-functions}章）。}
 
 \hypertarget{require-and-library}{%
-\subsection{\texorpdfstring{\texttt{library()}和\texttt{require}的区别；如何使用一行指令读取多个packages}{library()和require的区别；如何使用一行指令读取多个packages}}\label{require-and-library}}
+\subsubsection{\texorpdfstring{\texttt{library()}和\texttt{require}的区别；如何使用一行指令读取多个packages}{library()和require的区别；如何使用一行指令读取多个packages}}\label{require-and-library}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -716,14 +849,6 @@ Packages可以增加在基础R语言中没有的功能，可以精简你代码�
 \end{Highlighting}
 \end{Shaded}
 
-\begin{verbatim}
-## [[1]]
-## [1] TRUE
-## 
-## [[2]]
-## [1] TRUE
-\end{verbatim}
-
 或者更精简一点，
 
 \begin{Shaded}
@@ -732,16 +857,8 @@ Packages可以增加在基础R语言中没有的功能，可以精简你代码�
 \end{Highlighting}
 \end{Shaded}
 
-\begin{verbatim}
-## [[1]]
-## [1] TRUE
-## 
-## [[2]]
-## [1] TRUE
-\end{verbatim}
-
 \hypertarget{Bioconductor}{%
-\subsection{安装Bioconductor packages}\label{Bioconductor}}
+\subsubsection{安装Bioconductor packages}\label{Bioconductor}}
 
 \href{https://bioconductor.org}{Bioconductor}是一系列用于生物信息学的R packages. 截止2019年7月2日，共有1741个可用的bioconductor packages. 它们没有被存储在CRAN上，因此需要用特殊的方法安装。首先，安装一系列Bioconductor的核心packages（可能需要几分钟）：
 
@@ -763,9 +880,58 @@ Packages可以增加在基础R语言中没有的功能，可以精简你代码�
 \hypertarget{vectors-logicals-and-functions}{%
 \chapter{向量，逻辑，循环和函数}\label{vectors-logicals-and-functions}}
 
-\emph{注意，R中的变量名/自定义函数名不能以数字和特殊符号开头，中间只能使用"\_``和''."作为特殊符号}\footnote{如果非要违反规则，可以使用转义符号\texttt{\textbackslash{}\textasciigrave{}\textasciigrave{}，比如可以\textasciigrave{}\textasciigrave{}}4foo\%b=a+r` \textless{}- 50 ``}
+\hypertarget{intro-overview-vector}{%
+\subsection*{本章内容速览}\label{intro-overview-vector}}
+\addcontentsline{toc}{subsection}{本章内容速览}
 
-\section{向量的概念，操作和优越性}
+\begin{itemize}
+\tightlist
+\item
+  第\ref{vector-section}节介绍了R中向量的概念，使用方法和优越性。
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \ref{create-vector}：向量的创建（赋值）和合并
+  \item
+    \ref{indexing}：向量的索引（indexing）和取子集（subsetting）
+  \item
+    \ref{generator}：生成有序数列（连续整数，重复数/重复向量，
+  \item
+    \ref{vector-misc}：向量的其它操作
+  \item
+    \ref{vectorization-basics}：向量的优越性------向量化计算概念基础
+  \end{itemize}
+\item
+  第\ref{data-types}节介绍了R中的数据/对象类型
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \ref{data-types-basics}：如何查看数据/对象的类型；最基础的5种（atomic vector所存储的）数据类型；其它常用数据/对象类型
+  \item
+    \ref{data-types-advanced}：数据类型详解；更多的数据类型
+  \end{itemize}
+\item
+  第\ref{math}节介绍了R中的数学规则
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \ref{math-notation}：数的表达；整数，浮点数，科学计数法
+  \item
+    \ref{arithmetic}：基础的数学运算
+  \item
+    \ref{statistics}：基础的统计学计算，包括t分布，t检验，卡方检验
+  \end{itemize}
+\item
+  第\ref(logical-operation)节介绍了R中逻辑值(\texttt{TRUE}, \texttt{FALSE}, \texttt{NA})的概念和玩法。
+\end{itemize}
+
+\emph{注意，R中的变量名/自定义函数名不能以数字和特殊符号开头，中间只能使用"\_``和''."作为特殊符号}\footnote{如果一定要违反规则，可以使用转义符号\texttt{\textbackslash{}\textasciigrave{}\textasciigrave{}，比如可以\textasciigrave{}\textasciigrave{}}4foo\%b=a+r` \textless{}- 50 ``}
+
+\hypertarget{vector-section}{%
+\section{向量的概念，操作和优越性}\label{vector-section}}
 
 R没有标量，它通过各种类型的向量 (vector)来存储数据。
 
@@ -784,8 +950,6 @@ R没有标量，它通过各种类型的向量 (vector)来存储数据。
 \begin{verbatim}
 ## [1] 2
 \end{verbatim}
-
-虽然\texttt{=}也可以用，但是绝大多数R用户还是采用标准的\texttt{\textless{}-}符号，而\texttt{=}则用于给\textbf{函数的参数}赋值。
 
 要创建一个多元素的向量，需要用到\texttt{c()} (concatenate)函数：
 
@@ -836,7 +1000,7 @@ R没有标量，它通过各种类型的向量 (vector)来存储数据。
 
 （每个被引号包围的一串字符，都只算做一个元素，因此长度为1；多元素的向量请看第\ref{create-vector}节）
 
-还是通过\texttt{c()}函数，可以把多个向量拼接起来：
+还是通过\texttt{c()}函数，可以把多个向量拼接成一个大向量：
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -885,7 +1049,8 @@ R没有标量，它通过各种类型的向量 (vector)来存储数据。
 
 经常，我们会抓取几个连续的元素。如果想知道方法，请继续往下看。
 
-\subsection{生成器}
+\hypertarget{generator}{%
+\subsection{生成器}\label{generator}}
 
 有时候我们需要其元素按一定规律排列的向量，这时，相对于一个个手动输入，有更方便的方法：
 
@@ -935,20 +1100,52 @@ R没有标量，它通过各种类型的向量 (vector)来存储数据。
 
 注意到了左边方括号中的数字了吗？它们正是所对应的那一行第一个元素的索引。
 
-下面的内容可能有点偏，\textbf{可以酌情从这里跳到第\ref{youyuexing}节。}
+下面的内容可能有点偏，\textbf{可以酌情从这里跳到第\ref{vectorization-basics}节。}
 
 \hypertarget{rep}{%
 \subsubsection{\texorpdfstring{复读机\texttt{rep()}}{复读机rep()}}\label{rep}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{rep}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{7}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{0}\NormalTok{), }\DecValTok{4}\NormalTok{) }\CommentTok{# 把[0, 7, 6, 0]重复4遍}
+\KeywordTok{rep}\NormalTok{(}\DecValTok{6}\NormalTok{, }\DecValTok{8}\NormalTok{) }\CommentTok{# 把6重复8遍；或rep(6, times = 8)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 0 7 6 0 0 7 6 0 0 7 6 0 0 7 6 0
+## [1] 6 6 6 6 6 6 6 6
 \end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{rep}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{7}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{1}\NormalTok{), }\DecValTok{4}\NormalTok{) }\CommentTok{# 把(0, 7, 6, 1)重复4遍}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] 0 7 6 1 0 7 6 1 0 7 6 1 0 7 6 1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{rep}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{7}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{1}\NormalTok{), }\DataTypeTok{each =} \DecValTok{4}\NormalTok{) }\CommentTok{# 把0, 7, 6, 1各重复4遍}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] 0 0 0 0 7 7 7 7 6 6 6 6 1 1 1 1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{rep}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{7}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{1}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{)) }\CommentTok{# 把0, 7, 6, 1分别重复1, 2, 3, 4遍}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] 0 7 7 6 6 6 1 1 1 1
+\end{verbatim}
+
+想一想，\texttt{rep(8:15,\ rep(1:5,\ rep(1:2,\ 2:3)))}的计算结果是什么？
 
 \hypertarget{-seq}{%
 \subsubsection{\texorpdfstring{等差数列: \texttt{seq()}}{等差数列: seq()}}\label{-seq}}
@@ -988,7 +1185,7 @@ R没有标量，它通过各种类型的向量 (vector)来存储数据。
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-28-1.pdf}
+\includegraphics{R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-40-1.pdf}
 
 正态分布随机数用\texttt{rnorm(n,\ mean,\ sd)}, 三个参数分别为数量，平均值，标准差。默认mean为0，sd为1。
 
@@ -999,15 +1196,115 @@ R没有标量，它通过各种类型的向量 (vector)来存储数据。
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-29-1.pdf}
+\includegraphics{R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-41-1.pdf}
 
-\subsection{向量的其它操作}
+\hypertarget{vector-misc}{%
+\subsection{向量的其他操作}\label{vector-misc}}
+
+\hypertarget{0}{%
+\subsubsection{创建长度为0的向量}\label{0}}
+
+使用循环的时候，经常需要初始化一个长度为0的向量（见第\ref{control-flow}节
+
+有两种方法实现：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x <-}\StringTok{ }\KeywordTok{vector}\NormalTok{(}\StringTok{"numeric"}\NormalTok{)}
+\CommentTok{# 或`vector("integer")`, `vector("character")`等}
+\KeywordTok{class}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "numeric"
+\end{verbatim}
+
+或者：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x <-}\StringTok{ }\KeywordTok{integer}\NormalTok{(}\DecValTok{0}\NormalTok{)}
+\CommentTok{# 或 x <- integer()}
+\CommentTok{# 或`character(0)`, `numeric(0)`等}
+\KeywordTok{class}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "integer"
+\end{verbatim}
+
+其中后面这种方法亦可用于创建长度为\(n\)的向量，把0替换成你想要的长度即可。
 
 \hypertarget{sort-rankorder}{%
 \subsubsection{\texorpdfstring{\texttt{sort()}, \texttt{rank()}和\texttt{order()}}{sort(), rank()和order()}}\label{sort-rankorder}}
 
-\hypertarget{youyuexing}{%
-\subsection{R向量的优越性}\label{youyuexing}}
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{9}\NormalTok{, }\DecValTok{7}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{4}\NormalTok{)}
+\KeywordTok{sort}\NormalTok{(x)}
+\KeywordTok{rank}\NormalTok{(x)}
+\KeywordTok{order}\NormalTok{(x)}
+\KeywordTok{rev}\NormalTok{(}\KeywordTok{sort}\NormalTok{(x))}
+\CommentTok{# 为方便同框展示，我用的代码是 list(x = x), `sort(x)` = sort(x), `rank(x)` = rank(x), `order(x)` = order(x), `rev(sort(x))` = rev(sort(x)))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## $x
+## [1] -10   5 -89 999  84
+## 
+## $`sort(x)`
+## [1] -89 -10   5  84 999
+## 
+## $`rank(x)`
+## [1] 2 3 1 5 4
+## 
+## $`order(x)`
+## [1] 3 1 2 5 4
+## 
+## $`rev(sort(x))`
+## [1] 999  84   5 -10 -89
+\end{verbatim}
+
+\texttt{sort()}很好理解，就是把原向量的元素从小到大重新排列。如果要从小到大：\texttt{rev(sort(x))}.
+
+\texttt{rank()}是原向量各个元素的（从小到大的）排名。（\texttt{-10}是第2名，\texttt{5}是第3名，\texttt{-89}是第1名，以此类推）
+
+\texttt{order()}是一个原向量索引的排序，使得\texttt{x{[}order(x){]}\ =\ sort(x)}，即\texttt{x{[}order(x){]}\ =\ x{[}c(3,\ 1,\ 2,\ 5,\ 4){]}\ =\ c(-89,\ -10,\ 5,\ 84,\ 999)\ =\ sort(x)}
+
+至于文字向量，英文按\texttt{a,\ b,\ c,\ d,\ e,\ ...}排列，中文按笔画排列。
+
+\subsubsection{元素的命名}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{scores <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DataTypeTok{ochem =} \DecValTok{79}\NormalTok{, }\DataTypeTok{math =} \DecValTok{66}\NormalTok{, }\DataTypeTok{mcb =} \DecValTok{64}\NormalTok{, }\DataTypeTok{blc =} \DecValTok{75}\NormalTok{, }\DataTypeTok{bpc =} \DecValTok{72}\NormalTok{)}
+\NormalTok{scores}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## ochem  math   mcb   blc   bpc 
+##    79    66    64    75    72
+\end{verbatim}
+
+然后便可以额外地用名字抓取元素：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{scores[}\KeywordTok{c}\NormalTok{(}\StringTok{"math"}\NormalTok{, }\StringTok{"bpc"}\NormalTok{)] }\OperatorTok{==}\StringTok{ }\NormalTok{scores[}\KeywordTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{5}\NormalTok{)]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## math  bpc 
+## TRUE TRUE
+\end{verbatim}
+
+\hypertarget{vectorization-basics}{%
+\subsection{R向量的优越性}\label{vectorization-basics}}
 
 R中的向量（矩阵和数列也是）的各种计算默认都是逐元素 (elementwise)的。比如：
 
@@ -1043,12 +1340,21 @@ R中的向量（矩阵和数列也是）的各种计算默认都是逐元素 (el
 ## [1] 2 3 5
 \end{verbatim}
 
-相比于常用的编程语言，省去了for循环；相比于matlab的默认矩阵乘法，逐元素乘法在数据处理中更有用。
+拥有这种特性的计算也被称为向量化计算 (vectorized computation).
 
-\hypertarget{-data-types}{%
-\section{数据类型 (Data Types)}\label{-data-types}}
+相比于常用的编程语言，向量化计算省去了for循环，计算效率得到极大的提升；相比于matlab的默认矩阵乘法，逐元素乘法在数据处理中更有用。
 
-向量所存储的的数据类型有：
+若想更多地了解向量化计算（比如如何把for循环需要39秒的运算压缩到0.001秒），请看第\ref{apply}节。
+
+\hypertarget{data-types}{%
+\section{数据/对象类型 (Data/Object Types)}\label{data-types}}
+
+\hypertarget{data-types-basics}{%
+\subsection{基础的数据/对象类型}\label{data-types-basics}}
+
+\subsubsection{向量所存储的数据类型}
+
+向量所存储的的数据类型有5种：
 
 \begin{longtable}[]{@{}lll@{}}
 \toprule
@@ -1063,11 +1369,95 @@ complex & 复数向量 & \texttt{3+5i}, \texttt{1i}, \texttt{1+0i}\tabularnewlin
 \bottomrule
 \end{longtable}
 
-通过\texttt{class()}函数，可以查看向量的类型。
+\textbf{一个向量的所有元素必须属于同一种类型。}如果尝试把不同类型的元素合并成一个向量，其中一些元素的类型会被强制转换 (coerced)。你可以试试\texttt{c(2,\ "a")}, \texttt{c(2+5i,\ 4)}, \texttt{c(TRUE,\ 1+9i)}和\texttt{c(TRUE,\ 1+9i,\ "a")}，但是实际操作的时候尽量不要这么做。
+
+\subsubsection{关于数据类型的简单操作}
+
+通过\texttt{class()}函数，可以查看数据/对象的类型。
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{class}\NormalTok{(}\StringTok{"早上好"}\NormalTok{)}
+\KeywordTok{class}\NormalTok{(}\DecValTok{6}\NormalTok{) }\CommentTok{# 6是一个（浮点）数，应为"numeric"}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "numeric"
+\end{verbatim}
+
+通过\texttt{is.XXX()}函数，可以得到一个逻辑值，指明此数据/对象是否属于某个类型，\texttt{TRUE}为是，\texttt{FALSE}为否。比如：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{is.numeric}\NormalTok{(}\DecValTok{6}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{is.character}\NormalTok{(}\StringTok{"6"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+
+通过\texttt{as.XXX()}函数，可以把数据/对象强行转换成另一种类型，比如：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{as.integer}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{, }\OtherTok{FALSE}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1 0
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{as.character}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{23}\NormalTok{, }\DecValTok{90}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "23" "90"
+\end{verbatim}
+
+\hypertarget{na-inf-nannull}{%
+\subsubsection{\texorpdfstring{\texttt{NA}, \texttt{Inf}, \texttt{NaN}和\texttt{NULL}}{NA, Inf, NaN和NULL}}\label{na-inf-nannull}}
+
+\texttt{NA}为缺损值，意思是该元素所代表的数值丢失/不确定/不可用。举个例子，当我们统计学生的200m跑成绩时，有一些学生因为身体不适未能参与测试，这时他们的成绩应被记为\texttt{NA}：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{time_in_sec <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\FloatTok{29.37}\NormalTok{, }\FloatTok{28.66}\NormalTok{, }\FloatTok{31.32}\NormalTok{, }\OtherTok{NA}\NormalTok{, }\FloatTok{27.91}\NormalTok{, }\OtherTok{NA}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+之前说过，一个向量中，所有的元素都是同一类型的。的确，这里的\texttt{NA}的类型是\texttt{numeric}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{class}\NormalTok{(time_in_sec[}\DecValTok{4}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "numeric"
+\end{verbatim}
+
+同理，\texttt{character}向量里的\texttt{NA}，类型也是\texttt{character}，其他类型也是一样的道理。如果只是单个的\texttt{NA}, 它的类型是\texttt{logical}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{y <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"a"}\NormalTok{, }\StringTok{"b"}\NormalTok{, }\OtherTok{NA}\NormalTok{)}
+\KeywordTok{class}\NormalTok{(y[}\DecValTok{3}\NormalTok{])}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1075,11 +1465,77 @@ complex & 复数向量 & \texttt{3+5i}, \texttt{1i}, \texttt{1+0i}\tabularnewlin
 ## [1] "character"
 \end{verbatim}
 
-（除此之外，\texttt{typeof()}, \texttt{mode()}, \texttt{storage.mode()}这三个函数的功能与\texttt{class()}类似，但有重要的区别；为避免造成困惑，此处不展开讨论）。
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{class}\NormalTok{(}\OtherTok{NA}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
-\section{数学表达和运算}
+\begin{verbatim}
+## [1] "logical"
+\end{verbatim}
 
-\subsection{数的表达}
+\texttt{Inf}（无限）\texttt{NaN}（非数）的概念，以及作为\texttt{numeric}的\texttt{NA}的数学计算在第\ref{math-NA}小节讨论。
+
+作为\texttt{logical}的\texttt{NA}的逻辑运算在第\ref(logical-operation)小节讨论。
+
+\texttt{NULL}是``无''，\textbf{真正的``无''。}它几乎一无是处，因此在此不作更多讨论。学有余力者可以自己去了解。
+
+\subsubsection{其它的数据/对象类型}
+
+\begin{itemize}
+\tightlist
+\item
+  Dataframe/tibble 是R中存储复杂（多变量）数据的规范格式，从第\ref(tibble)章开始将一直占据我们话题的中心。
+\item
+  因子 (factor)有很多向量的特性，尤其是能在dataframe/tibble中作为变量，但是它并不是向量；因子的详细内容在第\ref{factors}节。
+\item
+  函数 (function)。我们刚才用\texttt{c()}来创建向量，它就是一个函数：\texttt{class(c)}；函数的详细内容在第\ref{functions}节。
+\item
+  list类似于向量，但是一个list可以包含不同类型的元素。性质和使用方法也和向量大相径庭。详细内容在第\ref{list}节，算是较为进阶的内容。
+\item
+  矩阵 (matrix)和数组 (array)可以算作是二维和多维的向量，同样只能存储一种类型的数据，详细内容在第\ref{matrix-array}节，同样是较为进阶的内容。
+\end{itemize}
+
+\hypertarget{data-types-advanced}{%
+\subsection{数据类型（严谨版）}\label{data-types-advanced}}
+
+可以酌情跳到第\ref{math}节。
+
+\hypertarget{class-type-modestorage-mode}{%
+\subsubsection{\texorpdfstring{\texttt{class}, \texttt{type}, \texttt{mode}和\texttt{storage\ mode}}{class, type, mode和storage mode}}\label{class-type-modestorage-mode}}
+
+其实\texttt{class}根本不是基础的数据类型。学过编程的应该猜到了，此\texttt{class}正是OOP里的``类''，是``高层''的类型。你可以随意篡改\texttt{class}：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"Joe"}\NormalTok{, }\StringTok{"Lynne"}\NormalTok{, }\StringTok{"Pat"}\NormalTok{)}
+\KeywordTok{class}\NormalTok{(x) }\CommentTok{# 本应为"character"}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "character"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{class}\NormalTok{(x) <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"high_school"}\NormalTok{, }\StringTok{"student"}\NormalTok{) }\CommentTok{# 篡改}
+\KeywordTok{class}\NormalTok{(x) }\CommentTok{# 新class}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "high_school" "student"
+\end{verbatim}
+
+用\texttt{typeof()}, \texttt{mode()}, \texttt{storage.mode()}所获取到的三种属性是不可篡改的``底层''类型。
+
+\hypertarget{math}{%
+\section{数学表达和运算}\label{math}}
+
+\hypertarget{math-notation}{%
+\subsection{数的表达}\label{math-notation}}
 
 \subsubsection{浮点数}
 
@@ -1432,7 +1888,67 @@ R中的binary operators（二元运算符）有：
 \hypertarget{quzheng}{%
 \subsubsection{近似数（取整，取小数位，取有效数字）}\label{quzheng}}
 
-注意，取整函数给出的的结果不是整数！
+取有效数字用\texttt{signif()}函数；第一个参数是对象，第二个参数是保留的位数；若保留的位数未指定，默认为6.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{signif}\NormalTok{(}\FloatTok{12.3456789}\NormalTok{, }\DecValTok{4}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 12.35
+\end{verbatim}
+
+当对象的有效数字小于你想保留的有效数字位数时，它不会让你乱来（下面\texttt{round()}函数也类似）：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{signif}\NormalTok{(}\FloatTok{12.3}\NormalTok{, }\DecValTok{8}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 12.3
+\end{verbatim}
+
+保留小数位用\texttt{round()}函数。
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{round}\NormalTok{(}\FloatTok{12.3456789}\NormalTok{, }\DecValTok{3}\NormalTok{) }\CommentTok{# 保留3个小数位}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 12.346
+\end{verbatim}
+
+若不指定保留多少位，默认为0，即四舍五入地取整：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{round}\NormalTok{(}\FloatTok{13.5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 14
+\end{verbatim}
+
+此外，还有三种取整函数：\texttt{floor()}, \texttt{ceiling()}和\texttt{trunc()}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{floor}\NormalTok{(}\FloatTok{5.6}\NormalTok{) }\CommentTok{# = 5 # “地板”；比x小的最近的整数}
+\KeywordTok{ceiling}\NormalTok{(}\FloatTok{5.4}\NormalTok{) }\CommentTok{# = 6 # “天花板”；比x大的最近的整数}
+\KeywordTok{floor}\NormalTok{(}\OperatorTok{-}\FloatTok{5.6}\NormalTok{) }\CommentTok{# = -6 # 不是-5，因为-6是比-5.6小的最近的整数}
+\KeywordTok{ceiling}\NormalTok{(}\OperatorTok{-}\FloatTok{5.4}\NormalTok{) }\CommentTok{# = -5 # 不是-6；因为-5是比x大的最近的整数}
+\KeywordTok{trunc}\NormalTok{(}\OperatorTok{-}\FloatTok{5.6}\NormalTok{) }\CommentTok{# = -5 # 你可能需要这个；它无视了小数点后面的位数}
+\end{Highlighting}
+\end{Shaded}
+
+注意，所有取整函数给出的的结果都并不是整数！
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1444,8 +1960,72 @@ R中的binary operators（二元运算符）有：
 ## [1] "numeric"
 \end{verbatim}
 
+虽然浮点数使用起来真没啥不方便的，但是如果你一定需要的话，可以用\texttt{as.integer()}函数把它转换成真·整数。
+
+\hypertarget{na-inf-nan-math-na}{%
+\subsubsection{\texorpdfstring{\texttt{NA}, \texttt{Inf}, \texttt{NaN}相关 \{math-NA\}}{NA, Inf, NaN相关 \{math-NA\}}}\label{na-inf-nan-math-na}}
+
+我不知道张三有几个苹果，我也不知道李四有几个苹果；你问我张三和李四共有几个苹果：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\OtherTok{NA} \OperatorTok{+}\StringTok{ }\OtherTok{NA}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] NA
+\end{verbatim}
+
+鬼才知道咧！
+
+类似地，\texttt{NA\ -\ NA}, \texttt{NA/NA}, \texttt{NA*NA}, \texttt{log(NA)}都等于\texttt{NA}
+
+\texttt{NA\^{}0}等于几？别上当！R的开发者们可没有忘记\(\forall x\in \mathbb{R:x^0 = 1}\)
+
+\texttt{Inf}, 即\(\infty\), 表示很大的数字（准确地说，大于等于\(2^{1024}\)即\(1.797693\times10^{308}\)的数字）它还有个负值，\texttt{-Inf}. 以下是几个结果为\texttt{Inf}的例子：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{exp}\NormalTok{(}\DecValTok{1000}\NormalTok{) }\CommentTok{# = Inf; 这个很明显}
+\DecValTok{1}\OperatorTok{/}\DecValTok{0} \CommentTok{# = Inf; 0被当作很小的数}
+\DecValTok{0}\OperatorTok{^}\NormalTok{(}\OperatorTok{-}\DecValTok{1}\NormalTok{) }\CommentTok{# = 1/(0^1) = 1/0 = Inf}
+\KeywordTok{log}\NormalTok{(}\DecValTok{0}\NormalTok{) }\CommentTok{# = -Inf; 0又被当作很小的数}
+\end{Highlighting}
+\end{Shaded}
+
+\texttt{NaN}是``非数'' (not a number). 运算结果为\texttt{NaN}的例子有：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{0}\OperatorTok{/}\DecValTok{0} \CommentTok{# NaN}
+\KeywordTok{log}\NormalTok{(}\OperatorTok{-}\DecValTok{1}\NormalTok{) }\CommentTok{# = NaN}
+\DecValTok{0}\OperatorTok{^}\NormalTok{(}\DecValTok{3}\OperatorTok{+}\NormalTok{8i) }\CommentTok{# = NaN + NaNi}
+\OtherTok{Inf}\OperatorTok{-}\OtherTok{Inf}\NormalTok{; }\OtherTok{Inf}\OperatorTok{/}\OtherTok{Inf} \CommentTok{# = NaN}
+\OperatorTok{-}\OtherTok{NaN} \CommentTok{# = NaN}
+\end{Highlighting}
+\end{Shaded}
+
+\texttt{Inf}和\texttt{NaN}的类型是\texttt{numeric}（浮点数）.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{class}\NormalTok{(}\OtherTok{Inf}\NormalTok{); }\KeywordTok{class}\NormalTok{(}\OtherTok{NaN}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "numeric"
+\end{verbatim}
+
+\begin{verbatim}
+## [1] "numeric"
+\end{verbatim}
+
 \hypertarget{r}{%
 \subsubsection{R中自带的数学函数集合}\label{r}}
+
+基础
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule
@@ -1467,456 +2047,25 @@ R中的binary operators（二元运算符）有：
 \texttt{asin(x)}, \texttt{acos(x)}, \texttt{atan(x)} & 反三角函数\tabularnewline
 \texttt{sinh(x)}, \texttt{cosh(x)}, \texttt{tanh(x)} & 双曲函数\tabularnewline
 \texttt{abs(x)} & \(|x|\)（取绝对值）\tabularnewline
+\texttt{sum(...)}, \texttt{prod(...)} & 所有元素相加之和/相乘之积\tabularnewline
 \bottomrule
 \end{longtable}
 
-\hypertarget{logical-operation}{%
-\section{逻辑}\label{logical-operation}}
+\hypertarget{statistics}{%
+\subsection{简易的统计学计算}\label{statistics}}
 
-\hypertarget{logical-values}{%
-\subsection{Logical Values（逻辑值）}\label{logical-values}}
+本节简要解释了R中的基础统计学函数，t分布，t检验和\(\chi^2\)检验。统计学方法并不是本书的重点，因此可以酌情跳到\protect\hyperlink{tibble}{下一章}。
 
-逻辑值有三个。\texttt{TRUE}, \texttt{FALSE}和\texttt{NA}.
+\subsubsection{基础}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{class}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{,}\OtherTok{FALSE}\NormalTok{,}\OtherTok{NA}\NormalTok{))}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] "logical"
-\end{verbatim}
-
-\texttt{TRUE}为真，\texttt{FALSE}为假，\texttt{NA}为未知（即真假难辨）。
-
-\hypertarget{logical-operations}{%
-\subsection{Logical Operations（逻辑运算）}\label{logical-operations}}
-
-R中常用的关系运算符有：
-
-\begin{longtable}[]{@{}cc@{}}
-\toprule
-符号 & 描述\tabularnewline
-\midrule
-\endhead
-\texttt{==} & equal to（等于）\tabularnewline
-\texttt{!=} & equal to（不等于）\tabularnewline
-\texttt{\textless{}} & less than（小于）\tabularnewline
-\texttt{\textgreater{}} & more than（大于）\tabularnewline
-\texttt{\textless{}=} & less than or equal to（小于等于）\tabularnewline
-\texttt{\textgreater{}=} & more than or equal to（大于等于）\tabularnewline
-\bottomrule
-\end{longtable}
-
-使用关系运算符进行计算，会产生逻辑值作为结果。比如：
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{x <-}\StringTok{ }\DecValTok{5}
-\NormalTok{x }\OperatorTok{!=}\StringTok{ }\DecValTok{3} \CommentTok{#x等于5，所以“x不等于3”为真}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] TRUE
-\end{verbatim}
-
-有一些其他的运算符或函数也会返回逻辑值，比如
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\DecValTok{7} \OperatorTok{%in%}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{6}\NormalTok{,}\DecValTok{7}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] TRUE
-\end{verbatim}
-
-顾名思义，这个运算符是用来检测一个元素是否在另一个向量中。其它类型的运算符，我在需要用到的时候再讲。
-
-\subsection{逻辑运算详解}
-
-\subsubsection{逻辑运算符}
-
-以下是最常用的三个逻辑运算符。
-
-\begin{longtable}[]{@{}cc@{}}
-\toprule
-符号 & 描述\tabularnewline
-\midrule
-\endhead
-\texttt{\&} & AND（且）\tabularnewline
-\texttt{\textbar{}} & OR（或）\tabularnewline
-\texttt{!} & 反义符号\tabularnewline
-\bottomrule
-\end{longtable}
-
-\subsubsection{\texorpdfstring{反义符号（\texttt{!}）}{反义符号（!）}}
-
-\texttt{!}使\texttt{TRUE} \texttt{FALSE}颠倒。一般，我们用小括号来包住一个逻辑运算，然后在它的前面加上一个\texttt{!}来反转结果，比如
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\OperatorTok{!}\NormalTok{(}\DecValTok{3} \OperatorTok{<}\StringTok{ }\DecValTok{4}\NormalTok{) }\CommentTok{# 这个例子很简单，反义符号意义不大。后面实操的时候才能领略到它的用处。}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] FALSE
-\end{verbatim}
-
-\subsubsection{\texorpdfstring{多个逻辑运算的组合（\texttt{\&}（且）和\texttt{\textbar{}}（或））}{多个逻辑运算的组合（\&（且）和\textbar{}（或））}}
-
-\texttt{\&}和\texttt{\textbar{}}可以把多个逻辑运算的结果合并成一个逻辑值。
-
-\texttt{\&}判断是否两边运算结果都为\texttt{TRUE}。如果是，才会得到\texttt{TRUE}（即一真和一假得到假）。（正统的翻译貌似是``与''，但是我觉得不太与中文语法适配；想想``\(x\)大于\(2\)\textbf{与}\(y\)小于\(4\)''是不是比``\(x\)大于\(2\)\textbf{且}\(y\)小于\(4\)''别扭）
-
-\texttt{\textbar{}}判断两边运算结果是否至少有一个 \texttt{TRUE}，如果是，就会得到\texttt{TRUE}。
-
-不用死记硬背！其实就是``且''和``或''的逻辑。
-
-用脑子想一下以下三条运算的结果，然后复制代码到R console对答案。
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\DecValTok{1} \OperatorTok{==}\StringTok{ }\DecValTok{1} \OperatorTok{&}\StringTok{ }\DecValTok{1} \OperatorTok{==}\StringTok{ }\DecValTok{2} \OperatorTok{&}\StringTok{ }\DecValTok{3} \OperatorTok{==}\StringTok{ }\DecValTok{3} \CommentTok{#即：“1等于1且1等于2且3等于3”，是真还是假？}
-\OtherTok{FALSE} \OperatorTok{|}\StringTok{ }\OtherTok{FALSE} \OperatorTok{|}\StringTok{ }\OtherTok{TRUE} \CommentTok{# FALSE/TRUE等价于一个运算结果}
-\OperatorTok{!}\NormalTok{(}\OtherTok{FALSE} \OperatorTok{|}\StringTok{ }\OtherTok{TRUE}\NormalTok{) }\OperatorTok{&}\StringTok{ }\OtherTok{TRUE} \CommentTok{# 注意反义符号}
-\end{Highlighting}
-\end{Shaded}
-
-我们可以查看三个逻辑值所有两两通过\texttt{\&}组和的计算结果（如果你不感兴趣，可以不看方法。这里重点是结果）：
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{vals <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{, }\OtherTok{FALSE}\NormalTok{, }\OtherTok{NA}\NormalTok{) }
-\KeywordTok{names}\NormalTok{(vals) <-}\StringTok{ }\KeywordTok{paste}\NormalTok{(}\StringTok{'['}\NormalTok{,}\KeywordTok{as.character}\NormalTok{(vals),}\StringTok{']'}\NormalTok{,}\DataTypeTok{sep =} \StringTok{''}\NormalTok{)}
-\KeywordTok{outer}\NormalTok{(vals, vals, }\StringTok{"&"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-##         [TRUE] [FALSE]  [NA]
-## [TRUE]    TRUE   FALSE    NA
-## [FALSE]  FALSE   FALSE FALSE
-## [NA]        NA   FALSE    NA
-\end{verbatim}
-
-可以看到，\texttt{FALSE}与任何逻辑值组合，结果都是\texttt{FALSE}。这个好理解，因为一旦一个是\texttt{FALSE}，那么不可能两边都是\texttt{TRUE}. \texttt{TRUE\ \&\ NA}之所以为\texttt{NA}（而不是\texttt{FALSE}），是因为\texttt{NA}的意思是``不能确定真假''，即有可能真也有可能假。因此\texttt{TRUE\ \&\ NA}也无法辨真假。
-
-再来看\texttt{\textbar{}}的组合：
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{outer}\NormalTok{(vals, vals, }\StringTok{"|"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-##         [TRUE] [FALSE] [NA]
-## [TRUE]    TRUE    TRUE TRUE
-## [FALSE]   TRUE   FALSE   NA
-## [NA]      TRUE      NA   NA
-\end{verbatim}
-
-可以看到，\texttt{TRUE}与任何一个逻辑值组合，都是\texttt{TRUE}，而\texttt{FALSE\ \textbar{}\ NA}为\texttt{NA}。原因一样（因为\texttt{NA}的不确定性）。
-
-\section{判断和循环（控制流程）}
-
-如果你学过其他编程语言，知道判断和循环的作用，只是需要知道在R中的表达，那么请看以下两个例子快速入门，然后跳过本节（如果没学过，请往后面看）：
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{foo <-}\StringTok{ }\DecValTok{1}\OperatorTok{:}\DecValTok{100} \CommentTok{#产生一个[1,2,3,...,99,100]的整数向量。上面讲过。}
-\NormalTok{bar <-}\StringTok{ }\KeywordTok{vector}\NormalTok{(}\StringTok{"numeric"}\NormalTok{)}
-\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in}\NormalTok{ foo) \{}
-  \ControlFlowTok{if}\NormalTok{ (i }\OperatorTok{%%}\StringTok{ }\DecValTok{2} \OperatorTok{==}\StringTok{ }\DecValTok{0}\NormalTok{) \{}
-\NormalTok{    bar <-}\StringTok{ }\KeywordTok{append}\NormalTok{(bar, i}\OperatorTok{^}\DecValTok{2}\NormalTok{)}
-\NormalTok{  \} }\ControlFlowTok{else} \ControlFlowTok{if}\NormalTok{ (i }\OperatorTok{==}\StringTok{ }\DecValTok{51}\NormalTok{) \{}
-    \ControlFlowTok{break}
-\NormalTok{  \}}
-\NormalTok{\}}
-\NormalTok{bar}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-##  [1]    4   16   36   64  100  144  196  256  324  400  484  576  676  784
-## [15]  900 1024 1156 1296 1444 1600 1764 1936 2116 2304 2500
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{logi =}\StringTok{ }\OtherTok{TRUE}
-\NormalTok{num <-}\StringTok{ }\DecValTok{1}
-\ControlFlowTok{while}\NormalTok{ (num }\OperatorTok{<=}\StringTok{ }\DecValTok{100}\NormalTok{) \{}
-  \ControlFlowTok{if}\NormalTok{ (logi) \{}
-\NormalTok{    num =}\StringTok{ }\NormalTok{num }\OperatorTok{+}\StringTok{ }\DecValTok{10} \CommentTok{# R 不支持 num += 5的简写}
-    \KeywordTok{print}\NormalTok{(num)}
-\NormalTok{    logi =}\StringTok{ }\OtherTok{FALSE}
-\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ \{}
-\NormalTok{    num =}\StringTok{ }\NormalTok{num }\OperatorTok{+}\StringTok{ }\DecValTok{20}
-    \KeywordTok{print}\NormalTok{(num)}
-\NormalTok{    logi =}\StringTok{ }\OtherTok{TRUE}
-\NormalTok{  \}}
-\NormalTok{\}}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] 11
-## [1] 31
-## [1] 41
-## [1] 61
-## [1] 71
-## [1] 91
-## [1] 101
-\end{verbatim}
-
-\hypertarget{if-else-else-if-}{%
-\subsection{\texorpdfstring{\texttt{if}, \texttt{else}, \texttt{else\ if} 语句}{if, else, else if 语句}}\label{if-else-else-if-}}
-
-\texttt{if}语句长这样：
-
-\begin{verbatim}
-if (something is true/false) {
-do something
-}
-\end{verbatim}
-
-其中小括号内为测试的条件，其运算结果需为TRUE或FALSE（关于逻辑值的计算请看第\ref{logical-operation}节。若运算结果为TRUE，大括号内的语句将会被执行。
-
-注意，不能直接用\texttt{x\ ==\ NA}来判断是否是\texttt{NA}，而要用\texttt{is.na(x)}
-
-R中没有专门的\texttt{elseif}语句，但用\texttt{else}加上\texttt{if}能实现同样的效果。
-
-\section{函数}
-
-不像很多其他语言的函数有\texttt{value.func()}和\texttt{func\ value}等格式，R中所有函数的通用格式是这样的：
-
-\begin{verbatim}
-function(argument1=value1, argument2=value2, ...)
-\end{verbatim}
-
-比如
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{x1 <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\FloatTok{5.1}\NormalTok{,}\FloatTok{5.2}\NormalTok{,}\FloatTok{4.5}\NormalTok{,}\FloatTok{5.3}\NormalTok{,}\FloatTok{4.3}\NormalTok{,}\FloatTok{5.5}\NormalTok{,}\FloatTok{5.7}\NormalTok{)}
-\KeywordTok{t.test}\NormalTok{(}\DataTypeTok{x=}\NormalTok{x1, }\DataTypeTok{mu =} \FloatTok{4.5}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## 
-##  One Sample t-test
-## 
-## data:  x1
-## t = 3.0308, df = 6, p-value = 0.02307
-## alternative hypothesis: true mean is not equal to 4.5
-## 95 percent confidence interval:
-##  4.612840 5.558589
-## sample estimates:
-## mean of x 
-##  5.085714
-\end{verbatim}
-
-（英语中，``parameter''或``formal argument''二词用于函数定义，``argument''或``actual argument''二词用于调用函数(Kernighan and Ritchie \protect\hyperlink{ref-Kernighan1988The-C-Programming-La}{1988})，中文里分别是``形式参数''和``实际参数''，但是多数场合简称``参数''。）
-
-\hypertarget{abbr}{%
-\subsection{调用函数时的简写}\label{abbr}}
-
-以\texttt{seq}函数为例，通过查看documentation（在console执行\texttt{?seq}）可以查看它的所有的参数：
-
-\begin{verbatim}
-## Default S3 method:
-seq(from = 1, to = 1, by = ((to - from)/(length.out - 1)),
-    length.out = NULL, along.with = NULL, ...)
-\end{verbatim}
-
-可以看到第一个参数是\texttt{from}，第二个是\texttt{to}，第三个是\texttt{by}，以此类推。因此我们执行\texttt{seq(0,\ 50,\ 10)}的时候，R会自动理解成\texttt{seq(from\ =\ 0,\ to\ =\ 50,\ by\ =\ 10)}。而想用指定长度的方法就必须要写清楚是\texttt{length.out}等于几。
-
-\texttt{length.out}本身也可以简写：
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{25}\NormalTok{, }\DataTypeTok{l =} \DecValTok{11}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-##  [1]  0.0  2.5  5.0  7.5 10.0 12.5 15.0 17.5 20.0 22.5 25.0
-\end{verbatim}
-
-因为参数中只有\texttt{length.out}是以\texttt{l}开头的，\texttt{l}会被理解为\texttt{length.out}. 但是这个习惯并不好；自己用用就算了，与别人分享自己的工作时请务必使用标准写法。
-
-\hypertarget{...}{%
-\subsection{\texorpdfstring{关于\texttt{...}}{关于...}}\label{...}}
-
-有时候，你想写的函数可能有数量不定的参数，或是有需要传递给另一个函数的``其它参数''（即本函数不需要的参数），这时候可以在函数定义时加入一个名为\texttt{...}的参数，然后用\texttt{list()}来读取它们。list是进阶内容，在第\ref{list}节有说明。
-
-比如我写一个很无聊的函数：
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{my_func <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(arg1, }\DataTypeTok{arg2 =} \DecValTok{100}\NormalTok{, ...)\{}
-\NormalTok{  other_args <-}\StringTok{ }\KeywordTok{list}\NormalTok{(...)}
-  \KeywordTok{print}\NormalTok{(arg1)}
-  \KeywordTok{print}\NormalTok{(arg2)}
-  \KeywordTok{print}\NormalTok{(other_args)}
-\NormalTok{\}}
-
-\KeywordTok{my_func}\NormalTok{(}\StringTok{"foo"}\NormalTok{, }\DataTypeTok{cities =} \KeywordTok{c}\NormalTok{(}\StringTok{"崇阳"}\NormalTok{, }\StringTok{"Αθήνα"}\NormalTok{, }\StringTok{"つがる"}\NormalTok{), }\DataTypeTok{nums =} \KeywordTok{c}\NormalTok{(}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{6}\NormalTok{))}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] "foo"
-## [1] 100
-## $cities
-## [1] "崇阳"   "Αθήνα"  "つがる"
-## 
-## $nums
-## [1] 3 4 6
-\end{verbatim}
-
-\texttt{arg1}指定了是\texttt{"foo"}（通过\protect\hyperlink{abbr}{简写}），因此第一行印出\texttt{"foo"}; \texttt{arg2}未指定，因此使用默认值\texttt{100}，印在第二行。\texttt{cities}和\texttt{nums}在形式参数中没有匹配，因此归为``\ldots{}''，作为list印在第三行及之后。
-
-\section{简易的统计学计算}
-
-本小节简要解释了R中的t分布，t检验和\(\chi^2\)检验。统计学方法并不是本书的重点，因此可以酌情跳到\protect\hyperlink{tibble}{下一章}。
+中位数\texttt{median()}; 平均数\texttt{mean()}; 方差\texttt{var()}; 标准差\texttt{sd()}.
 
 \hypertarget{t}{%
-\subsection{t分布}\label{t}}
+\subsubsection{t分布}\label{t}}
 
 众所周知，t分布长这样：
 
-\begin{verbatim}
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for <e2>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for <89>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for <a4>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for <e2>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for <89>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for <a4>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for <e2>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for <89>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for <a4>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for <e2>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for <89>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for <a4>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for <e2>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for <89>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for <a4>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for <e2>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for <89>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for <a4>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for <e2>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for <89>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for <a4>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x,
-## x$y, : conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for
-## <e2>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x,
-## x$y, : conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for
-## <89>
-\end{verbatim}
-
-\begin{verbatim}
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x,
-## x$y, : conversion failure on 'P(t≤T)' in 'mbcsToSbcs': dot substituted for
-## <a4>
-\end{verbatim}
-
-\includegraphics{R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-59-1.pdf}
+\includegraphics[width=26.67in]{img/graphics/t-distribution}
 
 阴影面积为\(P(t<T)\)，虚线对应的\(t\)为\(T\).
 \texttt{qt()}可以把\(P(t≤T)\)的值转化成\(T\),\texttt{pt()}则相反。
@@ -1951,7 +2100,7 @@ seq(from = 1, to = 1, by = ((to - from)/(length.out - 1)),
 其中\texttt{pt(2.2,\ df\ =\ 15)}算出阴影面积（\(P(t≤T)\)的值），1减去它再乘以2就是对应的双尾t检验的\(p\)值。
 
 \hypertarget{z}{%
-\subsection{z分布}\label{z}}
+\subsubsection{z分布}\label{z}}
 
 没有z分布专门的函数。可以直接用t分布代替，把\texttt{df}调到很大（比如\texttt{999999}）就行了。比如我们试一下\(95\%\)置信区间所对应的\(z*\)：
 
@@ -1968,7 +2117,7 @@ seq(from = 1, to = 1, by = ((to - from)/(length.out - 1)),
 （果然是\(1.96\)）
 
 \hypertarget{t}{%
-\subsection{t检验}\label{t}}
+\subsubsection{t检验}\label{t}}
 
 t检验分为以下几种：
 
@@ -2091,11 +2240,11 @@ R的默认是non-paired, unequal variance，你可以通过增加\texttt{paired\
 \end{verbatim}
 
 \hypertarget{chi2-}{%
-\subsection{\texorpdfstring{\(\chi^2\) 检验}{\textbackslash{}chi\^{}2 检验}}\label{chi2-}}
+\subsubsection{\texorpdfstring{\(\chi^2\) 检验}{\textbackslash{}chi\^{}2 检验}}\label{chi2-}}
 
 \(\chi^2\)检验有两种，goodness of fit test（适配度检验）和contigency table test/test of independence（列联表分析/独立性检验）。都是用\texttt{chisq.test()}函数去完成。
 
-\subsubsection{适配度检验}
+\paragraph{适配度检验}
 
 假设我们制造了一个有问题的骰子，使1至6朝上的概率分别为：
 
@@ -2149,7 +2298,7 @@ p值很大（远大于0.05），因此结论是骰子各面朝上的概率符合
 
 这时p值小于0.05. 得出``骰子各面朝上的概率不等''的结论。
 
-\subsubsection{列联表分析/独立性检验}
+\paragraph{列联表分析/独立性检验}
 
 假设我们有一组不同年级的学生参加社团的人数数据：
 
@@ -2216,358 +2365,1345 @@ p值不小于0.05，无法拒绝``社团的参与，与所在年级是独立事�
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-73-1.pdf}
+\includegraphics{R与tidyverse——数据分析入门_files/figure-latex/unnamed-chunk-93-1.pdf}
 
-\hypertarget{-1}{%
-\subsubsection{其它}\label{-1}}
+\paragraph{其他}
 
-R自带的检验还有\texttt{Box.test()}, \texttt{PP.test()}, \texttt{ansari.test()}, \texttt{bartlett.test()}, \texttt{wilcox.test}等共31种。查看帮助文件或利用网络资源以了解更多/
+R自带的检验还有\texttt{Box.test()}, \texttt{PP.test()}, \texttt{ansari.test()}, \texttt{bartlett.test()}, \texttt{wilcox.test}等共31种。查看帮助文件或利用网络资源以了解更多。
 
-\hypertarget{tibble}{%
-\chapter{dataframe（数据框）和tibble}\label{tibble}}
+\hypertarget{logical-operation}{%
+\section{逻辑}\label{logical-operation}}
 
-\hypertarget{dataframetibble}{%
-\section{查看dataframe/tibble并了解它们的结构}\label{dataframetibble}}
+\hypertarget{-logical-values}{%
+\subsection{逻辑值 \{logical-values\}}\label{-logical-values}}
 
-\hypertarget{dataframetibble}{%
-\subsection{dataframe/tibble的基本概念}\label{dataframetibble}}
-
-dataframe是R中存储复杂数据的格式，它直观易操作。tibble是tidyverse的一部分，它是dataframe的进化版，功能更强大，更易操作。
-
-我们来看个例子：
-
-首先加载tidyverse：
+逻辑值有三个。\texttt{TRUE}, \texttt{FALSE}和\texttt{NA}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{require}\NormalTok{(tidyverse)}
-\end{Highlighting}
-\end{Shaded}
-
-\textbf{以后每次跟着本书使用R的时候，都要先加载tidyverse，不再重复提醒了。}
-
-tidyverse中自带一些范例数据，比如我们输入：
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{mpg}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics[width=35.53in]{img/tibble-intro}
-
-这张图是重中之重。一个正确的dataframe/tibble，每一行代表的是一个observation（硬翻译的话是``观测单位''，但是我觉得这个翻译不好），每一列代表的是一个variable（变量），且同一个变量的数据类型必须一样\footnote{\url{https://thomaswdinsmore.com/2014/12/15/sas-versus-r-part-two/}}。像这样的数据被称为``tidy data''（``整齐的数据''）。虽然看起来简单，直观，理所当然，但是现实中上人们经常会做出``不整齐''的数据。把不整齐的数据弄整齐是下一章的重点。
-
-\subsection{查看更多数据}
-
-R默认显示dataframe/tibble的前10行。如果想看最后6行，可以使用\texttt{tail()}函数，比如：
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{tail}\NormalTok{(mpg)}
+\KeywordTok{class}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{,}\OtherTok{FALSE}\NormalTok{,}\OtherTok{NA}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 6 x 11
-##   manufacturer model  displ  year   cyl trans drv     cty   hwy fl    class
-##   <chr>        <chr>  <dbl> <int> <int> <chr> <chr> <int> <int> <chr> <chr>
-## 1 volkswagen   passat   1.8  1999     4 auto~ f        18    29 p     mids~
-## 2 volkswagen   passat   2    2008     4 auto~ f        19    28 p     mids~
-## 3 volkswagen   passat   2    2008     4 manu~ f        21    29 p     mids~
-## 4 volkswagen   passat   2.8  1999     6 auto~ f        16    26 p     mids~
-## 5 volkswagen   passat   2.8  1999     6 manu~ f        18    26 p     mids~
-## 6 volkswagen   passat   3.6  2008     6 auto~ f        17    26 p     mids~
+## [1] "logical"
 \end{verbatim}
 
-若要从头到尾查看全部数据，可以使用\texttt{View}函数：
+\texttt{TRUE}为真，\texttt{FALSE}为假，\texttt{NA}为未知（即真假难辨）。
+
+\hypertarget{logical-operations}{%
+\subsection{关系运算符和简单的逻辑运算}\label{logical-operations}}
+
+R中常用的关系运算符有：
+
+\begin{longtable}[]{@{}cc@{}}
+\toprule
+符号 & 描述\tabularnewline
+\midrule
+\endhead
+\texttt{==} & equal to（等于）\tabularnewline
+\texttt{!=} & equal to（不等于）\tabularnewline
+\texttt{\textless{}} & less than（小于）\tabularnewline
+\texttt{\textgreater{}} & more than（大于）\tabularnewline
+\texttt{\textless{}=} & less than or equal to（小于等于）\tabularnewline
+\texttt{\textgreater{}=} & more than or equal to（大于等于）\tabularnewline
+\bottomrule
+\end{longtable}
+
+这些关系运算符只能用于(atomic) vectors, 不能用于其他类型的R对象；\texttt{indentical()}函数可以用于所有类型的对象，用来确认两者是否完全一致。
+
+使用关系运算符进行计算，会产生逻辑值作为结果。比如：
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{View}\NormalTok{(mpg)}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{tibble}{%
-\section{tibble的创建和基础操作}\label{tibble}}
-
-\hypertarget{tibble}{%
-\subsection{创建tibble}\label{tibble}}
-
-\hypertarget{tibble}{%
-\subsubsection{手动输入数据以创建tibble}\label{tibble}}
-
-使用\texttt{tibble}函数，按以下格式创建tibble. 换行不是必须的，但是换行会看得更清楚。如果换行，不要忘记行末的逗号。
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{my_tibble_}\DecValTok{1}\NormalTok{ <-}\StringTok{ }\KeywordTok{tibble}\NormalTok{(}
-                \DataTypeTok{nums =} \KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{),}
-                \DataTypeTok{chars =} \KeywordTok{c}\NormalTok{(}\StringTok{"hej"}\NormalTok{, }\StringTok{"你好"}\NormalTok{, }\StringTok{"こんにちは"}\NormalTok{),}
-                \DataTypeTok{cplxnums =} \KeywordTok{c}\NormalTok{(}\StringTok{"4+8i"}\NormalTok{, }\StringTok{"3+5i"}\NormalTok{, }\StringTok{"3+4i"}\NormalTok{)}
-\NormalTok{                )}
-\NormalTok{my_tibble_}\DecValTok{1}
+\NormalTok{x <-}\StringTok{ }\DecValTok{5}
+\NormalTok{x }\OperatorTok{!=}\StringTok{ }\DecValTok{3} \CommentTok{#x等于5，所以“x不等于3”为真}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 3 x 3
-##    nums chars      cplxnums
-##   <dbl> <chr>      <chr>   
-## 1     4 hej        4+8i    
-## 2     5 你好       3+5i    
-## 3     6 こんにちは 3+4i
+## [1] TRUE
 \end{verbatim}
 
-类似地，可以从现有的vector创建。\textbf{所有的变量长度必须一样。}
+有一些其他的运算符或函数也会返回逻辑值，比如
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{x <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{)}
-\NormalTok{y <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{211}\NormalTok{,}\DecValTok{23}\NormalTok{,}\DecValTok{45}\NormalTok{)}
-\NormalTok{z <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{20}\NormalTok{,}\DecValTok{32}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{my_tibble_}\DecValTok{2}\NormalTok{ <-}\StringTok{ }\KeywordTok{tibble}\NormalTok{(}\DataTypeTok{v1 =}\NormalTok{ x, }\DataTypeTok{v2 =}\NormalTok{ y)}
-\NormalTok{my_tibble_}\DecValTok{2}
+\DecValTok{7} \OperatorTok{%in%}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{6}\NormalTok{,}\DecValTok{7}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 3 x 2
-##      v1    v2
-##   <dbl> <dbl>
-## 1     1   211
-## 2     4    23
-## 3     5    45
+## [1] TRUE
 \end{verbatim}
 
-而试图把\texttt{x}和\texttt{z}做成tibble就会报错：
+顾名思义，这个运算符是用来检测一个元素是否在另一个向量中。其它类型的运算符，我在需要用到的时候再讲。
+
+有很多种运算会以\texttt{NA}作为计算结果，在此不一一列举。最重要的一个是：
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{my_tibble_}\DecValTok{3}\NormalTok{ <-}\StringTok{ }\KeywordTok{tibble}\NormalTok{(}\DataTypeTok{w1 =}\NormalTok{ x, }\DataTypeTok{w2 =}\NormalTok{ z)}
-
- \CommentTok{# Error: Tibble columns must have consistent lengths, only values of length one are recycled: * Length 2: Column `w2` * Length 3: Column `w1`}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{dataframetibble}{%
-\subsubsection{把dataframe转换成一个tibble}\label{dataframetibble}}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{d1 <-}\StringTok{ }\KeywordTok{as.tibble}\NormalTok{(d) }\CommentTok{#其中d是一个dataframe}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{tibble}{%
-\subsubsection{从外部数据创建tibble}\label{tibble}}
-
-参见第\ref{data-import}节（数据的导入）
-
-\subsection{取子集（抓取行，列）}
-
-\hypertarget{single-column}{%
-\subsubsection{抓取单列}\label{single-column}}
-
-抓取单列很简单，也很常用（比如我们只想从一个大的tibble中抓两个变量研究它们之间的关系）。 有两个符号可以用于抓取列，\texttt{\$}（仅用于变量名称）与\texttt{{[}{[}{]}{]}}（变量名称或索引）。还是以\texttt{mpg}为例，假设我们要抓取第3列 (\texttt{displ})：
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{########################}
-\CommentTok{#通过变量名称抓取：}
-\NormalTok{mpg[[}\StringTok{"displ"}\NormalTok{]]}
-\CommentTok{#或}
-\NormalTok{mpg}\OperatorTok{$}\NormalTok{displ }\CommentTok{#一般，在RStudio中此方法最方便，因为打出“$”之后会自动提示变量名。}
-
-\CommentTok{########################}
-\CommentTok{#通过索引抓取：}
-\NormalTok{mpg[[}\DecValTok{3}\NormalTok{]]}
-\end{Highlighting}
-\end{Shaded}
-
-以上三种方法都应得到同样的结果（是一个vector）：
-
-\begin{verbatim}
-##  [1] 1.8 1.8 2.0 2.0 2.8 2.8 3.1 1.8 1.8 2.0 2.0 2.8 2.8 3.1 3.1 2.8 3.1
-## [18] 4.2 5.3 5.3
-\end{verbatim}
-
-如果使用单方括号，得到的是一个tibble（试试\texttt{mpg{[}3{]}}）这个特性在第\ref{dataframe-subsetting}节中有解释。
-
-\subsubsection{抓取多列}
-
-有时候，一个tibble中含有很多冗余信息，我们可能想把感兴趣的几个变量抓出来做一个新tibble. 这时\texttt{select()}函数最为方便。可以用变量名称或者索引来抓取。比如：
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{mpg_new <-}\StringTok{ }\KeywordTok{select}\NormalTok{(mpg, }\DecValTok{3}\OperatorTok{:}\DecValTok{5}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{9}\NormalTok{)}
-\CommentTok{#等同于}
-\NormalTok{mpg_new <-}\StringTok{ }\KeywordTok{select}\NormalTok{(mpg, displ, year, cyl, cty, hwy)}
-
-\NormalTok{mpg_new}
+\OtherTok{NA} \OperatorTok{==}\StringTok{ }\OtherTok{NA}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 234 x 5
-##    displ  year   cyl   cty   hwy
-##    <dbl> <int> <int> <int> <int>
-##  1   1.8  1999     4    18    29
-##  2   1.8  1999     4    21    29
-##  3   2    2008     4    20    31
-##  4   2    2008     4    21    30
-##  5   2.8  1999     6    16    26
-##  6   2.8  1999     6    18    26
-##  7   3.1  2008     6    18    27
-##  8   1.8  1999     4    18    26
-##  9   1.8  1999     4    16    25
-## 10   2    2008     4    20    28
-## # ... with 224 more rows
+## [1] NA
 \end{verbatim}
 
-base
+这看起来像是一个bug，然而仔细想想才发现这个设计很巧妙。假设你问我是否知道我的一些朋友写完了暑假作业。我说我\textbf{不知道}张三是否写完了，也\textbf{不知道}李四是否写完了。你再问我``张三和李四的作业完成情况是一样的吗''？鬼才知道咧！
 
-\hypertarget{filter}{%
-\subsubsection{\texorpdfstring{通过\texttt{filter()}，抓取满足某条件的行}{通过filter()，抓取满足某条件的行}}\label{filter}}
-
-通过\texttt{filter()}，我们可以过滤出某个或多个变量满足某种条件的observations. 如果你还不熟悉逻辑运算，请看第\ref{logical-operations}节
-
-假设我们只想看\texttt{mpg}中的奥迪品牌的，排量大于等于2且小于4的车辆的数据：
+这意味着不能直接使用\texttt{x\ ==\ NA}来判断\texttt{x}是否是\texttt{NA}，而要用\texttt{is.na()}函数：
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{mpg_audi_displ2to4 <-}\StringTok{ }\KeywordTok{filter}\NormalTok{(mpg, manufacturer }\OperatorTok{==}\StringTok{ "audi"}\NormalTok{, displ }\OperatorTok{>=}\StringTok{ }\FloatTok{2.5} \OperatorTok{&}\StringTok{ }\NormalTok{displ }\OperatorTok{<}\StringTok{ }\DecValTok{4}\NormalTok{)}
-
-\NormalTok{mpg_audi_displ2to4}
+\NormalTok{x <-}\StringTok{ }\OtherTok{NA}
+\KeywordTok{is.na}\NormalTok{(x)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 9 x 11
-##   manufacturer model  displ  year   cyl trans drv     cty   hwy fl    class
-##   <chr>        <chr>  <dbl> <int> <int> <chr> <chr> <int> <int> <chr> <chr>
-## 1 audi         a4       2.8  1999     6 auto~ f        16    26 p     comp~
-## 2 audi         a4       2.8  1999     6 manu~ f        18    26 p     comp~
-## 3 audi         a4       3.1  2008     6 auto~ f        18    27 p     comp~
-## 4 audi         a4 qu~   2.8  1999     6 auto~ 4        15    25 p     comp~
-## 5 audi         a4 qu~   2.8  1999     6 manu~ 4        17    25 p     comp~
-## 6 audi         a4 qu~   3.1  2008     6 auto~ 4        17    25 p     comp~
-## 7 audi         a4 qu~   3.1  2008     6 manu~ 4        15    25 p     comp~
-## 8 audi         a6 qu~   2.8  1999     6 auto~ 4        15    24 p     mids~
-## 9 audi         a6 qu~   3.1  2008     6 auto~ 4        17    25 p     mids~
+## [1] TRUE
 \end{verbatim}
 
-\hypertarget{slice}{%
-\subsubsection{\texorpdfstring{用\texttt{slice()}，通过行数（索引）抓取行。}{用slice()，通过行数（索引）抓取行。}}\label{slice}}
+\subsubsection{逻辑运算符}
+
+以下是最常用的三个逻辑运算符。
+
+\begin{longtable}[]{@{}cc@{}}
+\toprule
+符号 & 描述\tabularnewline
+\midrule
+\endhead
+\texttt{\&} & AND（且）\tabularnewline
+\texttt{\textbar{}} & OR（或）\tabularnewline
+\texttt{!} & 反义符号\tabularnewline
+\bottomrule
+\end{longtable}
+
+\subsubsection{\texorpdfstring{反义符号（\texttt{!}）}{反义符号（!）}}
+
+\texttt{!}使\texttt{TRUE} \texttt{FALSE}颠倒。一般，我们用小括号来包住一个逻辑运算，然后在它的前面加上一个\texttt{!}来反转结果，比如
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{mpg_1to6 <-}\StringTok{ }\KeywordTok{slice}\NormalTok{(mpg, }\DecValTok{21}\OperatorTok{:}\DecValTok{26}\NormalTok{) }\CommentTok{# 抓取mpg的第21行至26行}
-\NormalTok{mpg_1to6}
+\OperatorTok{!}\NormalTok{(}\DecValTok{3} \OperatorTok{<}\StringTok{ }\DecValTok{4}\NormalTok{) }\CommentTok{# 这个例子很简单，反义符号意义不大。后面实操的时候才能领略到它的用处。}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 6 x 11
-##   manufacturer model  displ  year   cyl trans drv     cty   hwy fl    class
-##   <chr>        <chr>  <dbl> <int> <int> <chr> <chr> <int> <int> <chr> <chr>
-## 1 chevrolet    c1500~   5.3  2008     8 auto~ r        14    20 r     suv  
-## 2 chevrolet    c1500~   5.7  1999     8 auto~ r        13    17 r     suv  
-## 3 chevrolet    c1500~   6    2008     8 auto~ r        12    17 r     suv  
-## 4 chevrolet    corve~   5.7  1999     8 manu~ r        16    26 p     2sea~
-## 5 chevrolet    corve~   5.7  1999     8 auto~ r        15    23 p     2sea~
-## 6 chevrolet    corve~   6.2  2008     8 manu~ r        16    26 p     2sea~
+## [1] FALSE
 \end{verbatim}
 
-我觉得\texttt{slice()}更实际的用途是随机选择个体：
+\subsubsection{\texorpdfstring{多个逻辑运算的组合（\texttt{\&}（且）和\texttt{\textbar{}}（或））}{多个逻辑运算的组合（\&（且）和\textbar{}（或））}}
+
+\texttt{\&}和\texttt{\textbar{}}可以把多个逻辑运算的结果合并成一个逻辑值。
+
+\texttt{\&}判断是否两边运算结果都为\texttt{TRUE}。如果是，才会得到\texttt{TRUE}（即一真和一假得到假）。
+
+\texttt{\textbar{}}判断两边运算结果是否至少有一个 \texttt{TRUE}，如果是，就会得到\texttt{TRUE}。
+
+不用死记硬背！其实就是``且''和``或''的逻辑。
+
+用脑子想一下以下三条运算的结果，然后复制代码到R console对答案。
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{mpg_random4 <-}\StringTok{ }\KeywordTok{slice}\NormalTok{(mpg, }\KeywordTok{sample}\NormalTok{(}\KeywordTok{length}\NormalTok{(mpg[[}\DecValTok{1}\NormalTok{]]), }\DecValTok{4}\NormalTok{)) }\CommentTok{# 随机四辆车}
-\NormalTok{mpg_random4}
+\DecValTok{1} \OperatorTok{==}\StringTok{ }\DecValTok{1} \OperatorTok{&}\StringTok{ }\DecValTok{1} \OperatorTok{==}\StringTok{ }\DecValTok{2} \OperatorTok{&}\StringTok{ }\DecValTok{3} \OperatorTok{==}\StringTok{ }\DecValTok{3} \CommentTok{#即：“1等于1且1等于2且3等于3”，是真还是假？}
+\OtherTok{FALSE} \OperatorTok{|}\StringTok{ }\OtherTok{FALSE} \OperatorTok{|}\StringTok{ }\OtherTok{TRUE} \CommentTok{# FALSE/TRUE等价于一个运算结果}
+\OperatorTok{!}\NormalTok{(}\OtherTok{FALSE} \OperatorTok{|}\StringTok{ }\OtherTok{TRUE}\NormalTok{) }\OperatorTok{&}\StringTok{ }\OtherTok{TRUE} \CommentTok{# 注意反义符号}
+\end{Highlighting}
+\end{Shaded}
+
+我们可以查看三个逻辑值所有两两通过\texttt{\&}组和的计算结果（如果你不感兴趣，可以不关注方法。这里重点是结果）：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{vals <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{, }\OtherTok{FALSE}\NormalTok{, }\OtherTok{NA}\NormalTok{) }
+\KeywordTok{names}\NormalTok{(vals) <-}\StringTok{ }\KeywordTok{paste}\NormalTok{(}\StringTok{'['}\NormalTok{,}\KeywordTok{as.character}\NormalTok{(vals),}\StringTok{']'}\NormalTok{,}\DataTypeTok{sep =} \StringTok{''}\NormalTok{)}
+\KeywordTok{outer}\NormalTok{(vals, vals, }\StringTok{"&"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## # A tibble: 4 x 11
-##   manufacturer model  displ  year   cyl trans drv     cty   hwy fl    class
-##   <chr>        <chr>  <dbl> <int> <int> <chr> <chr> <int> <int> <chr> <chr>
-## 1 chevrolet    k1500~   5.3  2008     8 auto~ 4        14    19 r     suv  
-## 2 subaru       impre~   2.5  2008     4 auto~ 4        20    27 r     comp~
-## 3 hyundai      sonata   3.3  2008     6 auto~ f        19    28 r     mids~
-## 4 audi         a4       2.8  1999     6 auto~ f        16    26 p     comp~
+##         [TRUE] [FALSE]  [NA]
+## [TRUE]    TRUE   FALSE    NA
+## [FALSE]  FALSE   FALSE FALSE
+## [NA]        NA   FALSE    NA
 \end{verbatim}
 
-\hypertarget{factor}{%
-\subsection{关于Factor}\label{factor}}
+可以看到，\texttt{FALSE}与任何逻辑值组合，结果都是\texttt{FALSE}。这个好理解，因为一旦一个是\texttt{FALSE}，那么不可能两边都是\texttt{TRUE}. \texttt{TRUE\ \&\ NA}之所以为\texttt{NA}（而不是\texttt{FALSE}），是因为\texttt{NA}的意思是``不能确定真假''，即有可能真也有可能假。因此\texttt{TRUE\ \&\ NA}也无法辨真假。
 
-有时候，我们的变量是以文字的形式呈现，但是它们不是单纯的文字，而是有大小的差别，或是能以一定顺序排列，比如十二个月份 (Jan, Feb, \ldots{})，成绩的``优、良、中、差''，衣服的尺寸 (XS, S, M, XL, \ldots{}). 假设我们在做客户满意度调查，七位客户的反馈是
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{满意度_v <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"满意"}\NormalTok{, }\StringTok{"非常满意"}\NormalTok{, }\StringTok{"满意"}\NormalTok{, }\StringTok{"不满意"}\NormalTok{, }\StringTok{"满意"}\NormalTok{, }\StringTok{"非常不满"}\NormalTok{,  }\StringTok{"不满意"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-我们试图用\texttt{sort()}把七个反馈按满意度从小到大排列：
+再来看\texttt{\textbar{}}的组合：
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{sort}\NormalTok{(满意度_v)}
+\KeywordTok{outer}\NormalTok{(vals, vals, }\StringTok{"|"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "不满意"   "不满意"   "满意"     "满意"     "满意"     "非常不满"
-## [7] "非常满意"
+##         [TRUE] [FALSE] [NA]
+## [TRUE]    TRUE    TRUE TRUE
+## [FALSE]   TRUE   FALSE   NA
+## [NA]      TRUE      NA   NA
 \end{verbatim}
 
-可见其排序并不是有意义的。（因为默认英语根据'abcde\ldots{}'排序，中文根据笔画排序）
+可以看到，\texttt{TRUE}与任何一个逻辑值组合，都是\texttt{TRUE}，而\texttt{FALSE\ \textbar{}\ NA}为\texttt{NA}。原因一样（因为\texttt{NA}的不确定性）。
 
-我们可以把这个vector做成factor，并用参数\texttt{levels}规定排序顺序：
+\hypertarget{control-flow}{%
+\section{判断和循环（流程控制）}\label{control-flow}}
+
+\subsection{给有编程基础者的快速指南}
+
+如果没编程基础，没接触过判断和循环，请看第\ref{kickstart}小节。
+
+如果学过其他编程语言，知道判断和循环的作用，只是需要知道在R中的表达，那么请看以下两个例子快速入门，然后跳至第\ref{functions}节：
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{# 按照惯例，小的值在前，大的在后；“非常不满”应为满意度最低的值。}
-\NormalTok{满意度_f <-}\StringTok{ }\KeywordTok{factor}\NormalTok{(满意度_v, }\DataTypeTok{levels =} \KeywordTok{c}\NormalTok{(}\StringTok{"非常不满"}\NormalTok{, }\StringTok{"不满意"}\NormalTok{, }\StringTok{"满意"}\NormalTok{, }\StringTok{"非常满意"}\NormalTok{))}
-\KeywordTok{sort}\NormalTok{(满意度_f)}
+\NormalTok{m <-}\StringTok{ }\DecValTok{1}\OperatorTok{:}\DecValTok{100} \CommentTok{# 产生一个[1,2,3,...,99,100]的整数向量。上面讲过。}
+\NormalTok{n <-}\StringTok{ }\KeywordTok{vector}\NormalTok{(}\StringTok{"numeric"}\NormalTok{)}
+\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in}\NormalTok{ n) \{}
+  \ControlFlowTok{if}\NormalTok{ (i }\OperatorTok{%%}\StringTok{ }\DecValTok{2} \OperatorTok{==}\StringTok{ }\DecValTok{0}\NormalTok{) \{}
+\NormalTok{    n <-}\StringTok{ }\KeywordTok{append}\NormalTok{(n, i}\OperatorTok{^}\DecValTok{2}\NormalTok{)}
+\NormalTok{  \} }\ControlFlowTok{else} \ControlFlowTok{if}\NormalTok{ (i }\OperatorTok{==}\StringTok{ }\DecValTok{51}\NormalTok{) \{}
+    \ControlFlowTok{break}
+\NormalTok{  \}}
+\NormalTok{\}}
+\NormalTok{n}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 非常不满 不满意   不满意   满意     满意     满意     非常满意
-## Levels: 非常不满 不满意 满意 非常满意
+## numeric(0)
 \end{verbatim}
-
-这样排序就是正确的了。
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{class}\NormalTok{(满意度_f) }\CommentTok{# "factor"}
-\KeywordTok{is.vector}\NormalTok{(满意度_f) }\CommentTok{# FALSE}
+\NormalTok{logi =}\StringTok{ }\OtherTok{TRUE}
+\NormalTok{num <-}\StringTok{ }\DecValTok{1}
+\ControlFlowTok{while}\NormalTok{ (num }\OperatorTok{<=}\StringTok{ }\DecValTok{100}\NormalTok{) \{}
+  \ControlFlowTok{if}\NormalTok{ (logi) \{}
+\NormalTok{    num =}\StringTok{ }\NormalTok{num }\OperatorTok{+}\StringTok{ }\DecValTok{10} \CommentTok{# R 不支持 num += 5的简写}
+    \KeywordTok{print}\NormalTok{(num)}
+\NormalTok{    logi =}\StringTok{ }\OtherTok{FALSE}
+\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ \{}
+\NormalTok{    num =}\StringTok{ }\NormalTok{num }\OperatorTok{+}\StringTok{ }\DecValTok{20}
+    \KeywordTok{print}\NormalTok{(num)}
+\NormalTok{    logi =}\StringTok{ }\OtherTok{TRUE}
+\NormalTok{  \}}
+\NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{list-arraymatrix}{%
-\section{进阶内容：list, array和matrix}\label{list-arraymatrix}}
+\begin{verbatim}
+## [1] 11
+## [1] 31
+## [1] 41
+## [1] 61
+## [1] 71
+## [1] 91
+## [1] 101
+\end{verbatim}
 
-这一节为进阶内容，不用看。可以直接跳到下一章（第\ref{graphics}
+\hypertarget{kickstart}{%
+\subsection{无编程基础者的快速指南}\label{kickstart}}
 
-其中的很多操作和dataframe或tibble中的操作是等效的。一般，tibble中的操作更直观，更容易上手。
+我认为，举例子比纯粹的概念灌输更容易理解。
 
-\hypertarget{list}{%
-\subsection{list（列表）简介}\label{list}}
+\hypertarget{if-else-if-else}{%
+\subsubsection{\texorpdfstring{\texttt{if}, \texttt{else\ if}, \texttt{else}语句（``如果\ldots{}\ldots{}''，``或者，如果\ldots{}\ldots{}''，``否则\ldots{}\ldots{}''）}{if, else if, else语句（``如果\ldots{}\ldots{}''，``或者，如果\ldots{}\ldots{}''，``否则\ldots{}\ldots{}''）}}\label{if-else-if-else}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# 以下代码翻译成英语就是：If 1 + 1 = 2, print "hi". Else, print "bye".}
+\CommentTok{# 或中文：如果一加一等于二，那么印出“hi”，否则印出“bye”.}
+\ControlFlowTok{if}\NormalTok{ (}\DecValTok{1} \OperatorTok{+}\StringTok{ }\DecValTok{1} \OperatorTok{==}\StringTok{ }\DecValTok{2}\NormalTok{) \{ }\CommentTok{# 1 + 1 == 2 的运算结果是TRUE，因此“如果”成真}
+  \KeywordTok{print}\NormalTok{(}\StringTok{"hi"}\NormalTok{) }\CommentTok{# 所以会执行`print("hi")`}
+\NormalTok{\} }\ControlFlowTok{else}\NormalTok{ \{}
+  \KeywordTok{print}\NormalTok{(}\StringTok{"bye"}\NormalTok{)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "hi"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# 代码第一行中的FALSE可以替换成任何计算结果为FALSE的运算，}
+\CommentTok{# 比如1 + 1 == 3；小括号内的计算过程不重要，}
+\CommentTok{# 但运算结果必须为TRUE或FALSE（不可以是NA）}
+\ControlFlowTok{if}\NormalTok{ (}\OtherTok{FALSE}\NormalTok{) \{ }
+  \KeywordTok{print}\NormalTok{(}\StringTok{"hi"}\NormalTok{)}
+\NormalTok{\} }\ControlFlowTok{else}\NormalTok{ \{ }\CommentTok{# 因为是FALSE，所以`else`里的语句被执行}
+  \KeywordTok{print}\NormalTok{(}\StringTok{"bye"}\NormalTok{)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "bye"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if}\NormalTok{ (}\OtherTok{FALSE}\NormalTok{) \{ }\CommentTok{# 第一个`if`为FALSE}
+  \KeywordTok{print}\NormalTok{(}\StringTok{"hi"}\NormalTok{)}
+\NormalTok{\} }\ControlFlowTok{else} \ControlFlowTok{if}\NormalTok{ (}\OtherTok{FALSE}\NormalTok{) \{ }\CommentTok{# 检查下一个`else if`，也是FALSE}
+  \KeywordTok{print}\NormalTok{(}\StringTok{"yoo"}\NormalTok{)}
+\NormalTok{\} }\ControlFlowTok{else} \ControlFlowTok{if}\NormalTok{ (}\OtherTok{TRUE}\NormalTok{) \{ }\CommentTok{# 再检查下一个`else if`，这次是TRUE}
+  \KeywordTok{print}\NormalTok{(}\StringTok{"hey"}\NormalTok{) }\CommentTok{# 所以执行`print("hey")`}
+\NormalTok{\} }\ControlFlowTok{else}\NormalTok{ \{}
+  \KeywordTok{print}\NormalTok{(}\StringTok{"bye"}\NormalTok{) }\CommentTok{# 而轮不到else}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "hey"
+\end{verbatim}
+
+\hypertarget{for}{%
+\subsubsection{for循环}\label{for}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# 以下代码翻译成英文就是: for every element i in c(2, 4, 6, 8): }
+\CommentTok{# assign i^2 to n, then print n}
+\CommentTok{# 中文：对c(2, 4, 6, 8)`中的每一个元素i：}
+\CommentTok{# 创建一个n使得n等于i的平方，然后印出n}
+\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \KeywordTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{8}\NormalTok{)) \{ }\CommentTok{# i可以是任何你想要的名字，比如num}
+\NormalTok{  n <-}\StringTok{ }\NormalTok{i}\OperatorTok{^}\DecValTok{2} \CommentTok{# 如果上一行是 for (num in ..., 这一行就要写成 n <- num^2}
+  \KeywordTok{print}\NormalTok{(n)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 4
+## [1] 16
+## [1] 36
+## [1] 64
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x <-}\StringTok{ }\KeywordTok{vector}\NormalTok{(}\DataTypeTok{mode =} \StringTok{"numeric"}\NormalTok{) }\CommentTok{# 创建一个空的numeric vector}
+\ControlFlowTok{for}\NormalTok{ (m }\ControlFlowTok{in} \DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{) \{}
+  \ControlFlowTok{if}\NormalTok{ (m }\OperatorTok{%%}\StringTok{ }\DecValTok{2} \OperatorTok{==}\StringTok{ }\DecValTok{0}\NormalTok{) \{}
+\NormalTok{    x <-}\StringTok{ }\KeywordTok{append}\NormalTok{(x, m)}
+\NormalTok{  \}}
+\NormalTok{\}}
+
+\NormalTok{x}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]  2  4  6  8 10
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{M <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{ ,}\DecValTok{4}\NormalTok{ ,}\DecValTok{5}\NormalTok{)}
+\NormalTok{N <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{10}\NormalTok{, }\DecValTok{100}\NormalTok{, }\DecValTok{1000}\NormalTok{)}
+
+\NormalTok{x <-}\StringTok{ }\KeywordTok{vector}\NormalTok{(}\StringTok{"numeric"}\NormalTok{)}
+\ControlFlowTok{for}\NormalTok{ (m }\ControlFlowTok{in}\NormalTok{ M) \{}
+  \ControlFlowTok{for}\NormalTok{ (n }\ControlFlowTok{in}\NormalTok{ N) \{ }\CommentTok{# 在一个for循环中嵌入另一个for循环}
+\NormalTok{    x <-}\StringTok{ }\KeywordTok{append}\NormalTok{(x, m}\OperatorTok{*}\NormalTok{n)}
+\NormalTok{  \}}
+\NormalTok{\}}
+
+\NormalTok{x}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1]   10  100 1000   20  200 2000   30  300 3000   40  400 4000   50  500
+## [15] 5000
+\end{verbatim}
+
+\textbf{实际操作中，要想尽办法避免for循环，尤其是以上这种双层（多层）嵌套的for循环！}原因和方法请看第\ref{apply}节。
+
+\hypertarget{while}{%
+\subsubsection{while循环}\label{while}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x <-}\StringTok{ }\DecValTok{1}
+\ControlFlowTok{while}\NormalTok{ (x }\OperatorTok{<}\StringTok{ }\DecValTok{10}\NormalTok{) \{ }\CommentTok{# 当x<10的时候，执行大括号内的语句}
+  \KeywordTok{print}\NormalTok{(x)}
+\NormalTok{  x <-}\StringTok{ }\NormalTok{x }\OperatorTok{+}\StringTok{ }\DecValTok{3} \CommentTok{# 一定要让x的值增加，否则会进入无限循环}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1
+## [1] 4
+## [1] 7
+\end{verbatim}
+
+\hypertarget{break--next}{%
+\subsubsection{\texorpdfstring{\texttt{break} 和 \texttt{next}}{break 和 next}}\label{break--next}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{) \{}
+  \ControlFlowTok{if}\NormalTok{ (i }\OperatorTok{==}\StringTok{ }\DecValTok{3}\NormalTok{) \{}
+    \ControlFlowTok{next} \CommentTok{# 当i == 3时，跳过它，继续（最近的）for循环的下一个回合}
+\NormalTok{  \} }\ControlFlowTok{else} \ControlFlowTok{if}\NormalTok{ (i }\OperatorTok{==}\StringTok{ }\DecValTok{6}\NormalTok{) \{}
+    \ControlFlowTok{break} \CommentTok{# 当i == 6时，结束（最近的）for循环}
+\NormalTok{  \} }
+  \KeywordTok{print}\NormalTok{(i) }\CommentTok{# 只有当if和else if里的检验都为FALSE时，`print(i)`才会执行。}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1
+## [1] 2
+## [1] 4
+## [1] 5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{M <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{)}
+
+\NormalTok{x <-}\StringTok{ }\KeywordTok{vector}\NormalTok{(}\StringTok{"numeric"}\NormalTok{)}
+\ControlFlowTok{for}\NormalTok{ (m }\ControlFlowTok{in}\NormalTok{ M) \{}
+  \ControlFlowTok{while}\NormalTok{ (}\OtherTok{TRUE}\NormalTok{) \{ }\CommentTok{# 原本while(TRUE)\{\}将会是一个无限循环（判定条件永远TRUE）}
+\NormalTok{    x <-}\StringTok{ }\KeywordTok{append}\NormalTok{(x, }\DecValTok{2}\OperatorTok{*}\NormalTok{m)}
+    \ControlFlowTok{break} \CommentTok{# break打破了最近的这个while循环，而不影响for循环。}
+\NormalTok{  \}}
+\NormalTok{\}}
+
+\NormalTok{x}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]  2  4  6  8 10
+\end{verbatim}
+
+\subsection{严谨版}
+
+如果看懂了\protect\hyperlink{kickstart}{上一节}中的例子，并且作为新手不太想深究，完全可以暂时跳过这一节，前往第\ref{functions}节。
+
+\hypertarget{if-else-else-if-}{%
+\subsubsection{\texorpdfstring{\texttt{if}, \texttt{else}, \texttt{else\ if} 语句}{if, else, else if 语句}}\label{if-else-else-if-}}
+
+\texttt{if\ else}语句长这样：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if}\NormalTok{ (something is true) \{}
+\NormalTok{  do something}
+\NormalTok{\} }\ControlFlowTok{else}\NormalTok{ \{}
+\NormalTok{  do some other things }
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+其中小括号内为测试的条件，其运算结果需为TRUE或FALSE（不能是\texttt{NA}！）。如果你还不熟悉关于逻辑值的计算，请看第\ref{logical-operation}节。
+
+\begin{itemize}
+\item
+  若运算结果为TRUE：大括号内的语句将会被执行。（如果语句只有一行，大括号可以省略）
+\item
+  如运算结果为FALSE：
+
+  \begin{itemize}
+  \tightlist
+  \item
+    如果后面没有\texttt{else}语句：什么都不会发生。
+  \item
+    如果后面有\texttt{else}语句：\texttt{else}后（大括号里）的语句将会被执行。
+  \end{itemize}
+\end{itemize}
+
+R中没有专门的\texttt{elseif}语句，但用\texttt{else}加上\texttt{if}能实现同样的效果。\texttt{else\ if}可以添加在\texttt{if}语句之后，顾名思义（``或者如果''），它的作用是，如果前一个\texttt{if}测试的条件为\texttt{FALSE}，那么再新加一个测试条件。一整个\texttt{if/else/else\ if}代码块里可以包含多个\texttt{else\ if}.
+
+注意，不能直接用\texttt{x\ ==\ NA}来判断\texttt{x}是否是\texttt{NA}，而要用\texttt{is.na(x)}. 否则会得到\texttt{NA}的结果。
+
+\hypertarget{for-1}{%
+\subsubsection{for循环}\label{for-1}}
+
+\hypertarget{while-1}{%
+\subsubsection{while循环}\label{while-1}}
+
+\hypertarget{repeat}{%
+\subsubsection{repeat循环}\label{repeat}}
+
+\hypertarget{breaknext}{%
+\subsubsection{\texorpdfstring{\texttt{break}和\texttt{next}}{break和next}}\label{breaknext}}
+
+\hypertarget{apply}{%
+\subsection{\texorpdfstring{如何避免for循环------\texttt{apply()}家族函数}{如何避免for循环------apply()家族函数}}\label{apply}}
+
+R中的循环效率是很低的，尤其是有多层嵌套。通过\texttt{system.time()}函数，看看你的电脑执行以下运算需要花多少秒：（\texttt{system.time()}函数在第\ref{system-time}小节有介绍）
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x <-}\StringTok{ }\KeywordTok{vector}\NormalTok{(}\StringTok{"numeric"}\NormalTok{)}
+\KeywordTok{system.time}\NormalTok{(}
+  \ControlFlowTok{for}\NormalTok{ (l }\ControlFlowTok{in} \DecValTok{1}\OperatorTok{:}\DecValTok{40}\NormalTok{) \{}
+    \ControlFlowTok{for}\NormalTok{ (m }\ControlFlowTok{in} \DecValTok{1}\OperatorTok{:}\DecValTok{50}\NormalTok{) \{}
+      \ControlFlowTok{for}\NormalTok{ (n }\ControlFlowTok{in} \DecValTok{1}\OperatorTok{:}\DecValTok{60}\NormalTok{) \{}
+\NormalTok{        x <-}\StringTok{ }\KeywordTok{append}\NormalTok{(x, l}\OperatorTok{*}\NormalTok{m}\OperatorTok{*}\NormalTok{n)}
+\NormalTok{      \}}
+\NormalTok{    \}}
+\NormalTok{  \}}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+我的i5处理器(i5-8259U CPU @ 2.30GHz)花了39秒左右才能算出来，然而看起来计算量并不大：
+\[x = \left(1\times1\times1, 1\times1\times2\ldots, 40\times50\times59, 40\times50\times60\right)\]
+一共有\(40\times50\times60 = 120000\)次计算. 一个原因是，无论你的CPU有多少核心，R默认只会使用其中的一个进行计算。在第\ref{parallel}节中介绍了开挂使用多核的方法。但是它治标不治本，解决for循环缓慢的终极方案是避免使用for循环，而使用向量化的方法进行计算 (vectorized computation)。在第\ref{vectorization-basics}我介绍了简单的（二元）向量化计算。除了二元运算以外，很多时候，复杂的for loop也能用向量化计算实现。我们需要用到\texttt{apply()}家族的一系列函数：\texttt{apply()}, \texttt{sapply()}, \texttt{lapply()}, \texttt{mapply()}, \texttt{tapply()}, \texttt{vapply()}, \texttt{rapply()}, \texttt{eapply()}；此外，像\texttt{Map()}, \texttt{rep()}, \texttt{seq()}等函数也会执行向量化的计算。
+
+在学习它们的用法之前，先来看一个直观的数据：
+
+\begin{longtable}[]{@{}lcc@{}}
+\toprule
+方法 & \((L,M,N)=(1:40,1:50,1:60)\) & \((L,M,N)=(1:500,1:600,1:700)\)\tabularnewline
+\midrule
+\endhead
+普通（单核）for循环 & 39秒 & 等了一小时，无果，遂弃\tabularnewline
+开挂（四核）for循环 & 12.304秒；CPU巨热 & 怕CPU炸，不敢试\tabularnewline
+\texttt{sapply()} & 0.001秒 & 2.719秒\tabularnewline
+\texttt{rep()} & 0.002秒 & 2.825秒\tabularnewline
+\texttt{mapply()} & 0.004秒 & 4.302秒\tabularnewline
+\texttt{rapply()} & 0.003秒 & 2.094秒\tabularnewline
+\texttt{Map()} & 0.004秒 & 3.106秒\tabularnewline
+\bottomrule
+\end{longtable}
+
+同样是运算上面那个for循环花了39秒的例子，使用\texttt{sapply()}函数和\texttt{rep()}函数几乎是瞬间完成；而把\((l,m,n)\)增至\((1:500,1:600,1:700)\)时（计算量为1750倍），它们仍只需不到3秒，而for循环则是不可行的。
+
+（源码在）
+
+\hypertarget{lapply}{%
+\subsubsection{\texorpdfstring{\texttt{lapply()}}{lapply()}}\label{lapply}}
+
+\texttt{lapply()} (list apply)有两个参数，第一个是对象（可以是vector或者list），第二个是函数。它的作用是把函数作用于对象中的每一个元素，并返回一个list.
+
+无论对象是vector还是list, 返回的都是一个list:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{lapply}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{), }\ControlFlowTok{function}\NormalTok{(i) i}\OperatorTok{*}\DecValTok{10}\NormalTok{) }\CommentTok{# vector}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [[1]]
+## [1] 10
+## 
+## [[2]]
+## [1] 20
+## 
+## [[3]]
+## [1] 30
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{lapply}\NormalTok{(}\KeywordTok{list}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{), }\ControlFlowTok{function}\NormalTok{(i) i}\OperatorTok{*}\DecValTok{10}\NormalTok{) }\CommentTok{# list}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [[1]]
+## [1] 10
+## 
+## [[2]]
+## [1] 20
+## 
+## [[3]]
+## [1] 30
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{lapply}\NormalTok{(}\KeywordTok{list}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{6}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\DecValTok{7}\NormalTok{, }\DecValTok{9}\NormalTok{)), }\ControlFlowTok{function}\NormalTok{(i) i}\OperatorTok{*}\DecValTok{10}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [[1]]
+## [1] 10 20
+## 
+## [[2]]
+## [1] 40 60
+## 
+## [[3]]
+## [1] 70 90
+\end{verbatim}
+
+\hypertarget{sapply}{%
+\subsubsection{\texorpdfstring{\texttt{sapply()}}{sapply()}}\label{sapply}}
+
+\texttt{sapply()} (simplified list apply)的功能和\texttt{lapply()}几乎一样。\texttt{sapply()}额外的一个特点是尽可能地化简结果：
+
+\begin{itemize}
+\tightlist
+\item
+  当结果只有一个list元素时，\texttt{sapply()}返回一个vector
+\item
+  当结果有多个list元素，但每个list元素只包含一个vector且长度相等时，\texttt{sapply()}会返回一个matrix
+\end{itemize}
+
+试试以下计算：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{lapply}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{), }\ControlFlowTok{function}\NormalTok{(i) i}\OperatorTok{*}\DecValTok{10}\NormalTok{)}
+\KeywordTok{sapply}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{), }\ControlFlowTok{function}\NormalTok{(i) i}\OperatorTok{*}\DecValTok{10}\NormalTok{)}
+
+\KeywordTok{lapply}\NormalTok{(}\KeywordTok{list}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{6}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\DecValTok{7}\NormalTok{, }\DecValTok{9}\NormalTok{)), }\ControlFlowTok{function}\NormalTok{(i) i}\OperatorTok{*}\DecValTok{10}\NormalTok{)}
+\KeywordTok{sapply}\NormalTok{(}\KeywordTok{list}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{6}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\DecValTok{7}\NormalTok{, }\DecValTok{9}\NormalTok{)), }\ControlFlowTok{function}\NormalTok{(i) i}\OperatorTok{*}\DecValTok{10}\NormalTok{)}
+
+\KeywordTok{lapply}\NormalTok{(}\KeywordTok{list}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{), }\ControlFlowTok{function}\NormalTok{(i) i}\OperatorTok{*}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{100}\NormalTok{))}
+\KeywordTok{sapply}\NormalTok{(}\KeywordTok{list}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{), }\ControlFlowTok{function}\NormalTok{(i) i}\OperatorTok{*}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{100}\NormalTok{))}
+
+\KeywordTok{lapply}\NormalTok{(}\KeywordTok{list}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{6}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\DecValTok{7}\NormalTok{, }\DecValTok{9}\NormalTok{)), }\ControlFlowTok{function}\NormalTok{(i) i}\OperatorTok{*}\DecValTok{10}\NormalTok{)}
+\KeywordTok{sapply}\NormalTok{(}\KeywordTok{list}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{6}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\DecValTok{7}\NormalTok{, }\DecValTok{9}\NormalTok{)), }\ControlFlowTok{function}\NormalTok{(i) i}\OperatorTok{*}\DecValTok{10}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{mapplymap}{%
+\subsubsection{\texorpdfstring{\texttt{mapply()}和\texttt{Map()}}{mapply()和Map()}}\label{mapplymap}}
+
+\texttt{mapply()}的意思是``\texttt{Map+sapply}''，它的计算过程和\texttt{Map()}函数类似，但是会像\texttt{sapply()}一样把结果化简。
+
+简单地说，有些函数把参数中的vector作为一个整体使用，而用\texttt{mapply()}/\texttt{Map()}可以把这些vector逐元素地使用。而且，\texttt{mapply()}/\texttt{Map()}可以对多参数的函数进行向量化计算，因此\texttt{mapply()}的``m''经常被解释为代表``multivariate''.
+
+假设你想创建一个这样的vector：
+
+\begin{verbatim}
+##  [1] 1 1 1 2 2 2 3 3 3 4 4 4
+\end{verbatim}
+
+通过复习第\ref{rep}节，很容易得出答案：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{rep}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\DecValTok{4}\NormalTok{, }\DataTypeTok{each =} \DecValTok{3}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+粗心的读者可能以为是：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{rep}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\DecValTok{4}\NormalTok{, }\DecValTok{3}\NormalTok{) }\CommentTok{# 即rep(1:4, times = 3)}
+\end{Highlighting}
+\end{Shaded}
+
+而实际上它的运算结果是：
+
+\begin{verbatim}
+##  [1] 1 2 3 4 1 2 3 4 1 2 3 4
+\end{verbatim}
+
+因为\texttt{1:4}（即\texttt{c(1,\ 2,\ 3,\ 4)}）被作为一个整体使用了。正确的写法是：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{as.vector}\NormalTok{(}\KeywordTok{mapply}\NormalTok{(rep, }\DecValTok{1}\OperatorTok{:}\DecValTok{4}\NormalTok{, }\DecValTok{3}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\texttt{mapply(rep,\ 1:4,\ 3)}的第一个参数是所需函数的名字，其它的参数为所需函数的参数。你可以指名道姓：\texttt{mapply(rep,\ x\ =\ 1:4,\ times\ =\ 3)}，或者根据排序键入参数而无需指定参数名（见第\ref{abbr}节）。其中第一个参数 (\texttt{1:4})不是长度为1的vector，因此它会被\texttt{mapply()}转换成list并执行逐元素运算，即运算过程和结果为：
+
+\begin{verbatim}
+mapply(rep, 1:4, 3)
+= mapply(rep, c(1, 2, 3, 4), 3)
+= list(rep(1, 3), rep(2, 3), rep(3, 3), rep(4, 3))
+= list(c(1,1,1), c(2,2,2), c(3,3,3), c(4,4,4))
+
+# 等价于 sapply(list(1, 2, 3, 4), function(x) rep(x, 3))
+\end{verbatim}
+
+为什么我们实际上看到的是一个matrix呢？这是因为每个list元素所含的vector的长度相等，因此自动化简为matrix. 若要查看未化简的版本：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{mapply}\NormalTok{(rep, }\DecValTok{1}\OperatorTok{:}\DecValTok{4}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DataTypeTok{SIMPLIFY =} \OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+或者
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{Map}\NormalTok{(rep, }\DecValTok{1}\OperatorTok{:}\DecValTok{4}\NormalTok{, }\DecValTok{3}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [[1]]
+## [1] 1 1 1
+## 
+## [[2]]
+## [1] 2 2 2
+## 
+## [[3]]
+## [1] 3 3 3
+## 
+## [[4]]
+## [1] 4 4 4
+\end{verbatim}
+
+你可能已经发现，用\texttt{sapply()}函数其实也可以较为简单地实现这个例子：\texttt{sapply(1:4,\ function(x)\ rep(x,\ 3))}；那\texttt{mapply()}/\texttt{Map()}有没有其它特殊的特性呢？有。多参数的向量化运算。对于多参数的函数，\texttt{sapply()}只能使用其中的第一个进行向量化运算，而其他的参数必须为常数。而\texttt{mapply()}/\texttt{Map()}可以这样：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{Map}\NormalTok{(seq, }\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{20}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\DecValTok{5}\NormalTok{, }\DecValTok{25}\NormalTok{, }\DecValTok{100}\NormalTok{), }\DataTypeTok{length.out =} \DecValTok{5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [[1]]
+## [1] 1 2 3 4 5
+## 
+## [[2]]
+## [1]  5 10 15 20 25
+## 
+## [[3]]
+## [1]  20  40  60  80 100
+\end{verbatim}
+
+它执行了三次计算：\texttt{seq(1,\ 5,\ length.out\ =\ 5)}, \texttt{seq(2,\ 25,\ length.out\ =\ 5)}和\texttt{seq(20,\ 100,\ length.out\ =\ 5)}.
+
+想一想，这个结果是否可以化简？如果是，化简结果是什么？用\texttt{mapply()}函数执行同样的计算来验证你的答案。
+
+当对象是一个list的时候，
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{Map}\NormalTok{(rep, }\KeywordTok{list}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{8}\NormalTok{, }\DecValTok{9}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\DecValTok{6}\NormalTok{, }\DecValTok{7}\NormalTok{)), }\DecValTok{3}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [[1]]
+## [1] 8 9 8 9 8 9
+## 
+## [[2]]
+## [1] 6 7 6 7 6 7
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{lapply}\NormalTok{(}\KeywordTok{list}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{8}\NormalTok{, }\DecValTok{9}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\DecValTok{6}\NormalTok{, }\DecValTok{7}\NormalTok{)), }\ControlFlowTok{function}\NormalTok{(x) }\KeywordTok{rep}\NormalTok{(x, }\DecValTok{3}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [[1]]
+## [1] 8 9 8 9 8 9
+## 
+## [[2]]
+## [1] 6 7 6 7 6 7
+\end{verbatim}
+
+想一想，\texttt{Map(rep,\ list(c(1,2),\ list(2,3)),\ 3)}的计算结果是什么？
+
+\hypertarget{rep-1}{%
+\subsubsection{\texorpdfstring{\texttt{rep()}}{rep()}}\label{rep-1}}
+
+还是上一小节中的vector：
+
+\begin{verbatim}
+##  [1] 1 1 1 2 2 2 3 3 3 4 4 4
+\end{verbatim}
+
+其实可以仅用\texttt{rep()}函数简洁地实现：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{rep}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\DecValTok{4}\NormalTok{, }\KeywordTok{rep}\NormalTok{(}\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+如果不明白为什么，请复习第\ref{rep}节。
+
+\hypertarget{foreach}{%
+\subsection{\texorpdfstring{\texttt{foreach} package：for循环的进化版}{foreach package：for循环的进化版}}\label{foreach}}
+
+\texttt{foreach} package相对于base R中的for循环增加了一些特性，不过最实用的是支持多核并行运算：
+
+\hypertarget{parallel}{%
+\subsubsection{使用多内核进行计算}\label{parallel}}
+
+首先需要安装和使用\texttt{doParallel}，然后才可以使用\texttt{foreach}中的\texttt{\%dopar}进行多核并行运算。
+
+查看和设置内核数量：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(doParallel)}
+\KeywordTok{getDoParWorkers}\NormalTok{() }\CommentTok{# 查看R当前使用的内核数量；默认应为1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 4
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{detectCores}\NormalTok{() }\CommentTok{# 查看可用内核总数}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 8
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{registerDoParallel}\NormalTok{(}\DecValTok{4}\NormalTok{) }\CommentTok{# 设置内核数量}
+\KeywordTok{getDoParWorkers}\NormalTok{() }\CommentTok{# 再次检查内核数量}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 4
+\end{verbatim}
+
+设置完之后就可以使用\texttt{\%dopar}进行多核并行运算了：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x <-}\StringTok{ }\KeywordTok{foreach}\NormalTok{(}\DataTypeTok{l =} \DecValTok{1}\OperatorTok{:}\DecValTok{40}\NormalTok{, }\DataTypeTok{.combine =} \StringTok{"c"}\NormalTok{) }\OperatorTok{%dopar%}\StringTok{ }\NormalTok{\{}
+    \KeywordTok{foreach}\NormalTok{(}\DataTypeTok{m =} \DecValTok{1}\OperatorTok{:}\DecValTok{50}\NormalTok{, }\DataTypeTok{.combine =} \StringTok{"c"}\NormalTok{) }\OperatorTok{%dopar%}\StringTok{ }\NormalTok{\{}
+        \KeywordTok{foreach}\NormalTok{(}\DataTypeTok{n =} \DecValTok{1}\OperatorTok{:}\DecValTok{60}\NormalTok{, }\DataTypeTok{.combine =} \StringTok{"c"}\NormalTok{) }\OperatorTok{%do%}\StringTok{ }\NormalTok{\{}
+\NormalTok{        l}\OperatorTok{*}\NormalTok{m}\OperatorTok{*}\NormalTok{n}
+\NormalTok{        \}}
+\NormalTok{    \}}
+\NormalTok{\}}
+\NormalTok{x}
+\end{Highlighting}
+\end{Shaded}
+
+相比单核for循环的39秒，开挂（四核）的速度是12秒（计算量越大，优势越明显）。
+
+\hypertarget{functions}{%
+\section{函数}\label{functions}}
+
+\hypertarget{functions-in-R}{%
+\subsection{R中的函数}\label{functions-in-R}}
+
+不像很多其他语言的函数（和方法）有\texttt{value.func()}和\texttt{func\ value}等格式，R中所有函数的通用格式是这样的：
+
+\begin{verbatim}
+function(argument1 = value1, argument2 = value2, ...)
+\end{verbatim}
+
+比如
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sample <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\FloatTok{5.1}\NormalTok{, }\FloatTok{5.2}\NormalTok{, }\FloatTok{4.5}\NormalTok{, }\FloatTok{5.3}\NormalTok{, }\FloatTok{4.3}\NormalTok{, }\FloatTok{5.5}\NormalTok{, }\FloatTok{5.7}\NormalTok{)}
+\CommentTok{# 根据传统，赋值变量时用`<-`号，赋值函数参数时才用`=`}
+\KeywordTok{t.test}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ sample, }\DataTypeTok{mu =} \FloatTok{4.5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  One Sample t-test
+## 
+## data:  sample
+## t = 3.0308, df = 6, p-value = 0.02307
+## alternative hypothesis: true mean is not equal to 4.5
+## 95 percent confidence interval:
+##  4.612840 5.558589
+## sample estimates:
+## mean of x 
+##  5.085714
+\end{verbatim}
+
+二元运算符和\texttt{{[}}（取子集符号）看起来一点都不像函数，而实际上它们也是函数，因此也可以用通用的格式使用他们，只是需要加上引号：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\StringTok{"+"}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\StringTok{"["}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"四川担担面"}\NormalTok{, }\StringTok{"武汉热干面"}\NormalTok{, }\StringTok{"兰州牛肉面"}\NormalTok{, }\StringTok{"北京炸酱面"}\NormalTok{), }\DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "武汉热干面"
+\end{verbatim}
+
+可自定义的二元运算符形式为\texttt{\%x\%}, 其中\texttt{x}为任何字符。（见第\ref{binary-operaters}节）
+
+（英语中，``parameter''或``formal argument''二词用于函数定义，``argument''或``actual argument''二词用于调用函数(Kernighan and Ritchie \protect\hyperlink{ref-Kernighan1988The-C-Programming-La}{1988})，中文里分别是``形式参数''和``实际参数''，但是多数场合简称``参数''。）
+
+\hypertarget{abbr}{%
+\subsection{调用函数}\label{abbr}}
+
+根据通用格式（\texttt{function(argument1\ =\ value1,\ argument2\ =\ value2,\ ...)}）调用函数。对于二元运算符，\texttt{a\ \%x\%\ b}等价于\texttt{"x"(a,\ b)}.
+
+从``\texttt{function(}''开始到此函数结尾的``\texttt{)}''中间为参数，参数用逗号隔开，空格和换行会被忽略，``\texttt{\#}''符号出现之处，那一行之后的内容都会被忽略。这意味着你可以（丧心病狂地）像这样调用一个函数。
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{sum}\NormalTok{        (}
+ \CommentTok{# 4   }
+        \DecValTok{4} \CommentTok{# 我怕不是}
+\NormalTok{,              }\CommentTok{#疯了哦}
+            \DecValTok{6}
+  
+\NormalTok{  )}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 10
+\end{verbatim}
+
+它实际的好处是，当参数很长或是有嵌套的函数时，可以通过换行和空格使代码更易读，就像其它的编程语言一样。
+
+函数的参数以\texttt{seq}函数为例，通过查看documentation（在console执行\texttt{?seq}）可以查看它的所有的参数：
+
+\begin{verbatim}
+## Default S3 method:
+seq(from = 1, to = 1, by = ((to - from)/(length.out - 1)),
+    length.out = NULL, along.with = NULL, ...)
+\end{verbatim}
+
+可以看到第一个参数是\texttt{from}，第二个是\texttt{to}，第三个是\texttt{by}，以此类推。因此我们执行\texttt{seq(0,\ 50,\ 10)}的时候，R会自动理解成\texttt{seq(from\ =\ 0,\ to\ =\ 50,\ by\ =\ 10)}。而想用指定长度的方法就必须要写清楚是\texttt{length.out}等于几。
+
+\texttt{length.out}本身也可以简写：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{25}\NormalTok{, }\DataTypeTok{l =} \DecValTok{11}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1]  0.0  2.5  5.0  7.5 10.0 12.5 15.0 17.5 20.0 22.5 25.0
+\end{verbatim}
+
+因为参数中只有\texttt{length.out}是以\texttt{l}开头的，\texttt{l}会被理解为\texttt{length.out}. 但是这个习惯并不好；自己用用就算了，与别人分享自己的工作时请务必使用标准写法。
+
+\hypertarget{create-functions}{%
+\subsection{创建函数}\label{create-functions}}
+
+\hypertarget{general-functions}{%
+\subsubsection{普通函数}\label{general-functions}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{函数名 <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(参数1, 参数2, ...)\{}
+\NormalTok{  对参数1和参数2}
+\NormalTok{  进行}
+\NormalTok{  一系列}
+\NormalTok{  一行或者多行}
+\NormalTok{  计算}
+  \KeywordTok{return}\NormalTok{(计算结果)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+在R中，函数是作为对象保存的，因此定义函数不需要一套另外的符号/语句，还是用赋值符号\texttt{\textless{}-}，和\texttt{function()}函数。
+
+R自带了计算样本标准差 (standard deviation, \(s\))的函数, \texttt{sd()}，我们可以根据它写一个计算均值标准差（即``标准误'', standard error）（\(SE=s_{\bar{x}}=\frac{s}{\sqrt{n}}\)）
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{SE <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x) \{}
+\NormalTok{  s <-}\StringTok{ }\KeywordTok{sd}\NormalTok{(x)}
+\NormalTok{  n <-}\StringTok{ }\KeywordTok{length}\NormalTok{(x)}
+\NormalTok{  result <-}\StringTok{ }\NormalTok{s}\OperatorTok{/}\KeywordTok{sqrt}\NormalTok{(n)}
+  \KeywordTok{return}\NormalTok{(result)}
+\NormalTok{\}}
+\CommentTok{# 随后，你就可以使用自定义的函数了}
+\KeywordTok{SE}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{5}\NormalTok{,}\DecValTok{6}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{6}\NormalTok{,}\DecValTok{6}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{8}\NormalTok{)) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.3367673
+\end{verbatim}
+
+这里其实可以做一些省略。很多时候，最后一``句''的\textbf{计算结果}（不是赋值计算）就是我们想\texttt{return}的结果。因此，这时\texttt{return}可以省略：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{SE <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x) \{}
+\NormalTok{  s <-}\StringTok{ }\KeywordTok{sd}\NormalTok{(x)}
+\NormalTok{  n <-}\StringTok{ }\KeywordTok{length}\NormalTok{(x)}
+\NormalTok{  s}\OperatorTok{/}\KeywordTok{sqrt}\NormalTok{(n) }\CommentTok{# 注意不是`result <- s/sqrt(n)`}
+\NormalTok{\}}
+\KeywordTok{SE}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{5}\NormalTok{,}\DecValTok{6}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{6}\NormalTok{,}\DecValTok{6}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{8}\NormalTok{)) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.3367673
+\end{verbatim}
+
+很多时候，函数内部有复杂流程控制，这时使用\texttt{return()}可以很大地增强易读性：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# 这是随手写的一个没有意义的函数}
+\NormalTok{myfunc <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(i)\{}
+\NormalTok{  k <-}\StringTok{ }\DecValTok{8}
+  \ControlFlowTok{if}\NormalTok{ (i}\OperatorTok{>}\DecValTok{3}\NormalTok{) \{}
+\NormalTok{    j <-}\StringTok{ }\OperatorTok{-}\NormalTok{i}
+    \ControlFlowTok{while}\NormalTok{(j }\OperatorTok{<}\StringTok{ }\DecValTok{20}\NormalTok{)\{}
+\NormalTok{      k <-}\StringTok{ }\NormalTok{k }\OperatorTok{+}\StringTok{ }\NormalTok{i }\OperatorTok{+}\StringTok{ }\NormalTok{j}
+\NormalTok{      j <-}\StringTok{ }\NormalTok{j}\OperatorTok{+}\DecValTok{5}
+\NormalTok{    \}}
+    \KeywordTok{return}\NormalTok{(k)}
+\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ \{}
+    \ControlFlowTok{if}\NormalTok{ (i }\OperatorTok{%%}\StringTok{ }\DecValTok{2} \OperatorTok{==}\StringTok{ }\DecValTok{0}\NormalTok{) \{}
+      \KeywordTok{return}\NormalTok{(}\DecValTok{5}\NormalTok{)}
+\NormalTok{    \} }\ControlFlowTok{else} \KeywordTok{return}\NormalTok{(k}\OperatorTok{*}\NormalTok{i)}
+\NormalTok{  \}}
+\NormalTok{\}}
+\KeywordTok{myfunc}\NormalTok{(}\DecValTok{6}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 83
+\end{verbatim}
+
+\hypertarget{anonymous-functions}{%
+\subsubsection{无名函数}\label{anonymous-functions}}
+
+本章剩余的内容，都是比较进阶的了。可以酌情从这里跳转至本章第\ref{test-base}节。
+
+函数不需要名字也可以执行。一般，会与\texttt{apply}族函数联用（见第\ref{apply}节）：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{sapply}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\DecValTok{5}\NormalTok{, }\ControlFlowTok{function}\NormalTok{(x) x}\OperatorTok{^}\DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]  1  4  9 16 25
+\end{verbatim}
+
+或者用于
+
+\hypertarget{binary-operaters}{%
+\subsubsection{二元运算符}\label{binary-operaters}}
+
+定义二元运算符的方式和定义普通函数的方法极其类似，只是参数必须要有且仅有两个（否则作为``二元''运算符就无意义了），且运算符名称需要用引号包围。
+
+比如我们可以定义一个计算椭圆面积的函数
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\StringTok{'%el%'}\NormalTok{ <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x, y) pi}\OperatorTok{*}\NormalTok{x}\OperatorTok{*}\NormalTok{y}
+
+\DecValTok{2} \OperatorTok{%el%}\StringTok{ }\DecValTok{5}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 31.41593
+\end{verbatim}
+
+原则上，可自定义的二元运算符不一定要用\texttt{\%}包围；\texttt{+}, \texttt{-}, \texttt{:}等符号的功能都可以被自定义，但是它们是R自带的，非常常用的函数，重定义它们只会带来麻烦。
+
+\hypertarget{closure}{%
+\subsubsection{闭包 (Closure)}\label{closure}}
+
+函数里可以包含着另一个函数，这就形成了一个闭包：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{myfunc <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{()\{}
+\NormalTok{  a =}\StringTok{ }\DecValTok{5}
+  \ControlFlowTok{function}\NormalTok{()\{}
+\NormalTok{    b =}\StringTok{ }\DecValTok{10}
+    \KeywordTok{return}\NormalTok{(a}\OperatorTok{*}\NormalTok{b)}
+\NormalTok{  \}}
+\NormalTok{\}}
+\CommentTok{# 执行myfunc()的时候，默认结果为最后一句/一行，在这里应为内函数：}
+\KeywordTok{myfunc}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## function(){
+##     b = 10
+##     return(a*b)
+##   }
+## <environment: 0x7fb2f2ec9b20>
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# 既然`myfunc()`的结果是一个函数，那么在后面再加上一个括号就是执行内函数了；内函数可以使用外函数中所定义的变量（比如这里使用了外函数的`a = 5`）}
+\KeywordTok{myfunc}\NormalTok{()()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 50
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{speak <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x)\{}
+  \KeywordTok{x}\NormalTok{()}\OperatorTok{$}\NormalTok{speak}
+\NormalTok{\}}
+
+\KeywordTok{speak}\NormalTok{(cat)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## NULL
+\end{verbatim}
+
+\hypertarget{oop}{%
+\subsubsection{伪·OOP}\label{oop}}
+
+我貌似，捣鼓出了一种完全使用R中的简易函数实现伪·OOP的方法（R中的真·OOP是有三种，S3，R6和S4）：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Cat <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(name)\{}
+\NormalTok{  name =}\StringTok{ }\NormalTok{name}
+\NormalTok{  binomial_name <-}\StringTok{ "Felis catus"}
+\NormalTok{  speak <-}\StringTok{ "Meow"}
+\NormalTok{  greet <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(}\DataTypeTok{time =} \StringTok{"not_specified"}\NormalTok{)\{}
+\NormalTok{    intro <-}\StringTok{ }\KeywordTok{paste}\NormalTok{(}\StringTok{"my name is"}\NormalTok{, name)}
+    \ControlFlowTok{if}\NormalTok{(time }\OperatorTok{==}\StringTok{ "morning"}\NormalTok{) }\KeywordTok{print}\NormalTok{(}\KeywordTok{paste}\NormalTok{(}\StringTok{"Good morning,"}\NormalTok{, intro))}
+    \ControlFlowTok{if}\NormalTok{(time }\OperatorTok{==}\StringTok{ "afternoon"}\NormalTok{) }\KeywordTok{print}\NormalTok{(}\KeywordTok{paste}\NormalTok{(}\StringTok{"Good afternoon,"}\NormalTok{, intro))}
+    \ControlFlowTok{if}\NormalTok{(time }\OperatorTok{==}\StringTok{ "evening"}\NormalTok{) }\KeywordTok{print}\NormalTok{(}\KeywordTok{paste}\NormalTok{(}\StringTok{"Good evening,"}\NormalTok{, intro)) }
+    \ControlFlowTok{if}\NormalTok{(time }\OperatorTok{==}\StringTok{ "not_specified"}\NormalTok{) }\KeywordTok{print}\NormalTok{(}\KeywordTok{paste}\NormalTok{(}\StringTok{"Hi,"}\NormalTok{, intro))}
+\NormalTok{  \}}
+    \KeywordTok{paste}\NormalTok{(}\StringTok{"Hi, my name is "}\NormalTok{, name)}
+  \KeywordTok{list}\NormalTok{(}\DataTypeTok{name =}\NormalTok{ name, }\DataTypeTok{binomial_name =}\NormalTok{ binomial_name, }\DataTypeTok{speak =}\NormalTok{ speak, }\DataTypeTok{greet =}\NormalTok{ greet)}
+\NormalTok{\}}
+
+\NormalTok{Felix <-}\StringTok{ }\KeywordTok{Cat}\NormalTok{(}\StringTok{"Felix"}\NormalTok{)}
+\NormalTok{Felix}\OperatorTok{$}\NormalTok{name}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Felix"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Felix}\OperatorTok{$}\KeywordTok{greet}\NormalTok{(}\StringTok{"morning"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Good morning, my name is Felix"
+\end{verbatim}
+
+\textbf{inheritance和polymorphism的实现}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Pet <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(}\DataTypeTok{name =} \OtherTok{NA}\NormalTok{, }\DataTypeTok{common_name =} \OtherTok{NA}\NormalTok{, }\DataTypeTok{binomial_name =} \OtherTok{NA}\NormalTok{, }\DataTypeTok{speak =} \OtherTok{NA}\NormalTok{)\{}
+\NormalTok{  name <-}\StringTok{ }\NormalTok{name}
+\NormalTok{  common_name <-}\StringTok{ }\NormalTok{common_name}
+\NormalTok{  binomial_name <-}\StringTok{ }\NormalTok{binomial_name}
+\NormalTok{  speak <-}\StringTok{ }\NormalTok{speak}
+\NormalTok{  greet <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(}\DataTypeTok{time =} \StringTok{"not_specified"}\NormalTok{)\{}
+\NormalTok{    intro <-}\StringTok{ }\KeywordTok{paste}\NormalTok{(}\StringTok{"I'm a"}\NormalTok{, common_name, }\StringTok{"and my name is"}\NormalTok{, name)}
+    \ControlFlowTok{if}\NormalTok{(time }\OperatorTok{==}\StringTok{ "morning"}\NormalTok{) }\KeywordTok{print}\NormalTok{(}\KeywordTok{paste}\NormalTok{(}\StringTok{"Good morning,"}\NormalTok{, intro))}
+    \ControlFlowTok{if}\NormalTok{(time }\OperatorTok{==}\StringTok{ "afternoon"}\NormalTok{) }\KeywordTok{print}\NormalTok{(}\KeywordTok{paste}\NormalTok{(}\StringTok{"Good afternoon,"}\NormalTok{, intro))}
+    \ControlFlowTok{if}\NormalTok{(time }\OperatorTok{==}\StringTok{ "evening"}\NormalTok{) }\KeywordTok{print}\NormalTok{(}\KeywordTok{paste}\NormalTok{(}\StringTok{"Good evening,"}\NormalTok{, intro)) }
+    \ControlFlowTok{if}\NormalTok{(time }\OperatorTok{==}\StringTok{ "not_specified"}\NormalTok{) }\KeywordTok{print}\NormalTok{(}\KeywordTok{paste}\NormalTok{(}\StringTok{"Hi,"}\NormalTok{, intro))}
+\NormalTok{  \}}
+    \KeywordTok{paste}\NormalTok{(}\StringTok{"Hi, my name is "}\NormalTok{, name)}
+  \KeywordTok{list}\NormalTok{(}\DataTypeTok{name =}\NormalTok{ name, }\DataTypeTok{common_name =}\NormalTok{ common_name, }\DataTypeTok{binomial_name =}\NormalTok{ binomial_name, }\DataTypeTok{speak =}\NormalTok{ speak, }\DataTypeTok{greet =}\NormalTok{ greet)}
+\NormalTok{\}}
+
+
+\NormalTok{Turtle <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(}\DataTypeTok{name =} \OtherTok{NA}\NormalTok{)\{}
+  \KeywordTok{Pet}\NormalTok{(name, }\StringTok{"turtle"}\NormalTok{, }\StringTok{"Trachemys scripta elegans"}\NormalTok{) }\CommentTok{# 实现inheritance # 龟没有叫声}
+\NormalTok{\}}
+
+\NormalTok{Cat <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(}\DataTypeTok{name =} \OtherTok{NA}\NormalTok{, }\DataTypeTok{sterilized =} \OtherTok{NA}\NormalTok{)\{}
+\NormalTok{  sterilized <-}\StringTok{ }\NormalTok{sterilized }\CommentTok{# 猫可能绝育 # 新增attribute，实现了广义的polymorphism}
+\NormalTok{  PetAaM <-}\StringTok{ }\KeywordTok{Pet}\NormalTok{(name, }\StringTok{"cat"}\NormalTok{, }\StringTok{"Felis catus"}\NormalTok{, }\StringTok{"Meow"}\NormalTok{)}
+\NormalTok{  CatOnlyAaM <-}\StringTok{ }\KeywordTok{list}\NormalTok{(}\DataTypeTok{sterilized =}\NormalTok{ sterilized)}
+  \KeywordTok{c}\NormalTok{(PetAaM, CatOnlyAaM)}
+\NormalTok{\}}
+
+\CommentTok{# 实现了Python语境中的polymorphism}
+\NormalTok{greet <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(pet, }\DataTypeTok{time =} \StringTok{"not_specified"}\NormalTok{)\{}
+\NormalTok{  pet}\OperatorTok{$}\KeywordTok{greet}\NormalTok{(time)}
+\NormalTok{\}}
+
+\NormalTok{binomial_name <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(pet)\{}
+\NormalTok{  pet}\OperatorTok{$}\NormalTok{binomial_name}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+使用例：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Felix <-}\StringTok{ }\KeywordTok{Cat}\NormalTok{(}\StringTok{"Felix"}\NormalTok{, }\StringTok{"TRUE"}\NormalTok{)}
+\NormalTok{Kazuya <-}\StringTok{ }\KeywordTok{Turtle}\NormalTok{(}\StringTok{"Kazuya"}\NormalTok{)}
+
+\NormalTok{Felix}\OperatorTok{$}\NormalTok{binomial_name}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Felis catus"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Kazuya}\OperatorTok{$}\KeywordTok{greet}\NormalTok{(}\StringTok{"afternoon"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Good afternoon, I'm a turtle and my name is Kazuya"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{greet}\NormalTok{(Felix, }\StringTok{"morning"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Good morning, I'm a cat and my name is Felix"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{sapply}\NormalTok{(}\KeywordTok{list}\NormalTok{(Kazuya, Felix), binomial_name)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Trachemys scripta elegans" "Felis catus"
+\end{verbatim}
+
+没有\texttt{class}，没有\texttt{self}，没有\texttt{\_\_init\_\_}，\emph{it just works}.
+
+\hypertarget{...}{%
+\subsection{\texorpdfstring{关于\texttt{...}}{关于...}}\label{...}}
+
+有时候，你想写的函数可能有数量不定的参数，或是有需要传递给另一个函数的``其他参数''（即本函数不需要的参数），这时候可以在函数定义时加入一个名为\texttt{...}的参数，然后用\texttt{list()}来读取它们。list是进阶内容，在第\ref{list}节有说明。
+
+比如我写一个很无聊的函数：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my_func <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(arg1, }\DataTypeTok{arg2 =} \DecValTok{100}\NormalTok{, ...)\{}
+\NormalTok{  other_args <-}\StringTok{ }\KeywordTok{list}\NormalTok{(...)}
+  \KeywordTok{print}\NormalTok{(arg1)}
+  \KeywordTok{print}\NormalTok{(arg2)}
+  \KeywordTok{print}\NormalTok{(other_args)}
+\NormalTok{\}}
+
+\KeywordTok{my_func}\NormalTok{(}\StringTok{"foo"}\NormalTok{, }\DataTypeTok{cities =} \KeywordTok{c}\NormalTok{(}\StringTok{"崇阳"}\NormalTok{, }\StringTok{"Αθήνα"}\NormalTok{, }\StringTok{"つがる"}\NormalTok{), }\DataTypeTok{nums =} \KeywordTok{c}\NormalTok{(}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{6}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "foo"
+## [1] 100
+## $cities
+## [1] "崇阳"   "Αθήνα"  "つがる"
+## 
+## $nums
+## [1] 3 4 6
+\end{verbatim}
+
+\texttt{arg1}指定了是\texttt{"foo"}（通过\protect\hyperlink{abbr}{简写}），因此第一行印出\texttt{"foo"}; \texttt{arg2}未指定，因此使用默认值\texttt{100}，印在第二行。\texttt{cities}和\texttt{nums}在形式参数中没有匹配，因此归为``\ldots{}''，作为list印在第三行及之后。
+
+\hypertarget{system-time}{%
+\subsection{测速}\label{system-time}}
+
+当你开始处理复杂，大量的数据时，或是向别人分享自己的代码时，代码执行的速度变得重要。
+
+一段代码/一个函数经常有很多种写法，哪种效率更高呢？实践是检验真理的唯一标准，R提供了一个测速函数：\texttt{system.time()}函数。
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x <-}\StringTok{ }\KeywordTok{vector}\NormalTok{(}\StringTok{'numeric'}\NormalTok{)}
+\KeywordTok{system.time}\NormalTok{(}
+  \ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \DecValTok{1}\OperatorTok{:}\DecValTok{50}\NormalTok{)\{}
+    \ControlFlowTok{for}\NormalTok{ (j }\ControlFlowTok{in} \DecValTok{1}\OperatorTok{:}\DecValTok{100}\NormalTok{) \{}
+\NormalTok{      x <-}\StringTok{ }\KeywordTok{append}\NormalTok{(x, i}\OperatorTok{*}\NormalTok{j)}
+\NormalTok{    \}}
+\NormalTok{  \}}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    user  system elapsed 
+##   0.041   0.011   0.051
+\end{verbatim}
+
+其中第三个数字 (\texttt{elapsed})是执行\texttt{system.time()}括号内的语句实际消耗的时间。可以使用索引 (\texttt{{[}3{]}})抓取。
+
+如果括号内的语句大于一句，像这样：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{system.time}\NormalTok{(}
+  \DecValTok{1} \OperatorTok{+}\StringTok{ }\DecValTok{1}
+  \DecValTok{2} \OperatorTok{+}\StringTok{ }\DecValTok{1}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+R会报错。就像流程控制里学到的那样，需要用大括号包围多行/多句的语句，就像这样：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{system.time}\NormalTok{(\{}
+  \DecValTok{1} \OperatorTok{+}\StringTok{ }\DecValTok{1}
+  \DecValTok{2} \OperatorTok{+}\StringTok{ }\DecValTok{1}
+\NormalTok{\})}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{list-intro}{%
+\subsection{列表 (list)}\label{list-intro}}
 
 R中的list是一种特殊的数据存储形式。使用\texttt{list()}函数来创建lists.
 
 尝试对lists和vectors使用\texttt{is.vector()}, \texttt{is.list()}, \texttt{is.atomic()}和\texttt{is.recursive()}函数，你会发现list虽然也是``vector''，但我们一般说的``vector''都是指只能存储一种数据类型的atomic vector；而lists是recursive vector.
 
-这意味着\textbf{一个list能存储多种类型的数据，且可以包含子list}。list中的每个元素可以是\textbf{任何R中的物件} (object)：除了常用的 (atomic) vector和另外一个（子）list以外，还可以有dataframe/tibble和函数：
+这意味着\textbf{一个list能存储多种类型的数据，且可以包含子list}。list中的每个元素可以是\textbf{任何R中的对象} (object)：除了常用的 (atomic) vector和另外一个（子）list以外，还可以有dataframe/tibble和函数：
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2603,12 +3739,12 @@ R中的list是一种特殊的数据存储形式。使用\texttt{list()}函数来
 ## [[5]]
 ## function (x, ...) 
 ## UseMethod("t.test")
-## <bytecode: 0x7fd92ae03b18>
+## <bytecode: 0x7fb2edcdec20>
 ## <environment: namespace:stats>
 \end{verbatim}
 
-\hypertarget{list}{%
-\subsubsection{list的索引/取子集}\label{list}}
+\hypertarget{list-index}{%
+\subsubsection{list的索引/取子集}\label{list-index}}
 
 使用上面的例子：
 
@@ -2635,7 +3771,7 @@ R中的list是一种特殊的数据存储形式。使用\texttt{list()}函数来
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{y[[}\DecValTok{3}\NormalTok{]][[}\DecValTok{2}\NormalTok{]] }\CommentTok{# 得到的也是一个vector；母list的索引在前，子list的在后}
+\NormalTok{y[[}\DecValTok{3}\NormalTok{]][[}\DecValTok{2}\NormalTok{]] }\CommentTok{# 得到的也是一个vector；父list的索引在前，子list的在后}
 \end{Highlighting}
 \end{Shaded}
 
@@ -2697,16 +3833,81 @@ list里的元素可以有名字；被命名的元素可以通过\texttt{\$}符�
 ## [1] TRUE TRUE TRUE
 \end{verbatim}
 
-\hypertarget{dataframetibble}{%
-\subsubsection{Dataframe和tibble的本质}\label{dataframetibble}}
+\subsubsection{合并与拆解}
 
-聪明的你也许已经注意到了，dataframe/tibble\protect\hyperlink{single-column}{抓取单列的方法}和list的取子集惊人地相似（我曾经的语文老师喜欢调侃抄作业的同学的答案与参考答案``惊人地相似''）。
-
-事实上，dataframe的本质正是list，而tibble也是dataframe（只是进化了一些功能）：
+通过\texttt{c()}函数来合并多个列表。
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{is.list}\NormalTok{(mpg)}
+\KeywordTok{c}\NormalTok{(}\KeywordTok{list}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{), }\KeywordTok{list}\NormalTok{(}\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\KeywordTok{list}\NormalTok{(}\DecValTok{5}\NormalTok{,}\DecValTok{6}\NormalTok{)))}
+\CommentTok{# 将等同于list(1, 2, 3, 4, list(5,6))}
+\end{Highlighting}
+\end{Shaded}
+
+也许你想把需要``合并''的列表作为子列表放在另一个列表里；这也很简单，在本节一开始就讲了：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{list}\NormalTok{(}\KeywordTok{list}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{), }\KeywordTok{list}\NormalTok{(}\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [[1]]
+## [[1]][[1]]
+## [1] 1
+## 
+## [[1]][[2]]
+## [1] 2
+## 
+## 
+## [[2]]
+## [[2]][[1]]
+## [1] 3
+## 
+## [[2]][[2]]
+## [1] 4
+\end{verbatim}
+
+通过\texttt{unlist()}函数来拆解列表中的子列表。若参数\texttt{recursive}为\texttt{TRUE}（默认值），将一直拆解至无子列表的列表，如果此最简列表的元素都属于五种atomic vector中的数据\footnote{dataframe也是可以unlist成向量的，但是并不实用。（试试\texttt{unlist(list(data.frame(x\ =\ c(1,2),\ y\ =\ c(3,4)),\ 5,\ 6))}）}，此列表还会被进一步化简成向量。若\texttt{recursive\ =\ FALSE}，最``靠外''的一级列表（可能是多个）将会被拆解。
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{unlist}\NormalTok{(}\KeywordTok{list}\NormalTok{(}\DecValTok{1}\NormalTok{, }\KeywordTok{list}\NormalTok{(}\DecValTok{2}\NormalTok{, }\KeywordTok{list}\NormalTok{(}\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{)), }\KeywordTok{list}\NormalTok{(}\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{), }\DecValTok{7}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{9}\NormalTok{))}
+\CommentTok{# 将等同于c(1, 2, 3, 4, 5, 6, 7, 8, 9) }
+\CommentTok{# 注意被化简成了向量}
+
+\KeywordTok{unlist}\NormalTok{(}\KeywordTok{list}\NormalTok{(}\DecValTok{1}\NormalTok{, }\KeywordTok{list}\NormalTok{(}\DecValTok{2}\NormalTok{, }\KeywordTok{list}\NormalTok{(}\StringTok{"a"}\NormalTok{, }\DecValTok{4}\NormalTok{)), }\KeywordTok{list}\NormalTok{(}\DecValTok{5}\NormalTok{, }\OtherTok{TRUE}\NormalTok{), 7L, }\DecValTok{8}\NormalTok{, }\DecValTok{9}\OperatorTok{+}\NormalTok{0i))}
+\CommentTok{# 将等同于c("1", "2", "a", 4, 5, "TRUE", "7", 8, "9+0i")}
+\CommentTok{# 化简成向量时，非字符元素被强制转换成字符了}
+
+\KeywordTok{unlist}\NormalTok{(}\KeywordTok{list}\NormalTok{(}\DecValTok{1}\NormalTok{, }\KeywordTok{list}\NormalTok{(}\DecValTok{2}\NormalTok{, }\KeywordTok{list}\NormalTok{(t.test, }\DecValTok{4}\NormalTok{)), }\KeywordTok{list}\NormalTok{(}\DecValTok{5}\NormalTok{, }\OtherTok{TRUE}\NormalTok{), 7L, x, }\DecValTok{9}\OperatorTok{+}\NormalTok{0i))}
+\CommentTok{# t.test无法存储于向量中，因此最简结果为一个list：}
+\CommentTok{# list(1, 2, t.test, 4, 5, TRUE, 7L, x, 9+0i)}
+
+
+\KeywordTok{unlist}\NormalTok{(}\KeywordTok{list}\NormalTok{(}\DecValTok{1}\NormalTok{, }\KeywordTok{list}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\KeywordTok{list}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{)), }\KeywordTok{list}\NormalTok{(}\DecValTok{6}\NormalTok{, }\DecValTok{7}\NormalTok{), }\DecValTok{8}\NormalTok{, }\DecValTok{9}\NormalTok{), }\DataTypeTok{recursive =} \OtherTok{FALSE}\NormalTok{)}
+\CommentTok{# 将等同于list(1, 2, 3, list(4, 5), 6, 7, 8, 9)}
+\end{Highlighting}
+\end{Shaded}
+
+因此，当\texttt{A}, \texttt{B}为列表，\texttt{unlist(list(A,\ B),\ recursive\ =\ FALSE)}等同于\texttt{c(A,\ B)}.
+
+\subsubsection{其他性质和操作}
+
+上面说到\texttt{unlist(list(A,\ B),\ recursive\ =\ FALSE)}等同于\texttt{c(A,\ B)}，你可能很想用\texttt{==}验证一下。很不幸，你会得到一条错误信息：
+
+\begin{verbatim}
+comparison of these types is not implemented
+\end{verbatim}
+
+在第@\{logical-operations\}节讲过，\texttt{==}只能用于atomic vectors；对于列表（和其他对象）可以用\texttt{identical()}函数确认两者是否完全一致。
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{A <-}\StringTok{ }\KeywordTok{list}\NormalTok{(}\StringTok{"a"}\NormalTok{, }\DecValTok{1}\NormalTok{, }\OtherTok{TRUE}\NormalTok{); B <-}\StringTok{ }\KeywordTok{list}\NormalTok{(}\DecValTok{5}\OperatorTok{+}\NormalTok{8i, }\OtherTok{NA}\NormalTok{, 4L)}
+\NormalTok{C1 <-}\StringTok{ }\KeywordTok{unlist}\NormalTok{(}\KeywordTok{list}\NormalTok{(A, B), }\DataTypeTok{recursive =} \OtherTok{FALSE}\NormalTok{); C2 <-}\StringTok{ }\KeywordTok{c}\NormalTok{(A, B)}
+\KeywordTok{identical}\NormalTok{(C1, C2)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -2714,49 +3915,8 @@ list里的元素可以有名字；被命名的元素可以通过\texttt{\$}符�
 ## [1] TRUE
 \end{verbatim}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{class}\NormalTok{(mpg)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] "tbl_df"     "tbl"        "data.frame"
-\end{verbatim}
-
-\hypertarget{dataframe-subsetting}{%
-\subsubsection{Dataframe/tibble的取子集}\label{dataframe-subsetting}}
-
-Tibble既有list的特征，也有matrix的特征。
-
-当使用一个参数取子集的时候，比如\texttt{mpg{[}{[}3{]}{]}}，\texttt{mpg{[}{[}"displ"{]}{]}}或\texttt{mpg\$displ}，tibble表现得像list，其中每一列是一个有命名的list element；
-
-当使用两个参数取子集的时候，比如\texttt{mpg{[}3,4{]}}, \texttt{mpg{[}3,\ {]}}, \texttt{mpg{[}\ ,4{]}}，tibble表现得像matrix
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{mpg[}\DecValTok{3}\NormalTok{, ]}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## # A tibble: 1 x 11
-##   manufacturer model displ  year   cyl trans  drv     cty   hwy fl    class
-##   <chr>        <chr> <dbl> <int> <int> <chr>  <chr> <int> <int> <chr> <chr>
-## 1 audi         a4        2  2008     4 manua~ f        20    31 p     comp~
-\end{verbatim}
-
-请查看\href{https://adv-r.hadley.nz/subsetting.html\#simplify-preserve}{Advanced R}了解更多。
-
-\hypertarget{base-r-dataframe--tidyverse-tibble}{%
-\subsection{Base R dataframe 和 Tidyverse tibble的区别}\label{base-r-dataframe--tidyverse-tibble}}
-
-你可能已经注意到，上面\texttt{mpg{[}3,\ {]}}和\texttt{select(mpg,\ 3)}是等效的；\texttt{mpg{[}3,\ {]}}显然更精简，那么为什么要使用\texttt{select()}函数呢？
-
-zaocheng(Gentleman \protect\hyperlink{ref-Gentleman2009R-Programming-Bioinfo}{2009}, 33; Wickham \protect\hyperlink{ref-Wickham:2019}{2019})
-
-\hypertarget{arraymatrix}{%
-\subsection{array（数组）和matrix（矩阵）简介}\label{arraymatrix}}
+\hypertarget{matrix-array}{%
+\subsection{array（数组）和matrix（矩阵）简介}\label{matrix-array}}
 
 Vector是一维的数据。Array是多维的数据。Matrix是二维的数据，因此matrix是array的一种特殊情况。
 
@@ -2953,33 +4113,33 @@ Dataframe不是matrix（虽然都是方的）. Matrix是二维的，\textbf{仅�
 \begin{verbatim}
 ## , , 1
 ## 
-##           [,1]      [,2]       [,3]      [,4]       [,5]
-## [1,] 0.3034727 0.8784722 0.35557786 0.6002456 0.20864379
-## [2,] 0.9314530 0.5980476 0.32059644 0.6327177 0.23947509
-## [3,] 0.0215070 0.2555033 0.06692238 0.2094677 0.08296955
-## [4,] 0.2588125 0.3936804 0.56226369 0.7456136 0.54193515
-## [5,] 0.3098640 0.9683803 0.79812908 0.1927551 0.04579420
-## [6,] 0.7470949 0.6810479 0.66899801 0.7002111 0.59069703
+##           [,1]      [,2]      [,3]       [,4]      [,5]
+## [1,] 0.6718315 0.4770758 0.2446106 0.86823106 0.7428044
+## [2,] 0.4101549 0.2141378 0.6973227 0.31838107 0.8595585
+## [3,] 0.4380271 0.9520504 0.8705479 0.57497412 0.4063315
+## [4,] 0.7047464 0.7772618 0.7139401 0.95823908 0.4899111
+## [5,] 0.3364387 0.4288986 0.1960972 0.04000405 0.6076336
+## [6,] 0.9677286 0.7396727 0.7087386 0.01501767 0.3936719
 ## 
 ## , , 2
 ## 
-##           [,1]      [,2]      [,3]       [,4]      [,5]
-## [1,] 0.6168838 0.1294128 0.5434755 0.94058855 0.8026451
-## [2,] 0.6471846 0.9512479 0.8764131 0.86265025 0.5119355
-## [3,] 0.9987154 0.9125513 0.9199706 0.83937284 0.2871230
-## [4,] 0.4080803 0.2785156 0.6107068 0.14657101 0.5298951
-## [5,] 0.2149751 0.9484414 0.4241208 0.74322043 0.9960876
-## [6,] 0.7707224 0.2828778 0.9433693 0.07537418 0.5180949
+##           [,1]      [,2]      [,3]        [,4]      [,5]
+## [1,] 0.9006686 0.7380892 0.5167960 0.703028908 0.9207938
+## [2,] 0.1635478 0.2071612 0.5997855 0.001126975 0.1751163
+## [3,] 0.2380316 0.4814276 0.2912440 0.277010770 0.9268620
+## [4,] 0.3115802 0.9184094 0.6297072 0.915726600 0.2515638
+## [5,] 0.7631003 0.3687141 0.1921361 0.405785865 0.2536388
+## [6,] 0.8835738 0.4548185 0.3347968 0.816077598 0.6582365
 ## 
 ## , , 3
 ## 
-##           [,1]       [,2]      [,3]       [,4]       [,5]
-## [1,] 0.3726515 0.25755037 0.5202015 0.73931255 0.22672036
-## [2,] 0.6832773 0.30342532 0.9971883 0.68190266 0.12515938
-## [3,] 0.5408214 0.60274192 0.4831202 0.45793986 0.63308885
-## [4,] 0.5913479 0.09345759 0.2939420 0.04236595 0.15857911
-## [5,] 0.1457845 0.32734642 0.7453021 0.28958635 0.03226909
-## [6,] 0.8179054 0.34010863 0.2640034 0.06849237 0.40593126
+##           [,1]      [,2]       [,3]       [,4]      [,5]
+## [1,] 0.2833486 0.7377325 0.24121750 0.07658559 0.5553004
+## [2,] 0.7801159 0.8058647 0.57364324 0.30177394 0.5410325
+## [3,] 0.9237641 0.8137241 0.06959596 0.47938977 0.1998257
+## [4,] 0.3830497 0.8257545 0.54016980 0.35242275 0.6334874
+## [5,] 0.6706461 0.6323191 0.92935551 0.08920604 0.7562945
+## [6,] 0.2686587 0.7297881 0.59177542 0.95546656 0.7247634
 \end{verbatim}
 
 然后我们用\texttt{dimnames()}来命名：
@@ -2994,91 +4154,493 @@ Dataframe不是matrix（虽然都是方的）. Matrix是二维的，\textbf{仅�
 \begin{verbatim}
 ## , , chloroquine
 ## 
-##          P. falciparum P. malariae   P. ovale  P. vivax P. knowlesi
-## trial. 1     0.3034727   0.8784722 0.35557786 0.6002456  0.20864379
-## trial. 2     0.9314530   0.5980476 0.32059644 0.6327177  0.23947509
-## trial. 3     0.0215070   0.2555033 0.06692238 0.2094677  0.08296955
-## trial. 4     0.2588125   0.3936804 0.56226369 0.7456136  0.54193515
-## trial. 5     0.3098640   0.9683803 0.79812908 0.1927551  0.04579420
-## trial. 6     0.7470949   0.6810479 0.66899801 0.7002111  0.59069703
+##          P. falciparum P. malariae  P. ovale   P. vivax P. knowlesi
+## trial. 1     0.6718315   0.4770758 0.2446106 0.86823106   0.7428044
+## trial. 2     0.4101549   0.2141378 0.6973227 0.31838107   0.8595585
+## trial. 3     0.4380271   0.9520504 0.8705479 0.57497412   0.4063315
+## trial. 4     0.7047464   0.7772618 0.7139401 0.95823908   0.4899111
+## trial. 5     0.3364387   0.4288986 0.1960972 0.04000405   0.6076336
+## trial. 6     0.9677286   0.7396727 0.7087386 0.01501767   0.3936719
 ## 
 ## , , artemisinin
 ## 
-##          P. falciparum P. malariae  P. ovale   P. vivax P. knowlesi
-## trial. 1     0.6168838   0.1294128 0.5434755 0.94058855   0.8026451
-## trial. 2     0.6471846   0.9512479 0.8764131 0.86265025   0.5119355
-## trial. 3     0.9987154   0.9125513 0.9199706 0.83937284   0.2871230
-## trial. 4     0.4080803   0.2785156 0.6107068 0.14657101   0.5298951
-## trial. 5     0.2149751   0.9484414 0.4241208 0.74322043   0.9960876
-## trial. 6     0.7707224   0.2828778 0.9433693 0.07537418   0.5180949
+##          P. falciparum P. malariae  P. ovale    P. vivax P. knowlesi
+## trial. 1     0.9006686   0.7380892 0.5167960 0.703028908   0.9207938
+## trial. 2     0.1635478   0.2071612 0.5997855 0.001126975   0.1751163
+## trial. 3     0.2380316   0.4814276 0.2912440 0.277010770   0.9268620
+## trial. 4     0.3115802   0.9184094 0.6297072 0.915726600   0.2515638
+## trial. 5     0.7631003   0.3687141 0.1921361 0.405785865   0.2536388
+## trial. 6     0.8835738   0.4548185 0.3347968 0.816077598   0.6582365
 ## 
 ## , , doxycycline
 ## 
-##          P. falciparum P. malariae  P. ovale   P. vivax P. knowlesi
-## trial. 1     0.3726515  0.25755037 0.5202015 0.73931255  0.22672036
-## trial. 2     0.6832773  0.30342532 0.9971883 0.68190266  0.12515938
-## trial. 3     0.5408214  0.60274192 0.4831202 0.45793986  0.63308885
-## trial. 4     0.5913479  0.09345759 0.2939420 0.04236595  0.15857911
-## trial. 5     0.1457845  0.32734642 0.7453021 0.28958635  0.03226909
-## trial. 6     0.8179054  0.34010863 0.2640034 0.06849237  0.40593126
+##          P. falciparum P. malariae   P. ovale   P. vivax P. knowlesi
+## trial. 1     0.2833486   0.7377325 0.24121750 0.07658559   0.5553004
+## trial. 2     0.7801159   0.8058647 0.57364324 0.30177394   0.5410325
+## trial. 3     0.9237641   0.8137241 0.06959596 0.47938977   0.1998257
+## trial. 4     0.3830497   0.8257545 0.54016980 0.35242275   0.6334874
+## trial. 5     0.6706461   0.6323191 0.92935551 0.08920604   0.7562945
+## trial. 6     0.2686587   0.7297881 0.59177542 0.95546656   0.7247634
 \end{verbatim}
 
 \textbf{清清楚楚，一目了然。}
 
-\hypertarget{apply}{%
-\subsection{\texorpdfstring{\texttt{apply}}{apply}}\label{apply}}
+\hypertarget{test-base}{%
+\subsection{小测}\label{test-base}}
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\tightlist
+\item
+  \textbf{转换年份到世纪。}写一个名为\texttt{as.century}的函数，把存储着年份的向量，比如\texttt{years\ \textless{}-\ c(2014,\ 1990,\ 1398,\ 1290,\ 1880,\ 2001)}，转换成对应的世纪（注意，19XX年是20世纪）。
+\item
+  \textbf{斐波那契数列。}
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{背景：}斐波那契数列是指\(F = [1, 1, 2, 3, 5, 8, ...]\)，其中：
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(F_1 = 1\)，\(F_2 = 1\)
+  \item
+    从\(F_3\)开始，\(F_i = F_{i-2} + F_{i-1}\)
+  \end{itemize}
+\item
+  (也有\(F_0=0, F_1=1\)的说法，但是为了方便我们不用这个定义)
+\item
+  \textbf{题目：}创建一个函数名为\texttt{fibon()}的函数，使得\texttt{fibon(i)}：
+
+  \begin{itemize}
+  \tightlist
+  \item
+    当\(i\in \mathbb{Z}^+\)时，返回向量\([F_1, F_2, \ldots, F_i]\)
+  \item
+    当\(i\notin \mathbb{Z}^+\)时，返回\texttt{"请输入一个正整数作为\textasciigrave{}fibon()\textasciigrave{}的参数。"}
+  \end{itemize}
+\item
+  \textbf{提示：}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    虽然在R中整数用\texttt{1L}, \texttt{2L}等表示，用户在被指示``输入整数''的时候很有可能输入的是\texttt{2}而不是\texttt{2L}. \texttt{2}是否等于\texttt{2L}?如果是，如何利用它检测输入的是否是整数？（\texttt{2}和\texttt{2L}都要被判定为``是整数''）
+  \item
+    斐波那契数列前两位是定义，从第三位开始才是计算得出的。
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{tibble}{%
+\chapter{dataframe（数据框）和tibble}\label{tibble}}
+
+\hypertarget{tibble-view}{%
+\section{查看dataframe/tibble并了解它们的结构}\label{tibble-view}}
+
+\hypertarget{tibble-concept}{%
+\subsection{dataframe/tibble的基本概念}\label{tibble-concept}}
+
+dataframe是R中存储复杂（多变量）数据的规范格式，它直观易操作。tibble是tidyverse的一部分，它是dataframe的进化版，功能更强大，更易操作。
+
+我们来看个例子：
+
+首先加载tidyverse：
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{apply}\NormalTok{(A,}\DecValTok{1}\NormalTok{,sum)}
+\KeywordTok{require}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{以后每次跟着本书使用R的时候，都要先加载tidyverse，不再重复提醒了。}
+
+tidyverse中自带一些范例数据，比如我们输入：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mpg}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics[width=35.53in]{img/tibble-intro}
+
+这张图是重中之重。一个正确的dataframe/tibble，每一行代表的是一个observation（硬翻译的话是``观测单位''，但是我觉得这个翻译不好），每一列代表的是一个variable（变量），且同一个变量的数据类型必须一样\footnote{\url{https://thomaswdinsmore.com/2014/12/15/sas-versus-r-part-two/}}。像这样的数据被称为``tidy data''（``整齐的数据''）。虽然看起来简单，直观，理所当然，但是现实中上人们经常会做出``不整齐''的数据。把不整齐的数据弄整齐是下一章的重点。
+
+\hypertarget{tibble-more-data}{%
+\subsection{查看更多数据}\label{tibble-more-data}}
+
+R默认显示dataframe/tibble的前10行。如果想看最后6行，可以使用\texttt{tail()}函数，比如：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{tail}\NormalTok{(mpg)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 376 392 408
+## # A tibble: 6 x 11
+##   manufacturer model  displ  year   cyl trans drv     cty   hwy fl    class
+##   <chr>        <chr>  <dbl> <int> <int> <chr> <chr> <int> <int> <chr> <chr>
+## 1 volkswagen   passat   1.8  1999     4 auto~ f        18    29 p     mids~
+## 2 volkswagen   passat   2    2008     4 auto~ f        19    28 p     mids~
+## 3 volkswagen   passat   2    2008     4 manu~ f        21    29 p     mids~
+## 4 volkswagen   passat   2.8  1999     6 auto~ f        16    26 p     mids~
+## 5 volkswagen   passat   2.8  1999     6 manu~ f        18    26 p     mids~
+## 6 volkswagen   passat   3.6  2008     6 auto~ f        17    26 p     mids~
 \end{verbatim}
+
+若要从头到尾查看全部数据，可以使用\texttt{View}函数：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{View}\NormalTok{(mpg)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{tibble-basics}{%
+\section{tibble的创建和基础操作}\label{tibble-basics}}
+
+\hypertarget{tibble-create}{%
+\subsection{创建tibble}\label{tibble-create}}
+
+\hypertarget{tibble-create-manual}{%
+\subsubsection{手动输入数据以创建tibble}\label{tibble-create-manual}}
+
+使用\texttt{tibble}函数，按以下格式创建tibble. 换行不是必须的，但是换行会看得更清楚。如果换行，不要忘记行末的逗号。
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my_tibble_}\DecValTok{1}\NormalTok{ <-}\StringTok{ }\KeywordTok{tibble}\NormalTok{(}
+                \DataTypeTok{nums =} \KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{),}
+                \DataTypeTok{chars =} \KeywordTok{c}\NormalTok{(}\StringTok{"hej"}\NormalTok{, }\StringTok{"你好"}\NormalTok{, }\StringTok{"こんにちは"}\NormalTok{),}
+                \DataTypeTok{cplxnums =} \KeywordTok{c}\NormalTok{(}\StringTok{"4+8i"}\NormalTok{, }\StringTok{"3+5i"}\NormalTok{, }\StringTok{"3+4i"}\NormalTok{)}
+\NormalTok{                )}
+\NormalTok{my_tibble_}\DecValTok{1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 3 x 3
+##    nums chars      cplxnums
+##   <dbl> <chr>      <chr>   
+## 1     4 hej        4+8i    
+## 2     5 你好       3+5i    
+## 3     6 こんにちは 3+4i
+\end{verbatim}
+
+类似地，可以从现有的vector创建。\textbf{所有的变量长度必须一样。}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{)}
+\NormalTok{y <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{211}\NormalTok{,}\DecValTok{23}\NormalTok{,}\DecValTok{45}\NormalTok{)}
+\NormalTok{z <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{20}\NormalTok{,}\DecValTok{32}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my_tibble_}\DecValTok{2}\NormalTok{ <-}\StringTok{ }\KeywordTok{tibble}\NormalTok{(}\DataTypeTok{v1 =}\NormalTok{ x, }\DataTypeTok{v2 =}\NormalTok{ y)}
+\NormalTok{my_tibble_}\DecValTok{2}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 3 x 2
+##      v1    v2
+##   <dbl> <dbl>
+## 1     1   211
+## 2     4    23
+## 3     5    45
+\end{verbatim}
+
+而试图把\texttt{x}和\texttt{z}做成tibble就会报错：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my_tibble_}\DecValTok{3}\NormalTok{ <-}\StringTok{ }\KeywordTok{tibble}\NormalTok{(}\DataTypeTok{w1 =}\NormalTok{ x, }\DataTypeTok{w2 =}\NormalTok{ z)}
+
+ \CommentTok{# Error: Tibble columns must have consistent lengths, only values of length one are recycled: * Length 2: Column `w2` * Length 3: Column `w1`}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{tibble-create-from-df}{%
+\subsubsection{把dataframe转换成一个tibble}\label{tibble-create-from-df}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{d1 <-}\StringTok{ }\KeywordTok{as.tibble}\NormalTok{(d) }\CommentTok{#其中d是一个dataframe}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{tibble-import}{%
+\subsubsection{从外部数据创建tibble}\label{tibble-import}}
+
+参见第\ref{data-import}节（数据的导入）
+
+\hypertarget{tbl-subsetting}{%
+\subsection{取子集（抓取行，列）\{tbl-subsetting\}}\label{tbl-subsetting}}
+
+本节介绍了如何使用\texttt{dplyr} package提供的\texttt{select()}, \texttt{filter()}, \texttt{slice}取子集方法
+更详细的解释请看第\ref{tbl-subsetting-more}节。
+
+\hypertarget{single-column}{%
+\subsubsection{抓取单列}\label{single-column}}
+
+抓取单列很简单，也很常用（比如我们只想从一个大的tibble中抓两个变量研究它们之间的关系）。 有两个符号可以用于抓取列，\texttt{\$}（仅用于变量名称）与\texttt{{[}{[}{]}{]}}（变量名称或索引）。还是以\texttt{mpg}为例，假设我们要抓取第3列 (\texttt{displ})：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{########################}
+\CommentTok{#通过变量名称抓取：}
+\NormalTok{mpg[[}\StringTok{"displ"}\NormalTok{]]}
+\CommentTok{#或}
+\NormalTok{mpg}\OperatorTok{$}\NormalTok{displ }\CommentTok{#一般，在RStudio中此方法最方便，因为打出“$”之后会自动提示变量名。}
+
+\CommentTok{########################}
+\CommentTok{#通过索引抓取：}
+\NormalTok{mpg[[}\DecValTok{3}\NormalTok{]]}
+\end{Highlighting}
+\end{Shaded}
+
+以上三种方法都应得到同样的结果（是一个vector）：
+
+\begin{verbatim}
+##  [1] 1.8 1.8 2.0 2.0 2.8 2.8 3.1 1.8 1.8 2.0 2.0 2.8 2.8 3.1 3.1 2.8 3.1
+## [18] 4.2 5.3 5.3
+\end{verbatim}
+
+一般我们抓取单列是为了在tibble中新建一个与那一列相关的变量，或是建一个新tibble，或是做统计学分析。以上三种情况（是绝大多数的情况）用vector进行操作很方便。
+
+假设你在写一个复杂的函数，且需要保持数据的完整性和一致性，可以使用单方括号\texttt{{[}}；这样得到的是一个tibble（试试\texttt{mpg{[}3{]}}）这个特性在第\ref{tbl-subsetting-more}节中有解释。
+
+\hypertarget{tibble}{%
+\subsubsection{抓取多列并返回一个tibble}\label{tibble}}
+
+有时候，一个tibble中含有很多冗余信息，我们可能想把感兴趣的几个变量抓出来做一个新tibble. 这时\texttt{select()}函数最为方便。可以用变量名称或者索引来抓取。比如：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mpg_new <-}\StringTok{ }\KeywordTok{select}\NormalTok{(mpg, }\DecValTok{3}\OperatorTok{:}\DecValTok{5}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{9}\NormalTok{)}
+\CommentTok{#等同于}
+\NormalTok{mpg_new <-}\StringTok{ }\KeywordTok{select}\NormalTok{(mpg, displ, year, cyl, cty, hwy)}
+
+\NormalTok{mpg_new}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 234 x 5
+##    displ  year   cyl   cty   hwy
+##    <dbl> <int> <int> <int> <int>
+##  1   1.8  1999     4    18    29
+##  2   1.8  1999     4    21    29
+##  3   2    2008     4    20    31
+##  4   2    2008     4    21    30
+##  5   2.8  1999     6    16    26
+##  6   2.8  1999     6    18    26
+##  7   3.1  2008     6    18    27
+##  8   1.8  1999     4    18    26
+##  9   1.8  1999     4    16    25
+## 10   2    2008     4    20    28
+## # ... with 224 more rows
+\end{verbatim}
+
+显然，使用变量名抓取列比使用索引更好。虽然打字较多，但是易读性比使用索引强太多了。在向其他人展示或者分享你的工作时，易读性尤为重要。
+
+\hypertarget{filter}{%
+\subsubsection{\texorpdfstring{通过\texttt{filter()}，抓取满足某条件的行}{通过filter()，抓取满足某条件的行}}\label{filter}}
+
+通过\texttt{filter()}，我们可以过滤出某个或多个变量满足某种条件的observations. 如果你还不熟悉逻辑运算，请看第\ref{logical-operations}节
+
+假设我们只想看\texttt{mpg}中的奥迪品牌的，排量大于等于2且小于4的车辆的数据：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mpg_audi_displ2to4 <-}\StringTok{ }\KeywordTok{filter}\NormalTok{(mpg, manufacturer }\OperatorTok{==}\StringTok{ "audi"}\NormalTok{, displ }\OperatorTok{>=}\StringTok{ }\FloatTok{2.5} \OperatorTok{&}\StringTok{ }\NormalTok{displ }\OperatorTok{<}\StringTok{ }\DecValTok{4}\NormalTok{)}
+
+\NormalTok{mpg_audi_displ2to4}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 9 x 11
+##   manufacturer model  displ  year   cyl trans drv     cty   hwy fl    class
+##   <chr>        <chr>  <dbl> <int> <int> <chr> <chr> <int> <int> <chr> <chr>
+## 1 audi         a4       2.8  1999     6 auto~ f        16    26 p     comp~
+## 2 audi         a4       2.8  1999     6 manu~ f        18    26 p     comp~
+## 3 audi         a4       3.1  2008     6 auto~ f        18    27 p     comp~
+## 4 audi         a4 qu~   2.8  1999     6 auto~ 4        15    25 p     comp~
+## 5 audi         a4 qu~   2.8  1999     6 manu~ 4        17    25 p     comp~
+## 6 audi         a4 qu~   3.1  2008     6 auto~ 4        17    25 p     comp~
+## 7 audi         a4 qu~   3.1  2008     6 manu~ 4        15    25 p     comp~
+## 8 audi         a6 qu~   2.8  1999     6 auto~ 4        15    24 p     mids~
+## 9 audi         a6 qu~   3.1  2008     6 auto~ 4        17    25 p     mids~
+\end{verbatim}
+
+\hypertarget{slice}{%
+\subsubsection{\texorpdfstring{用\texttt{slice()}，通过行数（索引）抓取行。}{用slice()，通过行数（索引）抓取行。}}\label{slice}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mpg_1to6 <-}\StringTok{ }\KeywordTok{slice}\NormalTok{(mpg, }\DecValTok{21}\OperatorTok{:}\DecValTok{26}\NormalTok{) }\CommentTok{# 抓取mpg的第21行至26行}
+\NormalTok{mpg_1to6}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 11
+##   manufacturer model  displ  year   cyl trans drv     cty   hwy fl    class
+##   <chr>        <chr>  <dbl> <int> <int> <chr> <chr> <int> <int> <chr> <chr>
+## 1 chevrolet    c1500~   5.3  2008     8 auto~ r        14    20 r     suv  
+## 2 chevrolet    c1500~   5.7  1999     8 auto~ r        13    17 r     suv  
+## 3 chevrolet    c1500~   6    2008     8 auto~ r        12    17 r     suv  
+## 4 chevrolet    corve~   5.7  1999     8 manu~ r        16    26 p     2sea~
+## 5 chevrolet    corve~   5.7  1999     8 auto~ r        15    23 p     2sea~
+## 6 chevrolet    corve~   6.2  2008     8 manu~ r        16    26 p     2sea~
+\end{verbatim}
+
+\texttt{slice()}更实际的用途是随机选择个体：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mpg_random4 <-}\StringTok{ }\KeywordTok{slice}\NormalTok{(mpg, }\KeywordTok{sample}\NormalTok{(}\KeywordTok{length}\NormalTok{(mpg[[}\DecValTok{1}\NormalTok{]]), }\DecValTok{4}\NormalTok{)) }\CommentTok{# 随机四辆车}
+\NormalTok{mpg_random4}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 4 x 11
+##   manufacturer model  displ  year   cyl trans drv     cty   hwy fl    class
+##   <chr>        <chr>  <dbl> <int> <int> <chr> <chr> <int> <int> <chr> <chr>
+## 1 audi         a4 qu~   2.8  1999     6 manu~ 4        17    25 p     comp~
+## 2 lincoln      navig~   5.4  2008     8 auto~ r        12    18 r     suv  
+## 3 ford         f150 ~   5.4  2008     8 auto~ 4        13    17 r     pick~
+## 4 dodge        dakot~   4.7  2008     8 auto~ 4        14    19 r     pick~
+\end{verbatim}
+
+\hypertarget{tibble-misc}{%
+\section{其它}\label{tibble-misc}}
+
+\hypertarget{listdataframetibble}{%
+\subsection{list和dataframe/tibble}\label{listdataframetibble}}
+
+\hypertarget{dataframetibble}{%
+\subsubsection{Dataframe和tibble的本质}\label{dataframetibble}}
+
+聪明的你也许已经注意到了，dataframe/tibble\protect\hyperlink{single-column}{抓取单列的方法}和list的取子集\ref{list-index}惊人地相似。事实上，dataframe的本质正是list，而tibble也是dataframe（只是进化了一些功能）：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{is.list}\NormalTok{(mpg)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{class}\NormalTok{(mpg)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "tbl_df"     "tbl"        "data.frame"
+\end{verbatim}
+
+\hypertarget{tbl-subsetting-more}{%
+\subsubsection{Dataframe/tibble的取子集}\label{tbl-subsetting-more}}
+
+Tibble既有list的特征，也有matrix的特征。
+
+当使用一个参数取子集的时候，比如\texttt{mpg{[}{[}3{]}{]}}，\texttt{mpg{[}{[}"displ"{]}{]}}或\texttt{mpg\$displ}，tibble表现得像list，其中每一列是一个有命名的list element；
+
+当使用两个参数取子集的时候，比如\texttt{mpg{[}3,4{]}}, \texttt{mpg{[}3,\ {]}}, \texttt{mpg{[}\ ,4{]}}，tibble表现得像matrix
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mpg[}\DecValTok{3}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 1 x 11
+##   manufacturer model displ  year   cyl trans  drv     cty   hwy fl    class
+##   <chr>        <chr> <dbl> <int> <int> <chr>  <chr> <int> <int> <chr> <chr>
+## 1 audi         a4        2  2008     4 manua~ f        20    31 p     comp~
+\end{verbatim}
+
+\hypertarget{tibble-df-diff}{%
+\subsection{Base R dataframe 和 Tidyverse tibble的区别}\label{tibble-df-diff}}
+
+你可能已经注意到，上面\texttt{mpg{[}3,\ {]}}和\texttt{select(mpg,\ 3)}是等效的；\texttt{mpg{[}3,\ {]}}显然更精简，那么为什么要使用\texttt{select()}函数呢？
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{sapply}\NormalTok{(MyDF, class)}
+\KeywordTok{dim}\NormalTok{(MyDF)}
+\end{Highlighting}
+\end{Shaded}
+
+zaocheng(Gentleman \protect\hyperlink{ref-Gentleman2009R-Programming-Bioinfo}{2009}, 33; Wickham \protect\hyperlink{ref-Wickham:2019}{2019})
+
+请查看\href{https://adv-r.hadley.nz/subsetting.html\#simplify-preserve}{Advanced R}了解更多。
 
 \hypertarget{graphics}{%
 \chapter{使用ggplot绘图}\label{graphics}}
 
 若要了解更多，请阅读ggplot开发者本人所编写的\emph{ggplot2: Elegand Graphics for Data Analysis}(Wickham \protect\hyperlink{ref-Wickham2015ggplot2-Elegant-Gra}{2015})。
 
-\section{哲理}
+\hypertarget{g-phil}{%
+\section{哲理}\label{g-phil}}
 
-\section{基础}
+\hypertarget{g-basics}{%
+\section{基础}\label{g-basics}}
 
-\subsection{基本语法}
+\hypertarget{g-basics-grammar}{%
+\subsection{基本语法}\label{g-basics-grammar}}
 
-\subsection{图像类型}
+\hypertarget{g-basics-types}{%
+\subsection{图像类型}\label{g-basics-types}}
 
-\section{进阶}
+\hypertarget{g-intermediate}{%
+\section{进阶}\label{g-intermediate}}
 
-\subsection{逐层作图}
+\hypertarget{g-lay}{%
+\subsection{逐层作图}\label{g-lay}}
 
-\subsection{尺寸，轴，和图例}
+\hypertarget{g-legend}{%
+\subsection{尺寸，轴，和图例}\label{g-legend}}
 
-\subsection{位置}
+\hypertarget{g-pos}{%
+\subsection{位置}\label{g-pos}}
 
-\subsection{背景/主题的修改}
+\hypertarget{g-theme}{%
+\subsection{背景/主题的修改}\label{g-theme}}
 
-\hypertarget{ggplot}{%
-\subsection{与ggplot编程}\label{ggplot}}
+\hypertarget{g-programming}{%
+\subsection{与ggplot编程}\label{g-programming}}
 
-\hypertarget{base-r}{%
-\section{附：Base R中的作图}\label{base-r}}
+\hypertarget{g-base}{%
+\section{附：Base R中的作图}\label{g-base}}
 
 \hypertarget{wrangle}{%
 \chapter{数据处理}\label{wrangle}}
 
-\hypertarget{untidy-datatidy-data}{%
-\section{把``untidy data''整成``tidy data''}\label{untidy-datatidy-data}}
+\hypertarget{untidy-to-tidy}{%
+\section{把``untidy data''整成``tidy data''}\label{untidy-to-tidy}}
 
 \hypertarget{untidy-data}{%
 \subsection{``untidy data''的主要问题}\label{untidy-data}}
 
 \subsection{解决方案}
 
-\section{数据的导入和导出}
+\hypertarget{import-export}{%
+\section{数据的导入和导出}\label{import-export}}
 
 \hypertarget{data-import}{%
 \subsection{导入}\label{data-import}}
@@ -3089,30 +4651,357 @@ Dataframe不是matrix（虽然都是方的）. Matrix是二维的，\textbf{仅�
 \hypertarget{excel}{%
 \subsubsection{excel}\label{excel}}
 
-\hypertarget{-2}{%
-\subsubsection{其它}\label{-2}}
+\subsubsection{其它}
 
 \subsection{导出}
+
+\hypertarget{strings}{%
+\section{字符串的处理}\label{strings}}
+
+Base R中有一些用于操作字符串的函数，但是因为各种原因它们很难用。因此我们使用一系列\texttt{stringr}中的函数（\texttt{stringr}是\texttt{tidyverse}的一部分）。\texttt{stringr}的函数都以\texttt{str\_}开头。
+
+\hypertarget{-1}{%
+\subsection{基础}\label{-1}}
+
+\subsubsection{引号的使用}
+
+字符串可以用单引号和双引号包围。在双引号包围的环境下，可以很容易打出英澳常用的单引号和欧洲语言中的``撇''；在单引号包围的环境下，可以很容易打出北美和中国常用的双引号。否则需要使用转义字符 (escape character), \texttt{\textbackslash{}}. 以下是几个正确的例子。
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\StringTok{"'The unexamined life is not worth living' —Socrates"}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "'The unexamined life is not worth living' —Socrates"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\StringTok{"La science n'a pas de patrie."}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "La science n'a pas de patrie."
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\StringTok{'"老子曰：“知不知，尚矣；不知知，病矣。"'}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "\"老子曰：“知不知，尚矣；不知知，病矣。\""
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\StringTok{'l}\CharTok{\textbackslash{}'}\StringTok{homme'}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "l'homme"
+\end{verbatim}
+
+\subsubsection{换行符和制表符}
+
+假设你想显示以下效果：
+
+\begin{verbatim}
+## Guten
+## 
+##  Morgen.
+\end{verbatim}
+
+即``Guten''后有两次换行，第三行开头有一个制表符 (TAB)
+
+你需要的源代码是：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\StringTok{"Guten}\CharTok{\textbackslash{}n\textbackslash{}n\textbackslash{}t}\StringTok{Morgen."}
+\end{Highlighting}
+\end{Shaded}
+
+\texttt{\textbackslash{}n} (newline)为换行符，\texttt{\textbackslash{}t} (tab)为制表符。所有可用的通过\texttt{\textbackslash{}}实现的符号请参见\texttt{help("\textquotesingle{}")}（关于引号的帮助）.
+
+\hypertarget{printwritelines}{%
+\subsubsection{\texorpdfstring{\texttt{print()}和\texttt{writeLines()}}{print()和writeLines()}}\label{printwritelines}}
+
+\texttt{print()}只显示源码，\texttt{writeLines()}显示真实效果。
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{print}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"Guten}\CharTok{\textbackslash{}n\textbackslash{}n\textbackslash{}t}\StringTok{Morgen."}\NormalTok{, }\StringTok{"Guten}\CharTok{\textbackslash{}n\textbackslash{}n\textbackslash{}t}\StringTok{Tag"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Guten\n\n\tMorgen." "Guten\n\n\tTag"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{writeLines}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"Guten}\CharTok{\textbackslash{}n\textbackslash{}n\textbackslash{}t}\StringTok{Morgen."}\NormalTok{, }\StringTok{"Guten}\CharTok{\textbackslash{}n\textbackslash{}n\textbackslash{}t}\StringTok{Tag"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Guten
+## 
+##  Morgen.
+## Guten
+## 
+##  Tag
+\end{verbatim}
+
+索引和引号消失了，不同的元素之间有换行。
+
+\hypertarget{str_sub}{%
+\subsection{\texorpdfstring{使用\texttt{str\_sub()}取子集}{使用str\_sub()取子集}}\label{str_sub}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{A <-}\StringTok{ "D. rerio"}
+\KeywordTok{str_sub}\NormalTok{(A, }\DecValTok{1}\NormalTok{, }\DecValTok{5}\NormalTok{) }\CommentTok{# 第1到第5个字母。计入符号和空格。}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "D. re"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{str_sub}\NormalTok{(A, }\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{) }\CommentTok{# 抓取一个字母}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "r"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{str_sub}\NormalTok{(A, }\DecValTok{-4}\NormalTok{, }\DecValTok{-2}\NormalTok{) }\CommentTok{# 倒数第4至倒数第2}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "eri"
+\end{verbatim}
+
+我们还可以通过索引修改某个位置的字符：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{W <-}\StringTok{ "D. Rerio"}
+\KeywordTok{str_sub}\NormalTok{(W, }\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{) <-}\StringTok{ }\KeywordTok{str_to_lower}\NormalTok{(}\KeywordTok{str_sub}\NormalTok{(W, }\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{))}
+\NormalTok{W}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "D. rerio"
+\end{verbatim}
+
+和\texttt{str\_to\_lower()}相关的函数还有\texttt{str\_to\_upper()}, \texttt{str\_to\_title()}和\texttt{str\_to\_sentence()}. 它们的作用都顾名思义。
+
+\hypertarget{str_c}{%
+\subsection{\texorpdfstring{使用\texttt{str\_c()}进行字符串的合并}{使用str\_c()进行字符串的合并}}\label{str_c}}
+
+一个简单的例子：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{str_c}\NormalTok{(}\StringTok{"a"}\NormalTok{, }\StringTok{"b"}\NormalTok{, }\StringTok{"c"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{""}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "abc"
+\end{verbatim}
+
+其中参数\texttt{sep}是被合并的字符串之间的连接字符；它可以是任何字符，包括空格和无（比如上面的例子；用\texttt{sep\ =\ ""}表示无连接字符）。
+
+当需要合并的字符串保存在一个向量里时，用\texttt{collapse}而不是\texttt{sep}：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{str_c}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"a"}\NormalTok{, }\StringTok{"b"}\NormalTok{, }\StringTok{"c"}\NormalTok{), }\DataTypeTok{collapse =} \StringTok{"[x@"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "a[x@b[x@c"
+\end{verbatim}
+
+\texttt{str\_c()}可以执行向量化运算：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{str_c}\NormalTok{(}\StringTok{"prefix"}\NormalTok{, }\KeywordTok{c}\NormalTok{(}\StringTok{"a"}\NormalTok{, }\StringTok{"b"}\NormalTok{, }\StringTok{"c"}\NormalTok{), }\StringTok{"suffix"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{"-"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "prefix-a-suffix" "prefix-b-suffix" "prefix-c-suffix"
+\end{verbatim}
+
+所以我们可以这么玩：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{混沌在各地的称呼 <-}\StringTok{ }\KeywordTok{str_c}\NormalTok{(}
+  \KeywordTok{str_c}\NormalTok{(}
+    \StringTok{"地区"}\NormalTok{,}
+    \KeywordTok{c}\NormalTok{(}\StringTok{"北京"}\NormalTok{, }\StringTok{"湖北"}\NormalTok{, }\StringTok{"巴蜀"}\NormalTok{, }\StringTok{"两广"}\NormalTok{, }\StringTok{"闽台"}\NormalTok{),}
+    \DataTypeTok{sep =} \StringTok{"："}
+\NormalTok{  ),}
+  \KeywordTok{str_c}\NormalTok{(}
+    \StringTok{"称呼"}\NormalTok{,}
+    \KeywordTok{c}\NormalTok{(}\StringTok{"混沌"}\NormalTok{, }\StringTok{"包面"}\NormalTok{, }\StringTok{"抄手"}\NormalTok{, }\StringTok{"云吞"}\NormalTok{, }\StringTok{"扁食"}\NormalTok{),}
+    \DataTypeTok{sep =} \StringTok{"："}
+\NormalTok{  ),}
+  \DataTypeTok{sep =} \StringTok{" "}
+\NormalTok{)}
+
+\KeywordTok{writeLines}\NormalTok{(混沌在各地的称呼)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 地区：北京 称呼：混沌
+## 地区：湖北 称呼：包面
+## 地区：巴蜀 称呼：抄手
+## 地区：两广 称呼：云吞
+## 地区：闽台 称呼：扁食
+\end{verbatim}
+
+它还可以和\texttt{if}语句联用：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{win <-}\StringTok{ }\DecValTok{2}
+\NormalTok{score <-}\StringTok{ }\KeywordTok{str_c}\NormalTok{(}
+  \StringTok{"张三"}\NormalTok{, }
+  \ControlFlowTok{if}\NormalTok{ (win }\OperatorTok{==}\StringTok{ }\DecValTok{1}\NormalTok{) }\StringTok{"赢}\CharTok{\textbackslash{}n}\StringTok{"} \ControlFlowTok{else} \StringTok{"输}\CharTok{\textbackslash{}n}\StringTok{"}\NormalTok{,}
+  \StringTok{"李四"}\NormalTok{,}
+  \ControlFlowTok{if}\NormalTok{ (win }\OperatorTok{==}\StringTok{ }\DecValTok{2}\NormalTok{) }\StringTok{"赢"} \ControlFlowTok{else} \StringTok{"输"}\NormalTok{,}
+  \DataTypeTok{sep =} \StringTok{""}
+\NormalTok{)}
+\KeywordTok{writeLines}\NormalTok{(score)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 张三输
+## 李四赢
+\end{verbatim}
+
+\hypertarget{str_view}{%
+\subsection{\texorpdfstring{使用\texttt{str\_view()}来查找特定的字符组合}{使用str\_view()来查找特定的字符组合}}\label{str_view}}
+
+\hypertarget{str_detect}{%
+\subsection{\texorpdfstring{\texttt{str\_detect()}}{str\_detect()}}\label{str_detect}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{suomi <-}\StringTok{ "Suomen kieli on uralilaisten kielten itämerensuomalaiseen ryhmään kuuluva kieli."}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{factors}{%
+\section{Factors}\label{factors}}
+
+\hypertarget{-2}{%
+\subsection{基础}\label{-2}}
+
+有时候，我们的变量是以文字的形式呈现，但是它们不是单纯的文字，而是有大小的差别，或是能以一定顺序排列，比如十二个月份 (Jan, Feb, \ldots{})，成绩的``优、良、中、差''，衣服的尺寸 (XS, S, M, XL, \ldots{}). 假设我们在做客户满意度调查，七位客户的反馈是
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{满意度_v <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"满意"}\NormalTok{, }\StringTok{"非常满意"}\NormalTok{, }\StringTok{"满意"}\NormalTok{, }\StringTok{"不满意"}\NormalTok{, }\StringTok{"满意"}\NormalTok{, }\StringTok{"非常不满"}\NormalTok{,  }\StringTok{"不满意"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+我们试图用\texttt{sort()}把七个反馈按满意度从小到大排列：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{sort}\NormalTok{(满意度_v)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "不满意"   "不满意"   "满意"     "满意"     "满意"     "非常不满"
+## [7] "非常满意"
+\end{verbatim}
+
+可见其排序并不是有意义的。（因为默认英语根据'abcde\ldots{}'排序，中文根据笔画排序）
+
+我们可以把这个vector做成factor，并用参数\texttt{levels}规定排序顺序：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# 按照惯例，小的值在前，大的在后；“非常不满”应为满意度最低的值。}
+\NormalTok{满意度_f <-}\StringTok{ }\KeywordTok{factor}\NormalTok{(满意度_v, }\DataTypeTok{levels =} \KeywordTok{c}\NormalTok{(}\StringTok{"非常不满"}\NormalTok{, }\StringTok{"不满意"}\NormalTok{, }\StringTok{"满意"}\NormalTok{, }\StringTok{"非常满意"}\NormalTok{))}
+\KeywordTok{sort}\NormalTok{(满意度_f)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 非常不满 不满意   不满意   满意     满意     满意     非常满意
+## Levels: 非常不满 不满意 满意 非常满意
+\end{verbatim}
+
+这样排序就是正确的了。
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{class}\NormalTok{(满意度_f) }\CommentTok{# "factor"}
+\KeywordTok{is.vector}\NormalTok{(满意度_f) }\CommentTok{# FALSE}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{在绘图中的应用}
+
+\subsection{高端操作}
+
+\hypertarget{dttm}{%
+\section{日期和时间}\label{dttm}}
+
+\hypertarget{-3}{%
+\subsection{基础}\label{-3}}
+
+\subsection{计算}
+
+\hypertarget{-1}{%
+\subsection{在绘图中的应用}\label{-1}}
 
 \hypertarget{python}{%
 \chapter{与Python的联合使用}\label{python}}
 
-\hypertarget{rpython-reticulate}{%
-\section{\texorpdfstring{在R中使用Python: \texttt{reticulate}}{在R中使用Python: reticulate}}\label{rpython-reticulate}}
+\hypertarget{reticulate}{%
+\section{\texorpdfstring{在R中使用Python: \texttt{reticulate}}{在R中使用Python: reticulate}}\label{reticulate}}
 
-\hypertarget{pythonr-rpy}{%
-\section{\texorpdfstring{在Python中使用R: \texttt{rpy}}{在Python中使用R: rpy}}\label{pythonr-rpy}}
+\hypertarget{rpy}{%
+\section{\texorpdfstring{在Python中使用R: \texttt{rpy}}{在Python中使用R: rpy}}\label{rpy}}
 
-\hypertarget{beaker-notebook}{%
-\section{Beaker Notebook}\label{beaker-notebook}}
+\hypertarget{beaker}{%
+\section{Beaker Notebook}\label{beaker}}
 
 \url{https://decisionstats.com/2015/12/07/decisionstats-interview-scott-draves-beaker-notebook/}
 
 Inspired by Jupyter, Beaker Notebook allows you to switch from one language in one code block to another language in another code block in a streamlined way to pass shared objects (data)
 
-\hypertarget{bibiolography}{%
-\chapter*{Bibiolography}\label{bibiolography}}
-\addcontentsline{toc}{chapter}{Bibiolography}
+\hypertarget{References}{%
+\chapter*{References}\label{References}}
+\addcontentsline{toc}{chapter}{References}
 
 \hypertarget{refs}{}
 \leavevmode\hypertarget{ref-Coghlan:2016}{}%

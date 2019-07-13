@@ -7,24 +7,24 @@ nocite: |
 
 若要了解更多，请阅读ggplot开发者本人所编写的*ggplot2: Elegand Graphics for Data Analysis*[@Wickham2015ggplot2-Elegant-Gra]。
 
-## 哲理
+## 哲理 {#g-phil}
 
-## 基础
+## 基础 {#g-basics}
 
-### 基本语法
+### 基本语法 {#g-basics-grammar}
 
-### 图像类型
+### 图像类型 {#g-basics-types}
 
-## 进阶
+## 进阶 {#g-intermediate}
 
-### 逐层作图
+### 逐层作图 {#g-lay}
 
-### 尺寸，轴，和图例
+### 尺寸，轴，和图例 {#g-legend}
 
-### 位置
+### 位置 {#g-pos}
 
-### 背景/主题的修改
+### 背景/主题的修改 {#g-theme}
 
-### 与ggplot编程
+### 与ggplot编程 {#g-programming}
 
-## 附：Base R中的作图
+## 附：Base R中的作图 {#g-base}

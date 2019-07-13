@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2.6 函数 | R与tidyverse——数据分析入门</title>
+  <meta name="description" content="这是我b站R与tidyverse教程的配套资源" />
+  <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2.6 函数 | R与tidyverse——数据分析入门" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="这是我b站R与tidyverse教程的配套资源" />
+  <meta name="github-repo" content="TianyiShi2001/R-Tutorial-Resorces" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2.6 函数 | R与tidyverse——数据分析入门" />
+  
+  <meta name="twitter:description" content="这是我b站R与tidyverse教程的配套资源" />
+  
+
+<meta name="author" content="石天熠" />
+
+
+<meta name="date" content="2019-07-13" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="control-flow.html">
+<link rel="next" href="tibble.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143786170-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-143786170-1');
+</script>
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'tob8xaq',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<script src="https://hypothes.is/embed.js" async></script>
+<style>
+.book.font-family-0 {
+  font-family: Georgia, source-han-serif-sc, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.book.font-family-1 {
+  font-family: Arial, Helvetica, source-han-sans-simplified-c, sans-serif, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+</style>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><strong>R for Data Science</strong></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>欢迎</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#intro"><i class="fa fa-check"></i>简介</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#man"><i class="fa fa-check"></i>Gitbook版本使用说明</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#structure"><i class="fa fa-check"></i>本书的结构</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#no"><i class="fa fa-check"></i>在本书你不会学到：</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i>版权页</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical"><i class="fa fa-check"></i>技术信息</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R和RStudio介绍和安装教程</a><ul>
+<li class="chapter" data-level="" data-path="intro-and-installation.html"><a href="intro-and-installation.html#intro-overview"><i class="fa fa-check"></i>本章内容速览</a></li>
+<li class="chapter" data-level="1.1" data-path="what-is-R.html"><a href="what-is-R.html"><i class="fa fa-check"></i><b>1.1</b> 什么是R</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="what-is-R.html"><a href="what-is-R.html#R-and-RStudio-install"><i class="fa fa-check"></i><b>1.1.1</b> 安装R和RStudio</a></li>
+<li class="chapter" data-level="1.1.2" data-path="what-is-R.html"><a href="what-is-R.html#youshi"><i class="fa fa-check"></i><b>1.1.2</b> 为什么使用R，R与其他统计软件的比较</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="getting-help.html"><a href="getting-help.html"><i class="fa fa-check"></i><b>1.2</b> 获取资源与帮助（重要！）</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="getting-help.html"><a href="getting-help.html#section-1.2.1"><i class="fa fa-check"></i><b>1.2.1</b> 核心/入门资源</a></li>
+<li class="chapter" data-level="1.2.2" data-path="getting-help.html"><a href="getting-help.html#section-1.2.2"><i class="fa fa-check"></i><b>1.2.2</b> 进阶资源</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="interface-basics-project.html"><a href="interface-basics-project.html"><i class="fa fa-check"></i><b>1.3</b> RStudio界面介绍，基本操作，和创建新项目</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="interface-basics-project.html"><a href="interface-basics-project.html#interface"><i class="fa fa-check"></i><b>1.3.1</b> 界面</a></li>
+<li class="chapter" data-level="1.3.2" data-path="interface-basics-project.html"><a href="interface-basics-project.html#execution"><i class="fa fa-check"></i><b>1.3.2</b> 执行代码</a></li>
+<li class="chapter" data-level="1.3.3" data-path="interface-basics-project.html"><a href="interface-basics-project.html#code-management"><i class="fa fa-check"></i><b>1.3.3</b> 管理代码</a></li>
+<li class="chapter" data-level="1.3.4" data-path="interface-basics-project.html"><a href="interface-basics-project.html#rstudio-rstudio-fuli"><i class="fa fa-check"></i><b>1.3.4</b> RStudio的额外福利 {rstudio-fuli}</a></li>
+<li class="chapter" data-level="1.3.5" data-path="interface-basics-project.html"><a href="interface-basics-project.html#misc"><i class="fa fa-check"></i><b>1.3.5</b> 其他</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>1.4</b> 安装和使用packages (包)</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="packages.html"><a href="packages.html#packages-what"><i class="fa fa-check"></i><b>1.4.1</b> Package是什么，为什么使用它们？</a></li>
+<li class="chapter" data-level="1.4.2" data-path="packages.html"><a href="packages.html#package-install"><i class="fa fa-check"></i><b>1.4.2</b> 如何安装packages</a></li>
+<li class="chapter" data-level="1.4.3" data-path="packages.html"><a href="packages.html#package-use"><i class="fa fa-check"></i><b>1.4.3</b> 如何使用packages</a></li>
+<li class="chapter" data-level="1.4.4" data-path="packages.html"><a href="packages.html#package-misc"><i class="fa fa-check"></i><b>1.4.4</b> 其它</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> 向量，逻辑，循环和函数</a><ul>
+<li class="chapter" data-level="" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#intro-overview-vector"><i class="fa fa-check"></i>本章内容速览</a></li>
+<li class="chapter" data-level="2.1" data-path="vector-section.html"><a href="vector-section.html"><i class="fa fa-check"></i><b>2.1</b> 向量的概念，操作和优越性</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="vector-section.html"><a href="vector-section.html#create-vector"><i class="fa fa-check"></i><b>2.1.1</b> 创建向量（赋值）</a></li>
+<li class="chapter" data-level="2.1.2" data-path="vector-section.html"><a href="vector-section.html#indexing"><i class="fa fa-check"></i><b>2.1.2</b> 索引/取子集 (indexing/subsetting)</a></li>
+<li class="chapter" data-level="2.1.3" data-path="vector-section.html"><a href="vector-section.html#generator"><i class="fa fa-check"></i><b>2.1.3</b> 生成器</a></li>
+<li class="chapter" data-level="2.1.4" data-path="vector-section.html"><a href="vector-section.html#vector-misc"><i class="fa fa-check"></i><b>2.1.4</b> 向量的其他操作</a></li>
+<li class="chapter" data-level="2.1.5" data-path="vector-section.html"><a href="vector-section.html#vectorization-basics"><i class="fa fa-check"></i><b>2.1.5</b> R向量的优越性</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>2.2</b> 数据/对象类型 (Data/Object Types)</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="data-types.html"><a href="data-types.html#data-types-basics"><i class="fa fa-check"></i><b>2.2.1</b> 基础的数据/对象类型</a></li>
+<li class="chapter" data-level="2.2.2" data-path="data-types.html"><a href="data-types.html#data-types-advanced"><i class="fa fa-check"></i><b>2.2.2</b> 数据类型（严谨版）</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="math.html"><a href="math.html"><i class="fa fa-check"></i><b>2.3</b> 数学表达和运算</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="math.html"><a href="math.html#math-notation"><i class="fa fa-check"></i><b>2.3.1</b> 数的表达</a></li>
+<li class="chapter" data-level="2.3.2" data-path="math.html"><a href="math.html#arithmetic"><i class="fa fa-check"></i><b>2.3.2</b> 运算</a></li>
+<li class="chapter" data-level="2.3.3" data-path="math.html"><a href="math.html#statistics"><i class="fa fa-check"></i><b>2.3.3</b> 简易的统计学计算</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="logical-operation.html"><a href="logical-operation.html"><i class="fa fa-check"></i><b>2.4</b> 逻辑</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="logical-operation.html"><a href="logical-operation.html#-logical-values"><i class="fa fa-check"></i><b>2.4.1</b> 逻辑值 {logical-values}</a></li>
+<li class="chapter" data-level="2.4.2" data-path="logical-operation.html"><a href="logical-operation.html#logical-operations"><i class="fa fa-check"></i><b>2.4.2</b> 关系运算符和简单的逻辑运算</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="control-flow.html"><a href="control-flow.html"><i class="fa fa-check"></i><b>2.5</b> 判断和循环（流程控制）</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="control-flow.html"><a href="control-flow.html#section-2.5.1"><i class="fa fa-check"></i><b>2.5.1</b> 给有编程基础者的快速指南</a></li>
+<li class="chapter" data-level="2.5.2" data-path="control-flow.html"><a href="control-flow.html#kickstart"><i class="fa fa-check"></i><b>2.5.2</b> 无编程基础者的快速指南</a></li>
+<li class="chapter" data-level="2.5.3" data-path="control-flow.html"><a href="control-flow.html#section-2.5.3"><i class="fa fa-check"></i><b>2.5.3</b> 严谨版</a></li>
+<li class="chapter" data-level="2.5.4" data-path="control-flow.html"><a href="control-flow.html#apply"><i class="fa fa-check"></i><b>2.5.4</b> 如何避免for循环——<code>apply()</code>家族函数</a></li>
+<li class="chapter" data-level="2.5.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.5.5</b> <code>foreach</code> package：for循环的进化版</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.6</b> 函数</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="functions.html"><a href="functions.html#functions-in-R"><i class="fa fa-check"></i><b>2.6.1</b> R中的函数</a></li>
+<li class="chapter" data-level="2.6.2" data-path="functions.html"><a href="functions.html#abbr"><i class="fa fa-check"></i><b>2.6.2</b> 调用函数</a></li>
+<li class="chapter" data-level="2.6.3" data-path="functions.html"><a href="functions.html#create-functions"><i class="fa fa-check"></i><b>2.6.3</b> 创建函数</a></li>
+<li class="chapter" data-level="2.6.4" data-path="functions.html"><a href="functions.html#..."><i class="fa fa-check"></i><b>2.6.4</b> 关于<code>...</code></a></li>
+<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.5</b> 测速</a></li>
+<li class="chapter" data-level="2.6.6" data-path="functions.html"><a href="functions.html#list-intro"><i class="fa fa-check"></i><b>2.6.6</b> 列表 (list)</a></li>
+<li class="chapter" data-level="2.6.7" data-path="functions.html"><a href="functions.html#matrix-array"><i class="fa fa-check"></i><b>2.6.7</b> array（数组）和matrix（矩阵）简介</a></li>
+<li class="chapter" data-level="2.6.8" data-path="functions.html"><a href="functions.html#matricesarrays"><i class="fa fa-check"></i><b>2.6.8</b> 给matrices和arrays命名</a></li>
+<li class="chapter" data-level="2.6.9" data-path="functions.html"><a href="functions.html#test-base"><i class="fa fa-check"></i><b>2.6.9</b> 小测</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="tibble.html"><a href="tibble.html"><i class="fa fa-check"></i><b>3</b> dataframe（数据框）和tibble</a><ul>
+<li class="chapter" data-level="3.1" data-path="tibble-view.html"><a href="tibble-view.html"><i class="fa fa-check"></i><b>3.1</b> 查看dataframe/tibble并了解它们的结构</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="tibble-view.html"><a href="tibble-view.html#tibble-concept"><i class="fa fa-check"></i><b>3.1.1</b> dataframe/tibble的基本概念</a></li>
+<li class="chapter" data-level="3.1.2" data-path="tibble-view.html"><a href="tibble-view.html#tibble-more-data"><i class="fa fa-check"></i><b>3.1.2</b> 查看更多数据</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="tibble-basics.html"><a href="tibble-basics.html"><i class="fa fa-check"></i><b>3.2</b> tibble的创建和基础操作</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="tibble-basics.html"><a href="tibble-basics.html#tibble-create"><i class="fa fa-check"></i><b>3.2.1</b> 创建tibble</a></li>
+<li class="chapter" data-level="3.2.2" data-path="tibble-basics.html"><a href="tibble-basics.html#tbl-subsetting"><i class="fa fa-check"></i><b>3.2.2</b> 取子集（抓取行，列）{tbl-subsetting}</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="tibble-misc.html"><a href="tibble-misc.html"><i class="fa fa-check"></i><b>3.3</b> 其它</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="tibble-misc.html"><a href="tibble-misc.html#listdataframetibble"><i class="fa fa-check"></i><b>3.3.1</b> list和dataframe/tibble</a></li>
+<li class="chapter" data-level="3.3.2" data-path="tibble-misc.html"><a href="tibble-misc.html#tibble-df-diff"><i class="fa fa-check"></i><b>3.3.2</b> Base R dataframe 和 Tidyverse tibble的区别</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>4</b> 使用ggplot绘图</a><ul>
+<li class="chapter" data-level="4.1" data-path="g-phil.html"><a href="g-phil.html"><i class="fa fa-check"></i><b>4.1</b> 哲理</a></li>
+<li class="chapter" data-level="4.2" data-path="g-basics.html"><a href="g-basics.html"><i class="fa fa-check"></i><b>4.2</b> 基础</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="g-basics.html"><a href="g-basics.html#g-basics-grammar"><i class="fa fa-check"></i><b>4.2.1</b> 基本语法</a></li>
+<li class="chapter" data-level="4.2.2" data-path="g-basics.html"><a href="g-basics.html#g-basics-types"><i class="fa fa-check"></i><b>4.2.2</b> 图像类型</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="g-intermediate.html"><a href="g-intermediate.html"><i class="fa fa-check"></i><b>4.3</b> 进阶</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="g-intermediate.html"><a href="g-intermediate.html#g-lay"><i class="fa fa-check"></i><b>4.3.1</b> 逐层作图</a></li>
+<li class="chapter" data-level="4.3.2" data-path="g-intermediate.html"><a href="g-intermediate.html#g-legend"><i class="fa fa-check"></i><b>4.3.2</b> 尺寸，轴，和图例</a></li>
+<li class="chapter" data-level="4.3.3" data-path="g-intermediate.html"><a href="g-intermediate.html#g-pos"><i class="fa fa-check"></i><b>4.3.3</b> 位置</a></li>
+<li class="chapter" data-level="4.3.4" data-path="g-intermediate.html"><a href="g-intermediate.html#g-theme"><i class="fa fa-check"></i><b>4.3.4</b> 背景/主题的修改</a></li>
+<li class="chapter" data-level="4.3.5" data-path="g-intermediate.html"><a href="g-intermediate.html#g-programming"><i class="fa fa-check"></i><b>4.3.5</b> 与ggplot编程</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="g-base.html"><a href="g-base.html"><i class="fa fa-check"></i><b>4.4</b> 附：Base R中的作图</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="wrangle.html"><a href="wrangle.html"><i class="fa fa-check"></i><b>5</b> 数据处理</a><ul>
+<li class="chapter" data-level="5.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html"><i class="fa fa-check"></i><b>5.1</b> 把“untidy data”整成“tidy data”</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#untidy-data"><i class="fa fa-check"></i><b>5.1.1</b> “untidy data”的主要问题</a></li>
+<li class="chapter" data-level="5.1.2" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#section-5.1.2"><i class="fa fa-check"></i><b>5.1.2</b> 解决方案</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="import-export.html"><a href="import-export.html"><i class="fa fa-check"></i><b>5.2</b> 数据的导入和导出</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="import-export.html"><a href="import-export.html#data-import"><i class="fa fa-check"></i><b>5.2.1</b> 导入</a></li>
+<li class="chapter" data-level="5.2.2" data-path="import-export.html"><a href="import-export.html#section-5.2.2"><i class="fa fa-check"></i><b>5.2.2</b> 导出</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="strings.html"><a href="strings.html"><i class="fa fa-check"></i><b>5.3</b> 字符串的处理</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="strings.html"><a href="strings.html#-1"><i class="fa fa-check"></i><b>5.3.1</b> 基础</a></li>
+<li class="chapter" data-level="5.3.2" data-path="strings.html"><a href="strings.html#str_sub"><i class="fa fa-check"></i><b>5.3.2</b> 使用<code>str_sub()</code>取子集</a></li>
+<li class="chapter" data-level="5.3.3" data-path="strings.html"><a href="strings.html#str_c"><i class="fa fa-check"></i><b>5.3.3</b> 使用<code>str_c()</code>进行字符串的合并</a></li>
+<li class="chapter" data-level="5.3.4" data-path="strings.html"><a href="strings.html#str_view"><i class="fa fa-check"></i><b>5.3.4</b> 使用<code>str_view()</code>来查找特定的字符组合</a></li>
+<li class="chapter" data-level="5.3.5" data-path="strings.html"><a href="strings.html#str_detect"><i class="fa fa-check"></i><b>5.3.5</b> <code>str_detect()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>5.4</b> Factors</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="factors.html"><a href="factors.html#-2"><i class="fa fa-check"></i><b>5.4.1</b> 基础</a></li>
+<li class="chapter" data-level="5.4.2" data-path="factors.html"><a href="factors.html#section-5.4.2"><i class="fa fa-check"></i><b>5.4.2</b> 在绘图中的应用</a></li>
+<li class="chapter" data-level="5.4.3" data-path="factors.html"><a href="factors.html#section-5.4.3"><i class="fa fa-check"></i><b>5.4.3</b> 高端操作</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="dttm.html"><a href="dttm.html"><i class="fa fa-check"></i><b>5.5</b> 日期和时间</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="dttm.html"><a href="dttm.html#-3"><i class="fa fa-check"></i><b>5.5.1</b> 基础</a></li>
+<li class="chapter" data-level="5.5.2" data-path="dttm.html"><a href="dttm.html#section-5.5.2"><i class="fa fa-check"></i><b>5.5.2</b> 计算</a></li>
+<li class="chapter" data-level="5.5.3" data-path="strings.html"><a href="strings.html#-1"><i class="fa fa-check"></i><b>5.5.3</b> 在绘图中的应用</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="python.html"><a href="python.html"><i class="fa fa-check"></i><b>6</b> 与Python的联合使用</a><ul>
+<li class="chapter" data-level="6.1" data-path="reticulate.html"><a href="reticulate.html"><i class="fa fa-check"></i><b>6.1</b> 在R中使用Python: <code>reticulate</code></a></li>
+<li class="chapter" data-level="6.2" data-path="rpy.html"><a href="rpy.html"><i class="fa fa-check"></i><b>6.2</b> 在Python中使用R: <code>rpy</code></a></li>
+<li class="chapter" data-level="6.3" data-path="beaker.html"><a href="beaker.html"><i class="fa fa-check"></i><b>6.3</b> Beaker Notebook</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="References.html"><a href="References.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R与tidyverse——数据分析入门</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="functions" class="section level2">
+<h2><span class="header-section-number">2.6</span> 函数</h2>
+<div id="functions-in-R" class="section level3">
+<h3><span class="header-section-number">2.6.1</span> R中的函数</h3>
+<p>不像很多其他语言的函数（和方法）有<code>value.func()</code>和<code>func value</code>等格式，R中所有函数的通用格式是这样的：</p>
+<pre><code>function(argument1 = value1, argument2 = value2, ...)</code></pre>
+<p>比如</p>
+<pre class="sourceCode r"><code class="sourceCode r">sample &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">5.1</span>, <span class="fl">5.2</span>, <span class="fl">4.5</span>, <span class="fl">5.3</span>, <span class="fl">4.3</span>, <span class="fl">5.5</span>, <span class="fl">5.7</span>)
+<span class="co"># 根据传统，赋值变量时用`&lt;-`号，赋值函数参数时才用`=`</span>
+<span class="kw">t.test</span>(<span class="dt">x =</span> sample, <span class="dt">mu =</span> <span class="fl">4.5</span>)</code></pre>
+<pre><code>## 
+##  One Sample t-test
+## 
+## data:  sample
+## t = 3.0308, df = 6, p-value = 0.02307
+## alternative hypothesis: true mean is not equal to 4.5
+## 95 percent confidence interval:
+##  4.612840 5.558589
+## sample estimates:
+## mean of x 
+##  5.085714</code></pre>
+<p>二元运算符和<code>[</code>（取子集符号）看起来一点都不像函数，而实际上它们也是函数，因此也可以用通用的格式使用他们，只是需要加上引号：</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="st">&quot;+&quot;</span>(<span class="dv">2</span>, <span class="dv">3</span>)</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="st">&quot;[&quot;</span>(<span class="kw">c</span>(<span class="st">&quot;四川担担面&quot;</span>, <span class="st">&quot;武汉热干面&quot;</span>, <span class="st">&quot;兰州牛肉面&quot;</span>, <span class="st">&quot;北京炸酱面&quot;</span>), <span class="dv">2</span>)</code></pre>
+<pre><code>## [1] &quot;武汉热干面&quot;</code></pre>
+<p>可自定义的二元运算符形式为<code>%x%</code>, 其中<code>x</code>为任何字符。（见第<a href="functions.html#binary-operaters">2.6.3.3</a>节）</p>
+<p>（英语中，“parameter”或“formal argument”二词用于函数定义，“argument”或“actual argument”二词用于调用函数<span class="citation">(Kernighan and Ritchie <a href="#ref-Kernighan1988The-C-Programming-La">1988</a>)</span>，中文里分别是“形式参数”和“实际参数”，但是多数场合简称“参数”。）</p>
+</div>
+<div id="abbr" class="section level3">
+<h3><span class="header-section-number">2.6.2</span> 调用函数</h3>
+<p>根据通用格式（<code>function(argument1 = value1, argument2 = value2, ...)</code>）调用函数。对于二元运算符，<code>a %x% b</code>等价于<code>&quot;x&quot;(a, b)</code>.</p>
+<p>从“<code>function(</code>”开始到此函数结尾的“<code>)</code>”中间为参数，参数用逗号隔开，空格和换行会被忽略，“<code>#</code>”符号出现之处，那一行之后的内容都会被忽略。这意味着你可以（丧心病狂地）像这样调用一个函数。</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>        (
+ <span class="co"># 4   </span>
+        <span class="dv">4</span> <span class="co"># 我怕不是</span>
+,              <span class="co">#疯了哦</span>
+            <span class="dv">6</span>
+  
+  )</code></pre>
+<pre><code>## [1] 10</code></pre>
+<p>它实际的好处是，当参数很长或是有嵌套的函数时，可以通过换行和空格使代码更易读，就像其它的编程语言一样。</p>
+<p>函数的参数以<code>seq</code>函数为例，通过查看documentation（在console执行<code>?seq</code>）可以查看它的所有的参数：</p>
+<pre><code>## Default S3 method:
+seq(from = 1, to = 1, by = ((to - from)/(length.out - 1)),
+    length.out = NULL, along.with = NULL, ...)</code></pre>
+<p>可以看到第一个参数是<code>from</code>，第二个是<code>to</code>，第三个是<code>by</code>，以此类推。因此我们执行<code>seq(0, 50, 10)</code>的时候，R会自动理解成<code>seq(from = 0, to = 50, by = 10)</code>。而想用指定长度的方法就必须要写清楚是<code>length.out</code>等于几。</p>
+<p><code>length.out</code>本身也可以简写：</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">25</span>, <span class="dt">l =</span> <span class="dv">11</span>)</code></pre>
+<pre><code>##  [1]  0.0  2.5  5.0  7.5 10.0 12.5 15.0 17.5 20.0 22.5 25.0</code></pre>
+<p>因为参数中只有<code>length.out</code>是以<code>l</code>开头的，<code>l</code>会被理解为<code>length.out</code>. 但是这个习惯并不好；自己用用就算了，与别人分享自己的工作时请务必使用标准写法。</p>
+</div>
+<div id="create-functions" class="section level3">
+<h3><span class="header-section-number">2.6.3</span> 创建函数</h3>
+<div id="general-functions" class="section level4">
+<h4><span class="header-section-number">2.6.3.1</span> 普通函数</h4>
+<pre class="sourceCode r"><code class="sourceCode r">函数名 &lt;-<span class="st"> </span><span class="cf">function</span>(参数1, 参数2, ...){
+  对参数1和参数2
+  进行
+  一系列
+  一行或者多行
+  计算
+  <span class="kw">return</span>(计算结果)
+}</code></pre>
+<p>在R中，函数是作为对象保存的，因此定义函数不需要一套另外的符号/语句，还是用赋值符号<code>&lt;-</code>，和<code>function()</code>函数。</p>
+<p>R自带了计算样本标准差 (standard deviation, <span class="math inline">\(s\)</span>)的函数, <code>sd()</code>，我们可以根据它写一个计算均值标准差（即“标准误”, standard error）（<span class="math inline">\(SE=s_{\bar{x}}=\frac{s}{\sqrt{n}}\)</span>）</p>
+<pre class="sourceCode r"><code class="sourceCode r">SE &lt;-<span class="st"> </span><span class="cf">function</span>(x) {
+  s &lt;-<span class="st"> </span><span class="kw">sd</span>(x)
+  n &lt;-<span class="st"> </span><span class="kw">length</span>(x)
+  result &lt;-<span class="st"> </span>s<span class="op">/</span><span class="kw">sqrt</span>(n)
+  <span class="kw">return</span>(result)
+}
+<span class="co"># 随后，你就可以使用自定义的函数了</span>
+<span class="kw">SE</span>(<span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">8</span>)) </code></pre>
+<pre><code>## [1] 0.3367673</code></pre>
+<p>这里其实可以做一些省略。很多时候，最后一“句”的<strong>计算结果</strong>（不是赋值计算）就是我们想<code>return</code>的结果。因此，这时<code>return</code>可以省略：</p>
+<pre class="sourceCode r"><code class="sourceCode r">SE &lt;-<span class="st"> </span><span class="cf">function</span>(x) {
+  s &lt;-<span class="st"> </span><span class="kw">sd</span>(x)
+  n &lt;-<span class="st"> </span><span class="kw">length</span>(x)
+  s<span class="op">/</span><span class="kw">sqrt</span>(n) <span class="co"># 注意不是`result &lt;- s/sqrt(n)`</span>
+}
+<span class="kw">SE</span>(<span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">8</span>)) </code></pre>
+<pre><code>## [1] 0.3367673</code></pre>
+<p>很多时候，函数内部有复杂流程控制，这时使用<code>return()</code>可以很大地增强易读性：</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 这是随手写的一个没有意义的函数</span>
+myfunc &lt;-<span class="st"> </span><span class="cf">function</span>(i){
+  k &lt;-<span class="st"> </span><span class="dv">8</span>
+  <span class="cf">if</span> (i<span class="op">&gt;</span><span class="dv">3</span>) {
+    j &lt;-<span class="st"> </span><span class="op">-</span>i
+    <span class="cf">while</span>(j <span class="op">&lt;</span><span class="st"> </span><span class="dv">20</span>){
+      k &lt;-<span class="st"> </span>k <span class="op">+</span><span class="st"> </span>i <span class="op">+</span><span class="st"> </span>j
+      j &lt;-<span class="st"> </span>j<span class="op">+</span><span class="dv">5</span>
+    }
+    <span class="kw">return</span>(k)
+  } <span class="cf">else</span> {
+    <span class="cf">if</span> (i <span class="op">%%</span><span class="st"> </span><span class="dv">2</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>) {
+      <span class="kw">return</span>(<span class="dv">5</span>)
+    } <span class="cf">else</span> <span class="kw">return</span>(k<span class="op">*</span>i)
+  }
+}
+<span class="kw">myfunc</span>(<span class="dv">6</span>)</code></pre>
+<pre><code>## [1] 83</code></pre>
+</div>
+<div id="anonymous-functions" class="section level4">
+<h4><span class="header-section-number">2.6.3.2</span> 无名函数</h4>
+<p>本章剩余的内容，都是比较进阶的了。可以酌情从这里跳转至本章第<a href="functions.html#test-base">2.6.9</a>节。</p>
+<p>函数不需要名字也可以执行。一般，会与<code>apply</code>族函数联用（见第<a href="control-flow.html#apply">2.5.4</a>节）：</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sapply</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="cf">function</span>(x) x<span class="op">^</span><span class="dv">2</span>)</code></pre>
+<pre><code>## [1]  1  4  9 16 25</code></pre>
+<p>或者用于</p>
+</div>
+<div id="binary-operaters" class="section level4">
+<h4><span class="header-section-number">2.6.3.3</span> 二元运算符</h4>
+<p>定义二元运算符的方式和定义普通函数的方法极其类似，只是参数必须要有且仅有两个（否则作为“二元”运算符就无意义了），且运算符名称需要用引号包围。</p>
+<p>比如我们可以定义一个计算椭圆面积的函数</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="st">&#39;%el%&#39;</span> &lt;-<span class="st"> </span><span class="cf">function</span>(x, y) pi<span class="op">*</span>x<span class="op">*</span>y
+
+<span class="dv">2</span> <span class="op">%el%</span><span class="st"> </span><span class="dv">5</span></code></pre>
+<pre><code>## [1] 31.41593</code></pre>
+<p>原则上，可自定义的二元运算符不一定要用<code>%</code>包围；<code>+</code>, <code>-</code>, <code>:</code>等符号的功能都可以被自定义，但是它们是R自带的，非常常用的函数，重定义它们只会带来麻烦。</p>
+</div>
+<div id="closure" class="section level4">
+<h4><span class="header-section-number">2.6.3.4</span> 闭包 (Closure)</h4>
+<p>函数里可以包含着另一个函数，这就形成了一个闭包：</p>
+<pre class="sourceCode r"><code class="sourceCode r">myfunc &lt;-<span class="st"> </span><span class="cf">function</span>(){
+  a =<span class="st"> </span><span class="dv">5</span>
+  <span class="cf">function</span>(){
+    b =<span class="st"> </span><span class="dv">10</span>
+    <span class="kw">return</span>(a<span class="op">*</span>b)
+  }
+}
+<span class="co"># 执行myfunc()的时候，默认结果为最后一句/一行，在这里应为内函数：</span>
+<span class="kw">myfunc</span>()</code></pre>
+<pre><code>## function(){
+##     b = 10
+##     return(a*b)
+##   }
+## &lt;environment: 0x7fb2f3bf3ea0&gt;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 既然`myfunc()`的结果是一个函数，那么在后面再加上一个括号就是执行内函数了；内函数可以使用外函数中所定义的变量（比如这里使用了外函数的`a = 5`）</span>
+<span class="kw">myfunc</span>()()</code></pre>
+<pre><code>## [1] 50</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">speak &lt;-<span class="st"> </span><span class="cf">function</span>(x){
+  <span class="kw">x</span>()<span class="op">$</span>speak
+}
+
+<span class="kw">speak</span>(cat)</code></pre>
+<pre><code>## NULL</code></pre>
+</div>
+<div id="oop" class="section level4">
+<h4><span class="header-section-number">2.6.3.5</span> 伪·OOP</h4>
+<p>我貌似，捣鼓出了一种完全使用R中的简易函数实现伪·OOP的方法（R中的真·OOP是有三种，S3，R6和S4）：</p>
+<pre class="sourceCode r"><code class="sourceCode r">Cat &lt;-<span class="st"> </span><span class="cf">function</span>(name){
+  name =<span class="st"> </span>name
+  binomial_name &lt;-<span class="st"> &quot;Felis catus&quot;</span>
+  speak &lt;-<span class="st"> &quot;Meow&quot;</span>
+  greet &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">time =</span> <span class="st">&quot;not_specified&quot;</span>){
+    intro &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;my name is&quot;</span>, name)
+    <span class="cf">if</span>(time <span class="op">==</span><span class="st"> &quot;morning&quot;</span>) <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;Good morning,&quot;</span>, intro))
+    <span class="cf">if</span>(time <span class="op">==</span><span class="st"> &quot;afternoon&quot;</span>) <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;Good afternoon,&quot;</span>, intro))
+    <span class="cf">if</span>(time <span class="op">==</span><span class="st"> &quot;evening&quot;</span>) <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;Good evening,&quot;</span>, intro)) 
+    <span class="cf">if</span>(time <span class="op">==</span><span class="st"> &quot;not_specified&quot;</span>) <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;Hi,&quot;</span>, intro))
+  }
+    <span class="kw">paste</span>(<span class="st">&quot;Hi, my name is &quot;</span>, name)
+  <span class="kw">list</span>(<span class="dt">name =</span> name, <span class="dt">binomial_name =</span> binomial_name, <span class="dt">speak =</span> speak, <span class="dt">greet =</span> greet)
+}
+
+Felix &lt;-<span class="st"> </span><span class="kw">Cat</span>(<span class="st">&quot;Felix&quot;</span>)
+Felix<span class="op">$</span>name</code></pre>
+<pre><code>## [1] &quot;Felix&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">Felix<span class="op">$</span><span class="kw">greet</span>(<span class="st">&quot;morning&quot;</span>)</code></pre>
+<pre><code>## [1] &quot;Good morning, my name is Felix&quot;</code></pre>
+<p><strong>inheritance和polymorphism的实现</strong></p>
+<pre class="sourceCode r"><code class="sourceCode r">Pet &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">name =</span> <span class="ot">NA</span>, <span class="dt">common_name =</span> <span class="ot">NA</span>, <span class="dt">binomial_name =</span> <span class="ot">NA</span>, <span class="dt">speak =</span> <span class="ot">NA</span>){
+  name &lt;-<span class="st"> </span>name
+  common_name &lt;-<span class="st"> </span>common_name
+  binomial_name &lt;-<span class="st"> </span>binomial_name
+  speak &lt;-<span class="st"> </span>speak
+  greet &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">time =</span> <span class="st">&quot;not_specified&quot;</span>){
+    intro &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;I&#39;m a&quot;</span>, common_name, <span class="st">&quot;and my name is&quot;</span>, name)
+    <span class="cf">if</span>(time <span class="op">==</span><span class="st"> &quot;morning&quot;</span>) <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;Good morning,&quot;</span>, intro))
+    <span class="cf">if</span>(time <span class="op">==</span><span class="st"> &quot;afternoon&quot;</span>) <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;Good afternoon,&quot;</span>, intro))
+    <span class="cf">if</span>(time <span class="op">==</span><span class="st"> &quot;evening&quot;</span>) <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;Good evening,&quot;</span>, intro)) 
+    <span class="cf">if</span>(time <span class="op">==</span><span class="st"> &quot;not_specified&quot;</span>) <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;Hi,&quot;</span>, intro))
+  }
+    <span class="kw">paste</span>(<span class="st">&quot;Hi, my name is &quot;</span>, name)
+  <span class="kw">list</span>(<span class="dt">name =</span> name, <span class="dt">common_name =</span> common_name, <span class="dt">binomial_name =</span> binomial_name, <span class="dt">speak =</span> speak, <span class="dt">greet =</span> greet)
+}
+
+
+Turtle &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">name =</span> <span class="ot">NA</span>){
+  <span class="kw">Pet</span>(name, <span class="st">&quot;turtle&quot;</span>, <span class="st">&quot;Trachemys scripta elegans&quot;</span>) <span class="co"># 实现inheritance # 龟没有叫声</span>
+}
+
+Cat &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">name =</span> <span class="ot">NA</span>, <span class="dt">sterilized =</span> <span class="ot">NA</span>){
+  sterilized &lt;-<span class="st"> </span>sterilized <span class="co"># 猫可能绝育 # 新增attribute，实现了广义的polymorphism</span>
+  PetAaM &lt;-<span class="st"> </span><span class="kw">Pet</span>(name, <span class="st">&quot;cat&quot;</span>, <span class="st">&quot;Felis catus&quot;</span>, <span class="st">&quot;Meow&quot;</span>)
+  CatOnlyAaM &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">sterilized =</span> sterilized)
+  <span class="kw">c</span>(PetAaM, CatOnlyAaM)
+}
+
+<span class="co"># 实现了Python语境中的polymorphism</span>
+greet &lt;-<span class="st"> </span><span class="cf">function</span>(pet, <span class="dt">time =</span> <span class="st">&quot;not_specified&quot;</span>){
+  pet<span class="op">$</span><span class="kw">greet</span>(time)
+}
+
+binomial_name &lt;-<span class="st"> </span><span class="cf">function</span>(pet){
+  pet<span class="op">$</span>binomial_name
+}</code></pre>
+<p>使用例：</p>
+<pre class="sourceCode r"><code class="sourceCode r">Felix &lt;-<span class="st"> </span><span class="kw">Cat</span>(<span class="st">&quot;Felix&quot;</span>, <span class="st">&quot;TRUE&quot;</span>)
+Kazuya &lt;-<span class="st"> </span><span class="kw">Turtle</span>(<span class="st">&quot;Kazuya&quot;</span>)
+
+Felix<span class="op">$</span>binomial_name</code></pre>
+<pre><code>## [1] &quot;Felis catus&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">Kazuya<span class="op">$</span><span class="kw">greet</span>(<span class="st">&quot;afternoon&quot;</span>)</code></pre>
+<pre><code>## [1] &quot;Good afternoon, I&#39;m a turtle and my name is Kazuya&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">greet</span>(Felix, <span class="st">&quot;morning&quot;</span>)</code></pre>
+<pre><code>## [1] &quot;Good morning, I&#39;m a cat and my name is Felix&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sapply</span>(<span class="kw">list</span>(Kazuya, Felix), binomial_name)</code></pre>
+<pre><code>## [1] &quot;Trachemys scripta elegans&quot; &quot;Felis catus&quot;</code></pre>
+<p>没有<code>class</code>，没有<code>self</code>，没有<code>__init__</code>，<em>it just works</em>.</p>
+</div>
+</div>
+<div id="..." class="section level3">
+<h3><span class="header-section-number">2.6.4</span> 关于<code>...</code></h3>
+<p>有时候，你想写的函数可能有数量不定的参数，或是有需要传递给另一个函数的“其他参数”（即本函数不需要的参数），这时候可以在函数定义时加入一个名为<code>...</code>的参数，然后用<code>list()</code>来读取它们。list是进阶内容，在第<a href="#list"><strong>??</strong></a>节有说明。</p>
+<p>比如我写一个很无聊的函数：</p>
+<pre class="sourceCode r"><code class="sourceCode r">my_func &lt;-<span class="st"> </span><span class="cf">function</span>(arg1, <span class="dt">arg2 =</span> <span class="dv">100</span>, ...){
+  other_args &lt;-<span class="st"> </span><span class="kw">list</span>(...)
+  <span class="kw">print</span>(arg1)
+  <span class="kw">print</span>(arg2)
+  <span class="kw">print</span>(other_args)
+}
+
+<span class="kw">my_func</span>(<span class="st">&quot;foo&quot;</span>, <span class="dt">cities =</span> <span class="kw">c</span>(<span class="st">&quot;崇阳&quot;</span>, <span class="st">&quot;Αθήνα&quot;</span>, <span class="st">&quot;つがる&quot;</span>), <span class="dt">nums =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">6</span>))</code></pre>
+<pre><code>## [1] &quot;foo&quot;
+## [1] 100
+## $cities
+## [1] &quot;崇阳&quot;   &quot;Αθήνα&quot;  &quot;つがる&quot;
+## 
+## $nums
+## [1] 3 4 6</code></pre>
+<p><code>arg1</code>指定了是<code>&quot;foo&quot;</code>（通过<a href="functions.html#abbr">简写</a>），因此第一行印出<code>&quot;foo&quot;</code>; <code>arg2</code>未指定，因此使用默认值<code>100</code>，印在第二行。<code>cities</code>和<code>nums</code>在形式参数中没有匹配，因此归为“…”，作为list印在第三行及之后。</p>
+</div>
+<div id="system-time" class="section level3">
+<h3><span class="header-section-number">2.6.5</span> 测速</h3>
+<p>当你开始处理复杂，大量的数据时，或是向别人分享自己的代码时，代码执行的速度变得重要。</p>
+<p>一段代码/一个函数经常有很多种写法，哪种效率更高呢？实践是检验真理的唯一标准，R提供了一个测速函数：<code>system.time()</code>函数。</p>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">vector</span>(<span class="st">&#39;numeric&#39;</span>)
+<span class="kw">system.time</span>(
+  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">50</span>){
+    <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">100</span>) {
+      x &lt;-<span class="st"> </span><span class="kw">append</span>(x, i<span class="op">*</span>j)
+    }
+  }
+)</code></pre>
+<pre><code>##    user  system elapsed 
+##   0.047   0.024   0.071</code></pre>
+<p>其中第三个数字 (<code>elapsed</code>)是执行<code>system.time()</code>括号内的语句实际消耗的时间。可以使用索引 (<code>[3]</code>)抓取。</p>
+<p>如果括号内的语句大于一句，像这样：</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>(
+  <span class="dv">1</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span>
+  <span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span>
+)</code></pre>
+<p>R会报错。就像流程控制里学到的那样，需要用大括号包围多行/多句的语句，就像这样：</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>({
+  <span class="dv">1</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span>
+  <span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span>
+})</code></pre>
+</div>
+<div id="list-intro" class="section level3">
+<h3><span class="header-section-number">2.6.6</span> 列表 (list)</h3>
+<p>R中的list是一种特殊的数据存储形式。使用<code>list()</code>函数来创建lists.</p>
+<p>尝试对lists和vectors使用<code>is.vector()</code>, <code>is.list()</code>, <code>is.atomic()</code>和<code>is.recursive()</code>函数，你会发现list虽然也是“vector”，但我们一般说的“vector”都是指只能存储一种数据类型的atomic vector；而lists是recursive vector.</p>
+<p>这意味着<strong>一个list能存储多种类型的数据，且可以包含子list</strong>。list中的每个元素可以是<strong>任何R中的对象</strong> (object)：除了常用的 (atomic) vector和另外一个（子）list以外，还可以有dataframe/tibble和函数：</p>
+<pre class="sourceCode r"><code class="sourceCode r">y &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dv">1</span>, <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;あ&quot;</span>), <span class="kw">list</span>(<span class="dv">1</span><span class="op">+</span>3i, <span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">NA</span>, <span class="ot">TRUE</span>)), 
+          <span class="kw">tibble</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="st">&quot;阿拉木图&quot;</span>, <span class="st">&quot;什切青&quot;</span>), <span class="dt">y =</span> <span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">3</span>)),
+          t.test)
+y</code></pre>
+<pre><code>## [[1]]
+## [1] 1
+## 
+## [[2]]
+## [1] &quot;a&quot;  &quot;あ&quot;
+## 
+## [[3]]
+## [[3]][[1]]
+## [1] 1+3i
+## 
+## [[3]][[2]]
+## [1] FALSE    NA  TRUE
+## 
+## 
+## [[4]]
+## # A tibble: 2 x 2
+##   x            y
+##   &lt;chr&gt;    &lt;dbl&gt;
+## 1 阿拉木图     2
+## 2 什切青       3
+## 
+## [[5]]
+## function (x, ...) 
+## UseMethod(&quot;t.test&quot;)
+## &lt;bytecode: 0x7fb2edcdec20&gt;
+## &lt;environment: namespace:stats&gt;</code></pre>
+<div id="list-index" class="section level4">
+<h4><span class="header-section-number">2.6.6.1</span> list的索引/取子集</h4>
+<p>使用上面的例子：</p>
+<pre class="sourceCode r"><code class="sourceCode r">y[<span class="dv">2</span>] <span class="co"># 使用单方括号，得到的是一个只有一个list元素的list</span></code></pre>
+<pre><code>## [[1]]
+## [1] &quot;a&quot;  &quot;あ&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">y[[<span class="dv">2</span>]] <span class="co"># 使用双方括号，得到的是一个vector</span></code></pre>
+<pre><code>## [1] &quot;a&quot;  &quot;あ&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">y[[<span class="dv">3</span>]][[<span class="dv">2</span>]] <span class="co"># 得到的也是一个vector；父list的索引在前，子list的在后</span></code></pre>
+<pre><code>## [1] FALSE    NA  TRUE</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">y[[<span class="dv">3</span>]] <span class="co"># 这个位置包含两个子list，因此得到一个有两个list元素的list</span></code></pre>
+<pre><code>## [[1]]
+## [1] 1+3i
+## 
+## [[2]]
+## [1] FALSE    NA  TRUE</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">y[[<span class="dv">3</span>]][[<span class="dv">2</span>]][<span class="dv">2</span>] <span class="co"># 得到vector时，直接在后面用单方括号</span></code></pre>
+<pre><code>## [1] NA</code></pre>
+<p>list里的元素可以有名字；被命名的元素可以通过<code>$</code>符号抓取：</p>
+<pre class="sourceCode r"><code class="sourceCode r">z &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>), <span class="dt">z2 =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>), <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>))
+z <span class="co"># `[[2]]`被`$z2`所取代</span></code></pre>
+<pre><code>## [[1]]
+## [1] 1 3
+## 
+## $z2
+## [1] 4 5 6
+## 
+## [[3]]
+## [1] &quot;a&quot; &quot;b&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">z<span class="op">$</span>z2 <span class="op">==</span><span class="st"> </span>z[[<span class="dv">2</span>]] <span class="co"># `z[[2]]`仍然是可用的，结果和`z$z2`一样</span></code></pre>
+<pre><code>## [1] TRUE TRUE TRUE</code></pre>
+</div>
+<div id="section-2.6.6.2" class="section level4">
+<h4><span class="header-section-number">2.6.6.2</span> 合并与拆解</h4>
+<p>通过<code>c()</code>函数来合并多个列表。</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(<span class="kw">list</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="kw">list</span>(<span class="dv">3</span>, <span class="dv">4</span>, <span class="kw">list</span>(<span class="dv">5</span>,<span class="dv">6</span>)))
+<span class="co"># 将等同于list(1, 2, 3, 4, list(5,6))</span></code></pre>
+<p>也许你想把需要“合并”的列表作为子列表放在另一个列表里；这也很简单，在本节一开始就讲了：</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">list</span>(<span class="kw">list</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="kw">list</span>(<span class="dv">3</span>, <span class="dv">4</span>))</code></pre>
+<pre><code>## [[1]]
+## [[1]][[1]]
+## [1] 1
+## 
+## [[1]][[2]]
+## [1] 2
+## 
+## 
+## [[2]]
+## [[2]][[1]]
+## [1] 3
+## 
+## [[2]][[2]]
+## [1] 4</code></pre>
+<p>通过<code>unlist()</code>函数来拆解列表中的子列表。若参数<code>recursive</code>为<code>TRUE</code>（默认值），将一直拆解至无子列表的列表，如果此最简列表的元素都属于五种atomic vector中的数据<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a>，此列表还会被进一步化简成向量。若<code>recursive = FALSE</code>，最“靠外”的一级列表（可能是多个）将会被拆解。</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">unlist</span>(<span class="kw">list</span>(<span class="dv">1</span>, <span class="kw">list</span>(<span class="dv">2</span>, <span class="kw">list</span>(<span class="dv">3</span>, <span class="dv">4</span>)), <span class="kw">list</span>(<span class="dv">5</span>, <span class="dv">6</span>), <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>))
+<span class="co"># 将等同于c(1, 2, 3, 4, 5, 6, 7, 8, 9) </span>
+<span class="co"># 注意被化简成了向量</span>
+
+<span class="kw">unlist</span>(<span class="kw">list</span>(<span class="dv">1</span>, <span class="kw">list</span>(<span class="dv">2</span>, <span class="kw">list</span>(<span class="st">&quot;a&quot;</span>, <span class="dv">4</span>)), <span class="kw">list</span>(<span class="dv">5</span>, <span class="ot">TRUE</span>), 7L, <span class="dv">8</span>, <span class="dv">9</span><span class="op">+</span>0i))
+<span class="co"># 将等同于c(&quot;1&quot;, &quot;2&quot;, &quot;a&quot;, 4, 5, &quot;TRUE&quot;, &quot;7&quot;, 8, &quot;9+0i&quot;)</span>
+<span class="co"># 化简成向量时，非字符元素被强制转换成字符了</span>
+
+<span class="kw">unlist</span>(<span class="kw">list</span>(<span class="dv">1</span>, <span class="kw">list</span>(<span class="dv">2</span>, <span class="kw">list</span>(t.test, <span class="dv">4</span>)), <span class="kw">list</span>(<span class="dv">5</span>, <span class="ot">TRUE</span>), 7L, x, <span class="dv">9</span><span class="op">+</span>0i))
+<span class="co"># t.test无法存储于向量中，因此最简结果为一个list：</span>
+<span class="co"># list(1, 2, t.test, 4, 5, TRUE, 7L, x, 9+0i)</span>
+
+
+<span class="kw">unlist</span>(<span class="kw">list</span>(<span class="dv">1</span>, <span class="kw">list</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="kw">list</span>(<span class="dv">4</span>, <span class="dv">5</span>)), <span class="kw">list</span>(<span class="dv">6</span>, <span class="dv">7</span>), <span class="dv">8</span>, <span class="dv">9</span>), <span class="dt">recursive =</span> <span class="ot">FALSE</span>)
+<span class="co"># 将等同于list(1, 2, 3, list(4, 5), 6, 7, 8, 9)</span></code></pre>
+<p>因此，当<code>A</code>, <code>B</code>为列表，<code>unlist(list(A, B), recursive = FALSE)</code>等同于<code>c(A, B)</code>.</p>
+</div>
+<div id="section-2.6.6.3" class="section level4">
+<h4><span class="header-section-number">2.6.6.3</span> 其他性质和操作</h4>
+<p>上面说到<code>unlist(list(A, B), recursive = FALSE)</code>等同于<code>c(A, B)</code>，你可能很想用<code>==</code>验证一下。很不幸，你会得到一条错误信息：</p>
+<pre><code>comparison of these types is not implemented</code></pre>
+<p>在第@{logical-operations}节讲过，<code>==</code>只能用于atomic vectors；对于列表（和其他对象）可以用<code>identical()</code>函数确认两者是否完全一致。</p>
+<pre class="sourceCode r"><code class="sourceCode r">A &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="st">&quot;a&quot;</span>, <span class="dv">1</span>, <span class="ot">TRUE</span>); B &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dv">5</span><span class="op">+</span>8i, <span class="ot">NA</span>, 4L)
+C1 &lt;-<span class="st"> </span><span class="kw">unlist</span>(<span class="kw">list</span>(A, B), <span class="dt">recursive =</span> <span class="ot">FALSE</span>); C2 &lt;-<span class="st"> </span><span class="kw">c</span>(A, B)
+<span class="kw">identical</span>(C1, C2)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+</div>
+</div>
+<div id="matrix-array" class="section level3">
+<h3><span class="header-section-number">2.6.7</span> array（数组）和matrix（矩阵）简介</h3>
+<p>Vector是一维的数据。Array是多维的数据。Matrix是二维的数据，因此matrix是array的一种特殊情况。</p>
+<p>Dataframe不是matrix（虽然都是方的）. Matrix是二维的，<strong>仅包含数字</strong>的<strong>array</strong>. Dataframe是一个二维的<strong>list</strong>，不同列（即list元素）<strong>可以存储不同的数据类型</strong>。</p>
+<p>我们可以用<code>dim()</code>来创建arrays：</p>
+<pre class="sourceCode r"><code class="sourceCode r">A &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">48</span> <span class="co">#创建一个(1,2,3,...24)的numeric vector</span>
+<span class="kw">dim</span>(A) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">6</span>,<span class="dv">8</span>) <span class="co">#给A assign一个6乘4的dimensions</span>
+A</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
+## [1,]    1    7   13   19   25   31   37   43
+## [2,]    2    8   14   20   26   32   38   44
+## [3,]    3    9   15   21   27   33   39   45
+## [4,]    4   10   16   22   28   34   40   46
+## [5,]    5   11   17   23   29   35   41   47
+## [6,]    6   12   18   24   30   36   42   48</code></pre>
+<p>可以看到我们创建了一个二维的，array, 因此它也是一个（4行6列的）matrix。</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.array</span>(A)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.matrix</span>(A)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p>注意24个数字排列的方式。第一个维度是行，所以先把4行排满，随后再使用下一个维度（列），使用第2列继续排4行，就像数字一样，（十进制中）先把个位从零数到9，再使用第二个位数（十位），以此类推。下面三维和四维的例子可能会更清晰。</p>
+<p>同时注意最左边和最上边的[1,], [,3]之类的标记。你应该猜出来了，这些是index. 假设你要抓取第五行第三列的数值：</p>
+<pre class="sourceCode r"><code class="sourceCode r">A[<span class="dv">5</span>,<span class="dv">3</span>]</code></pre>
+<pre><code>## [1] 17</code></pre>
+<p>或者第三行的全部数值：</p>
+<pre class="sourceCode r"><code class="sourceCode r">A[<span class="dv">3</span>,]</code></pre>
+<pre><code>## [1]  3  9 15 21 27 33 39 45</code></pre>
+<p>或者第四列的全部数值：</p>
+<pre class="sourceCode r"><code class="sourceCode r">A[,<span class="dv">4</span>]</code></pre>
+<pre><code>## [1] 19 20 21 22 23 24</code></pre>
+<p>接下来我们再看一个三维的例子（还是用1-48）：</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dim</span>(A) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">8</span>,<span class="dv">3</span>)
+A</code></pre>
+<pre><code>## , , 1
+## 
+##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
+## [1,]    1    3    5    7    9   11   13   15
+## [2,]    2    4    6    8   10   12   14   16
+## 
+## , , 2
+## 
+##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
+## [1,]   17   19   21   23   25   27   29   31
+## [2,]   18   20   22   24   26   28   30   32
+## 
+## , , 3
+## 
+##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
+## [1,]   33   35   37   39   41   43   45   47
+## [2,]   34   36   38   40   42   44   46   48</code></pre>
+<p>它生成了三个二维的矩阵。在每个2*8的矩阵存储满16个元素后，第三个维度就要加一了。每个矩阵开头的<code>, , x</code>正是第三个维度的值。同理，我们可以生成四维的array：</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dim</span>(A) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">2</span>)
+A</code></pre>
+<pre><code>## , , 1, 1
+## 
+##      [,1] [,2] [,3] [,4]
+## [1,]    1    4    7   10
+## [2,]    2    5    8   11
+## [3,]    3    6    9   12
+## 
+## , , 2, 1
+## 
+##      [,1] [,2] [,3] [,4]
+## [1,]   13   16   19   22
+## [2,]   14   17   20   23
+## [3,]   15   18   21   24
+## 
+## , , 1, 2
+## 
+##      [,1] [,2] [,3] [,4]
+## [1,]   25   28   31   34
+## [2,]   26   29   32   35
+## [3,]   27   30   33   36
+## 
+## , , 2, 2
+## 
+##      [,1] [,2] [,3] [,4]
+## [1,]   37   40   43   46
+## [2,]   38   41   44   47
+## [3,]   39   42   45   48</code></pre>
+<p>观察每个矩阵开头的<code>, , x, y</code>. x是第三个维度，y是第四个维度。每个二位矩阵存满后，第三个维度（x）加一。x达到上限后，第四个维度（y）再加一。</p>
+<p>类似二维矩阵，你可以通过index任意抓取数据，比如：</p>
+<pre class="sourceCode r"><code class="sourceCode r">A[ ,<span class="dv">3</span> , , ] <span class="co">#每个矩阵第3列的数据，即所有第二个维度为3的数值</span></code></pre>
+<pre><code>## , , 1
+## 
+##      [,1] [,2]
+## [1,]    7   19
+## [2,]    8   20
+## [3,]    9   21
+## 
+## , , 2
+## 
+##      [,1] [,2]
+## [1,]   31   43
+## [2,]   32   44
+## [3,]   33   45</code></pre>
+</div>
+<div id="matricesarrays" class="section level3">
+<h3><span class="header-section-number">2.6.8</span> 给matrices和arrays命名</h3>
+<p>假设我们记录了3种药物（chloroquine, artemisinin, doxycycline)
+对5种疟原虫(P. falciparum, P. malariae, P. ovale, P. vivax, P. knowlesi)的疗效，其中每个药物对每种疟原虫做6次实验。为了记录数据，我们可以做3个6*5的矩阵：（这里只是举例子，用的是随机生成的数字）</p>
+<pre class="sourceCode r"><code class="sourceCode r">B &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">90</span>, <span class="dv">0</span>, <span class="dv">1</span>) <span class="co">#从均匀分布中取100个0到1之间的数</span>
+<span class="kw">dim</span>(B) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">3</span>) <span class="co">#注意顺序</span>
+B</code></pre>
+<pre><code>## , , 1
+## 
+##            [,1]      [,2]      [,3]       [,4]       [,5]
+## [1,] 0.08647953 0.2919769 0.4031425 0.94682021 0.36007266
+## [2,] 0.53938887 0.4096271 0.1245217 0.06623281 0.08079591
+## [3,] 0.03050325 0.4753501 0.7587363 0.31888610 0.39433768
+## [4,] 0.87754450 0.3816254 0.1598048 0.93431556 0.58815952
+## [5,] 0.10074494 0.3355692 0.1608993 0.52412692 0.19134854
+## [6,] 0.50986698 0.4759153 0.5122854 0.34014017 0.55950026
+## 
+## , , 2
+## 
+##           [,1]      [,2]       [,3]      [,4]      [,5]
+## [1,] 0.4449383 0.3193666 0.06319686 0.4293259 0.5926985
+## [2,] 0.1567388 0.8185171 0.10348051 0.7826505 0.0430432
+## [3,] 0.8760071 0.8746078 0.33017864 0.8793079 0.3751894
+## [4,] 0.8672728 0.3965334 0.88323910 0.1615240 0.5380236
+## [5,] 0.4541605 0.5243527 0.52120159 0.3803638 0.6390698
+## [6,] 0.8331146 0.5927633 0.30302378 0.4992649 0.8714755
+## 
+## , , 3
+## 
+##            [,1]       [,2]      [,3]       [,4]      [,5]
+## [1,] 0.70472622 0.13170952 0.3659720 0.25901073 0.5492805
+## [2,] 0.49461485 0.18096865 0.2477468 0.95708987 0.8756432
+## [3,] 0.95224347 0.96853956 0.7172454 0.09939308 0.2909825
+## [4,] 0.88388772 0.49554057 0.3205657 0.37601109 0.3174420
+## [5,] 0.26146900 0.22924735 0.5360470 0.64732032 0.5576527
+## [6,] 0.08684039 0.01373973 0.6179990 0.75869868 0.8954536</code></pre>
+<p>然后我们用<code>dimnames()</code>来命名：</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dimnames</span>(B) &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="kw">paste</span>(<span class="st">&quot;trial.&quot;</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">6</span>), <span class="kw">c</span>(<span class="st">&#39;P. falciparum&#39;</span>, <span class="st">&#39;P. malariae&#39;</span>, <span class="st">&#39;P. ovale&#39;</span>, <span class="st">&#39;P. vivax&#39;</span>, <span class="st">&#39;P. knowlesi&#39;</span>), <span class="kw">c</span>(<span class="st">&#39;chloroquine&#39;</span>, <span class="st">&#39;artemisinin&#39;</span>, <span class="st">&#39;doxycycline&#39;</span>))
+B</code></pre>
+<pre><code>## , , chloroquine
+## 
+##          P. falciparum P. malariae  P. ovale   P. vivax P. knowlesi
+## trial. 1    0.08647953   0.2919769 0.4031425 0.94682021  0.36007266
+## trial. 2    0.53938887   0.4096271 0.1245217 0.06623281  0.08079591
+## trial. 3    0.03050325   0.4753501 0.7587363 0.31888610  0.39433768
+## trial. 4    0.87754450   0.3816254 0.1598048 0.93431556  0.58815952
+## trial. 5    0.10074494   0.3355692 0.1608993 0.52412692  0.19134854
+## trial. 6    0.50986698   0.4759153 0.5122854 0.34014017  0.55950026
+## 
+## , , artemisinin
+## 
+##          P. falciparum P. malariae   P. ovale  P. vivax P. knowlesi
+## trial. 1     0.4449383   0.3193666 0.06319686 0.4293259   0.5926985
+## trial. 2     0.1567388   0.8185171 0.10348051 0.7826505   0.0430432
+## trial. 3     0.8760071   0.8746078 0.33017864 0.8793079   0.3751894
+## trial. 4     0.8672728   0.3965334 0.88323910 0.1615240   0.5380236
+## trial. 5     0.4541605   0.5243527 0.52120159 0.3803638   0.6390698
+## trial. 6     0.8331146   0.5927633 0.30302378 0.4992649   0.8714755
+## 
+## , , doxycycline
+## 
+##          P. falciparum P. malariae  P. ovale   P. vivax P. knowlesi
+## trial. 1    0.70472622  0.13170952 0.3659720 0.25901073   0.5492805
+## trial. 2    0.49461485  0.18096865 0.2477468 0.95708987   0.8756432
+## trial. 3    0.95224347  0.96853956 0.7172454 0.09939308   0.2909825
+## trial. 4    0.88388772  0.49554057 0.3205657 0.37601109   0.3174420
+## trial. 5    0.26146900  0.22924735 0.5360470 0.64732032   0.5576527
+## trial. 6    0.08684039  0.01373973 0.6179990 0.75869868   0.8954536</code></pre>
+<p><strong>清清楚楚，一目了然。</strong></p>
+</div>
+<div id="test-base" class="section level3">
+<h3><span class="header-section-number">2.6.9</span> 小测</h3>
+<ol class="example" style="list-style-type: decimal">
+<li><strong>转换年份到世纪。</strong>写一个名为<code>as.century</code>的函数，把存储着年份的向量，比如<code>years &lt;- c(2014, 1990, 1398, 1290, 1880, 2001)</code>，转换成对应的世纪（注意，19XX年是20世纪）。</li>
+<li><strong>斐波那契数列。</strong></li>
+</ol>
+<ul>
+<li><strong>背景：</strong>斐波那契数列是指<span class="math inline">\(F = [1, 1, 2, 3, 5, 8, ...]\)</span>，其中：
+<ul>
+<li><span class="math inline">\(F_1 = 1\)</span>，<span class="math inline">\(F_2 = 1\)</span></li>
+<li>从<span class="math inline">\(F_3\)</span>开始，<span class="math inline">\(F_i = F_{i-2} + F_{i-1}\)</span></li>
+</ul></li>
+<li>(也有<span class="math inline">\(F_0=0, F_1=1\)</span>的说法，但是为了方便我们不用这个定义)</li>
+<li><strong>题目：</strong>创建一个函数名为<code>fibon()</code>的函数，使得<code>fibon(i)</code>：
+<ul>
+<li>当<span class="math inline">\(i\in \mathbb{Z}^+\)</span>时，返回向量<span class="math inline">\([F_1, F_2, \ldots, F_i]\)</span></li>
+<li>当<span class="math inline">\(i\notin \mathbb{Z}^+\)</span>时，返回<code>&quot;请输入一个正整数作为`fibon()`的参数。&quot;</code></li>
+</ul></li>
+<li><strong>提示：</strong>
+<ul>
+<li>虽然在R中整数用<code>1L</code>, <code>2L</code>等表示，用户在被指示“输入整数”的时候很有可能输入的是<code>2</code>而不是<code>2L</code>. <code>2</code>是否等于<code>2L</code>?如果是，如何利用它检测输入的是否是整数？（<code>2</code>和<code>2L</code>都要被判定为“是整数”）</li>
+<li>斐波那契数列前两位是定义，从第三位开始才是计算得出的。</li>
+</ul></li>
+</ul>
+
+</div>
+</div>
+<!-- </div> -->
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Kernighan1988The-C-Programming-La">
+<p>Kernighan, Brain W., and Ednnis M. Ritchie. 1988. <em>The C Programming Language</em>. 2nd ed. Prentice Hall.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="14">
+<li id="fn14"><p>dataframe也是可以unlist成向量的，但是并不实用。（试试<code>unlist(list(data.frame(x = c(1,2), y = c(3,4)), 5, 6))</code>）<a href="functions.html#fnref14" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="control-flow.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="tibble.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/TianyiShi2001/r-and-tidyverse-book/04-vectors-logicals-and-functions.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["R与tidyverse——数据分析入门.pdf"],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
