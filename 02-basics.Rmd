@@ -20,7 +20,10 @@ nocite: |
   - \@ref(math-notation)：数的表达；整数，浮点数，科学计数法
   - \@ref(arithmetic)：基础的数学运算
   - \@ref(statistics)：基础的统计学计算，包括t分布，t检验，卡方检验
-- 第\ref(logical-operation)节介绍了R中逻辑值(`TRUE`, `FALSE`, `NA`)的概念和玩法。
+- 第\@ref(logical-operation)节介绍了R中逻辑值(`TRUE`, `FALSE`, `NA`)的概念和玩法。
+- 第\@ref(functions)节介绍了R中的函数的定义和使用。
+- 第\@ref(list)节介绍了R中列表 (list)的性质和使用方法。
+- 第\@ref(matrix-array)节介绍了R中矩阵 (matrix)和数组 (array)的性质和使用方法。
 
 *注意，R中的变量名/自定义函数名不能以数字和特殊符号开头，中间只能使用"_"和"."作为特殊符号*[^naming]
 
@@ -65,14 +68,14 @@ length(c("Guten Morgen"))
 
 ```{r}
 cities_1 <- c("Zürich", "上海", "Tehrān")
-cities_2 <- c("大阪", "Poznań", "Екатеринбу́рг")
+cities_2 <- c("大阪", "Poznań", "Cairo")
 
-cities <- c(cities_1, cities_2, c("Jyväskylä", "부산", "เชียงใหม่"))
+cities <- c(cities_1, cities_2, c("Jyväskylä", "邯郸", "札幌่"))
 
 cities
 ```
 
-### 索引/取子集 (indexing/subsetting) {#indexing}
+### 索引/取子集/子集重新赋值 (indexing/subsetting) {#indexing}
 
 索引 (index)就是一个元素在向量中的位置。R是从1开始索引的，即索引为1的元素是第一个元素（因此用熟了Python和C可能会有些不适应）。在向量后方使用方括号进行取子集运算（即抓取索引为对应数字的元素；虽然subsetting翻译成“取子集”有点怪，但是没毛病；不知大家有没有更好的翻译方法，或是不翻译更好）。
 
@@ -87,13 +90,21 @@ x[3]
 x[c(2,5,9)] # 第2个，第5个，第9个元素
 ```
 
+我们可以重新赋值子集：
+
+```{r}
+x[c(2,5,9)] <- c("二", "五", "九")
+x
+```
+
+
 经常，我们会抓取几个连续的元素。如果想知道方法，请继续往下看。
 
 ### 生成器 {#generator}
 
 有时候我们需要其元素按一定规律排列的向量，这时，相对于一个个手动输入，有更方便的方法：
 
-#### 连续整数 
+#### 连续整数 {#successive-int}
 
 ```{r}
 1:10 #从左边的数（包含）到右边的数（包含），即1:10
@@ -110,7 +121,7 @@ x[3:6]
 当元素比较多的时候： 
 
 ```{r}
-y <- 7:103 #复习一下赋值
+y <- 7:103
 y
 ```
 
@@ -138,7 +149,7 @@ rep(c(0, 7, 6, 1), c(1, 2, 3, 4)) # 把0, 7, 6, 1分别重复1, 2, 3, 4遍
 
 想一想，`rep(8:15, rep(1:5, rep(1:2, 2:3)))`的计算结果是什么？
 
-#### 等差数列: `seq()`
+#### 等差数列: `seq()` {#seq}
 
 公差确定时：
 
@@ -152,7 +163,7 @@ seq(0, 15, 2.5) # 其实是`seq(from = 0, to = 50, by = 5)`的简写
  seq(0, 50, length.out = 11) # 其实是`seq(from = 0, to = 50, length.out = 11)`的简写
 ```
 
-#### 随机数：
+#### 随机数： {#random-nums}
  
 连续型均匀分布随机数用`runif(n, min, max)`，n是数量，min是最小值，max是最大值。默认min为0，max为1。
 
@@ -170,7 +181,7 @@ hist(x_norm) # 画直方图
 
 ### 向量的其他操作 {#vector-misc}
 
-#### 创建长度为0的向量
+#### 创建长度为0的向量 {#vector-length-0}
 
 使用循环的时候，经常需要初始化一个长度为0的向量（见第\@ref(control-flow)节
 
@@ -193,7 +204,7 @@ class(x)
 
 其中后面这种方法亦可用于创建长度为$n$的向量，把0替换成你想要的长度即可。
 
-#### `sort()`, `rank()`和`order()`
+#### `sort()`, `rank()`和`order()` {#sort-rank-order}
 
 ```{r eval=FALSE}
 x <- c(2, 5, 3, 6, 10, 9, 7, 8, 1, 4)
@@ -217,7 +228,7 @@ list(x = x, `sort(x)` = sort(x), `rank(x)` = rank(x), `order(x)` = order(x), `re
 
 至于文字向量，英文按`a, b, c, d, e, ...`排列，中文按笔画排列。
 
-#### 元素的命名
+#### 元素的命名 {#naming-elements}
 
 ```{r}
 scores <- c(ochem = 79, math = 66, mcb = 64, blc = 75, bpc = 72)
@@ -253,7 +264,7 @@ sqrt(x)
 
 ### 基础的数据/对象类型 {#data-types-basics}
 
-#### 向量所存储的数据类型
+#### 向量所存储的数据类型 {#data-types-vector}
 
 向量所存储的的数据类型有5种：
 
@@ -267,7 +278,7 @@ sqrt(x)
 
 **一个向量的所有元素必须属于同一种类型。**如果尝试把不同类型的元素合并成一个向量，其中一些元素的类型会被强制转换 (coerced)。你可以试试`c(2, "a")`, `c(2+5i, 4)`, `c(TRUE, 1+9i)`和`c(TRUE, 1+9i, "a")`，但是实际操作的时候尽量不要这么做。
 
-#### 关于数据类型的简单操作
+#### 关于数据类型的简单操作 {#data-types-simple-operations}
 
 通过`class()`函数，可以查看数据/对象的类型。
 
@@ -289,7 +300,7 @@ as.integer(c(TRUE, FALSE))
 as.character(c(23, 90))
 ```
 
-#### `NA`, `Inf`, `NaN`和`NULL`
+#### `NA`, `Inf`, `NaN`和`NULL` {#na-inf-nan-null}
 
 `NA`为缺损值，意思是该元素所代表的数值丢失/不确定/不可用。举个例子，当我们统计学生的200m跑成绩时，有一些学生因为身体不适未能参与测试，这时他们的成绩应被记为`NA`：
 
@@ -313,13 +324,13 @@ class(NA)
 
 `Inf`（无限）`NaN`（非数）的概念，以及作为`numeric`的`NA`的数学计算在第\@ref(math-NA)小节讨论。
 
-作为`logical`的`NA`的逻辑运算在第\ref(logical-operation)小节讨论。
+作为`logical`的`NA`的逻辑运算在第\@ref(logical-operation)小节讨论。
 
 `NULL`是“无”，**真正的“无”。**它几乎一无是处，因此在此不作更多讨论。学有余力者可以自己去了解。
 
-#### 其它的数据/对象类型
+#### 其它的数据/对象类型 {#other-data-types}
 
-- Dataframe/tibble 是R中存储复杂（多变量）数据的规范格式，从第\ref(tibble)章开始将一直占据我们话题的中心。
+- Dataframe/tibble 是R中存储复杂（多变量）数据的规范格式，从第\@ref(tibble)章开始将一直占据我们话题的中心。
 - 因子 (factor)有很多向量的特性，尤其是能在dataframe/tibble中作为变量，但是它并不是向量；因子的详细内容在第\@ref(factors)节。
 - 函数 (function)。我们刚才用`c()`来创建向量，它就是一个函数：`class(c)`；函数的详细内容在第\@ref(functions)节。
 - list类似于向量，但是一个list可以包含不同类型的元素。性质和使用方法也和向量大相径庭。详细内容在第\@ref(list)节，算是较为进阶的内容。
@@ -328,6 +339,8 @@ class(NA)
 ### 数据类型（严谨版） {#data-types-advanced}
 
 可以酌情跳到第\@ref(math)节。
+
+本小节内容没完成，请跳到第\@ref(math)节。
 
 #### `class`, `type`, `mode`和`storage mode`
 
@@ -346,7 +359,7 @@ class(x) # 新class
 
 ### 数的表达 {#math-notation}
 
-#### 浮点数
+#### 浮点数 {#math-double-nums}
 
 除非指定作为整数（见下），在R中所有的数都被存储为双精度浮点数的格式 (double-precision floating-point format)，其`class`为`numeric`。
 
@@ -369,7 +382,7 @@ class(NaN)
 class(Inf)
 ```
 
-#### 科学计数法
+#### 科学计数法 {#math-sci-not}
 
 在R中可以使用科学计数法(`AeB`$= A \times 10^B$)，比如：
 
@@ -380,7 +393,7 @@ class(Inf)
 -1.2e-4+1.1e-5
 ```
 
-#### 整数
+#### 整数 {#math-int-nums}
 
 整数的class为`integer`。有两种常见的方法创建整数：
 1）在数后面加上`L`；
@@ -398,12 +411,12 @@ class(1:10)
 seq(5,50,5) #自定义公差，首项，末项和公差可以不为整数
 class(seq(5,50,5)) #因此产生的是一个浮点数向量
 seq(5L,50L,5L) #可以强制生成整数
-class(seq(5L,50L,5L)) #是�整数没错
+class(seq(5L,50L,5L)) #是整数没错
 ```
 
 整数最常见的用处是indexing（索引）。
 
-##### 整数变成浮点数的情况
+##### 整数变成浮点数的情况 {#math-int-to-double}
 
 这一小段讲的比较细，**请酌情直接跳到下一节（\@ref(arithmetic)）。**
 
@@ -440,7 +453,7 @@ class(factorial(5L))
 
 ### 运算 {#arithmetic}
 
-#### 二元运算符号
+#### 二元运算符号 {#math-binary-operators}
 
 R中的binary operators（二元运算符）有：
 
@@ -456,7 +469,7 @@ R中的binary operators（二元运算符）有：
 
 其中求余/求整数商最常见的两个用法是判定一个数的奇偶性，和时间，角度等单位的转换。（后面再详细介绍）。
 
-#### $e^x$和$\log_x{y}$
+#### $e^x$和$\log_x{y}$ {#math-exponent-log}
 
 `exp(x)`便是运算$e^x$。如果想要$e=2.71828...$这个数：
 
@@ -523,7 +536,7 @@ class(ceiling(7.4))
 
 虽然浮点数使用起来真没啥不方便的，但是如果你一定需要的话，可以用`as.integer()`函数把它转换成真·整数。
 
-#### `NA`, `Inf`, `NaN`相关 {math-NA}
+#### `NA`, `Inf`, `NaN`相关 {#math-NA}
 
 我不知道张三有几个苹果，我也不知道李四有几个苹果；你问我张三和李四共有几个苹果：
 
@@ -563,7 +576,7 @@ class(Inf); class(NaN)
 ```
 
 
-#### R中自带的数学函数集合
+#### R中自带的数学函数集合 {#math-builtin-mathFuncs}
 
 基础
 
@@ -590,15 +603,15 @@ class(Inf); class(NaN)
 
 本节简要解释了R中的基础统计学函数，t分布，t检验和$\chi^2$检验。统计学方法并不是本书的重点，因此可以酌情跳到[下一章](#tibble)。
 
-#### 基础
+#### 基础 {#stats-basics}
 
 中位数`median()`; 平均数`mean()`; 方差`var()`; 标准差`sd()`.
 
-#### t分布
+#### t分布 {#t-dist}
 
 众所周知，t分布长这样：
 
-```{r echo=FALSE}
+```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics("img/graphics/t-distribution.png")
 ```
 
@@ -622,7 +635,7 @@ p
 
 其中`pt(2.2, df = 15)`算出阴影面积（$P(t≤T)$的值），1减去它再乘以2就是对应的双尾t检验的$p$值。
 
-#### z分布
+#### z分布 {#z-dist}
 
 没有z分布专门的函数。可以直接用t分布代替，把`df`调到很大（比如`999999`）就行了。比如我们试一下$95\%$置信区间所对应的$z*$：
 
@@ -632,7 +645,7 @@ qt(0.975,9999999)
 
 （果然是$1.96$）
 
-#### t检验
+#### t检验 {#t-test}
 
 t检验分为以下几种：
 
@@ -678,11 +691,11 @@ R的默认是non-paired, unequal variance，你可以通过增加`paired = TRUE`
 t.test(x, y, paired = TRUE)
 ```
 
-#### $\chi^2$ 检验
+#### $\chi^2$ 检验 {#chisq-test}
 
 $\chi^2$检验有两种，goodness of fit test（适配度检验）和contigency table test/test of independence（列联表分析/独立性检验）。都是用`chisq.test()`函数去完成。
 
-##### 适配度检验
+##### 适配度检验 {#chisq-gof}
 
 假设我们制造了一个有问题的骰子，使1至6朝上的概率分别为：
 
@@ -712,7 +725,7 @@ chisq.test(observed_vals)
 
 这时p值小于0.05. 得出“骰子各面朝上的概率不等”的结论。
 
-##### 列联表分析/独立性检验
+##### 列联表分析/独立性检验 {#chisq-contig}
 
 假设我们有一组不同年级的学生参加社团的人数数据：
 
@@ -774,7 +787,7 @@ class(c(TRUE,FALSE,NA))
 
 `TRUE`为真，`FALSE`为假，`NA`为未知（即真假难辨）。
 
-### 关系运算符和简单的逻辑运算 {#logical-operations}
+### 关系运算符和简单的逻辑运算 {#relational-operators}
 
 R中常用的关系运算符有：
 
@@ -819,7 +832,7 @@ x <- NA
 is.na(x)
 ```
 
-#### 逻辑运算符
+### 逻辑运算符 {#logical-logical-operators}
 
 以下是最常用的三个逻辑运算符。
 
@@ -829,7 +842,7 @@ is.na(x)
 |`|`|OR（或）|
 |`!`|反义符号|
 
-#### 反义符号（`!`）
+#### 反义符号（`!`） {#logical-logical-operators-anti}
 
 `!`使`TRUE` `FALSE`颠倒。一般，我们用小括号来包住一个逻辑运算，然后在它的前面加上一个`!`来反转结果，比如
 
@@ -837,7 +850,7 @@ is.na(x)
 !(3 < 4) # 这个例子很简单，反义符号意义不大。后面实操的时候才能领略到它的用处。
 ```
 
-#### 多个逻辑运算的组合（`&`（且）和`|`（或））
+#### 多个逻辑运算的组合（`&`（且）和`|`（或）） {#logical-logical-operators-and-or}
 
 `&`和`|`可以把多个逻辑运算的结果合并成一个逻辑值。
 
@@ -876,7 +889,7 @@ outer(vals, vals, "|")
 
 ## 判断和循环（流程控制） {#control-flow}
 
-### 给有编程基础者的快速指南
+### 给有编程基础者的快速指南 {#control-flow-for-programmers}
 
 如果没编程基础，没接触过判断和循环，请看第\@ref(kickstart)小节。
 
@@ -951,7 +964,7 @@ if (FALSE) { # 第一个`if`为FALSE
 }
 ```
 
-#### for循环
+#### for循环 {#control-flow-for-loop}
 
 ```{r}
 # 以下代码翻译成英文就是: for every element i in c(2, 4, 6, 8): 
@@ -991,7 +1004,7 @@ x
 
 **实际操作中，要想尽办法避免for循环，尤其是以上这种双层（多层）嵌套的for循环！**原因和方法请看第\@ref(apply)节。
 
-#### while循环
+#### while循环 {#control-flow-while-loop}
 
 ```{r}
 x <- 1
@@ -1001,7 +1014,7 @@ while (x < 10) { # 当x<10的时候，执行大括号内的语句
 }
 ```
 
-#### `break` 和 `next`
+#### `break` 和 `next` {#control-flow-break-next}
 
 ```{r}
 for (i in 1:10) {
@@ -1028,11 +1041,13 @@ for (m in M) {
 x
 ```
 
-### 严谨版
+### 严谨版 {#control-flow-rigorous}
 
 如果看懂了[上一节](#kickstart)中的例子，并且作为新手不太想深究，完全可以暂时跳过这一节，前往第\@ref(functions)节。
 
-#### `if`, `else`, `else if` 语句
+*这里很多内容还没完成，请前往第\@ref(functions)节。*
+ 
+#### `if`, `else`, `else if` 语句 {#control-flow-rigorous-if-else}
 
 `if else`语句长这样：
 
@@ -1056,13 +1071,13 @@ R中没有专门的`elseif`语句，但用`else`加上`if`能实现同样的效�
 
 注意，不能直接用`x == NA`来判断`x`是否是`NA`，而要用`is.na(x)`. 否则会得到`NA`的结果。
 
-#### for循环
+#### for循环 {#control-flow-rigorous-for}
 
-#### while循环
+#### while循环 {#control-flow-rigorous-while}
 
-#### repeat循环
+#### repeat循环 {#control-flow-rigorous-repeat}
 
-#### `break`和`next`
+#### `break`和`next` {#control-flow-rigorous-break-next}
 
 ### 如何避免for循环——`apply()`家族函数 {#apply}
 
@@ -1464,7 +1479,7 @@ speak(cat)
 
 ```
 
-#### 伪·OOP
+#### 伪·OOP {#fake-OOP}
 
 我貌似，捣鼓出了一种完全使用R中的简易函数实现伪·OOP的方法（R中的真·OOP是有三种，S3，R6和S4）：
 
@@ -1544,7 +1559,7 @@ sapply(list(Kazuya, Felix), binomial_name)
 
 没有`class`，没有`self`，没有`__init__`，*it just works*.
 
-### 关于`...`
+### 关于`...` {#about-dot-dot-dot}
 
 有时候，你想写的函数可能有数量不定的参数，或是有需要传递给另一个函数的“其他参数”（即本函数不需要的参数），这时候可以在函数定义时加入一个名为`...`的参数，然后用`list()`来读取它们。list是进阶内容，在第\@ref(list)节有说明。
 
@@ -1600,7 +1615,7 @@ system.time({
 })
 ```
 
-### 列表 (list) {#list-intro}
+## 列表 (list) {#list}
 
 R中的list是一种特殊的数据存储形式。使用`list()`函数来创建lists.
 
@@ -1615,7 +1630,7 @@ y <- list(1, c("a","あ"), list(1+3i, c(FALSE, NA, TRUE)),
 y
 ```
 
-#### list的索引/取子集 {#list-index}
+### list的索引/取子集 {#list-index}
 
 使用上面的例子：
 
@@ -1635,7 +1650,7 @@ z # `[[2]]`被`$z2`所取代
 z$z2 == z[[2]] # `z[[2]]`仍然是可用的，结果和`z$z2`一样
 ```
 
-#### 合并与拆解
+### 合并与拆解 {#list-combine-unlist}
 
 通过`c()`函数来合并多个列表。
 
@@ -1674,7 +1689,7 @@ unlist(list(1, list(2, 3, list(4, 5)), list(6, 7), 8, 9), recursive = FALSE)
 
 因此，当`A`, `B`为列表，`unlist(list(A, B), recursive = FALSE)`等同于`c(A, B)`.
 
-#### 其他性质和操作
+### 其他性质和操作 {#list-other-properties-operations}
 
 上面说到`unlist(list(A, B), recursive = FALSE)`等同于`c(A, B)`，你可能很想用`==`验证一下。很不幸，你会得到一条错误信息：
 
@@ -1682,7 +1697,7 @@ unlist(list(1, list(2, 3, list(4, 5)), list(6, 7), 8, 9), recursive = FALSE)
 comparison of these types is not implemented
 ```
 
-在第\@{logical-operations}节讲过，`==`只能用于atomic vectors；对于列表（和其他对象）可以用`identical()`函数确认两者是否完全一致。
+在第\@ref(relational-operators)节讲过，`==`只能用于atomic vectors；对于列表（和其他对象）可以用`identical()`函数确认两者是否完全一致。
 
 ```{r}
 A <- list("a", 1, TRUE); B <- list(5+8i, NA, 4L)
@@ -1691,7 +1706,7 @@ identical(C1, C2)
 ```
 
 
-### array（数组）和matrix（矩阵）简介 {#matrix-array}
+## array（数组）和matrix（矩阵）简介 {#matrix-array}
 
 Vector是一维的数据。Array是多维的数据。Matrix是二维的数据，因此matrix是array的一种特殊情况。
 
@@ -1754,7 +1769,7 @@ A
 A[ ,3 , , ] #每个矩阵第3列的数据，即所有第二个维度为3的数值
 ```
 
-### 给matrices和arrays命名
+### 给matrices和arrays命名 {#matrix-array-naming}
 
 假设我们记录了3种药物（chloroquine, artemisinin, doxycycline)
 对5种疟原虫(P. falciparum, P. malariae, P. ovale, P. vivax, P. knowlesi)的疗效，其中每个药物对每种疟原虫做6次实验。为了记录数据，我们可以做3个6*5的矩阵：（这里只是举例子，用的是随机生成的数字）
@@ -1774,7 +1789,7 @@ B
 
 **清清楚楚，一目了然。**
 
-### 小测 {#test-base}
+## 小测 {#test-base}
 
 (@) **转换年份到世纪。**写一个名为`as.century`的函数，把存储着年份的向量，比如`years <- c(2014, 1990, 1398, 1290, 1880, 2001)`，转换成对应的世纪（注意，19XX年是20世纪）。
 (@) **斐波那契数列。**

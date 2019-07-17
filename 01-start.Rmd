@@ -51,9 +51,9 @@ SAS，SPSS和Prism都是收费的，而且不便宜。比如SAS第一年需要[1
 
 R是GNU计划的一部分，因此R是一个自由软件 (Libre software)。它不仅免费，还允许用户自由地学习，运行该软件；拷贝，分发，修改并改进该软件，以帮助其他人。你可以 在[GNU官网](https://www.gnu.org/philosophy/free-sw.zh-cn.html)了解更多。
 
-R比各种商业统计软件功能更强大。没错，**免费的R比昂贵的商业软件功能更强大**。所有SAS中的功能，都能在R中实现，而很多R中的功能无法在SAS中实现[^1]。
+R比各种商业统计软件功能更强大。没错，**免费的R比昂贵的商业软件功能更强大**。所有SAS中的功能，都能在R中实现，而很多R中的功能无法在SAS中实现[^sas]。
 
-[^1]: https://thomaswdinsmore.com/2014/12/15/sas-versus-r-part-two/
+[^sas]: https://thomaswdinsmore.com/2014/12/15/sas-versus-r-part-two/
 
 R有巨大的用户社群[^users]，其中有很多热心的使用者/开发者在论坛上解答问题，或是编写免费获取的教程。SAS等软件虽然有客户支持，但是如果你用的是盗版……
 
@@ -84,7 +84,7 @@ Python（NumPy和SciPy）是近几年兴起的数据分析处理方案。在数�
 
 - 直接在R console中执行`?`+`函数名称或者package名或者其它`，比如`?t.test`，可以查看对应函数的帮助文档（documentation）有一些函数/packages/内容名需要加上引号，比如`?"+"`, `?"if"`。有一个相似的方法，`??`+`"内容"`可以根据你输入的内容搜索帮助文档，比如`??"probability distrubution"`。
 - [RDocumentation](https://www.rdocumentation.org)上有基础R语言和来自CRAN，GitHub和Bioconductor上的近18000个packages的所有的函数的说明和使用例。
-- 有些packages会在官网/github仓库提供使用说明，比如[tidyverse](https://www.tidyverse.org)
+- 有些packages会在官网或github仓库提供使用说明，比如[tidyverse](https://www.tidyverse.org)
 - 有些packages会提供vignettes，它们类似于使用指南，相比于函数的帮助文档更为详细且更易读。`vignette()`（无参数）以查看全部可用vignettes. 试试`vignette("Sweave")`。
 
 #### 教程和书籍类（用来系统地学习） {#manual-type}
@@ -104,14 +104,11 @@ Python（NumPy和SciPy）是近几年兴起的数据分析处理方案。在数�
 
 ### 进阶资源
 
-#### 较为深入
-
 - [*The R Book* by Michael J. Crawley](https://github.com/TianyiShi2001/R-Tutorial-Resorces/blob/master/资源/书籍/TheRBook.pdf)
 - [*Advanced* R by Hadley Wickham](https://adv-r.hadley.nz/index.html)及其[练习题答案](https://advanced-r-solutions.rbind.io)。
-
-#### 真·老司机
-
-- Springer的[*Use R!*系列](https://www.springer.com/series/6991?detailsPage=titles)。
+- CRC的[The R Series](https://www.crcpress.com/Chapman--HallCRC-The-R-Series/book-series/CRCTHERSER)
+- Springer的[*Use R!* Series](https://www.springer.com/series/6991?detailsPage=titles)。
+- Venables & Ripley (2002). *S Programming*.
 
 ## RStudio界面介绍，基本操作，和创建新项目 {#interface-basics-project}
 
@@ -119,7 +116,7 @@ Python（NumPy和SciPy）是近几年兴起的数据分析处理方案。在数�
 
 #### 概览 {#interface-overview}
 
-```{r echo=FALSE}
+```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics("img/01-interface.png")
 ```
 
@@ -143,7 +140,7 @@ History（历史）和 Connections（连接）不太常使用。
 
 Plots是预览图像的区域。试试在console中执行`hist(rnorm(10000))`.
 
-Help是查看帮助文件的区域。试试在console中执行`?hist`或`?norm`.
+Help是查看帮助文档的区域。试试在console中执行`?hist`或`?norm`.
 
 Files是查看文件的区域，默认显示工作目录 (working directory)。
 
@@ -307,11 +304,27 @@ abline(model, lwd = 2) # 回归线
 
 `Ctrl`+`S` (`command`+`S`)以保存R script. 保存后会在工作目录找到你新保存的`.R`文件。重新启动RStudio的时候，便可以打开对应的R script文件以重复/继续之前的工作。
 
-### RStudio的额外福利 {rstudio-fuli}
+### RStudio的额外福利[^fuli] {rstudio-fuli}
 
-#### 括号自动补齐；换行自动缩进
+[^fuli]: 一切福利都可以在设置中取消。
 
-在RStudio中，除非你故意，否则很难出现括号不完整的错误。当你打出
+#### 括号/引号自动补齐；换行自动缩进
+
+在RStudio中，除非你故意，否则很难出现括号不完整的错误。当你打出一个左括号/引号 (`(`, `[`, `{`, `"`, `'`)时，对应的右括号/引号会自动补齐，同时光标移动到括号/引号的中间。
+
+当你在括号中间换行时，右括号和光标会移动到正确的位置。举个例子，我打出下面这两段代码的时候不需要手动输入任何空格或者`TAB`来实现正确的缩进：
+
+```{r}
+mklog <- function(x){
+  function(y){
+    log(y, x)
+  }
+}
+
+x <- tibble(nums = c(1, 2, 3),
+            chars = c("a", "b", "c"),
+            cplx = c(1+5i, 2+3i, 6+8i))
+```
 
 #### 自动完成/建议提示/快速帮助 (autocomplete) {#autocomplete}
 
@@ -319,7 +332,7 @@ abline(model, lwd = 2) # 回归线
 
 [^auto-3]: 可以在设置中，自定义所需输入的最少字母和延迟。默认分别为3个字母和250毫秒。
 
-```{r echo=FALSE}
+```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics("img/rstudio-fuli/auto.png")
 ```
 
@@ -329,7 +342,7 @@ knitr::include_graphics("img/rstudio-fuli/auto.png")
 
 通过`$`符号取子集的时候，R会自动列举所有可用的子集（用于列表和数据框/tibble）。类似地，在package名后输入`::`准备调用函数时，R会列举该package所有可用函数（见第\@ref(pkg-colon)节）。
 
-```{r echo=FALSE}
+```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics("img/rstudio-fuli/auto-sub.png")
 ```
 
@@ -459,7 +472,11 @@ stats::filter()
 dplyr::filter()
 ```
 
-使用`dplyr`版本的`filter()`。虽然这看起来是个好习惯，但是很少人这么做。Python里每使用一次NumPy里的函数都要加上`np_`的前缀，虽然严谨，但是麻烦。R的一大便利之处就是使用packages里的内容时，不强制要求指定packages的名称。如果函数/对象名称有重叠，以packages的加载顺序决定优先度；最近（即最后）被加载的package里的函数/对象胜出，而其余的要通过`packageName::object`的形式调取。
+使用`dplyr`版本的`filter()`。虽然这是个好习惯，但是很少人这么做（除非你是开发者）。Python里每使用一次NumPy里的函数都要加上`np_`的前缀，虽然严谨，但是麻烦。R的一大便利之处就是使用packages里的内容时，不强制要求指定packages的名称。如果函数/对象名称有重叠，以packages的加载顺序决定优先度；最近（即最后）被加载的package里的函数/对象胜出，而其余的要通过`packageName::object`的形式调取。
+
+#### 更新和卸载packages {#update-and-uninstall}
+
+更新：`update.packages()`；卸载：`remove.packages()`；两者皆可在RStudio右下角的Packages区进行操作。
 
 ### 其它 {#package-misc}
 

@@ -5,26 +5,26 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2.2 数据/对象类型 (Data/Object Types) | R与tidyverse——数据分析入门</title>
-  <meta name="description" content="这是我b站R与tidyverse教程的配套资源" />
+  <meta name="description" content="这是一本R与tidyverse的入门教程" />
   <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2.2 数据/对象类型 (Data/Object Types) | R与tidyverse——数据分析入门" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="这是我b站R与tidyverse教程的配套资源" />
+  <meta property="og:description" content="这是一本R与tidyverse的入门教程" />
   <meta name="github-repo" content="TianyiShi2001/R-Tutorial-Resorces" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="2.2 数据/对象类型 (Data/Object Types) | R与tidyverse——数据分析入门" />
   
-  <meta name="twitter:description" content="这是我b站R与tidyverse教程的配套资源" />
+  <meta name="twitter:description" content="这是一本R与tidyverse的入门教程" />
   
 
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-13" />
+<meta name="date" content="2019-07-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -78,6 +78,14 @@
   font-family: Arial, Helvetica, source-han-sans-simplified-c, sans-serif, sans-serif;
   font-weight: 300;
   font-style: normal;
+}
+
+#biaoti {
+  font-family: source-han-serif-sc, serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: 1.3em
 }
 </style>
 
@@ -158,16 +166,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><strong>R for Data Science</strong></li>
+<li id="biaoti">R与tidyverse——数据分析入门</li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>欢迎</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#intro"><i class="fa fa-check"></i>简介</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#man"><i class="fa fa-check"></i>Gitbook版本使用说明</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why"><i class="fa fa-check"></i>为什么写本书</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#structure"><i class="fa fa-check"></i>本书的结构</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#no"><i class="fa fa-check"></i>在本书你不会学到：</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i>版权页</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical"><i class="fa fa-check"></i>技术信息</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical"><i class="fa fa-check"></i>关于编写本书的技术信息</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R和RStudio介绍和安装教程</a><ul>
 <li class="chapter" data-level="" data-path="intro-and-installation.html"><a href="intro-and-installation.html#intro-overview"><i class="fa fa-check"></i>本章内容速览</a></li>
@@ -183,7 +192,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.3.1" data-path="interface-basics-project.html"><a href="interface-basics-project.html#interface"><i class="fa fa-check"></i><b>1.3.1</b> 界面</a></li>
 <li class="chapter" data-level="1.3.2" data-path="interface-basics-project.html"><a href="interface-basics-project.html#execution"><i class="fa fa-check"></i><b>1.3.2</b> 执行代码</a></li>
 <li class="chapter" data-level="1.3.3" data-path="interface-basics-project.html"><a href="interface-basics-project.html#code-management"><i class="fa fa-check"></i><b>1.3.3</b> 管理代码</a></li>
-<li class="chapter" data-level="1.3.4" data-path="interface-basics-project.html"><a href="interface-basics-project.html#rstudio-rstudio-fuli"><i class="fa fa-check"></i><b>1.3.4</b> RStudio的额外福利 {rstudio-fuli}</a></li>
+<li class="chapter" data-level="1.3.4" data-path="interface-basics-project.html"><a href="interface-basics-project.html#rstudiofuli-rstudio-fuli"><i class="fa fa-check"></i><b>1.3.4</b> RStudio的额外福利 {rstudio-fuli}</a></li>
 <li class="chapter" data-level="1.3.5" data-path="interface-basics-project.html"><a href="interface-basics-project.html#misc"><i class="fa fa-check"></i><b>1.3.5</b> 其他</a></li>
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>1.4</b> 安装和使用packages (包)</a><ul>
@@ -197,7 +206,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#intro-overview-vector"><i class="fa fa-check"></i>本章内容速览</a></li>
 <li class="chapter" data-level="2.1" data-path="vector-section.html"><a href="vector-section.html"><i class="fa fa-check"></i><b>2.1</b> 向量的概念，操作和优越性</a><ul>
 <li class="chapter" data-level="2.1.1" data-path="vector-section.html"><a href="vector-section.html#create-vector"><i class="fa fa-check"></i><b>2.1.1</b> 创建向量（赋值）</a></li>
-<li class="chapter" data-level="2.1.2" data-path="vector-section.html"><a href="vector-section.html#indexing"><i class="fa fa-check"></i><b>2.1.2</b> 索引/取子集 (indexing/subsetting)</a></li>
+<li class="chapter" data-level="2.1.2" data-path="vector-section.html"><a href="vector-section.html#indexing"><i class="fa fa-check"></i><b>2.1.2</b> 索引/取子集/子集重新赋值 (indexing/subsetting)</a></li>
 <li class="chapter" data-level="2.1.3" data-path="vector-section.html"><a href="vector-section.html#generator"><i class="fa fa-check"></i><b>2.1.3</b> 生成器</a></li>
 <li class="chapter" data-level="2.1.4" data-path="vector-section.html"><a href="vector-section.html#vector-misc"><i class="fa fa-check"></i><b>2.1.4</b> 向量的其他操作</a></li>
 <li class="chapter" data-level="2.1.5" data-path="vector-section.html"><a href="vector-section.html#vectorization-basics"><i class="fa fa-check"></i><b>2.1.5</b> R向量的优越性</a></li>
@@ -213,12 +222,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="logical-operation.html"><a href="logical-operation.html"><i class="fa fa-check"></i><b>2.4</b> 逻辑</a><ul>
 <li class="chapter" data-level="2.4.1" data-path="logical-operation.html"><a href="logical-operation.html#-logical-values"><i class="fa fa-check"></i><b>2.4.1</b> 逻辑值 {logical-values}</a></li>
-<li class="chapter" data-level="2.4.2" data-path="logical-operation.html"><a href="logical-operation.html#logical-operations"><i class="fa fa-check"></i><b>2.4.2</b> 关系运算符和简单的逻辑运算</a></li>
+<li class="chapter" data-level="2.4.2" data-path="logical-operation.html"><a href="logical-operation.html#relational-operators"><i class="fa fa-check"></i><b>2.4.2</b> 关系运算符和简单的逻辑运算</a></li>
+<li class="chapter" data-level="2.4.3" data-path="logical-operation.html"><a href="logical-operation.html#logical-logical-operators"><i class="fa fa-check"></i><b>2.4.3</b> 逻辑运算符</a></li>
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="control-flow.html"><a href="control-flow.html"><i class="fa fa-check"></i><b>2.5</b> 判断和循环（流程控制）</a><ul>
-<li class="chapter" data-level="2.5.1" data-path="control-flow.html"><a href="control-flow.html#section-2.5.1"><i class="fa fa-check"></i><b>2.5.1</b> 给有编程基础者的快速指南</a></li>
+<li class="chapter" data-level="2.5.1" data-path="control-flow.html"><a href="control-flow.html#control-flow-for-programmers"><i class="fa fa-check"></i><b>2.5.1</b> 给有编程基础者的快速指南</a></li>
 <li class="chapter" data-level="2.5.2" data-path="control-flow.html"><a href="control-flow.html#kickstart"><i class="fa fa-check"></i><b>2.5.2</b> 无编程基础者的快速指南</a></li>
-<li class="chapter" data-level="2.5.3" data-path="control-flow.html"><a href="control-flow.html#section-2.5.3"><i class="fa fa-check"></i><b>2.5.3</b> 严谨版</a></li>
+<li class="chapter" data-level="2.5.3" data-path="control-flow.html"><a href="control-flow.html#control-flow-rigorous"><i class="fa fa-check"></i><b>2.5.3</b> 严谨版</a></li>
 <li class="chapter" data-level="2.5.4" data-path="control-flow.html"><a href="control-flow.html#apply"><i class="fa fa-check"></i><b>2.5.4</b> 如何避免for循环——<code>apply()</code>家族函数</a></li>
 <li class="chapter" data-level="2.5.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.5.5</b> <code>foreach</code> package：for循环的进化版</a></li>
 </ul></li>
@@ -226,26 +236,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.6.1" data-path="functions.html"><a href="functions.html#functions-in-R"><i class="fa fa-check"></i><b>2.6.1</b> R中的函数</a></li>
 <li class="chapter" data-level="2.6.2" data-path="functions.html"><a href="functions.html#abbr"><i class="fa fa-check"></i><b>2.6.2</b> 调用函数</a></li>
 <li class="chapter" data-level="2.6.3" data-path="functions.html"><a href="functions.html#create-functions"><i class="fa fa-check"></i><b>2.6.3</b> 创建函数</a></li>
-<li class="chapter" data-level="2.6.4" data-path="functions.html"><a href="functions.html#..."><i class="fa fa-check"></i><b>2.6.4</b> 关于<code>...</code></a></li>
+<li class="chapter" data-level="2.6.4" data-path="functions.html"><a href="functions.html#about-dot-dot-dot"><i class="fa fa-check"></i><b>2.6.4</b> 关于<code>...</code></a></li>
 <li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.5</b> 测速</a></li>
-<li class="chapter" data-level="2.6.6" data-path="functions.html"><a href="functions.html#list-intro"><i class="fa fa-check"></i><b>2.6.6</b> 列表 (list)</a></li>
+<li class="chapter" data-level="2.6.6" data-path="functions.html"><a href="functions.html#list"><i class="fa fa-check"></i><b>2.6.6</b> 列表 (list)</a></li>
 <li class="chapter" data-level="2.6.7" data-path="functions.html"><a href="functions.html#matrix-array"><i class="fa fa-check"></i><b>2.6.7</b> array（数组）和matrix（矩阵）简介</a></li>
-<li class="chapter" data-level="2.6.8" data-path="functions.html"><a href="functions.html#matricesarrays"><i class="fa fa-check"></i><b>2.6.8</b> 给matrices和arrays命名</a></li>
+<li class="chapter" data-level="2.6.8" data-path="functions.html"><a href="functions.html#matrix-array-naming"><i class="fa fa-check"></i><b>2.6.8</b> 给matrices和arrays命名</a></li>
 <li class="chapter" data-level="2.6.9" data-path="functions.html"><a href="functions.html#test-base"><i class="fa fa-check"></i><b>2.6.9</b> 小测</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="tibble.html"><a href="tibble.html"><i class="fa fa-check"></i><b>3</b> dataframe（数据框）和tibble</a><ul>
+<li class="chapter" data-level="3" data-path="tibble.html"><a href="tibble.html"><i class="fa fa-check"></i><b>3</b> dataframe和tibble；简单的数据分析</a><ul>
 <li class="chapter" data-level="3.1" data-path="tibble-view.html"><a href="tibble-view.html"><i class="fa fa-check"></i><b>3.1</b> 查看dataframe/tibble并了解它们的结构</a><ul>
 <li class="chapter" data-level="3.1.1" data-path="tibble-view.html"><a href="tibble-view.html#tibble-concept"><i class="fa fa-check"></i><b>3.1.1</b> dataframe/tibble的基本概念</a></li>
 <li class="chapter" data-level="3.1.2" data-path="tibble-view.html"><a href="tibble-view.html#tibble-more-data"><i class="fa fa-check"></i><b>3.1.2</b> 查看更多数据</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="tibble-basics.html"><a href="tibble-basics.html"><i class="fa fa-check"></i><b>3.2</b> tibble的创建和基础操作</a><ul>
 <li class="chapter" data-level="3.2.1" data-path="tibble-basics.html"><a href="tibble-basics.html#tibble-create"><i class="fa fa-check"></i><b>3.2.1</b> 创建tibble</a></li>
-<li class="chapter" data-level="3.2.2" data-path="tibble-basics.html"><a href="tibble-basics.html#tbl-subsetting"><i class="fa fa-check"></i><b>3.2.2</b> 取子集（抓取行，列）{tbl-subsetting}</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="tibble-misc.html"><a href="tibble-misc.html"><i class="fa fa-check"></i><b>3.3</b> 其它</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="tibble-misc.html"><a href="tibble-misc.html#listdataframetibble"><i class="fa fa-check"></i><b>3.3.1</b> list和dataframe/tibble</a></li>
-<li class="chapter" data-level="3.3.2" data-path="tibble-misc.html"><a href="tibble-misc.html#tibble-df-diff"><i class="fa fa-check"></i><b>3.3.2</b> Base R dataframe 和 Tidyverse tibble的区别</a></li>
+<li class="chapter" data-level="3.3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3.3</b> 数据转换 (Data Transformation)</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="data-transformation.html"><a href="data-transformation.html#tbl-subsetting"><i class="fa fa-check"></i><b>3.3.1</b> 取子集（抓取行，列）{tbl-subsetting}</a></li>
+<li class="chapter" data-level="3.3.2" data-path="data-transformation.html"><a href="data-transformation.html#mutate"><i class="fa fa-check"></i><b>3.3.2</b> 用<code>mutate()</code>修改或新增变量</a></li>
+<li class="chapter" data-level="3.3.3" data-path="data-transformation.html"><a href="data-transformation.html#-pipe-operator"><i class="fa fa-check"></i><b>3.3.3</b> <code>%&gt;%</code>符号 (Pipe Operator)</a></li>
+<li class="chapter" data-level="3.3.4" data-path="data-transformation.html"><a href="data-transformation.html#group_bysummarise"><i class="fa fa-check"></i><b>3.3.4</b> <code>group_by</code>与<code>summarise</code></a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="tibble-misc.html"><a href="tibble-misc.html"><i class="fa fa-check"></i><b>3.4</b> 其它</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="tibble-misc.html"><a href="tibble-misc.html#list-and-df"><i class="fa fa-check"></i><b>3.4.1</b> list和dataframe/tibble</a></li>
+<li class="chapter" data-level="3.4.2" data-path="tibble-misc.html"><a href="tibble-misc.html#tibble-df-diff"><i class="fa fa-check"></i><b>3.4.2</b> Tidyverse tibble相对于Base R dataframe的优势</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>4</b> 使用ggplot绘图</a><ul>
@@ -273,21 +288,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2.2" data-path="import-export.html"><a href="import-export.html#section-5.2.2"><i class="fa fa-check"></i><b>5.2.2</b> 导出</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="strings.html"><a href="strings.html"><i class="fa fa-check"></i><b>5.3</b> 字符串的处理</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="strings.html"><a href="strings.html#-1"><i class="fa fa-check"></i><b>5.3.1</b> 基础</a></li>
+<li class="chapter" data-level="5.3.1" data-path="strings.html"><a href="strings.html#section-5.3.1"><i class="fa fa-check"></i><b>5.3.1</b> 基础</a></li>
 <li class="chapter" data-level="5.3.2" data-path="strings.html"><a href="strings.html#str_sub"><i class="fa fa-check"></i><b>5.3.2</b> 使用<code>str_sub()</code>取子集</a></li>
 <li class="chapter" data-level="5.3.3" data-path="strings.html"><a href="strings.html#str_c"><i class="fa fa-check"></i><b>5.3.3</b> 使用<code>str_c()</code>进行字符串的合并</a></li>
 <li class="chapter" data-level="5.3.4" data-path="strings.html"><a href="strings.html#str_view"><i class="fa fa-check"></i><b>5.3.4</b> 使用<code>str_view()</code>来查找特定的字符组合</a></li>
 <li class="chapter" data-level="5.3.5" data-path="strings.html"><a href="strings.html#str_detect"><i class="fa fa-check"></i><b>5.3.5</b> <code>str_detect()</code></a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>5.4</b> Factors</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="factors.html"><a href="factors.html#-2"><i class="fa fa-check"></i><b>5.4.1</b> 基础</a></li>
+<li class="chapter" data-level="5.4.1" data-path="factors.html"><a href="factors.html#-1"><i class="fa fa-check"></i><b>5.4.1</b> 基础</a></li>
 <li class="chapter" data-level="5.4.2" data-path="factors.html"><a href="factors.html#section-5.4.2"><i class="fa fa-check"></i><b>5.4.2</b> 在绘图中的应用</a></li>
 <li class="chapter" data-level="5.4.3" data-path="factors.html"><a href="factors.html#section-5.4.3"><i class="fa fa-check"></i><b>5.4.3</b> 高端操作</a></li>
 </ul></li>
 <li class="chapter" data-level="5.5" data-path="dttm.html"><a href="dttm.html"><i class="fa fa-check"></i><b>5.5</b> 日期和时间</a><ul>
-<li class="chapter" data-level="5.5.1" data-path="dttm.html"><a href="dttm.html#-3"><i class="fa fa-check"></i><b>5.5.1</b> 基础</a></li>
-<li class="chapter" data-level="5.5.2" data-path="dttm.html"><a href="dttm.html#section-5.5.2"><i class="fa fa-check"></i><b>5.5.2</b> 计算</a></li>
-<li class="chapter" data-level="5.5.3" data-path="strings.html"><a href="strings.html#-1"><i class="fa fa-check"></i><b>5.5.3</b> 在绘图中的应用</a></li>
+<li class="chapter" data-level="5.5.1" data-path="dttm.html"><a href="dttm.html#iso"><i class="fa fa-check"></i><b>5.5.1</b> ISO标准</a></li>
+<li class="chapter" data-level="5.5.2" data-path="dttm.html"><a href="dttm.html#section-5.5.2"><i class="fa fa-check"></i><b>5.5.2</b> 创建日期/时间</a></li>
+<li class="chapter" data-level="5.5.3" data-path="dttm.html"><a href="dttm.html#section-5.5.3"><i class="fa fa-check"></i><b>5.5.3</b> 计算</a></li>
+<li class="chapter" data-level="5.5.4" data-path="factors.html"><a href="factors.html#-1"><i class="fa fa-check"></i><b>5.5.4</b> 在绘图中的应用</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="python.html"><a href="python.html"><i class="fa fa-check"></i><b>6</b> 与Python的联合使用</a><ul>
@@ -317,7 +333,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">2.2</span> 数据/对象类型 (Data/Object Types)</h2>
 <div id="data-types-basics" class="section level3">
 <h3><span class="header-section-number">2.2.1</span> 基础的数据/对象类型</h3>
-<div id="section-2.2.1.1" class="section level4">
+<div id="data-types-vector" class="section level4">
 <h4><span class="header-section-number">2.2.1.1</span> 向量所存储的数据类型</h4>
 <p>向量所存储的的数据类型有5种：</p>
 <table>
@@ -358,7 +374,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 <p><strong>一个向量的所有元素必须属于同一种类型。</strong>如果尝试把不同类型的元素合并成一个向量，其中一些元素的类型会被强制转换 (coerced)。你可以试试<code>c(2, &quot;a&quot;)</code>, <code>c(2+5i, 4)</code>, <code>c(TRUE, 1+9i)</code>和<code>c(TRUE, 1+9i, &quot;a&quot;)</code>，但是实际操作的时候尽量不要这么做。</p>
 </div>
-<div id="section-2.2.1.2" class="section level4">
+<div id="data-types-simple-operations" class="section level4">
 <h4><span class="header-section-number">2.2.1.2</span> 关于数据类型的简单操作</h4>
 <p>通过<code>class()</code>函数，可以查看数据/对象的类型。</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(<span class="dv">6</span>) <span class="co"># 6是一个（浮点）数，应为&quot;numeric&quot;</span></code></pre>
@@ -374,7 +390,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">as.character</span>(<span class="kw">c</span>(<span class="dv">23</span>, <span class="dv">90</span>))</code></pre>
 <pre><code>## [1] &quot;23&quot; &quot;90&quot;</code></pre>
 </div>
-<div id="na-inf-nannull" class="section level4">
+<div id="na-inf-nan-null" class="section level4">
 <h4><span class="header-section-number">2.2.1.3</span> <code>NA</code>, <code>Inf</code>, <code>NaN</code>和<code>NULL</code></h4>
 <p><code>NA</code>为缺损值，意思是该元素所代表的数值丢失/不确定/不可用。举个例子，当我们统计学生的200m跑成绩时，有一些学生因为身体不适未能参与测试，这时他们的成绩应被记为<code>NA</code>：</p>
 <pre class="sourceCode r"><code class="sourceCode r">time_in_sec &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">29.37</span>, <span class="fl">28.66</span>, <span class="fl">31.32</span>, <span class="ot">NA</span>, <span class="fl">27.91</span>, <span class="ot">NA</span>)</code></pre>
@@ -387,17 +403,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## [1] &quot;character&quot;</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(<span class="ot">NA</span>)</code></pre>
 <pre><code>## [1] &quot;logical&quot;</code></pre>
-<p><code>Inf</code>（无限）<code>NaN</code>（非数）的概念，以及作为<code>numeric</code>的<code>NA</code>的数学计算在第<a href="#math-NA"><strong>??</strong></a>小节讨论。</p>
-<p>作为<code>logical</code>的<code>NA</code>的逻辑运算在第(logical-operation)小节讨论。</p>
+<p><code>Inf</code>（无限）<code>NaN</code>（非数）的概念，以及作为<code>numeric</code>的<code>NA</code>的数学计算在第<a href="math.html#math-NA">2.3.2.4</a>小节讨论。</p>
+<p>作为<code>logical</code>的<code>NA</code>的逻辑运算在第<a href="logical-operation.html#logical-operation">2.4</a>小节讨论。</p>
 <p><code>NULL</code>是“无”，<strong>真正的“无”。</strong>它几乎一无是处，因此在此不作更多讨论。学有余力者可以自己去了解。</p>
 </div>
-<div id="section-2.2.1.4" class="section level4">
+<div id="other-data-types" class="section level4">
 <h4><span class="header-section-number">2.2.1.4</span> 其它的数据/对象类型</h4>
 <ul>
-<li>Dataframe/tibble 是R中存储复杂（多变量）数据的规范格式，从第(tibble)章开始将一直占据我们话题的中心。</li>
+<li>Dataframe/tibble 是R中存储复杂（多变量）数据的规范格式，从第<a href="tibble.html#tibble">3.3.1.2</a>章开始将一直占据我们话题的中心。</li>
 <li>因子 (factor)有很多向量的特性，尤其是能在dataframe/tibble中作为变量，但是它并不是向量；因子的详细内容在第<a href="factors.html#factors">5.4</a>节。</li>
 <li>函数 (function)。我们刚才用<code>c()</code>来创建向量，它就是一个函数：<code>class(c)</code>；函数的详细内容在第<a href="functions.html#functions">2.6</a>节。</li>
-<li>list类似于向量，但是一个list可以包含不同类型的元素。性质和使用方法也和向量大相径庭。详细内容在第<a href="#list"><strong>??</strong></a>节，算是较为进阶的内容。</li>
+<li>list类似于向量，但是一个list可以包含不同类型的元素。性质和使用方法也和向量大相径庭。详细内容在第<a href="functions.html#list">2.6.6</a>节，算是较为进阶的内容。</li>
 <li>矩阵 (matrix)和数组 (array)可以算作是二维和多维的向量，同样只能存储一种类型的数据，详细内容在第<a href="functions.html#matrix-array">2.6.7</a>节，同样是较为进阶的内容。</li>
 </ul>
 </div>
@@ -405,6 +421,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="data-types-advanced" class="section level3">
 <h3><span class="header-section-number">2.2.2</span> 数据类型（严谨版）</h3>
 <p>可以酌情跳到第<a href="math.html#math">2.3</a>节。</p>
+<p>本小节内容没完成，请跳到第<a href="math.html#math">2.3</a>节。</p>
 <div id="class-type-modestorage-mode" class="section level4">
 <h4><span class="header-section-number">2.2.2.1</span> <code>class</code>, <code>type</code>, <code>mode</code>和<code>storage mode</code></h4>
 <p>其实<code>class</code>根本不是基础的数据类型。学过编程的应该猜到了，此<code>class</code>正是OOP里的“类”，是“高层”的类型。你可以随意篡改<code>class</code>：</p>
@@ -454,7 +471,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/TianyiShi2001/r-and-tidyverse-book/04-vectors-logicals-and-functions.Rmd",
+"link": "https://github.com/TianyiShi2001/r-and-tidyverse-book/02-basics.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -463,7 +480,7 @@ gitbook.start({
 },
 "download": ["R与tidyverse——数据分析入门.pdf"],
 "toc": {
-"collapse": "section"
+"collapse": "subsection"
 }
 });
 });
