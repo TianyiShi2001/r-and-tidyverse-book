@@ -61,11 +61,13 @@ R有巨大的用户社群[^users]，其中有很多热心的使用者/开发者�
 
 R（RStudio）非常稳定。闪退率极低，而且就算闪退了，也完全不会丢失上一次工作中的数据，可以无缝衔接上一次的工作。我经常会创建一两个实验用的R script文件，我不需要把它们命名并保存在我的工作目录，重启RStudio的时候仍然可以使用它们。总之，关闭RStudio的时候，你甚至可以什么都不用保存；关闭，重启，无忧无虑地继续工作。设置Git后体验更佳。
 
-R与其它编程语言/数据库之间有很好的接口。
+R与其它编程语言/数据库之间有很好的接口。比如`dbplyr` package帮助你方便地把R和数据库（MySQL, MariaDB, Postgres等等）连接起来，`reticulate`可以让你在R中使用Python.
 
-Python（NumPy和SciPy）是近几年兴起的数据分析处理方案。在数据分析的应用中，R比Python历史更悠久，因此积攒了很多很棒的packages（包）。一般来说，python的强项是数据挖掘，而R的强项是数据分析，它们都是强大的工具。不用担心需要在二者之中做选择，因为rpy, reticulate等packages可以让你在python中使用R，在R中使用python，详情请见第\@ref(python)章。无论你是数据分析零基础，还是有python数据分析的经验，都能从本书中获益。
+Python（NumPy和SciPy）是近几年兴起的数据分析处理方案。在数据分析的应用中，R比Python历史更悠久，因此积攒了很多很棒的packages（包）。一般来说，python的强项是数据挖掘，而R的强项是数据分析，它们都是强大的工具。不用担心需要在二者之中做选择，因为`rpy`, `reticulate`等packages可以让你在python中使用R，在R中使用python，详情请见第\@ref(python)章。无论你是数据分析零基础，还是有python数据分析的经验，都能从本书中获益。
 
-至于Excel，它的定位原本就是办公（而不是学术）软件，数据分析的严谨性，大数据的处理能力，和功能的拓展非常局限。有五分之一的使用了Excel的遗传学论文，数据都出现了偏差 [@Ziemann2016Gene-name-errors]。不是说不能用Excel（或者其它可用的工具），而是要清楚各种工具的优势和局限，物尽其用。比如当需要从PDF文件中提取表格数据时，我会把它们复制到Excel（因为兼容性强）；我也会用Excel做一些数据的初步处理，比如删除数量不多的冗余的行和列，重命名变量名等。
+至于Excel，它的定位原本就是办公（而不是学术）软件，数据分析的严谨性，大数据的处理能力，和功能的拓展非常局限。有五分之一的使用了Excel的遗传学论文，数据都出现了偏差 [@Ziemann2016Gene-name-errors]。对了，Excel和SPSS和其它一些软件绘图的时候，坐标轴和/或图例中的文字竟然不能上下标！
+
+我也不是说要严禁使用Excel（或者其它可用的工具），而是要清楚各种工具的优势和局限，物尽其用。比如当需要从PDF文件中提取表格数据时，我会把它们复制到Excel（因为兼容性强）；我也会用Excel做一些数据的初步处理，比如删除数量不多的冗余的行和列，重命名变量名等。
 
 虽然R是自由软件，但是我们要记得感激所有位R贡献智慧的奉献者。出于对知识劳动的尊重和，以及保持R的发展壮大，我呼吁有能力出资的使用者在https://www.r-project.org/foundation/donations.html 对R进行捐赠。
 
@@ -344,6 +346,31 @@ knitr::include_graphics("img/rstudio-fuli/auto.png")
 
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics("img/rstudio-fuli/auto-sub.png")
+```
+
+### 一些实用的快捷键 {#useful-shortcuts}
+
+#### 快速插入标题 {#heading-insert}
+
+当一份R script文件写得很长的时候，用注释+横线作为小标题把整个文件分割成很多块可以增强易读性：
+
+```{r}
+# foo ---------------------------------------------------------------------
+
+print(1)
+
+# bar ---------------------------------------------------------------------
+
+x <- 2
+
+# some other code
+# blah blah blah
+```
+
+在RStudio中，可以通过`Ctrl` (`command`) + `shift` + `R`快速插入像上面`foo`, `bar`这样的小标题。更棒的是，在source栏左下角，可以根据小标题快速定位：
+
+```{r echo=FALSE}
+knitr::include_graphics('img/rstudio-fuli/heading-nav.png')
 ```
 
 

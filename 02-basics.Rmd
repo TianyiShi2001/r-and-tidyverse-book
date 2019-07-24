@@ -32,18 +32,16 @@ nocite: |
 
 ## 向量的概念，操作和优越性 {#vector-section}
 
-R没有标量，它通过各种类型的向量 (vector)来存储数据。
+R使用各种类型的向量 (vector)来存储单一类型的数据。
 
 ### 创建向量（赋值）{#create-vector}
 
-与很多其他的计算机语言不同，在R中，`<-`（像一个小箭头）用于给**向量，数据框和函数**赋值（即在每行的开头）。在RStudio中，可以用`Alt`+`-` (Mac是 `option`+`-`) 这个快捷键打出这个符号。
+单元素的向量，可以直接像这样赋值：
 
 ```{r}
 x <- 2
 x
 ```
-
-
 
 要创建一个多元素的向量，需要用到`c()` (concatenate)函数：
 
@@ -77,7 +75,7 @@ cities
 
 ### 索引/取子集/子集重新赋值 (indexing/subsetting) {#indexing}
 
-索引 (index)就是一个元素在向量中的位置。R是从1开始索引的，即索引为1的元素是第一个元素（因此用熟了Python和C可能会有些不适应）。在向量后方使用方括号进行取子集运算（即抓取索引为对应数字的元素；虽然subsetting翻译成“取子集”有点怪，但是没毛病；不知大家有没有更好的翻译方法，或是不翻译更好）。
+索引 (index)就是一个元素在向量中的位置。R是从1开始索引的，即索引为1的元素是第一个元素（因此用熟了Python和C可能会有些不适应）。在向量后方使用方括号进行取子集运算（即抓取索引为对应数字的元素）。
 
 ```{r}
 x <- c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
@@ -326,7 +324,7 @@ class(NA)
 
 作为`logical`的`NA`的逻辑运算在第\@ref(logical-operation)小节讨论。
 
-`NULL`是“无”，**真正的“无”。**它几乎一无是处，因此在此不作更多讨论。学有余力者可以自己去了解。
+`NULL`是“无”。它几乎一无是处，因此在此不作更多讨论。学有余力者可以自己去了解。
 
 #### 其它的数据/对象类型 {#other-data-types}
 
@@ -344,7 +342,7 @@ class(NA)
 
 #### `class`, `type`, `mode`和`storage mode`
 
-其实`class`根本不是基础的数据类型。学过编程的应该猜到了，此`class`正是OOP里的“类”，是“高层”的类型。你可以随意篡改`class`：
+其实`class`根本不是基础的数据类型。学过编程的应该猜到了，此`class`类似于OOP里的“类”，是“高层”的类型。你可以随意篡改`class`：
 
 ```{r}
 x <- c("Joe", "Lynne", "Pat")
@@ -354,6 +352,52 @@ class(x) # 新class
 ```
 
 用`typeof()`, `mode()`, `storage.mode()`所获取到的三种属性是不可篡改的“底层”类型。
+
+以下是五种atomic vectors用四种方式获取到的结果：
+
+|对象   |例子              |`typeof()` |`mode()`  |`storage.mode()`| `class()`|
+|:------|:-----------------|:----------|:---------|:---------------|:---------|
+|浮点数 |`1`, `NaN`, `Inf` |`double`   |`numeric` |`double`        |`numeric` |
+|整数   |`1L`              |`integer`  |`numeric` |`integer`       |`integer` |
+|复数   |`0+1i`            |`complex`  |`complex` |`complex`       |`complex` |
+|字符串 |`"a"`             |`character`|`character`|`character`   |`character`|
+|逻辑值 |`TRUE`            |`logical`  |`logical` |`logical`       |`logical` |
+
+其中浮点数和整数的“类型”名称有一些出入。`is.XX()`系列有三个用于实数的函数：
+
+- `is.numeric()`用于判断对象是否是实数，即`1`和`1L`的判断结果都为`TRUE`
+- `is.double()`用于判断对象是否是浮点数，即`1`为`TRUE`, `1L`为`FALSE`
+- `is.integer()`用于判断对象是否是整数，即`1`为`FALSE`, `1L`为`TRUE`
+
+对于矩阵和数列，用`typeof()`, `mode()`, `storage.mode()`所得到的结果与对应的atomic vectors得到的结果一致[^typeof-matrix]。而用`class()`会得到`matrix`/`array`.
+
+[^typeof-matrix]: 矩阵和数列和atomic vector一样，都只能存储一种形式的数据；本质上，它们就是多维的向量。
+
+```{r}
+x <- matrix(c(TRUE, FALSE, FALSE, TRUE), ncol = 2)
+typeof(x); class(x)
+```
+
+以下是其它数据类型用四种方式获取到的结果：
+
+|对象                  |例子              |`typeof()` |`mode()`  |`storage.mode()`| `class()`|
+|:---------------------|:-----------------|:----------|:---------|:---------------|:---------|
+|基础函数[^if]         |`sum`, `^`        |`buitin`   |`function` |`function`     |`function`|
+|闭包（包括自定义函数）|`mean`, `function(x) 2*x`|`closure`|`function`|`function` |`function`|
+|流程控制关键字[^if]|`if`, `while`, `break`|`special` |`function` |`function`     |`function`|
+|因子 (factor)         |factor("a")
+|列表 (list)           |list("a", 2)      |`list`     |`list`     |`list`         |`list`    |
+|数据框 (dataframe)    |`data.frame(x = 1)`|`list`    |`list`     |`list`       |`data.frame`|
+
+[^if]: 若是二元运算符，要用`` typeof(`+`) ``的形式。自定义的二元运算符和流程控制关键字同理。
+
+
+日期和时间是一种特殊的数据格式。它们被存储在向量中，可以拥有维度（即，可以做成矩阵和数列）。它们的属性展示如下：
+
+|对象                  |例子              |`typeof()` |`mode()`  |`storage.mode()`| `class()`|
+|:---------------------|:-----------------|:----------|:---------|:---------------|:---------|
+|ISO格式日期+时间|`as.POSIXct("2018-01-02 12:23:56")`|`double`|`numeric`|`double` |`POSIXt`  |
+|日期                  |as.date("2018-01-02")|`double`|`numeric` |`double`        |`date`    |
 
 ## 数学表达和运算 {#math}
 
@@ -574,6 +618,13 @@ Inf-Inf; Inf/Inf # = NaN
 ```{r}
 class(Inf); class(NaN)
 ```
+
+`is.na()`会判定`NaN`为真：
+
+```{r}
+is.na(NaN)
+```
+
 
 
 #### R中自带的数学函数集合 {#math-builtin-mathFuncs}
@@ -1219,7 +1270,7 @@ Map(rep, 1:4, 3)
 Map(seq, c(1, 5, 20), c(5, 25, 100), length.out = 5)
 ```
 
-它执行了三次计算：`seq(1, 5, length.out = 5)`, `seq(2, 25, length.out = 5)`和`seq(20, 100, length.out = 5)`.
+它执行了三次计算：`seq(1, 5, length.out = 5)`, `seq(5, 25, length.out = 5)`和`seq(20, 100, length.out = 5)`.
 
 想一想，这个结果是否可以化简？如果是，化简结果是什么？用`mapply()`函数执行同样的计算来验证你的答案。
 
@@ -1292,6 +1343,14 @@ x
 
 相比单核for循环的39秒，开挂（四核）的速度是12秒（计算量越大，优势越明显）。
 
+### `purrr` package中的`apply`家族函数替代品和进化产物
+
+#### `map`, `map_dbl`, `map_chr`, ...
+
+#### `map2`和`pmap`
+
+#### `invoke_map`, `invoke_map_dbl`, ...
+
 ## 函数 {#functions}
 
 ### R中的函数 {#functions-in-R}
@@ -1334,7 +1393,7 @@ t.test(x = sample, mu = 4.5)
 sum        (
  # 4   
         4 # 我怕不是
-,              #疯了哦
+,              #疯了
             6
   
   )
@@ -1358,7 +1417,9 @@ seq(from = 1, to = 1, by = ((to - from)/(length.out - 1)),
 seq(0, 25, l = 11)
 ```
 
-因为参数中只有`length.out`是以`l`开头的，`l`会被理解为`length.out`. 但是这个习惯并不好；自己用用就算了，与别人分享自己的工作时请务必使用标准写法。
+因为参数中只有`length.out`是以`l`开头的，`l`会被理解为`length.out`. 但是这个习惯并不好；自己用用就算了，与别人分享自己的工作时请尽量使用参数名的全称。
+
+对于`seq(0, 50, 10)`，亦可写成`seq(by = 10, 0, 50)`. 这是因为`by`参数先赋值，`0`和`50`是未命名的参数，所以按照剩余的参数的排列顺序来，即`from = 0, to = 50`. 同理，`seq(to = 50, 0, 10)`也是等价的。
 
 ### 创建函数 {#create-functions}
 
@@ -1423,9 +1484,9 @@ myfunc <- function(i){
 myfunc(6)
 ```
 
-#### 无名函数 {#anonymous-functions}
-
 本章剩余的内容，都是比较进阶的了。可以酌情从这里跳转至本章第\@ref(test-base)节。
+
+#### 无名函数 {#anonymous-functions}
 
 函数不需要名字也可以执行。一般，会与`apply`族函数联用（见第\@ref(apply)节）：
 
@@ -1803,4 +1864,5 @@ B
   - **提示：**
     - 虽然在R中整数用`1L`, `2L`等表示，用户在被指示“输入整数”的时候很有可能输入的是`2`而不是`2L`. `2`是否等于`2L`?如果是，如何利用它检测输入的是否是整数？（`2`和`2L`都要被判定为“是整数”）
     - 斐波那契数列前两位是定义，从第三位开始才是计算得出的。
+(@) `seq(0, 20, 5)`, `seq(by = 5, 0, 20`, 和`seq(by = 5, 0, y = 30, 20)`的结果分别是什么？为什么？（你可能需要参考第\ref(abbr)节和第\ref(about-dot-dot-dot)节）
 

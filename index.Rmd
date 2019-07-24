@@ -17,7 +17,7 @@ output:
         link: https://github.com/TianyiShi2001/r-and-tidyverse-book/%s
         text: "Edit"
   bookdown::pdf_book:
-    keep_tex: yes
+    keep_tex: no
     latex_engine: "xelatex"
     includes:
       in_header: partials/header.tex

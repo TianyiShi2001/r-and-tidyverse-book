@@ -7,7 +7,11 @@ nocite: |
 
 ### 本章内容速览
 
-本章介绍了
+R中的多变量数据的标准保存形式是dataframe；tibble是dataframe的进化版。
+
+- 第\@ref(tibble-view)节介绍了dataframe/tibble的基本概念以及如何查看数据。
+- 第\@ref(tibble-create)节介绍了tibble的创建——直接创建，从dataframe转换，或是从外部导入。
+- 第\@ref(data-transformation)介绍了数据转换，即对原有的数据做一些筛选和简单的计算处理。
 
 ## 查看dataframe/tibble并了解它们的结构 {#tibble-view}
 
@@ -42,7 +46,7 @@ knitr::include_graphics('img/tibble-intro.png')
 R默认显示dataframe/tibble的前10行。如果想看最后6行，可以使用`tail()`函数，比如：
 
 ```{r}
-tail(mpg)
+tail(mpg) # tail(mpg, n)可以查看最后n行
 ```
 
 若要从头到尾查看全部数据，可以使用`View`函数：
@@ -51,11 +55,9 @@ tail(mpg)
 View(mpg)
 ```
 
-## tibble的创建和基础操作 {#tibble-basics}
+## 创建tibble {#tibble-create}
 
-### 创建tibble {#tibble-create}
-
-#### 手动输入数据以创建tibble {#tibble-create-manual}
+### 手动输入数据以创建tibble {#tibble-create-manual}
 
 使用`tibble`函数，按以下格式创建tibble. 换行不是必须的，但是换行会看得更清楚。如果换行，不要忘记行末的逗号。
 
@@ -89,17 +91,15 @@ my_tibble_3 <- tibble(w1 = x, w2 = z)
  # Error: Tibble columns must have consistent lengths, only values of length one are recycled: * Length 2: Column `w2` * Length 3: Column `w1`
 ```
 
-#### 把dataframe转换成一个tibble {#tibble-create-from-df}
+### 把dataframe转换成一个tibble {#tibble-create-from-df}
 
 ```{r eval=FALSE}
 d1 <- as_tibble(d) #其中d是一个dataframe
 ```
 
-#### 从外部数据创建tibble {#tibble-import}
+### 从外部数据创建tibble {#tibble-import}
 
 参见第\@ref(data-import)节（数据的导入）
-
-
 
 
 ## 数据转换 (Data Transformation) {#data-transformation}

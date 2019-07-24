@@ -11,24 +11,27 @@
 \BOOKMARK [1][-]{section.2.4}{逻辑}{chapter.2}% 11
 \BOOKMARK [1][-]{section.2.5}{判断和循环（流程控制）}{chapter.2}% 12
 \BOOKMARK [1][-]{section.2.6}{函数}{chapter.2}% 13
-\BOOKMARK [0][-]{chapter.3}{dataframe和tibble；简单的数据分析}{}% 14
-\BOOKMARK [1][-]{section.3.1}{查看dataframe/tibble并了解它们的结构}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.2}{tibble的创建和基础操作}{chapter.3}% 16
-\BOOKMARK [1][-]{section.3.3}{数据转换 \(Data Transformation\)}{chapter.3}% 17
-\BOOKMARK [1][-]{section.3.4}{其它}{chapter.3}% 18
-\BOOKMARK [0][-]{chapter.4}{使用ggplot绘图}{}% 19
-\BOOKMARK [1][-]{section.4.1}{哲理}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.2}{基础}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.3}{进阶}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.4}{附：Base R中的作图}{chapter.4}% 23
-\BOOKMARK [0][-]{chapter.5}{数据处理}{}% 24
-\BOOKMARK [1][-]{section.5.1}{把``untidy data''整成``tidy data''}{chapter.5}% 25
-\BOOKMARK [1][-]{section.5.2}{数据的导入和导出}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.3}{字符串的处理}{chapter.5}% 27
-\BOOKMARK [1][-]{section.5.4}{Factors}{chapter.5}% 28
-\BOOKMARK [1][-]{section.5.5}{日期和时间}{chapter.5}% 29
-\BOOKMARK [0][-]{chapter.6}{与Python的联合使用}{}% 30
-\BOOKMARK [1][-]{section.6.1}{在R中使用Python: reticulate}{chapter.6}% 31
-\BOOKMARK [1][-]{section.6.2}{在Python中使用R: rpy}{chapter.6}% 32
-\BOOKMARK [1][-]{section.6.3}{Beaker\040Notebook}{chapter.6}% 33
-\BOOKMARK [0][-]{chapter*.12}{References}{}% 34
+\BOOKMARK [1][-]{section.2.7}{列表 \(list\)}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.8}{array（数组）和matrix（矩阵）简介}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.9}{小测}{chapter.2}% 16
+\BOOKMARK [0][-]{chapter.3}{dataframe和tibble}{}% 17
+\BOOKMARK [1][-]{section.3.1}{查看dataframe/tibble并了解它们的结构}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.2}{创建tibble}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.3}{数据转换 \(Data Transformation\)}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.4}{其它}{chapter.3}% 21
+\BOOKMARK [0][-]{chapter.4}{使用ggplot绘图}{}% 22
+\BOOKMARK [1][-]{section.4.1}{哲理}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.2}{基础}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.3}{进阶}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.4}{附：Base R中的作图}{chapter.4}% 26
+\BOOKMARK [0][-]{chapter.5}{数据处理}{}% 27
+\BOOKMARK [1][-]{section.5.1}{把``untidy data''整成``tidy data''}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.2}{数据的导入和导出}{chapter.5}% 29
+\BOOKMARK [1][-]{section.5.3}{字符串的处理}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.4}{Factors}{chapter.5}% 31
+\BOOKMARK [1][-]{section.5.5}{日期和时间}{chapter.5}% 32
+\BOOKMARK [0][-]{chapter.6}{与Python的联合使用}{}% 33
+\BOOKMARK [1][-]{section.6.1}{在R中使用Python: reticulate}{chapter.6}% 34
+\BOOKMARK [1][-]{section.6.2}{在Python中使用R: rpy}{chapter.6}% 35
+\BOOKMARK [1][-]{section.6.3}{Beaker\040Notebook}{chapter.6}% 36
+\BOOKMARK [0][-]{chapter*.12}{References}{}% 37

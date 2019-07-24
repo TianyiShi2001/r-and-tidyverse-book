@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.4 逻辑 | R与tidyverse——数据分析入门</title>
+  <title>3.2 创建tibble | R与tidyverse——数据分析入门</title>
   <meta name="description" content="这是一本R与tidyverse的入门教程" />
   <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.4 逻辑 | R与tidyverse——数据分析入门" />
+  <meta property="og:title" content="3.2 创建tibble | R与tidyverse——数据分析入门" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="TianyiShi2001/R-Tutorial-Resorces" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.4 逻辑 | R与tidyverse——数据分析入门" />
+  <meta name="twitter:title" content="3.2 创建tibble | R与tidyverse——数据分析入门" />
   
   <meta name="twitter:description" content="这是一本R与tidyverse的入门教程" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="math.html">
-<link rel="next" href="control-flow.html">
+<link rel="prev" href="tibble-view.html">
+<link rel="next" href="data-transformation.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -338,128 +338,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="logical-operation" class="section level2">
-<h2><span class="header-section-number">2.4</span> 逻辑</h2>
-<div id="-logical-values" class="section level3">
-<h3><span class="header-section-number">2.4.1</span> 逻辑值 {logical-values}</h3>
-<p>逻辑值有三个。<code>TRUE</code>, <code>FALSE</code>和<code>NA</code>.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>,<span class="ot">FALSE</span>,<span class="ot">NA</span>))
-<span class="co">## [1] &quot;logical&quot;</span></code></pre>
-<p><code>TRUE</code>为真，<code>FALSE</code>为假，<code>NA</code>为未知（即真假难辨）。</p>
+<div id="tibble-create" class="section level2">
+<h2><span class="header-section-number">3.2</span> 创建tibble</h2>
+<div id="tibble-create-manual" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> 手动输入数据以创建tibble</h3>
+<p>使用<code>tibble</code>函数，按以下格式创建tibble. 换行不是必须的，但是换行会看得更清楚。如果换行，不要忘记行末的逗号。</p>
+<pre class="sourceCode r"><code class="sourceCode r">my_tibble_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">tibble</span>(
+                <span class="dt">nums =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>),
+                <span class="dt">chars =</span> <span class="kw">c</span>(<span class="st">&quot;hej&quot;</span>, <span class="st">&quot;你好&quot;</span>, <span class="st">&quot;こんにちは&quot;</span>),
+                <span class="dt">cplxnums =</span> <span class="kw">c</span>(<span class="st">&quot;4+8i&quot;</span>, <span class="st">&quot;3+5i&quot;</span>, <span class="st">&quot;3+4i&quot;</span>)
+                )
+my_tibble_<span class="dv">1</span>
+<span class="co">## # A tibble: 3 x 3</span>
+<span class="co">##    nums chars      cplxnums</span>
+<span class="co">##   &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;   </span>
+<span class="co">## 1     4 hej        4+8i    </span>
+<span class="co">## 2     5 你好       3+5i    </span>
+<span class="co">## 3     6 こんにちは 3+4i</span></code></pre>
+<p>类似地，可以从现有的vector创建。<strong>所有的变量长度必须一样。</strong></p>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">5</span>)
+y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">211</span>,<span class="dv">23</span>,<span class="dv">45</span>)
+z &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">20</span>,<span class="dv">32</span>)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">my_tibble_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">v1 =</span> x, <span class="dt">v2 =</span> y)
+my_tibble_<span class="dv">2</span>
+<span class="co">## # A tibble: 3 x 2</span>
+<span class="co">##      v1    v2</span>
+<span class="co">##   &lt;dbl&gt; &lt;dbl&gt;</span>
+<span class="co">## 1     1   211</span>
+<span class="co">## 2     4    23</span>
+<span class="co">## 3     5    45</span></code></pre>
+<p>而试图把<code>x</code>和<code>z</code>做成tibble就会报错：</p>
+<pre class="sourceCode r"><code class="sourceCode r">my_tibble_<span class="dv">3</span> &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">w1 =</span> x, <span class="dt">w2 =</span> z)
+
+ <span class="co"># Error: Tibble columns must have consistent lengths, only values of length one are recycled: * Length 2: Column `w2` * Length 3: Column `w1`</span></code></pre>
 </div>
-<div id="relational-operators" class="section level3">
-<h3><span class="header-section-number">2.4.2</span> 关系运算符和简单的逻辑运算</h3>
-<p>R中常用的关系运算符有：</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center">符号</th>
-<th align="center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"><code>==</code></td>
-<td align="center">equal to（等于）</td>
-</tr>
-<tr class="even">
-<td align="center"><code>!=</code></td>
-<td align="center">equal to（不等于）</td>
-</tr>
-<tr class="odd">
-<td align="center"><code>&lt;</code></td>
-<td align="center">less than（小于）</td>
-</tr>
-<tr class="even">
-<td align="center"><code>&gt;</code></td>
-<td align="center">more than（大于）</td>
-</tr>
-<tr class="odd">
-<td align="center"><code>&lt;=</code></td>
-<td align="center">less than or equal to（小于等于）</td>
-</tr>
-<tr class="even">
-<td align="center"><code>&gt;=</code></td>
-<td align="center">more than or equal to（大于等于）</td>
-</tr>
-</tbody>
-</table>
-<p>这些关系运算符只能用于(atomic) vectors, 不能用于其他类型的R对象；<code>indentical()</code>函数可以用于所有类型的对象，用来确认两者是否完全一致。</p>
-<p>使用关系运算符进行计算，会产生逻辑值作为结果。比如：</p>
-<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">5</span>
-x <span class="op">!=</span><span class="st"> </span><span class="dv">3</span> <span class="co">#x等于5，所以“x不等于3”为真</span>
-<span class="co">## [1] TRUE</span></code></pre>
-<p>有一些其他的运算符或函数也会返回逻辑值，比如</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">7</span> <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>)
-<span class="co">## [1] TRUE</span></code></pre>
-<p>顾名思义，这个运算符是用来检测一个元素是否在另一个向量中。其它类型的运算符，我在需要用到的时候再讲。</p>
-<p>有很多种运算会以<code>NA</code>作为计算结果，在此不一一列举。最重要的一个是：</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="ot">NA</span> <span class="op">==</span><span class="st"> </span><span class="ot">NA</span>
-<span class="co">## [1] NA</span></code></pre>
-<p>这看起来像是一个bug，然而仔细想想才发现这个设计很巧妙。假设你问我是否知道我的一些朋友写完了暑假作业。我说我<strong>不知道</strong>张三是否写完了，也<strong>不知道</strong>李四是否写完了。你再问我“张三和李四的作业完成情况是一样的吗”？鬼才知道咧！</p>
-<p>这意味着不能直接使用<code>x == NA</code>来判断<code>x</code>是否是<code>NA</code>，而要用<code>is.na()</code>函数：</p>
-<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="ot">NA</span>
-<span class="kw">is.na</span>(x)
-<span class="co">## [1] TRUE</span></code></pre>
+<div id="tibble-create-from-df" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> 把dataframe转换成一个tibble</h3>
+<pre class="sourceCode r"><code class="sourceCode r">d1 &lt;-<span class="st"> </span><span class="kw">as_tibble</span>(d) <span class="co">#其中d是一个dataframe</span></code></pre>
 </div>
-<div id="logical-logical-operators" class="section level3">
-<h3><span class="header-section-number">2.4.3</span> 逻辑运算符</h3>
-<p>以下是最常用的三个逻辑运算符。</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center">符号</th>
-<th align="center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"><code>&amp;</code></td>
-<td align="center">AND（且）</td>
-</tr>
-<tr class="even">
-<td align="center"><code>|</code></td>
-<td align="center">OR（或）</td>
-</tr>
-<tr class="odd">
-<td align="center"><code>!</code></td>
-<td align="center">反义符号</td>
-</tr>
-</tbody>
-</table>
-<div id="logical-logical-operators-anti" class="section level4">
-<h4><span class="header-section-number">2.4.3.1</span> 反义符号（<code>!</code>）</h4>
-<p><code>!</code>使<code>TRUE</code> <code>FALSE</code>颠倒。一般，我们用小括号来包住一个逻辑运算，然后在它的前面加上一个<code>!</code>来反转结果，比如</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="op">!</span>(<span class="dv">3</span> <span class="op">&lt;</span><span class="st"> </span><span class="dv">4</span>) <span class="co"># 这个例子很简单，反义符号意义不大。后面实操的时候才能领略到它的用处。</span>
-<span class="co">## [1] FALSE</span></code></pre>
-</div>
-<div id="logical-logical-operators-and-or" class="section level4">
-<h4><span class="header-section-number">2.4.3.2</span> 多个逻辑运算的组合（<code>&amp;</code>（且）和<code>|</code>（或））</h4>
-<p><code>&amp;</code>和<code>|</code>可以把多个逻辑运算的结果合并成一个逻辑值。</p>
-<p><code>&amp;</code>判断是否两边运算结果都为<code>TRUE</code>。如果是，才会得到<code>TRUE</code>（即一真和一假得到假）。</p>
-<p><code>|</code>判断两边运算结果是否至少有一个 <code>TRUE</code>，如果是，就会得到<code>TRUE</code>。</p>
-<p>不用死记硬背！其实就是“且”和“或”的逻辑。</p>
-<p>用脑子想一下以下三条运算的结果，然后复制代码到R console对答案。</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span> <span class="op">==</span><span class="st"> </span><span class="dv">1</span> <span class="op">&amp;</span><span class="st"> </span><span class="dv">1</span> <span class="op">==</span><span class="st"> </span><span class="dv">2</span> <span class="op">&amp;</span><span class="st"> </span><span class="dv">3</span> <span class="op">==</span><span class="st"> </span><span class="dv">3</span> <span class="co">#即：“1等于1且1等于2且3等于3”，是真还是假？</span>
-<span class="ot">FALSE</span> <span class="op">|</span><span class="st"> </span><span class="ot">FALSE</span> <span class="op">|</span><span class="st"> </span><span class="ot">TRUE</span> <span class="co"># FALSE/TRUE等价于一个运算结果</span>
-<span class="op">!</span>(<span class="ot">FALSE</span> <span class="op">|</span><span class="st"> </span><span class="ot">TRUE</span>) <span class="op">&amp;</span><span class="st"> </span><span class="ot">TRUE</span> <span class="co"># 注意反义符号</span></code></pre>
-<p>我们可以查看三个逻辑值所有两两通过<code>&amp;</code>组和的计算结果（如果你不感兴趣，可以不关注方法。这里重点是结果）：</p>
-<pre class="sourceCode r"><code class="sourceCode r">vals &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>, <span class="ot">NA</span>) 
-<span class="kw">names</span>(vals) &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&#39;[&#39;</span>,<span class="kw">as.character</span>(vals),<span class="st">&#39;]&#39;</span>,<span class="dt">sep =</span> <span class="st">&#39;&#39;</span>)
-<span class="kw">outer</span>(vals, vals, <span class="st">&quot;&amp;&quot;</span>)
-<span class="co">##         [TRUE] [FALSE]  [NA]</span>
-<span class="co">## [TRUE]    TRUE   FALSE    NA</span>
-<span class="co">## [FALSE]  FALSE   FALSE FALSE</span>
-<span class="co">## [NA]        NA   FALSE    NA</span></code></pre>
-<p>可以看到，<code>FALSE</code>与任何逻辑值组合，结果都是<code>FALSE</code>。这个好理解，因为一旦一个是<code>FALSE</code>，那么不可能两边都是<code>TRUE</code>. <code>TRUE &amp; NA</code>之所以为<code>NA</code>（而不是<code>FALSE</code>），是因为<code>NA</code>的意思是“不能确定真假”，即有可能真也有可能假。因此<code>TRUE &amp; NA</code>也无法辨真假。</p>
-<p>再来看<code>|</code>的组合：</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">outer</span>(vals, vals, <span class="st">&quot;|&quot;</span>)
-<span class="co">##         [TRUE] [FALSE] [NA]</span>
-<span class="co">## [TRUE]    TRUE    TRUE TRUE</span>
-<span class="co">## [FALSE]   TRUE   FALSE   NA</span>
-<span class="co">## [NA]      TRUE      NA   NA</span></code></pre>
-<p>可以看到，<code>TRUE</code>与任何一个逻辑值组合，都是<code>TRUE</code>，而<code>FALSE | NA</code>为<code>NA</code>。原因一样（因为<code>NA</code>的不确定性）。</p>
-</div>
+<div id="tibble-import" class="section level3">
+<h3><span class="header-section-number">3.2.3</span> 从外部数据创建tibble</h3>
+<p>参见第<a href="import-export.html#data-import">5.2.1</a>节（数据的导入）</p>
 </div>
 </div>
             </section>
@@ -467,8 +386,8 @@ x <span class="op">!=</span><span class="st"> </span><span class="dv">3</span> <
           </div>
         </div>
       </div>
-<a href="math.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="control-flow.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="tibble-view.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-transformation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -498,7 +417,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/TianyiShi2001/r-and-tidyverse-book/02-basics.Rmd",
+"link": "https://github.com/TianyiShi2001/r-and-tidyverse-book/03-tibble.Rmd",
 "text": "Edit"
 },
 "history": {
