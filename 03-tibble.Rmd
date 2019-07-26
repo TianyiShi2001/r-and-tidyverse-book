@@ -39,17 +39,17 @@ mpg
 knitr::include_graphics('img/tibble-intro.png')
 ```
 
-这张图是重中之重。一个正确的dataframe/tibble，每一行代表的是一个observation（硬翻译的话是“观测单位”，但是我觉得这个翻译不好），每一列代表的是一个variable（变量），且同一个变量的数据类型必须一样。像这样的数据被称为“tidy data”（“整齐的数据”）。虽然看起来简单，直观，理所当然，但是现实中上人们经常会做出“不整齐”的数据。把不整齐的数据弄整齐是下一章的重点。
+这张图是重中之重。一个正确的dataframe/tibble，每一行代表的是一个observation（硬翻译的话是“观测单位”，但是我觉得这个翻译不好），每一列代表的是一个variable（变量），且同一个变量的数据类型必须一样。像这样的数据被称为“tidy data”（“整齐的数据”）。虽然看起来简单，直观，理所当然，但是现实中上人们经常会做出“不整齐”的数据。把不整齐的数据弄整齐是第\ref(wrangle)章的重点。
 
 ### 查看更多数据 {#tibble-more-data}
 
-R默认显示dataframe/tibble的前10行。如果想看最后6行，可以使用`tail()`函数，比如：
+R默认显示tibble的前10行。如果想看前n行或最后n行，可以分别使用`head()`和`tail()`函数，比如：
 
 ```{r}
-tail(mpg) # tail(mpg, n)可以查看最后n行
+tail(mpg, 6) # `mpg`的最后6行
 ```
 
-若要从头到尾查看全部数据，可以使用`View`函数：
+若要在source栏中从头到尾查看全部数据，可以使用`View`函数：
 
 ```{r eval=FALSE}
 View(mpg)
@@ -59,7 +59,9 @@ View(mpg)
 
 ### 手动输入数据以创建tibble {#tibble-create-manual}
 
-使用`tibble`函数，按以下格式创建tibble. 换行不是必须的，但是换行会看得更清楚。如果换行，不要忘记行末的逗号。
+使用`tibble()`函数[^tribble]，按以下格式创建tibble. 换行不是必须的，但是换行会看得更清楚。如果换行，不要忘记行末的逗号。
+
+[^tribble]: `tribble()`函数亦可用来创建新tibble. 与`tibble()`的区别是，`tibble()`逐列写入数据，`tribble()`逐行写入数据。查看帮助文档获取使用例。
 
 ```{r}
 my_tibble_1 <- tibble(
@@ -70,12 +72,12 @@ my_tibble_1 <- tibble(
 my_tibble_1
 ```
 
-类似地，可以从现有的vector创建。**所有的变量长度必须一样。**
+类似地，可以从现有的vector创建。**注意，所有变量的长度必须一样。**
 
 ```{r}
-x <- c(1,4,5)
+x <- c(1,  4 , 5 )
 y <- c(211,23,45)
-z <- c(20,32)
+z <- c(20 ,32)
 ```
 
 ```{r}
