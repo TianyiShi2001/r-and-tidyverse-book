@@ -15,7 +15,7 @@ output:
           <li id="biaoti">R与tidyverse——数据分析入门</li>
       edit:
         link: https://github.com/TianyiShi2001/r-and-tidyverse-book/%s
-        text: "Edit"
+        text: "Github"
   bookdown::pdf_book:
     keep_tex: no
     latex_engine: "xelatex"
@@ -25,7 +25,7 @@ bibliography: ["bib/main.bib", "bib/packages.bib"]
 biblio-style: ieeetr
 link-citations: true
 documentclass: book
-github-repo: TianyiShi2001/R-Tutorial-Resorces
+github-repo: TianyiShi2001/r-and-tidyverse-book
 description: "这是一本R与tidyverse的入门教程"
 ---
 

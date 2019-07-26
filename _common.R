@@ -1,8 +1,8 @@
 options(digits = 3)
 
 knitr::opts_chunk$set(
-  mcomment = "#>",
-  collapse = TRUE,
+  comment = "#>",
+  collapse = FALSE,
   cache = TRUE,
   # out.width = "70%",
   fig.align = 'center'

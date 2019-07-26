@@ -3,7 +3,7 @@ nocite: |
   @Coghlan:2016
 ---
 
-# R和RStudio介绍和安装教程 {#intro-and-installation}
+# R与RStudio安装与基础操作 {#intro-and-installation}
 
 ### 本章内容速览 {-#intro-overview}
 
@@ -378,13 +378,13 @@ knitr::include_graphics('img/rstudio-fuli/heading-nav.png')
 
 #### “一句”的概念
 
-一次（一句）计算执行且执行一个函数（不包括里面嵌套着的函数）。
+一次计算（一个单句）执行且执行一个函数（不包括里面嵌套着的函数）。
 
 当你通过`函数名` + `(`“开启”一次运算时，从这里开始到*这个函数所对应的*反括号，即`)`之前的内容，即使再多，都只是这个函数的参数。
 
-当你在R script里敲击`Ctrl`+`Enter`时，光标所在的位置的那一句指令将会被执行（无需在那一句的开头，可以在那一句之中的任何位置）；如果那句命令不完整，很可能会在console中用`+`提示（见下一小节）。
+当你在R script里敲击`Ctrl`+`Enter`时，光标所在的位置的那一句指令将会被执行（无需在那一句的开头，可以在那一句之中的任何位置）；如果那句命令不完整，会在console中用`+`提示（见下一小节）。
 
-句与句之间必须换行，或者用分号（`;`）连接：
+单句与单句之间必须换行，或者用分号（`;`）连接：
 
 ```{r eval=FALSE}
 sum(1, 9)
@@ -396,6 +396,25 @@ sum(1, 9) sum(2, 3)
 # 不可以，会出错
 ```
 
+在同一行用分号分隔的几句代码会按顺序被一起执行，但是每个单句分别产生一个效果/分别返回一个结果。
+
+```{r collapse=TRUE}
+sum(1, 9); mean(2, 3); x <- 5; x + 1
+```
+
+
+我们还可以使用大括号构建复合句。**在大括号开头处执行代码**，括号里的内容会按顺序执行，但是只会返回最后一步的计算结果。
+
+```{r collapse=FALSE}
+{
+  sum(1, 9)
+  mean(2, 3)
+  x <- 5
+  x + 1
+}
+```
+
+复合句在[自定义函数](#create-functions)和[流程控制](#control-flow)中经常使用。
 
 #### 关于换行 {#newline}
 
@@ -539,4 +558,63 @@ biocLite()
 ```{r eval=FALSE}
 biocLite("RforProteomics")
 ```
+
+## 小测 {test-intro}
+
+### 基础 {test-intro-basics}
+
+(@) **计算。**
+
+`z`等于多少？为什么？
+
+```{r eval=FALSE}
+z <- {
+  x <- 6
+  y <- 7
+  x + y
+  x <- 10
+  x - y
+  x * y
+}
+```
+
+下面两行代码的运算结果分别是什么？z的值分别是什么？
+
+```{r eval=FALSE}
+z <- x <- 0; x + 1
+z <- {x <- 0; x + 1}
+```
+
+### 进阶 {test-intro-advanced}
+
+建议读完下一章再来做这些题。
+
+(@) **计算。**
+
+```{r eval=FALSE}
+rep(
+  seq(10, 100, 10),
+  rep(1:4, c(2, 1, 4, 3))
+)
+```
+
+```{r eval=FALSE}
+rep({
+  x <- 5
+  x <- x+5
+  x
+}, 3)
+```
+
+```{r eval=FALSE}
+greet <- function(t) {
+  print(if(t == 1) "早上好" else if(t == 2) "下午好" else if(t == 3) "晚上好")
+}
+
+t = 1; greet(t)
+t = 3; greet(t)
+```
+
+
+
 

@@ -177,6 +177,8 @@ x_norm <- rnorm(100000, 250, 20) # 按照平均值为250，标准差为20的正�
 hist(x_norm) # 画直方图
 ```
 
+此外，还有`rlnorm()`, `rpois()`, `rexp()`等函数。`?stats::distributions`中介绍了R中自带的分布，其中大部分都有对应的随机数生成器。
+
 ### 向量的其他操作 {#vector-misc}
 
 #### 创建长度为0的向量 {#vector-length-0}
@@ -396,7 +398,7 @@ typeof(x); class(x)
 
 |对象                  |例子              |`typeof()` |`mode()`  |`storage.mode()`| `class()`|
 |:---------------------|:-----------------|:----------|:---------|:---------------|:---------|
-|ISO格式日期+时间|`as.POSIXct("2018-01-02 12:23:56")`|`double`|`numeric`|`double` |`POSIXt`  |
+|国际标准格式的日期+时间|`as.POSIXct("2018-01-02 12:23:56")`|`double`|`numeric`|`double` |`POSIXt`  |
 |日期                  |as.date("2018-01-02")|`double`|`numeric` |`double`        |`date`    |
 
 ## 数学表达和运算 {#math}
@@ -418,13 +420,6 @@ sqrt(3)^2-3
 ```
 
 浮点数的计算比精确数的计算快很多。如果你是第一次接触浮点数，可能会觉得它不可靠，其实不然。在绝大多数情况下，牺牲的这一点点精度并不会影响计算结果（我们的结果所需要的有效数字一般不会超过10位；只有当两个非常，非常大且数值相近对数字相减才会出现较大的误差）。
-
-`NaN`（非数）和`Inf`（无限大）也是浮点数！
-
-```{r}
-class(NaN)
-class(Inf)
-```
 
 #### 科学计数法 {#math-sci-not}
 
@@ -493,13 +488,11 @@ class(factorial(5L))
 
 整数与浮点数之间的运算，显然，全部都会产生浮点数结果，无需举例。
 
-另外一个需要注意的地方是，取整函数\@ref(quzheng)并不会产生整数。如果需要的话，要用`as.integer()`函数。
-
 ### 运算 {#arithmetic}
 
 #### 二元运算符号 {#math-binary-operators}
 
-R中的binary operators（二元运算符）有：
+R中常用的binary operators（二元运算符）有：
 
 |  符号     |     描述    |
 |:---------:|:-----------:|
@@ -511,7 +504,7 @@ R中的binary operators（二元运算符）有：
 |`%/%`      |求整数商，比如`7%%3`$=2$|
 |`%%`       |求余数，比如`7%%3`$=1$|
 
-其中求余/求整数商最常见的两个用法是判定一个数的奇偶性，和时间，角度等单位的转换。（后面再详细介绍）。
+其中求余/求整数商最常见的两个用法是判定一个数的奇偶性，和时间，角度等单位的转换。（见[本章小测](#test-base-basics)）。
 
 #### $e^x$和$\log_x{y}$ {#math-exponent-log}
 
@@ -625,11 +618,7 @@ class(Inf); class(NaN)
 is.na(NaN)
 ```
 
-
-
-#### R中自带的数学函数集合 {#math-builtin-mathFuncs}
-
-基础
+#### R中自带的常用数学函数概览 {#math-builtin-mathFuncs}
 
 |函数          |描述          |
 |:---------------|:-------------|
@@ -652,7 +641,7 @@ is.na(NaN)
 
 ### 简易的统计学计算 {#statistics}
 
-本节简要解释了R中的基础统计学函数，t分布，t检验和$\chi^2$检验。统计学方法并不是本书的重点，因此可以酌情跳到[下一章](#tibble)。
+本节简要解释了R中的基础统计学函数，t分布，t检验和$\chi^2$检验。统计学方法并不是本书的重点，因此可以酌情跳到[下一节](#logical-operation)。
 
 #### 基础 {#stats-basics}
 
@@ -1540,85 +1529,7 @@ speak(cat)
 
 ```
 
-#### 伪·OOP {#fake-OOP}
-
-我貌似，捣鼓出了一种完全使用R中的简易函数实现伪·OOP的方法（R中的真·OOP是有三种，S3，R6和S4）：
-
-```{r}
-Cat <- function(name){
-  name = name
-  binomial_name <- "Felis catus"
-  speak <- "Meow"
-  greet <- function(time = "not_specified"){
-    intro <- paste("my name is", name)
-    if(time == "morning") print(paste("Good morning,", intro))
-    if(time == "afternoon") print(paste("Good afternoon,", intro))
-    if(time == "evening") print(paste("Good evening,", intro)) 
-    if(time == "not_specified") print(paste("Hi,", intro))
-  }
-    paste("Hi, my name is ", name)
-  list(name = name, binomial_name = binomial_name, speak = speak, greet = greet)
-}
-
-Felix <- Cat("Felix")
-Felix$name
-Felix$greet("morning")
-```
-
-**inheritance和polymorphism的实现**
-
-```{r}
-Pet <- function(name = NA, common_name = NA, binomial_name = NA, speak = NA){
-  name <- name
-  common_name <- common_name
-  binomial_name <- binomial_name
-  speak <- speak
-  greet <- function(time = "not_specified"){
-    intro <- paste("I'm a", common_name, "and my name is", name)
-    if(time == "morning") print(paste("Good morning,", intro))
-    if(time == "afternoon") print(paste("Good afternoon,", intro))
-    if(time == "evening") print(paste("Good evening,", intro)) 
-    if(time == "not_specified") print(paste("Hi,", intro))
-  }
-    paste("Hi, my name is ", name)
-  list(name = name, common_name = common_name, binomial_name = binomial_name, speak = speak, greet = greet)
-}
-
-
-Turtle <- function(name = NA){
-  Pet(name, "turtle", "Trachemys scripta elegans") # 实现inheritance # 龟没有叫声
-}
-
-Cat <- function(name = NA, sterilized = NA){
-  sterilized <- sterilized # 猫可能绝育 # 新增attribute，实现了广义的polymorphism
-  PetAaM <- Pet(name, "cat", "Felis catus", "Meow")
-  CatOnlyAaM <- list(sterilized = sterilized)
-  c(PetAaM, CatOnlyAaM)
-}
-
-# 实现了Python语境中的polymorphism
-greet <- function(pet, time = "not_specified"){
-  pet$greet(time)
-}
-
-binomial_name <- function(pet){
-  pet$binomial_name
-}
-```
-
-使用例：
-
-```{r}
-Felix <- Cat("Felix", "TRUE")
-Kazuya <- Turtle("Kazuya")
-
-Felix$binomial_name
-Kazuya$greet("afternoon")
-greet(Felix, "morning")
-sapply(list(Kazuya, Felix), binomial_name)
-```
-
-没有`class`，没有`self`，没有`__init__`，*it just works*.
+利用闭包，可以使用R中的简易的函数实现伪·OOP（R中的真·OOP是有三种，S3，R6和S4），这是本章末的[挑战题](#test-base-challenge)。
 
 ### 关于`...` {#about-dot-dot-dot}
 
@@ -1638,6 +1549,68 @@ my_func("foo", cities = c("崇阳", "Αθήνα", "つがる"), nums = c(3,4,6))
 ```
 
 `arg1`指定了是`"foo"`（通过[简写](#abbr)），因此第一行印出`"foo"`;  `arg2`未指定，因此使用默认值`100`，印在第二行。`cities`和`nums`在形式参数中没有匹配，因此归为"..."，作为list印在第三行及之后。
+
+### 赋值函数外的对象 {#functions-assign-global}
+
+使用`assign()`函数，在函数内赋值Global environment里的对象。
+
+```{r}
+x <- 5
+fun1 <- function() {
+  x <- 100
+}
+fun1()
+x
+```
+
+```{r}
+x <- 5
+fun1 <- function() {
+  assign("x", 100, envir = .GlobalEnv)
+}
+fun1()
+x
+```
+
+```{r}
+x <- 5
+fun1 <- function() {
+  x <<- 100
+}
+fun1()
+x
+```
+
+```{r}
+x <- 1
+fun1 <- function() {
+  x <- 10
+  function() {
+    x <<- 100
+  }
+}
+fun1()()
+x
+```
+
+`<<-`可用于赋值“上一层”里的对象：
+
+```{r}
+n <- 1
+fun1 <- function() {
+  n <- 10
+  fun2 <- function() {
+    n <- 50
+    n <<- 100
+  }
+  fun2()
+  return(n)
+}
+fun1()
+n
+```
+
+在这个例子中，`fun2()`赋值了`fun1()`里的`n`, 但`.GlobalEnv`里的`n`不受影响。当在“第一层”的函数里使用`<<-`, `.GlobalEnv`里对应的对象就会受到影响，即和`assign("x", value, envir = .GlobalEnv)`等效。
 
 ### 测速 {#system-time}
 
@@ -1852,7 +1825,29 @@ B
 
 ## 小测 {#test-base}
 
-(@) **转换年份到世纪。**写一个名为`as.century`的函数，把存储着年份的向量，比如`years <- c(2014, 1990, 1398, 1290, 1880, 2001)`，转换成对应的世纪（注意，19XX年是20世纪）。
+### 基础 {#test-base-basics}
+
+(@) **转换年份到世纪。**写一个名为`as.century()`的函数，把存储着年份的向量，比如`years <- c(2014, 1990, 1398, 1290, 1880, 2001)`，转换成对应的世纪（注意，19XX年是20世纪）。
+```{r include=FALSE}
+as.century <- function(x) x%/%100 + 1
+```
+
+```{r}
+as.century(c(2014, 1990, 1398, 1290, 1880, 2001))
+```
+
+(@) **分割时间为时和分。**写名为`hour()`, `minute()`的函数，使得：
+```{r include=FALSE}
+hour <- function(x) x%/%100
+minute <- function(x) x%%100
+```
+
+```{r}
+times <- c(0512, 0719, 2358, 0501)
+hour(times)
+minute(times)
+```
+
 (@) **斐波那契数列。**
   - **背景：**斐波那契数列是指$F = [1, 1, 2, 3, 5, 8, ...]$，其中：
     - $F_1 = 1$，$F_2 = 1$
@@ -1865,4 +1860,120 @@ B
     - 虽然在R中整数用`1L`, `2L`等表示，用户在被指示“输入整数”的时候很有可能输入的是`2`而不是`2L`. `2`是否等于`2L`?如果是，如何利用它检测输入的是否是整数？（`2`和`2L`都要被判定为“是整数”）
     - 斐波那契数列前两位是定义，从第三位开始才是计算得出的。
 (@) `seq(0, 20, 5)`, `seq(by = 5, 0, 20`, 和`seq(by = 5, 0, y = 30, 20)`的结果分别是什么？为什么？（你可能需要参考第\ref(abbr)节和第\ref(about-dot-dot-dot)节）
+
+### 进阶 {#test-base-advanced}
+
+(@) **质数表。**创建一个`prime.list()`函数，使`prime.list(i)`得到$(2, 3, 5, 7, 11, ... n)$, 其中`i`为大于或等于`3`的整数，$n$为小于`i`的最大质数。
+
+```{r include=FALSE}
+prime.list <- function(i){
+  primeNumbers <- 2L
+  for (num in 3:i) {
+    isPrime <- TRUE
+    for (pnum in primeNumbers) {
+      if (pnum > sqrt(num)) {
+        break
+      } else if (num %% pnum == 0) {
+        isPrime <- FALSE
+        break
+      }
+    }
+    if (isPrime) {
+      primeNumbers <- c(primeNumbers, num)
+    }
+  }
+  return(primeNumbers)
+}
+```
+
+```{r}
+prime.list(100)
+```
+
+你能想到几种方法？哪一种更快？为什么？
+
+### 挑战 {#test-base-challenge}
+
+(@) 使用且仅使用`function()`, `c()`, `list()`, `paste()`, `print()`函数，`<-`, `$`, `==`符号，和`if`，实现这样的效果：
+
+```{r include=FALSE}
+Pet <- function(name = NA, common_name = NA, binomial_name = NA, speak = NA){
+  name <- name
+  common_name <- common_name
+  binomial_name <- binomial_name
+  speak <- speak
+  greet <- function(time = "not_specified"){
+    intro <- paste("I'm a", common_name, "and my name is", name)
+    if(time == "morning") print(paste("Good morning,", intro))
+    if(time == "afternoon") print(paste("Good afternoon,", intro))
+    if(time == "evening") print(paste("Good evening,", intro)) 
+    if(time == "not_specified") print(paste("Hi,", intro))
+  }
+  list(name = name, common_name = common_name, binomial_name = binomial_name, speak = speak, greet = greet)
+}
+
+
+Turtle <- function(name = NA){
+  Pet(name, "turtle", "Trachemys scripta elegans") # 实现inheritance # 龟没有叫声
+}
+
+Cat <- function(name = NA, sterilized = NA){
+  sterilized <- sterilized # 猫可能绝育 # 新增attribute，实现了广义的polymorphism
+  PetAaM <- Pet(name, "cat", "Felis catus", "meow")
+  CatOnlyAaM <- list(sterilized = sterilized)
+  c(PetAaM, CatOnlyAaM)
+}
+
+Pigeon <- function(name = NA){
+  PetAaM <- Pet(name, "pigeon", "Columba livia", "coo")
+}
+
+# 实现了Python语境中的polymorphism
+greet <- function(pet, time = "not_specified"){
+  pet$greet(time)
+}
+
+binomial_name <- function(pet){
+  pet$binomial_name
+}
+```
+
+`Pigeon()`, `Turtle()`, `Cat()`分别创建一只鸽子， 一只乌龟和一只猫（即产生一个list，各自的元素展示如下）：
+
+```{r}
+Guoguo <- Pigeon("Guoguo")
+Felix <- Cat("Felix", "TRUE")
+Kazuya <- Turtle("Kazuya")
+
+str(Guoguo)
+str(Kazuya)
+str(Felix)
+```
+
+注意，鸽子，乌龟和猫都有名字 (`name`)，通称 (`common_name`)，学名 (`binomial_name`)，和打招呼函数 (`greet()`)；此外，乌龟没有叫声`speak()`，猫额外地有绝育`sterilized`信息。可以这样查看信息和使用打招呼函数：
+
+```{r}
+Felix$binomial_name
+Kazuya$greet("afternoon")
+```
+
+其中`greet()`的参数如果是`morning`, `afternoon`或`evening`，则返回`"Good <时间段> ..."`，否则返回`"Hi ..."`.
+
+此外，另写两个仅对这些宠物使用的函数`binomial_name()`和`greet()`，使之能够这样使用：
+
+```{r}
+binomial_name(Kazuya)
+greet(Guoguo)
+```
+
+**你可能需要的额外信息：**
+
+鸽子，乌龟和猫的学名分别为Columba livia, Trachemys scripta elegans, Felis catus. 
+
+`paste()`函数把多个字符串拼接成一个，其中参数`sep`指定连接符号，默认为空格：
+
+```{r}
+x <- "world"
+paste("Hello", x, "Bye", x, sep = "---")
+```
 
