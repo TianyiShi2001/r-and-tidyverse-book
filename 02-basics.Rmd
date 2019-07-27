@@ -1083,7 +1083,7 @@ x
 
 ### 严谨版 {#control-flow-rigorous}
 
-如果看懂了[上一节](#kickstart)中的例子，并且作为新手不太想深究，完全可以暂时跳过这一节，前往第\@ref(functions)节。
+如果看懂了[上一节](#kickstart)中的例子，并且作为新手不太想深究，可以暂时跳过这一节，前往第\@ref(functions)节。
 
 *这里很多内容还没完成，请前往第\@ref(functions)节。*
  
@@ -1110,6 +1110,21 @@ if (something is true) {
 R中没有专门的`elseif`语句，但用`else`加上`if`能实现同样的效果。`else if`可以添加在`if`语句之后，顾名思义（“或者如果”），它的作用是，如果前一个`if`测试的条件为`FALSE`，那么再新加一个测试条件。一整个`if/else/else if`代码块里可以包含多个`else if`. 
 
 注意，不能直接用`x == NA`来判断`x`是否是`NA`，而要用`is.na(x)`. 否则会得到`NA`的结果。
+
+#### `ifelse()`函数 {#control-flow-rigorous-ifelse-fun}
+
+`ifelse()`是`if`/`else`语句的向量化版本。假设我有一组长度：
+
+```{r}
+l <- c(1.21, 1.34, -1.45, 1.56, 1.22, 1.10, 1.78, -1.33, 1.71)
+```
+
+我们发现有两个值是负数。长度不可能是负数，因此这些测量结果是错误的，我们需要把它们替换成`NA`. 这时可以用`ifelse()`函数：
+
+```{r}
+l_1 <- ifelse(l < 0, NA, l)
+l_1
+```
 
 #### for循环 {#control-flow-rigorous-for}
 
@@ -1171,7 +1186,7 @@ lapply(list(1, 2, 3), function(i) i*10) # list
 lapply(list(c(1, 2), c(4, 6), c(7, 9)), function(i) i*10)
 ```
 
-#### `sapply()`
+#### `sapply()` {#apply-sapply}
 
 `sapply()` (simplified list apply)的功能和`lapply()`几乎一样。`sapply()`额外的一个特点是尽可能地化简结果：
 
@@ -1550,9 +1565,44 @@ my_func("foo", cities = c("崇阳", "Αθήνα", "つがる"), nums = c(3,4,6))
 
 `arg1`指定了是`"foo"`（通过[简写](#abbr)），因此第一行印出`"foo"`;  `arg2`未指定，因此使用默认值`100`，印在第二行。`cities`和`nums`在形式参数中没有匹配，因此归为"..."，作为list印在第三行及之后。
 
+下面是一个（没有意义的）利用`...`做一个对于向量和列表通用的函数`calc()`，使`calc(data, pow = a, times = b, add = c)`返回与原数据`data`的结构相同，但各元素$x$变为$bx^a+c$的向量/列表（这和OOP有相似之处）：
+
+```{r}
+calc_v <- function(v, pow = 1, times = 1, add = 0) {
+  v ^ pow * times + add
+}
+
+calc_l <- function(L, pow = 1, times = 1, add = 0) {
+  rapply(L, function(l) l ^ pow * times + add, how = "list")
+}
+
+calc <- function(data, ...) {
+  if(is.list(data)) {
+    calc_l(data, ...) # 即 calc_l(L = data, ...)
+  } else if(is.vector(data)) {
+    calc_v(data, ...) # 即 calc_v(v = data, ...)
+  }
+}
+```
+
+```{r}
+calc(c(1, 2, 3), pow = 2, add = 1)
+calc(list(1, 2, list(10, 20)), pow = 2, times = 2)
+```
+
+`pow`, `times`和`add`不是`calc`的参数，它们以`...`的形式被传递给`calc_l()`和`calc_v()`.
+
+在第\ref(apply-sapply)节讲到，`sapply()`的功能本质上和`lapply()`一致，只是会化简结果。我们看一下`sapply()`函数的结构：
+
+```{r}
+sapply
+```
+
+可以看到，`answer <- lapply(X = X, FUN = FUN, ...)`这一行把`sapply()`里`...`中的参数传递到了`lapply()`中，使用`lapply()`得到未化解的结果`answer`, 随后仅需要写用来化简结果的代码，而不需要把与`lapply()`里的代码重写一遍。
+
 ### 赋值函数外的对象 {#functions-assign-global}
 
-使用`assign()`函数，在函数内赋值Global environment里的对象。
+函数内的赋值一般只在函数内有效，比如：
 
 ```{r}
 x <- 5
@@ -1563,6 +1613,8 @@ fun1()
 x
 ```
 
+使用`assign()`函数可以在**函数内**赋值任意environment中的对象，其中最常见的是Global environment里的（即等价于在console中直接赋值）。
+
 ```{r}
 x <- 5
 fun1 <- function() {
@@ -1571,6 +1623,8 @@ fun1 <- function() {
 fun1()
 x
 ```
+
+`<<-`可用于赋值“上一层”里的对象。当在“第一层”的函数里使用`<<-`时， `.GlobalEnv`里对应的对象就会受到影响，即和`assign("x", value, envir = .GlobalEnv)`等效。
 
 ```{r}
 x <- 5
@@ -1581,36 +1635,44 @@ fun1()
 x
 ```
 
-```{r}
-x <- 1
-fun1 <- function() {
-  x <- 10
-  function() {
-    x <<- 100
-  }
-}
-fun1()()
-x
-```
-
-`<<-`可用于赋值“上一层”里的对象：
+在下面的例子中，`fun2()`赋值了`fun1()`里的`n`, 但`.GlobalEnv`里的`n`不受影响。
 
 ```{r}
-n <- 1
+n <- 1 # `GlobalEnv`里的`n` = 1
+
 fun1 <- function() {
-  n <- 10
+  n <- 10 # `fun1()`里的`n` = 10
   fun2 <- function() {
-    n <- 50
-    n <<- 100
+    n <- 50 # 赋值`fun2()`里的`n`
+    n <<- 100 # 重赋值`fun1()`里的`n`为100
   }
-  fun2()
-  return(n)
+  fun2() # 运行`fun2()`
+  return(n) # 返回`fun1()`里的`n`
 }
-fun1()
-n
+
+fun1() # 10是否变为100?
+n # 是否仍然是1？
 ```
 
-在这个例子中，`fun2()`赋值了`fun1()`里的`n`, 但`.GlobalEnv`里的`n`不受影响。当在“第一层”的函数里使用`<<-`, `.GlobalEnv`里对应的对象就会受到影响，即和`assign("x", value, envir = .GlobalEnv)`等效。
+利用这个性质，我们可以使`apply()`族函数进行递归计算，比如求累加和：
+
+```{r}
+cum = 0
+sapply(1:10, FUN = function(x){
+  cum <<- cum + x
+  cum
+})
+```
+
+原则上，这已经不是一个向量化计算了，但是在这个例子中`sapply()`仍然比for循环（见下）速度更快。
+
+```{r eval=FALSE}
+cum = 1
+  for (i in 2:10000) {
+    cum[i] <- cum[i-1] + i
+  }
+cum
+```
 
 ### 测速 {#system-time}
 
