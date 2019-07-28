@@ -13,7 +13,7 @@
   
   
   <meta property="og:description" content="这是一本R与tidyverse的入门教程" />
-  <meta name="github-repo" content="TianyiShi2001/R-Tutorial-Resorces" />
+  <meta name="github-repo" content="TianyiShi2001/r-and-tidyverse-book" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="3.3 数据转换 (Data Transformation) | R与tidyverse——数据分析入门" />
@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-24" />
+<meta name="date" content="2019-07-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -178,7 +178,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i>版权页</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical"><i class="fa fa-check"></i>关于编写本书的技术信息</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R和RStudio介绍和安装教程</a><ul>
+<li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R与RStudio安装与基础操作</a><ul>
 <li class="chapter" data-level="" data-path="intro-and-installation.html"><a href="intro-and-installation.html#intro-overview"><i class="fa fa-check"></i>本章内容速览</a></li>
 <li class="chapter" data-level="1.1" data-path="what-is-R.html"><a href="what-is-R.html"><i class="fa fa-check"></i><b>1.1</b> 什么是R</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="what-is-R.html"><a href="what-is-R.html#R-and-RStudio-install"><i class="fa fa-check"></i><b>1.1.1</b> 安装R和RStudio</a></li>
@@ -201,6 +201,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4.2" data-path="packages.html"><a href="packages.html#package-install"><i class="fa fa-check"></i><b>1.4.2</b> 如何安装packages</a></li>
 <li class="chapter" data-level="1.4.3" data-path="packages.html"><a href="packages.html#package-use"><i class="fa fa-check"></i><b>1.4.3</b> 如何使用packages</a></li>
 <li class="chapter" data-level="1.4.4" data-path="packages.html"><a href="packages.html#package-misc"><i class="fa fa-check"></i><b>1.4.4</b> 其它</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="-test-intro.html"><a href="-test-intro.html"><i class="fa fa-check"></i><b>1.5</b> 小测 {test-intro}</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-basics"><i class="fa fa-check"></i><b>1.5.1</b> 基础 {test-intro-basics}</a></li>
+<li class="chapter" data-level="1.5.2" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-advanced"><i class="fa fa-check"></i><b>1.5.2</b> 进阶 {test-intro-advanced}</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> 向量，逻辑，循环和函数</a><ul>
@@ -232,13 +236,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.5.3" data-path="control-flow.html"><a href="control-flow.html#control-flow-rigorous"><i class="fa fa-check"></i><b>2.5.3</b> 严谨版</a></li>
 <li class="chapter" data-level="2.5.4" data-path="control-flow.html"><a href="control-flow.html#apply"><i class="fa fa-check"></i><b>2.5.4</b> 如何避免for循环——<code>apply()</code>家族函数</a></li>
 <li class="chapter" data-level="2.5.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.5.5</b> <code>foreach</code> package：for循环的进化版</a></li>
+<li class="chapter" data-level="2.5.6" data-path="control-flow.html"><a href="control-flow.html#purrr-packageapply"><i class="fa fa-check"></i><b>2.5.6</b> <code>purrr</code> package中的<code>apply</code>家族函数替代品和进化产物</a></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.6</b> 函数</a><ul>
 <li class="chapter" data-level="2.6.1" data-path="functions.html"><a href="functions.html#functions-in-R"><i class="fa fa-check"></i><b>2.6.1</b> R中的函数</a></li>
 <li class="chapter" data-level="2.6.2" data-path="functions.html"><a href="functions.html#abbr"><i class="fa fa-check"></i><b>2.6.2</b> 调用函数</a></li>
 <li class="chapter" data-level="2.6.3" data-path="functions.html"><a href="functions.html#create-functions"><i class="fa fa-check"></i><b>2.6.3</b> 创建函数</a></li>
 <li class="chapter" data-level="2.6.4" data-path="functions.html"><a href="functions.html#about-dot-dot-dot"><i class="fa fa-check"></i><b>2.6.4</b> 关于<code>...</code></a></li>
-<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.5</b> 测速</a></li>
+<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#functions-assign-global"><i class="fa fa-check"></i><b>2.6.5</b> 赋值函数外的对象</a></li>
+<li class="chapter" data-level="2.6.6" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.6</b> 测速</a></li>
 </ul></li>
 <li class="chapter" data-level="2.7" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>2.7</b> 列表 (list)</a><ul>
 <li class="chapter" data-level="2.7.1" data-path="list.html"><a href="list.html#list-index"><i class="fa fa-check"></i><b>2.7.1</b> list的索引/取子集</a></li>
@@ -248,7 +254,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.8" data-path="matrix-array.html"><a href="matrix-array.html"><i class="fa fa-check"></i><b>2.8</b> array（数组）和matrix（矩阵）简介</a><ul>
 <li class="chapter" data-level="2.8.1" data-path="matrix-array.html"><a href="matrix-array.html#matrix-array-naming"><i class="fa fa-check"></i><b>2.8.1</b> 给matrices和arrays命名</a></li>
 </ul></li>
-<li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a></li>
+<li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a><ul>
+<li class="chapter" data-level="2.9.1" data-path="test-base.html"><a href="test-base.html#test-base-basics"><i class="fa fa-check"></i><b>2.9.1</b> 基础</a></li>
+<li class="chapter" data-level="2.9.2" data-path="test-base.html"><a href="test-base.html#test-base-advanced"><i class="fa fa-check"></i><b>2.9.2</b> 进阶</a></li>
+<li class="chapter" data-level="2.9.3" data-path="test-base.html"><a href="test-base.html#test-base-challenge"><i class="fa fa-check"></i><b>2.9.3</b> 挑战</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="tibble.html"><a href="tibble.html"><i class="fa fa-check"></i><b>3</b> dataframe和tibble</a><ul>
 <li class="chapter" data-level="3.0.1" data-path="tibble.html"><a href="tibble.html#section-3.0.1"><i class="fa fa-check"></i><b>3.0.1</b> 本章内容速览</a></li>
@@ -358,8 +368,8 @@ mpg<span class="op">$</span>displ <span class="co">#一般，在RStudio中此方
 <span class="co">#通过索引抓取：</span>
 mpg[[<span class="dv">3</span>]]</code></pre>
 <p>以上三种方法都应得到同样的结果（是一个vector）：</p>
-<pre><code>##  [1] 1.8 1.8 2.0 2.0 2.8 2.8 3.1 1.8 1.8 2.0 2.0 2.8 2.8 3.1 3.1 2.8 3.1
-## [18] 4.2 5.3 5.3</code></pre>
+<pre><code>#&gt;  [1] 1.8 1.8 2.0 2.0 2.8 2.8 3.1 1.8 1.8 2.0 2.0 2.8 2.8 3.1 3.1 2.8 3.1
+#&gt; [18] 4.2 5.3 5.3</code></pre>
 <p>一般我们抓取单列是为了在tibble中新建一个与那一列相关的变量，或是建一个新tibble，或是做统计学分析。以上三种情况（是绝大多数的情况）用vector进行操作很方便。</p>
 <p>假设你在写一个复杂的函数，且需要保持数据的完整性和一致性，可以使用单方括号<code>[</code>；这样得到的是一个tibble（试试<code>mpg[3]</code>）这个特性在第<a href="tibble-misc.html#tbl-subsetting-more">3.4.1.2</a>节中有解释。</p>
 </div>
@@ -370,21 +380,21 @@ mpg[[<span class="dv">3</span>]]</code></pre>
 <span class="co">#等同于</span>
 mpg_new &lt;-<span class="st"> </span><span class="kw">select</span>(mpg, displ, year, cyl, cty, hwy)
 
-mpg_new
-<span class="co">## # A tibble: 234 x 5</span>
-<span class="co">##    displ  year   cyl   cty   hwy</span>
-<span class="co">##    &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;</span>
-<span class="co">##  1   1.8  1999     4    18    29</span>
-<span class="co">##  2   1.8  1999     4    21    29</span>
-<span class="co">##  3   2    2008     4    20    31</span>
-<span class="co">##  4   2    2008     4    21    30</span>
-<span class="co">##  5   2.8  1999     6    16    26</span>
-<span class="co">##  6   2.8  1999     6    18    26</span>
-<span class="co">##  7   3.1  2008     6    18    27</span>
-<span class="co">##  8   1.8  1999     4    18    26</span>
-<span class="co">##  9   1.8  1999     4    16    25</span>
-<span class="co">## 10   2    2008     4    20    28</span>
-<span class="co">## # … with 224 more rows</span></code></pre>
+mpg_new</code></pre>
+<pre><code>#&gt; # A tibble: 234 x 5
+#&gt;    displ  year   cyl   cty   hwy
+#&gt;    &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;
+#&gt;  1   1.8  1999     4    18    29
+#&gt;  2   1.8  1999     4    21    29
+#&gt;  3   2    2008     4    20    31
+#&gt;  4   2    2008     4    21    30
+#&gt;  5   2.8  1999     6    16    26
+#&gt;  6   2.8  1999     6    18    26
+#&gt;  7   3.1  2008     6    18    27
+#&gt;  8   1.8  1999     4    18    26
+#&gt;  9   1.8  1999     4    16    25
+#&gt; 10   2    2008     4    20    28
+#&gt; # … with 224 more rows</code></pre>
 <p>显然，使用变量名抓取列比使用索引更好。虽然打字较多，但是易读性比使用索引强太多了。在向其他人展示或者分享你的工作时，易读性尤为重要。</p>
 </div>
 <div id="filter" class="section level4">
@@ -393,43 +403,43 @@ mpg_new
 <p>假设我们只想看<code>mpg</code>中的奥迪品牌的，排量大于等于2且小于4的车辆的数据：</p>
 <pre class="sourceCode r"><code class="sourceCode r">mpg_audi_displ2to4 &lt;-<span class="st"> </span><span class="kw">filter</span>(mpg, manufacturer <span class="op">==</span><span class="st"> &quot;audi&quot;</span>, displ <span class="op">&gt;=</span><span class="st"> </span><span class="fl">2.5</span> <span class="op">&amp;</span><span class="st"> </span>displ <span class="op">&lt;</span><span class="st"> </span><span class="dv">4</span>)
 
-mpg_audi_displ2to4
-<span class="co">## # A tibble: 9 x 11</span>
-<span class="co">##   manufacturer model  displ  year   cyl trans drv     cty   hwy fl    class</span>
-<span class="co">##   &lt;chr&gt;        &lt;chr&gt;  &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;</span>
-<span class="co">## 1 audi         a4       2.8  1999     6 auto… f        16    26 p     comp…</span>
-<span class="co">## 2 audi         a4       2.8  1999     6 manu… f        18    26 p     comp…</span>
-<span class="co">## 3 audi         a4       3.1  2008     6 auto… f        18    27 p     comp…</span>
-<span class="co">## 4 audi         a4 qu…   2.8  1999     6 auto… 4        15    25 p     comp…</span>
-<span class="co">## 5 audi         a4 qu…   2.8  1999     6 manu… 4        17    25 p     comp…</span>
-<span class="co">## 6 audi         a4 qu…   3.1  2008     6 auto… 4        17    25 p     comp…</span>
-<span class="co">## 7 audi         a4 qu…   3.1  2008     6 manu… 4        15    25 p     comp…</span>
-<span class="co">## 8 audi         a6 qu…   2.8  1999     6 auto… 4        15    24 p     mids…</span>
-<span class="co">## 9 audi         a6 qu…   3.1  2008     6 auto… 4        17    25 p     mids…</span></code></pre>
+mpg_audi_displ2to4</code></pre>
+<pre><code>#&gt; # A tibble: 9 x 11
+#&gt;   manufacturer model  displ  year   cyl trans drv     cty   hwy fl    class
+#&gt;   &lt;chr&gt;        &lt;chr&gt;  &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
+#&gt; 1 audi         a4       2.8  1999     6 auto… f        16    26 p     comp…
+#&gt; 2 audi         a4       2.8  1999     6 manu… f        18    26 p     comp…
+#&gt; 3 audi         a4       3.1  2008     6 auto… f        18    27 p     comp…
+#&gt; 4 audi         a4 qu…   2.8  1999     6 auto… 4        15    25 p     comp…
+#&gt; 5 audi         a4 qu…   2.8  1999     6 manu… 4        17    25 p     comp…
+#&gt; 6 audi         a4 qu…   3.1  2008     6 auto… 4        17    25 p     comp…
+#&gt; 7 audi         a4 qu…   3.1  2008     6 manu… 4        15    25 p     comp…
+#&gt; 8 audi         a6 qu…   2.8  1999     6 auto… 4        15    24 p     mids…
+#&gt; 9 audi         a6 qu…   3.1  2008     6 auto… 4        17    25 p     mids…</code></pre>
 </div>
 <div id="slice" class="section level4">
 <h4><span class="header-section-number">3.3.1.4</span> 用<code>slice()</code>，通过行数（索引）抓取行。</h4>
 <pre class="sourceCode r"><code class="sourceCode r">mpg_1to6 &lt;-<span class="st"> </span><span class="kw">slice</span>(mpg, <span class="dv">21</span><span class="op">:</span><span class="dv">26</span>) <span class="co"># 抓取mpg的第21行至26行</span>
-mpg_1to6
-<span class="co">## # A tibble: 6 x 11</span>
-<span class="co">##   manufacturer model  displ  year   cyl trans drv     cty   hwy fl    class</span>
-<span class="co">##   &lt;chr&gt;        &lt;chr&gt;  &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;</span>
-<span class="co">## 1 chevrolet    c1500…   5.3  2008     8 auto… r        14    20 r     suv  </span>
-<span class="co">## 2 chevrolet    c1500…   5.7  1999     8 auto… r        13    17 r     suv  </span>
-<span class="co">## 3 chevrolet    c1500…   6    2008     8 auto… r        12    17 r     suv  </span>
-<span class="co">## 4 chevrolet    corve…   5.7  1999     8 manu… r        16    26 p     2sea…</span>
-<span class="co">## 5 chevrolet    corve…   5.7  1999     8 auto… r        15    23 p     2sea…</span>
-<span class="co">## 6 chevrolet    corve…   6.2  2008     8 manu… r        16    26 p     2sea…</span></code></pre>
+mpg_1to6</code></pre>
+<pre><code>#&gt; # A tibble: 6 x 11
+#&gt;   manufacturer model  displ  year   cyl trans drv     cty   hwy fl    class
+#&gt;   &lt;chr&gt;        &lt;chr&gt;  &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
+#&gt; 1 chevrolet    c1500…   5.3  2008     8 auto… r        14    20 r     suv  
+#&gt; 2 chevrolet    c1500…   5.7  1999     8 auto… r        13    17 r     suv  
+#&gt; 3 chevrolet    c1500…   6    2008     8 auto… r        12    17 r     suv  
+#&gt; 4 chevrolet    corve…   5.7  1999     8 manu… r        16    26 p     2sea…
+#&gt; 5 chevrolet    corve…   5.7  1999     8 auto… r        15    23 p     2sea…
+#&gt; 6 chevrolet    corve…   6.2  2008     8 manu… r        16    26 p     2sea…</code></pre>
 <p><code>slice()</code>更实际的用途是随机选择个体：</p>
 <pre class="sourceCode r"><code class="sourceCode r">mpg_random4 &lt;-<span class="st"> </span><span class="kw">slice</span>(mpg, <span class="kw">sample</span>(<span class="kw">length</span>(mpg[[<span class="dv">1</span>]]), <span class="dv">4</span>)) <span class="co"># 随机四辆车</span>
-mpg_random4
-<span class="co">## # A tibble: 4 x 11</span>
-<span class="co">##   manufacturer model  displ  year   cyl trans drv     cty   hwy fl    class</span>
-<span class="co">##   &lt;chr&gt;        &lt;chr&gt;  &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;</span>
-<span class="co">## 1 subaru       impre…   2.2  1999     4 auto… 4        21    26 r     subc…</span>
-<span class="co">## 2 subaru       impre…   2.5  2008     4 auto… 4        20    27 r     comp…</span>
-<span class="co">## 3 ford         explo…   5    1999     8 auto… 4        13    17 r     suv  </span>
-<span class="co">## 4 mercury      mount…   4.6  2008     8 auto… 4        13    19 r     suv</span></code></pre>
+mpg_random4</code></pre>
+<pre><code>#&gt; # A tibble: 4 x 11
+#&gt;   manufacturer model  displ  year   cyl trans drv     cty   hwy fl    class
+#&gt;   &lt;chr&gt;        &lt;chr&gt;  &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
+#&gt; 1 toyota       camry    2.4  2008     4 auto… f        21    31 r     mids…
+#&gt; 2 chevrolet    c1500…   5.3  2008     8 auto… r        14    20 r     suv  
+#&gt; 3 toyota       camry    2.2  1999     4 manu… f        21    29 r     mids…
+#&gt; 4 chevrolet    corve…   6.2  2008     8 auto… r        15    25 p     2sea…</code></pre>
 </div>
 </div>
 <div id="mutate" class="section level3">
@@ -437,25 +447,25 @@ mpg_random4
 <p><code>mutate()</code>函数用于新增一列数据（即新增一个变量）。</p>
 <p>这里用R自带的一组数据举例，因为它是以dataframe格式存储的，首先我们需要把它转换成tibble.</p>
 <pre class="sourceCode r"><code class="sourceCode r">women &lt;-<span class="st"> </span><span class="kw">as_tibble</span>(datasets<span class="op">::</span>women)
-women
-<span class="co">## # A tibble: 15 x 2</span>
-<span class="co">##    height weight</span>
-<span class="co">##     &lt;dbl&gt;  &lt;dbl&gt;</span>
-<span class="co">##  1     58    115</span>
-<span class="co">##  2     59    117</span>
-<span class="co">##  3     60    120</span>
-<span class="co">##  4     61    123</span>
-<span class="co">##  5     62    126</span>
-<span class="co">##  6     63    129</span>
-<span class="co">##  7     64    132</span>
-<span class="co">##  8     65    135</span>
-<span class="co">##  9     66    139</span>
-<span class="co">## 10     67    142</span>
-<span class="co">## 11     68    146</span>
-<span class="co">## 12     69    150</span>
-<span class="co">## 13     70    154</span>
-<span class="co">## 14     71    159</span>
-<span class="co">## 15     72    164</span></code></pre>
+women</code></pre>
+<pre><code>#&gt; # A tibble: 15 x 2
+#&gt;    height weight
+#&gt;     &lt;dbl&gt;  &lt;dbl&gt;
+#&gt;  1     58    115
+#&gt;  2     59    117
+#&gt;  3     60    120
+#&gt;  4     61    123
+#&gt;  5     62    126
+#&gt;  6     63    129
+#&gt;  7     64    132
+#&gt;  8     65    135
+#&gt;  9     66    139
+#&gt; 10     67    142
+#&gt; 11     68    146
+#&gt; 12     69    150
+#&gt; 13     70    154
+#&gt; 14     71    159
+#&gt; 15     72    164</code></pre>
 <p>它展示了两个变量，身高和体重。根据这两个变量我们可以算出BMI. 但是，首先，我们的单位正确吗？通过观察，身高的值在64左右，体重的值在140左右，显然不像是标准单位（千克和米）。这时，第一个寻求帮助的地方应该是帮助文档，通过<code>?women</code>打开。帮助文档中写道：</p>
 <blockquote>
 <p><code>[,1] height</code> numeric Height (in)<br />
@@ -465,131 +475,131 @@ women
 <pre class="sourceCode r"><code class="sourceCode r">women1 &lt;-<span class="st"> </span><span class="kw">mutate</span>(women, 
                 <span class="dt">height_in_m =</span> height<span class="op">/</span><span class="fl">39.37</span>,
                 <span class="dt">weight_in_kg =</span> weight<span class="op">/</span><span class="fl">2.204</span>)
-women1
-<span class="co">## # A tibble: 15 x 4</span>
-<span class="co">##    height weight height_in_m weight_in_kg</span>
-<span class="co">##     &lt;dbl&gt;  &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;</span>
-<span class="co">##  1     58    115        1.47         52.2</span>
-<span class="co">##  2     59    117        1.50         53.1</span>
-<span class="co">##  3     60    120        1.52         54.4</span>
-<span class="co">##  4     61    123        1.55         55.8</span>
-<span class="co">##  5     62    126        1.57         57.2</span>
-<span class="co">##  6     63    129        1.60         58.5</span>
-<span class="co">##  7     64    132        1.63         59.9</span>
-<span class="co">##  8     65    135        1.65         61.3</span>
-<span class="co">##  9     66    139        1.68         63.1</span>
-<span class="co">## 10     67    142        1.70         64.4</span>
-<span class="co">## 11     68    146        1.73         66.2</span>
-<span class="co">## 12     69    150        1.75         68.1</span>
-<span class="co">## 13     70    154        1.78         69.9</span>
-<span class="co">## 14     71    159        1.80         72.1</span>
-<span class="co">## 15     72    164        1.83         74.4</span></code></pre>
+women1</code></pre>
+<pre><code>#&gt; # A tibble: 15 x 4
+#&gt;    height weight height_in_m weight_in_kg
+#&gt;     &lt;dbl&gt;  &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;
+#&gt;  1     58    115        1.47         52.2
+#&gt;  2     59    117        1.50         53.1
+#&gt;  3     60    120        1.52         54.4
+#&gt;  4     61    123        1.55         55.8
+#&gt;  5     62    126        1.57         57.2
+#&gt;  6     63    129        1.60         58.5
+#&gt;  7     64    132        1.63         59.9
+#&gt;  8     65    135        1.65         61.3
+#&gt;  9     66    139        1.68         63.1
+#&gt; 10     67    142        1.70         64.4
+#&gt; 11     68    146        1.73         66.2
+#&gt; 12     69    150        1.75         68.1
+#&gt; 13     70    154        1.78         69.9
+#&gt; 14     71    159        1.80         72.1
+#&gt; 15     72    164        1.83         74.4</code></pre>
 <p><code>mutate()</code>的第一个参数是dataframe/tibble的名称，接下来的参数都是变量名和它们所对应的值；可以直接在计算它们的值的表达式中使用tibble中原有的变量名，如<code>height</code>, <code>weight</code>。</p>
 <p>当然你可以引用tibble外部的vector或者其它tibble的数据：</p>
 <pre class="sourceCode r"><code class="sourceCode r">h &lt;-<span class="st"> </span>women1<span class="op">$</span>height_in_m
 women2 &lt;-<span class="st"> </span><span class="kw">mutate</span>(women, 
                  <span class="dt">height_in_m =</span> h, <span class="co"># 引用外部vector</span>
                  <span class="dt">weight_in_kg =</span> women1<span class="op">$</span>weight_in_kg) <span class="co"># 引用`women1`里的数据</span>
-<span class="kw">identical</span>(women2 ,women1) <span class="co"># 和`women1`是相同的</span>
-<span class="co">## [1] TRUE</span></code></pre>
+<span class="kw">identical</span>(women2 ,women1) <span class="co"># 和`women1`是相同的</span></code></pre>
+<pre><code>#&gt; [1] TRUE</code></pre>
 <p><code>mutate()</code>也可以用来重新赋值原有变量。假设我们根本不再需要以英寸和磅作为单位的数据，我们可以：</p>
 <pre class="sourceCode r"><code class="sourceCode r">women3 &lt;-<span class="st"> </span><span class="kw">mutate</span>(women, <span class="dt">height =</span> height<span class="op">/</span><span class="fl">39.37</span>, <span class="dt">weight =</span> weight<span class="op">/</span><span class="fl">2.204</span>)
-<span class="kw">head</span>(women3, <span class="dv">3</span>)
-<span class="co">## # A tibble: 3 x 2</span>
-<span class="co">##   height weight</span>
-<span class="co">##    &lt;dbl&gt;  &lt;dbl&gt;</span>
-<span class="co">## 1   1.47   52.2</span>
-<span class="co">## 2   1.50   53.1</span>
-<span class="co">## 3   1.52   54.4</span></code></pre>
+<span class="kw">head</span>(women3, <span class="dv">3</span>)</code></pre>
+<pre><code>#&gt; # A tibble: 3 x 2
+#&gt;   height weight
+#&gt;    &lt;dbl&gt;  &lt;dbl&gt;
+#&gt; 1   1.47   52.2
+#&gt; 2   1.50   53.1
+#&gt; 3   1.52   54.4</code></pre>
 <p>接下来我们可以愉快地算BMI了：</p>
 <pre class="sourceCode r"><code class="sourceCode r">women_bmi_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">mutate</span>(women3, <span class="dt">BMI =</span> weight<span class="op">/</span>height<span class="op">^</span><span class="dv">2</span>)
-<span class="kw">head</span>(women_bmi_<span class="dv">1</span>, <span class="dv">4</span>)
-<span class="co">## # A tibble: 4 x 3</span>
-<span class="co">##   height weight   BMI</span>
-<span class="co">##    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;</span>
-<span class="co">## 1   1.47   52.2  24.0</span>
-<span class="co">## 2   1.50   53.1  23.6</span>
-<span class="co">## 3   1.52   54.4  23.4</span>
-<span class="co">## 4   1.55   55.8  23.2</span></code></pre>
+<span class="kw">head</span>(women_bmi_<span class="dv">1</span>, <span class="dv">4</span>)</code></pre>
+<pre><code>#&gt; # A tibble: 4 x 3
+#&gt;   height weight   BMI
+#&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+#&gt; 1   1.47   52.2  24.0
+#&gt; 2   1.50   53.1  23.6
+#&gt; 3   1.52   54.4  23.4
+#&gt; 4   1.55   55.8  23.2</code></pre>
 <p>如果你在创建新变量后，不想保留原有变量，可以用<code>transmute()</code>函数：</p>
 <pre class="sourceCode r"><code class="sourceCode r">women_bmi_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">transmute</span>(women3, <span class="dt">BMI =</span> weight<span class="op">/</span>height<span class="op">^</span><span class="dv">2</span>)
-<span class="kw">head</span>(women_bmi_<span class="dv">2</span>, <span class="dv">4</span>)
-<span class="co">## # A tibble: 4 x 1</span>
-<span class="co">##     BMI</span>
-<span class="co">##   &lt;dbl&gt;</span>
-<span class="co">## 1  24.0</span>
-<span class="co">## 2  23.6</span>
-<span class="co">## 3  23.4</span>
-<span class="co">## 4  23.2</span></code></pre>
+<span class="kw">head</span>(women_bmi_<span class="dv">2</span>, <span class="dv">4</span>)</code></pre>
+<pre><code>#&gt; # A tibble: 4 x 1
+#&gt;     BMI
+#&gt;   &lt;dbl&gt;
+#&gt; 1  24.0
+#&gt; 2  23.6
+#&gt; 3  23.4
+#&gt; 4  23.2</code></pre>
 <p>这意味着<code>transmute()</code>函数也可以用于重命名变量：</p>
 <pre class="sourceCode r"><code class="sourceCode r">women_bmi_<span class="dv">3</span> &lt;-<span class="st"> </span><span class="kw">transmute</span>(women_bmi_<span class="dv">2</span>, <span class="dt">body_mass_index =</span> BMI)
-<span class="kw">head</span>(women_bmi_<span class="dv">3</span>, <span class="dv">3</span>)
-<span class="co">## # A tibble: 3 x 1</span>
-<span class="co">##   body_mass_index</span>
-<span class="co">##             &lt;dbl&gt;</span>
-<span class="co">## 1            24.0</span>
-<span class="co">## 2            23.6</span>
-<span class="co">## 3            23.4</span></code></pre>
+<span class="kw">head</span>(women_bmi_<span class="dv">3</span>, <span class="dv">3</span>)</code></pre>
+<pre><code>#&gt; # A tibble: 3 x 1
+#&gt;   body_mass_index
+#&gt;             &lt;dbl&gt;
+#&gt; 1            24.0
+#&gt; 2            23.6
+#&gt; 3            23.4</code></pre>
 </div>
 <div id="-pipe-operator" class="section level3">
 <h3><span class="header-section-number">3.3.3</span> <code>%&gt;%</code>符号 (Pipe Operator)</h3>
 <p>通过上面学习的方法，我们来初步处理一个叫做<code>Aids2</code>的数据；首先，把它做成tibble并重命名为更简洁的<code>aids</code></p>
 <pre class="sourceCode r"><code class="sourceCode r">aids &lt;-<span class="st"> </span><span class="kw">as_tibble</span>(MASS<span class="op">::</span>Aids2)
-aids
-<span class="co">## # A tibble: 2,843 x 7</span>
-<span class="co">##    state sex    diag death status T.categ   age</span>
-<span class="co">##    &lt;fct&gt; &lt;fct&gt; &lt;int&gt; &lt;int&gt; &lt;fct&gt;  &lt;fct&gt;   &lt;int&gt;</span>
-<span class="co">##  1 NSW   M     10905 11081 D      hs         35</span>
-<span class="co">##  2 NSW   M     11029 11096 D      hs         53</span>
-<span class="co">##  3 NSW   M      9551  9983 D      hs         42</span>
-<span class="co">##  4 NSW   M      9577  9654 D      haem       44</span>
-<span class="co">##  5 NSW   M     10015 10290 D      hs         39</span>
-<span class="co">##  6 NSW   M      9971 10344 D      hs         36</span>
-<span class="co">##  7 NSW   M     10746 11135 D      other      36</span>
-<span class="co">##  8 NSW   M     10042 11069 D      hs         31</span>
-<span class="co">##  9 NSW   M     10464 10956 D      hs         26</span>
-<span class="co">## 10 NSW   M     10439 10873 D      hsid       27</span>
-<span class="co">## # … with 2,833 more rows</span></code></pre>
+aids</code></pre>
+<pre><code>#&gt; # A tibble: 2,843 x 7
+#&gt;    state sex    diag death status T.categ   age
+#&gt;    &lt;fct&gt; &lt;fct&gt; &lt;int&gt; &lt;int&gt; &lt;fct&gt;  &lt;fct&gt;   &lt;int&gt;
+#&gt;  1 NSW   M     10905 11081 D      hs         35
+#&gt;  2 NSW   M     11029 11096 D      hs         53
+#&gt;  3 NSW   M      9551  9983 D      hs         42
+#&gt;  4 NSW   M      9577  9654 D      haem       44
+#&gt;  5 NSW   M     10015 10290 D      hs         39
+#&gt;  6 NSW   M      9971 10344 D      hs         36
+#&gt;  7 NSW   M     10746 11135 D      other      36
+#&gt;  8 NSW   M     10042 11069 D      hs         31
+#&gt;  9 NSW   M     10464 10956 D      hs         26
+#&gt; 10 NSW   M     10439 10873 D      hsid       27
+#&gt; # … with 2,833 more rows</code></pre>
 <p>你要如何知道，各个变量代表什么意思？假设我们只想知道这些艾滋病人从被确诊到死亡的时间，而对其他的变量都不感兴趣，我们要去如何裁剪和转换这个tibble？</p>
 <p>问题看起来很简单，你也许不假思索地就这么做了：</p>
 <pre class="sourceCode r"><code class="sourceCode r">aids1 &lt;-<span class="st"> </span><span class="kw">select</span>(aids, diag, death)
 aids2 &lt;-<span class="st"> </span><span class="kw">mutate</span>(aids1, <span class="dt">span =</span> death<span class="op">-</span>diag)
-aids2
-<span class="co">## # A tibble: 2,843 x 3</span>
-<span class="co">##     diag death  span</span>
-<span class="co">##    &lt;int&gt; &lt;int&gt; &lt;int&gt;</span>
-<span class="co">##  1 10905 11081   176</span>
-<span class="co">##  2 11029 11096    67</span>
-<span class="co">##  3  9551  9983   432</span>
-<span class="co">##  4  9577  9654    77</span>
-<span class="co">##  5 10015 10290   275</span>
-<span class="co">##  6  9971 10344   373</span>
-<span class="co">##  7 10746 11135   389</span>
-<span class="co">##  8 10042 11069  1027</span>
-<span class="co">##  9 10464 10956   492</span>
-<span class="co">## 10 10439 10873   434</span>
-<span class="co">## # … with 2,833 more rows</span></code></pre>
+aids2</code></pre>
+<pre><code>#&gt; # A tibble: 2,843 x 3
+#&gt;     diag death  span
+#&gt;    &lt;int&gt; &lt;int&gt; &lt;int&gt;
+#&gt;  1 10905 11081   176
+#&gt;  2 11029 11096    67
+#&gt;  3  9551  9983   432
+#&gt;  4  9577  9654    77
+#&gt;  5 10015 10290   275
+#&gt;  6  9971 10344   373
+#&gt;  7 10746 11135   389
+#&gt;  8 10042 11069  1027
+#&gt;  9 10464 10956   492
+#&gt; 10 10439 10873   434
+#&gt; # … with 2,833 more rows</code></pre>
 <p>错！</p>
 <p>切记，不要自作主张地推测变量的含义！一定要看作者的说明（帮助文档）！对于这个数据，在R中使用<code>?Aids2</code>便可以查看帮助文档，但如果数据来源于其他地方，帮助文档放置的位置多种多样（虽然一般都作为<code>README</code>文件与数据共同打包下载），这时需要随机应变。</p>
 <p>即使你猜对了<code>diag</code>和<code>death</code>是两个日期，你万万不会想到<code>death</code>并不一定是死亡日期。实际上，它是“死亡日期”或“观察结束日期”，而<code>status</code>变量指示的是观察结束时患者的生/死(<code>&quot;A&quot;</code>/<code>&quot;D&quot;</code>). 所以我们实际上应该这么做：</p>
 <pre class="sourceCode r"><code class="sourceCode r">aids1 &lt;-<span class="st"> </span><span class="kw">filter</span>(aids, status <span class="op">==</span><span class="st"> &quot;D&quot;</span>) <span class="co"># 只关注在观察期间死亡的病人</span>
 aids2 &lt;-<span class="st"> </span><span class="kw">select</span>(aids1, diag, death) <span class="co"># 只关注确诊时间和死亡时间</span>
 aids_span1 &lt;-<span class="st"> </span><span class="kw">mutate</span>(aids2, <span class="dt">span =</span> death<span class="op">-</span>diag) <span class="co"># 计算时间间隔</span>
-aids_span1
-<span class="co">## # A tibble: 1,761 x 3</span>
-<span class="co">##     diag death  span</span>
-<span class="co">##    &lt;int&gt; &lt;int&gt; &lt;int&gt;</span>
-<span class="co">##  1 10905 11081   176</span>
-<span class="co">##  2 11029 11096    67</span>
-<span class="co">##  3  9551  9983   432</span>
-<span class="co">##  4  9577  9654    77</span>
-<span class="co">##  5 10015 10290   275</span>
-<span class="co">##  6  9971 10344   373</span>
-<span class="co">##  7 10746 11135   389</span>
-<span class="co">##  8 10042 11069  1027</span>
-<span class="co">##  9 10464 10956   492</span>
-<span class="co">## 10 10439 10873   434</span>
-<span class="co">## # … with 1,751 more rows</span></code></pre>
+aids_span1</code></pre>
+<pre><code>#&gt; # A tibble: 1,761 x 3
+#&gt;     diag death  span
+#&gt;    &lt;int&gt; &lt;int&gt; &lt;int&gt;
+#&gt;  1 10905 11081   176
+#&gt;  2 11029 11096    67
+#&gt;  3  9551  9983   432
+#&gt;  4  9577  9654    77
+#&gt;  5 10015 10290   275
+#&gt;  6  9971 10344   373
+#&gt;  7 10746 11135   389
+#&gt;  8 10042 11069  1027
+#&gt;  9 10464 10956   492
+#&gt; 10 10439 10873   434
+#&gt; # … with 1,751 more rows</code></pre>
 <p>这次我们得到了正确的数据，但是源代码非常繁琐：每进行一步操作，我们都要创建一个新的变量，然后再下一步中引用上一步创建的新变量。事实上，我们可以利用函数的嵌套把它化简：</p>
 <pre class="sourceCode r"><code class="sourceCode r">aids_span2 &lt;-<span class="st"> </span><span class="kw">mutate</span>(
   <span class="kw">select</span>(
@@ -599,8 +609,8 @@ aids_span1
   <span class="dt">span =</span> death<span class="op">-</span>diag
 )
 <span class="co"># 验证两种方法的结果一致</span>
-<span class="kw">identical</span>(aids_span1, aids_span2)
-<span class="co">## [1] TRUE</span></code></pre>
+<span class="kw">identical</span>(aids_span1, aids_span2)</code></pre>
+<pre><code>#&gt; [1] TRUE</code></pre>
 <p>虽然字数减少了，但是这种表达产生了新的问题：它既难读又难写。难读是很明显的，你要从最内部读到最外部（而不是从头读到尾），而且需要好的眼力才能把函数和参数对上号。至于难写，是因为逻辑和书写不一致：逻辑是先<code>filter()</code>再<code>select()</code>最后<code>mutate()</code>，而写的时候，需要不断往周围加括号，很难一气呵成。</p>
 <p>使用<code>%&gt;%</code>可以极大地增强多步骤指令的易读性和易写性。上面的代码可以改写成这样（换行不是必须的）：</p>
 <pre class="sourceCode r"><code class="sourceCode r">aids_span3 &lt;-<span class="st"> </span>aids <span class="op">%&gt;%</span><span class="st"> </span>
@@ -608,8 +618,8 @@ aids_span1
 <span class="st">  </span><span class="kw">select</span>(diag, death) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">mutate</span>(<span class="dt">span =</span> death<span class="op">-</span>diag)
 <span class="co"># 验证和方法二的结果一致（即和方法一一致）</span>
-<span class="kw">identical</span>(aids_span2, aids_span3)
-<span class="co">## [1] TRUE</span></code></pre>
+<span class="kw">identical</span>(aids_span2, aids_span3)</code></pre>
+<pre><code>#&gt; [1] TRUE</code></pre>
 <p>清清楚楚，一目了然。第一行是操作的对象 (<code>aids</code>)，下面每一行是一次操作，与逻辑顺序一致，而且不需要每进行一次操作就赋值/重新引用新的数据，每个函数的第一个参数（dataframe/tibble名称）被省略了。事实上，<code>%&gt;%</code>符号做的事情，本质上就是把它左边的运算结果作为右边函数的第一个参数，然后再根据使用者提供的其它参数计算右边的函数。</p>
 <p><code>%&gt;%</code>的名称是“pipe operator”，和赋值符号“&lt;-”一样有快捷键，默认是<code>Ctrl</code>(<code>command</code>)+<code>shift</code>+<code>M</code>，不过可以在Tools &gt; Modify Keyboard Shortcut中自定义（在它的面板中搜索<code>pipe operator</code> ），我喜欢设置成<code>Alt</code>(<code>option</code>)+<code>.</code>。</p>
 </div>
@@ -617,38 +627,38 @@ aids_span1
 <h3><span class="header-section-number">3.3.4</span> <code>group_by</code>与<code>summarise</code></h3>
 <p>这是两个经常被放在一起使用的，实用且强大的函数。这次我们用到的数据是<code>datasets::warpbreaks</code>.</p>
 <pre class="sourceCode r"><code class="sourceCode r">wb &lt;-<span class="st"> </span><span class="kw">as_tibble</span>(datasets<span class="op">::</span>warpbreaks)
-wb
-<span class="co">## # A tibble: 54 x 3</span>
-<span class="co">##    breaks wool  tension</span>
-<span class="co">##     &lt;dbl&gt; &lt;fct&gt; &lt;fct&gt;  </span>
-<span class="co">##  1     26 A     L      </span>
-<span class="co">##  2     30 A     L      </span>
-<span class="co">##  3     54 A     L      </span>
-<span class="co">##  4     25 A     L      </span>
-<span class="co">##  5     70 A     L      </span>
-<span class="co">##  6     52 A     L      </span>
-<span class="co">##  7     51 A     L      </span>
-<span class="co">##  8     26 A     L      </span>
-<span class="co">##  9     67 A     L      </span>
-<span class="co">## 10     18 A     M      </span>
-<span class="co">## # … with 44 more rows</span></code></pre>
+wb</code></pre>
+<pre><code>#&gt; # A tibble: 54 x 3
+#&gt;    breaks wool  tension
+#&gt;     &lt;dbl&gt; &lt;fct&gt; &lt;fct&gt;  
+#&gt;  1     26 A     L      
+#&gt;  2     30 A     L      
+#&gt;  3     54 A     L      
+#&gt;  4     25 A     L      
+#&gt;  5     70 A     L      
+#&gt;  6     52 A     L      
+#&gt;  7     51 A     L      
+#&gt;  8     26 A     L      
+#&gt;  9     67 A     L      
+#&gt; 10     18 A     M      
+#&gt; # … with 44 more rows</code></pre>
 <p>通过查看帮助文档，得知这组数据是在描述羊毛类型（<code>A</code>或<code>B</code>）和张力（<code>L</code>, <code>M</code>, <code>H</code>, 即低，中，高）对每个织机的经纱断裂数量 (<code>breaks</code>)的影响。首先通过<code>group_by</code>函数，我们把数据首先根据<code>wool</code>再根据<code>tension</code>分组。</p>
 <pre class="sourceCode r"><code class="sourceCode r"> wb_grouped &lt;-<span class="st"> </span><span class="kw">group_by</span>(wb, wool, tension)</code></pre>
 <p>这时，如果你查看<code>wb_grouped</code>，你很难发现它与原来的<code>wb</code>的区别（除了第二行的<code># Groups: wool, tension [6]</code>）；但是通过<code>summarise()</code>函数，你可以根据分组计算相应的数据：</p>
 <pre class="sourceCode r"><code class="sourceCode r">wb_summary &lt;-<span class="st"> </span><span class="kw">summarise</span>(wb_grouped, 
           <span class="dt">n =</span> <span class="kw">n</span>(), 
           <span class="dt">MEAN =</span> <span class="kw">mean</span>(breaks))
-wb_summary
-<span class="co">## # A tibble: 6 x 4</span>
-<span class="co">## # Groups:   wool [2]</span>
-<span class="co">##   wool  tension     n  MEAN</span>
-<span class="co">##   &lt;fct&gt; &lt;fct&gt;   &lt;int&gt; &lt;dbl&gt;</span>
-<span class="co">## 1 A     L           9  44.6</span>
-<span class="co">## 2 A     M           9  24  </span>
-<span class="co">## 3 A     H           9  24.6</span>
-<span class="co">## 4 B     L           9  28.2</span>
-<span class="co">## 5 B     M           9  28.8</span>
-<span class="co">## 6 B     H           9  18.8</span></code></pre>
+wb_summary</code></pre>
+<pre><code>#&gt; # A tibble: 6 x 4
+#&gt; # Groups:   wool [2]
+#&gt;   wool  tension     n  MEAN
+#&gt;   &lt;fct&gt; &lt;fct&gt;   &lt;int&gt; &lt;dbl&gt;
+#&gt; 1 A     L           9  44.6
+#&gt; 2 A     M           9  24  
+#&gt; 3 A     H           9  24.6
+#&gt; 4 B     L           9  28.2
+#&gt; 5 B     M           9  28.8
+#&gt; 6 B     H           9  18.8</code></pre>
 <p>这里，你要想象原来的54行（54个observations）被分成6组，每组代表不同的<code>wool</code>和<code>tension</code>的组合。然后，对于每组，我们先用<code>n()</code>函数计算出每组的行数（多少个observations），并把它赋值给<code>n</code>；再通过<code>mean(breaks)</code>计算每组数据的<code>breaks</code>变量的平均值，并把它赋值给<code>MEAN</code>；最后，对于每组，我们都有了行数和平均值，于是返回一个新的tibble反映这些数据。</p>
 <p>类似地，我们可以更进一步，把<span class="math inline">\(95%\)</span>置信区间算出来：</p>
 <pre class="sourceCode r"><code class="sourceCode r">wb_summary &lt;-<span class="st"> </span><span class="kw">summarise</span>(wb_grouped, 
@@ -664,23 +674,23 @@ wb_summary
 <span class="st">  </span><span class="kw">geom_col</span>(<span class="kw">aes</span>(<span class="dt">y =</span> MEAN), <span class="dt">position =</span> <span class="kw">position_dodge</span>())<span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_errorbar</span>(<span class="kw">aes</span>(<span class="dt">ymax =</span> upper, <span class="dt">ymin =</span> lower), <span class="dt">position =</span> <span class="kw">position_dodge</span>((<span class="dt">width=</span><span class="dv">1</span>)), <span class="dt">width =</span> <span class="fl">0.2</span>, <span class="dt">size =</span> <span class="fl">0.4</span>)<span class="op">+</span>
 <span class="st">  </span><span class="kw">theme_light</span>()</code></pre>
-<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-214-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-241-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>再用我们的老朋友<code>mpg</code>举一个例子：</p>
-<pre class="sourceCode r"><code class="sourceCode r">mpg
-<span class="co">## # A tibble: 234 x 11</span>
-<span class="co">##    manufacturer model displ  year   cyl trans drv     cty   hwy fl    class</span>
-<span class="co">##    &lt;chr&gt;        &lt;chr&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;</span>
-<span class="co">##  1 audi         a4      1.8  1999     4 auto… f        18    29 p     comp…</span>
-<span class="co">##  2 audi         a4      1.8  1999     4 manu… f        21    29 p     comp…</span>
-<span class="co">##  3 audi         a4      2    2008     4 manu… f        20    31 p     comp…</span>
-<span class="co">##  4 audi         a4      2    2008     4 auto… f        21    30 p     comp…</span>
-<span class="co">##  5 audi         a4      2.8  1999     6 auto… f        16    26 p     comp…</span>
-<span class="co">##  6 audi         a4      2.8  1999     6 manu… f        18    26 p     comp…</span>
-<span class="co">##  7 audi         a4      3.1  2008     6 auto… f        18    27 p     comp…</span>
-<span class="co">##  8 audi         a4 q…   1.8  1999     4 manu… 4        18    26 p     comp…</span>
-<span class="co">##  9 audi         a4 q…   1.8  1999     4 auto… 4        16    25 p     comp…</span>
-<span class="co">## 10 audi         a4 q…   2    2008     4 manu… 4        20    28 p     comp…</span>
-<span class="co">## # … with 224 more rows</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">mpg</code></pre>
+<pre><code>#&gt; # A tibble: 234 x 11
+#&gt;    manufacturer model displ  year   cyl trans drv     cty   hwy fl    class
+#&gt;    &lt;chr&gt;        &lt;chr&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
+#&gt;  1 audi         a4      1.8  1999     4 auto… f        18    29 p     comp…
+#&gt;  2 audi         a4      1.8  1999     4 manu… f        21    29 p     comp…
+#&gt;  3 audi         a4      2    2008     4 manu… f        20    31 p     comp…
+#&gt;  4 audi         a4      2    2008     4 auto… f        21    30 p     comp…
+#&gt;  5 audi         a4      2.8  1999     6 auto… f        16    26 p     comp…
+#&gt;  6 audi         a4      2.8  1999     6 manu… f        18    26 p     comp…
+#&gt;  7 audi         a4      3.1  2008     6 auto… f        18    27 p     comp…
+#&gt;  8 audi         a4 q…   1.8  1999     4 manu… 4        18    26 p     comp…
+#&gt;  9 audi         a4 q…   1.8  1999     4 auto… 4        16    25 p     comp…
+#&gt; 10 audi         a4 q…   2    2008     4 manu… 4        20    28 p     comp…
+#&gt; # … with 224 more rows</code></pre>
 <p>你要如何根据<code>manufacturer</code>分组，查看每组中<code>cty</code>和<code>hwy</code>的平均值和标准误呢？自己尝试一下，然后对答案：</p>
 <pre class="sourceCode r"><code class="sourceCode r">mpg_summary &lt;-<span class="st"> </span>mpg <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(manufacturer) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">n</span>(),
@@ -688,27 +698,27 @@ wb_summary
             <span class="dt">cty_SE =</span> <span class="kw">sd</span>(cty)<span class="op">/</span><span class="kw">sqrt</span>(n),
             <span class="dt">hwy_mean =</span> <span class="kw">mean</span>(hwy),
             <span class="dt">hwy_SE =</span> <span class="kw">sd</span>(hwy)<span class="op">/</span><span class="kw">sqrt</span>(n))
-mpg_summary
-<span class="co">## # A tibble: 15 x 6</span>
-<span class="co">##    manufacturer     n cty_mean cty_SE hwy_mean hwy_SE</span>
-<span class="co">##    &lt;chr&gt;        &lt;int&gt;    &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;</span>
-<span class="co">##  1 audi            18     17.6  0.465     26.4  0.513</span>
-<span class="co">##  2 chevrolet       19     15    0.671     21.9  1.17 </span>
-<span class="co">##  3 dodge           37     13.1  0.409     17.9  0.588</span>
-<span class="co">##  4 ford            25     14    0.383     19.4  0.666</span>
-<span class="co">##  5 honda            9     24.4  0.648     32.6  0.852</span>
-<span class="co">##  6 hyundai         14     18.6  0.401     26.9  0.582</span>
-<span class="co">##  7 jeep             8     13.5  0.886     17.6  1.15 </span>
-<span class="co">##  8 land rover       4     11.5  0.289     16.5  0.866</span>
-<span class="co">##  9 lincoln          3     11.3  0.333     17    0.577</span>
-<span class="co">## 10 mercury          4     13.2  0.25      18    0.577</span>
-<span class="co">## 11 nissan          13     18.1  0.950     24.6  1.41 </span>
-<span class="co">## 12 pontiac          5     17    0.447     26.4  0.510</span>
-<span class="co">## 13 subaru          14     19.3  0.244     25.6  0.309</span>
-<span class="co">## 14 toyota          34     18.5  0.694     24.9  1.06 </span>
-<span class="co">## 15 volkswagen      27     20.9  0.877     29.2  1.02</span></code></pre>
+mpg_summary</code></pre>
+<pre><code>#&gt; # A tibble: 15 x 6
+#&gt;    manufacturer     n cty_mean cty_SE hwy_mean hwy_SE
+#&gt;    &lt;chr&gt;        &lt;int&gt;    &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;
+#&gt;  1 audi            18     17.6  0.465     26.4  0.513
+#&gt;  2 chevrolet       19     15    0.671     21.9  1.17 
+#&gt;  3 dodge           37     13.1  0.409     17.9  0.588
+#&gt;  4 ford            25     14    0.383     19.4  0.666
+#&gt;  5 honda            9     24.4  0.648     32.6  0.852
+#&gt;  6 hyundai         14     18.6  0.401     26.9  0.582
+#&gt;  7 jeep             8     13.5  0.886     17.6  1.15 
+#&gt;  8 land rover       4     11.5  0.289     16.5  0.866
+#&gt;  9 lincoln          3     11.3  0.333     17    0.577
+#&gt; 10 mercury          4     13.2  0.25      18    0.577
+#&gt; 11 nissan          13     18.1  0.950     24.6  1.41 
+#&gt; 12 pontiac          5     17    0.447     26.4  0.510
+#&gt; 13 subaru          14     19.3  0.244     25.6  0.309
+#&gt; 14 toyota          34     18.5  0.694     24.9  1.06 
+#&gt; 15 volkswagen      27     20.9  0.877     29.2  1.02</code></pre>
 <p>最终我们可以利用这些数据绘图（这将是下一章的练习）：</p>
-<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-217-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-244-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>
             </section>
@@ -748,7 +758,7 @@ gitbook.start({
 },
 "edit": {
 "link": "https://github.com/TianyiShi2001/r-and-tidyverse-book/03-tibble.Rmd",
-"text": "Edit"
+"text": "Github"
 },
 "history": {
 "link": null,

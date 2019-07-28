@@ -13,7 +13,7 @@
   
   
   <meta property="og:description" content="这是一本R与tidyverse的入门教程" />
-  <meta name="github-repo" content="TianyiShi2001/R-Tutorial-Resorces" />
+  <meta name="github-repo" content="TianyiShi2001/r-and-tidyverse-book" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="5.3 字符串的处理 | R与tidyverse——数据分析入门" />
@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-24" />
+<meta name="date" content="2019-07-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -178,7 +178,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i>版权页</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical"><i class="fa fa-check"></i>关于编写本书的技术信息</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R和RStudio介绍和安装教程</a><ul>
+<li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R与RStudio安装与基础操作</a><ul>
 <li class="chapter" data-level="" data-path="intro-and-installation.html"><a href="intro-and-installation.html#intro-overview"><i class="fa fa-check"></i>本章内容速览</a></li>
 <li class="chapter" data-level="1.1" data-path="what-is-R.html"><a href="what-is-R.html"><i class="fa fa-check"></i><b>1.1</b> 什么是R</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="what-is-R.html"><a href="what-is-R.html#R-and-RStudio-install"><i class="fa fa-check"></i><b>1.1.1</b> 安装R和RStudio</a></li>
@@ -201,6 +201,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4.2" data-path="packages.html"><a href="packages.html#package-install"><i class="fa fa-check"></i><b>1.4.2</b> 如何安装packages</a></li>
 <li class="chapter" data-level="1.4.3" data-path="packages.html"><a href="packages.html#package-use"><i class="fa fa-check"></i><b>1.4.3</b> 如何使用packages</a></li>
 <li class="chapter" data-level="1.4.4" data-path="packages.html"><a href="packages.html#package-misc"><i class="fa fa-check"></i><b>1.4.4</b> 其它</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="-test-intro.html"><a href="-test-intro.html"><i class="fa fa-check"></i><b>1.5</b> 小测 {test-intro}</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-basics"><i class="fa fa-check"></i><b>1.5.1</b> 基础 {test-intro-basics}</a></li>
+<li class="chapter" data-level="1.5.2" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-advanced"><i class="fa fa-check"></i><b>1.5.2</b> 进阶 {test-intro-advanced}</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> 向量，逻辑，循环和函数</a><ul>
@@ -232,13 +236,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.5.3" data-path="control-flow.html"><a href="control-flow.html#control-flow-rigorous"><i class="fa fa-check"></i><b>2.5.3</b> 严谨版</a></li>
 <li class="chapter" data-level="2.5.4" data-path="control-flow.html"><a href="control-flow.html#apply"><i class="fa fa-check"></i><b>2.5.4</b> 如何避免for循环——<code>apply()</code>家族函数</a></li>
 <li class="chapter" data-level="2.5.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.5.5</b> <code>foreach</code> package：for循环的进化版</a></li>
+<li class="chapter" data-level="2.5.6" data-path="control-flow.html"><a href="control-flow.html#purrr-packageapply"><i class="fa fa-check"></i><b>2.5.6</b> <code>purrr</code> package中的<code>apply</code>家族函数替代品和进化产物</a></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.6</b> 函数</a><ul>
 <li class="chapter" data-level="2.6.1" data-path="functions.html"><a href="functions.html#functions-in-R"><i class="fa fa-check"></i><b>2.6.1</b> R中的函数</a></li>
 <li class="chapter" data-level="2.6.2" data-path="functions.html"><a href="functions.html#abbr"><i class="fa fa-check"></i><b>2.6.2</b> 调用函数</a></li>
 <li class="chapter" data-level="2.6.3" data-path="functions.html"><a href="functions.html#create-functions"><i class="fa fa-check"></i><b>2.6.3</b> 创建函数</a></li>
 <li class="chapter" data-level="2.6.4" data-path="functions.html"><a href="functions.html#about-dot-dot-dot"><i class="fa fa-check"></i><b>2.6.4</b> 关于<code>...</code></a></li>
-<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.5</b> 测速</a></li>
+<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#functions-assign-global"><i class="fa fa-check"></i><b>2.6.5</b> 赋值函数外的对象</a></li>
+<li class="chapter" data-level="2.6.6" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.6</b> 测速</a></li>
 </ul></li>
 <li class="chapter" data-level="2.7" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>2.7</b> 列表 (list)</a><ul>
 <li class="chapter" data-level="2.7.1" data-path="list.html"><a href="list.html#list-index"><i class="fa fa-check"></i><b>2.7.1</b> list的索引/取子集</a></li>
@@ -248,7 +254,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.8" data-path="matrix-array.html"><a href="matrix-array.html"><i class="fa fa-check"></i><b>2.8</b> array（数组）和matrix（矩阵）简介</a><ul>
 <li class="chapter" data-level="2.8.1" data-path="matrix-array.html"><a href="matrix-array.html#matrix-array-naming"><i class="fa fa-check"></i><b>2.8.1</b> 给matrices和arrays命名</a></li>
 </ul></li>
-<li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a></li>
+<li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a><ul>
+<li class="chapter" data-level="2.9.1" data-path="test-base.html"><a href="test-base.html#test-base-basics"><i class="fa fa-check"></i><b>2.9.1</b> 基础</a></li>
+<li class="chapter" data-level="2.9.2" data-path="test-base.html"><a href="test-base.html#test-base-advanced"><i class="fa fa-check"></i><b>2.9.2</b> 进阶</a></li>
+<li class="chapter" data-level="2.9.3" data-path="test-base.html"><a href="test-base.html#test-base-challenge"><i class="fa fa-check"></i><b>2.9.3</b> 挑战</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="tibble.html"><a href="tibble.html"><i class="fa fa-check"></i><b>3</b> dataframe和tibble</a><ul>
 <li class="chapter" data-level="3.0.1" data-path="tibble.html"><a href="tibble.html#section-3.0.1"><i class="fa fa-check"></i><b>3.0.1</b> 本章内容速览</a></li>
@@ -346,21 +356,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="section-5.3.1.1" class="section level4">
 <h4><span class="header-section-number">5.3.1.1</span> 引号的使用</h4>
 <p>字符串可以用单引号和双引号包围。在双引号包围的环境下，可以很容易打出英澳常用的单引号和欧洲语言中的“撇”；在单引号包围的环境下，可以很容易打出北美和中国常用的双引号。否则需要使用转义字符 (escape character), <code>\</code>. 以下是几个正确的例子。</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="st">&quot;&#39;The unexamined life is not worth living&#39; —Socrates&quot;</span>
-<span class="co">## [1] &quot;&#39;The unexamined life is not worth living&#39; —Socrates&quot;</span>
-<span class="st">&quot;La science n&#39;a pas de patrie.&quot;</span>
-<span class="co">## [1] &quot;La science n&#39;a pas de patrie.&quot;</span>
-<span class="st">&#39;&quot;老子曰：“知不知，尚矣；不知知，病矣。&quot;&#39;</span>
-<span class="co">## [1] &quot;\&quot;老子曰：“知不知，尚矣；不知知，病矣。\&quot;&quot;</span>
-<span class="st">&#39;l</span><span class="ch">\&#39;</span><span class="st">homme&#39;</span>
-<span class="co">## [1] &quot;l&#39;homme&quot;</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="st">&quot;&#39;The unexamined life is not worth living&#39; —Socrates&quot;</span></code></pre>
+<pre><code>#&gt; [1] &quot;&#39;The unexamined life is not worth living&#39; —Socrates&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="st">&quot;La science n&#39;a pas de patrie.&quot;</span></code></pre>
+<pre><code>#&gt; [1] &quot;La science n&#39;a pas de patrie.&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="st">&#39;&quot;老子曰：“知不知，尚矣；不知知，病矣。&quot;&#39;</span></code></pre>
+<pre><code>#&gt; [1] &quot;\&quot;老子曰：“知不知，尚矣；不知知，病矣。\&quot;&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="st">&#39;l</span><span class="ch">\&#39;</span><span class="st">homme&#39;</span></code></pre>
+<pre><code>#&gt; [1] &quot;l&#39;homme&quot;</code></pre>
 </div>
 <div id="section-5.3.1.2" class="section level4">
 <h4><span class="header-section-number">5.3.1.2</span> 换行符和制表符</h4>
 <p>假设你想显示以下效果：</p>
-<pre><code>## Guten
-## 
-##  Morgen.</code></pre>
+<pre><code>#&gt; Guten
+#&gt; 
+#&gt;  Morgen.</code></pre>
 <p>即“Guten”后有两次换行，第三行开头有一个制表符 (TAB)</p>
 <p>你需要的源代码是：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="st">&quot;Guten</span><span class="ch">\n\n\t</span><span class="st">Morgen.&quot;</span></code></pre>
@@ -369,49 +379,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="printwritelines" class="section level4">
 <h4><span class="header-section-number">5.3.1.3</span> <code>print()</code>和<code>writeLines()</code></h4>
 <p><code>print()</code>只显示源码，<code>writeLines()</code>显示真实效果。</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(<span class="kw">c</span>(<span class="st">&quot;Guten</span><span class="ch">\n\n\t</span><span class="st">Morgen.&quot;</span>, <span class="st">&quot;Guten</span><span class="ch">\n\n\t</span><span class="st">Tag&quot;</span>))
-<span class="co">## [1] &quot;Guten\n\n\tMorgen.&quot; &quot;Guten\n\n\tTag&quot;</span></code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">writeLines</span>(<span class="kw">c</span>(<span class="st">&quot;Guten</span><span class="ch">\n\n\t</span><span class="st">Morgen.&quot;</span>, <span class="st">&quot;Guten</span><span class="ch">\n\n\t</span><span class="st">Tag&quot;</span>))
-<span class="co">## Guten</span>
-<span class="co">## </span>
-<span class="co">##  Morgen.</span>
-<span class="co">## Guten</span>
-<span class="co">## </span>
-<span class="co">##  Tag</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(<span class="kw">c</span>(<span class="st">&quot;Guten</span><span class="ch">\n\n\t</span><span class="st">Morgen.&quot;</span>, <span class="st">&quot;Guten</span><span class="ch">\n\n\t</span><span class="st">Tag&quot;</span>))</code></pre>
+<pre><code>#&gt; [1] &quot;Guten\n\n\tMorgen.&quot; &quot;Guten\n\n\tTag&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">writeLines</span>(<span class="kw">c</span>(<span class="st">&quot;Guten</span><span class="ch">\n\n\t</span><span class="st">Morgen.&quot;</span>, <span class="st">&quot;Guten</span><span class="ch">\n\n\t</span><span class="st">Tag&quot;</span>))</code></pre>
+<pre><code>#&gt; Guten
+#&gt; 
+#&gt;  Morgen.
+#&gt; Guten
+#&gt; 
+#&gt;  Tag</code></pre>
 <p>索引和引号消失了，不同的元素之间有换行。</p>
 </div>
 </div>
 <div id="str_sub" class="section level3">
 <h3><span class="header-section-number">5.3.2</span> 使用<code>str_sub()</code>取子集</h3>
 <pre class="sourceCode r"><code class="sourceCode r">A &lt;-<span class="st"> &quot;D. rerio&quot;</span>
-<span class="kw">str_sub</span>(A, <span class="dv">1</span>, <span class="dv">5</span>) <span class="co"># 第1到第5个字母。计入符号和空格。</span>
-<span class="co">## [1] &quot;D. re&quot;</span>
-<span class="kw">str_sub</span>(A, <span class="dv">4</span>, <span class="dv">4</span>) <span class="co"># 抓取一个字母</span>
-<span class="co">## [1] &quot;r&quot;</span>
-<span class="kw">str_sub</span>(A, <span class="dv">-4</span>, <span class="dv">-2</span>) <span class="co"># 倒数第4至倒数第2</span>
-<span class="co">## [1] &quot;eri&quot;</span></code></pre>
+<span class="kw">str_sub</span>(A, <span class="dv">1</span>, <span class="dv">5</span>) <span class="co"># 第1到第5个字母。计入符号和空格。</span></code></pre>
+<pre><code>#&gt; [1] &quot;D. re&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_sub</span>(A, <span class="dv">4</span>, <span class="dv">4</span>) <span class="co"># 抓取一个字母</span></code></pre>
+<pre><code>#&gt; [1] &quot;r&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_sub</span>(A, <span class="dv">-4</span>, <span class="dv">-2</span>) <span class="co"># 倒数第4至倒数第2</span></code></pre>
+<pre><code>#&gt; [1] &quot;eri&quot;</code></pre>
 <p>我们还可以通过索引修改某个位置的字符：</p>
 <pre class="sourceCode r"><code class="sourceCode r">W &lt;-<span class="st"> &quot;D. Rerio&quot;</span>
 <span class="kw">str_sub</span>(W, <span class="dv">4</span>, <span class="dv">4</span>) &lt;-<span class="st"> </span><span class="kw">str_to_lower</span>(<span class="kw">str_sub</span>(W, <span class="dv">4</span>, <span class="dv">4</span>))
-W
-<span class="co">## [1] &quot;D. rerio&quot;</span></code></pre>
+W</code></pre>
+<pre><code>#&gt; [1] &quot;D. rerio&quot;</code></pre>
 <p>和<code>str_to_lower()</code>相关的函数还有<code>str_to_upper()</code>, <code>str_to_title()</code>和<code>str_to_sentence()</code>. 它们的作用都顾名思义。</p>
 </div>
 <div id="str_c" class="section level3">
 <h3><span class="header-section-number">5.3.3</span> 使用<code>str_c()</code>进行字符串的合并</h3>
 <p>一个简单的例子：</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>)
-<span class="co">## [1] &quot;abc&quot;</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>)</code></pre>
+<pre><code>#&gt; [1] &quot;abc&quot;</code></pre>
 <p>其中参数<code>sep</code>是被合并的字符串之间的连接字符；它可以是任何字符，包括空格和无（比如上面的例子；用<code>sep = &quot;&quot;</code>表示无连接字符）。</p>
 <p>当需要合并的字符串保存在一个向量里时，用<code>collapse</code>而不是<code>sep</code>：</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_c</span>(<span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>), <span class="dt">collapse =</span> <span class="st">&quot;[x@&quot;</span>)
-<span class="co">## [1] &quot;a[x@b[x@c&quot;</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_c</span>(<span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>), <span class="dt">collapse =</span> <span class="st">&quot;[x@&quot;</span>)</code></pre>
+<pre><code>#&gt; [1] &quot;a[x@b[x@c&quot;</code></pre>
 <p><code>str_c()</code>可以执行向量化运算：</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_c</span>(<span class="st">&quot;prefix&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>), <span class="st">&quot;suffix&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;-&quot;</span>)
-<span class="co">## [1] &quot;prefix-a-suffix&quot; &quot;prefix-b-suffix&quot; &quot;prefix-c-suffix&quot;</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_c</span>(<span class="st">&quot;prefix&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>), <span class="st">&quot;suffix&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;-&quot;</span>)</code></pre>
+<pre><code>#&gt; [1] &quot;prefix-a-suffix&quot; &quot;prefix-b-suffix&quot; &quot;prefix-c-suffix&quot;</code></pre>
 <p>所以我们可以这么玩：</p>
-<pre class="sourceCode r"><code class="sourceCode r">
-混沌在各地的称呼 &lt;-<span class="st"> </span><span class="kw">str_c</span>(
+<pre class="sourceCode r"><code class="sourceCode r">混沌在各地的称呼 &lt;-<span class="st"> </span><span class="kw">str_c</span>(
   <span class="kw">str_c</span>(
     <span class="st">&quot;地区&quot;</span>,
     <span class="kw">c</span>(<span class="st">&quot;北京&quot;</span>, <span class="st">&quot;湖北&quot;</span>, <span class="st">&quot;巴蜀&quot;</span>, <span class="st">&quot;两广&quot;</span>, <span class="st">&quot;闽台&quot;</span>),
@@ -425,12 +434,12 @@ W
   <span class="dt">sep =</span> <span class="st">&quot; &quot;</span>
 )
 
-<span class="kw">writeLines</span>(混沌在各地的称呼)
-<span class="co">## 地区：北京 称呼：混沌</span>
-<span class="co">## 地区：湖北 称呼：包面</span>
-<span class="co">## 地区：巴蜀 称呼：抄手</span>
-<span class="co">## 地区：两广 称呼：云吞</span>
-<span class="co">## 地区：闽台 称呼：扁食</span></code></pre>
+<span class="kw">writeLines</span>(混沌在各地的称呼)</code></pre>
+<pre><code>#&gt; 地区：北京 称呼：混沌
+#&gt; 地区：湖北 称呼：包面
+#&gt; 地区：巴蜀 称呼：抄手
+#&gt; 地区：两广 称呼：云吞
+#&gt; 地区：闽台 称呼：扁食</code></pre>
 <p>它还可以和<code>if</code>语句联用：</p>
 <pre class="sourceCode r"><code class="sourceCode r">win &lt;-<span class="st"> </span><span class="dv">2</span>
 score &lt;-<span class="st"> </span><span class="kw">str_c</span>(
@@ -440,9 +449,9 @@ score &lt;-<span class="st"> </span><span class="kw">str_c</span>(
   <span class="cf">if</span> (win <span class="op">==</span><span class="st"> </span><span class="dv">2</span>) <span class="st">&quot;赢&quot;</span> <span class="cf">else</span> <span class="st">&quot;输&quot;</span>,
   <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>
 )
-<span class="kw">writeLines</span>(score)
-<span class="co">## 张三输</span>
-<span class="co">## 李四赢</span></code></pre>
+<span class="kw">writeLines</span>(score)</code></pre>
+<pre><code>#&gt; 张三输
+#&gt; 李四赢</code></pre>
 </div>
 <div id="str_view" class="section level3">
 <h3><span class="header-section-number">5.3.4</span> 使用<code>str_view()</code>来查找特定的字符组合</h3>
@@ -489,7 +498,7 @@ gitbook.start({
 },
 "edit": {
 "link": "https://github.com/TianyiShi2001/r-and-tidyverse-book/05-wrangle.Rmd",
-"text": "Edit"
+"text": "Github"
 },
 "history": {
 "link": null,

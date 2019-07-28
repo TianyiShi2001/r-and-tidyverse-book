@@ -13,7 +13,7 @@
   
   
   <meta property="og:description" content="这是一本R与tidyverse的入门教程" />
-  <meta name="github-repo" content="TianyiShi2001/R-Tutorial-Resorces" />
+  <meta name="github-repo" content="TianyiShi2001/r-and-tidyverse-book" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="2.1 向量的概念，操作和优越性 | R与tidyverse——数据分析入门" />
@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-24" />
+<meta name="date" content="2019-07-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -178,7 +178,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i>版权页</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical"><i class="fa fa-check"></i>关于编写本书的技术信息</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R和RStudio介绍和安装教程</a><ul>
+<li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R与RStudio安装与基础操作</a><ul>
 <li class="chapter" data-level="" data-path="intro-and-installation.html"><a href="intro-and-installation.html#intro-overview"><i class="fa fa-check"></i>本章内容速览</a></li>
 <li class="chapter" data-level="1.1" data-path="what-is-R.html"><a href="what-is-R.html"><i class="fa fa-check"></i><b>1.1</b> 什么是R</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="what-is-R.html"><a href="what-is-R.html#R-and-RStudio-install"><i class="fa fa-check"></i><b>1.1.1</b> 安装R和RStudio</a></li>
@@ -201,6 +201,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4.2" data-path="packages.html"><a href="packages.html#package-install"><i class="fa fa-check"></i><b>1.4.2</b> 如何安装packages</a></li>
 <li class="chapter" data-level="1.4.3" data-path="packages.html"><a href="packages.html#package-use"><i class="fa fa-check"></i><b>1.4.3</b> 如何使用packages</a></li>
 <li class="chapter" data-level="1.4.4" data-path="packages.html"><a href="packages.html#package-misc"><i class="fa fa-check"></i><b>1.4.4</b> 其它</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="-test-intro.html"><a href="-test-intro.html"><i class="fa fa-check"></i><b>1.5</b> 小测 {test-intro}</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-basics"><i class="fa fa-check"></i><b>1.5.1</b> 基础 {test-intro-basics}</a></li>
+<li class="chapter" data-level="1.5.2" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-advanced"><i class="fa fa-check"></i><b>1.5.2</b> 进阶 {test-intro-advanced}</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> 向量，逻辑，循环和函数</a><ul>
@@ -232,13 +236,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.5.3" data-path="control-flow.html"><a href="control-flow.html#control-flow-rigorous"><i class="fa fa-check"></i><b>2.5.3</b> 严谨版</a></li>
 <li class="chapter" data-level="2.5.4" data-path="control-flow.html"><a href="control-flow.html#apply"><i class="fa fa-check"></i><b>2.5.4</b> 如何避免for循环——<code>apply()</code>家族函数</a></li>
 <li class="chapter" data-level="2.5.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.5.5</b> <code>foreach</code> package：for循环的进化版</a></li>
+<li class="chapter" data-level="2.5.6" data-path="control-flow.html"><a href="control-flow.html#purrr-packageapply"><i class="fa fa-check"></i><b>2.5.6</b> <code>purrr</code> package中的<code>apply</code>家族函数替代品和进化产物</a></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.6</b> 函数</a><ul>
 <li class="chapter" data-level="2.6.1" data-path="functions.html"><a href="functions.html#functions-in-R"><i class="fa fa-check"></i><b>2.6.1</b> R中的函数</a></li>
 <li class="chapter" data-level="2.6.2" data-path="functions.html"><a href="functions.html#abbr"><i class="fa fa-check"></i><b>2.6.2</b> 调用函数</a></li>
 <li class="chapter" data-level="2.6.3" data-path="functions.html"><a href="functions.html#create-functions"><i class="fa fa-check"></i><b>2.6.3</b> 创建函数</a></li>
 <li class="chapter" data-level="2.6.4" data-path="functions.html"><a href="functions.html#about-dot-dot-dot"><i class="fa fa-check"></i><b>2.6.4</b> 关于<code>...</code></a></li>
-<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.5</b> 测速</a></li>
+<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#functions-assign-global"><i class="fa fa-check"></i><b>2.6.5</b> 赋值函数外的对象</a></li>
+<li class="chapter" data-level="2.6.6" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.6</b> 测速</a></li>
 </ul></li>
 <li class="chapter" data-level="2.7" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>2.7</b> 列表 (list)</a><ul>
 <li class="chapter" data-level="2.7.1" data-path="list.html"><a href="list.html#list-index"><i class="fa fa-check"></i><b>2.7.1</b> list的索引/取子集</a></li>
@@ -248,7 +254,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.8" data-path="matrix-array.html"><a href="matrix-array.html"><i class="fa fa-check"></i><b>2.8</b> array（数组）和matrix（矩阵）简介</a><ul>
 <li class="chapter" data-level="2.8.1" data-path="matrix-array.html"><a href="matrix-array.html#matrix-array-naming"><i class="fa fa-check"></i><b>2.8.1</b> 给matrices和arrays命名</a></li>
 </ul></li>
-<li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a></li>
+<li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a><ul>
+<li class="chapter" data-level="2.9.1" data-path="test-base.html"><a href="test-base.html#test-base-basics"><i class="fa fa-check"></i><b>2.9.1</b> 基础</a></li>
+<li class="chapter" data-level="2.9.2" data-path="test-base.html"><a href="test-base.html#test-base-advanced"><i class="fa fa-check"></i><b>2.9.2</b> 进阶</a></li>
+<li class="chapter" data-level="2.9.3" data-path="test-base.html"><a href="test-base.html#test-base-challenge"><i class="fa fa-check"></i><b>2.9.3</b> 挑战</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="tibble.html"><a href="tibble.html"><i class="fa fa-check"></i><b>3</b> dataframe和tibble</a><ul>
 <li class="chapter" data-level="3.0.1" data-path="tibble.html"><a href="tibble.html#section-3.0.1"><i class="fa fa-check"></i><b>3.0.1</b> 本章内容速览</a></li>
@@ -345,21 +355,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">2.1.1</span> 创建向量（赋值）</h3>
 <p>单元素的向量，可以直接像这样赋值：</p>
 <pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">2</span>
-x
-<span class="co">## [1] 2</span></code></pre>
+x</code></pre>
+<pre><code>#&gt; [1] 2</code></pre>
 <p>要创建一个多元素的向量，需要用到<code>c()</code> (concatenate)函数：</p>
 <pre class="sourceCode r"><code class="sourceCode r">nums &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">45</span>,<span class="dv">78</span>)
 cities &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Zürich&quot;, &quot;</span>上海<span class="st">&quot;, &quot;</span>Tehrān<span class="st">&quot;)</span>
-<span class="st">nums</span>
-<span class="st">## [1]  1 45 78</span>
-<span class="st">cities</span>
-<span class="st">## [1] &quot;</span>Zürich&quot; <span class="st">&quot;上海&quot;</span>   <span class="st">&quot;Tehrān&quot;</span></code></pre>
+<span class="st">nums</span></code></pre>
+<pre><code>#&gt; [1]  1 45 78</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">cities</code></pre>
+<pre><code>#&gt; [1] &quot;Zürich&quot; &quot;上海&quot;   &quot;Tehrān&quot;</code></pre>
 <p>通过<code>length()</code>函数，可以查看向量的长度。</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">length</span>(nums)
-<span class="co">## [1] 3</span>
-<span class="co">#如果无后续使用，没必要赋值一个变量；c(...)的计算结果就是一个向量，并直接传给`length()`函数</span>
-<span class="kw">length</span>(<span class="kw">c</span>(<span class="st">&quot;Guten Morgen&quot;</span>)) 
-<span class="co">## [1] 1</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">length</span>(nums)</code></pre>
+<pre><code>#&gt; [1] 3</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">#如果无后续使用，没必要赋值一个变量；c(...)的计算结果就是一个向量，并直接传给`length()`函数</span>
+<span class="kw">length</span>(<span class="kw">c</span>(<span class="st">&quot;Guten Morgen&quot;</span>)) </code></pre>
+<pre><code>#&gt; [1] 1</code></pre>
 <p>（每个被引号包围的一串字符，都只算做一个元素，因此长度为1；多元素的向量请看第<a href="vector-section.html#create-vector">2.1.1</a>节）</p>
 <p>还是通过<code>c()</code>函数，可以把多个向量拼接成一个大向量：</p>
 <pre class="sourceCode r"><code class="sourceCode r">cities_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Zürich&quot;, &quot;</span>上海<span class="st">&quot;, &quot;</span>Tehrān<span class="st">&quot;)</span>
@@ -367,23 +377,23 @@ cities &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">
 
 <span class="st">cities &lt;- c(cities_1, cities_2, c(&quot;</span>Jyväskylä<span class="st">&quot;, &quot;</span>邯郸<span class="st">&quot;, &quot;</span>札幌่<span class="st">&quot;))</span>
 
-<span class="st">cities</span>
-<span class="st">## [1] &quot;</span>Zürich&quot;    <span class="st">&quot;上海&quot;</span>      <span class="st">&quot;Tehrān&quot;</span>    <span class="st">&quot;大阪&quot;</span>      <span class="st">&quot;Poznań&quot;</span>    <span class="st">&quot;Cairo&quot;</span>    
-<span class="co">## [7] &quot;Jyväskylä&quot; &quot;邯郸&quot;      &quot;札幌่&quot;</span></code></pre>
+<span class="st">cities</span></code></pre>
+<pre><code>#&gt; [1] &quot;Zürich&quot;    &quot;上海&quot;      &quot;Tehrān&quot;    &quot;大阪&quot;      &quot;Poznań&quot;    &quot;Cairo&quot;    
+#&gt; [7] &quot;Jyväskylä&quot; &quot;邯郸&quot;      &quot;札幌่&quot;</code></pre>
 </div>
 <div id="indexing" class="section level3">
 <h3><span class="header-section-number">2.1.2</span> 索引/取子集/子集重新赋值 (indexing/subsetting)</h3>
 <p>索引 (index)就是一个元素在向量中的位置。R是从1开始索引的，即索引为1的元素是第一个元素（因此用熟了Python和C可能会有些不适应）。在向量后方使用方括号进行取子集运算（即抓取索引为对应数字的元素）。</p>
 <pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;one&quot;</span>, <span class="st">&quot;two&quot;</span>, <span class="st">&quot;three&quot;</span>, <span class="st">&quot;four&quot;</span>, <span class="st">&quot;five&quot;</span>, <span class="st">&quot;six&quot;</span>, <span class="st">&quot;seven&quot;</span>, <span class="st">&quot;eight&quot;</span>, <span class="st">&quot;nine&quot;</span>)
-x[<span class="dv">3</span>]
-<span class="co">## [1] &quot;three&quot;</span></code></pre>
+x[<span class="dv">3</span>]</code></pre>
+<pre><code>#&gt; [1] &quot;three&quot;</code></pre>
 <p>可以在方括号中使用另一个向量抓取多个元素：</p>
-<pre class="sourceCode r"><code class="sourceCode r">x[<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">9</span>)] <span class="co"># 第2个，第5个，第9个元素</span>
-<span class="co">## [1] &quot;two&quot;  &quot;five&quot; &quot;nine&quot;</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">x[<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">9</span>)] <span class="co"># 第2个，第5个，第9个元素</span></code></pre>
+<pre><code>#&gt; [1] &quot;two&quot;  &quot;five&quot; &quot;nine&quot;</code></pre>
 <p>我们可以重新赋值子集：</p>
 <pre class="sourceCode r"><code class="sourceCode r">x[<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">9</span>)] &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;二&quot;</span>, <span class="st">&quot;五&quot;</span>, <span class="st">&quot;九&quot;</span>)
-x
-<span class="co">## [1] &quot;one&quot;   &quot;二&quot;    &quot;three&quot; &quot;four&quot;  &quot;五&quot;    &quot;six&quot;   &quot;seven&quot; &quot;eight&quot; &quot;九&quot;</span></code></pre>
+x</code></pre>
+<pre><code>#&gt; [1] &quot;one&quot;   &quot;二&quot;    &quot;three&quot; &quot;four&quot;  &quot;五&quot;    &quot;six&quot;   &quot;seven&quot; &quot;eight&quot; &quot;九&quot;</code></pre>
 <p>经常，我们会抓取几个连续的元素。如果想知道方法，请继续往下看。</p>
 </div>
 <div id="generator" class="section level3">
@@ -391,55 +401,56 @@ x
 <p>有时候我们需要其元素按一定规律排列的向量，这时，相对于一个个手动输入，有更方便的方法：</p>
 <div id="successive-int" class="section level4">
 <h4><span class="header-section-number">2.1.3.1</span> 连续整数</h4>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span><span class="op">:</span><span class="dv">10</span> <span class="co">#从左边的数（包含）到右边的数（包含），即1:10</span>
-<span class="co">##  [1]  1  2  3  4  5  6  7  8  9 10</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span><span class="op">:</span><span class="dv">10</span> <span class="co">#从左边的数（包含）到右边的数（包含），即1:10</span></code></pre>
+<pre><code>#&gt;  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
 <p>这时，你应该会有个大胆的想法：</p>
-<pre class="sourceCode r"><code class="sourceCode r">x[<span class="dv">3</span><span class="op">:</span><span class="dv">6</span>]
-<span class="co">## [1] &quot;three&quot; &quot;four&quot;  &quot;五&quot;    &quot;six&quot;</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">x[<span class="dv">3</span><span class="op">:</span><span class="dv">6</span>]</code></pre>
+<pre><code>#&gt; [1] &quot;three&quot; &quot;four&quot;  &quot;五&quot;    &quot;six&quot;</code></pre>
 <p>没错就是这么用的，而且极为常用。</p>
 <p>当元素比较多的时候：</p>
 <pre class="sourceCode r"><code class="sourceCode r">y &lt;-<span class="st"> </span><span class="dv">7</span><span class="op">:</span><span class="dv">103</span>
-y
-<span class="co">##  [1]   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23</span>
-<span class="co">## [18]  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40</span>
-<span class="co">## [35]  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57</span>
-<span class="co">## [52]  58  59  60  61  62  63  64  65  66  67  68  69  70  71  72  73  74</span>
-<span class="co">## [69]  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91</span>
-<span class="co">## [86]  92  93  94  95  96  97  98  99 100 101 102 103</span></code></pre>
+y</code></pre>
+<pre><code>#&gt;  [1]   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23
+#&gt; [18]  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40
+#&gt; [35]  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57
+#&gt; [52]  58  59  60  61  62  63  64  65  66  67  68  69  70  71  72  73  74
+#&gt; [69]  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91
+#&gt; [86]  92  93  94  95  96  97  98  99 100 101 102 103</code></pre>
 <p>注意到了左边方括号中的数字了吗？它们正是所对应的那一行第一个元素的索引。</p>
 <p>下面的内容可能有点偏，<strong>可以酌情从这里跳到第<a href="vector-section.html#vectorization-basics">2.1.5</a>节。</strong></p>
 </div>
 <div id="rep" class="section level4">
 <h4><span class="header-section-number">2.1.3.2</span> 复读机<code>rep()</code></h4>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(<span class="dv">6</span>, <span class="dv">8</span>) <span class="co"># 把6重复8遍；或rep(6, times = 8)</span>
-<span class="co">## [1] 6 6 6 6 6 6 6 6</span></code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(<span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">1</span>), <span class="dv">4</span>) <span class="co"># 把(0, 7, 6, 1)重复4遍</span>
-<span class="co">##  [1] 0 7 6 1 0 7 6 1 0 7 6 1 0 7 6 1</span></code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(<span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">1</span>), <span class="dt">each =</span> <span class="dv">4</span>) <span class="co"># 把0, 7, 6, 1各重复4遍</span>
-<span class="co">##  [1] 0 0 0 0 7 7 7 7 6 6 6 6 1 1 1 1</span></code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(<span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">1</span>), <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>)) <span class="co"># 把0, 7, 6, 1分别重复1, 2, 3, 4遍</span>
-<span class="co">##  [1] 0 7 7 6 6 6 1 1 1 1</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(<span class="dv">6</span>, <span class="dv">8</span>) <span class="co"># 把6重复8遍；或rep(6, times = 8)</span></code></pre>
+<pre><code>#&gt; [1] 6 6 6 6 6 6 6 6</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(<span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">1</span>), <span class="dv">4</span>) <span class="co"># 把(0, 7, 6, 1)重复4遍</span></code></pre>
+<pre><code>#&gt;  [1] 0 7 6 1 0 7 6 1 0 7 6 1 0 7 6 1</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(<span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">1</span>), <span class="dt">each =</span> <span class="dv">4</span>) <span class="co"># 把0, 7, 6, 1各重复4遍</span></code></pre>
+<pre><code>#&gt;  [1] 0 0 0 0 7 7 7 7 6 6 6 6 1 1 1 1</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(<span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">1</span>), <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>)) <span class="co"># 把0, 7, 6, 1分别重复1, 2, 3, 4遍</span></code></pre>
+<pre><code>#&gt;  [1] 0 7 7 6 6 6 1 1 1 1</code></pre>
 <p>想一想，<code>rep(8:15, rep(1:5, rep(1:2, 2:3)))</code>的计算结果是什么？</p>
 </div>
 <div id="seq" class="section level4">
 <h4><span class="header-section-number">2.1.3.3</span> 等差数列: <code>seq()</code></h4>
 <p>公差确定时：</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">15</span>, <span class="fl">2.5</span>) <span class="co"># 其实是`seq(from = 0, to = 50, by = 5)`的简写</span>
-<span class="co">## [1]  0.0  2.5  5.0  7.5 10.0 12.5 15.0</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">15</span>, <span class="fl">2.5</span>) <span class="co"># 其实是`seq(from = 0, to = 50, by = 5)`的简写</span></code></pre>
+<pre><code>#&gt; [1]  0.0  2.5  5.0  7.5 10.0 12.5 15.0</code></pre>
 <p>长度确定时：</p>
-<pre class="sourceCode r"><code class="sourceCode r"> <span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">50</span>, <span class="dt">length.out =</span> <span class="dv">11</span>) <span class="co"># 其实是`seq(from = 0, to = 50, length.out = 11)`的简写</span>
-<span class="co">##  [1]  0  5 10 15 20 25 30 35 40 45 50</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"> <span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">50</span>, <span class="dt">length.out =</span> <span class="dv">11</span>) <span class="co"># 其实是`seq(from = 0, to = 50, length.out = 11)`的简写</span></code></pre>
+<pre><code>#&gt;  [1]  0  5 10 15 20 25 30 35 40 45 50</code></pre>
 </div>
 <div id="random-nums" class="section level4">
 <h4><span class="header-section-number">2.1.3.4</span> 随机数：</h4>
 <p>连续型均匀分布随机数用<code>runif(n, min, max)</code>，n是数量，min是最小值，max是最大值。默认min为0，max为1。</p>
 <pre class="sourceCode r"><code class="sourceCode r">x_unif &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">100000</span>, <span class="dv">40</span>, <span class="dv">60</span>) <span class="co"># 生成100000个40到60之间，连续均匀分布的的随机数</span>
 <span class="kw">hist</span>(x_unif) <span class="co"># 画直方图</span></code></pre>
-<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-47-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-54-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>正态分布随机数用<code>rnorm(n, mean, sd)</code>, 三个参数分别为数量，平均值，标准差。默认mean为0，sd为1。</p>
 <pre class="sourceCode r"><code class="sourceCode r">x_norm &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">100000</span>, <span class="dv">250</span>, <span class="dv">20</span>) <span class="co"># 按照平均值为250，标准差为20的正态分布的概率密度函数生成100000个随机数</span>
 <span class="kw">hist</span>(x_norm) <span class="co"># 画直方图</span></code></pre>
-<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-48-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-55-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>此外，还有<code>rlnorm()</code>, <code>rpois()</code>, <code>rexp()</code>等函数。<code>?stats::distributions</code>中介绍了R中自带的分布，其中大部分都有对应的随机数生成器。</p>
 </div>
 </div>
 <div id="vector-misc" class="section level3">
@@ -450,14 +461,14 @@ y
 <p>有两种方法实现：</p>
 <pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">vector</span>(<span class="st">&quot;numeric&quot;</span>)
 <span class="co"># 或`vector(&quot;integer&quot;)`, `vector(&quot;character&quot;)`等</span>
-<span class="kw">class</span>(x)
-<span class="co">## [1] &quot;numeric&quot;</span></code></pre>
+<span class="kw">class</span>(x)</code></pre>
+<pre><code>#&gt; [1] &quot;numeric&quot;</code></pre>
 <p>或者：</p>
 <pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">integer</span>(<span class="dv">0</span>)
 <span class="co"># 或 x &lt;- integer()</span>
 <span class="co"># 或`character(0)`, `numeric(0)`等</span>
-<span class="kw">class</span>(x)
-<span class="co">## [1] &quot;integer&quot;</span></code></pre>
+<span class="kw">class</span>(x)</code></pre>
+<pre><code>#&gt; [1] &quot;integer&quot;</code></pre>
 <p>其中后面这种方法亦可用于创建长度为<span class="math inline">\(n\)</span>的向量，把0替换成你想要的长度即可。</p>
 </div>
 <div id="sort-rank-order" class="section level4">
@@ -468,20 +479,20 @@ y
 <span class="kw">order</span>(x)
 <span class="kw">rev</span>(<span class="kw">sort</span>(x))
 <span class="co"># 为方便同框展示，我用的代码是 list(x = x), `sort(x)` = sort(x), `rank(x)` = rank(x), `order(x)` = order(x), `rev(sort(x))` = rev(sort(x)))</span></code></pre>
-<pre><code>## $x
-## [1] -10   5 -89 999  84
-## 
-## $`sort(x)`
-## [1] -89 -10   5  84 999
-## 
-## $`rank(x)`
-## [1] 2 3 1 5 4
-## 
-## $`order(x)`
-## [1] 3 1 2 5 4
-## 
-## $`rev(sort(x))`
-## [1] 999  84   5 -10 -89</code></pre>
+<pre><code>#&gt; $x
+#&gt; [1] -10   5 -89 999  84
+#&gt; 
+#&gt; $`sort(x)`
+#&gt; [1] -89 -10   5  84 999
+#&gt; 
+#&gt; $`rank(x)`
+#&gt; [1] 2 3 1 5 4
+#&gt; 
+#&gt; $`order(x)`
+#&gt; [1] 3 1 2 5 4
+#&gt; 
+#&gt; $`rev(sort(x))`
+#&gt; [1] 999  84   5 -10 -89</code></pre>
 <p><code>sort()</code>很好理解，就是把原向量的元素从小到大重新排列。如果要从小到大：<code>rev(sort(x))</code>.</p>
 <p><code>rank()</code>是原向量各个元素的（从小到大的）排名。（<code>-10</code>是第2名，<code>5</code>是第3名，<code>-89</code>是第1名，以此类推）</p>
 <p><code>order()</code>是一个原向量索引的排序，使得<code>x[order(x)] = sort(x)</code>，即<code>x[order(x)] = x[c(3, 1, 2, 5, 4)] = c(-89, -10, 5, 84, 999) = sort(x)</code></p>
@@ -490,13 +501,13 @@ y
 <div id="naming-elements" class="section level4">
 <h4><span class="header-section-number">2.1.4.3</span> 元素的命名</h4>
 <pre class="sourceCode r"><code class="sourceCode r">scores &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">ochem =</span> <span class="dv">79</span>, <span class="dt">math =</span> <span class="dv">66</span>, <span class="dt">mcb =</span> <span class="dv">64</span>, <span class="dt">blc =</span> <span class="dv">75</span>, <span class="dt">bpc =</span> <span class="dv">72</span>)
-scores
-<span class="co">## ochem  math   mcb   blc   bpc </span>
-<span class="co">##    79    66    64    75    72</span></code></pre>
+scores</code></pre>
+<pre><code>#&gt; ochem  math   mcb   blc   bpc 
+#&gt;    79    66    64    75    72</code></pre>
 <p>然后便可以额外地用名字抓取元素：</p>
-<pre class="sourceCode r"><code class="sourceCode r">scores[<span class="kw">c</span>(<span class="st">&quot;math&quot;</span>, <span class="st">&quot;bpc&quot;</span>)] <span class="op">==</span><span class="st"> </span>scores[<span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">5</span>)]
-<span class="co">## math  bpc </span>
-<span class="co">## TRUE TRUE</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">scores[<span class="kw">c</span>(<span class="st">&quot;math&quot;</span>, <span class="st">&quot;bpc&quot;</span>)] <span class="op">==</span><span class="st"> </span>scores[<span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">5</span>)]</code></pre>
+<pre><code>#&gt; math  bpc 
+#&gt; TRUE TRUE</code></pre>
 </div>
 </div>
 <div id="vectorization-basics" class="section level3">
@@ -504,12 +515,12 @@ scores
 <p>R中的向量（矩阵和数列也是）的各种计算默认都是逐元素 (elementwise)的。比如：</p>
 <pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">25</span>)
 y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">8</span>, <span class="dv">6</span>, <span class="dv">3</span>)
-x <span class="op">+</span><span class="st"> </span>y
-<span class="co">## [1] 12 15 28</span>
-x <span class="op">*</span><span class="st"> </span>y <span class="co"># 在matlab中这样乘是不行的，要用`.*`，除法也是</span>
-<span class="co">## [1] 32 54 75</span>
-<span class="kw">sqrt</span>(x)
-<span class="co">## [1] 2 3 5</span></code></pre>
+x <span class="op">+</span><span class="st"> </span>y</code></pre>
+<pre><code>#&gt; [1] 12 15 28</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">x <span class="op">*</span><span class="st"> </span>y <span class="co"># 在matlab中这样乘是不行的，要用`.*`，除法也是</span></code></pre>
+<pre><code>#&gt; [1] 32 54 75</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sqrt</span>(x)</code></pre>
+<pre><code>#&gt; [1] 2 3 5</code></pre>
 <p>拥有这种特性的计算也被称为向量化计算 (vectorized computation).</p>
 <p>相比于常用的编程语言，向量化计算省去了for循环，计算效率得到极大的提升；相比于matlab的默认矩阵乘法，逐元素乘法在数据处理中更有用。</p>
 <p>若想更多地了解向量化计算（比如如何把for循环需要39秒的运算压缩到0.001秒），请看第<a href="control-flow.html#apply">2.5.4</a>节。</p>
@@ -552,7 +563,7 @@ gitbook.start({
 },
 "edit": {
 "link": "https://github.com/TianyiShi2001/r-and-tidyverse-book/02-basics.Rmd",
-"text": "Edit"
+"text": "Github"
 },
 "history": {
 "link": null,

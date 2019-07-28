@@ -13,7 +13,7 @@
   
   
   <meta property="og:description" content="这是一本R与tidyverse的入门教程" />
-  <meta name="github-repo" content="TianyiShi2001/R-Tutorial-Resorces" />
+  <meta name="github-repo" content="TianyiShi2001/r-and-tidyverse-book" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="2.7 列表 (list) | R与tidyverse——数据分析入门" />
@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-24" />
+<meta name="date" content="2019-07-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -178,7 +178,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i>版权页</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical"><i class="fa fa-check"></i>关于编写本书的技术信息</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R和RStudio介绍和安装教程</a><ul>
+<li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R与RStudio安装与基础操作</a><ul>
 <li class="chapter" data-level="" data-path="intro-and-installation.html"><a href="intro-and-installation.html#intro-overview"><i class="fa fa-check"></i>本章内容速览</a></li>
 <li class="chapter" data-level="1.1" data-path="what-is-R.html"><a href="what-is-R.html"><i class="fa fa-check"></i><b>1.1</b> 什么是R</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="what-is-R.html"><a href="what-is-R.html#R-and-RStudio-install"><i class="fa fa-check"></i><b>1.1.1</b> 安装R和RStudio</a></li>
@@ -201,6 +201,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4.2" data-path="packages.html"><a href="packages.html#package-install"><i class="fa fa-check"></i><b>1.4.2</b> 如何安装packages</a></li>
 <li class="chapter" data-level="1.4.3" data-path="packages.html"><a href="packages.html#package-use"><i class="fa fa-check"></i><b>1.4.3</b> 如何使用packages</a></li>
 <li class="chapter" data-level="1.4.4" data-path="packages.html"><a href="packages.html#package-misc"><i class="fa fa-check"></i><b>1.4.4</b> 其它</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="-test-intro.html"><a href="-test-intro.html"><i class="fa fa-check"></i><b>1.5</b> 小测 {test-intro}</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-basics"><i class="fa fa-check"></i><b>1.5.1</b> 基础 {test-intro-basics}</a></li>
+<li class="chapter" data-level="1.5.2" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-advanced"><i class="fa fa-check"></i><b>1.5.2</b> 进阶 {test-intro-advanced}</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> 向量，逻辑，循环和函数</a><ul>
@@ -232,13 +236,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.5.3" data-path="control-flow.html"><a href="control-flow.html#control-flow-rigorous"><i class="fa fa-check"></i><b>2.5.3</b> 严谨版</a></li>
 <li class="chapter" data-level="2.5.4" data-path="control-flow.html"><a href="control-flow.html#apply"><i class="fa fa-check"></i><b>2.5.4</b> 如何避免for循环——<code>apply()</code>家族函数</a></li>
 <li class="chapter" data-level="2.5.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.5.5</b> <code>foreach</code> package：for循环的进化版</a></li>
+<li class="chapter" data-level="2.5.6" data-path="control-flow.html"><a href="control-flow.html#purrr-packageapply"><i class="fa fa-check"></i><b>2.5.6</b> <code>purrr</code> package中的<code>apply</code>家族函数替代品和进化产物</a></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.6</b> 函数</a><ul>
 <li class="chapter" data-level="2.6.1" data-path="functions.html"><a href="functions.html#functions-in-R"><i class="fa fa-check"></i><b>2.6.1</b> R中的函数</a></li>
 <li class="chapter" data-level="2.6.2" data-path="functions.html"><a href="functions.html#abbr"><i class="fa fa-check"></i><b>2.6.2</b> 调用函数</a></li>
 <li class="chapter" data-level="2.6.3" data-path="functions.html"><a href="functions.html#create-functions"><i class="fa fa-check"></i><b>2.6.3</b> 创建函数</a></li>
 <li class="chapter" data-level="2.6.4" data-path="functions.html"><a href="functions.html#about-dot-dot-dot"><i class="fa fa-check"></i><b>2.6.4</b> 关于<code>...</code></a></li>
-<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.5</b> 测速</a></li>
+<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#functions-assign-global"><i class="fa fa-check"></i><b>2.6.5</b> 赋值函数外的对象</a></li>
+<li class="chapter" data-level="2.6.6" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.6</b> 测速</a></li>
 </ul></li>
 <li class="chapter" data-level="2.7" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>2.7</b> 列表 (list)</a><ul>
 <li class="chapter" data-level="2.7.1" data-path="list.html"><a href="list.html#list-index"><i class="fa fa-check"></i><b>2.7.1</b> list的索引/取子集</a></li>
@@ -248,7 +254,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.8" data-path="matrix-array.html"><a href="matrix-array.html"><i class="fa fa-check"></i><b>2.8</b> array（数组）和matrix（矩阵）简介</a><ul>
 <li class="chapter" data-level="2.8.1" data-path="matrix-array.html"><a href="matrix-array.html#matrix-array-naming"><i class="fa fa-check"></i><b>2.8.1</b> 给matrices和arrays命名</a></li>
 </ul></li>
-<li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a></li>
+<li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a><ul>
+<li class="chapter" data-level="2.9.1" data-path="test-base.html"><a href="test-base.html#test-base-basics"><i class="fa fa-check"></i><b>2.9.1</b> 基础</a></li>
+<li class="chapter" data-level="2.9.2" data-path="test-base.html"><a href="test-base.html#test-base-advanced"><i class="fa fa-check"></i><b>2.9.2</b> 进阶</a></li>
+<li class="chapter" data-level="2.9.3" data-path="test-base.html"><a href="test-base.html#test-base-challenge"><i class="fa fa-check"></i><b>2.9.3</b> 挑战</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="tibble.html"><a href="tibble.html"><i class="fa fa-check"></i><b>3</b> dataframe和tibble</a><ul>
 <li class="chapter" data-level="3.0.1" data-path="tibble.html"><a href="tibble.html#section-3.0.1"><i class="fa fa-check"></i><b>3.0.1</b> 本章内容速览</a></li>
@@ -346,64 +356,64 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre class="sourceCode r"><code class="sourceCode r">y &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dv">1</span>, <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;あ&quot;</span>), <span class="kw">list</span>(<span class="dv">1</span><span class="op">+</span>3i, <span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">NA</span>, <span class="ot">TRUE</span>)), 
           <span class="kw">tibble</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="st">&quot;阿拉木图&quot;</span>, <span class="st">&quot;什切青&quot;</span>), <span class="dt">y =</span> <span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">3</span>)),
           t.test)
-y
-<span class="co">## [[1]]</span>
-<span class="co">## [1] 1</span>
-<span class="co">## </span>
-<span class="co">## [[2]]</span>
-<span class="co">## [1] &quot;a&quot;  &quot;あ&quot;</span>
-<span class="co">## </span>
-<span class="co">## [[3]]</span>
-<span class="co">## [[3]][[1]]</span>
-<span class="co">## [1] 1+3i</span>
-<span class="co">## </span>
-<span class="co">## [[3]][[2]]</span>
-<span class="co">## [1] FALSE    NA  TRUE</span>
-<span class="co">## </span>
-<span class="co">## </span>
-<span class="co">## [[4]]</span>
-<span class="co">## # A tibble: 2 x 2</span>
-<span class="co">##   x            y</span>
-<span class="co">##   &lt;chr&gt;    &lt;dbl&gt;</span>
-<span class="co">## 1 阿拉木图     2</span>
-<span class="co">## 2 什切青       3</span>
-<span class="co">## </span>
-<span class="co">## [[5]]</span>
-<span class="co">## function (x, ...) </span>
-<span class="co">## UseMethod(&quot;t.test&quot;)</span>
-<span class="co">## &lt;bytecode: 0x7fd6c1f41318&gt;</span>
-<span class="co">## &lt;environment: namespace:stats&gt;</span></code></pre>
+y</code></pre>
+<pre><code>#&gt; [[1]]
+#&gt; [1] 1
+#&gt; 
+#&gt; [[2]]
+#&gt; [1] &quot;a&quot;  &quot;あ&quot;
+#&gt; 
+#&gt; [[3]]
+#&gt; [[3]][[1]]
+#&gt; [1] 1+3i
+#&gt; 
+#&gt; [[3]][[2]]
+#&gt; [1] FALSE    NA  TRUE
+#&gt; 
+#&gt; 
+#&gt; [[4]]
+#&gt; # A tibble: 2 x 2
+#&gt;   x            y
+#&gt;   &lt;chr&gt;    &lt;dbl&gt;
+#&gt; 1 阿拉木图     2
+#&gt; 2 什切青       3
+#&gt; 
+#&gt; [[5]]
+#&gt; function (x, ...) 
+#&gt; UseMethod(&quot;t.test&quot;)
+#&gt; &lt;bytecode: 0x7fa7552d4c20&gt;
+#&gt; &lt;environment: namespace:stats&gt;</code></pre>
 <div id="list-index" class="section level3">
 <h3><span class="header-section-number">2.7.1</span> list的索引/取子集</h3>
 <p>使用上面的例子：</p>
-<pre class="sourceCode r"><code class="sourceCode r">y[<span class="dv">2</span>] <span class="co"># 使用单方括号，得到的是一个只有一个list元素的list</span>
-<span class="co">## [[1]]</span>
-<span class="co">## [1] &quot;a&quot;  &quot;あ&quot;</span>
-y[[<span class="dv">2</span>]] <span class="co"># 使用双方括号，得到的是一个vector</span>
-<span class="co">## [1] &quot;a&quot;  &quot;あ&quot;</span>
-y[[<span class="dv">3</span>]][[<span class="dv">2</span>]] <span class="co"># 得到的也是一个vector；父list的索引在前，子list的在后</span>
-<span class="co">## [1] FALSE    NA  TRUE</span>
-y[[<span class="dv">3</span>]] <span class="co"># 这个位置包含两个子list，因此得到一个有两个list元素的list</span>
-<span class="co">## [[1]]</span>
-<span class="co">## [1] 1+3i</span>
-<span class="co">## </span>
-<span class="co">## [[2]]</span>
-<span class="co">## [1] FALSE    NA  TRUE</span>
-y[[<span class="dv">3</span>]][[<span class="dv">2</span>]][<span class="dv">2</span>] <span class="co"># 得到vector时，直接在后面用单方括号</span>
-<span class="co">## [1] NA</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">y[<span class="dv">2</span>] <span class="co"># 使用单方括号，得到的是一个只有一个list元素的list</span></code></pre>
+<pre><code>#&gt; [[1]]
+#&gt; [1] &quot;a&quot;  &quot;あ&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">y[[<span class="dv">2</span>]] <span class="co"># 使用双方括号，得到的是一个vector</span></code></pre>
+<pre><code>#&gt; [1] &quot;a&quot;  &quot;あ&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">y[[<span class="dv">3</span>]][[<span class="dv">2</span>]] <span class="co"># 得到的也是一个vector；父list的索引在前，子list的在后</span></code></pre>
+<pre><code>#&gt; [1] FALSE    NA  TRUE</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">y[[<span class="dv">3</span>]] <span class="co"># 这个位置包含两个子list，因此得到一个有两个list元素的list</span></code></pre>
+<pre><code>#&gt; [[1]]
+#&gt; [1] 1+3i
+#&gt; 
+#&gt; [[2]]
+#&gt; [1] FALSE    NA  TRUE</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">y[[<span class="dv">3</span>]][[<span class="dv">2</span>]][<span class="dv">2</span>] <span class="co"># 得到vector时，直接在后面用单方括号</span></code></pre>
+<pre><code>#&gt; [1] NA</code></pre>
 <p>list里的元素可以有名字；被命名的元素可以通过<code>$</code>符号抓取：</p>
 <pre class="sourceCode r"><code class="sourceCode r">z &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>), <span class="dt">z2 =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>), <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>))
-z <span class="co"># `[[2]]`被`$z2`所取代</span>
-<span class="co">## [[1]]</span>
-<span class="co">## [1] 1 3</span>
-<span class="co">## </span>
-<span class="co">## $z2</span>
-<span class="co">## [1] 4 5 6</span>
-<span class="co">## </span>
-<span class="co">## [[3]]</span>
-<span class="co">## [1] &quot;a&quot; &quot;b&quot;</span>
-z<span class="op">$</span>z2 <span class="op">==</span><span class="st"> </span>z[[<span class="dv">2</span>]] <span class="co"># `z[[2]]`仍然是可用的，结果和`z$z2`一样</span>
-<span class="co">## [1] TRUE TRUE TRUE</span></code></pre>
+z <span class="co"># `[[2]]`被`$z2`所取代</span></code></pre>
+<pre><code>#&gt; [[1]]
+#&gt; [1] 1 3
+#&gt; 
+#&gt; $z2
+#&gt; [1] 4 5 6
+#&gt; 
+#&gt; [[3]]
+#&gt; [1] &quot;a&quot; &quot;b&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">z<span class="op">$</span>z2 <span class="op">==</span><span class="st"> </span>z[[<span class="dv">2</span>]] <span class="co"># `z[[2]]`仍然是可用的，结果和`z$z2`一样</span></code></pre>
+<pre><code>#&gt; [1] TRUE TRUE TRUE</code></pre>
 </div>
 <div id="list-combine-unlist" class="section level3">
 <h3><span class="header-section-number">2.7.2</span> 合并与拆解</h3>
@@ -411,21 +421,21 @@ z<span class="op">$</span>z2 <span class="op">==</span><span class="st"> </span>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(<span class="kw">list</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="kw">list</span>(<span class="dv">3</span>, <span class="dv">4</span>, <span class="kw">list</span>(<span class="dv">5</span>,<span class="dv">6</span>)))
 <span class="co"># 将等同于list(1, 2, 3, 4, list(5,6))</span></code></pre>
 <p>也许你想把需要“合并”的列表作为子列表放在另一个列表里；这也很简单，在本节一开始就讲了：</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">list</span>(<span class="kw">list</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="kw">list</span>(<span class="dv">3</span>, <span class="dv">4</span>))
-<span class="co">## [[1]]</span>
-<span class="co">## [[1]][[1]]</span>
-<span class="co">## [1] 1</span>
-<span class="co">## </span>
-<span class="co">## [[1]][[2]]</span>
-<span class="co">## [1] 2</span>
-<span class="co">## </span>
-<span class="co">## </span>
-<span class="co">## [[2]]</span>
-<span class="co">## [[2]][[1]]</span>
-<span class="co">## [1] 3</span>
-<span class="co">## </span>
-<span class="co">## [[2]][[2]]</span>
-<span class="co">## [1] 4</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">list</span>(<span class="kw">list</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="kw">list</span>(<span class="dv">3</span>, <span class="dv">4</span>))</code></pre>
+<pre><code>#&gt; [[1]]
+#&gt; [[1]][[1]]
+#&gt; [1] 1
+#&gt; 
+#&gt; [[1]][[2]]
+#&gt; [1] 2
+#&gt; 
+#&gt; 
+#&gt; [[2]]
+#&gt; [[2]][[1]]
+#&gt; [1] 3
+#&gt; 
+#&gt; [[2]][[2]]
+#&gt; [1] 4</code></pre>
 <p>通过<code>unlist()</code>函数来拆解列表中的子列表。若参数<code>recursive</code>为<code>TRUE</code>（默认值），将一直拆解至无子列表的列表，如果此最简列表的元素都属于五种atomic vector中的数据<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a>，此列表还会被进一步化简成向量。若<code>recursive = FALSE</code>，最“靠外”的一级列表（可能是多个）将会被拆解。</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">unlist</span>(<span class="kw">list</span>(<span class="dv">1</span>, <span class="kw">list</span>(<span class="dv">2</span>, <span class="kw">list</span>(<span class="dv">3</span>, <span class="dv">4</span>)), <span class="kw">list</span>(<span class="dv">5</span>, <span class="dv">6</span>), <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>))
 <span class="co"># 将等同于c(1, 2, 3, 4, 5, 6, 7, 8, 9) </span>
@@ -451,8 +461,8 @@ z<span class="op">$</span>z2 <span class="op">==</span><span class="st"> </span>
 <p>在第<a href="logical-operation.html#relational-operators">2.4.2</a>节讲过，<code>==</code>只能用于atomic vectors；对于列表（和其他对象）可以用<code>identical()</code>函数确认两者是否完全一致。</p>
 <pre class="sourceCode r"><code class="sourceCode r">A &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="st">&quot;a&quot;</span>, <span class="dv">1</span>, <span class="ot">TRUE</span>); B &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dv">5</span><span class="op">+</span>8i, <span class="ot">NA</span>, 4L)
 C1 &lt;-<span class="st"> </span><span class="kw">unlist</span>(<span class="kw">list</span>(A, B), <span class="dt">recursive =</span> <span class="ot">FALSE</span>); C2 &lt;-<span class="st"> </span><span class="kw">c</span>(A, B)
-<span class="kw">identical</span>(C1, C2)
-<span class="co">## [1] TRUE</span></code></pre>
+<span class="kw">identical</span>(C1, C2)</code></pre>
+<pre><code>#&gt; [1] TRUE</code></pre>
 </div>
 </div>
 <div class="footnotes">
@@ -498,7 +508,7 @@ gitbook.start({
 },
 "edit": {
 "link": "https://github.com/TianyiShi2001/r-and-tidyverse-book/02-basics.Rmd",
-"text": "Edit"
+"text": "Github"
 },
 "history": {
 "link": null,

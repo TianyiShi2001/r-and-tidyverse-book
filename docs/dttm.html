@@ -13,7 +13,7 @@
   
   
   <meta property="og:description" content="这是一本R与tidyverse的入门教程" />
-  <meta name="github-repo" content="TianyiShi2001/R-Tutorial-Resorces" />
+  <meta name="github-repo" content="TianyiShi2001/r-and-tidyverse-book" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="5.5 日期和时间 | R与tidyverse——数据分析入门" />
@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-24" />
+<meta name="date" content="2019-07-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -178,7 +178,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i>版权页</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical"><i class="fa fa-check"></i>关于编写本书的技术信息</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R和RStudio介绍和安装教程</a><ul>
+<li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R与RStudio安装与基础操作</a><ul>
 <li class="chapter" data-level="" data-path="intro-and-installation.html"><a href="intro-and-installation.html#intro-overview"><i class="fa fa-check"></i>本章内容速览</a></li>
 <li class="chapter" data-level="1.1" data-path="what-is-R.html"><a href="what-is-R.html"><i class="fa fa-check"></i><b>1.1</b> 什么是R</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="what-is-R.html"><a href="what-is-R.html#R-and-RStudio-install"><i class="fa fa-check"></i><b>1.1.1</b> 安装R和RStudio</a></li>
@@ -201,6 +201,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4.2" data-path="packages.html"><a href="packages.html#package-install"><i class="fa fa-check"></i><b>1.4.2</b> 如何安装packages</a></li>
 <li class="chapter" data-level="1.4.3" data-path="packages.html"><a href="packages.html#package-use"><i class="fa fa-check"></i><b>1.4.3</b> 如何使用packages</a></li>
 <li class="chapter" data-level="1.4.4" data-path="packages.html"><a href="packages.html#package-misc"><i class="fa fa-check"></i><b>1.4.4</b> 其它</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="-test-intro.html"><a href="-test-intro.html"><i class="fa fa-check"></i><b>1.5</b> 小测 {test-intro}</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-basics"><i class="fa fa-check"></i><b>1.5.1</b> 基础 {test-intro-basics}</a></li>
+<li class="chapter" data-level="1.5.2" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-advanced"><i class="fa fa-check"></i><b>1.5.2</b> 进阶 {test-intro-advanced}</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> 向量，逻辑，循环和函数</a><ul>
@@ -232,13 +236,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.5.3" data-path="control-flow.html"><a href="control-flow.html#control-flow-rigorous"><i class="fa fa-check"></i><b>2.5.3</b> 严谨版</a></li>
 <li class="chapter" data-level="2.5.4" data-path="control-flow.html"><a href="control-flow.html#apply"><i class="fa fa-check"></i><b>2.5.4</b> 如何避免for循环——<code>apply()</code>家族函数</a></li>
 <li class="chapter" data-level="2.5.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.5.5</b> <code>foreach</code> package：for循环的进化版</a></li>
+<li class="chapter" data-level="2.5.6" data-path="control-flow.html"><a href="control-flow.html#purrr-packageapply"><i class="fa fa-check"></i><b>2.5.6</b> <code>purrr</code> package中的<code>apply</code>家族函数替代品和进化产物</a></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.6</b> 函数</a><ul>
 <li class="chapter" data-level="2.6.1" data-path="functions.html"><a href="functions.html#functions-in-R"><i class="fa fa-check"></i><b>2.6.1</b> R中的函数</a></li>
 <li class="chapter" data-level="2.6.2" data-path="functions.html"><a href="functions.html#abbr"><i class="fa fa-check"></i><b>2.6.2</b> 调用函数</a></li>
 <li class="chapter" data-level="2.6.3" data-path="functions.html"><a href="functions.html#create-functions"><i class="fa fa-check"></i><b>2.6.3</b> 创建函数</a></li>
 <li class="chapter" data-level="2.6.4" data-path="functions.html"><a href="functions.html#about-dot-dot-dot"><i class="fa fa-check"></i><b>2.6.4</b> 关于<code>...</code></a></li>
-<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.5</b> 测速</a></li>
+<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#functions-assign-global"><i class="fa fa-check"></i><b>2.6.5</b> 赋值函数外的对象</a></li>
+<li class="chapter" data-level="2.6.6" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.6</b> 测速</a></li>
 </ul></li>
 <li class="chapter" data-level="2.7" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>2.7</b> 列表 (list)</a><ul>
 <li class="chapter" data-level="2.7.1" data-path="list.html"><a href="list.html#list-index"><i class="fa fa-check"></i><b>2.7.1</b> list的索引/取子集</a></li>
@@ -248,7 +254,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.8" data-path="matrix-array.html"><a href="matrix-array.html"><i class="fa fa-check"></i><b>2.8</b> array（数组）和matrix（矩阵）简介</a><ul>
 <li class="chapter" data-level="2.8.1" data-path="matrix-array.html"><a href="matrix-array.html#matrix-array-naming"><i class="fa fa-check"></i><b>2.8.1</b> 给matrices和arrays命名</a></li>
 </ul></li>
-<li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a></li>
+<li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a><ul>
+<li class="chapter" data-level="2.9.1" data-path="test-base.html"><a href="test-base.html#test-base-basics"><i class="fa fa-check"></i><b>2.9.1</b> 基础</a></li>
+<li class="chapter" data-level="2.9.2" data-path="test-base.html"><a href="test-base.html#test-base-advanced"><i class="fa fa-check"></i><b>2.9.2</b> 进阶</a></li>
+<li class="chapter" data-level="2.9.3" data-path="test-base.html"><a href="test-base.html#test-base-challenge"><i class="fa fa-check"></i><b>2.9.3</b> 挑战</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="tibble.html"><a href="tibble.html"><i class="fa fa-check"></i><b>3</b> dataframe和tibble</a><ul>
 <li class="chapter" data-level="3.0.1" data-path="tibble.html"><a href="tibble.html#section-3.0.1"><i class="fa fa-check"></i><b>3.0.1</b> 本章内容速览</a></li>
@@ -340,47 +350,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="dttm" class="section level2">
 <h2><span class="header-section-number">5.5</span> 日期和时间</h2>
-<p>日期和时间是一个很令人头疼的话题。不是所有的年都是365天，不是每天都是24小时，不是每分钟都是60秒<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a>。</p>
+<p>日期和时间是一个很令人头疼的话题。不是所有的年都是365天，不是每天都是24小时，不是每分钟都是60秒<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a>。</p>
 <p>R自带的日期/时间方法不太好用，因此我们用一个叫做<code>lubridate</code>的package.</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;lubridate&quot;</span>)
 <span class="kw">library</span>(<span class="st">&quot;lubridate&quot;</span>)</code></pre>
 <div id="iso" class="section level3">
 <h3><span class="header-section-number">5.5.1</span> ISO标准</h3>
 <p>日期/时间的ISO标准格式是这样的：</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">now</span>()
-<span class="co">## [1] &quot;2019-07-24 09:54:18 CST&quot;</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">now</span>()</code></pre>
+<pre><code>#&gt; [1] &quot;2019-07-28 13:16:31 CST&quot;</code></pre>
 <p>最后三个字母是时区。</p>
 </div>
 <div id="section-5.5.2" class="section level3">
 <h3><span class="header-section-number">5.5.2</span> 创建日期/时间</h3>
 <div id="section-5.5.2.1" class="section level4">
 <h4><span class="header-section-number">5.5.2.1</span> 现在的日期/时间</h4>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">today</span>()
-<span class="co">## [1] &quot;2019-07-24&quot;</span>
-<span class="kw">now</span>()
-<span class="co">## [1] &quot;2019-07-24 09:54:18 CST&quot;</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">today</span>()</code></pre>
+<pre><code>#&gt; [1] &quot;2019-07-28&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">now</span>()</code></pre>
+<pre><code>#&gt; [1] &quot;2019-07-28 13:16:31 CST&quot;</code></pre>
 </div>
 <div id="section-5.5.2.2" class="section level4">
 <h4><span class="header-section-number">5.5.2.2</span> 通过字符串转换</h4>
 <p><code>date()</code>函数可以把ISO标准格式的日期，从字符串转换成日期的数据类型。</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(<span class="st">&quot;2001-02-01&quot;</span>)
-<span class="co">## [1] &quot;character&quot;</span>
-<span class="kw">date</span>(<span class="st">&quot;2001-02-01&quot;</span>); <span class="kw">class</span>(<span class="kw">date</span>(<span class="st">&quot;2001-02-01&quot;</span>))
-<span class="co">## [1] &quot;2001-02-01&quot;</span>
-<span class="co">## [1] &quot;Date&quot;</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(<span class="st">&quot;2001-02-01&quot;</span>)</code></pre>
+<pre><code>#&gt; [1] &quot;character&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">date</span>(<span class="st">&quot;2001-02-01&quot;</span>); <span class="kw">class</span>(<span class="kw">date</span>(<span class="st">&quot;2001-02-01&quot;</span>))</code></pre>
+<pre><code>#&gt; [1] &quot;2001-02-01&quot;</code></pre>
+<pre><code>#&gt; [1] &quot;Date&quot;</code></pre>
 <p><code>ymd()</code>, <code>mdy()</code>, <code>dmy()</code>这三个函数可以很智能地把各种格式的日期转换成ISO标准的日期。</p>
 <pre class="sourceCode r"><code class="sourceCode r">X &lt;-<span class="st"> </span><span class="kw">date</span>(<span class="st">&quot;2001-02-01&quot;</span>)
 A &lt;-<span class="st"> </span><span class="kw">ymd</span>(<span class="dv">010201</span>)
 B &lt;-<span class="st">  </span><span class="kw">mdy</span>(<span class="st">&quot;February the 1st, 2001&quot;</span>)
 C &lt;-<span class="st"> </span><span class="kw">dmy</span>(<span class="st">&quot;01/FEB/01&quot;</span>)
 <span class="co"># 验证A, B, C全部等于X</span>
-<span class="kw">sapply</span>(<span class="kw">list</span>(A, B, C), identical, X)
-<span class="co">## [1] TRUE TRUE TRUE</span></code></pre>
+<span class="kw">sapply</span>(<span class="kw">list</span>(A, B, C), identical, X)</code></pre>
+<pre><code>#&gt; [1] TRUE TRUE TRUE</code></pre>
 <p>如果想加上时间，使用有<code>_h</code>, <code>_hm</code>, <code>_hms</code>后缀的版本的函数：</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dmy_h</span>(<span class="st">&quot;01-Feb-2001 17&quot;</span>)
-<span class="co">## [1] &quot;2001-02-01 17:00:00 UTC&quot;</span>
-<span class="kw">ymd_hms</span>(<span class="dv">010201173245</span>)
-<span class="co">## [1] &quot;2001-02-01 17:32:45 UTC&quot;</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dmy_h</span>(<span class="st">&quot;01-Feb-2001 17&quot;</span>)</code></pre>
+<pre><code>#&gt; [1] &quot;2001-02-01 17:00:00 UTC&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ymd_hms</span>(<span class="dv">010201173245</span>)</code></pre>
+<pre><code>#&gt; [1] &quot;2001-02-01 17:32:45 UTC&quot;</code></pre>
 </div>
 </div>
 <div id="section-5.5.3" class="section level3">
@@ -394,8 +404,8 @@ C &lt;-<span class="st"> </span><span class="kw">dmy</span>(<span class="st">&qu
 <!-- </div> -->
 <div class="footnotes">
 <hr />
-<ol start="20">
-<li id="fn20"><p>闰年为366天；夏令时开始时的那一天只有23小时，结束时为25小时；地球的自转速度在缓慢下降，因此会有“闰秒”。<a href="dttm.html#fnref20" class="footnote-back">↩</a></p></li>
+<ol start="21">
+<li id="fn21"><p>闰年为366天；夏令时开始时的那一天只有23小时，结束时为25小时；地球的自转速度在缓慢下降，因此会有“闰秒”。<a href="dttm.html#fnref21" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>
@@ -435,7 +445,7 @@ gitbook.start({
 },
 "edit": {
 "link": "https://github.com/TianyiShi2001/r-and-tidyverse-book/05-wrangle.Rmd",
-"text": "Edit"
+"text": "Github"
 },
 "history": {
 "link": null,

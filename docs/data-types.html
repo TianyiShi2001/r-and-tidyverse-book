@@ -13,7 +13,7 @@
   
   
   <meta property="og:description" content="这是一本R与tidyverse的入门教程" />
-  <meta name="github-repo" content="TianyiShi2001/R-Tutorial-Resorces" />
+  <meta name="github-repo" content="TianyiShi2001/r-and-tidyverse-book" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="2.2 数据/对象类型 (Data/Object Types) | R与tidyverse——数据分析入门" />
@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-24" />
+<meta name="date" content="2019-07-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -178,7 +178,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i>版权页</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical"><i class="fa fa-check"></i>关于编写本书的技术信息</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R和RStudio介绍和安装教程</a><ul>
+<li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R与RStudio安装与基础操作</a><ul>
 <li class="chapter" data-level="" data-path="intro-and-installation.html"><a href="intro-and-installation.html#intro-overview"><i class="fa fa-check"></i>本章内容速览</a></li>
 <li class="chapter" data-level="1.1" data-path="what-is-R.html"><a href="what-is-R.html"><i class="fa fa-check"></i><b>1.1</b> 什么是R</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="what-is-R.html"><a href="what-is-R.html#R-and-RStudio-install"><i class="fa fa-check"></i><b>1.1.1</b> 安装R和RStudio</a></li>
@@ -201,6 +201,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4.2" data-path="packages.html"><a href="packages.html#package-install"><i class="fa fa-check"></i><b>1.4.2</b> 如何安装packages</a></li>
 <li class="chapter" data-level="1.4.3" data-path="packages.html"><a href="packages.html#package-use"><i class="fa fa-check"></i><b>1.4.3</b> 如何使用packages</a></li>
 <li class="chapter" data-level="1.4.4" data-path="packages.html"><a href="packages.html#package-misc"><i class="fa fa-check"></i><b>1.4.4</b> 其它</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="-test-intro.html"><a href="-test-intro.html"><i class="fa fa-check"></i><b>1.5</b> 小测 {test-intro}</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-basics"><i class="fa fa-check"></i><b>1.5.1</b> 基础 {test-intro-basics}</a></li>
+<li class="chapter" data-level="1.5.2" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-advanced"><i class="fa fa-check"></i><b>1.5.2</b> 进阶 {test-intro-advanced}</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> 向量，逻辑，循环和函数</a><ul>
@@ -232,13 +236,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.5.3" data-path="control-flow.html"><a href="control-flow.html#control-flow-rigorous"><i class="fa fa-check"></i><b>2.5.3</b> 严谨版</a></li>
 <li class="chapter" data-level="2.5.4" data-path="control-flow.html"><a href="control-flow.html#apply"><i class="fa fa-check"></i><b>2.5.4</b> 如何避免for循环——<code>apply()</code>家族函数</a></li>
 <li class="chapter" data-level="2.5.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.5.5</b> <code>foreach</code> package：for循环的进化版</a></li>
+<li class="chapter" data-level="2.5.6" data-path="control-flow.html"><a href="control-flow.html#purrr-packageapply"><i class="fa fa-check"></i><b>2.5.6</b> <code>purrr</code> package中的<code>apply</code>家族函数替代品和进化产物</a></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.6</b> 函数</a><ul>
 <li class="chapter" data-level="2.6.1" data-path="functions.html"><a href="functions.html#functions-in-R"><i class="fa fa-check"></i><b>2.6.1</b> R中的函数</a></li>
 <li class="chapter" data-level="2.6.2" data-path="functions.html"><a href="functions.html#abbr"><i class="fa fa-check"></i><b>2.6.2</b> 调用函数</a></li>
 <li class="chapter" data-level="2.6.3" data-path="functions.html"><a href="functions.html#create-functions"><i class="fa fa-check"></i><b>2.6.3</b> 创建函数</a></li>
 <li class="chapter" data-level="2.6.4" data-path="functions.html"><a href="functions.html#about-dot-dot-dot"><i class="fa fa-check"></i><b>2.6.4</b> 关于<code>...</code></a></li>
-<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.5</b> 测速</a></li>
+<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#functions-assign-global"><i class="fa fa-check"></i><b>2.6.5</b> 赋值函数外的对象</a></li>
+<li class="chapter" data-level="2.6.6" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.6</b> 测速</a></li>
 </ul></li>
 <li class="chapter" data-level="2.7" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>2.7</b> 列表 (list)</a><ul>
 <li class="chapter" data-level="2.7.1" data-path="list.html"><a href="list.html#list-index"><i class="fa fa-check"></i><b>2.7.1</b> list的索引/取子集</a></li>
@@ -248,7 +254,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.8" data-path="matrix-array.html"><a href="matrix-array.html"><i class="fa fa-check"></i><b>2.8</b> array（数组）和matrix（矩阵）简介</a><ul>
 <li class="chapter" data-level="2.8.1" data-path="matrix-array.html"><a href="matrix-array.html#matrix-array-naming"><i class="fa fa-check"></i><b>2.8.1</b> 给matrices和arrays命名</a></li>
 </ul></li>
-<li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a></li>
+<li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a><ul>
+<li class="chapter" data-level="2.9.1" data-path="test-base.html"><a href="test-base.html#test-base-basics"><i class="fa fa-check"></i><b>2.9.1</b> 基础</a></li>
+<li class="chapter" data-level="2.9.2" data-path="test-base.html"><a href="test-base.html#test-base-advanced"><i class="fa fa-check"></i><b>2.9.2</b> 进阶</a></li>
+<li class="chapter" data-level="2.9.3" data-path="test-base.html"><a href="test-base.html#test-base-challenge"><i class="fa fa-check"></i><b>2.9.3</b> 挑战</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="tibble.html"><a href="tibble.html"><i class="fa fa-check"></i><b>3</b> dataframe和tibble</a><ul>
 <li class="chapter" data-level="3.0.1" data-path="tibble.html"><a href="tibble.html#section-3.0.1"><i class="fa fa-check"></i><b>3.0.1</b> 本章内容速览</a></li>
@@ -386,32 +396,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="data-types-simple-operations" class="section level4">
 <h4><span class="header-section-number">2.2.1.2</span> 关于数据类型的简单操作</h4>
 <p>通过<code>class()</code>函数，可以查看数据/对象的类型。</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(<span class="dv">6</span>) <span class="co"># 6是一个（浮点）数，应为&quot;numeric&quot;</span>
-<span class="co">## [1] &quot;numeric&quot;</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(<span class="dv">6</span>) <span class="co"># 6是一个（浮点）数，应为&quot;numeric&quot;</span></code></pre>
+<pre><code>#&gt; [1] &quot;numeric&quot;</code></pre>
 <p>通过<code>is.XXX()</code>函数，可以得到一个逻辑值，指明此数据/对象是否属于某个类型，<code>TRUE</code>为是，<code>FALSE</code>为否。比如：</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.numeric</span>(<span class="dv">6</span>)
-<span class="co">## [1] TRUE</span>
-<span class="kw">is.character</span>(<span class="st">&quot;6&quot;</span>)
-<span class="co">## [1] TRUE</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.numeric</span>(<span class="dv">6</span>)</code></pre>
+<pre><code>#&gt; [1] TRUE</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.character</span>(<span class="st">&quot;6&quot;</span>)</code></pre>
+<pre><code>#&gt; [1] TRUE</code></pre>
 <p>通过<code>as.XXX()</code>函数，可以把数据/对象强行转换成另一种类型，比如：</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">as.integer</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>))
-<span class="co">## [1] 1 0</span>
-<span class="kw">as.character</span>(<span class="kw">c</span>(<span class="dv">23</span>, <span class="dv">90</span>))
-<span class="co">## [1] &quot;23&quot; &quot;90&quot;</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">as.integer</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>))</code></pre>
+<pre><code>#&gt; [1] 1 0</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">as.character</span>(<span class="kw">c</span>(<span class="dv">23</span>, <span class="dv">90</span>))</code></pre>
+<pre><code>#&gt; [1] &quot;23&quot; &quot;90&quot;</code></pre>
 </div>
 <div id="na-inf-nan-null" class="section level4">
 <h4><span class="header-section-number">2.2.1.3</span> <code>NA</code>, <code>Inf</code>, <code>NaN</code>和<code>NULL</code></h4>
 <p><code>NA</code>为缺损值，意思是该元素所代表的数值丢失/不确定/不可用。举个例子，当我们统计学生的200m跑成绩时，有一些学生因为身体不适未能参与测试，这时他们的成绩应被记为<code>NA</code>：</p>
 <pre class="sourceCode r"><code class="sourceCode r">time_in_sec &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">29.37</span>, <span class="fl">28.66</span>, <span class="fl">31.32</span>, <span class="ot">NA</span>, <span class="fl">27.91</span>, <span class="ot">NA</span>)</code></pre>
 <p>之前说过，一个向量中，所有的元素都是同一类型的。的确，这里的<code>NA</code>的类型是<code>numeric</code>:</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(time_in_sec[<span class="dv">4</span>])
-<span class="co">## [1] &quot;numeric&quot;</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(time_in_sec[<span class="dv">4</span>])</code></pre>
+<pre><code>#&gt; [1] &quot;numeric&quot;</code></pre>
 <p>同理，<code>character</code>向量里的<code>NA</code>，类型也是<code>character</code>，其他类型也是一样的道理。如果只是单个的<code>NA</code>, 它的类型是<code>logical</code>:</p>
 <pre class="sourceCode r"><code class="sourceCode r">y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="ot">NA</span>)
-<span class="kw">class</span>(y[<span class="dv">3</span>])
-<span class="co">## [1] &quot;character&quot;</span>
-<span class="kw">class</span>(<span class="ot">NA</span>)
-<span class="co">## [1] &quot;logical&quot;</span></code></pre>
+<span class="kw">class</span>(y[<span class="dv">3</span>])</code></pre>
+<pre><code>#&gt; [1] &quot;character&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(<span class="ot">NA</span>)</code></pre>
+<pre><code>#&gt; [1] &quot;logical&quot;</code></pre>
 <p><code>Inf</code>（无限）<code>NaN</code>（非数）的概念，以及作为<code>numeric</code>的<code>NA</code>的数学计算在第<a href="math.html#math-NA">2.3.2.4</a>小节讨论。</p>
 <p>作为<code>logical</code>的<code>NA</code>的逻辑运算在第<a href="logical-operation.html#logical-operation">2.4</a>小节讨论。</p>
 <p><code>NULL</code>是“无”。它几乎一无是处，因此在此不作更多讨论。学有余力者可以自己去了解。</p>
@@ -435,11 +445,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h4><span class="header-section-number">2.2.2.1</span> <code>class</code>, <code>type</code>, <code>mode</code>和<code>storage mode</code></h4>
 <p>其实<code>class</code>根本不是基础的数据类型。学过编程的应该猜到了，此<code>class</code>类似于OOP里的“类”，是“高层”的类型。你可以随意篡改<code>class</code>：</p>
 <pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Joe&quot;</span>, <span class="st">&quot;Lynne&quot;</span>, <span class="st">&quot;Pat&quot;</span>)
-<span class="kw">class</span>(x) <span class="co"># 本应为&quot;character&quot;</span>
-<span class="co">## [1] &quot;character&quot;</span>
-<span class="kw">class</span>(x) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;high_school&quot;</span>, <span class="st">&quot;student&quot;</span>) <span class="co"># 篡改</span>
-<span class="kw">class</span>(x) <span class="co"># 新class</span>
-<span class="co">## [1] &quot;high_school&quot; &quot;student&quot;</span></code></pre>
+<span class="kw">class</span>(x) <span class="co"># 本应为&quot;character&quot;</span></code></pre>
+<pre><code>#&gt; [1] &quot;character&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(x) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;high_school&quot;</span>, <span class="st">&quot;student&quot;</span>) <span class="co"># 篡改</span>
+<span class="kw">class</span>(x) <span class="co"># 新class</span></code></pre>
+<pre><code>#&gt; [1] &quot;high_school&quot; &quot;student&quot;</code></pre>
 <p>用<code>typeof()</code>, <code>mode()</code>, <code>storage.mode()</code>所获取到的三种属性是不可篡改的“底层”类型。</p>
 <p>以下是五种atomic vectors用四种方式获取到的结果：</p>
 <table>
@@ -504,9 +514,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>对于矩阵和数列，用<code>typeof()</code>, <code>mode()</code>, <code>storage.mode()</code>所得到的结果与对应的atomic vectors得到的结果一致<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a>。而用<code>class()</code>会得到<code>matrix</code>/<code>array</code>.</p>
 <pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>, <span class="ot">FALSE</span>, <span class="ot">TRUE</span>), <span class="dt">ncol =</span> <span class="dv">2</span>)
-<span class="kw">typeof</span>(x); <span class="kw">class</span>(x)
-<span class="co">## [1] &quot;logical&quot;</span>
-<span class="co">## [1] &quot;matrix&quot;</span></code></pre>
+<span class="kw">typeof</span>(x); <span class="kw">class</span>(x)</code></pre>
+<pre><code>#&gt; [1] &quot;logical&quot;</code></pre>
+<pre><code>#&gt; [1] &quot;matrix&quot;</code></pre>
 <p>以下是其它数据类型用四种方式获取到的结果：</p>
 <table>
 <thead>
@@ -584,7 +594,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">ISO格式日期+时间</td>
+<td align="left">国际标准格式的日期+时间</td>
 <td align="left"><code>as.POSIXct(&quot;2018-01-02 12:23:56&quot;)</code></td>
 <td align="left"><code>double</code></td>
 <td align="left"><code>numeric</code></td>
@@ -649,7 +659,7 @@ gitbook.start({
 },
 "edit": {
 "link": "https://github.com/TianyiShi2001/r-and-tidyverse-book/02-basics.Rmd",
-"text": "Edit"
+"text": "Github"
 },
 "history": {
 "link": null,

@@ -13,7 +13,7 @@
   
   
   <meta property="og:description" content="这是一本R与tidyverse的入门教程" />
-  <meta name="github-repo" content="TianyiShi2001/R-Tutorial-Resorces" />
+  <meta name="github-repo" content="TianyiShi2001/r-and-tidyverse-book" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="3.2 创建tibble | R与tidyverse——数据分析入门" />
@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-24" />
+<meta name="date" content="2019-07-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -178,7 +178,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i>版权页</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical"><i class="fa fa-check"></i>关于编写本书的技术信息</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R和RStudio介绍和安装教程</a><ul>
+<li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R与RStudio安装与基础操作</a><ul>
 <li class="chapter" data-level="" data-path="intro-and-installation.html"><a href="intro-and-installation.html#intro-overview"><i class="fa fa-check"></i>本章内容速览</a></li>
 <li class="chapter" data-level="1.1" data-path="what-is-R.html"><a href="what-is-R.html"><i class="fa fa-check"></i><b>1.1</b> 什么是R</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="what-is-R.html"><a href="what-is-R.html#R-and-RStudio-install"><i class="fa fa-check"></i><b>1.1.1</b> 安装R和RStudio</a></li>
@@ -201,6 +201,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4.2" data-path="packages.html"><a href="packages.html#package-install"><i class="fa fa-check"></i><b>1.4.2</b> 如何安装packages</a></li>
 <li class="chapter" data-level="1.4.3" data-path="packages.html"><a href="packages.html#package-use"><i class="fa fa-check"></i><b>1.4.3</b> 如何使用packages</a></li>
 <li class="chapter" data-level="1.4.4" data-path="packages.html"><a href="packages.html#package-misc"><i class="fa fa-check"></i><b>1.4.4</b> 其它</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="-test-intro.html"><a href="-test-intro.html"><i class="fa fa-check"></i><b>1.5</b> 小测 {test-intro}</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-basics"><i class="fa fa-check"></i><b>1.5.1</b> 基础 {test-intro-basics}</a></li>
+<li class="chapter" data-level="1.5.2" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-advanced"><i class="fa fa-check"></i><b>1.5.2</b> 进阶 {test-intro-advanced}</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> 向量，逻辑，循环和函数</a><ul>
@@ -232,13 +236,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.5.3" data-path="control-flow.html"><a href="control-flow.html#control-flow-rigorous"><i class="fa fa-check"></i><b>2.5.3</b> 严谨版</a></li>
 <li class="chapter" data-level="2.5.4" data-path="control-flow.html"><a href="control-flow.html#apply"><i class="fa fa-check"></i><b>2.5.4</b> 如何避免for循环——<code>apply()</code>家族函数</a></li>
 <li class="chapter" data-level="2.5.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.5.5</b> <code>foreach</code> package：for循环的进化版</a></li>
+<li class="chapter" data-level="2.5.6" data-path="control-flow.html"><a href="control-flow.html#purrr-packageapply"><i class="fa fa-check"></i><b>2.5.6</b> <code>purrr</code> package中的<code>apply</code>家族函数替代品和进化产物</a></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.6</b> 函数</a><ul>
 <li class="chapter" data-level="2.6.1" data-path="functions.html"><a href="functions.html#functions-in-R"><i class="fa fa-check"></i><b>2.6.1</b> R中的函数</a></li>
 <li class="chapter" data-level="2.6.2" data-path="functions.html"><a href="functions.html#abbr"><i class="fa fa-check"></i><b>2.6.2</b> 调用函数</a></li>
 <li class="chapter" data-level="2.6.3" data-path="functions.html"><a href="functions.html#create-functions"><i class="fa fa-check"></i><b>2.6.3</b> 创建函数</a></li>
 <li class="chapter" data-level="2.6.4" data-path="functions.html"><a href="functions.html#about-dot-dot-dot"><i class="fa fa-check"></i><b>2.6.4</b> 关于<code>...</code></a></li>
-<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.5</b> 测速</a></li>
+<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#functions-assign-global"><i class="fa fa-check"></i><b>2.6.5</b> 赋值函数外的对象</a></li>
+<li class="chapter" data-level="2.6.6" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.6</b> 测速</a></li>
 </ul></li>
 <li class="chapter" data-level="2.7" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>2.7</b> 列表 (list)</a><ul>
 <li class="chapter" data-level="2.7.1" data-path="list.html"><a href="list.html#list-index"><i class="fa fa-check"></i><b>2.7.1</b> list的索引/取子集</a></li>
@@ -248,7 +254,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.8" data-path="matrix-array.html"><a href="matrix-array.html"><i class="fa fa-check"></i><b>2.8</b> array（数组）和matrix（矩阵）简介</a><ul>
 <li class="chapter" data-level="2.8.1" data-path="matrix-array.html"><a href="matrix-array.html#matrix-array-naming"><i class="fa fa-check"></i><b>2.8.1</b> 给matrices和arrays命名</a></li>
 </ul></li>
-<li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a></li>
+<li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a><ul>
+<li class="chapter" data-level="2.9.1" data-path="test-base.html"><a href="test-base.html#test-base-basics"><i class="fa fa-check"></i><b>2.9.1</b> 基础</a></li>
+<li class="chapter" data-level="2.9.2" data-path="test-base.html"><a href="test-base.html#test-base-advanced"><i class="fa fa-check"></i><b>2.9.2</b> 进阶</a></li>
+<li class="chapter" data-level="2.9.3" data-path="test-base.html"><a href="test-base.html#test-base-challenge"><i class="fa fa-check"></i><b>2.9.3</b> 挑战</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="tibble.html"><a href="tibble.html"><i class="fa fa-check"></i><b>3</b> dataframe和tibble</a><ul>
 <li class="chapter" data-level="3.0.1" data-path="tibble.html"><a href="tibble.html#section-3.0.1"><i class="fa fa-check"></i><b>3.0.1</b> 本章内容速览</a></li>
@@ -342,31 +352,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">3.2</span> 创建tibble</h2>
 <div id="tibble-create-manual" class="section level3">
 <h3><span class="header-section-number">3.2.1</span> 手动输入数据以创建tibble</h3>
-<p>使用<code>tibble</code>函数，按以下格式创建tibble. 换行不是必须的，但是换行会看得更清楚。如果换行，不要忘记行末的逗号。</p>
+<p>使用<code>tibble()</code>函数<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a>，按以下格式创建tibble. 换行不是必须的，但是换行会看得更清楚。如果换行，不要忘记行末的逗号。</p>
 <pre class="sourceCode r"><code class="sourceCode r">my_tibble_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">tibble</span>(
                 <span class="dt">nums =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>),
                 <span class="dt">chars =</span> <span class="kw">c</span>(<span class="st">&quot;hej&quot;</span>, <span class="st">&quot;你好&quot;</span>, <span class="st">&quot;こんにちは&quot;</span>),
                 <span class="dt">cplxnums =</span> <span class="kw">c</span>(<span class="st">&quot;4+8i&quot;</span>, <span class="st">&quot;3+5i&quot;</span>, <span class="st">&quot;3+4i&quot;</span>)
                 )
-my_tibble_<span class="dv">1</span>
-<span class="co">## # A tibble: 3 x 3</span>
-<span class="co">##    nums chars      cplxnums</span>
-<span class="co">##   &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;   </span>
-<span class="co">## 1     4 hej        4+8i    </span>
-<span class="co">## 2     5 你好       3+5i    </span>
-<span class="co">## 3     6 こんにちは 3+4i</span></code></pre>
-<p>类似地，可以从现有的vector创建。<strong>所有的变量长度必须一样。</strong></p>
-<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">5</span>)
+my_tibble_<span class="dv">1</span></code></pre>
+<pre><code>#&gt; # A tibble: 3 x 3
+#&gt;    nums chars      cplxnums
+#&gt;   &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;   
+#&gt; 1     4 hej        4+8i    
+#&gt; 2     5 你好       3+5i    
+#&gt; 3     6 こんにちは 3+4i</code></pre>
+<p>类似地，可以从现有的vector创建。<strong>注意，所有变量的长度必须一样。</strong></p>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,  <span class="dv">4</span> , <span class="dv">5</span> )
 y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">211</span>,<span class="dv">23</span>,<span class="dv">45</span>)
-z &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">20</span>,<span class="dv">32</span>)</code></pre>
+z &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">20</span> ,<span class="dv">32</span>)</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">my_tibble_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">v1 =</span> x, <span class="dt">v2 =</span> y)
-my_tibble_<span class="dv">2</span>
-<span class="co">## # A tibble: 3 x 2</span>
-<span class="co">##      v1    v2</span>
-<span class="co">##   &lt;dbl&gt; &lt;dbl&gt;</span>
-<span class="co">## 1     1   211</span>
-<span class="co">## 2     4    23</span>
-<span class="co">## 3     5    45</span></code></pre>
+my_tibble_<span class="dv">2</span></code></pre>
+<pre><code>#&gt; # A tibble: 3 x 2
+#&gt;      v1    v2
+#&gt;   &lt;dbl&gt; &lt;dbl&gt;
+#&gt; 1     1   211
+#&gt; 2     4    23
+#&gt; 3     5    45</code></pre>
 <p>而试图把<code>x</code>和<code>z</code>做成tibble就会报错：</p>
 <pre class="sourceCode r"><code class="sourceCode r">my_tibble_<span class="dv">3</span> &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">w1 =</span> x, <span class="dt">w2 =</span> z)
 
@@ -380,6 +390,12 @@ my_tibble_<span class="dv">2</span>
 <h3><span class="header-section-number">3.2.3</span> 从外部数据创建tibble</h3>
 <p>参见第<a href="import-export.html#data-import">5.2.1</a>节（数据的导入）</p>
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="19">
+<li id="fn19"><p><code>tribble()</code>函数亦可用来创建新tibble. 与<code>tibble()</code>的区别是，<code>tibble()</code>逐列写入数据，<code>tribble()</code>逐行写入数据。查看帮助文档获取使用例。<a href="tibble-create.html#fnref19" class="footnote-back">↩</a></p></li>
+</ol>
 </div>
             </section>
 
@@ -418,7 +434,7 @@ gitbook.start({
 },
 "edit": {
 "link": "https://github.com/TianyiShi2001/r-and-tidyverse-book/03-tibble.Rmd",
-"text": "Edit"
+"text": "Github"
 },
 "history": {
 "link": null,

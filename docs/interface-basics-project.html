@@ -13,7 +13,7 @@
   
   
   <meta property="og:description" content="这是一本R与tidyverse的入门教程" />
-  <meta name="github-repo" content="TianyiShi2001/R-Tutorial-Resorces" />
+  <meta name="github-repo" content="TianyiShi2001/r-and-tidyverse-book" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="1.3 RStudio界面介绍，基本操作，和创建新项目 | R与tidyverse——数据分析入门" />
@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-24" />
+<meta name="date" content="2019-07-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -178,7 +178,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i>版权页</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical"><i class="fa fa-check"></i>关于编写本书的技术信息</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R和RStudio介绍和安装教程</a><ul>
+<li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R与RStudio安装与基础操作</a><ul>
 <li class="chapter" data-level="" data-path="intro-and-installation.html"><a href="intro-and-installation.html#intro-overview"><i class="fa fa-check"></i>本章内容速览</a></li>
 <li class="chapter" data-level="1.1" data-path="what-is-R.html"><a href="what-is-R.html"><i class="fa fa-check"></i><b>1.1</b> 什么是R</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="what-is-R.html"><a href="what-is-R.html#R-and-RStudio-install"><i class="fa fa-check"></i><b>1.1.1</b> 安装R和RStudio</a></li>
@@ -201,6 +201,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4.2" data-path="packages.html"><a href="packages.html#package-install"><i class="fa fa-check"></i><b>1.4.2</b> 如何安装packages</a></li>
 <li class="chapter" data-level="1.4.3" data-path="packages.html"><a href="packages.html#package-use"><i class="fa fa-check"></i><b>1.4.3</b> 如何使用packages</a></li>
 <li class="chapter" data-level="1.4.4" data-path="packages.html"><a href="packages.html#package-misc"><i class="fa fa-check"></i><b>1.4.4</b> 其它</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="-test-intro.html"><a href="-test-intro.html"><i class="fa fa-check"></i><b>1.5</b> 小测 {test-intro}</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-basics"><i class="fa fa-check"></i><b>1.5.1</b> 基础 {test-intro-basics}</a></li>
+<li class="chapter" data-level="1.5.2" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-advanced"><i class="fa fa-check"></i><b>1.5.2</b> 进阶 {test-intro-advanced}</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> 向量，逻辑，循环和函数</a><ul>
@@ -232,13 +236,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.5.3" data-path="control-flow.html"><a href="control-flow.html#control-flow-rigorous"><i class="fa fa-check"></i><b>2.5.3</b> 严谨版</a></li>
 <li class="chapter" data-level="2.5.4" data-path="control-flow.html"><a href="control-flow.html#apply"><i class="fa fa-check"></i><b>2.5.4</b> 如何避免for循环——<code>apply()</code>家族函数</a></li>
 <li class="chapter" data-level="2.5.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.5.5</b> <code>foreach</code> package：for循环的进化版</a></li>
+<li class="chapter" data-level="2.5.6" data-path="control-flow.html"><a href="control-flow.html#purrr-packageapply"><i class="fa fa-check"></i><b>2.5.6</b> <code>purrr</code> package中的<code>apply</code>家族函数替代品和进化产物</a></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.6</b> 函数</a><ul>
 <li class="chapter" data-level="2.6.1" data-path="functions.html"><a href="functions.html#functions-in-R"><i class="fa fa-check"></i><b>2.6.1</b> R中的函数</a></li>
 <li class="chapter" data-level="2.6.2" data-path="functions.html"><a href="functions.html#abbr"><i class="fa fa-check"></i><b>2.6.2</b> 调用函数</a></li>
 <li class="chapter" data-level="2.6.3" data-path="functions.html"><a href="functions.html#create-functions"><i class="fa fa-check"></i><b>2.6.3</b> 创建函数</a></li>
 <li class="chapter" data-level="2.6.4" data-path="functions.html"><a href="functions.html#about-dot-dot-dot"><i class="fa fa-check"></i><b>2.6.4</b> 关于<code>...</code></a></li>
-<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.5</b> 测速</a></li>
+<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#functions-assign-global"><i class="fa fa-check"></i><b>2.6.5</b> 赋值函数外的对象</a></li>
+<li class="chapter" data-level="2.6.6" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.6</b> 测速</a></li>
 </ul></li>
 <li class="chapter" data-level="2.7" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>2.7</b> 列表 (list)</a><ul>
 <li class="chapter" data-level="2.7.1" data-path="list.html"><a href="list.html#list-index"><i class="fa fa-check"></i><b>2.7.1</b> list的索引/取子集</a></li>
@@ -248,7 +254,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.8" data-path="matrix-array.html"><a href="matrix-array.html"><i class="fa fa-check"></i><b>2.8</b> array（数组）和matrix（矩阵）简介</a><ul>
 <li class="chapter" data-level="2.8.1" data-path="matrix-array.html"><a href="matrix-array.html#matrix-array-naming"><i class="fa fa-check"></i><b>2.8.1</b> 给matrices和arrays命名</a></li>
 </ul></li>
-<li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a></li>
+<li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a><ul>
+<li class="chapter" data-level="2.9.1" data-path="test-base.html"><a href="test-base.html#test-base-basics"><i class="fa fa-check"></i><b>2.9.1</b> 基础</a></li>
+<li class="chapter" data-level="2.9.2" data-path="test-base.html"><a href="test-base.html#test-base-advanced"><i class="fa fa-check"></i><b>2.9.2</b> 进阶</a></li>
+<li class="chapter" data-level="2.9.3" data-path="test-base.html"><a href="test-base.html#test-base-challenge"><i class="fa fa-check"></i><b>2.9.3</b> 挑战</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="tibble.html"><a href="tibble.html"><i class="fa fa-check"></i><b>3</b> dataframe和tibble</a><ul>
 <li class="chapter" data-level="3.0.1" data-path="tibble.html"><a href="tibble.html#section-3.0.1"><i class="fa fa-check"></i><b>3.0.1</b> 本章内容速览</a></li>
@@ -382,22 +392,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 [1] 2</code></pre>
 <p>其中<code>2</code>是计算结果， <code>[1]</code>是索引，在第<a href="vector-section.html#indexing">2.1.2</a>节有解释。<code>&gt; 1 + 1</code>是input，<code>[1] 2</code>是output.</p>
 <p>还是用<code>1 + 1</code>举例，在本书中，对于input和output的展示格式是这样的：</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span><span class="op">+</span><span class="dv">1</span>
-<span class="co">## [1] 2</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span><span class="op">+</span><span class="dv">1</span></code></pre>
+<pre><code>#&gt; [1] 2</code></pre>
 <p>注意input中的<code>&gt;</code>被省略了，这意味着你可以很方便地直接把代码从本书复制到你的console并按回车执行（因为console本身自带了<code>&gt;</code>)。</p>
 <p>再执行以下指令（在RStudio中，可以用<code>Alt</code>+<code>-</code> (Mac是 <code>option</code>+<code>-</code>) 这个快捷键打出这个符号。）：</p>
 <pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">5</span><span class="op">*</span><span class="dv">5</span><span class="op">+</span><span class="dv">1</span></code></pre>
 <p>这是一个<strong>赋值</strong>指令。计算结果不会显示，但是你新建了一个名为<code>x</code>的变量（准确地说，是“对象”），值为<code>5*5+1</code>的计算结果，即<code>26</code>. 你可以执行<code>x</code>来查看<code>x</code>的值：</p>
-<pre class="sourceCode r"><code class="sourceCode r">x
-<span class="co">## [1] 26</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">x</code></pre>
+<pre><code>#&gt; [1] 26</code></pre>
 <p>像一个小箭头的赋值符号（<code>&lt;-</code>）的作用是<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>，<strong>首先</strong>计算出其右边的指令（必须是一个计算指令；即同一条指令不可以出现两个<code>&lt;-</code>符号），然后把<strong>计算结果的值</strong>作为一个<strong>拷贝</strong>赋予给左边的名字，这样就新建了一个对象 (object)。每个对象有一个名称和一个值。<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>左右是很重要的；绝大多数其他的编程语言，虽然赋值符号是<code>=</code>，但也是从右往左赋值，R使用<code>&lt;-</code>作为赋值符号更形象，避免新手写出像<code>5 = x</code>之类的指令。当然，如果你喜欢，也可以在R中使用<code>=</code>。<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a></p>
 <p><code>&lt;-</code>用于给任何对象赋值，包括常用的向量 (vector)，列表 (list)，数据框 (dataframe)和函数 (function)。</p>
 <p>谨记，赋值符号只是把右边的<strong>计算结果</strong>作为一个<strong>拷贝</strong>赋予给左边，而不会做任何其它的事情<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>。变化的仅仅是左边的变量（对象），右边的计算中所用到的任何变量（对象）<strong>不会改变</strong>！</p>
 <p>为什么强调是一个拷贝呢？举个例子，我们现在把<code>x</code>的值赋予给<code>y</code>，不出所料，<code>y</code>的值将为<code>26</code>。那么要是我们在这之后重定义<code>x</code>为<code>40</code>，y的值是多少呢？</p>
 <pre class="sourceCode r"><code class="sourceCode r">y &lt;-<span class="st"> </span>x
 x &lt;-<span class="st"> </span><span class="dv">40</span>
-y
-<span class="co">## [1] 26</span></code></pre>
+y</code></pre>
+<pre><code>#&gt; [1] 26</code></pre>
 <p>还是26（而不是40）。赋值是一次性的，每次被赋值的对象都将成为独立自主的个体。对象y虽然在被赋值的时候需要用到对象x，但是在那之后y和x半毛钱关系都没有了（除非再次赋值），所以x的变化不会影响y，y的变化也不会影响x。</p>
 <p><strong>所有的变化，只可能发生在赋值。</strong></p>
 </div>
@@ -406,8 +416,8 @@ y
 <p>所有的计算都是通过函数实现的，包括当你输入<code>x</code>然后按回车时。<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a>像<code>+</code>, <code>-</code>这样的运算符也是函数（参见第<a href="functions.html#functions-in-R">2.6.1</a>节）。</p>
 <p>函数的标志是小（圆）括号，比如<code>sum(6, 7, 8)</code>是求<code>6</code>, <code>7</code>和<code>8</code>的和；其中<code>sum()</code>是函数，<code>6, 7, 8</code>是（三个参数）。</p>
 <p>函数可以嵌套使用，而且很常见。</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">prod</span>(<span class="kw">sqrt</span>(<span class="kw">sum</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>)), <span class="dv">2</span>, <span class="dv">5</span>)
-<span class="co">## [1] 30</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">prod</span>(<span class="kw">sqrt</span>(<span class="kw">sum</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>)), <span class="dv">2</span>, <span class="dv">5</span>)</code></pre>
+<pre><code>#&gt; [1] 30</code></pre>
 <p>最“内部的”函数先运行，然后把计算结果作为它外面的函数的参数。这里，<code>sum(2, 3, 4)</code>得到<code>9</code>, <code>sqrt(9)</code>得到<code>3</code>, <code>prod(3, 2, 5)</code>得到<code>30</code>. 就像小学的时候学的括号运算规则一样。</p>
 <p>更多关于函数的知识请参阅第<a href="functions.html#functions">2.6</a>节。</p>
 </div>
@@ -494,10 +504,9 @@ x &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">
 <p>当一份R script文件写得很长的时候，用注释+横线作为小标题把整个文件分割成很多块可以增强易读性：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co"># foo ---------------------------------------------------------------------</span>
 
-<span class="kw">print</span>(<span class="dv">1</span>)
-<span class="co">## [1] 1</span>
-
-<span class="co"># bar ---------------------------------------------------------------------</span>
+<span class="kw">print</span>(<span class="dv">1</span>)</code></pre>
+<pre><code>#&gt; [1] 1</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># bar ---------------------------------------------------------------------</span>
 
 x &lt;-<span class="st"> </span><span class="dv">2</span>
 
@@ -511,10 +520,10 @@ x &lt;-<span class="st"> </span><span class="dv">2</span>
 <h3><span class="header-section-number">1.3.6</span> 其他</h3>
 <div id="section-1.3.6.1" class="section level4">
 <h4><span class="header-section-number">1.3.6.1</span> “一句”的概念</h4>
-<p>一次（一句）计算执行且执行一个函数（不包括里面嵌套着的函数）。</p>
+<p>一次计算（一个单句）执行且执行一个函数（不包括里面嵌套着的函数）。</p>
 <p>当你通过<code>函数名</code> + <code>(</code>“开启”一次运算时，从这里开始到<em>这个函数所对应的</em>反括号，即<code>)</code>之前的内容，即使再多，都只是这个函数的参数。</p>
-<p>当你在R script里敲击<code>Ctrl</code>+<code>Enter</code>时，光标所在的位置的那一句指令将会被执行（无需在那一句的开头，可以在那一句之中的任何位置）；如果那句命令不完整，很可能会在console中用<code>+</code>提示（见下一小节）。</p>
-<p>句与句之间必须换行，或者用分号（<code>;</code>）连接：</p>
+<p>当你在R script里敲击<code>Ctrl</code>+<code>Enter</code>时，光标所在的位置的那一句指令将会被执行（无需在那一句的开头，可以在那一句之中的任何位置）；如果那句命令不完整，会在console中用<code>+</code>提示（见下一小节）。</p>
+<p>单句与单句之间必须换行，或者用分号（<code>;</code>）连接：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="dv">1</span>, <span class="dv">9</span>)
 <span class="kw">sum</span>(<span class="dv">2</span>, <span class="dv">3</span>)
 <span class="co"># 和</span>
@@ -522,6 +531,20 @@ x &lt;-<span class="st"> </span><span class="dv">2</span>
 <span class="co"># 都是可以的，而</span>
 <span class="kw">sum</span>(<span class="dv">1</span>, <span class="dv">9</span>) <span class="kw">sum</span>(<span class="dv">2</span>, <span class="dv">3</span>)
 <span class="co"># 不可以，会出错</span></code></pre>
+<p>在同一行用分号分隔的几句代码会按顺序被一起执行，但是每个单句分别产生一个效果/分别返回一个结果。</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="dv">1</span>, <span class="dv">9</span>); <span class="kw">mean</span>(<span class="dv">2</span>, <span class="dv">3</span>); x &lt;-<span class="st"> </span><span class="dv">5</span>; x <span class="op">+</span><span class="st"> </span><span class="dv">1</span>
+<span class="co">#&gt; [1] 10</span>
+<span class="co">#&gt; [1] 2</span>
+<span class="co">#&gt; [1] 6</span></code></pre>
+<p>我们还可以使用大括号构建复合句。<strong>在大括号开头处执行代码</strong>，括号里的内容会按顺序执行，但是只会返回最后一步的计算结果。</p>
+<pre class="sourceCode r"><code class="sourceCode r">{
+  <span class="kw">sum</span>(<span class="dv">1</span>, <span class="dv">9</span>)
+  <span class="kw">mean</span>(<span class="dv">2</span>, <span class="dv">3</span>)
+  x &lt;-<span class="st"> </span><span class="dv">5</span>
+  x <span class="op">+</span><span class="st"> </span><span class="dv">1</span>
+}</code></pre>
+<pre><code>#&gt; [1] 6</code></pre>
+<p>复合句在<a href="functions.html#create-functions">自定义函数</a>和<a href="control-flow.html#control-flow">流程控制</a>中经常使用。</p>
 </div>
 <div id="newline" class="section level4">
 <h4><span class="header-section-number">1.3.6.2</span> 关于换行</h4>
@@ -590,7 +613,7 @@ gitbook.start({
 },
 "edit": {
 "link": "https://github.com/TianyiShi2001/r-and-tidyverse-book/01-start.Rmd",
-"text": "Edit"
+"text": "Github"
 },
 "history": {
 "link": null,

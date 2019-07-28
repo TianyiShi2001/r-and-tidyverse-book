@@ -1169,26 +1169,53 @@ $$x = \left(1\times1\times1, 1\times1\times2\ldots, 40\times50\times59, 40\times
 
 同样是运算上面那个for循环花了39秒的例子，使用`sapply()`函数和`rep()`函数几乎是瞬间完成；而把$(l,m,n)$增至$(1:500,1:600,1:700)$时（计算量为1750倍），它们仍只需不到3秒，而for循环则是不可行的。
 
-（源码在）
+#### `lapply()` {#apply-lapply}
 
-#### `lapply()`
+`lapply()` (list apply)至少需要两个参数，第一个是对象（可以是vector或者list），第二个是函数。它的作用是把函数作用于对象中的每一个元素，并返回一个list. 无论对象是vector还是list, 返回的都是一个list. 
 
-`lapply()` (list apply)有两个参数，第一个是对象（可以是vector或者list），第二个是函数。它的作用是把函数作用于对象中的每一个元素，并返回一个list.
-
-无论对象是vector还是list, 返回的都是一个list: 
+有两类使用`lapply()`的方法。第一种是使用匿名函数，这个很直观：
 
 ```{r}
-lapply(c(1, 2, 3), function(i) i*10) # vector
-lapply(list(1, 2, 3), function(i) i*10) # list
+lapply(c(1, 2, 3), function(i) i^2*10)
 ```
 
+另一种是使用有命名的函数。此时，第二个参数是函数名；随后，如果有需要，还可以加上这个函数需要的其它参数：
+
 ```{r}
-lapply(list(c(1, 2), c(4, 6), c(7, 9)), function(i) i*10)
+lapply(list(5, 6, 7), rnorm, 3, .1)
+```
+
+默认`lapply()`的对象的各元素作为函数的第一个参数。上面这个例子等同于：
+
+```{r eval=FALSE}
+list(rnorm(5, 3, .1), # 即 `rnorm(n = 5, mean = 3, sd = .1)`
+     rnorm(6, 3, .1),
+     rnorm(7, 3, .1))
+```
+
+当第一个参数在后面被指定时，`lapply()`的对象的各元素所代表的参数按照排序顺延，比如：
+
+```{r}
+lapply(list(5, 6, 7), rnorm, n = 3, .1)
+```
+
+等同于：
+
+```{r eval=FALSE}
+list(rnorm(n = 3, 5, .1),
+     rnorm(n = 3, 6, .1),
+     rnorm(n = 3, 7, .1))
+```
+
+但是这么做会降低易读性。当对象不是被作为函数的第一个参数时，最好使用匿名函数，使之更易读：
+
+```{r eval=FALSE}
+lapply(list(5, 6, 7), function(x) rnorm(3, x, .1))
 ```
 
 #### `sapply()` {#apply-sapply}
 
-`sapply()` (simplified list apply)的功能和`lapply()`几乎一样。`sapply()`额外的一个特点是尽可能地化简结果：
+`sapply()` (simplified list apply)的功能本质上和`lapply()`一样。`sapply()`额外的一个特点是尽可能地化简结果：
 
 - 当结果只有一个list元素时，`sapply()`返回一个vector
 - 当结果有多个list元素，但每个list元素只包含一个vector且长度相等时，`sapply()`会返回一个matrix
@@ -1211,101 +1238,27 @@ sapply(list(c(1, 2, 3), c(4, 6), c(7, 9)), function(i) i*10)
 
 #### `mapply()`和`Map()`
 
-`mapply()`的意思是“`Map+sapply`”，它的计算过程和`Map()`函数类似，但是会像`sapply()`一样把结果化简。
+`lapply()`和`sapply()`本质上是把一个函数应用在**一个**向量/列表上，即这个向量/列表作为函数唯一的“自变量”。`Map()`则可以使用多组自变量。这意味着，`lapply()`能做到的，`Map`都能做到；`Map`能做到的，`lapply()`不一定做得到。
 
-简单地说，有些函数把参数中的vector作为一个整体使用，而用`mapply()`/`Map()`可以把这些vector逐元素地使用。而且，`mapply()`/`Map()`可以对多参数的函数进行向量化计算，因此`mapply()`的“m”经常被解释为代表“multivariate”.
-
-假设你想创建一个这样的vector：
-
-```{r echo=FALSE}
-rep(1:4, each = 3)
-```
-
-通过复习第\@ref(rep)节，很容易得出答案：
-
-```{r eval=FALSE}
-rep(1:4, each = 3)
-```
-
-粗心的读者可能以为是：
-
-```{r eval=FALSE}
-rep(1:4, 3) # 即rep(1:4, times = 3)
-```
-
-而实际上它的运算结果是：
-
-```{r echo=FALSE}
-rep(1:4, 3)
-```
-
-因为`1:4`（即`c(1, 2, 3, 4)`）被作为一个整体使用了。正确的写法是：
-
-```{r eval=FALSE}
-as.vector(mapply(rep, 1:4, 3))
-```
-
-`mapply(rep, 1:4, 3)`的第一个参数是所需函数的名字，其它的参数为所需函数的参数。你可以指名道姓：`mapply(rep, x = 1:4, times = 3)`，或者根据排序键入参数而无需指定参数名（见第\@ref(abbr)节）。其中第一个参数 (`1:4`)不是长度为1的vector，因此它会被`mapply()`转换成list并执行逐元素运算，即运算过程和结果为：
-
-```{}
-mapply(rep, 1:4, 3)
-= mapply(rep, c(1, 2, 3, 4), 3)
-= list(rep(1, 3), rep(2, 3), rep(3, 3), rep(4, 3))
-= list(c(1,1,1), c(2,2,2), c(3,3,3), c(4,4,4))
-
-# 等价于 sapply(list(1, 2, 3, 4), function(x) rep(x, 3))
-```
-
-为什么我们实际上看到的是一个matrix呢？这是因为每个list元素所含的vector的长度相等，因此自动化简为matrix. 若要查看未化简的版本：
-
-```{r eval=FALSE}
-mapply(rep, 1:4, 3, SIMPLIFY = FALSE)
-```
-
-或者
+之前`lapply()`的例子`lapply(c(5, 6, 7), rnorm, n = 3, .1)`的`Map()`版本是这样的：
 
 ```{r}
-Map(rep, 1:4, 3)
+Map(rnorm, c(5, 6, 7), 3, .1)
 ```
 
-你可能已经发现，用`sapply()`函数其实也可以较为简单地实现这个例子：`sapply(1:4, function(x) rep(x, 3))`；那`mapply()`/`Map()`有没有其它特殊的特性呢？有。多参数的向量化运算。对于多参数的函数，`sapply()`只能使用其中的第一个进行向量化运算，而其他的参数必须为常数。而`mapply()`/`Map()`可以这样：
+多个自变量的计算也很自然：
 
 ```{r}
-Map(seq, c(1, 5, 20), c(5, 25, 100), length.out = 5)
+Map(rnorm, c(2, 3, 4), c(1, 10, 100), c(.1, .5, 1))
 ```
 
-它执行了三次计算：`seq(1, 5, length.out = 5)`, `seq(5, 25, length.out = 5)`和`seq(20, 100, length.out = 5)`.
-
-想一想，这个结果是否可以化简？如果是，化简结果是什么？用`mapply()`函数执行同样的计算来验证你的答案。
-
-当对象是一个list的时候，
+`mapply()`是`Map()`的自动化简版本：
 
 ```{r}
-Map(rep, list(c(8, 9), c(6, 7)), 3)
+mapply(rnorm, 3, c(1, 10, 100), c(.1, .5, 1))
 ```
-
-```{r}
-lapply(list(c(8, 9), c(6, 7)), function(x) rep(x, 3))
-```
-
 
 想一想，`Map(rep, list(c(1,2), list(2,3)), 3)`的计算结果是什么？
-
-#### `rep()`
-
-还是上一小节中的vector：
-
-```{r echo=FALSE}
-rep(1:4, rep(3, 4))
-```
-
-其实可以仅用`rep()`函数简洁地实现：
-
-```{r eval=FALSE}
-rep(1:4, rep(3, 4))
-```
-
-如果不明白为什么，请复习第\@ref(rep)节。
 
 ### `foreach` package：for循环的进化版 {#foreach}
 
@@ -1349,11 +1302,57 @@ x
 
 ### `purrr` package中的`apply`家族函数替代品和进化产物
 
-#### `map`, `map_dbl`, `map_chr`, ...
+这一节需要使用`purrr`, 它是`tidyverse`的一部分。所以我们首先要加载它：
 
-#### `map2`和`pmap`
+```{r eval=FALSE}
+library(tidyverse) # 或library(purrr)
+```
 
-#### `invoke_map`, `invoke_map_dbl`, ...
+
+#### `map()`, `map_dbl()`, `map_chr()`, ...
+
+`map()`的使用方法和`lapply()`几乎一样。`lapply(list(5, 6, 7), rnorm, 3, .1)`用`map()`转写就是`map(list(5, 6, 7), rnorm, 3, .1)`。`map()`（和下面介绍的其他函数）有一个绝招就是简写匿名函数。在第\ref(apply-lapply)节讲过，`lapply()`的对象默认会被作为函数的第一个参数（`map()`也是如此）。当不想让它作为第一个参数的时候，要使用匿名函数以保证易读性：
+
+```{r eval=FALSE}
+lapply(list(5, 6, 7), function(x) rnorm(3, x, .1))
+```
+
+用`map()`的简写版本则是：
+
+```{r}
+map(list(5, 6, 7), ~ rnorm(3, ., .1))
+```
+
+`map_dbl()`, `map_chr()`函数可以把结果化简为一个向量，前提是每次的计算结果的长度都为1（即一个标量），比如这里，`mean(x)`, `mean(y)`, `mean(z)`的结果都是一个标量，所以`map()`的结果可以化简为一个浮点数向量。
+
+```{r}
+x = c(1, 2, 3); y = c(10, 20, 30); z = c(5, 60, 115)
+map_dbl(list(x, y, z), mean)
+```
+
+#### `map2()`和`pmap()系列
+
+`map2()`使用两个因变量。
+
+```{r}
+map2(.x = c(1, 100, 10000), .y = c(.1, 1, 10), ~ rnorm(5, .x, .y))
+```
+
+`pmap()`使用多个因变量。与Base R的`Map()`不同，`pmap()`的第一个参数是对象，第二个才是函数。你可以使用命名列表来指定使用的函数的参数：
+
+```{r}
+pmap(list(mean = c(1, 100, 10000), sd = c(.1, 1, 10)), rnorm, n = 3)
+```
+
+ 下一章会讲到，因为dataframe/tibble的本质是list，上面的操作也可以适用于tibble：
+ 
+```{r}
+args <- tibble(mean = c(1, 100, 10000),
+               sd = c(.1, 1, 10))
+pmap(args, rnorm, 3)
+```
+
+#### `invoke_map()`, `invoke_map_dbl()`, ...
 
 ## 函数 {#functions}
 
@@ -1373,13 +1372,15 @@ sample <- c(5.1, 5.2, 4.5, 5.3, 4.3, 5.5, 5.7)
 t.test(x = sample, mu = 4.5)
 ```
 
-二元运算符和`[`（取子集符号）看起来一点都不像函数，而实际上它们也是函数，因此也可以用通用的格式使用他们，只是需要加上引号：
+二元运算符和`[`（取子集符号）看起来一点都不像函数，而实际上它们也是函数，因此也可以用通用的格式使用他们，只是需要加上引号或转义符号：
 
-```{r}
+```{r eval=FALSE}
 "+"(2, 3)
+`+`(2, 3)
+## 5
 ```
 
-```{r}
+```{r collapse=TRUE}
 "["(c("四川担担面", "武汉热干面", "兰州牛肉面", "北京炸酱面"), 2)
 ```
 
@@ -1490,7 +1491,7 @@ myfunc(6)
 
 本章剩余的内容，都是比较进阶的了。可以酌情从这里跳转至本章第\@ref(test-base)节。
 
-#### 无名函数 {#anonymous-functions}
+#### 匿名函数 {#anonymous-functions}
 
 函数不需要名字也可以执行。一般，会与`apply`族函数联用（见第\@ref(apply)节）：
 

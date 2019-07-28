@@ -6,7 +6,7 @@
 \contentsline {subsection}{在本书你不会学到：}{6}{section*.7}
 \contentsline {subsection}{版权页}{6}{section*.8}
 \contentsline {subsection}{关于编写本书的技术信息}{6}{section*.9}
-\contentsline {chapter}{\numberline {1}R和RStudio介绍和安装教程}{9}{chapter.1}
+\contentsline {chapter}{\numberline {1}R与RStudio安装与基础操作}{9}{chapter.1}
 \contentsline {subsection}{本章内容速览}{9}{section*.10}
 \contentsline {section}{\numberline {1.1}什么是R}{9}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}安装R和RStudio}{9}{subsection.1.1.1}
@@ -44,14 +44,17 @@
 \contentsline {subsubsection}{\numberline {1.3.6.2}关于换行}{19}{subsubsection.1.3.6.2}
 \contentsline {section}{\numberline {1.4}安装和使用packages (包)}{19}{section.1.4}
 \contentsline {subsection}{\numberline {1.4.1}Package是什么，为什么使用它们？}{19}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}如何安装packages}{19}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.2}如何安装packages}{20}{subsection.1.4.2}
 \contentsline {subsection}{\numberline {1.4.3}如何使用packages}{20}{subsection.1.4.3}
 \contentsline {subsubsection}{\numberline {1.4.3.1}加载packages}{20}{subsubsection.1.4.3.1}
 \contentsline {subsubsection}{\numberline {1.4.3.2}使用packages里的内容}{20}{subsubsection.1.4.3.2}
-\contentsline {subsubsection}{\numberline {1.4.3.3}更新和卸载packages}{20}{subsubsection.1.4.3.3}
-\contentsline {subsection}{\numberline {1.4.4}其它}{20}{subsection.1.4.4}
+\contentsline {subsubsection}{\numberline {1.4.3.3}更新和卸载packages}{21}{subsubsection.1.4.3.3}
+\contentsline {subsection}{\numberline {1.4.4}其它}{21}{subsection.1.4.4}
 \contentsline {subsubsection}{\numberline {1.4.4.1}\texttt {library()}和\texttt {require}的区别；如何使用一行指令读取多个packages}{21}{subsubsection.1.4.4.1}
 \contentsline {subsubsection}{\numberline {1.4.4.2}安装Bioconductor packages}{21}{subsubsection.1.4.4.2}
+\contentsline {section}{\numberline {1.5}小测 \{test-intro\}}{21}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}基础 \{test-intro-basics\}}{21}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}进阶 \{test-intro-advanced\}}{22}{subsection.1.5.2}
 \contentsline {chapter}{\numberline {2}向量，逻辑，循环和函数}{23}{chapter.2}
 \contentsline {subsection}{本章内容速览}{23}{section*.11}
 \contentsline {section}{\numberline {2.1}向量的概念，操作和优越性}{23}{section.2.1}
@@ -60,156 +63,163 @@
 \contentsline {subsection}{\numberline {2.1.3}生成器}{25}{subsection.2.1.3}
 \contentsline {subsubsection}{\numberline {2.1.3.1}连续整数}{25}{subsubsection.2.1.3.1}
 \contentsline {subsubsection}{\numberline {2.1.3.2}复读机\texttt {rep()}}{25}{subsubsection.2.1.3.2}
-\contentsline {subsubsection}{\numberline {2.1.3.3}等差数列: \texttt {seq()}}{25}{subsubsection.2.1.3.3}
+\contentsline {subsubsection}{\numberline {2.1.3.3}等差数列: \texttt {seq()}}{26}{subsubsection.2.1.3.3}
 \contentsline {subsubsection}{\numberline {2.1.3.4}随机数：}{26}{subsubsection.2.1.3.4}
 \contentsline {subsection}{\numberline {2.1.4}向量的其他操作}{27}{subsection.2.1.4}
 \contentsline {subsubsection}{\numberline {2.1.4.1}创建长度为0的向量}{27}{subsubsection.2.1.4.1}
-\contentsline {subsubsection}{\numberline {2.1.4.2}\texttt {sort()}, \texttt {rank()}和\texttt {order()}}{27}{subsubsection.2.1.4.2}
+\contentsline {subsubsection}{\numberline {2.1.4.2}\texttt {sort()}, \texttt {rank()}和\texttt {order()}}{28}{subsubsection.2.1.4.2}
 \contentsline {subsubsection}{\numberline {2.1.4.3}元素的命名}{28}{subsubsection.2.1.4.3}
-\contentsline {subsection}{\numberline {2.1.5}R向量的优越性}{28}{subsection.2.1.5}
+\contentsline {subsection}{\numberline {2.1.5}R向量的优越性}{29}{subsection.2.1.5}
 \contentsline {section}{\numberline {2.2}数据/对象类型 (Data/Object Types)}{29}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}基础的数据/对象类型}{29}{subsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.1.1}向量所存储的数据类型}{29}{subsubsection.2.2.1.1}
 \contentsline {subsubsection}{\numberline {2.2.1.2}关于数据类型的简单操作}{29}{subsubsection.2.2.1.2}
 \contentsline {subsubsection}{\numberline {2.2.1.3}\texttt {NA}, \texttt {Inf}, \texttt {NaN}和\texttt {NULL}}{30}{subsubsection.2.2.1.3}
 \contentsline {subsubsection}{\numberline {2.2.1.4}其它的数据/对象类型}{30}{subsubsection.2.2.1.4}
-\contentsline {subsection}{\numberline {2.2.2}数据类型（严谨版）}{30}{subsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.2.1}\texttt {class}, \texttt {type}, \texttt {mode}和\texttt {storage\ mode}}{30}{subsubsection.2.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}数据类型（严谨版）}{31}{subsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.1}\texttt {class}, \texttt {type}, \texttt {mode}和\texttt {storage\ mode}}{31}{subsubsection.2.2.2.1}
 \contentsline {section}{\numberline {2.3}数学表达和运算}{32}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}数的表达}{32}{subsection.2.3.1}
 \contentsline {subsubsection}{\numberline {2.3.1.1}浮点数}{32}{subsubsection.2.3.1.1}
 \contentsline {subsubsection}{\numberline {2.3.1.2}科学计数法}{32}{subsubsection.2.3.1.2}
-\contentsline {subsubsection}{\numberline {2.3.1.3}整数}{32}{subsubsection.2.3.1.3}
+\contentsline {subsubsection}{\numberline {2.3.1.3}整数}{33}{subsubsection.2.3.1.3}
 \contentsline {paragraph}{\numberline {2.3.1.3.1}整数变成浮点数的情况}{33}{paragraph.2.3.1.3.1}
-\contentsline {subsection}{\numberline {2.3.2}运算}{33}{subsection.2.3.2}
-\contentsline {subsubsection}{\numberline {2.3.2.1}二元运算符号}{33}{subsubsection.2.3.2.1}
+\contentsline {subsection}{\numberline {2.3.2}运算}{34}{subsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.2.1}二元运算符号}{34}{subsubsection.2.3.2.1}
 \contentsline {subsubsection}{\numberline {2.3.2.2}\(e^x\)和\(\qopname \relax o{log}_x{y}\)}{34}{subsubsection.2.3.2.2}
-\contentsline {subsubsection}{\numberline {2.3.2.3}近似数（取整，取小数位，取有效数字）}{34}{subsubsection.2.3.2.3}
-\contentsline {subsubsection}{\numberline {2.3.2.4}\texttt {NA}, \texttt {Inf}, \texttt {NaN}相关}{35}{subsubsection.2.3.2.4}
-\contentsline {subsubsection}{\numberline {2.3.2.5}R中自带的数学函数集合}{35}{subsubsection.2.3.2.5}
-\contentsline {subsection}{\numberline {2.3.3}简易的统计学计算}{36}{subsection.2.3.3}
-\contentsline {subsubsection}{\numberline {2.3.3.1}基础}{36}{subsubsection.2.3.3.1}
-\contentsline {subsubsection}{\numberline {2.3.3.2}t分布}{36}{subsubsection.2.3.3.2}
-\contentsline {subsubsection}{\numberline {2.3.3.3}z分布}{37}{subsubsection.2.3.3.3}
-\contentsline {subsubsection}{\numberline {2.3.3.4}t检验}{37}{subsubsection.2.3.3.4}
-\contentsline {subsubsection}{\numberline {2.3.3.5}\(\chi ^2\) 检验}{39}{subsubsection.2.3.3.5}
-\contentsline {paragraph}{\numberline {2.3.3.5.1}适配度检验}{39}{paragraph.2.3.3.5.1}
+\contentsline {subsubsection}{\numberline {2.3.2.3}近似数（取整，取小数位，取有效数字）}{35}{subsubsection.2.3.2.3}
+\contentsline {subsubsection}{\numberline {2.3.2.4}\texttt {NA}, \texttt {Inf}, \texttt {NaN}相关}{36}{subsubsection.2.3.2.4}
+\contentsline {subsubsection}{\numberline {2.3.2.5}R中自带的常用数学函数概览}{36}{subsubsection.2.3.2.5}
+\contentsline {subsection}{\numberline {2.3.3}简易的统计学计算}{37}{subsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.3.1}基础}{37}{subsubsection.2.3.3.1}
+\contentsline {subsubsection}{\numberline {2.3.3.2}t分布}{37}{subsubsection.2.3.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3.3}z分布}{38}{subsubsection.2.3.3.3}
+\contentsline {subsubsection}{\numberline {2.3.3.4}t检验}{38}{subsubsection.2.3.3.4}
+\contentsline {subsubsection}{\numberline {2.3.3.5}\(\chi ^2\) 检验}{40}{subsubsection.2.3.3.5}
+\contentsline {paragraph}{\numberline {2.3.3.5.1}适配度检验}{40}{paragraph.2.3.3.5.1}
 \contentsline {paragraph}{\numberline {2.3.3.5.2}列联表分析/独立性检验}{40}{paragraph.2.3.3.5.2}
-\contentsline {paragraph}{\numberline {2.3.3.5.3}其他}{41}{paragraph.2.3.3.5.3}
-\contentsline {section}{\numberline {2.4}逻辑}{41}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}逻辑值 \{logical-values\}}{41}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}关系运算符和简单的逻辑运算}{41}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}逻辑运算符}{42}{subsection.2.4.3}
-\contentsline {subsubsection}{\numberline {2.4.3.1}反义符号（\texttt {!}）}{42}{subsubsection.2.4.3.1}
-\contentsline {subsubsection}{\numberline {2.4.3.2}多个逻辑运算的组合（\texttt {\&}（且）和\texttt {\textbar {}}（或））}{43}{subsubsection.2.4.3.2}
-\contentsline {section}{\numberline {2.5}判断和循环（流程控制）}{43}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}给有编程基础者的快速指南}{43}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}无编程基础者的快速指南}{44}{subsection.2.5.2}
-\contentsline {subsubsection}{\numberline {2.5.2.1}\texttt {if}, \texttt {else\ if}, \texttt {else}语句（``如果\ldots {}\ldots {}''，``或者，如果\ldots {}\ldots {}''，``否则\ldots {}\ldots {}''）}{44}{subsubsection.2.5.2.1}
-\contentsline {subsubsection}{\numberline {2.5.2.2}for循环}{45}{subsubsection.2.5.2.2}
-\contentsline {subsubsection}{\numberline {2.5.2.3}while循环}{46}{subsubsection.2.5.2.3}
-\contentsline {subsubsection}{\numberline {2.5.2.4}\texttt {break} 和 \texttt {next}}{46}{subsubsection.2.5.2.4}
-\contentsline {subsection}{\numberline {2.5.3}严谨版}{46}{subsection.2.5.3}
-\contentsline {subsubsection}{\numberline {2.5.3.1}\texttt {if}, \texttt {else}, \texttt {else\ if} 语句}{47}{subsubsection.2.5.3.1}
-\contentsline {subsubsection}{\numberline {2.5.3.2}for循环}{47}{subsubsection.2.5.3.2}
-\contentsline {subsubsection}{\numberline {2.5.3.3}while循环}{47}{subsubsection.2.5.3.3}
-\contentsline {subsubsection}{\numberline {2.5.3.4}repeat循环}{47}{subsubsection.2.5.3.4}
-\contentsline {subsubsection}{\numberline {2.5.3.5}\texttt {break}和\texttt {next}}{47}{subsubsection.2.5.3.5}
-\contentsline {subsection}{\numberline {2.5.4}如何避免for循环------\texttt {apply()}家族函数}{47}{subsection.2.5.4}
-\contentsline {subsubsection}{\numberline {2.5.4.1}\texttt {lapply()}}{48}{subsubsection.2.5.4.1}
-\contentsline {subsubsection}{\numberline {2.5.4.2}\texttt {sapply()}}{49}{subsubsection.2.5.4.2}
-\contentsline {subsubsection}{\numberline {2.5.4.3}\texttt {mapply()}和\texttt {Map()}}{49}{subsubsection.2.5.4.3}
-\contentsline {subsubsection}{\numberline {2.5.4.4}\texttt {rep()}}{51}{subsubsection.2.5.4.4}
-\contentsline {subsection}{\numberline {2.5.5}\texttt {foreach} package：for循环的进化版}{51}{subsection.2.5.5}
-\contentsline {subsubsection}{\numberline {2.5.5.1}使用多内核进行计算}{51}{subsubsection.2.5.5.1}
-\contentsline {section}{\numberline {2.6}函数}{52}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}R中的函数}{52}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}调用函数}{52}{subsection.2.6.2}
-\contentsline {subsection}{\numberline {2.6.3}创建函数}{53}{subsection.2.6.3}
-\contentsline {subsubsection}{\numberline {2.6.3.1}普通函数}{53}{subsubsection.2.6.3.1}
-\contentsline {subsubsection}{\numberline {2.6.3.2}无名函数}{54}{subsubsection.2.6.3.2}
-\contentsline {subsubsection}{\numberline {2.6.3.3}二元运算符}{54}{subsubsection.2.6.3.3}
-\contentsline {subsubsection}{\numberline {2.6.3.4}闭包 (Closure)}{55}{subsubsection.2.6.3.4}
-\contentsline {subsubsection}{\numberline {2.6.3.5}伪·OOP}{55}{subsubsection.2.6.3.5}
-\contentsline {subsection}{\numberline {2.6.4}关于\texttt {...}}{57}{subsection.2.6.4}
-\contentsline {subsection}{\numberline {2.6.5}测速}{57}{subsection.2.6.5}
-\contentsline {section}{\numberline {2.7}列表 (list)}{58}{section.2.7}
-\contentsline {subsection}{\numberline {2.7.1}list的索引/取子集}{59}{subsection.2.7.1}
-\contentsline {subsection}{\numberline {2.7.2}合并与拆解}{59}{subsection.2.7.2}
-\contentsline {subsection}{\numberline {2.7.3}其他性质和操作}{60}{subsection.2.7.3}
-\contentsline {section}{\numberline {2.8}array（数组）和matrix（矩阵）简介}{61}{section.2.8}
-\contentsline {subsection}{\numberline {2.8.1}给matrices和arrays命名}{63}{subsection.2.8.1}
-\contentsline {section}{\numberline {2.9}小测}{64}{section.2.9}
-\contentsline {chapter}{\numberline {3}dataframe和tibble}{67}{chapter.3}
-\contentsline {subsection}{\numberline {3.0.1}本章内容速览}{67}{subsection.3.0.1}
-\contentsline {section}{\numberline {3.1}查看dataframe/tibble并了解它们的结构}{67}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}dataframe/tibble的基本概念}{67}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}查看更多数据}{68}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}创建tibble}{68}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}手动输入数据以创建tibble}{68}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}把dataframe转换成一个tibble}{69}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}从外部数据创建tibble}{69}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}数据转换 (Data Transformation)}{69}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}取子集（抓取行，列）\{tbl-subsetting\}}{70}{subsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.1.1}抓取单列}{70}{subsubsection.3.3.1.1}
-\contentsline {subsubsection}{\numberline {3.3.1.2}抓取多列并返回一个tibble}{70}{subsubsection.3.3.1.2}
-\contentsline {subsubsection}{\numberline {3.3.1.3}通过\texttt {filter()}，抓取满足某条件的行}{71}{subsubsection.3.3.1.3}
-\contentsline {subsubsection}{\numberline {3.3.1.4}用\texttt {slice()}，通过行数（索引）抓取行。}{71}{subsubsection.3.3.1.4}
-\contentsline {subsection}{\numberline {3.3.2}用\texttt {mutate()}修改或新增变量}{72}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}\texttt {\%\textgreater {}\%}符号 (Pipe Operator)}{74}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}\texttt {group\_by}与\texttt {summarise}}{76}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}其它}{80}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}list和dataframe/tibble}{80}{subsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.1.1}Dataframe和tibble的本质}{80}{subsubsection.3.4.1.1}
-\contentsline {subsubsection}{\numberline {3.4.1.2}Dataframe/tibble的取子集}{80}{subsubsection.3.4.1.2}
-\contentsline {subsection}{\numberline {3.4.2}Tidyverse tibble相对于Base R dataframe的优势}{80}{subsection.3.4.2}
-\contentsline {subsubsection}{\numberline {3.4.2.1}信息的显示}{80}{subsubsection.3.4.2.1}
-\contentsline {subsubsection}{\numberline {3.4.2.2}tibble不会自作主张地化简结果}{81}{subsubsection.3.4.2.2}
-\contentsline {subsubsection}{\numberline {3.4.2.3}tibble与其它\texttt {tidyverse}中的功能兼容性更强}{82}{subsubsection.3.4.2.3}
-\contentsline {chapter}{\numberline {4}使用ggplot绘图}{83}{chapter.4}
-\contentsline {section}{\numberline {4.1}哲理}{83}{section.4.1}
-\contentsline {section}{\numberline {4.2}基础}{83}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}基本语法}{83}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}图像类型}{83}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}进阶}{83}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}逐层作图}{83}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}尺寸，轴，和图例}{83}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}位置}{83}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}背景/主题的修改}{83}{subsection.4.3.4}
-\contentsline {subsection}{\numberline {4.3.5}与ggplot编程}{83}{subsection.4.3.5}
-\contentsline {section}{\numberline {4.4}附：Base R中的作图}{83}{section.4.4}
-\contentsline {chapter}{\numberline {5}数据处理}{85}{chapter.5}
-\contentsline {section}{\numberline {5.1}把``untidy data''整成``tidy data''}{85}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}``untidy data''的主要问题}{85}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}解决方案}{85}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}数据的导入和导出}{85}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}导入}{85}{subsection.5.2.1}
-\contentsline {subsubsection}{\numberline {5.2.1.1}csv}{85}{subsubsection.5.2.1.1}
-\contentsline {subsubsection}{\numberline {5.2.1.2}excel}{85}{subsubsection.5.2.1.2}
-\contentsline {subsubsection}{\numberline {5.2.1.3}其它}{85}{subsubsection.5.2.1.3}
-\contentsline {subsection}{\numberline {5.2.2}导出}{85}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}字符串的处理}{85}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}基础}{85}{subsection.5.3.1}
-\contentsline {subsubsection}{\numberline {5.3.1.1}引号的使用}{85}{subsubsection.5.3.1.1}
-\contentsline {subsubsection}{\numberline {5.3.1.2}换行符和制表符}{86}{subsubsection.5.3.1.2}
-\contentsline {subsubsection}{\numberline {5.3.1.3}\texttt {print()}和\texttt {writeLines()}}{86}{subsubsection.5.3.1.3}
-\contentsline {subsection}{\numberline {5.3.2}使用\texttt {str\_sub()}取子集}{86}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}使用\texttt {str\_c()}进行字符串的合并}{87}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}使用\texttt {str\_view()}来查找特定的字符组合}{88}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}\texttt {str\_detect()}}{88}{subsection.5.3.5}
-\contentsline {section}{\numberline {5.4}Factors}{88}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}基础}{88}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}在绘图中的应用}{89}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}高端操作}{89}{subsection.5.4.3}
-\contentsline {section}{\numberline {5.5}日期和时间}{89}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}ISO标准}{89}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}创建日期/时间}{89}{subsection.5.5.2}
-\contentsline {subsubsection}{\numberline {5.5.2.1}现在的日期/时间}{89}{subsubsection.5.5.2.1}
-\contentsline {subsubsection}{\numberline {5.5.2.2}通过字符串转换}{89}{subsubsection.5.5.2.2}
-\contentsline {subsection}{\numberline {5.5.3}计算}{90}{subsection.5.5.3}
-\contentsline {subsection}{\numberline {5.5.4}在绘图中的应用}{90}{subsection.5.5.4}
-\contentsline {chapter}{\numberline {6}与Python的联合使用}{91}{chapter.6}
-\contentsline {section}{\numberline {6.1}在R中使用Python: \texttt {reticulate}}{91}{section.6.1}
-\contentsline {section}{\numberline {6.2}在Python中使用R: \texttt {rpy}}{91}{section.6.2}
-\contentsline {section}{\numberline {6.3}Beaker Notebook}{91}{section.6.3}
-\contentsline {chapter}{References}{93}{chapter*.12}
+\contentsline {paragraph}{\numberline {2.3.3.5.3}其他}{42}{paragraph.2.3.3.5.3}
+\contentsline {section}{\numberline {2.4}逻辑}{42}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}逻辑值 \{logical-values\}}{42}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}关系运算符和简单的逻辑运算}{42}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}逻辑运算符}{43}{subsection.2.4.3}
+\contentsline {subsubsection}{\numberline {2.4.3.1}反义符号（\texttt {!}）}{43}{subsubsection.2.4.3.1}
+\contentsline {subsubsection}{\numberline {2.4.3.2}多个逻辑运算的组合（\texttt {\&}（且）和\texttt {\textbar {}}（或））}{44}{subsubsection.2.4.3.2}
+\contentsline {section}{\numberline {2.5}判断和循环（流程控制）}{44}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}给有编程基础者的快速指南}{44}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}无编程基础者的快速指南}{45}{subsection.2.5.2}
+\contentsline {subsubsection}{\numberline {2.5.2.1}\texttt {if}, \texttt {else\ if}, \texttt {else}语句（``如果\ldots {}\ldots {}''，``或者，如果\ldots {}\ldots {}''，``否则\ldots {}\ldots {}''）}{45}{subsubsection.2.5.2.1}
+\contentsline {subsubsection}{\numberline {2.5.2.2}for循环}{46}{subsubsection.2.5.2.2}
+\contentsline {subsubsection}{\numberline {2.5.2.3}while循环}{47}{subsubsection.2.5.2.3}
+\contentsline {subsubsection}{\numberline {2.5.2.4}\texttt {break} 和 \texttt {next}}{47}{subsubsection.2.5.2.4}
+\contentsline {subsection}{\numberline {2.5.3}严谨版}{48}{subsection.2.5.3}
+\contentsline {subsubsection}{\numberline {2.5.3.1}\texttt {if}, \texttt {else}, \texttt {else\ if} 语句}{48}{subsubsection.2.5.3.1}
+\contentsline {subsubsection}{\numberline {2.5.3.2}\texttt {ifelse()}函数}{48}{subsubsection.2.5.3.2}
+\contentsline {subsubsection}{\numberline {2.5.3.3}for循环}{49}{subsubsection.2.5.3.3}
+\contentsline {subsubsection}{\numberline {2.5.3.4}while循环}{49}{subsubsection.2.5.3.4}
+\contentsline {subsubsection}{\numberline {2.5.3.5}repeat循环}{49}{subsubsection.2.5.3.5}
+\contentsline {subsubsection}{\numberline {2.5.3.6}\texttt {break}和\texttt {next}}{49}{subsubsection.2.5.3.6}
+\contentsline {subsection}{\numberline {2.5.4}如何避免for循环------\texttt {apply()}家族函数}{49}{subsection.2.5.4}
+\contentsline {subsubsection}{\numberline {2.5.4.1}\texttt {lapply()}}{50}{subsubsection.2.5.4.1}
+\contentsline {subsubsection}{\numberline {2.5.4.2}\texttt {sapply()}}{51}{subsubsection.2.5.4.2}
+\contentsline {subsubsection}{\numberline {2.5.4.3}\texttt {mapply()}和\texttt {Map()}}{51}{subsubsection.2.5.4.3}
+\contentsline {subsection}{\numberline {2.5.5}\texttt {foreach} package：for循环的进化版}{52}{subsection.2.5.5}
+\contentsline {subsubsection}{\numberline {2.5.5.1}使用多内核进行计算}{52}{subsubsection.2.5.5.1}
+\contentsline {subsection}{\numberline {2.5.6}\texttt {purrr} package中的\texttt {apply}家族函数替代品和进化产物}{52}{subsection.2.5.6}
+\contentsline {subsubsection}{\numberline {2.5.6.1}\texttt {map()}, \texttt {map\_dbl()}, \texttt {map\_chr()}, \ldots {}}{53}{subsubsection.2.5.6.1}
+\contentsline {subsubsection}{\numberline {2.5.6.2}\texttt {map2()}和`pmap()系列}{53}{subsubsection.2.5.6.2}
+\contentsline {subsubsection}{\numberline {2.5.6.3}\texttt {invoke\_map()}, \texttt {invoke\_map\_dbl()}, \ldots {}}{54}{subsubsection.2.5.6.3}
+\contentsline {section}{\numberline {2.6}函数}{54}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}R中的函数}{54}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}调用函数}{55}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}创建函数}{56}{subsection.2.6.3}
+\contentsline {subsubsection}{\numberline {2.6.3.1}普通函数}{56}{subsubsection.2.6.3.1}
+\contentsline {subsubsection}{\numberline {2.6.3.2}匿名函数}{57}{subsubsection.2.6.3.2}
+\contentsline {subsubsection}{\numberline {2.6.3.3}二元运算符}{57}{subsubsection.2.6.3.3}
+\contentsline {subsubsection}{\numberline {2.6.3.4}闭包 (Closure)}{57}{subsubsection.2.6.3.4}
+\contentsline {subsection}{\numberline {2.6.4}关于\texttt {...}}{58}{subsection.2.6.4}
+\contentsline {subsection}{\numberline {2.6.5}赋值函数外的对象}{60}{subsection.2.6.5}
+\contentsline {subsection}{\numberline {2.6.6}测速}{61}{subsection.2.6.6}
+\contentsline {section}{\numberline {2.7}列表 (list)}{62}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}list的索引/取子集}{62}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}合并与拆解}{63}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}其他性质和操作}{64}{subsection.2.7.3}
+\contentsline {section}{\numberline {2.8}array（数组）和matrix（矩阵）简介}{64}{section.2.8}
+\contentsline {subsection}{\numberline {2.8.1}给matrices和arrays命名}{67}{subsection.2.8.1}
+\contentsline {section}{\numberline {2.9}小测}{68}{section.2.9}
+\contentsline {subsection}{\numberline {2.9.1}基础}{68}{subsection.2.9.1}
+\contentsline {subsection}{\numberline {2.9.2}进阶}{69}{subsection.2.9.2}
+\contentsline {subsection}{\numberline {2.9.3}挑战}{69}{subsection.2.9.3}
+\contentsline {chapter}{\numberline {3}dataframe和tibble}{71}{chapter.3}
+\contentsline {subsection}{\numberline {3.0.1}本章内容速览}{71}{subsection.3.0.1}
+\contentsline {section}{\numberline {3.1}查看dataframe/tibble并了解它们的结构}{71}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}dataframe/tibble的基本概念}{71}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}查看更多数据}{72}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}创建tibble}{72}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}手动输入数据以创建tibble}{72}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}把dataframe转换成一个tibble}{73}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}从外部数据创建tibble}{73}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}数据转换 (Data Transformation)}{73}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}取子集（抓取行，列）\{tbl-subsetting\}}{74}{subsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.1.1}抓取单列}{74}{subsubsection.3.3.1.1}
+\contentsline {subsubsection}{\numberline {3.3.1.2}抓取多列并返回一个tibble}{74}{subsubsection.3.3.1.2}
+\contentsline {subsubsection}{\numberline {3.3.1.3}通过\texttt {filter()}，抓取满足某条件的行}{75}{subsubsection.3.3.1.3}
+\contentsline {subsubsection}{\numberline {3.3.1.4}用\texttt {slice()}，通过行数（索引）抓取行。}{75}{subsubsection.3.3.1.4}
+\contentsline {subsection}{\numberline {3.3.2}用\texttt {mutate()}修改或新增变量}{76}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}\texttt {\%\textgreater {}\%}符号 (Pipe Operator)}{78}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}\texttt {group\_by}与\texttt {summarise}}{80}{subsection.3.3.4}
+\contentsline {section}{\numberline {3.4}其它}{84}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}list和dataframe/tibble}{84}{subsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.1.1}Dataframe和tibble的本质}{84}{subsubsection.3.4.1.1}
+\contentsline {subsubsection}{\numberline {3.4.1.2}Dataframe/tibble的取子集}{84}{subsubsection.3.4.1.2}
+\contentsline {subsection}{\numberline {3.4.2}Tidyverse tibble相对于Base R dataframe的优势}{84}{subsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.2.1}信息的显示}{84}{subsubsection.3.4.2.1}
+\contentsline {subsubsection}{\numberline {3.4.2.2}tibble不会自作主张地化简结果}{85}{subsubsection.3.4.2.2}
+\contentsline {subsubsection}{\numberline {3.4.2.3}tibble与其它\texttt {tidyverse}中的功能兼容性更强}{86}{subsubsection.3.4.2.3}
+\contentsline {chapter}{\numberline {4}使用ggplot绘图}{87}{chapter.4}
+\contentsline {section}{\numberline {4.1}哲理}{87}{section.4.1}
+\contentsline {section}{\numberline {4.2}基础}{87}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}基本语法}{87}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}图像类型}{87}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}进阶}{87}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}逐层作图}{87}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}尺寸，轴，和图例}{87}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}位置}{87}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}背景/主题的修改}{87}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.5}与ggplot编程}{87}{subsection.4.3.5}
+\contentsline {section}{\numberline {4.4}附：Base R中的作图}{87}{section.4.4}
+\contentsline {chapter}{\numberline {5}数据处理}{89}{chapter.5}
+\contentsline {section}{\numberline {5.1}把``untidy data''整成``tidy data''}{89}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}``untidy data''的主要问题}{89}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}解决方案}{89}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}数据的导入和导出}{89}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}导入}{89}{subsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.1.1}csv}{89}{subsubsection.5.2.1.1}
+\contentsline {subsubsection}{\numberline {5.2.1.2}excel}{89}{subsubsection.5.2.1.2}
+\contentsline {subsubsection}{\numberline {5.2.1.3}其它}{89}{subsubsection.5.2.1.3}
+\contentsline {subsection}{\numberline {5.2.2}导出}{89}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}字符串的处理}{89}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}基础}{89}{subsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.1.1}引号的使用}{89}{subsubsection.5.3.1.1}
+\contentsline {subsubsection}{\numberline {5.3.1.2}换行符和制表符}{90}{subsubsection.5.3.1.2}
+\contentsline {subsubsection}{\numberline {5.3.1.3}\texttt {print()}和\texttt {writeLines()}}{90}{subsubsection.5.3.1.3}
+\contentsline {subsection}{\numberline {5.3.2}使用\texttt {str\_sub()}取子集}{90}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}使用\texttt {str\_c()}进行字符串的合并}{91}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}使用\texttt {str\_view()}来查找特定的字符组合}{92}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}\texttt {str\_detect()}}{92}{subsection.5.3.5}
+\contentsline {section}{\numberline {5.4}Factors}{92}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}基础}{92}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}在绘图中的应用}{93}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}高端操作}{93}{subsection.5.4.3}
+\contentsline {section}{\numberline {5.5}日期和时间}{93}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}ISO标准}{93}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}创建日期/时间}{93}{subsection.5.5.2}
+\contentsline {subsubsection}{\numberline {5.5.2.1}现在的日期/时间}{93}{subsubsection.5.5.2.1}
+\contentsline {subsubsection}{\numberline {5.5.2.2}通过字符串转换}{94}{subsubsection.5.5.2.2}
+\contentsline {subsection}{\numberline {5.5.3}计算}{94}{subsection.5.5.3}
+\contentsline {subsection}{\numberline {5.5.4}在绘图中的应用}{94}{subsection.5.5.4}
+\contentsline {chapter}{\numberline {6}与Python的联合使用}{95}{chapter.6}
+\contentsline {section}{\numberline {6.1}在R中使用Python: \texttt {reticulate}}{95}{section.6.1}
+\contentsline {section}{\numberline {6.2}在Python中使用R: \texttt {rpy}}{95}{section.6.2}
+\contentsline {section}{\numberline {6.3}Beaker Notebook}{95}{section.6.3}
+\contentsline {chapter}{References}{97}{chapter*.12}

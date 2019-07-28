@@ -13,7 +13,7 @@
   
   
   <meta property="og:description" content="这是一本R与tidyverse的入门教程" />
-  <meta name="github-repo" content="TianyiShi2001/R-Tutorial-Resorces" />
+  <meta name="github-repo" content="TianyiShi2001/r-and-tidyverse-book" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="2.6 函数 | R与tidyverse——数据分析入门" />
@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-24" />
+<meta name="date" content="2019-07-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -178,7 +178,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i>版权页</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#technical"><i class="fa fa-check"></i>关于编写本书的技术信息</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R和RStudio介绍和安装教程</a><ul>
+<li class="chapter" data-level="1" data-path="intro-and-installation.html"><a href="intro-and-installation.html"><i class="fa fa-check"></i><b>1</b> R与RStudio安装与基础操作</a><ul>
 <li class="chapter" data-level="" data-path="intro-and-installation.html"><a href="intro-and-installation.html#intro-overview"><i class="fa fa-check"></i>本章内容速览</a></li>
 <li class="chapter" data-level="1.1" data-path="what-is-R.html"><a href="what-is-R.html"><i class="fa fa-check"></i><b>1.1</b> 什么是R</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="what-is-R.html"><a href="what-is-R.html#R-and-RStudio-install"><i class="fa fa-check"></i><b>1.1.1</b> 安装R和RStudio</a></li>
@@ -201,6 +201,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4.2" data-path="packages.html"><a href="packages.html#package-install"><i class="fa fa-check"></i><b>1.4.2</b> 如何安装packages</a></li>
 <li class="chapter" data-level="1.4.3" data-path="packages.html"><a href="packages.html#package-use"><i class="fa fa-check"></i><b>1.4.3</b> 如何使用packages</a></li>
 <li class="chapter" data-level="1.4.4" data-path="packages.html"><a href="packages.html#package-misc"><i class="fa fa-check"></i><b>1.4.4</b> 其它</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="-test-intro.html"><a href="-test-intro.html"><i class="fa fa-check"></i><b>1.5</b> 小测 {test-intro}</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-basics"><i class="fa fa-check"></i><b>1.5.1</b> 基础 {test-intro-basics}</a></li>
+<li class="chapter" data-level="1.5.2" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-advanced"><i class="fa fa-check"></i><b>1.5.2</b> 进阶 {test-intro-advanced}</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> 向量，逻辑，循环和函数</a><ul>
@@ -232,13 +236,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.5.3" data-path="control-flow.html"><a href="control-flow.html#control-flow-rigorous"><i class="fa fa-check"></i><b>2.5.3</b> 严谨版</a></li>
 <li class="chapter" data-level="2.5.4" data-path="control-flow.html"><a href="control-flow.html#apply"><i class="fa fa-check"></i><b>2.5.4</b> 如何避免for循环——<code>apply()</code>家族函数</a></li>
 <li class="chapter" data-level="2.5.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.5.5</b> <code>foreach</code> package：for循环的进化版</a></li>
+<li class="chapter" data-level="2.5.6" data-path="control-flow.html"><a href="control-flow.html#purrr-packageapply"><i class="fa fa-check"></i><b>2.5.6</b> <code>purrr</code> package中的<code>apply</code>家族函数替代品和进化产物</a></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.6</b> 函数</a><ul>
 <li class="chapter" data-level="2.6.1" data-path="functions.html"><a href="functions.html#functions-in-R"><i class="fa fa-check"></i><b>2.6.1</b> R中的函数</a></li>
 <li class="chapter" data-level="2.6.2" data-path="functions.html"><a href="functions.html#abbr"><i class="fa fa-check"></i><b>2.6.2</b> 调用函数</a></li>
 <li class="chapter" data-level="2.6.3" data-path="functions.html"><a href="functions.html#create-functions"><i class="fa fa-check"></i><b>2.6.3</b> 创建函数</a></li>
 <li class="chapter" data-level="2.6.4" data-path="functions.html"><a href="functions.html#about-dot-dot-dot"><i class="fa fa-check"></i><b>2.6.4</b> 关于<code>...</code></a></li>
-<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.5</b> 测速</a></li>
+<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#functions-assign-global"><i class="fa fa-check"></i><b>2.6.5</b> 赋值函数外的对象</a></li>
+<li class="chapter" data-level="2.6.6" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.6</b> 测速</a></li>
 </ul></li>
 <li class="chapter" data-level="2.7" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>2.7</b> 列表 (list)</a><ul>
 <li class="chapter" data-level="2.7.1" data-path="list.html"><a href="list.html#list-index"><i class="fa fa-check"></i><b>2.7.1</b> list的索引/取子集</a></li>
@@ -248,7 +254,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.8" data-path="matrix-array.html"><a href="matrix-array.html"><i class="fa fa-check"></i><b>2.8</b> array（数组）和matrix（矩阵）简介</a><ul>
 <li class="chapter" data-level="2.8.1" data-path="matrix-array.html"><a href="matrix-array.html#matrix-array-naming"><i class="fa fa-check"></i><b>2.8.1</b> 给matrices和arrays命名</a></li>
 </ul></li>
-<li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a></li>
+<li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a><ul>
+<li class="chapter" data-level="2.9.1" data-path="test-base.html"><a href="test-base.html#test-base-basics"><i class="fa fa-check"></i><b>2.9.1</b> 基础</a></li>
+<li class="chapter" data-level="2.9.2" data-path="test-base.html"><a href="test-base.html#test-base-advanced"><i class="fa fa-check"></i><b>2.9.2</b> 进阶</a></li>
+<li class="chapter" data-level="2.9.3" data-path="test-base.html"><a href="test-base.html#test-base-challenge"><i class="fa fa-check"></i><b>2.9.3</b> 挑战</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="tibble.html"><a href="tibble.html"><i class="fa fa-check"></i><b>3</b> dataframe和tibble</a><ul>
 <li class="chapter" data-level="3.0.1" data-path="tibble.html"><a href="tibble.html#section-3.0.1"><i class="fa fa-check"></i><b>3.0.1</b> 本章内容速览</a></li>
@@ -347,23 +357,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>比如</p>
 <pre class="sourceCode r"><code class="sourceCode r">sample &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">5.1</span>, <span class="fl">5.2</span>, <span class="fl">4.5</span>, <span class="fl">5.3</span>, <span class="fl">4.3</span>, <span class="fl">5.5</span>, <span class="fl">5.7</span>)
 <span class="co"># 根据传统，赋值变量时用`&lt;-`号，赋值函数参数时才用`=`</span>
-<span class="kw">t.test</span>(<span class="dt">x =</span> sample, <span class="dt">mu =</span> <span class="fl">4.5</span>)
-<span class="co">## </span>
-<span class="co">##  One Sample t-test</span>
-<span class="co">## </span>
-<span class="co">## data:  sample</span>
-<span class="co">## t = 3, df = 6, p-value = 0.02</span>
-<span class="co">## alternative hypothesis: true mean is not equal to 4.5</span>
-<span class="co">## 95 percent confidence interval:</span>
-<span class="co">##  4.61 5.56</span>
-<span class="co">## sample estimates:</span>
-<span class="co">## mean of x </span>
-<span class="co">##      5.09</span></code></pre>
-<p>二元运算符和<code>[</code>（取子集符号）看起来一点都不像函数，而实际上它们也是函数，因此也可以用通用的格式使用他们，只是需要加上引号：</p>
+<span class="kw">t.test</span>(<span class="dt">x =</span> sample, <span class="dt">mu =</span> <span class="fl">4.5</span>)</code></pre>
+<pre><code>#&gt; 
+#&gt;  One Sample t-test
+#&gt; 
+#&gt; data:  sample
+#&gt; t = 3, df = 6, p-value = 0.02
+#&gt; alternative hypothesis: true mean is not equal to 4.5
+#&gt; 95 percent confidence interval:
+#&gt;  4.61 5.56
+#&gt; sample estimates:
+#&gt; mean of x 
+#&gt;      5.09</code></pre>
+<p>二元运算符和<code>[</code>（取子集符号）看起来一点都不像函数，而实际上它们也是函数，因此也可以用通用的格式使用他们，只是需要加上引号或转义符号：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="st">&quot;+&quot;</span>(<span class="dv">2</span>, <span class="dv">3</span>)
-<span class="co">## [1] 5</span></code></pre>
+<span class="st">`</span><span class="dt">+</span><span class="st">`</span>(<span class="dv">2</span>, <span class="dv">3</span>)
+<span class="co">## 5</span></code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="st">&quot;[&quot;</span>(<span class="kw">c</span>(<span class="st">&quot;四川担担面&quot;</span>, <span class="st">&quot;武汉热干面&quot;</span>, <span class="st">&quot;兰州牛肉面&quot;</span>, <span class="st">&quot;北京炸酱面&quot;</span>), <span class="dv">2</span>)
-<span class="co">## [1] &quot;武汉热干面&quot;</span></code></pre>
+<span class="co">#&gt; [1] &quot;武汉热干面&quot;</span></code></pre>
 <p>可自定义的二元运算符形式为<code>%x%</code>, 其中<code>x</code>为任何字符。（见第<a href="functions.html#binary-operaters">2.6.3.3</a>节）</p>
 <p>（英语中，“parameter”或“formal argument”二词用于函数定义，“argument”或“actual argument”二词用于调用函数<span class="citation">(Kernighan and Ritchie <a href="#ref-Kernighan1988The-C-Programming-La">1988</a>)</span>，中文里分别是“形式参数”和“实际参数”，但是多数场合简称“参数”。）</p>
 </div>
@@ -374,11 +385,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>        (
  <span class="co"># 4   </span>
         <span class="dv">4</span> <span class="co"># 我怕不是</span>
-,              <span class="co">#疯了哦</span>
+,              <span class="co">#疯了</span>
             <span class="dv">6</span>
   
-  )
-<span class="co">## [1] 10</span></code></pre>
+  )</code></pre>
+<pre><code>#&gt; [1] 10</code></pre>
 <p>它实际的好处是，当参数很长或是有嵌套的函数时，可以通过换行和空格使代码更易读，就像其它的编程语言一样。</p>
 <p>函数的参数以<code>seq</code>函数为例，通过查看documentation（在console执行<code>?seq</code>）可以查看它的所有的参数：</p>
 <pre><code>## Default S3 method:
@@ -386,9 +397,10 @@ seq(from = 1, to = 1, by = ((to - from)/(length.out - 1)),
     length.out = NULL, along.with = NULL, ...)</code></pre>
 <p>可以看到第一个参数是<code>from</code>，第二个是<code>to</code>，第三个是<code>by</code>，以此类推。因此我们执行<code>seq(0, 50, 10)</code>的时候，R会自动理解成<code>seq(from = 0, to = 50, by = 10)</code>。而想用指定长度的方法就必须要写清楚是<code>length.out</code>等于几。</p>
 <p><code>length.out</code>本身也可以简写：</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">25</span>, <span class="dt">l =</span> <span class="dv">11</span>)
-<span class="co">##  [1]  0.0  2.5  5.0  7.5 10.0 12.5 15.0 17.5 20.0 22.5 25.0</span></code></pre>
-<p>因为参数中只有<code>length.out</code>是以<code>l</code>开头的，<code>l</code>会被理解为<code>length.out</code>. 但是这个习惯并不好；自己用用就算了，与别人分享自己的工作时请务必使用标准写法。</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">25</span>, <span class="dt">l =</span> <span class="dv">11</span>)</code></pre>
+<pre><code>#&gt;  [1]  0.0  2.5  5.0  7.5 10.0 12.5 15.0 17.5 20.0 22.5 25.0</code></pre>
+<p>因为参数中只有<code>length.out</code>是以<code>l</code>开头的，<code>l</code>会被理解为<code>length.out</code>. 但是这个习惯并不好；自己用用就算了，与别人分享自己的工作时请尽量使用参数名的全称。</p>
+<p>对于<code>seq(0, 50, 10)</code>，亦可写成<code>seq(by = 10, 0, 50)</code>. 这是因为<code>by</code>参数先赋值，<code>0</code>和<code>50</code>是未命名的参数，所以按照剩余的参数的排列顺序来，即<code>from = 0, to = 50</code>. 同理，<code>seq(to = 50, 0, 10)</code>也是等价的。</p>
 </div>
 <div id="create-functions" class="section level3">
 <h3><span class="header-section-number">2.6.3</span> 创建函数</h3>
@@ -411,16 +423,16 @@ seq(from = 1, to = 1, by = ((to - from)/(length.out - 1)),
   <span class="kw">return</span>(result)
 }
 <span class="co"># 随后，你就可以使用自定义的函数了</span>
-<span class="kw">SE</span>(<span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">8</span>)) 
-<span class="co">## [1] 0.337</span></code></pre>
+<span class="kw">SE</span>(<span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">8</span>)) </code></pre>
+<pre><code>#&gt; [1] 0.337</code></pre>
 <p>这里其实可以做一些省略。很多时候，最后一“句”的<strong>计算结果</strong>（不是赋值计算）就是我们想<code>return</code>的结果。因此，这时<code>return</code>可以省略：</p>
 <pre class="sourceCode r"><code class="sourceCode r">SE &lt;-<span class="st"> </span><span class="cf">function</span>(x) {
   s &lt;-<span class="st"> </span><span class="kw">sd</span>(x)
   n &lt;-<span class="st"> </span><span class="kw">length</span>(x)
   s<span class="op">/</span><span class="kw">sqrt</span>(n) <span class="co"># 注意不是`result &lt;- s/sqrt(n)`</span>
 }
-<span class="kw">SE</span>(<span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">8</span>)) 
-<span class="co">## [1] 0.337</span></code></pre>
+<span class="kw">SE</span>(<span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">8</span>)) </code></pre>
+<pre><code>#&gt; [1] 0.337</code></pre>
 <p>很多时候，函数内部有复杂流程控制，这时使用<code>return()</code>可以很大地增强易读性：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 这是随手写的一个没有意义的函数</span>
 myfunc &lt;-<span class="st"> </span><span class="cf">function</span>(i){
@@ -438,15 +450,15 @@ myfunc &lt;-<span class="st"> </span><span class="cf">function</span>(i){
     } <span class="cf">else</span> <span class="kw">return</span>(k<span class="op">*</span>i)
   }
 }
-<span class="kw">myfunc</span>(<span class="dv">6</span>)
-<span class="co">## [1] 83</span></code></pre>
+<span class="kw">myfunc</span>(<span class="dv">6</span>)</code></pre>
+<pre><code>#&gt; [1] 83</code></pre>
+<p>本章剩余的内容，都是比较进阶的了。可以酌情从这里跳转至本章第<a href="test-base.html#test-base">2.9</a>节。</p>
 </div>
 <div id="anonymous-functions" class="section level4">
-<h4><span class="header-section-number">2.6.3.2</span> 无名函数</h4>
-<p>本章剩余的内容，都是比较进阶的了。可以酌情从这里跳转至本章第<a href="test-base.html#test-base">2.9</a>节。</p>
+<h4><span class="header-section-number">2.6.3.2</span> 匿名函数</h4>
 <p>函数不需要名字也可以执行。一般，会与<code>apply</code>族函数联用（见第<a href="control-flow.html#apply">2.5.4</a>节）：</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sapply</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="cf">function</span>(x) x<span class="op">^</span><span class="dv">2</span>)
-<span class="co">## [1]  1  4  9 16 25</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sapply</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="cf">function</span>(x) x<span class="op">^</span><span class="dv">2</span>)</code></pre>
+<pre><code>#&gt; [1]  1  4  9 16 25</code></pre>
 <p>或者用于</p>
 </div>
 <div id="binary-operaters" class="section level4">
@@ -455,8 +467,8 @@ myfunc &lt;-<span class="st"> </span><span class="cf">function</span>(i){
 <p>比如我们可以定义一个计算椭圆面积的函数</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="st">&#39;%el%&#39;</span> &lt;-<span class="st"> </span><span class="cf">function</span>(x, y) pi<span class="op">*</span>x<span class="op">*</span>y
 
-<span class="dv">2</span> <span class="op">%el%</span><span class="st"> </span><span class="dv">5</span>
-<span class="co">## [1] 31.4</span></code></pre>
+<span class="dv">2</span> <span class="op">%el%</span><span class="st"> </span><span class="dv">5</span></code></pre>
+<pre><code>#&gt; [1] 31.4</code></pre>
 <p>原则上，可自定义的二元运算符不一定要用<code>%</code>包围；<code>+</code>, <code>-</code>, <code>:</code>等符号的功能都可以被自定义，但是它们是R自带的，非常常用的函数，重定义它们只会带来麻烦。</p>
 </div>
 <div id="closure" class="section level4">
@@ -470,97 +482,22 @@ myfunc &lt;-<span class="st"> </span><span class="cf">function</span>(i){
   }
 }
 <span class="co"># 执行myfunc()的时候，默认结果为最后一句/一行，在这里应为内函数：</span>
-<span class="kw">myfunc</span>()
-<span class="co">## function(){</span>
-<span class="co">##     b = 10</span>
-<span class="co">##     return(a*b)</span>
-<span class="co">##   }</span>
-<span class="co">## &lt;environment: 0x7fd6c9c54a60&gt;</span>
-
-<span class="co"># 既然`myfunc()`的结果是一个函数，那么在后面再加上一个括号就是执行内函数了；内函数可以使用外函数中所定义的变量（比如这里使用了外函数的`a = 5`）</span>
-<span class="kw">myfunc</span>()()
-<span class="co">## [1] 50</span></code></pre>
-<pre class="sourceCode r"><code class="sourceCode r">
-speak &lt;-<span class="st"> </span><span class="cf">function</span>(x){
+<span class="kw">myfunc</span>()</code></pre>
+<pre><code>#&gt; function(){
+#&gt;     b = 10
+#&gt;     return(a*b)
+#&gt;   }
+#&gt; &lt;environment: 0x7fa75c0f21c8&gt;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 既然`myfunc()`的结果是一个函数，那么在后面再加上一个括号就是执行内函数了；内函数可以使用外函数中所定义的变量（比如这里使用了外函数的`a = 5`）</span>
+<span class="kw">myfunc</span>()()</code></pre>
+<pre><code>#&gt; [1] 50</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">speak &lt;-<span class="st"> </span><span class="cf">function</span>(x){
   <span class="kw">x</span>()<span class="op">$</span>speak
 }
 
-<span class="kw">speak</span>(cat)
-<span class="co">## NULL</span></code></pre>
-</div>
-<div id="fake-OOP" class="section level4">
-<h4><span class="header-section-number">2.6.3.5</span> 伪·OOP</h4>
-<p>我貌似，捣鼓出了一种完全使用R中的简易函数实现伪·OOP的方法（R中的真·OOP是有三种，S3，R6和S4）：</p>
-<pre class="sourceCode r"><code class="sourceCode r">Cat &lt;-<span class="st"> </span><span class="cf">function</span>(name){
-  name =<span class="st"> </span>name
-  binomial_name &lt;-<span class="st"> &quot;Felis catus&quot;</span>
-  speak &lt;-<span class="st"> &quot;Meow&quot;</span>
-  greet &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">time =</span> <span class="st">&quot;not_specified&quot;</span>){
-    intro &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;my name is&quot;</span>, name)
-    <span class="cf">if</span>(time <span class="op">==</span><span class="st"> &quot;morning&quot;</span>) <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;Good morning,&quot;</span>, intro))
-    <span class="cf">if</span>(time <span class="op">==</span><span class="st"> &quot;afternoon&quot;</span>) <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;Good afternoon,&quot;</span>, intro))
-    <span class="cf">if</span>(time <span class="op">==</span><span class="st"> &quot;evening&quot;</span>) <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;Good evening,&quot;</span>, intro)) 
-    <span class="cf">if</span>(time <span class="op">==</span><span class="st"> &quot;not_specified&quot;</span>) <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;Hi,&quot;</span>, intro))
-  }
-    <span class="kw">paste</span>(<span class="st">&quot;Hi, my name is &quot;</span>, name)
-  <span class="kw">list</span>(<span class="dt">name =</span> name, <span class="dt">binomial_name =</span> binomial_name, <span class="dt">speak =</span> speak, <span class="dt">greet =</span> greet)
-}
-
-Felix &lt;-<span class="st"> </span><span class="kw">Cat</span>(<span class="st">&quot;Felix&quot;</span>)
-Felix<span class="op">$</span>name
-<span class="co">## [1] &quot;Felix&quot;</span>
-Felix<span class="op">$</span><span class="kw">greet</span>(<span class="st">&quot;morning&quot;</span>)
-<span class="co">## [1] &quot;Good morning, my name is Felix&quot;</span></code></pre>
-<p><strong>inheritance和polymorphism的实现</strong></p>
-<pre class="sourceCode r"><code class="sourceCode r">Pet &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">name =</span> <span class="ot">NA</span>, <span class="dt">common_name =</span> <span class="ot">NA</span>, <span class="dt">binomial_name =</span> <span class="ot">NA</span>, <span class="dt">speak =</span> <span class="ot">NA</span>){
-  name &lt;-<span class="st"> </span>name
-  common_name &lt;-<span class="st"> </span>common_name
-  binomial_name &lt;-<span class="st"> </span>binomial_name
-  speak &lt;-<span class="st"> </span>speak
-  greet &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">time =</span> <span class="st">&quot;not_specified&quot;</span>){
-    intro &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;I&#39;m a&quot;</span>, common_name, <span class="st">&quot;and my name is&quot;</span>, name)
-    <span class="cf">if</span>(time <span class="op">==</span><span class="st"> &quot;morning&quot;</span>) <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;Good morning,&quot;</span>, intro))
-    <span class="cf">if</span>(time <span class="op">==</span><span class="st"> &quot;afternoon&quot;</span>) <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;Good afternoon,&quot;</span>, intro))
-    <span class="cf">if</span>(time <span class="op">==</span><span class="st"> &quot;evening&quot;</span>) <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;Good evening,&quot;</span>, intro)) 
-    <span class="cf">if</span>(time <span class="op">==</span><span class="st"> &quot;not_specified&quot;</span>) <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;Hi,&quot;</span>, intro))
-  }
-    <span class="kw">paste</span>(<span class="st">&quot;Hi, my name is &quot;</span>, name)
-  <span class="kw">list</span>(<span class="dt">name =</span> name, <span class="dt">common_name =</span> common_name, <span class="dt">binomial_name =</span> binomial_name, <span class="dt">speak =</span> speak, <span class="dt">greet =</span> greet)
-}
-
-
-Turtle &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">name =</span> <span class="ot">NA</span>){
-  <span class="kw">Pet</span>(name, <span class="st">&quot;turtle&quot;</span>, <span class="st">&quot;Trachemys scripta elegans&quot;</span>) <span class="co"># 实现inheritance # 龟没有叫声</span>
-}
-
-Cat &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">name =</span> <span class="ot">NA</span>, <span class="dt">sterilized =</span> <span class="ot">NA</span>){
-  sterilized &lt;-<span class="st"> </span>sterilized <span class="co"># 猫可能绝育 # 新增attribute，实现了广义的polymorphism</span>
-  PetAaM &lt;-<span class="st"> </span><span class="kw">Pet</span>(name, <span class="st">&quot;cat&quot;</span>, <span class="st">&quot;Felis catus&quot;</span>, <span class="st">&quot;Meow&quot;</span>)
-  CatOnlyAaM &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">sterilized =</span> sterilized)
-  <span class="kw">c</span>(PetAaM, CatOnlyAaM)
-}
-
-<span class="co"># 实现了Python语境中的polymorphism</span>
-greet &lt;-<span class="st"> </span><span class="cf">function</span>(pet, <span class="dt">time =</span> <span class="st">&quot;not_specified&quot;</span>){
-  pet<span class="op">$</span><span class="kw">greet</span>(time)
-}
-
-binomial_name &lt;-<span class="st"> </span><span class="cf">function</span>(pet){
-  pet<span class="op">$</span>binomial_name
-}</code></pre>
-<p>使用例：</p>
-<pre class="sourceCode r"><code class="sourceCode r">Felix &lt;-<span class="st"> </span><span class="kw">Cat</span>(<span class="st">&quot;Felix&quot;</span>, <span class="st">&quot;TRUE&quot;</span>)
-Kazuya &lt;-<span class="st"> </span><span class="kw">Turtle</span>(<span class="st">&quot;Kazuya&quot;</span>)
-
-Felix<span class="op">$</span>binomial_name
-<span class="co">## [1] &quot;Felis catus&quot;</span>
-Kazuya<span class="op">$</span><span class="kw">greet</span>(<span class="st">&quot;afternoon&quot;</span>)
-<span class="co">## [1] &quot;Good afternoon, I&#39;m a turtle and my name is Kazuya&quot;</span>
-<span class="kw">greet</span>(Felix, <span class="st">&quot;morning&quot;</span>)
-<span class="co">## [1] &quot;Good morning, I&#39;m a cat and my name is Felix&quot;</span>
-<span class="kw">sapply</span>(<span class="kw">list</span>(Kazuya, Felix), binomial_name)
-<span class="co">## [1] &quot;Trachemys scripta elegans&quot; &quot;Felis catus&quot;</span></code></pre>
-<p>没有<code>class</code>，没有<code>self</code>，没有<code>__init__</code>，<em>it just works</em>.</p>
+<span class="kw">speak</span>(cat)</code></pre>
+<pre><code>#&gt; NULL</code></pre>
+<p>利用闭包，可以使用R中的简易的函数实现伪·OOP（R中的真·OOP是有三种，S3，R6和S4），这是本章末的<a href="test-base.html#test-base-challenge">挑战题</a>。</p>
 </div>
 </div>
 <div id="about-dot-dot-dot" class="section level3">
@@ -574,18 +511,122 @@ Kazuya<span class="op">$</span><span class="kw">greet</span>(<span class="st">&q
   <span class="kw">print</span>(other_args)
 }
 
-<span class="kw">my_func</span>(<span class="st">&quot;foo&quot;</span>, <span class="dt">cities =</span> <span class="kw">c</span>(<span class="st">&quot;崇阳&quot;</span>, <span class="st">&quot;Αθήνα&quot;</span>, <span class="st">&quot;つがる&quot;</span>), <span class="dt">nums =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">6</span>))
-<span class="co">## [1] &quot;foo&quot;</span>
-<span class="co">## [1] 100</span>
-<span class="co">## $cities</span>
-<span class="co">## [1] &quot;崇阳&quot;   &quot;Αθήνα&quot;  &quot;つがる&quot;</span>
-<span class="co">## </span>
-<span class="co">## $nums</span>
-<span class="co">## [1] 3 4 6</span></code></pre>
+<span class="kw">my_func</span>(<span class="st">&quot;foo&quot;</span>, <span class="dt">cities =</span> <span class="kw">c</span>(<span class="st">&quot;崇阳&quot;</span>, <span class="st">&quot;Αθήνα&quot;</span>, <span class="st">&quot;つがる&quot;</span>), <span class="dt">nums =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">6</span>))</code></pre>
+<pre><code>#&gt; [1] &quot;foo&quot;
+#&gt; [1] 100
+#&gt; $cities
+#&gt; [1] &quot;崇阳&quot;   &quot;Αθήνα&quot;  &quot;つがる&quot;
+#&gt; 
+#&gt; $nums
+#&gt; [1] 3 4 6</code></pre>
 <p><code>arg1</code>指定了是<code>&quot;foo&quot;</code>（通过<a href="functions.html#abbr">简写</a>），因此第一行印出<code>&quot;foo&quot;</code>; <code>arg2</code>未指定，因此使用默认值<code>100</code>，印在第二行。<code>cities</code>和<code>nums</code>在形式参数中没有匹配，因此归为“…”，作为list印在第三行及之后。</p>
+<p>下面是一个（没有意义的）利用<code>...</code>做一个对于向量和列表通用的函数<code>calc()</code>，使<code>calc(data, pow = a, times = b, add = c)</code>返回与原数据<code>data</code>的结构相同，但各元素<span class="math inline">\(x\)</span>变为<span class="math inline">\(bx^a+c\)</span>的向量/列表（这和OOP有相似之处）：</p>
+<pre class="sourceCode r"><code class="sourceCode r">calc_v &lt;-<span class="st"> </span><span class="cf">function</span>(v, <span class="dt">pow =</span> <span class="dv">1</span>, <span class="dt">times =</span> <span class="dv">1</span>, <span class="dt">add =</span> <span class="dv">0</span>) {
+  v <span class="op">^</span><span class="st"> </span>pow <span class="op">*</span><span class="st"> </span>times <span class="op">+</span><span class="st"> </span>add
+}
+
+calc_l &lt;-<span class="st"> </span><span class="cf">function</span>(L, <span class="dt">pow =</span> <span class="dv">1</span>, <span class="dt">times =</span> <span class="dv">1</span>, <span class="dt">add =</span> <span class="dv">0</span>) {
+  <span class="kw">rapply</span>(L, <span class="cf">function</span>(l) l <span class="op">^</span><span class="st"> </span>pow <span class="op">*</span><span class="st"> </span>times <span class="op">+</span><span class="st"> </span>add, <span class="dt">how =</span> <span class="st">&quot;list&quot;</span>)
+}
+
+calc &lt;-<span class="st"> </span><span class="cf">function</span>(data, ...) {
+  <span class="cf">if</span>(<span class="kw">is.list</span>(data)) {
+    <span class="kw">calc_l</span>(data, ...) <span class="co"># 即 calc_l(L = data, ...)</span>
+  } <span class="cf">else</span> <span class="cf">if</span>(<span class="kw">is.vector</span>(data)) {
+    <span class="kw">calc_v</span>(data, ...) <span class="co"># 即 calc_v(v = data, ...)</span>
+  }
+}</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">calc</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="dt">pow =</span> <span class="dv">2</span>, <span class="dt">add =</span> <span class="dv">1</span>)</code></pre>
+<pre><code>#&gt; [1]  2  5 10</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">calc</span>(<span class="kw">list</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="kw">list</span>(<span class="dv">10</span>, <span class="dv">20</span>)), <span class="dt">pow =</span> <span class="dv">2</span>, <span class="dt">times =</span> <span class="dv">2</span>)</code></pre>
+<pre><code>#&gt; [[1]]
+#&gt; [1] 2
+#&gt; 
+#&gt; [[2]]
+#&gt; [1] 8
+#&gt; 
+#&gt; [[3]]
+#&gt; [[3]][[1]]
+#&gt; [1] 200
+#&gt; 
+#&gt; [[3]][[2]]
+#&gt; [1] 800</code></pre>
+<p><code>pow</code>, <code>times</code>和<code>add</code>不是<code>calc</code>的参数，它们以<code>...</code>的形式被传递给<code>calc_l()</code>和<code>calc_v()</code>.</p>
+<p>在第(apply-sapply)节讲到，<code>sapply()</code>的功能本质上和<code>lapply()</code>一致，只是会化简结果。我们看一下<code>sapply()</code>函数的结构：</p>
+<pre class="sourceCode r"><code class="sourceCode r">sapply</code></pre>
+<pre><code>#&gt; function (X, FUN, ..., simplify = TRUE, USE.NAMES = TRUE) 
+#&gt; {
+#&gt;     FUN &lt;- match.fun(FUN)
+#&gt;     answer &lt;- lapply(X = X, FUN = FUN, ...)
+#&gt;     if (USE.NAMES &amp;&amp; is.character(X) &amp;&amp; is.null(names(answer))) 
+#&gt;         names(answer) &lt;- X
+#&gt;     if (!isFALSE(simplify) &amp;&amp; length(answer)) 
+#&gt;         simplify2array(answer, higher = (simplify == &quot;array&quot;))
+#&gt;     else answer
+#&gt; }
+#&gt; &lt;bytecode: 0x7fa75366aa58&gt;
+#&gt; &lt;environment: namespace:base&gt;</code></pre>
+<p>可以看到，<code>answer &lt;- lapply(X = X, FUN = FUN, ...)</code>这一行把<code>sapply()</code>里<code>...</code>中的参数传递到了<code>lapply()</code>中，使用<code>lapply()</code>得到未化解的结果<code>answer</code>, 随后仅需要写用来化简结果的代码，而不需要把与<code>lapply()</code>里的代码重写一遍。</p>
+</div>
+<div id="functions-assign-global" class="section level3">
+<h3><span class="header-section-number">2.6.5</span> 赋值函数外的对象</h3>
+<p>函数内的赋值一般只在函数内有效，比如：</p>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">5</span>
+fun1 &lt;-<span class="st"> </span><span class="cf">function</span>() {
+  x &lt;-<span class="st"> </span><span class="dv">100</span>
+}
+<span class="kw">fun1</span>()
+x</code></pre>
+<pre><code>#&gt; [1] 5</code></pre>
+<p>使用<code>assign()</code>函数可以在<strong>函数内</strong>赋值任意environment中的对象，其中最常见的是Global environment里的（即等价于在console中直接赋值）。</p>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">5</span>
+fun1 &lt;-<span class="st"> </span><span class="cf">function</span>() {
+  <span class="kw">assign</span>(<span class="st">&quot;x&quot;</span>, <span class="dv">100</span>, <span class="dt">envir =</span> .GlobalEnv)
+}
+<span class="kw">fun1</span>()
+x</code></pre>
+<pre><code>#&gt; [1] 100</code></pre>
+<p><code>&lt;&lt;-</code>可用于赋值“上一层”里的对象。当在“第一层”的函数里使用<code>&lt;&lt;-</code>时， <code>.GlobalEnv</code>里对应的对象就会受到影响，即和<code>assign(&quot;x&quot;, value, envir = .GlobalEnv)</code>等效。</p>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">5</span>
+fun1 &lt;-<span class="st"> </span><span class="cf">function</span>() {
+  x &lt;&lt;-<span class="st"> </span><span class="dv">100</span>
+}
+<span class="kw">fun1</span>()
+x</code></pre>
+<pre><code>#&gt; [1] 100</code></pre>
+<p>在下面的例子中，<code>fun2()</code>赋值了<code>fun1()</code>里的<code>n</code>, 但<code>.GlobalEnv</code>里的<code>n</code>不受影响。</p>
+<pre class="sourceCode r"><code class="sourceCode r">n &lt;-<span class="st"> </span><span class="dv">1</span> <span class="co"># `GlobalEnv`里的`n` = 1</span>
+
+fun1 &lt;-<span class="st"> </span><span class="cf">function</span>() {
+  n &lt;-<span class="st"> </span><span class="dv">10</span> <span class="co"># `fun1()`里的`n` = 10</span>
+  fun2 &lt;-<span class="st"> </span><span class="cf">function</span>() {
+    n &lt;-<span class="st"> </span><span class="dv">50</span> <span class="co"># 赋值`fun2()`里的`n`</span>
+    n &lt;&lt;-<span class="st"> </span><span class="dv">100</span> <span class="co"># 重赋值`fun1()`里的`n`为100</span>
+  }
+  <span class="kw">fun2</span>() <span class="co"># 运行`fun2()`</span>
+  <span class="kw">return</span>(n) <span class="co"># 返回`fun1()`里的`n`</span>
+}
+
+<span class="kw">fun1</span>() <span class="co"># 10是否变为100?</span></code></pre>
+<pre><code>#&gt; [1] 100</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">n <span class="co"># 是否仍然是1？</span></code></pre>
+<pre><code>#&gt; [1] 1</code></pre>
+<p>利用这个性质，我们可以使<code>apply()</code>族函数进行递归计算，比如求累加和：</p>
+<pre class="sourceCode r"><code class="sourceCode r">cum =<span class="st"> </span><span class="dv">0</span>
+<span class="kw">sapply</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dt">FUN =</span> <span class="cf">function</span>(x){
+  cum &lt;&lt;-<span class="st"> </span>cum <span class="op">+</span><span class="st"> </span>x
+  cum
+})</code></pre>
+<pre><code>#&gt;  [1]  1  3  6 10 15 21 28 36 45 55</code></pre>
+<p>原则上，这已经不是一个向量化计算了，但是在这个例子中<code>sapply()</code>仍然比for循环（见下）速度更快。</p>
+<pre class="sourceCode r"><code class="sourceCode r">cum =<span class="st"> </span><span class="dv">1</span>
+  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span><span class="dv">10000</span>) {
+    cum[i] &lt;-<span class="st"> </span>cum[i<span class="dv">-1</span>] <span class="op">+</span><span class="st"> </span>i
+  }
+cum</code></pre>
 </div>
 <div id="system-time" class="section level3">
-<h3><span class="header-section-number">2.6.5</span> 测速</h3>
+<h3><span class="header-section-number">2.6.6</span> 测速</h3>
 <p>当你开始处理复杂，大量的数据时，或是向别人分享自己的代码时，代码执行的速度变得重要。</p>
 <p>一段代码/一个函数经常有很多种写法，哪种效率更高呢？实践是检验真理的唯一标准，R提供了一个测速函数：<code>system.time()</code>函数。</p>
 <pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">vector</span>(<span class="st">&#39;numeric&#39;</span>)
@@ -595,9 +636,9 @@ Kazuya<span class="op">$</span><span class="kw">greet</span>(<span class="st">&q
       x &lt;-<span class="st"> </span><span class="kw">append</span>(x, i<span class="op">*</span>j)
     }
   }
-)
-<span class="co">##    user  system elapsed </span>
-<span class="co">##   0.041   0.018   0.060</span></code></pre>
+)</code></pre>
+<pre><code>#&gt;    user  system elapsed 
+#&gt;   0.047   0.019   0.066</code></pre>
 <p>其中第三个数字 (<code>elapsed</code>)是执行<code>system.time()</code>括号内的语句实际消耗的时间。可以使用索引 (<code>[3]</code>)抓取。</p>
 <p>如果括号内的语句大于一句，像这样：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>(
@@ -654,7 +695,7 @@ gitbook.start({
 },
 "edit": {
 "link": "https://github.com/TianyiShi2001/r-and-tidyverse-book/02-basics.Rmd",
-"text": "Edit"
+"text": "Github"
 },
 "history": {
 "link": null,
