@@ -39,7 +39,7 @@ mpg
 knitr::include_graphics('img/tibble-intro.png')
 ```
 
-这张图是重中之重。一个正确的dataframe/tibble，每一行代表的是一个observation（硬翻译的话是“观测单位”，但是我觉得这个翻译不好），每一列代表的是一个variable（变量），且同一个变量的数据类型必须一样。像这样的数据被称为“tidy data”（“整齐的数据”）。虽然看起来简单，直观，理所当然，但是现实中上人们经常会做出“不整齐”的数据。把不整齐的数据弄整齐是第\ref(wrangle)章的重点。
+一个正确的dataframe/tibble，每一行代表的是一个observation（硬翻译的话是“观测单位”，但是我觉得这个翻译不好），每一列代表的是一个variable（变量），且同一个变量的数据类型必须一样。像这样的数据被称为“tidy data”（“整齐的数据”）。虽然看起来简单，直观，理所当然，但是现实中上人们经常会做出“不整齐”的数据。把不整齐的数据弄整齐是第\ref(wrangle)章的重点。
 
 ### 查看更多数据 {#tibble-more-data}
 
@@ -217,7 +217,7 @@ women2 <- mutate(women,
 identical(women2 ,women1) # 和`women1`是相同的
 ```
 
-`mutate()`也可以用来重新赋值原有变量。假设我们根本不再需要以英寸和磅作为单位的数据，我们可以：
+显然，`mutate()`也可以用来重新赋值原有变量。假设我们根本不再需要以英寸和磅作为单位的数据，我们可以：
 
 ```{r}
 women3 <- mutate(women, height = height/39.37, weight = weight/2.204)
@@ -236,13 +236,6 @@ head(women_bmi_1, 4)
 ```{r}
 women_bmi_2 <- transmute(women3, BMI = weight/height^2)
 head(women_bmi_2, 4)
-```
-
-这意味着`transmute()`函数也可以用于重命名变量：
-
-```{r}
-women_bmi_3 <- transmute(women_bmi_2, body_mass_index = BMI)
-head(women_bmi_3, 3)
 ```
 
 ### `%>%`符号 (Pipe Operator)
@@ -473,3 +466,9 @@ Base R dataframe自带的取子集函数在一些情况下不会化简结果，�
 #### tibble与其它`tidyverse`中的功能兼容性更强 {#tibble-df-diff-compatibility}
 
 很多`tidyverse`中的神器，如`group_by`，只能在tibble上使用。
+
+## 小测 {#test-tibble}
+
+### 基础 {#test-tibble-basics}
+
+### 进阶 {#test-tibble-advanced}

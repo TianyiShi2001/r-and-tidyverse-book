@@ -141,85 +141,85 @@
 \contentsline {subsection}{\numberline {2.6.5}赋值函数外的对象}{60}{subsection.2.6.5}
 \contentsline {subsection}{\numberline {2.6.6}测速}{61}{subsection.2.6.6}
 \contentsline {section}{\numberline {2.7}列表 (list)}{62}{section.2.7}
-\contentsline {subsection}{\numberline {2.7.1}list的索引/取子集}{62}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.1}list的索引/取子集}{63}{subsection.2.7.1}
 \contentsline {subsection}{\numberline {2.7.2}合并与拆解}{63}{subsection.2.7.2}
 \contentsline {subsection}{\numberline {2.7.3}其他性质和操作}{64}{subsection.2.7.3}
-\contentsline {section}{\numberline {2.8}array（数组）和matrix（矩阵）简介}{64}{section.2.8}
+\contentsline {section}{\numberline {2.8}数组 (array)和矩阵 (matrix)简介}{65}{section.2.8}
 \contentsline {subsection}{\numberline {2.8.1}给matrices和arrays命名}{67}{subsection.2.8.1}
 \contentsline {section}{\numberline {2.9}小测}{68}{section.2.9}
 \contentsline {subsection}{\numberline {2.9.1}基础}{68}{subsection.2.9.1}
 \contentsline {subsection}{\numberline {2.9.2}进阶}{69}{subsection.2.9.2}
 \contentsline {subsection}{\numberline {2.9.3}挑战}{69}{subsection.2.9.3}
-\contentsline {chapter}{\numberline {3}dataframe和tibble}{71}{chapter.3}
-\contentsline {subsection}{\numberline {3.0.1}本章内容速览}{71}{subsection.3.0.1}
-\contentsline {section}{\numberline {3.1}查看dataframe/tibble并了解它们的结构}{71}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}dataframe/tibble的基本概念}{71}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}查看更多数据}{72}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}创建tibble}{72}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}手动输入数据以创建tibble}{72}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}把dataframe转换成一个tibble}{73}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}从外部数据创建tibble}{73}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}数据转换 (Data Transformation)}{73}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}取子集（抓取行，列）\{tbl-subsetting\}}{74}{subsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.1.1}抓取单列}{74}{subsubsection.3.3.1.1}
-\contentsline {subsubsection}{\numberline {3.3.1.2}抓取多列并返回一个tibble}{74}{subsubsection.3.3.1.2}
-\contentsline {subsubsection}{\numberline {3.3.1.3}通过\texttt {filter()}，抓取满足某条件的行}{75}{subsubsection.3.3.1.3}
-\contentsline {subsubsection}{\numberline {3.3.1.4}用\texttt {slice()}，通过行数（索引）抓取行。}{75}{subsubsection.3.3.1.4}
-\contentsline {subsection}{\numberline {3.3.2}用\texttt {mutate()}修改或新增变量}{76}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}\texttt {\%\textgreater {}\%}符号 (Pipe Operator)}{78}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}\texttt {group\_by}与\texttt {summarise}}{80}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}其它}{84}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}list和dataframe/tibble}{84}{subsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.1.1}Dataframe和tibble的本质}{84}{subsubsection.3.4.1.1}
-\contentsline {subsubsection}{\numberline {3.4.1.2}Dataframe/tibble的取子集}{84}{subsubsection.3.4.1.2}
-\contentsline {subsection}{\numberline {3.4.2}Tidyverse tibble相对于Base R dataframe的优势}{84}{subsection.3.4.2}
-\contentsline {subsubsection}{\numberline {3.4.2.1}信息的显示}{84}{subsubsection.3.4.2.1}
-\contentsline {subsubsection}{\numberline {3.4.2.2}tibble不会自作主张地化简结果}{85}{subsubsection.3.4.2.2}
-\contentsline {subsubsection}{\numberline {3.4.2.3}tibble与其它\texttt {tidyverse}中的功能兼容性更强}{86}{subsubsection.3.4.2.3}
-\contentsline {chapter}{\numberline {4}使用ggplot绘图}{87}{chapter.4}
-\contentsline {section}{\numberline {4.1}哲理}{87}{section.4.1}
-\contentsline {section}{\numberline {4.2}基础}{87}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}基本语法}{87}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}图像类型}{87}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}进阶}{87}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}逐层作图}{87}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}尺寸，轴，和图例}{87}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}位置}{87}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}背景/主题的修改}{87}{subsection.4.3.4}
-\contentsline {subsection}{\numberline {4.3.5}与ggplot编程}{87}{subsection.4.3.5}
-\contentsline {section}{\numberline {4.4}附：Base R中的作图}{87}{section.4.4}
-\contentsline {chapter}{\numberline {5}数据处理}{89}{chapter.5}
-\contentsline {section}{\numberline {5.1}把``untidy data''整成``tidy data''}{89}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}``untidy data''的主要问题}{89}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}解决方案}{89}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}数据的导入和导出}{89}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}导入}{89}{subsection.5.2.1}
-\contentsline {subsubsection}{\numberline {5.2.1.1}csv}{89}{subsubsection.5.2.1.1}
-\contentsline {subsubsection}{\numberline {5.2.1.2}excel}{89}{subsubsection.5.2.1.2}
-\contentsline {subsubsection}{\numberline {5.2.1.3}其它}{89}{subsubsection.5.2.1.3}
-\contentsline {subsection}{\numberline {5.2.2}导出}{89}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}字符串的处理}{89}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}基础}{89}{subsection.5.3.1}
-\contentsline {subsubsection}{\numberline {5.3.1.1}引号的使用}{89}{subsubsection.5.3.1.1}
-\contentsline {subsubsection}{\numberline {5.3.1.2}换行符和制表符}{90}{subsubsection.5.3.1.2}
-\contentsline {subsubsection}{\numberline {5.3.1.3}\texttt {print()}和\texttt {writeLines()}}{90}{subsubsection.5.3.1.3}
-\contentsline {subsection}{\numberline {5.3.2}使用\texttt {str\_sub()}取子集}{90}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}使用\texttt {str\_c()}进行字符串的合并}{91}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}使用\texttt {str\_view()}来查找特定的字符组合}{92}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}\texttt {str\_detect()}}{92}{subsection.5.3.5}
-\contentsline {section}{\numberline {5.4}Factors}{92}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}基础}{92}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}在绘图中的应用}{93}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}高端操作}{93}{subsection.5.4.3}
-\contentsline {section}{\numberline {5.5}日期和时间}{93}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}ISO标准}{93}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}创建日期/时间}{93}{subsection.5.5.2}
-\contentsline {subsubsection}{\numberline {5.5.2.1}现在的日期/时间}{93}{subsubsection.5.5.2.1}
-\contentsline {subsubsection}{\numberline {5.5.2.2}通过字符串转换}{94}{subsubsection.5.5.2.2}
-\contentsline {subsection}{\numberline {5.5.3}计算}{94}{subsection.5.5.3}
-\contentsline {subsection}{\numberline {5.5.4}在绘图中的应用}{94}{subsection.5.5.4}
-\contentsline {chapter}{\numberline {6}与Python的联合使用}{95}{chapter.6}
-\contentsline {section}{\numberline {6.1}在R中使用Python: \texttt {reticulate}}{95}{section.6.1}
-\contentsline {section}{\numberline {6.2}在Python中使用R: \texttt {rpy}}{95}{section.6.2}
-\contentsline {section}{\numberline {6.3}Beaker Notebook}{95}{section.6.3}
-\contentsline {chapter}{References}{97}{chapter*.12}
+\contentsline {chapter}{\numberline {3}dataframe和tibble}{73}{chapter.3}
+\contentsline {subsection}{\numberline {3.0.1}本章内容速览}{73}{subsection.3.0.1}
+\contentsline {section}{\numberline {3.1}查看dataframe/tibble并了解它们的结构}{73}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}dataframe/tibble的基本概念}{73}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}查看更多数据}{74}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}创建tibble}{74}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}手动输入数据以创建tibble}{74}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}把dataframe转换成一个tibble}{75}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}从外部数据创建tibble}{75}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}数据转换 (Data Transformation)}{75}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}取子集（抓取行，列）\{tbl-subsetting\}}{76}{subsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.1.1}抓取单列}{76}{subsubsection.3.3.1.1}
+\contentsline {subsubsection}{\numberline {3.3.1.2}抓取多列并返回一个tibble}{76}{subsubsection.3.3.1.2}
+\contentsline {subsubsection}{\numberline {3.3.1.3}通过\texttt {filter()}，抓取满足某条件的行}{77}{subsubsection.3.3.1.3}
+\contentsline {subsubsection}{\numberline {3.3.1.4}用\texttt {slice()}，通过行数（索引）抓取行。}{77}{subsubsection.3.3.1.4}
+\contentsline {subsection}{\numberline {3.3.2}用\texttt {mutate()}修改或新增变量}{78}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}\texttt {\%\textgreater {}\%}符号 (Pipe Operator)}{80}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}\texttt {group\_by}与\texttt {summarise}}{82}{subsection.3.3.4}
+\contentsline {section}{\numberline {3.4}其它}{86}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}list和dataframe/tibble}{86}{subsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.1.1}Dataframe和tibble的本质}{86}{subsubsection.3.4.1.1}
+\contentsline {subsubsection}{\numberline {3.4.1.2}Dataframe/tibble的取子集}{86}{subsubsection.3.4.1.2}
+\contentsline {subsection}{\numberline {3.4.2}Tidyverse tibble相对于Base R dataframe的优势}{86}{subsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.2.1}信息的显示}{86}{subsubsection.3.4.2.1}
+\contentsline {subsubsection}{\numberline {3.4.2.2}tibble不会自作主张地化简结果}{87}{subsubsection.3.4.2.2}
+\contentsline {subsubsection}{\numberline {3.4.2.3}tibble与其它\texttt {tidyverse}中的功能兼容性更强}{88}{subsubsection.3.4.2.3}
+\contentsline {chapter}{\numberline {4}使用ggplot绘图}{89}{chapter.4}
+\contentsline {section}{\numberline {4.1}哲理}{89}{section.4.1}
+\contentsline {section}{\numberline {4.2}基础}{89}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}基本语法}{89}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}图像类型}{89}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}进阶}{89}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}逐层作图}{89}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}尺寸，轴，和图例}{89}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}位置}{89}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}背景/主题的修改}{89}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.5}与ggplot编程}{89}{subsection.4.3.5}
+\contentsline {section}{\numberline {4.4}附：Base R中的作图}{89}{section.4.4}
+\contentsline {chapter}{\numberline {5}数据处理}{91}{chapter.5}
+\contentsline {section}{\numberline {5.1}把``untidy data''整成``tidy data''}{91}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}``untidy data''的主要问题}{91}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}解决方案}{91}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}数据的导入和导出}{91}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}导入}{91}{subsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.1.1}csv}{91}{subsubsection.5.2.1.1}
+\contentsline {subsubsection}{\numberline {5.2.1.2}excel}{91}{subsubsection.5.2.1.2}
+\contentsline {subsubsection}{\numberline {5.2.1.3}其它}{91}{subsubsection.5.2.1.3}
+\contentsline {subsection}{\numberline {5.2.2}导出}{91}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}字符串的处理}{91}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}基础}{91}{subsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.1.1}引号的使用}{91}{subsubsection.5.3.1.1}
+\contentsline {subsubsection}{\numberline {5.3.1.2}换行符和制表符}{92}{subsubsection.5.3.1.2}
+\contentsline {subsubsection}{\numberline {5.3.1.3}\texttt {print()}和\texttt {writeLines()}}{92}{subsubsection.5.3.1.3}
+\contentsline {subsection}{\numberline {5.3.2}使用\texttt {str\_sub()}取子集}{92}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}使用\texttt {str\_c()}进行字符串的合并}{93}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}使用\texttt {str\_view()}来查找特定的字符组合}{94}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}\texttt {str\_detect()}}{94}{subsection.5.3.5}
+\contentsline {section}{\numberline {5.4}Factors}{94}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}基础}{94}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}在绘图中的应用}{95}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}高端操作}{95}{subsection.5.4.3}
+\contentsline {section}{\numberline {5.5}日期和时间}{95}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}ISO标准}{95}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}创建日期/时间}{95}{subsection.5.5.2}
+\contentsline {subsubsection}{\numberline {5.5.2.1}现在的日期/时间}{95}{subsubsection.5.5.2.1}
+\contentsline {subsubsection}{\numberline {5.5.2.2}通过字符串转换}{96}{subsubsection.5.5.2.2}
+\contentsline {subsection}{\numberline {5.5.3}计算}{96}{subsection.5.5.3}
+\contentsline {subsection}{\numberline {5.5.4}在绘图中的应用}{96}{subsection.5.5.4}
+\contentsline {chapter}{\numberline {6}与Python的联合使用}{97}{chapter.6}
+\contentsline {section}{\numberline {6.1}在R中使用Python: \texttt {reticulate}}{97}{section.6.1}
+\contentsline {section}{\numberline {6.2}在Python中使用R: \texttt {rpy}}{97}{section.6.2}
+\contentsline {section}{\numberline {6.3}Beaker Notebook}{97}{section.6.3}
+\contentsline {chapter}{References}{99}{chapter*.12}

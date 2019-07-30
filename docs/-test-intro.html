@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-28" />
+<meta name="date" content="2019-07-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -251,7 +251,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.7.2" data-path="list.html"><a href="list.html#list-combine-unlist"><i class="fa fa-check"></i><b>2.7.2</b> 合并与拆解</a></li>
 <li class="chapter" data-level="2.7.3" data-path="list.html"><a href="list.html#list-other-properties-operations"><i class="fa fa-check"></i><b>2.7.3</b> 其他性质和操作</a></li>
 </ul></li>
-<li class="chapter" data-level="2.8" data-path="matrix-array.html"><a href="matrix-array.html"><i class="fa fa-check"></i><b>2.8</b> array（数组）和matrix（矩阵）简介</a><ul>
+<li class="chapter" data-level="2.8" data-path="matrix-array.html"><a href="matrix-array.html"><i class="fa fa-check"></i><b>2.8</b> 数组 (array)和矩阵 (matrix)简介</a><ul>
 <li class="chapter" data-level="2.8.1" data-path="matrix-array.html"><a href="matrix-array.html#matrix-array-naming"><i class="fa fa-check"></i><b>2.8.1</b> 给matrices和arrays命名</a></li>
 </ul></li>
 <li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a><ul>
@@ -352,10 +352,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">1.5</span> 小测 {test-intro}</h2>
 <div id="-test-intro-basics" class="section level3">
 <h3><span class="header-section-number">1.5.1</span> 基础 {test-intro-basics}</h3>
-<ol class="example" style="list-style-type: decimal">
-<li><strong>计算。</strong></li>
-</ol>
-<p><code>z</code>等于多少？为什么？</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>计算。</strong></p>
+<p>z`等于多少？为什么？</p>
 <pre class="sourceCode r"><code class="sourceCode r">z &lt;-<span class="st"> </span>{
   x &lt;-<span class="st"> </span><span class="dv">6</span>
   y &lt;-<span class="st"> </span><span class="dv">7</span>
@@ -366,14 +365,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 }</code></pre>
 <p>下面两行代码的运算结果分别是什么？z的值分别是什么？</p>
 <pre class="sourceCode r"><code class="sourceCode r">z &lt;-<span class="st"> </span>x &lt;-<span class="st"> </span><span class="dv">0</span>; x <span class="op">+</span><span class="st"> </span><span class="dv">1</span>
-z &lt;-<span class="st"> </span>{x &lt;-<span class="st"> </span><span class="dv">0</span>; x <span class="op">+</span><span class="st"> </span><span class="dv">1</span>}</code></pre>
+z &lt;-<span class="st"> </span>{x &lt;-<span class="st"> </span><span class="dv">0</span>; x <span class="op">+</span><span class="st"> </span><span class="dv">1</span>}</code></pre></li>
+</ol>
 </div>
 <div id="-test-intro-advanced" class="section level3">
 <h3><span class="header-section-number">1.5.2</span> 进阶 {test-intro-advanced}</h3>
 <p>建议读完下一章再来做这些题。</p>
-<ol start="2" class="example" style="list-style-type: decimal">
-<li><strong>计算。</strong></li>
-</ol>
+<ol style="list-style-type: decimal">
+<li><p><strong>计算。</strong></p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(
   <span class="kw">seq</span>(<span class="dv">10</span>, <span class="dv">100</span>, <span class="dv">10</span>),
   <span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>, <span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">3</span>))
@@ -388,7 +387,8 @@ z &lt;-<span class="st"> </span>{x &lt;-<span class="st"> </span><span class="dv
 }
 
 t =<span class="st"> </span><span class="dv">1</span>; <span class="kw">greet</span>(t)
-t =<span class="st"> </span><span class="dv">3</span>; <span class="kw">greet</span>(t)</code></pre>
+t =<span class="st"> </span><span class="dv">3</span>; <span class="kw">greet</span>(t)</code></pre></li>
+</ol>
 
 </div>
 </div>

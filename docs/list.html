@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-28" />
+<meta name="date" content="2019-07-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -251,7 +251,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.7.2" data-path="list.html"><a href="list.html#list-combine-unlist"><i class="fa fa-check"></i><b>2.7.2</b> 合并与拆解</a></li>
 <li class="chapter" data-level="2.7.3" data-path="list.html"><a href="list.html#list-other-properties-operations"><i class="fa fa-check"></i><b>2.7.3</b> 其他性质和操作</a></li>
 </ul></li>
-<li class="chapter" data-level="2.8" data-path="matrix-array.html"><a href="matrix-array.html"><i class="fa fa-check"></i><b>2.8</b> array（数组）和matrix（矩阵）简介</a><ul>
+<li class="chapter" data-level="2.8" data-path="matrix-array.html"><a href="matrix-array.html"><i class="fa fa-check"></i><b>2.8</b> 数组 (array)和矩阵 (matrix)简介</a><ul>
 <li class="chapter" data-level="2.8.1" data-path="matrix-array.html"><a href="matrix-array.html#matrix-array-naming"><i class="fa fa-check"></i><b>2.8.1</b> 给matrices和arrays命名</a></li>
 </ul></li>
 <li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a><ul>
@@ -350,11 +350,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="list" class="section level2">
 <h2><span class="header-section-number">2.7</span> 列表 (list)</h2>
-<p>R中的list是一种特殊的数据存储形式。使用<code>list()</code>函数来创建lists.</p>
-<p>尝试对lists和vectors使用<code>is.vector()</code>, <code>is.list()</code>, <code>is.atomic()</code>和<code>is.recursive()</code>函数，你会发现list虽然也是“vector”，但我们一般说的“vector”都是指只能存储一种数据类型的atomic vector；而lists是recursive vector.</p>
-<p>这意味着<strong>一个list能存储多种类型的数据，且可以包含子list</strong>。list中的每个元素可以是<strong>任何R中的对象</strong> (object)：除了常用的 (atomic) vector和另外一个（子）list以外，还可以有dataframe/tibble和函数：</p>
+<p>R中的列表是一种特殊的数据存储形式。使用<code>list()</code>函数来创建列表，比如list(1, 2, 3).</p>
+<table>
+<caption>在一个列表和向量上分别使用四个判断数据结构类型的函数得到的结果</caption>
+<thead>
+<tr class="header">
+<th align="left">data</th>
+<th align="left"><code>is.vector()</code></th>
+<th align="left"><code>is.list()</code></th>
+<th align="left"><code>is.atomic()</code></th>
+<th><code>is.recursive()</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">list(1, 2, 3)</td>
+<td align="left"><code>TRUE</code></td>
+<td align="left"><code>TRUE</code></td>
+<td align="left"><code>FALSE</code></td>
+<td><code>TRUE</code></td>
+</tr>
+<tr class="even">
+<td align="left">c(1 ,2 , 3)</td>
+<td align="left"><code>TRUE</code></td>
+<td align="left"><code>FALSE</code></td>
+<td align="left"><code>TRUE</code></td>
+<td><code>FALSE</code></td>
+</tr>
+</tbody>
+</table>
+<p>尝试对lists和vectors使用<code>is.vector()</code>, <code>is.list()</code>, <code>is.atomic()</code>和<code>is.recursive()</code>函数，你会发现列表虽然也是“vector”，但我们一般说的“vector”都是指只能存储一种数据类型的atomic vector；而lists是recursive vector.</p>
+<p>这意味着<strong>一个list能存储多种类型的数据，且可以包含子列表</strong>。列表中的每个<em>分量</em>可以是<strong>任何R中的对象</strong> (object)：除了常用的 (atomic) vector和另外一个（子）列表以外，还可以有dataframe/tibble和函数：</p>
 <pre class="sourceCode r"><code class="sourceCode r">y &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dv">1</span>, <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;あ&quot;</span>), <span class="kw">list</span>(<span class="dv">1</span><span class="op">+</span>3i, <span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">NA</span>, <span class="ot">TRUE</span>)), 
-          <span class="kw">tibble</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="st">&quot;阿拉木图&quot;</span>, <span class="st">&quot;什切青&quot;</span>), <span class="dt">y =</span> <span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">3</span>)),
+          <span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="st">&quot;阿拉木图&quot;</span>, <span class="st">&quot;什切青&quot;</span>), <span class="dt">y =</span> <span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">3</span>)),
           t.test)
 y</code></pre>
 <pre><code>#&gt; [[1]]
@@ -372,36 +400,35 @@ y</code></pre>
 #&gt; 
 #&gt; 
 #&gt; [[4]]
-#&gt; # A tibble: 2 x 2
-#&gt;   x            y
-#&gt;   &lt;chr&gt;    &lt;dbl&gt;
-#&gt; 1 阿拉木图     2
-#&gt; 2 什切青       3
+#&gt;          x y
+#&gt; 1 阿拉木图 2
+#&gt; 2   什切青 3
 #&gt; 
 #&gt; [[5]]
 #&gt; function (x, ...) 
 #&gt; UseMethod(&quot;t.test&quot;)
-#&gt; &lt;bytecode: 0x7fa7552d4c20&gt;
+#&gt; &lt;bytecode: 0x7fcd11819620&gt;
 #&gt; &lt;environment: namespace:stats&gt;</code></pre>
+<p>这个列表有5个分量，其中第3个是一个有2个分量的子列表。</p>
 <div id="list-index" class="section level3">
 <h3><span class="header-section-number">2.7.1</span> list的索引/取子集</h3>
 <p>使用上面的例子：</p>
-<pre class="sourceCode r"><code class="sourceCode r">y[<span class="dv">2</span>] <span class="co"># 使用单方括号，得到的是一个只有一个list元素的list</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">y[<span class="dv">2</span>] <span class="co"># 使用单方括号，得到的是一个只有一个分量的列表</span></code></pre>
 <pre><code>#&gt; [[1]]
 #&gt; [1] &quot;a&quot;  &quot;あ&quot;</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r">y[[<span class="dv">2</span>]] <span class="co"># 使用双方括号，得到的是一个vector</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">y[[<span class="dv">2</span>]] <span class="co"># 使用双方括号，得到的是一个向量</span></code></pre>
 <pre><code>#&gt; [1] &quot;a&quot;  &quot;あ&quot;</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r">y[[<span class="dv">3</span>]][[<span class="dv">2</span>]] <span class="co"># 得到的也是一个vector；父list的索引在前，子list的在后</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">y[[<span class="dv">3</span>]][[<span class="dv">2</span>]] <span class="co"># 得到的也是一个向量；父列表的索引在前，子列表的在后</span></code></pre>
 <pre><code>#&gt; [1] FALSE    NA  TRUE</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r">y[[<span class="dv">3</span>]] <span class="co"># 这个位置包含两个子list，因此得到一个有两个list元素的list</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">y[[<span class="dv">3</span>]] <span class="co"># 这个位置包含两个子列表，因此得到一个有两个分量的列表</span></code></pre>
 <pre><code>#&gt; [[1]]
 #&gt; [1] 1+3i
 #&gt; 
 #&gt; [[2]]
 #&gt; [1] FALSE    NA  TRUE</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r">y[[<span class="dv">3</span>]][[<span class="dv">2</span>]][<span class="dv">2</span>] <span class="co"># 得到vector时，直接在后面用单方括号</span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">y[[<span class="dv">3</span>]][[<span class="dv">2</span>]][<span class="dv">2</span>] <span class="co"># 得到向量时，直接在后面用单方括号</span></code></pre>
 <pre><code>#&gt; [1] NA</code></pre>
-<p>list里的元素可以有名字；被命名的元素可以通过<code>$</code>符号抓取：</p>
+<p>列表里的分量可以有名字；被命名的元素可以通过<code>$</code>符号抓取：</p>
 <pre class="sourceCode r"><code class="sourceCode r">z &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>), <span class="dt">z2 =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>), <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>))
 z <span class="co"># `[[2]]`被`$z2`所取代</span></code></pre>
 <pre><code>#&gt; [[1]]
@@ -436,7 +463,7 @@ z <span class="co"># `[[2]]`被`$z2`所取代</span></code></pre>
 #&gt; 
 #&gt; [[2]][[2]]
 #&gt; [1] 4</code></pre>
-<p>通过<code>unlist()</code>函数来拆解列表中的子列表。若参数<code>recursive</code>为<code>TRUE</code>（默认值），将一直拆解至无子列表的列表，如果此最简列表的元素都属于五种atomic vector中的数据<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a>，此列表还会被进一步化简成向量。若<code>recursive = FALSE</code>，最“靠外”的一级列表（可能是多个）将会被拆解。</p>
+<p>通过<code>unlist()</code>函数来拆解列表中的子列表。若参数<code>recursive</code>为<code>TRUE</code>（默认值），将一直拆解至无子列表的列表，如果此最简列表的所有分量都属于五种atomic vector中的数据<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a>，此列表还会被进一步化简成向量。若<code>recursive = FALSE</code>，最“靠外”的一级列表（可能是多个）将会被拆解。</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">unlist</span>(<span class="kw">list</span>(<span class="dv">1</span>, <span class="kw">list</span>(<span class="dv">2</span>, <span class="kw">list</span>(<span class="dv">3</span>, <span class="dv">4</span>)), <span class="kw">list</span>(<span class="dv">5</span>, <span class="dv">6</span>), <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>))
 <span class="co"># 将等同于c(1, 2, 3, 4, 5, 6, 7, 8, 9) </span>
 <span class="co"># 注意被化简成了向量</span>

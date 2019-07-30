@@ -563,11 +563,11 @@ biocLite("RforProteomics")
 
 ### 基础 {test-intro-basics}
 
-(@) **计算。**
+1. **计算。**
 
-`z`等于多少？为什么？
+    z`等于多少？为什么？
 
-```{r eval=FALSE}
+    ```{r eval=FALSE}
 z <- {
   x <- 6
   y <- 7
@@ -576,44 +576,44 @@ z <- {
   x - y
   x * y
 }
-```
+    ```
 
-下面两行代码的运算结果分别是什么？z的值分别是什么？
+    下面两行代码的运算结果分别是什么？z的值分别是什么？
 
-```{r eval=FALSE}
+    ```{r eval=FALSE}
 z <- x <- 0; x + 1
 z <- {x <- 0; x + 1}
-```
+    ```
 
 ### 进阶 {test-intro-advanced}
 
 建议读完下一章再来做这些题。
 
-(@) **计算。**
+1. **计算。**
 
-```{r eval=FALSE}
+    ```{r eval=FALSE}
 rep(
   seq(10, 100, 10),
   rep(1:4, c(2, 1, 4, 3))
 )
-```
+    ```
 
-```{r eval=FALSE}
+    ```{r eval=FALSE}
 rep({
   x <- 5
   x <- x+5
   x
 }, 3)
-```
+    ```
 
-```{r eval=FALSE}
+    ```{r eval=FALSE}
 greet <- function(t) {
   print(if(t == 1) "早上好" else if(t == 2) "下午好" else if(t == 3) "晚上好")
 }
 
 t = 1; greet(t)
 t = 3; greet(t)
-```
+    ```
 
 
 
