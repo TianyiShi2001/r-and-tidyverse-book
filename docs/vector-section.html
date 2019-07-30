@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-29" />
+<meta name="date" content="2019-07-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -207,7 +207,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.5.2" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-advanced"><i class="fa fa-check"></i><b>1.5.2</b> 进阶 {test-intro-advanced}</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> 向量，逻辑，循环和函数</a><ul>
+<li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> R中的数据，逻辑，和函数</a><ul>
 <li class="chapter" data-level="" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#intro-overview-vector"><i class="fa fa-check"></i>本章内容速览</a></li>
 <li class="chapter" data-level="2.1" data-path="vector-section.html"><a href="vector-section.html"><i class="fa fa-check"></i><b>2.1</b> 向量的概念，操作和优越性</a><ul>
 <li class="chapter" data-level="2.1.1" data-path="vector-section.html"><a href="vector-section.html#create-vector"><i class="fa fa-check"></i><b>2.1.1</b> 创建向量（赋值）</a></li>
@@ -281,6 +281,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.4.1" data-path="tibble-misc.html"><a href="tibble-misc.html#list-and-df"><i class="fa fa-check"></i><b>3.4.1</b> list和dataframe/tibble</a></li>
 <li class="chapter" data-level="3.4.2" data-path="tibble-misc.html"><a href="tibble-misc.html#tibble-df-diff"><i class="fa fa-check"></i><b>3.4.2</b> Tidyverse tibble相对于Base R dataframe的优势</a></li>
 </ul></li>
+<li class="chapter" data-level="3.5" data-path="test-tibble.html"><a href="test-tibble.html"><i class="fa fa-check"></i><b>3.5</b> 小测</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="test-tibble.html"><a href="test-tibble.html#test-tibble-basics"><i class="fa fa-check"></i><b>3.5.1</b> 基础</a></li>
+<li class="chapter" data-level="3.5.2" data-path="test-tibble.html"><a href="test-tibble.html#test-tibble-advanced"><i class="fa fa-check"></i><b>3.5.2</b> 进阶</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>4</b> 使用ggplot绘图</a><ul>
 <li class="chapter" data-level="4.1" data-path="g-phil.html"><a href="g-phil.html"><i class="fa fa-check"></i><b>4.1</b> 哲理</a></li>
@@ -298,8 +302,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4" data-path="g-base.html"><a href="g-base.html"><i class="fa fa-check"></i><b>4.4</b> 附：Base R中的作图</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="wrangle.html"><a href="wrangle.html"><i class="fa fa-check"></i><b>5</b> 数据处理</a><ul>
-<li class="chapter" data-level="5.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html"><i class="fa fa-check"></i><b>5.1</b> 把“untidy data”整成“tidy data”</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#untidy-data"><i class="fa fa-check"></i><b>5.1.1</b> “untidy data”的主要问题</a></li>
+<li class="chapter" data-level="5.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html"><i class="fa fa-check"></i><b>5.1</b> 整齐数据</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#section-5.1.1"><i class="fa fa-check"></i><b>5.1.1</b> 不整齐的常见问题</a></li>
 <li class="chapter" data-level="5.1.2" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#section-5.1.2"><i class="fa fa-check"></i><b>5.1.2</b> 解决方案</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="import-export.html"><a href="import-export.html"><i class="fa fa-check"></i><b>5.2</b> 数据的导入和导出</a><ul>
@@ -390,6 +394,9 @@ x[<span class="dv">3</span>]</code></pre>
 <p>可以在方括号中使用另一个向量抓取多个元素：</p>
 <pre class="sourceCode r"><code class="sourceCode r">x[<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">9</span>)] <span class="co"># 第2个，第5个，第9个元素</span></code></pre>
 <pre><code>#&gt; [1] &quot;two&quot;  &quot;five&quot; &quot;nine&quot;</code></pre>
+<p>如果方括号内是一个负数向量：</p>
+<pre class="sourceCode r"><code class="sourceCode r">x[<span class="op">-</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">9</span>)] <span class="co"># 除了第2个，第5个，第9个以外的元素</span></code></pre>
+<pre><code>#&gt; [1] &quot;one&quot;   &quot;three&quot; &quot;four&quot;  &quot;six&quot;   &quot;seven&quot; &quot;eight&quot;</code></pre>
 <p>我们可以重新赋值子集：</p>
 <pre class="sourceCode r"><code class="sourceCode r">x[<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">9</span>)] &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;二&quot;</span>, <span class="st">&quot;五&quot;</span>, <span class="st">&quot;九&quot;</span>)
 x</code></pre>
@@ -445,11 +452,11 @@ y</code></pre>
 <p>连续型均匀分布随机数用<code>runif(n, min, max)</code>，n是数量，min是最小值，max是最大值。默认min为0，max为1。</p>
 <pre class="sourceCode r"><code class="sourceCode r">x_unif &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">100000</span>, <span class="dv">40</span>, <span class="dv">60</span>) <span class="co"># 生成100000个40到60之间，连续均匀分布的的随机数</span>
 <span class="kw">hist</span>(x_unif) <span class="co"># 画直方图</span></code></pre>
-<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-54-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-55-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>正态分布随机数用<code>rnorm(n, mean, sd)</code>, 三个参数分别为数量，平均值，标准差。默认mean为0，sd为1。</p>
 <pre class="sourceCode r"><code class="sourceCode r">x_norm &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">100000</span>, <span class="dv">250</span>, <span class="dv">20</span>) <span class="co"># 按照平均值为250，标准差为20的正态分布的概率密度函数生成100000个随机数</span>
 <span class="kw">hist</span>(x_norm) <span class="co"># 画直方图</span></code></pre>
-<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-55-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-56-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>此外，还有<code>rlnorm()</code>, <code>rpois()</code>, <code>rexp()</code>等函数。<code>?stats::distributions</code>中介绍了R中自带的分布，其中大部分都有对应的随机数生成器。</p>
 </div>
 </div>
@@ -523,7 +530,7 @@ x <span class="op">+</span><span class="st"> </span>y</code></pre>
 <pre><code>#&gt; [1] 2 3 5</code></pre>
 <p>拥有这种特性的计算也被称为向量化计算 (vectorized computation).</p>
 <p>相比于常用的编程语言，向量化计算省去了for循环，计算效率得到极大的提升；相比于matlab的默认矩阵乘法，逐元素乘法在数据处理中更有用。</p>
-<p>若想更多地了解向量化计算（比如如何把for循环需要39秒的运算压缩到0.001秒），请看第<a href="control-flow.html#apply">2.5.4</a>节。</p>
+<p>若想更多地了解向量化计算（比如如何使用<code>apply()</code>族函数把for循环需要39秒的运算压缩到0.001秒），请看第<a href="control-flow.html#apply">2.5.4</a>节。</p>
 </div>
 </div>
             </section>

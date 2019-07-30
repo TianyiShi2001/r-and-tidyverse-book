@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-29" />
+<meta name="date" content="2019-07-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -207,7 +207,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.5.2" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-advanced"><i class="fa fa-check"></i><b>1.5.2</b> 进阶 {test-intro-advanced}</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> 向量，逻辑，循环和函数</a><ul>
+<li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> R中的数据，逻辑，和函数</a><ul>
 <li class="chapter" data-level="" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#intro-overview-vector"><i class="fa fa-check"></i>本章内容速览</a></li>
 <li class="chapter" data-level="2.1" data-path="vector-section.html"><a href="vector-section.html"><i class="fa fa-check"></i><b>2.1</b> 向量的概念，操作和优越性</a><ul>
 <li class="chapter" data-level="2.1.1" data-path="vector-section.html"><a href="vector-section.html#create-vector"><i class="fa fa-check"></i><b>2.1.1</b> 创建向量（赋值）</a></li>
@@ -281,6 +281,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.4.1" data-path="tibble-misc.html"><a href="tibble-misc.html#list-and-df"><i class="fa fa-check"></i><b>3.4.1</b> list和dataframe/tibble</a></li>
 <li class="chapter" data-level="3.4.2" data-path="tibble-misc.html"><a href="tibble-misc.html#tibble-df-diff"><i class="fa fa-check"></i><b>3.4.2</b> Tidyverse tibble相对于Base R dataframe的优势</a></li>
 </ul></li>
+<li class="chapter" data-level="3.5" data-path="test-tibble.html"><a href="test-tibble.html"><i class="fa fa-check"></i><b>3.5</b> 小测</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="test-tibble.html"><a href="test-tibble.html#test-tibble-basics"><i class="fa fa-check"></i><b>3.5.1</b> 基础</a></li>
+<li class="chapter" data-level="3.5.2" data-path="test-tibble.html"><a href="test-tibble.html#test-tibble-advanced"><i class="fa fa-check"></i><b>3.5.2</b> 进阶</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>4</b> 使用ggplot绘图</a><ul>
 <li class="chapter" data-level="4.1" data-path="g-phil.html"><a href="g-phil.html"><i class="fa fa-check"></i><b>4.1</b> 哲理</a></li>
@@ -298,8 +302,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4" data-path="g-base.html"><a href="g-base.html"><i class="fa fa-check"></i><b>4.4</b> 附：Base R中的作图</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="wrangle.html"><a href="wrangle.html"><i class="fa fa-check"></i><b>5</b> 数据处理</a><ul>
-<li class="chapter" data-level="5.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html"><i class="fa fa-check"></i><b>5.1</b> 把“untidy data”整成“tidy data”</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#untidy-data"><i class="fa fa-check"></i><b>5.1.1</b> “untidy data”的主要问题</a></li>
+<li class="chapter" data-level="5.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html"><i class="fa fa-check"></i><b>5.1</b> 整齐数据</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#section-5.1.1"><i class="fa fa-check"></i><b>5.1.1</b> 不整齐的常见问题</a></li>
 <li class="chapter" data-level="5.1.2" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#section-5.1.2"><i class="fa fa-check"></i><b>5.1.2</b> 解决方案</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="import-export.html"><a href="import-export.html"><i class="fa fa-check"></i><b>5.2</b> 数据的导入和导出</a><ul>
@@ -376,12 +380,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre class="sourceCode r"><code class="sourceCode r"><span class="st">&quot;[&quot;</span>(<span class="kw">c</span>(<span class="st">&quot;四川担担面&quot;</span>, <span class="st">&quot;武汉热干面&quot;</span>, <span class="st">&quot;兰州牛肉面&quot;</span>, <span class="st">&quot;北京炸酱面&quot;</span>), <span class="dv">2</span>)
 <span class="co">#&gt; [1] &quot;武汉热干面&quot;</span></code></pre>
 <p>可自定义的二元运算符形式为<code>%x%</code>, 其中<code>x</code>为任何字符。（见第<a href="functions.html#binary-operaters">2.6.3.3</a>节）</p>
-<p>（英语中，“parameter”或“formal argument”二词用于函数定义，“argument”或“actual argument”二词用于调用函数<span class="citation">(Kernighan and Ritchie <a href="#ref-Kernighan1988The-C-Programming-La">1988</a>)</span>，中文里分别是“形式参数”和“实际参数”，但是多数场合简称“参数”。）</p>
+<p>英语中，“parameter”或“formal argument”二词用于函数定义，“argument”或“actual argument”二词用于调用函数<span class="citation">(Kernighan and Ritchie <a href="#ref-Kernighan1988The-C-Programming-La">1988</a>)</span>，中文里分别是“形式参数”和“实际参数”，但是多数场合简称“参数”。</p>
 </div>
 <div id="abbr" class="section level3">
 <h3><span class="header-section-number">2.6.2</span> 调用函数</h3>
 <p>根据通用格式（<code>function(argument1 = value1, argument2 = value2, ...)</code>）调用函数。对于二元运算符，<code>a %x% b</code>等价于<code>&quot;x&quot;(a, b)</code>.</p>
-<p>从“<code>function(</code>”开始到此函数结尾的“<code>)</code>”中间为参数，参数用逗号隔开，空格和换行会被忽略，“<code>#</code>”符号出现之处，那一行之后的内容都会被忽略。这意味着你可以（丧心病狂地）像这样调用一个函数。</p>
+<p>从“<code>function(</code>”开始到此函数结尾的“<code>)</code>”中间为（实际）参数，各参数用逗号隔开，空格和换行会被忽略，“<code>#</code>”符号出现之处，那一行之后的内容都会被忽略。这意味着你可以（丧心病狂地）像这样调用一个函数。</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>        (
  <span class="co"># 4   </span>
         <span class="dv">4</span> <span class="co"># 我怕不是</span>
@@ -390,12 +394,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   
   )</code></pre>
 <pre><code>#&gt; [1] 10</code></pre>
-<p>它实际的好处是，当参数很长或是有嵌套的函数时，可以通过换行和空格使代码更易读，就像其它的编程语言一样。</p>
-<p>函数的参数以<code>seq</code>函数为例，通过查看documentation（在console执行<code>?seq</code>）可以查看它的所有的参数：</p>
+<p>它实际的好处是，当参数很长或是有嵌套的函数时，可以通过换行和空格使代码更易读，就像其它的编程语言一样。（后面会有很多例子）</p>
+<p>函数的参数以<code>seq</code>函数为例，通过查看帮助文档（在console执行<code>?seq</code>），通常在<code>Usage</code>一栏，可以查看它的所有的（形式）参数及其排序：</p>
 <pre><code>## Default S3 method:
 seq(from = 1, to = 1, by = ((to - from)/(length.out - 1)),
     length.out = NULL, along.with = NULL, ...)</code></pre>
-<p>可以看到第一个参数是<code>from</code>，第二个是<code>to</code>，第三个是<code>by</code>，以此类推。因此我们执行<code>seq(0, 50, 10)</code>的时候，R会自动理解成<code>seq(from = 0, to = 50, by = 10)</code>。而想用指定长度的方法就必须要写清楚是<code>length.out</code>等于几。</p>
+<p>可以看到第一个参数是<code>from</code>，第二个是<code>to</code>，第三个是<code>by</code>，以此类推。我们执行<code>seq(0, 50, 10)</code>的时候，R会理解成<code>seq(from = 0, to = 50, by = 10)</code>。而想用指定长度的方法就必须要写清楚是<code>length.out</code>等于几。</p>
 <p><code>length.out</code>本身也可以简写：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">25</span>, <span class="dt">l =</span> <span class="dv">11</span>)</code></pre>
 <pre><code>#&gt;  [1]  0.0  2.5  5.0  7.5 10.0 12.5 15.0 17.5 20.0 22.5 25.0</code></pre>
@@ -487,7 +491,7 @@ myfunc &lt;-<span class="st"> </span><span class="cf">function</span>(i){
 #&gt;     b = 10
 #&gt;     return(a*b)
 #&gt;   }
-#&gt; &lt;environment: 0x7fa75c0f21c8&gt;</code></pre>
+#&gt; &lt;environment: 0x7f8fe84c99b0&gt;</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 既然`myfunc()`的结果是一个函数，那么在后面再加上一个括号就是执行内函数了；内函数可以使用外函数中所定义的变量（比如这里使用了外函数的`a = 5`）</span>
 <span class="kw">myfunc</span>()()</code></pre>
 <pre><code>#&gt; [1] 50</code></pre>
@@ -564,7 +568,7 @@ calc &lt;-<span class="st"> </span><span class="cf">function</span>(data, ...) {
 #&gt;         simplify2array(answer, higher = (simplify == &quot;array&quot;))
 #&gt;     else answer
 #&gt; }
-#&gt; &lt;bytecode: 0x7fa75366aa58&gt;
+#&gt; &lt;bytecode: 0x7f8fea200658&gt;
 #&gt; &lt;environment: namespace:base&gt;</code></pre>
 <p>可以看到，<code>answer &lt;- lapply(X = X, FUN = FUN, ...)</code>这一行把<code>sapply()</code>里<code>...</code>中的参数传递到了<code>lapply()</code>中，使用<code>lapply()</code>得到未化解的结果<code>answer</code>, 随后仅需要写用来化简结果的代码，而不需要把与<code>lapply()</code>里的代码重写一遍。</p>
 </div>
@@ -586,7 +590,7 @@ fun1 &lt;-<span class="st"> </span><span class="cf">function</span>() {
 <span class="kw">fun1</span>()
 x</code></pre>
 <pre><code>#&gt; [1] 100</code></pre>
-<p><code>&lt;&lt;-</code>可用于赋值“上一层”里的对象。当在“第一层”的函数里使用<code>&lt;&lt;-</code>时， <code>.GlobalEnv</code>里对应的对象就会受到影响，即和<code>assign(&quot;x&quot;, value, envir = .GlobalEnv)</code>等效。</p>
+<p><code>&lt;&lt;-</code><a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a>可用于赋值“上一层”里的对象。当在“第一层”的函数里使用<code>&lt;&lt;-</code>时， <code>.GlobalEnv</code>里对应的对象就会受到影响，即和<code>assign(&quot;x&quot;, value, envir = .GlobalEnv)</code>等效。</p>
 <pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">5</span>
 fun1 &lt;-<span class="st"> </span><span class="cf">function</span>() {
   x &lt;&lt;-<span class="st"> </span><span class="dv">100</span>
@@ -638,7 +642,7 @@ cum</code></pre>
   }
 )</code></pre>
 <pre><code>#&gt;    user  system elapsed 
-#&gt;   0.047   0.019   0.066</code></pre>
+#&gt;   0.046   0.021   0.067</code></pre>
 <p>其中第三个数字 (<code>elapsed</code>)是执行<code>system.time()</code>括号内的语句实际消耗的时间。可以使用索引 (<code>[3]</code>)抓取。</p>
 <p>如果括号内的语句大于一句，像这样：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>(
@@ -657,6 +661,12 @@ cum</code></pre>
 <div id="ref-Kernighan1988The-C-Programming-La">
 <p>Kernighan, Brain W., and Ednnis M. Ritchie. 1988. <em>The C Programming Language</em>. 2nd ed. Prentice Hall.</p>
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="18">
+<li id="fn18"><p><code>&lt;&lt;-</code>符号的名字叫做“super assignment”（超级赋值）<a href="functions.html#fnref18" class="footnote-back">↩</a></p></li>
+</ol>
 </div>
             </section>
 

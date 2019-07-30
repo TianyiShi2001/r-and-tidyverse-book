@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-29" />
+<meta name="date" content="2019-07-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -207,7 +207,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.5.2" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-advanced"><i class="fa fa-check"></i><b>1.5.2</b> 进阶 {test-intro-advanced}</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> 向量，逻辑，循环和函数</a><ul>
+<li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> R中的数据，逻辑，和函数</a><ul>
 <li class="chapter" data-level="" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#intro-overview-vector"><i class="fa fa-check"></i>本章内容速览</a></li>
 <li class="chapter" data-level="2.1" data-path="vector-section.html"><a href="vector-section.html"><i class="fa fa-check"></i><b>2.1</b> 向量的概念，操作和优越性</a><ul>
 <li class="chapter" data-level="2.1.1" data-path="vector-section.html"><a href="vector-section.html#create-vector"><i class="fa fa-check"></i><b>2.1.1</b> 创建向量（赋值）</a></li>
@@ -281,6 +281,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.4.1" data-path="tibble-misc.html"><a href="tibble-misc.html#list-and-df"><i class="fa fa-check"></i><b>3.4.1</b> list和dataframe/tibble</a></li>
 <li class="chapter" data-level="3.4.2" data-path="tibble-misc.html"><a href="tibble-misc.html#tibble-df-diff"><i class="fa fa-check"></i><b>3.4.2</b> Tidyverse tibble相对于Base R dataframe的优势</a></li>
 </ul></li>
+<li class="chapter" data-level="3.5" data-path="test-tibble.html"><a href="test-tibble.html"><i class="fa fa-check"></i><b>3.5</b> 小测</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="test-tibble.html"><a href="test-tibble.html#test-tibble-basics"><i class="fa fa-check"></i><b>3.5.1</b> 基础</a></li>
+<li class="chapter" data-level="3.5.2" data-path="test-tibble.html"><a href="test-tibble.html#test-tibble-advanced"><i class="fa fa-check"></i><b>3.5.2</b> 进阶</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>4</b> 使用ggplot绘图</a><ul>
 <li class="chapter" data-level="4.1" data-path="g-phil.html"><a href="g-phil.html"><i class="fa fa-check"></i><b>4.1</b> 哲理</a></li>
@@ -298,8 +302,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4" data-path="g-base.html"><a href="g-base.html"><i class="fa fa-check"></i><b>4.4</b> 附：Base R中的作图</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="wrangle.html"><a href="wrangle.html"><i class="fa fa-check"></i><b>5</b> 数据处理</a><ul>
-<li class="chapter" data-level="5.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html"><i class="fa fa-check"></i><b>5.1</b> 把“untidy data”整成“tidy data”</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#untidy-data"><i class="fa fa-check"></i><b>5.1.1</b> “untidy data”的主要问题</a></li>
+<li class="chapter" data-level="5.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html"><i class="fa fa-check"></i><b>5.1</b> 整齐数据</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#section-5.1.1"><i class="fa fa-check"></i><b>5.1.1</b> 不整齐的常见问题</a></li>
 <li class="chapter" data-level="5.1.2" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#section-5.1.2"><i class="fa fa-check"></i><b>5.1.2</b> 解决方案</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="import-export.html"><a href="import-export.html"><i class="fa fa-check"></i><b>5.2</b> 数据的导入和导出</a><ul>
@@ -502,7 +506,7 @@ women2 &lt;-<span class="st"> </span><span class="kw">mutate</span>(women,
                  <span class="dt">weight_in_kg =</span> women1<span class="op">$</span>weight_in_kg) <span class="co"># 引用`women1`里的数据</span>
 <span class="kw">identical</span>(women2 ,women1) <span class="co"># 和`women1`是相同的</span></code></pre>
 <pre><code>#&gt; [1] TRUE</code></pre>
-<p><code>mutate()</code>也可以用来重新赋值原有变量。假设我们根本不再需要以英寸和磅作为单位的数据，我们可以：</p>
+<p>显然，<code>mutate()</code>也可以用来重新赋值原有变量。假设我们根本不再需要以英寸和磅作为单位的数据，我们可以：</p>
 <pre class="sourceCode r"><code class="sourceCode r">women3 &lt;-<span class="st"> </span><span class="kw">mutate</span>(women, <span class="dt">height =</span> height<span class="op">/</span><span class="fl">39.37</span>, <span class="dt">weight =</span> weight<span class="op">/</span><span class="fl">2.204</span>)
 <span class="kw">head</span>(women3, <span class="dv">3</span>)</code></pre>
 <pre><code>#&gt; # A tibble: 3 x 2
@@ -531,15 +535,6 @@ women2 &lt;-<span class="st"> </span><span class="kw">mutate</span>(women,
 #&gt; 2  23.6
 #&gt; 3  23.4
 #&gt; 4  23.2</code></pre>
-<p>这意味着<code>transmute()</code>函数也可以用于重命名变量：</p>
-<pre class="sourceCode r"><code class="sourceCode r">women_bmi_<span class="dv">3</span> &lt;-<span class="st"> </span><span class="kw">transmute</span>(women_bmi_<span class="dv">2</span>, <span class="dt">body_mass_index =</span> BMI)
-<span class="kw">head</span>(women_bmi_<span class="dv">3</span>, <span class="dv">3</span>)</code></pre>
-<pre><code>#&gt; # A tibble: 3 x 1
-#&gt;   body_mass_index
-#&gt;             &lt;dbl&gt;
-#&gt; 1            24.0
-#&gt; 2            23.6
-#&gt; 3            23.4</code></pre>
 </div>
 <div id="-pipe-operator" class="section level3">
 <h3><span class="header-section-number">3.3.3</span> <code>%&gt;%</code>符号 (Pipe Operator)</h3>
@@ -674,7 +669,7 @@ wb_summary</code></pre>
 <span class="st">  </span><span class="kw">geom_col</span>(<span class="kw">aes</span>(<span class="dt">y =</span> MEAN), <span class="dt">position =</span> <span class="kw">position_dodge</span>())<span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_errorbar</span>(<span class="kw">aes</span>(<span class="dt">ymax =</span> upper, <span class="dt">ymin =</span> lower), <span class="dt">position =</span> <span class="kw">position_dodge</span>((<span class="dt">width=</span><span class="dv">1</span>)), <span class="dt">width =</span> <span class="fl">0.2</span>, <span class="dt">size =</span> <span class="fl">0.4</span>)<span class="op">+</span>
 <span class="st">  </span><span class="kw">theme_light</span>()</code></pre>
-<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-241-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-253-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>再用我们的老朋友<code>mpg</code>举一个例子：</p>
 <pre class="sourceCode r"><code class="sourceCode r">mpg</code></pre>
 <pre><code>#&gt; # A tibble: 234 x 11
@@ -718,7 +713,7 @@ mpg_summary</code></pre>
 #&gt; 14 toyota          34     18.5  0.694     24.9  1.06 
 #&gt; 15 volkswagen      27     20.9  0.877     29.2  1.02</code></pre>
 <p>最终我们可以利用这些数据绘图（这将是下一章的练习）：</p>
-<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-244-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-256-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>
             </section>

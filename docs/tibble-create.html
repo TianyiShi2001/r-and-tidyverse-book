@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-29" />
+<meta name="date" content="2019-07-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -207,7 +207,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.5.2" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-advanced"><i class="fa fa-check"></i><b>1.5.2</b> 进阶 {test-intro-advanced}</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> 向量，逻辑，循环和函数</a><ul>
+<li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> R中的数据，逻辑，和函数</a><ul>
 <li class="chapter" data-level="" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#intro-overview-vector"><i class="fa fa-check"></i>本章内容速览</a></li>
 <li class="chapter" data-level="2.1" data-path="vector-section.html"><a href="vector-section.html"><i class="fa fa-check"></i><b>2.1</b> 向量的概念，操作和优越性</a><ul>
 <li class="chapter" data-level="2.1.1" data-path="vector-section.html"><a href="vector-section.html#create-vector"><i class="fa fa-check"></i><b>2.1.1</b> 创建向量（赋值）</a></li>
@@ -281,6 +281,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.4.1" data-path="tibble-misc.html"><a href="tibble-misc.html#list-and-df"><i class="fa fa-check"></i><b>3.4.1</b> list和dataframe/tibble</a></li>
 <li class="chapter" data-level="3.4.2" data-path="tibble-misc.html"><a href="tibble-misc.html#tibble-df-diff"><i class="fa fa-check"></i><b>3.4.2</b> Tidyverse tibble相对于Base R dataframe的优势</a></li>
 </ul></li>
+<li class="chapter" data-level="3.5" data-path="test-tibble.html"><a href="test-tibble.html"><i class="fa fa-check"></i><b>3.5</b> 小测</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="test-tibble.html"><a href="test-tibble.html#test-tibble-basics"><i class="fa fa-check"></i><b>3.5.1</b> 基础</a></li>
+<li class="chapter" data-level="3.5.2" data-path="test-tibble.html"><a href="test-tibble.html#test-tibble-advanced"><i class="fa fa-check"></i><b>3.5.2</b> 进阶</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>4</b> 使用ggplot绘图</a><ul>
 <li class="chapter" data-level="4.1" data-path="g-phil.html"><a href="g-phil.html"><i class="fa fa-check"></i><b>4.1</b> 哲理</a></li>
@@ -298,8 +302,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4" data-path="g-base.html"><a href="g-base.html"><i class="fa fa-check"></i><b>4.4</b> 附：Base R中的作图</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="wrangle.html"><a href="wrangle.html"><i class="fa fa-check"></i><b>5</b> 数据处理</a><ul>
-<li class="chapter" data-level="5.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html"><i class="fa fa-check"></i><b>5.1</b> 把“untidy data”整成“tidy data”</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#untidy-data"><i class="fa fa-check"></i><b>5.1.1</b> “untidy data”的主要问题</a></li>
+<li class="chapter" data-level="5.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html"><i class="fa fa-check"></i><b>5.1</b> 整齐数据</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#section-5.1.1"><i class="fa fa-check"></i><b>5.1.1</b> 不整齐的常见问题</a></li>
 <li class="chapter" data-level="5.1.2" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#section-5.1.2"><i class="fa fa-check"></i><b>5.1.2</b> 解决方案</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="import-export.html"><a href="import-export.html"><i class="fa fa-check"></i><b>5.2</b> 数据的导入和导出</a><ul>
@@ -352,7 +356,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">3.2</span> 创建tibble</h2>
 <div id="tibble-create-manual" class="section level3">
 <h3><span class="header-section-number">3.2.1</span> 手动输入数据以创建tibble</h3>
-<p>使用<code>tibble()</code>函数<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a>，按以下格式创建tibble. 换行不是必须的，但是换行会看得更清楚。如果换行，不要忘记行末的逗号。</p>
+<p>使用<code>tibble()</code>函数<a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a>，按以下格式创建tibble. 换行不是必须的，但是换行会看得更清楚。如果换行，不要忘记行末的逗号。</p>
 <pre class="sourceCode r"><code class="sourceCode r">my_tibble_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">tibble</span>(
                 <span class="dt">nums =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>),
                 <span class="dt">chars =</span> <span class="kw">c</span>(<span class="st">&quot;hej&quot;</span>, <span class="st">&quot;你好&quot;</span>, <span class="st">&quot;こんにちは&quot;</span>),
@@ -393,8 +397,8 @@ my_tibble_<span class="dv">2</span></code></pre>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="19">
-<li id="fn19"><p><code>tribble()</code>函数亦可用来创建新tibble. 与<code>tibble()</code>的区别是，<code>tibble()</code>逐列写入数据，<code>tribble()</code>逐行写入数据。查看帮助文档获取使用例。<a href="tibble-create.html#fnref19" class="footnote-back">↩</a></p></li>
+<ol start="22">
+<li id="fn22"><p><code>tribble()</code>函数亦可用来创建新tibble. 与<code>tibble()</code>的区别是，<code>tibble()</code>逐列写入数据，<code>tribble()</code>逐行写入数据。查看帮助文档获取使用例。<a href="tibble-create.html#fnref22" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>

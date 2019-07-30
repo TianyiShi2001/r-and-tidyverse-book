@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-29" />
+<meta name="date" content="2019-07-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -207,7 +207,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.5.2" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-advanced"><i class="fa fa-check"></i><b>1.5.2</b> 进阶 {test-intro-advanced}</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> 向量，逻辑，循环和函数</a><ul>
+<li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> R中的数据，逻辑，和函数</a><ul>
 <li class="chapter" data-level="" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#intro-overview-vector"><i class="fa fa-check"></i>本章内容速览</a></li>
 <li class="chapter" data-level="2.1" data-path="vector-section.html"><a href="vector-section.html"><i class="fa fa-check"></i><b>2.1</b> 向量的概念，操作和优越性</a><ul>
 <li class="chapter" data-level="2.1.1" data-path="vector-section.html"><a href="vector-section.html#create-vector"><i class="fa fa-check"></i><b>2.1.1</b> 创建向量（赋值）</a></li>
@@ -281,6 +281,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.4.1" data-path="tibble-misc.html"><a href="tibble-misc.html#list-and-df"><i class="fa fa-check"></i><b>3.4.1</b> list和dataframe/tibble</a></li>
 <li class="chapter" data-level="3.4.2" data-path="tibble-misc.html"><a href="tibble-misc.html#tibble-df-diff"><i class="fa fa-check"></i><b>3.4.2</b> Tidyverse tibble相对于Base R dataframe的优势</a></li>
 </ul></li>
+<li class="chapter" data-level="3.5" data-path="test-tibble.html"><a href="test-tibble.html"><i class="fa fa-check"></i><b>3.5</b> 小测</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="test-tibble.html"><a href="test-tibble.html#test-tibble-basics"><i class="fa fa-check"></i><b>3.5.1</b> 基础</a></li>
+<li class="chapter" data-level="3.5.2" data-path="test-tibble.html"><a href="test-tibble.html#test-tibble-advanced"><i class="fa fa-check"></i><b>3.5.2</b> 进阶</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>4</b> 使用ggplot绘图</a><ul>
 <li class="chapter" data-level="4.1" data-path="g-phil.html"><a href="g-phil.html"><i class="fa fa-check"></i><b>4.1</b> 哲理</a></li>
@@ -298,8 +302,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4" data-path="g-base.html"><a href="g-base.html"><i class="fa fa-check"></i><b>4.4</b> 附：Base R中的作图</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="wrangle.html"><a href="wrangle.html"><i class="fa fa-check"></i><b>5</b> 数据处理</a><ul>
-<li class="chapter" data-level="5.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html"><i class="fa fa-check"></i><b>5.1</b> 把“untidy data”整成“tidy data”</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#untidy-data"><i class="fa fa-check"></i><b>5.1.1</b> “untidy data”的主要问题</a></li>
+<li class="chapter" data-level="5.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html"><i class="fa fa-check"></i><b>5.1</b> 整齐数据</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#section-5.1.1"><i class="fa fa-check"></i><b>5.1.1</b> 不整齐的常见问题</a></li>
 <li class="chapter" data-level="5.1.2" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#section-5.1.2"><i class="fa fa-check"></i><b>5.1.2</b> 解决方案</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="import-export.html"><a href="import-export.html"><i class="fa fa-check"></i><b>5.2</b> 数据的导入和导出</a><ul>
@@ -407,7 +411,7 @@ y</code></pre>
 #&gt; [[5]]
 #&gt; function (x, ...) 
 #&gt; UseMethod(&quot;t.test&quot;)
-#&gt; &lt;bytecode: 0x7fcd11819620&gt;
+#&gt; &lt;bytecode: 0x7f8fe8cf0420&gt;
 #&gt; &lt;environment: namespace:stats&gt;</code></pre>
 <p>这个列表有5个分量，其中第3个是一个有2个分量的子列表。</p>
 <div id="list-index" class="section level3">
@@ -463,7 +467,7 @@ z <span class="co"># `[[2]]`被`$z2`所取代</span></code></pre>
 #&gt; 
 #&gt; [[2]][[2]]
 #&gt; [1] 4</code></pre>
-<p>通过<code>unlist()</code>函数来拆解列表中的子列表。若参数<code>recursive</code>为<code>TRUE</code>（默认值），将一直拆解至无子列表的列表，如果此最简列表的所有分量都属于五种atomic vector中的数据<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a>，此列表还会被进一步化简成向量。若<code>recursive = FALSE</code>，最“靠外”的一级列表（可能是多个）将会被拆解。</p>
+<p>通过<code>unlist()</code>函数来拆解列表中的子列表。若参数<code>recursive</code>为<code>TRUE</code>（默认值），将一直拆解至无子列表的列表，如果此最简列表的所有分量都属于五种atomic vector中的数据<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a>，此列表还会被进一步化简成向量。若<code>recursive = FALSE</code>，最“靠外”的一级列表（可能是多个）将会被拆解。</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">unlist</span>(<span class="kw">list</span>(<span class="dv">1</span>, <span class="kw">list</span>(<span class="dv">2</span>, <span class="kw">list</span>(<span class="dv">3</span>, <span class="dv">4</span>)), <span class="kw">list</span>(<span class="dv">5</span>, <span class="dv">6</span>), <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>))
 <span class="co"># 将等同于c(1, 2, 3, 4, 5, 6, 7, 8, 9) </span>
 <span class="co"># 注意被化简成了向量</span>
@@ -494,8 +498,8 @@ C1 &lt;-<span class="st"> </span><span class="kw">unlist</span>(<span class="kw"
 </div>
 <div class="footnotes">
 <hr />
-<ol start="18">
-<li id="fn18"><p>dataframe也是可以unlist成向量的，但是并不实用。（试试<code>unlist(list(data.frame(x = c(1,2), y = c(3,4)), 5, 6))</code>）<a href="list.html#fnref18" class="footnote-back">↩</a></p></li>
+<ol start="19">
+<li id="fn19"><p>dataframe也是可以unlist成向量的，但是并不实用。（试试<code>unlist(list(data.frame(x = c(1,2), y = c(3,4)), 5, 6))</code>）<a href="list.html#fnref19" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>

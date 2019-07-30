@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-29" />
+<meta name="date" content="2019-07-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -207,7 +207,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.5.2" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-advanced"><i class="fa fa-check"></i><b>1.5.2</b> 进阶 {test-intro-advanced}</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> 向量，逻辑，循环和函数</a><ul>
+<li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> R中的数据，逻辑，和函数</a><ul>
 <li class="chapter" data-level="" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#intro-overview-vector"><i class="fa fa-check"></i>本章内容速览</a></li>
 <li class="chapter" data-level="2.1" data-path="vector-section.html"><a href="vector-section.html"><i class="fa fa-check"></i><b>2.1</b> 向量的概念，操作和优越性</a><ul>
 <li class="chapter" data-level="2.1.1" data-path="vector-section.html"><a href="vector-section.html#create-vector"><i class="fa fa-check"></i><b>2.1.1</b> 创建向量（赋值）</a></li>
@@ -281,6 +281,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.4.1" data-path="tibble-misc.html"><a href="tibble-misc.html#list-and-df"><i class="fa fa-check"></i><b>3.4.1</b> list和dataframe/tibble</a></li>
 <li class="chapter" data-level="3.4.2" data-path="tibble-misc.html"><a href="tibble-misc.html#tibble-df-diff"><i class="fa fa-check"></i><b>3.4.2</b> Tidyverse tibble相对于Base R dataframe的优势</a></li>
 </ul></li>
+<li class="chapter" data-level="3.5" data-path="test-tibble.html"><a href="test-tibble.html"><i class="fa fa-check"></i><b>3.5</b> 小测</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="test-tibble.html"><a href="test-tibble.html#test-tibble-basics"><i class="fa fa-check"></i><b>3.5.1</b> 基础</a></li>
+<li class="chapter" data-level="3.5.2" data-path="test-tibble.html"><a href="test-tibble.html#test-tibble-advanced"><i class="fa fa-check"></i><b>3.5.2</b> 进阶</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>4</b> 使用ggplot绘图</a><ul>
 <li class="chapter" data-level="4.1" data-path="g-phil.html"><a href="g-phil.html"><i class="fa fa-check"></i><b>4.1</b> 哲理</a></li>
@@ -298,8 +302,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4" data-path="g-base.html"><a href="g-base.html"><i class="fa fa-check"></i><b>4.4</b> 附：Base R中的作图</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="wrangle.html"><a href="wrangle.html"><i class="fa fa-check"></i><b>5</b> 数据处理</a><ul>
-<li class="chapter" data-level="5.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html"><i class="fa fa-check"></i><b>5.1</b> 把“untidy data”整成“tidy data”</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#untidy-data"><i class="fa fa-check"></i><b>5.1.1</b> “untidy data”的主要问题</a></li>
+<li class="chapter" data-level="5.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html"><i class="fa fa-check"></i><b>5.1</b> 整齐数据</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#section-5.1.1"><i class="fa fa-check"></i><b>5.1.1</b> 不整齐的常见问题</a></li>
 <li class="chapter" data-level="5.1.2" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#section-5.1.2"><i class="fa fa-check"></i><b>5.1.2</b> 解决方案</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="import-export.html"><a href="import-export.html"><i class="fa fa-check"></i><b>5.2</b> 数据的导入和导出</a><ul>
@@ -363,11 +367,15 @@ A</code></pre>
 #&gt; [4,]    4   10   16   22   28   34   40   46
 #&gt; [5,]    5   11   17   23   29   35   41   47
 #&gt; [6,]    6   12   18   24   30   36   42   48</code></pre>
-<p>可以看到我们创建了一个二维的，array, 因此它也是一个（4行6列的）matrix。</p>
+<p>可以看到我们创建了一个二维的数组, 即一个4行6列的矩阵。</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.array</span>(A)</code></pre>
 <pre><code>#&gt; [1] TRUE</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.matrix</span>(A)</code></pre>
 <pre><code>#&gt; [1] TRUE</code></pre>
+<p>它多出来的<code>dim</code>属性可以用<code>attr()</code>（即“attributes”，属性）函数来查看：</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">attributes</span>(A)</code></pre>
+<pre><code>#&gt; $dim
+#&gt; [1] 6 8</code></pre>
 <p>注意24个数字排列的方式。第一个维度是行，所以先把4行排满，随后再使用下一个维度（列），使用第2列继续排4行，就像数字一样，（十进制中）先把个位从零数到9，再使用第二个位数（十位），以此类推。下面三维和四维的例子可能会更清晰。</p>
 <p>同时注意最左边和最上边的[1,], [,3]之类的标记。你应该猜出来了，这些是index. 假设你要抓取第五行第三列的数值：</p>
 <pre class="sourceCode r"><code class="sourceCode r">A[<span class="dv">5</span>,<span class="dv">3</span>]</code></pre>
@@ -398,8 +406,8 @@ A</code></pre>
 #&gt;      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
 #&gt; [1,]   33   35   37   39   41   43   45   47
 #&gt; [2,]   34   36   38   40   42   44   46   48</code></pre>
-<p>它生成了三个二维的矩阵。在每个2*8的矩阵存储满16个元素后，第三个维度就要加一了。每个矩阵开头的<code>, , x</code>正是第三个维度的值。同理，我们可以生成四维的array：</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dim</span>(A) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">2</span>)
+<p>它生成了三个二维的矩阵。在每个2*8的矩阵存储满16个元素后，第三个维度就要加一了。每个矩阵开头的<code>, , x</code>正是第三个维度的值。同理，我们可以生成四维的array（这是另外一种改变维度的方法。dim作为一个属性 (attribute), 可以通过<code>attr()</code>函数赋值。<code>attr()</code>还可以赋值其他的属性。）：</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">attr</span>(A, <span class="st">&quot;dim&quot;</span>) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">2</span>)
 A</code></pre>
 <pre><code>#&gt; , , 1, 1
 #&gt; 
@@ -428,7 +436,7 @@ A</code></pre>
 #&gt; [1,]   37   40   43   46
 #&gt; [2,]   38   41   44   47
 #&gt; [3,]   39   42   45   48</code></pre>
-<p>观察每个矩阵开头的<code>, , x, y</code>. x是第三个维度，y是第四个维度。每个二位矩阵存满后，第三个维度（x）加一。x达到上限后，第四个维度（y）再加一。</p>
+<p>观察每个矩阵开头的<code>, , x, y</code>. x是第三个维度，y是第四个维度。每个二位矩阵存满后，第三个维度（x）加一。x达到上限后，第四个维度（y）再加1。</p>
 <p>类似二维矩阵，你可以通过index任意抓取数据，比如：</p>
 <pre class="sourceCode r"><code class="sourceCode r">A[ ,<span class="dv">3</span> , , ] <span class="co">#每个矩阵第3列的数据，即所有第二个维度为3的数值</span></code></pre>
 <pre><code>#&gt; , , 1
@@ -448,7 +456,7 @@ A</code></pre>
 <h3><span class="header-section-number">2.8.1</span> 给matrices和arrays命名</h3>
 <p>假设我们记录了3种药物（chloroquine, artemisinin, doxycycline)
 对5种疟原虫(P. falciparum, P. malariae, P. ovale, P. vivax, P. knowlesi)的疗效，其中每个药物对每种疟原虫做6次实验。为了记录数据，我们可以做3个6*5的矩阵：（这里只是举例子，用的是随机生成的数字）</p>
-<pre class="sourceCode r"><code class="sourceCode r">B &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">90</span>, <span class="dv">0</span>, <span class="dv">1</span>) <span class="co">#从均匀分布中取100个0到1之间的数</span>
+<pre class="sourceCode r"><code class="sourceCode r">B &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">90</span>, <span class="dv">0</span>, <span class="dv">1</span>) <span class="co">#从均匀分布中取90个0到1之间的数</span>
 <span class="kw">dim</span>(B) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">3</span>) <span class="co">#注意顺序</span>
 B</code></pre>
 <pre><code>#&gt; , , 1
@@ -481,7 +489,9 @@ B</code></pre>
 #&gt; [5,] 0.350 0.468 0.5280 0.929 0.3457
 #&gt; [6,] 0.118 0.403 0.4688 0.359 0.3701</code></pre>
 <p>然后我们用<code>dimnames()</code>来命名：</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dimnames</span>(B) &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="kw">paste</span>(<span class="st">&quot;trial.&quot;</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">6</span>), <span class="kw">c</span>(<span class="st">&#39;P. falciparum&#39;</span>, <span class="st">&#39;P. malariae&#39;</span>, <span class="st">&#39;P. ovale&#39;</span>, <span class="st">&#39;P. vivax&#39;</span>, <span class="st">&#39;P. knowlesi&#39;</span>), <span class="kw">c</span>(<span class="st">&#39;chloroquine&#39;</span>, <span class="st">&#39;artemisinin&#39;</span>, <span class="st">&#39;doxycycline&#39;</span>))
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dimnames</span>(B) &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="kw">paste</span>(<span class="st">&quot;trial.&quot;</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">6</span>), 
+                    <span class="kw">c</span>(<span class="st">&#39;P. falciparum&#39;</span>, <span class="st">&#39;P. malariae&#39;</span>, <span class="st">&#39;P. ovale&#39;</span>, <span class="st">&#39;P. vivax&#39;</span>, <span class="st">&#39;P. knowlesi&#39;</span>), 
+                    <span class="kw">c</span>(<span class="st">&#39;chloroquine&#39;</span>, <span class="st">&#39;artemisinin&#39;</span>, <span class="st">&#39;doxycycline&#39;</span>))
 B</code></pre>
 <pre><code>#&gt; , , chloroquine
 #&gt; 

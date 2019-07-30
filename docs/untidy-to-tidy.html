@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5.1 把“untidy data”整成“tidy data” | R与tidyverse——数据分析入门</title>
+  <title>5.1 整齐数据 | R与tidyverse——数据分析入门</title>
   <meta name="description" content="这是一本R与tidyverse的入门教程" />
   <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5.1 把“untidy data”整成“tidy data” | R与tidyverse——数据分析入门" />
+  <meta property="og:title" content="5.1 整齐数据 | R与tidyverse——数据分析入门" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="TianyiShi2001/r-and-tidyverse-book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5.1 把“untidy data”整成“tidy data” | R与tidyverse——数据分析入门" />
+  <meta name="twitter:title" content="5.1 整齐数据 | R与tidyverse——数据分析入门" />
   
   <meta name="twitter:description" content="这是一本R与tidyverse的入门教程" />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-29" />
+<meta name="date" content="2019-07-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -207,7 +207,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.5.2" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-advanced"><i class="fa fa-check"></i><b>1.5.2</b> 进阶 {test-intro-advanced}</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> 向量，逻辑，循环和函数</a><ul>
+<li class="chapter" data-level="2" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html"><i class="fa fa-check"></i><b>2</b> R中的数据，逻辑，和函数</a><ul>
 <li class="chapter" data-level="" data-path="vectors-logicals-and-functions.html"><a href="vectors-logicals-and-functions.html#intro-overview-vector"><i class="fa fa-check"></i>本章内容速览</a></li>
 <li class="chapter" data-level="2.1" data-path="vector-section.html"><a href="vector-section.html"><i class="fa fa-check"></i><b>2.1</b> 向量的概念，操作和优越性</a><ul>
 <li class="chapter" data-level="2.1.1" data-path="vector-section.html"><a href="vector-section.html#create-vector"><i class="fa fa-check"></i><b>2.1.1</b> 创建向量（赋值）</a></li>
@@ -281,6 +281,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.4.1" data-path="tibble-misc.html"><a href="tibble-misc.html#list-and-df"><i class="fa fa-check"></i><b>3.4.1</b> list和dataframe/tibble</a></li>
 <li class="chapter" data-level="3.4.2" data-path="tibble-misc.html"><a href="tibble-misc.html#tibble-df-diff"><i class="fa fa-check"></i><b>3.4.2</b> Tidyverse tibble相对于Base R dataframe的优势</a></li>
 </ul></li>
+<li class="chapter" data-level="3.5" data-path="test-tibble.html"><a href="test-tibble.html"><i class="fa fa-check"></i><b>3.5</b> 小测</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="test-tibble.html"><a href="test-tibble.html#test-tibble-basics"><i class="fa fa-check"></i><b>3.5.1</b> 基础</a></li>
+<li class="chapter" data-level="3.5.2" data-path="test-tibble.html"><a href="test-tibble.html#test-tibble-advanced"><i class="fa fa-check"></i><b>3.5.2</b> 进阶</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>4</b> 使用ggplot绘图</a><ul>
 <li class="chapter" data-level="4.1" data-path="g-phil.html"><a href="g-phil.html"><i class="fa fa-check"></i><b>4.1</b> 哲理</a></li>
@@ -298,8 +302,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4" data-path="g-base.html"><a href="g-base.html"><i class="fa fa-check"></i><b>4.4</b> 附：Base R中的作图</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="wrangle.html"><a href="wrangle.html"><i class="fa fa-check"></i><b>5</b> 数据处理</a><ul>
-<li class="chapter" data-level="5.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html"><i class="fa fa-check"></i><b>5.1</b> 把“untidy data”整成“tidy data”</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#untidy-data"><i class="fa fa-check"></i><b>5.1.1</b> “untidy data”的主要问题</a></li>
+<li class="chapter" data-level="5.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html"><i class="fa fa-check"></i><b>5.1</b> 整齐数据</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#section-5.1.1"><i class="fa fa-check"></i><b>5.1.1</b> 不整齐的常见问题</a></li>
 <li class="chapter" data-level="5.1.2" data-path="untidy-to-tidy.html"><a href="untidy-to-tidy.html#section-5.1.2"><i class="fa fa-check"></i><b>5.1.2</b> 解决方案</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="import-export.html"><a href="import-export.html"><i class="fa fa-check"></i><b>5.2</b> 数据的导入和导出</a><ul>
@@ -349,9 +353,84 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="untidy-to-tidy" class="section level2">
-<h2><span class="header-section-number">5.1</span> 把“untidy data”整成“tidy data”</h2>
-<div id="untidy-data" class="section level3">
-<h3><span class="header-section-number">5.1.1</span> “untidy data”的主要问题</h3>
+<h2><span class="header-section-number">5.1</span> 整齐数据</h2>
+<p>在这一节，我们使用<code>tidyr</code>里的几组数据：<code>tidyr::table1</code>, <code>tidyr::table2</code>, <code>tidyr::table3</code>, <code>tidyr::table4a</code>, <code>tidyr::table4b</code>. 它们的内容都是一样的，但是只有<code>tidyr::table1</code>是整齐的数据。其它几个都是因种种原因而不整齐的数据。</p>
+<p>这个数据记录了阿富汗，巴西和中国三个国家，在1999年和2000年这两个年份中，肺结核病例数和总人口数量。在往下看之前，问一下自己，自变量和因变量是什么？</p>
+<p>不难理解，国家和年份是自变量，病例数和人口数是因变量。</p>
+<div id="section-5.1.1" class="section level3">
+<h3><span class="header-section-number">5.1.1</span> 不整齐的常见问题</h3>
+<p>在第(tibble-concept)节讲过，“tidy data”的定义很简单：</p>
+<blockquote>
+<p>每一行代表的是一次（且仅一次）observation，每一列代表的是一个（且仅一个）变量。</p>
+</blockquote>
+<p>判断某一列是否是一个变量的方法很简单：问自己，这一列的标题是否直接反映了这一列所含的数据？</p>
+<p>判断一行是否是一次observation（观察），首先我们需要清楚自变量是什么。每个自变量的组合和它对应的因变量为一行。</p>
+<p>我们看<code>table1</code>:</p>
+<pre class="sourceCode r"><code class="sourceCode r">tidyr<span class="op">::</span>table1</code></pre>
+<pre><code>#&gt; # A tibble: 6 x 4
+#&gt;   country      year  cases population
+#&gt;   &lt;chr&gt;       &lt;int&gt;  &lt;int&gt;      &lt;int&gt;
+#&gt; 1 Afghanistan  1999    745   19987071
+#&gt; 2 Afghanistan  2000   2666   20595360
+#&gt; 3 Brazil       1999  37737  172006362
+#&gt; 4 Brazil       2000  80488  174504898
+#&gt; 5 China        1999 212258 1272915272
+#&gt; 6 China        2000 213766 1280428583</code></pre>
+<p>每一列的标题是否直接反映了这一列所含的数据？是的，阿富汗，巴西和中国都是国家；1999, 2000都是年份；745, 2666等都是病例数；19987071, 20595360等都是人口数量。</p>
+<p>每一行是否是一次观察？是的，这里的自变量是国家和年份。3个国家，2个年份，共6种组合，每种组合刚好一行。</p>
+<p>我们再看<code>table2</code>:</p>
+<pre class="sourceCode r"><code class="sourceCode r">tidyr<span class="op">::</span>table2</code></pre>
+<pre><code>#&gt; # A tibble: 12 x 4
+#&gt;    country      year type            count
+#&gt;    &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;           &lt;int&gt;
+#&gt;  1 Afghanistan  1999 cases             745
+#&gt;  2 Afghanistan  1999 population   19987071
+#&gt;  3 Afghanistan  2000 cases            2666
+#&gt;  4 Afghanistan  2000 population   20595360
+#&gt;  5 Brazil       1999 cases           37737
+#&gt;  6 Brazil       1999 population  172006362
+#&gt;  7 Brazil       2000 cases           80488
+#&gt;  8 Brazil       2000 population  174504898
+#&gt;  9 China        1999 cases          212258
+#&gt; 10 China        1999 population 1272915272
+#&gt; 11 China        2000 cases          213766
+#&gt; 12 China        2000 population 1280428583</code></pre>
+<p>每个自变量之组合出现了两次（比如有两次<code>China</code>+<code>1999</code>），且有一列意义不明（名称和数据的关联不直接）：把<code>cases</code>和<code>population</code>各称作一个“type”并不合适，它们俩自身显然就可以作为一个变量名。</p>
+<p>再看<code>table4a</code>和<code>table4b</code></p>
+<pre class="sourceCode r"><code class="sourceCode r">tidyr<span class="op">::</span>table4a; tidyr<span class="op">::</span>table4b</code></pre>
+<pre><code>#&gt; # A tibble: 3 x 3
+#&gt;   country     `1999` `2000`
+#&gt; * &lt;chr&gt;        &lt;int&gt;  &lt;int&gt;
+#&gt; 1 Afghanistan    745   2666
+#&gt; 2 Brazil       37737  80488
+#&gt; 3 China       212258 213766</code></pre>
+<pre><code>#&gt; # A tibble: 3 x 3
+#&gt;   country         `1999`     `2000`
+#&gt; * &lt;chr&gt;            &lt;int&gt;      &lt;int&gt;
+#&gt; 1 Afghanistan   19987071   20595360
+#&gt; 2 Brazil       172006362  174504898
+#&gt; 3 China       1272915272 1280428583</code></pre>
+<p>它是数据分成了两组，病例数和人口。它们的变量命名很糟糕：<code>745</code>, <code>37737</code>和<code>212258</code>分别都是一个“1999”吗？显然用年份作为变量名很不合适。</p>
+<pre class="sourceCode r"><code class="sourceCode r">tidyr<span class="op">::</span>table3; tidyr<span class="op">::</span>table5</code></pre>
+<pre><code>#&gt; # A tibble: 6 x 3
+#&gt;   country      year rate             
+#&gt; * &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;            
+#&gt; 1 Afghanistan  1999 745/19987071     
+#&gt; 2 Afghanistan  2000 2666/20595360    
+#&gt; 3 Brazil       1999 37737/172006362  
+#&gt; 4 Brazil       2000 80488/174504898  
+#&gt; 5 China        1999 212258/1272915272
+#&gt; 6 China        2000 213766/1280428583</code></pre>
+<pre><code>#&gt; # A tibble: 6 x 4
+#&gt;   country     century year  rate             
+#&gt; * &lt;chr&gt;       &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;            
+#&gt; 1 Afghanistan 19      99    745/19987071     
+#&gt; 2 Afghanistan 20      00    2666/20595360    
+#&gt; 3 Brazil      19      99    37737/172006362  
+#&gt; 4 Brazil      20      00    80488/174504898  
+#&gt; 5 China       19      99    212258/1272915272
+#&gt; 6 China       20      00    213766/1280428583</code></pre>
+<p><code>table3</code>和<code>table5</code>的问题不大，只是对元数据进行了一些处理。在下面会介绍方法把它们转换成像<code>table1</code>那样，整齐且通用性强的数据。</p>
 </div>
 <div id="section-5.1.2" class="section level3">
 <h3><span class="header-section-number">5.1.2</span> 解决方案</h3>
