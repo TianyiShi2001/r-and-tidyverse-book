@@ -83,7 +83,7 @@ knitr (http://yihui.name/knitr/ )和pandoc (https://pandoc.org/ )把`Rmd`文件�
 编写本书使用的R packages，和排版本书时R的sessionInfo显示如下：
 
 ```{r}
-utils::sessionInfo(c("tibble", "dplyr", "forcats", "ggplot2", "stringr", "tidyr", "readr", "purrr", "yaml", "lubridate", "rmarkdown", "knitr", "bookdown", "doParallel", "foreach"))
+utils::sessionInfo(c("tibble", "dplyr", "forcats", "ggplot2", "stringr", "tidyr", "readr", "purrr", "lubridate", "doParallel", "foreach", "rmarkdown", "knitr", "bookdown"))
 ```
 
 ```{r include=FALSE}

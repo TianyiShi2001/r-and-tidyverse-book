@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.7 列表 (list) | R与tidyverse——数据分析入门</title>
+  <title>2.4 列表 (list) | R与tidyverse——数据分析入门</title>
   <meta name="description" content="这是一本R与tidyverse的入门教程" />
   <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.7 列表 (list) | R与tidyverse——数据分析入门" />
+  <meta property="og:title" content="2.4 列表 (list) | R与tidyverse——数据分析入门" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="TianyiShi2001/r-and-tidyverse-book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.7 列表 (list) | R与tidyverse——数据分析入门" />
+  <meta name="twitter:title" content="2.4 列表 (list) | R与tidyverse——数据分析入门" />
   
   <meta name="twitter:description" content="这是一本R与tidyverse的入门教程" />
   
@@ -24,14 +24,14 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-31" />
+<meta name="date" content="2019-08-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="functions.html">
+<link rel="prev" href="math.html">
 <link rel="next" href="matrix-array.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -225,34 +225,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3.2" data-path="math.html"><a href="math.html#arithmetic"><i class="fa fa-check"></i><b>2.3.2</b> 运算</a></li>
 <li class="chapter" data-level="2.3.3" data-path="math.html"><a href="math.html#statistics"><i class="fa fa-check"></i><b>2.3.3</b> 简易的统计学计算</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="logical-operation.html"><a href="logical-operation.html"><i class="fa fa-check"></i><b>2.4</b> 逻辑</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="logical-operation.html"><a href="logical-operation.html#-logical-values"><i class="fa fa-check"></i><b>2.4.1</b> 逻辑值 {logical-values}</a></li>
-<li class="chapter" data-level="2.4.2" data-path="logical-operation.html"><a href="logical-operation.html#relational-operators"><i class="fa fa-check"></i><b>2.4.2</b> 关系运算符和简单的逻辑运算</a></li>
-<li class="chapter" data-level="2.4.3" data-path="logical-operation.html"><a href="logical-operation.html#logical-logical-operators"><i class="fa fa-check"></i><b>2.4.3</b> 逻辑运算符</a></li>
+<li class="chapter" data-level="2.4" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>2.4</b> 列表 (list)</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="list.html"><a href="list.html#list-index"><i class="fa fa-check"></i><b>2.4.1</b> list的索引/取子集</a></li>
+<li class="chapter" data-level="2.4.2" data-path="list.html"><a href="list.html#list-combine-unlist"><i class="fa fa-check"></i><b>2.4.2</b> 合并与拆解</a></li>
+<li class="chapter" data-level="2.4.3" data-path="list.html"><a href="list.html#list-other-properties-operations"><i class="fa fa-check"></i><b>2.4.3</b> 其他性质和操作</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="control-flow.html"><a href="control-flow.html"><i class="fa fa-check"></i><b>2.5</b> 判断和循环（流程控制）</a><ul>
-<li class="chapter" data-level="2.5.1" data-path="control-flow.html"><a href="control-flow.html#control-flow-for-programmers"><i class="fa fa-check"></i><b>2.5.1</b> 给有编程基础者的快速指南</a></li>
-<li class="chapter" data-level="2.5.2" data-path="control-flow.html"><a href="control-flow.html#kickstart"><i class="fa fa-check"></i><b>2.5.2</b> 无编程基础者的快速指南</a></li>
-<li class="chapter" data-level="2.5.3" data-path="control-flow.html"><a href="control-flow.html#control-flow-rigorous"><i class="fa fa-check"></i><b>2.5.3</b> 严谨版</a></li>
-<li class="chapter" data-level="2.5.4" data-path="control-flow.html"><a href="control-flow.html#apply"><i class="fa fa-check"></i><b>2.5.4</b> 如何避免for循环——<code>apply()</code>家族函数</a></li>
-<li class="chapter" data-level="2.5.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.5.5</b> <code>foreach</code> package：for循环的进化版</a></li>
-<li class="chapter" data-level="2.5.6" data-path="control-flow.html"><a href="control-flow.html#purrr-packageapply"><i class="fa fa-check"></i><b>2.5.6</b> <code>purrr</code> package中的<code>apply</code>家族函数替代品和进化产物</a></li>
+<li class="chapter" data-level="2.5" data-path="matrix-array.html"><a href="matrix-array.html"><i class="fa fa-check"></i><b>2.5</b> 数组 (array)和矩阵 (matrix)简介</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="matrix-array.html"><a href="matrix-array.html#matrix-array-naming"><i class="fa fa-check"></i><b>2.5.1</b> 给matrices和arrays命名</a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.6</b> 函数</a><ul>
-<li class="chapter" data-level="2.6.1" data-path="functions.html"><a href="functions.html#functions-in-R"><i class="fa fa-check"></i><b>2.6.1</b> R中的函数</a></li>
-<li class="chapter" data-level="2.6.2" data-path="functions.html"><a href="functions.html#abbr"><i class="fa fa-check"></i><b>2.6.2</b> 调用函数</a></li>
-<li class="chapter" data-level="2.6.3" data-path="functions.html"><a href="functions.html#create-functions"><i class="fa fa-check"></i><b>2.6.3</b> 创建函数</a></li>
-<li class="chapter" data-level="2.6.4" data-path="functions.html"><a href="functions.html#about-dot-dot-dot"><i class="fa fa-check"></i><b>2.6.4</b> 关于<code>...</code></a></li>
-<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#functions-assign-global"><i class="fa fa-check"></i><b>2.6.5</b> 赋值函数外的对象</a></li>
-<li class="chapter" data-level="2.6.6" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.6</b> 测速</a></li>
+<li class="chapter" data-level="2.6" data-path="logical-operation.html"><a href="logical-operation.html"><i class="fa fa-check"></i><b>2.6</b> 逻辑</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="logical-operation.html"><a href="logical-operation.html#-logical-values"><i class="fa fa-check"></i><b>2.6.1</b> 逻辑值 {logical-values}</a></li>
+<li class="chapter" data-level="2.6.2" data-path="logical-operation.html"><a href="logical-operation.html#relational-operators"><i class="fa fa-check"></i><b>2.6.2</b> 关系运算符和简单的逻辑运算</a></li>
+<li class="chapter" data-level="2.6.3" data-path="logical-operation.html"><a href="logical-operation.html#logical-logical-operators"><i class="fa fa-check"></i><b>2.6.3</b> 逻辑运算符</a></li>
 </ul></li>
-<li class="chapter" data-level="2.7" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>2.7</b> 列表 (list)</a><ul>
-<li class="chapter" data-level="2.7.1" data-path="list.html"><a href="list.html#list-index"><i class="fa fa-check"></i><b>2.7.1</b> list的索引/取子集</a></li>
-<li class="chapter" data-level="2.7.2" data-path="list.html"><a href="list.html#list-combine-unlist"><i class="fa fa-check"></i><b>2.7.2</b> 合并与拆解</a></li>
-<li class="chapter" data-level="2.7.3" data-path="list.html"><a href="list.html#list-other-properties-operations"><i class="fa fa-check"></i><b>2.7.3</b> 其他性质和操作</a></li>
+<li class="chapter" data-level="2.7" data-path="control-flow.html"><a href="control-flow.html"><i class="fa fa-check"></i><b>2.7</b> 判断和循环（流程控制）</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="control-flow.html"><a href="control-flow.html#control-flow-for-programmers"><i class="fa fa-check"></i><b>2.7.1</b> 给有编程基础者的快速指南</a></li>
+<li class="chapter" data-level="2.7.2" data-path="control-flow.html"><a href="control-flow.html#kickstart"><i class="fa fa-check"></i><b>2.7.2</b> 无编程基础者的快速指南</a></li>
+<li class="chapter" data-level="2.7.3" data-path="control-flow.html"><a href="control-flow.html#control-flow-rigorous"><i class="fa fa-check"></i><b>2.7.3</b> 严谨版</a></li>
+<li class="chapter" data-level="2.7.4" data-path="control-flow.html"><a href="control-flow.html#apply"><i class="fa fa-check"></i><b>2.7.4</b> 如何避免for循环——<code>apply()</code>家族函数</a></li>
+<li class="chapter" data-level="2.7.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.7.5</b> <code>foreach</code> package：for循环的进化版</a></li>
+<li class="chapter" data-level="2.7.6" data-path="control-flow.html"><a href="control-flow.html#purrr-packageapply"><i class="fa fa-check"></i><b>2.7.6</b> <code>purrr</code> package中的<code>apply</code>家族函数替代品和进化产物</a></li>
 </ul></li>
-<li class="chapter" data-level="2.8" data-path="matrix-array.html"><a href="matrix-array.html"><i class="fa fa-check"></i><b>2.8</b> 数组 (array)和矩阵 (matrix)简介</a><ul>
-<li class="chapter" data-level="2.8.1" data-path="matrix-array.html"><a href="matrix-array.html#matrix-array-naming"><i class="fa fa-check"></i><b>2.8.1</b> 给matrices和arrays命名</a></li>
+<li class="chapter" data-level="2.8" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.8</b> 函数</a><ul>
+<li class="chapter" data-level="2.8.1" data-path="functions.html"><a href="functions.html#functions-in-R"><i class="fa fa-check"></i><b>2.8.1</b> R中的函数</a></li>
+<li class="chapter" data-level="2.8.2" data-path="functions.html"><a href="functions.html#abbr"><i class="fa fa-check"></i><b>2.8.2</b> 调用函数</a></li>
+<li class="chapter" data-level="2.8.3" data-path="functions.html"><a href="functions.html#create-functions"><i class="fa fa-check"></i><b>2.8.3</b> 创建函数</a></li>
+<li class="chapter" data-level="2.8.4" data-path="functions.html"><a href="functions.html#about-dot-dot-dot"><i class="fa fa-check"></i><b>2.8.4</b> 关于<code>...</code></a></li>
+<li class="chapter" data-level="2.8.5" data-path="functions.html"><a href="functions.html#functions-assign-global"><i class="fa fa-check"></i><b>2.8.5</b> 赋值函数外的对象</a></li>
+<li class="chapter" data-level="2.8.6" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.8.6</b> 测速</a></li>
 </ul></li>
 <li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a><ul>
 <li class="chapter" data-level="2.9.1" data-path="test-base.html"><a href="test-base.html#test-base-basics"><i class="fa fa-check"></i><b>2.9.1</b> 基础</a></li>
@@ -353,7 +353,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="list" class="section level2">
-<h2><span class="header-section-number">2.7</span> 列表 (list)</h2>
+<h2><span class="header-section-number">2.4</span> 列表 (list)</h2>
 <p>R中的列表是一种特殊的数据存储形式。使用<code>list()</code>函数来创建列表，比如list(1, 2, 3).</p>
 <table>
 <caption>在一个列表和向量上分别使用四个判断数据结构类型的函数得到的结果</caption>
@@ -411,11 +411,11 @@ y</code></pre>
 #&gt; [[5]]
 #&gt; function (x, ...) 
 #&gt; UseMethod(&quot;t.test&quot;)
-#&gt; &lt;bytecode: 0x7f8fe8cf0420&gt;
+#&gt; &lt;bytecode: 0x7f84346de718&gt;
 #&gt; &lt;environment: namespace:stats&gt;</code></pre>
 <p>这个列表有5个分量，其中第3个是一个有2个分量的子列表。</p>
 <div id="list-index" class="section level3">
-<h3><span class="header-section-number">2.7.1</span> list的索引/取子集</h3>
+<h3><span class="header-section-number">2.4.1</span> list的索引/取子集</h3>
 <p>使用上面的例子：</p>
 <pre class="sourceCode r"><code class="sourceCode r">y[<span class="dv">2</span>] <span class="co"># 使用单方括号，得到的是一个只有一个分量的列表</span></code></pre>
 <pre><code>#&gt; [[1]]
@@ -447,7 +447,7 @@ z <span class="co"># `[[2]]`被`$z2`所取代</span></code></pre>
 <pre><code>#&gt; [1] TRUE TRUE TRUE</code></pre>
 </div>
 <div id="list-combine-unlist" class="section level3">
-<h3><span class="header-section-number">2.7.2</span> 合并与拆解</h3>
+<h3><span class="header-section-number">2.4.2</span> 合并与拆解</h3>
 <p>通过<code>c()</code>函数来合并多个列表。</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(<span class="kw">list</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="kw">list</span>(<span class="dv">3</span>, <span class="dv">4</span>, <span class="kw">list</span>(<span class="dv">5</span>,<span class="dv">6</span>)))
 <span class="co"># 将等同于list(1, 2, 3, 4, list(5,6))</span></code></pre>
@@ -467,7 +467,7 @@ z <span class="co"># `[[2]]`被`$z2`所取代</span></code></pre>
 #&gt; 
 #&gt; [[2]][[2]]
 #&gt; [1] 4</code></pre>
-<p>通过<code>unlist()</code>函数来拆解列表中的子列表。若参数<code>recursive</code>为<code>TRUE</code>（默认值），将一直拆解至无子列表的列表，如果此最简列表的所有分量都属于五种atomic vector中的数据<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a>，此列表还会被进一步化简成向量。若<code>recursive = FALSE</code>，最“靠外”的一级列表（可能是多个）将会被拆解。</p>
+<p>通过<code>unlist()</code>函数来拆解列表中的子列表。若参数<code>recursive</code>为<code>TRUE</code>（默认值），将一直拆解至无子列表的列表，如果此最简列表的所有分量都属于五种atomic vector中的数据<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a>，此列表还会被进一步化简成向量。若<code>recursive = FALSE</code>，最“靠外”的一级列表（可能是多个）将会被拆解。</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">unlist</span>(<span class="kw">list</span>(<span class="dv">1</span>, <span class="kw">list</span>(<span class="dv">2</span>, <span class="kw">list</span>(<span class="dv">3</span>, <span class="dv">4</span>)), <span class="kw">list</span>(<span class="dv">5</span>, <span class="dv">6</span>), <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>))
 <span class="co"># 将等同于c(1, 2, 3, 4, 5, 6, 7, 8, 9) </span>
 <span class="co"># 注意被化简成了向量</span>
@@ -486,10 +486,10 @@ z <span class="co"># `[[2]]`被`$z2`所取代</span></code></pre>
 <p>因此，当<code>A</code>, <code>B</code>为列表，<code>unlist(list(A, B), recursive = FALSE)</code>等同于<code>c(A, B)</code>.</p>
 </div>
 <div id="list-other-properties-operations" class="section level3">
-<h3><span class="header-section-number">2.7.3</span> 其他性质和操作</h3>
+<h3><span class="header-section-number">2.4.3</span> 其他性质和操作</h3>
 <p>上面说到<code>unlist(list(A, B), recursive = FALSE)</code>等同于<code>c(A, B)</code>，你可能很想用<code>==</code>验证一下。很不幸，你会得到一条错误信息：</p>
 <pre><code>comparison of these types is not implemented</code></pre>
-<p>在第<a href="logical-operation.html#relational-operators">2.4.2</a>节讲过，<code>==</code>只能用于atomic vectors；对于列表（和其他对象）可以用<code>identical()</code>函数确认两者是否完全一致。</p>
+<p>在第<a href="logical-operation.html#relational-operators">2.6.2</a>节讲过，<code>==</code>只能用于atomic vectors；对于列表（和其他对象）可以用<code>identical()</code>函数确认两者是否完全一致。</p>
 <pre class="sourceCode r"><code class="sourceCode r">A &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="st">&quot;a&quot;</span>, <span class="dv">1</span>, <span class="ot">TRUE</span>); B &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dv">5</span><span class="op">+</span>8i, <span class="ot">NA</span>, 4L)
 C1 &lt;-<span class="st"> </span><span class="kw">unlist</span>(<span class="kw">list</span>(A, B), <span class="dt">recursive =</span> <span class="ot">FALSE</span>); C2 &lt;-<span class="st"> </span><span class="kw">c</span>(A, B)
 <span class="kw">identical</span>(C1, C2)</code></pre>
@@ -498,8 +498,8 @@ C1 &lt;-<span class="st"> </span><span class="kw">unlist</span>(<span class="kw"
 </div>
 <div class="footnotes">
 <hr />
-<ol start="19">
-<li id="fn19"><p>dataframe也是可以unlist成向量的，但是并不实用。（试试<code>unlist(list(data.frame(x = c(1,2), y = c(3,4)), 5, 6))</code>）<a href="list.html#fnref19" class="footnote-back">↩</a></p></li>
+<ol start="18">
+<li id="fn18"><p>dataframe也是可以unlist成向量的，但是并不实用。（试试<code>unlist(list(data.frame(x = c(1,2), y = c(3,4)), 5, 6))</code>）<a href="list.html#fnref18" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>
@@ -507,7 +507,7 @@ C1 &lt;-<span class="st"> </span><span class="kw">unlist</span>(<span class="kw"
           </div>
         </div>
       </div>
-<a href="functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="math.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="matrix-array.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

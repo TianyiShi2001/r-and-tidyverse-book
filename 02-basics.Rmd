@@ -646,7 +646,7 @@ is.na(NaN)
 
 ### 简易的统计学计算 {#statistics}
 
-本节简要解释了R中的基础统计学函数，t分布，t检验和$\chi^2$检验。统计学方法并不是本书的重点，因此可以酌情跳到[下一节](#logical-operation)。
+本节简要解释了R中的基础统计学函数，t分布，t检验和$\chi^2$检验。统计学方法并不是本书的重点，因此可以酌情跳到第\ref(logical-operation)节（基础内容：逻辑）或第\ref{list}节（进阶内容：列表）。
 
 #### 基础 {#stats-basics}
 
@@ -819,6 +819,194 @@ legend('topright',c('k=1','k=2','k=3','k=4','k=5','k=6'),
 ##### 其他
 
 R自带的检验还有`Box.test()`, `PP.test()`, `ansari.test()`, `bartlett.test()`, `wilcox.test`等共31种。查看帮助文件或利用网络资源以了解更多。
+
+## 列表 (list) {#list}
+
+R中的列表是一种特殊的数据存储形式。使用`list()`函数来创建列表，比如list(1, 2, 3).
+
+data          `is.vector()`  `is.list()`  `is.atomic()`  `is.recursive()`
+------------- -------------- ------------ -------------- ----------------
+list(1, 2, 3) `TRUE`         `TRUE`       `FALSE`        `TRUE`
+c(1 ,2 , 3)   `TRUE`         `FALSE`      `TRUE`         `FALSE`
+
+Table: 在一个列表和向量上分别使用四个判断数据结构类型的函数得到的结果
+
+尝试对lists和vectors使用`is.vector()`, `is.list()`, `is.atomic()`和`is.recursive()`函数，你会发现列表虽然也是“vector”，但我们一般说的“vector”都是指只能存储一种数据类型的atomic vector；而lists是recursive vector. 
+
+这意味着**一个list能存储多种类型的数据，且可以包含子列表**。列表中的每个*分量*可以是**任何R中的对象** (object)：除了常用的 (atomic) vector和另外一个（子）列表以外，还可以有dataframe/tibble和函数：
+
+```{r}
+y <- list(1, c("a","あ"), list(1+3i, c(FALSE, NA, TRUE)), 
+          data.frame(x = c("阿拉木图", "什切青"), y = c(2, 3)),
+          t.test)
+y
+```
+
+这个列表有5个分量，其中第3个是一个有2个分量的子列表。
+
+### list的索引/取子集 {#list-index}
+
+使用上面的例子：
+
+```{r}
+y[2] # 使用单方括号，得到的是一个只有一个分量的列表
+y[[2]] # 使用双方括号，得到的是一个向量
+y[[3]][[2]] # 得到的也是一个向量；父列表的索引在前，子列表的在后
+y[[3]] # 这个位置包含两个子列表，因此得到一个有两个分量的列表
+y[[3]][[2]][2] # 得到向量时，直接在后面用单方括号
+```
+
+列表里的分量可以有名字；被命名的元素可以通过`$`符号抓取：
+
+```{r}
+z <- list(c(1, 3), z2 = c(4, 5, 6), c("a", "b"))
+z # `[[2]]`被`$z2`所取代
+z$z2 == z[[2]] # `z[[2]]`仍然是可用的，结果和`z$z2`一样
+```
+
+### 合并与拆解 {#list-combine-unlist}
+
+通过`c()`函数来合并多个列表。
+
+```{r eval=FALSE}
+c(list(1, 2), list(3, 4, list(5,6)))
+# 将等同于list(1, 2, 3, 4, list(5,6))
+```
+
+也许你想把需要“合并”的列表作为子列表放在另一个列表里；这也很简单，在本节一开始就讲了：
+
+```{r}
+list(list(1, 2), list(3, 4))
+```
+
+通过`unlist()`函数来拆解列表中的子列表。若参数`recursive`为`TRUE`（默认值），将一直拆解至无子列表的列表，如果此最简列表的所有分量都属于五种atomic vector中的数据[^unlist-df]，此列表还会被进一步化简成向量。若`recursive = FALSE`，最“靠外”的一级列表（可能是多个）将会被拆解。
+
+[^unlist-df]: dataframe也是可以unlist成向量的，但是并不实用。（试试`unlist(list(data.frame(x = c(1,2), y = c(3,4)), 5, 6))`）
+
+```{r eval=FALSE}
+unlist(list(1, list(2, list(3, 4)), list(5, 6), 7, 8, 9))
+# 将等同于c(1, 2, 3, 4, 5, 6, 7, 8, 9) 
+# 注意被化简成了向量
+
+unlist(list(1, list(2, list("a", 4)), list(5, TRUE), 7L, 8, 9+0i))
+# 将等同于c("1", "2", "a", 4, 5, "TRUE", "7", 8, "9+0i")
+# 化简成向量时，非字符元素被强制转换成字符了
+
+unlist(list(1, list(2, list(t.test, 4)), list(5, TRUE), 7L, x, 9+0i))
+# t.test无法存储于向量中，因此最简结果为一个list：
+# list(1, 2, t.test, 4, 5, TRUE, 7L, x, 9+0i)
+
+
+unlist(list(1, list(2, 3, list(4, 5)), list(6, 7), 8, 9), recursive = FALSE)
+# 将等同于list(1, 2, 3, list(4, 5), 6, 7, 8, 9)
+```
+
+因此，当`A`, `B`为列表，`unlist(list(A, B), recursive = FALSE)`等同于`c(A, B)`.
+
+### 其他性质和操作 {#list-other-properties-operations}
+
+上面说到`unlist(list(A, B), recursive = FALSE)`等同于`c(A, B)`，你可能很想用`==`验证一下。很不幸，你会得到一条错误信息：
+
+```{}
+comparison of these types is not implemented
+```
+
+在第\@ref(relational-operators)节讲过，`==`只能用于atomic vectors；对于列表（和其他对象）可以用`identical()`函数确认两者是否完全一致。
+
+```{r}
+A <- list("a", 1, TRUE); B <- list(5+8i, NA, 4L)
+C1 <- unlist(list(A, B), recursive = FALSE); C2 <- c(A, B)
+identical(C1, C2)
+```
+
+## 数组 (array)和矩阵 (matrix)简介 {#matrix-array}
+
+Vector是一维的数据。Array是多维的数据。Matrix是二维的数据，因此matrix是array的一种特殊情况。
+
+Dataframe不是matrix（虽然都是方的）. Matrix是二维的，**仅包含数字**的**array**. Dataframe是一个二维的**list**，不同列（即列表的分量）**可以存储不同的数据类型**。
+
+本质上，矩阵和数组都是以向量的形式存储的。它们只是额外地拥有`dim`（即“dimensions”，维度）属性。我们可以用`dim()`函数从向量创建数组/矩阵：
+
+```{r}
+A <- 1:48 
+dim(A) <- c(6,8) 
+A
+```
+
+可以看到我们创建了一个二维的数组, 即一个4行6列的矩阵。
+
+```{r}
+is.array(A)
+is.matrix(A)
+```
+
+它多出来的`dim`属性可以用`attr()`（即“attributes”，属性）函数来查看：
+
+```{r}
+attributes(A)
+```
+
+注意24个数字排列的方式。第一个维度是行，所以先把4行排满，随后再使用下一个维度（列），使用第2列继续排4行，就像数字一样，（十进制中）先把个位从零数到9，再使用第二个位数（十位），以此类推。下面三维和四维的例子可能会更清晰。
+
+同时注意最左边和最上边的[1,], [,3]之类的标记。你应该猜出来了，这些是index. 假设你要抓取第五行第三列的数值：
+
+```{r}
+A[5,3]
+```
+
+或者第三行的全部数值：
+
+```{r}
+A[3,]
+```
+
+或者第四列的全部数值：
+
+```{r}
+A[,4]
+```
+
+接下来我们再看一个三维的例子（还是用1-48）：
+
+```{r}
+dim(A) <- c(2,8,3)
+A
+```
+
+它生成了三个二维的矩阵。在每个2*8的矩阵存储满16个元素后，第三个维度就要加一了。每个矩阵开头的`, , x`正是第三个维度的值。同理，我们可以生成四维的array（这是另外一种改变维度的方法。dim作为一个属性 (attribute), 可以通过`attr()`函数赋值。`attr()`还可以赋值其他的属性。）：
+
+```{r}
+attr(A, "dim") <- c(3,4,2,2)
+A
+```
+
+观察每个矩阵开头的`, , x, y`.  x是第三个维度，y是第四个维度。每个二位矩阵存满后，第三个维度（x）加一。x达到上限后，第四个维度（y）再加1。
+
+类似二维矩阵，你可以通过index任意抓取数据，比如：
+
+```{r}
+A[ ,3 , , ] #每个矩阵第3列的数据，即所有第二个维度为3的数值
+```
+
+### 给matrices和arrays命名 {#matrix-array-naming}
+
+假设我们记录了3种药物（chloroquine, artemisinin, doxycycline)
+对5种疟原虫(P. falciparum, P. malariae, P. ovale, P. vivax, P. knowlesi)的疗效，其中每个药物对每种疟原虫做6次实验。为了记录数据，我们可以做3个6*5的矩阵：（这里只是举例子，用的是随机生成的数字）
+
+```{r}
+B <- runif(90, 0, 1) #从均匀分布中取90个0到1之间的数
+dim(B) <- c(6, 5, 3) #注意顺序
+B
+```
+
+然后我们用`dimnames()`来命名：
+
+```{r}
+dimnames(B) <- list(paste("trial.", 1:6), 
+                    c('P. falciparum', 'P. malariae', 'P. ovale', 'P. vivax', 'P. knowlesi'), 
+                    c('chloroquine', 'artemisinin', 'doxycycline'))
+B
+```
 
 ## 逻辑 {#logical-operation}
 
@@ -1159,11 +1347,79 @@ l_1
 
 #### for循环 {#control-flow-rigorous-for}
 
+以下是R中for循环的伪代码：
+
+```{}
+for(i in <vector/list>) {
+  <do something> on every i
+}
+```
+
+当`<vector/list>`是一个向量时，这个for循环会对那个向量里所有的元素依次执行大括号里的命令（即`<do something>`），比如
+
+```{r}
+x <- c(1, 4, 9)
+y <- c(1, 10, 100)
+
+for(i in x){
+  print(i * y)
+}
+```
+
+`for(i in x)`中`i`的意思是`x`中的元素。`x`中有三个元素，每个元素都是一个`i`. 因此大括号里写的`print(i * y)`便是各个元素` * y`的意思。可以看到，这个for循环对于`x`里的三个元素，`1`, `4`, 和`9`**分别**执行了三次“乘以`y`”的计算，分别得到`1 10 100`, `4 40 400`, `9 90 900`的结果，与
+
+```{r}
+1 * y; 4 * y; 9 * y
+```
+
+是等效的。
+
+这个`i`可以替换成其他的名字（大括号内相应的名字也要变），比如：
+
+```{r eval=FALSE}
+for(num in x){
+  print(num * y)
+}
+```
+
+注意到一个for循环实际上返回了多个结果（这里是三个）。这在实际操作中并不是很有用。更多的实际应用没必要在这里赘述，在以后的使用中会有很多例子，现在需要做的只是能看懂它的逻辑。
+
+如果是对一个列表（list）使用for循环，每个`i`是一个分量。关于列表的内容在第\ref(list)节，为进阶内容，可酌情阅读。
+
 #### while循环 {#control-flow-rigorous-while}
 
-#### repeat循环 {#control-flow-rigorous-repeat}
+以下是R中while循环的伪代码：
+
+```{}
+while(<some condition is TRUE>) {
+ repeat doing something
+}
+```
+
+小括号里的内容必须是一个计算结果为`TRUE`或`FALSE`的表达式（和`if`/`else`语句类似）。当这个条件为`TRUE`时，大括号内的语句将会被执行，直到小括号里的判别结果为`FALSE`. 需要注意的是，不要让小括号里的运算结果一直为`TRUE`, 否则会造成无限循环。一个错误的例子是：
+
+```{}
+i <- 1
+while (i < 5) {
+  print(i * 10)
+}
+```
+
+`i`永远小于5，所以是一个无限循环。我们只需每次执行大括号里的计算时给`i`增加一定的值，即可解决这个问题：
+
+```{r}
+i <- 1
+while (i < 5) {
+  print(i * 10)
+  i <- i + 1
+}
+```
+
+当`i`被加到5时候，`i`不再小于5，因此大括号内的语句不再执行。
 
 #### `break`和`next` {#control-flow-rigorous-break-next}
+
+#### repeat循环 {#control-flow-rigorous-repeat}
 
 ### 如何避免for循环——`apply()`家族函数 {#apply}
 
@@ -1184,7 +1440,7 @@ system.time(
 
 我的i5处理器(i5-8259U CPU @ 2.30GHz)花了39秒左右才能算出来，然而看起来计算量并不大：
 $$x = \left(1\times1\times1, 1\times1\times2\ldots, 40\times50\times59, 40\times50\times60\right)$$
-一共有$40\times50\times60 = 120000$次计算. 一个原因是，无论你的CPU有多少核心，R默认只会使用其中的一个进行计算。在第\@ref(parallel)节中介绍了开挂使用多核的方法。但是它治标不治本，解决for循环缓慢的终极方案是避免使用for循环，而使用向量化的方法进行计算 (vectorized computation)。在第\@ref(vectorization-basics)我介绍了简单的（二元）向量化计算。除了二元运算以外，很多时候，复杂的for loop也能用向量化计算实现。我们需要用到`apply()`家族的一系列函数：`apply()`, `sapply()`, `lapply()`, `mapply()`, `tapply()`, `vapply()`, `rapply()`, `eapply()`；此外，像`Map()`, `rep()`, `seq()`等函数也会执行向量化的计算。
+一共有$40\times50\times60 = 120000$次计算. 一个原因是，无论你的CPU有多少核心，R默认只会使用其中的一个进行计算。在第\@ref(parallel)节中介绍了开挂使用多核的方法。但是它治标不治本，解决for循环缓慢的终极方案是避免使用for循环，而使用向量化的方法进行计算 (vectorized computation)。在第\@ref(vectorization-basics)我介绍了简单的（二元）向量化计算。除了二元运算以外，很多时候，复杂的for循环也能用向量化计算实现。我们需要用到`apply()`家族的一系列函数：`apply()`, `sapply()`, `lapply()`, `mapply()`, `tapply()`, `vapply()`, `rapply()`, `eapply()`；此外，像`Map()`, `rep()`, `seq()`等函数也会执行向量化的计算。
 
 在学习它们的用法之前，先来看一个直观的数据：
 
@@ -1769,195 +2025,6 @@ system.time({
   1 + 1
   2 + 1
 })
-```
-
-## 列表 (list) {#list}
-
-R中的列表是一种特殊的数据存储形式。使用`list()`函数来创建列表，比如list(1, 2, 3).
-
-data          `is.vector()`  `is.list()`  `is.atomic()`  `is.recursive()`
-------------- -------------- ------------ -------------- ----------------
-list(1, 2, 3) `TRUE`         `TRUE`       `FALSE`        `TRUE`
-c(1 ,2 , 3)   `TRUE`         `FALSE`      `TRUE`         `FALSE`
-
-Table: 在一个列表和向量上分别使用四个判断数据结构类型的函数得到的结果
-
-尝试对lists和vectors使用`is.vector()`, `is.list()`, `is.atomic()`和`is.recursive()`函数，你会发现列表虽然也是“vector”，但我们一般说的“vector”都是指只能存储一种数据类型的atomic vector；而lists是recursive vector. 
-
-这意味着**一个list能存储多种类型的数据，且可以包含子列表**。列表中的每个*分量*可以是**任何R中的对象** (object)：除了常用的 (atomic) vector和另外一个（子）列表以外，还可以有dataframe/tibble和函数：
-
-```{r}
-y <- list(1, c("a","あ"), list(1+3i, c(FALSE, NA, TRUE)), 
-          data.frame(x = c("阿拉木图", "什切青"), y = c(2, 3)),
-          t.test)
-y
-```
-
-这个列表有5个分量，其中第3个是一个有2个分量的子列表。
-
-### list的索引/取子集 {#list-index}
-
-使用上面的例子：
-
-```{r}
-y[2] # 使用单方括号，得到的是一个只有一个分量的列表
-y[[2]] # 使用双方括号，得到的是一个向量
-y[[3]][[2]] # 得到的也是一个向量；父列表的索引在前，子列表的在后
-y[[3]] # 这个位置包含两个子列表，因此得到一个有两个分量的列表
-y[[3]][[2]][2] # 得到向量时，直接在后面用单方括号
-```
-
-列表里的分量可以有名字；被命名的元素可以通过`$`符号抓取：
-
-```{r}
-z <- list(c(1, 3), z2 = c(4, 5, 6), c("a", "b"))
-z # `[[2]]`被`$z2`所取代
-z$z2 == z[[2]] # `z[[2]]`仍然是可用的，结果和`z$z2`一样
-```
-
-### 合并与拆解 {#list-combine-unlist}
-
-通过`c()`函数来合并多个列表。
-
-```{r eval=FALSE}
-c(list(1, 2), list(3, 4, list(5,6)))
-# 将等同于list(1, 2, 3, 4, list(5,6))
-```
-
-也许你想把需要“合并”的列表作为子列表放在另一个列表里；这也很简单，在本节一开始就讲了：
-
-```{r}
-list(list(1, 2), list(3, 4))
-```
-
-通过`unlist()`函数来拆解列表中的子列表。若参数`recursive`为`TRUE`（默认值），将一直拆解至无子列表的列表，如果此最简列表的所有分量都属于五种atomic vector中的数据[^unlist-df]，此列表还会被进一步化简成向量。若`recursive = FALSE`，最“靠外”的一级列表（可能是多个）将会被拆解。
-
-[^unlist-df]: dataframe也是可以unlist成向量的，但是并不实用。（试试`unlist(list(data.frame(x = c(1,2), y = c(3,4)), 5, 6))`）
-
-```{r eval=FALSE}
-unlist(list(1, list(2, list(3, 4)), list(5, 6), 7, 8, 9))
-# 将等同于c(1, 2, 3, 4, 5, 6, 7, 8, 9) 
-# 注意被化简成了向量
-
-unlist(list(1, list(2, list("a", 4)), list(5, TRUE), 7L, 8, 9+0i))
-# 将等同于c("1", "2", "a", 4, 5, "TRUE", "7", 8, "9+0i")
-# 化简成向量时，非字符元素被强制转换成字符了
-
-unlist(list(1, list(2, list(t.test, 4)), list(5, TRUE), 7L, x, 9+0i))
-# t.test无法存储于向量中，因此最简结果为一个list：
-# list(1, 2, t.test, 4, 5, TRUE, 7L, x, 9+0i)
-
-
-unlist(list(1, list(2, 3, list(4, 5)), list(6, 7), 8, 9), recursive = FALSE)
-# 将等同于list(1, 2, 3, list(4, 5), 6, 7, 8, 9)
-```
-
-因此，当`A`, `B`为列表，`unlist(list(A, B), recursive = FALSE)`等同于`c(A, B)`.
-
-### 其他性质和操作 {#list-other-properties-operations}
-
-上面说到`unlist(list(A, B), recursive = FALSE)`等同于`c(A, B)`，你可能很想用`==`验证一下。很不幸，你会得到一条错误信息：
-
-```{}
-comparison of these types is not implemented
-```
-
-在第\@ref(relational-operators)节讲过，`==`只能用于atomic vectors；对于列表（和其他对象）可以用`identical()`函数确认两者是否完全一致。
-
-```{r}
-A <- list("a", 1, TRUE); B <- list(5+8i, NA, 4L)
-C1 <- unlist(list(A, B), recursive = FALSE); C2 <- c(A, B)
-identical(C1, C2)
-```
-
-
-## 数组 (array)和矩阵 (matrix)简介 {#matrix-array}
-
-Vector是一维的数据。Array是多维的数据。Matrix是二维的数据，因此matrix是array的一种特殊情况。
-
-Dataframe不是matrix（虽然都是方的）. Matrix是二维的，**仅包含数字**的**array**. Dataframe是一个二维的**list**，不同列（即列表的分量）**可以存储不同的数据类型**。
-
-本质上，矩阵和数组都是以向量的形式存储的。它们只是额外地拥有`dim`（即“dimensions”，维度）属性。我们可以用`dim()`函数从向量创建数组/矩阵：
-
-```{r}
-A <- 1:48 
-dim(A) <- c(6,8) 
-A
-```
-
-可以看到我们创建了一个二维的数组, 即一个4行6列的矩阵。
-
-```{r}
-is.array(A)
-is.matrix(A)
-```
-
-它多出来的`dim`属性可以用`attr()`（即“attributes”，属性）函数来查看：
-
-```{r}
-attributes(A)
-```
-
-注意24个数字排列的方式。第一个维度是行，所以先把4行排满，随后再使用下一个维度（列），使用第2列继续排4行，就像数字一样，（十进制中）先把个位从零数到9，再使用第二个位数（十位），以此类推。下面三维和四维的例子可能会更清晰。
-
-同时注意最左边和最上边的[1,], [,3]之类的标记。你应该猜出来了，这些是index. 假设你要抓取第五行第三列的数值：
-
-```{r}
-A[5,3]
-```
-
-或者第三行的全部数值：
-
-```{r}
-A[3,]
-```
-
-或者第四列的全部数值：
-
-```{r}
-A[,4]
-```
-
-接下来我们再看一个三维的例子（还是用1-48）：
-
-```{r}
-dim(A) <- c(2,8,3)
-A
-```
-
-它生成了三个二维的矩阵。在每个2*8的矩阵存储满16个元素后，第三个维度就要加一了。每个矩阵开头的`, , x`正是第三个维度的值。同理，我们可以生成四维的array（这是另外一种改变维度的方法。dim作为一个属性 (attribute), 可以通过`attr()`函数赋值。`attr()`还可以赋值其他的属性。）：
-
-```{r}
-attr(A, "dim") <- c(3,4,2,2)
-A
-```
-
-观察每个矩阵开头的`, , x, y`.  x是第三个维度，y是第四个维度。每个二位矩阵存满后，第三个维度（x）加一。x达到上限后，第四个维度（y）再加1。
-
-类似二维矩阵，你可以通过index任意抓取数据，比如：
-
-```{r}
-A[ ,3 , , ] #每个矩阵第3列的数据，即所有第二个维度为3的数值
-```
-
-### 给matrices和arrays命名 {#matrix-array-naming}
-
-假设我们记录了3种药物（chloroquine, artemisinin, doxycycline)
-对5种疟原虫(P. falciparum, P. malariae, P. ovale, P. vivax, P. knowlesi)的疗效，其中每个药物对每种疟原虫做6次实验。为了记录数据，我们可以做3个6*5的矩阵：（这里只是举例子，用的是随机生成的数字）
-
-```{r}
-B <- runif(90, 0, 1) #从均匀分布中取90个0到1之间的数
-dim(B) <- c(6, 5, 3) #注意顺序
-B
-```
-
-然后我们用`dimnames()`来命名：
-
-```{r}
-dimnames(B) <- list(paste("trial.", 1:6), 
-                    c('P. falciparum', 'P. malariae', 'P. ovale', 'P. vivax', 'P. knowlesi'), 
-                    c('chloroquine', 'artemisinin', 'doxycycline'))
-B
 ```
 
 ## 小测 {#test-base}

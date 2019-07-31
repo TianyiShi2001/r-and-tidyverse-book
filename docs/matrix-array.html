@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.8 数组 (array)和矩阵 (matrix)简介 | R与tidyverse——数据分析入门</title>
+  <title>2.5 数组 (array)和矩阵 (matrix)简介 | R与tidyverse——数据分析入门</title>
   <meta name="description" content="这是一本R与tidyverse的入门教程" />
   <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.8 数组 (array)和矩阵 (matrix)简介 | R与tidyverse——数据分析入门" />
+  <meta property="og:title" content="2.5 数组 (array)和矩阵 (matrix)简介 | R与tidyverse——数据分析入门" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="TianyiShi2001/r-and-tidyverse-book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.8 数组 (array)和矩阵 (matrix)简介 | R与tidyverse——数据分析入门" />
+  <meta name="twitter:title" content="2.5 数组 (array)和矩阵 (matrix)简介 | R与tidyverse——数据分析入门" />
   
   <meta name="twitter:description" content="这是一本R与tidyverse的入门教程" />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-07-31" />
+<meta name="date" content="2019-08-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="list.html">
-<link rel="next" href="test-base.html">
+<link rel="next" href="logical-operation.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -225,34 +225,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3.2" data-path="math.html"><a href="math.html#arithmetic"><i class="fa fa-check"></i><b>2.3.2</b> 运算</a></li>
 <li class="chapter" data-level="2.3.3" data-path="math.html"><a href="math.html#statistics"><i class="fa fa-check"></i><b>2.3.3</b> 简易的统计学计算</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="logical-operation.html"><a href="logical-operation.html"><i class="fa fa-check"></i><b>2.4</b> 逻辑</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="logical-operation.html"><a href="logical-operation.html#-logical-values"><i class="fa fa-check"></i><b>2.4.1</b> 逻辑值 {logical-values}</a></li>
-<li class="chapter" data-level="2.4.2" data-path="logical-operation.html"><a href="logical-operation.html#relational-operators"><i class="fa fa-check"></i><b>2.4.2</b> 关系运算符和简单的逻辑运算</a></li>
-<li class="chapter" data-level="2.4.3" data-path="logical-operation.html"><a href="logical-operation.html#logical-logical-operators"><i class="fa fa-check"></i><b>2.4.3</b> 逻辑运算符</a></li>
+<li class="chapter" data-level="2.4" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>2.4</b> 列表 (list)</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="list.html"><a href="list.html#list-index"><i class="fa fa-check"></i><b>2.4.1</b> list的索引/取子集</a></li>
+<li class="chapter" data-level="2.4.2" data-path="list.html"><a href="list.html#list-combine-unlist"><i class="fa fa-check"></i><b>2.4.2</b> 合并与拆解</a></li>
+<li class="chapter" data-level="2.4.3" data-path="list.html"><a href="list.html#list-other-properties-operations"><i class="fa fa-check"></i><b>2.4.3</b> 其他性质和操作</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="control-flow.html"><a href="control-flow.html"><i class="fa fa-check"></i><b>2.5</b> 判断和循环（流程控制）</a><ul>
-<li class="chapter" data-level="2.5.1" data-path="control-flow.html"><a href="control-flow.html#control-flow-for-programmers"><i class="fa fa-check"></i><b>2.5.1</b> 给有编程基础者的快速指南</a></li>
-<li class="chapter" data-level="2.5.2" data-path="control-flow.html"><a href="control-flow.html#kickstart"><i class="fa fa-check"></i><b>2.5.2</b> 无编程基础者的快速指南</a></li>
-<li class="chapter" data-level="2.5.3" data-path="control-flow.html"><a href="control-flow.html#control-flow-rigorous"><i class="fa fa-check"></i><b>2.5.3</b> 严谨版</a></li>
-<li class="chapter" data-level="2.5.4" data-path="control-flow.html"><a href="control-flow.html#apply"><i class="fa fa-check"></i><b>2.5.4</b> 如何避免for循环——<code>apply()</code>家族函数</a></li>
-<li class="chapter" data-level="2.5.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.5.5</b> <code>foreach</code> package：for循环的进化版</a></li>
-<li class="chapter" data-level="2.5.6" data-path="control-flow.html"><a href="control-flow.html#purrr-packageapply"><i class="fa fa-check"></i><b>2.5.6</b> <code>purrr</code> package中的<code>apply</code>家族函数替代品和进化产物</a></li>
+<li class="chapter" data-level="2.5" data-path="matrix-array.html"><a href="matrix-array.html"><i class="fa fa-check"></i><b>2.5</b> 数组 (array)和矩阵 (matrix)简介</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="matrix-array.html"><a href="matrix-array.html#matrix-array-naming"><i class="fa fa-check"></i><b>2.5.1</b> 给matrices和arrays命名</a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.6</b> 函数</a><ul>
-<li class="chapter" data-level="2.6.1" data-path="functions.html"><a href="functions.html#functions-in-R"><i class="fa fa-check"></i><b>2.6.1</b> R中的函数</a></li>
-<li class="chapter" data-level="2.6.2" data-path="functions.html"><a href="functions.html#abbr"><i class="fa fa-check"></i><b>2.6.2</b> 调用函数</a></li>
-<li class="chapter" data-level="2.6.3" data-path="functions.html"><a href="functions.html#create-functions"><i class="fa fa-check"></i><b>2.6.3</b> 创建函数</a></li>
-<li class="chapter" data-level="2.6.4" data-path="functions.html"><a href="functions.html#about-dot-dot-dot"><i class="fa fa-check"></i><b>2.6.4</b> 关于<code>...</code></a></li>
-<li class="chapter" data-level="2.6.5" data-path="functions.html"><a href="functions.html#functions-assign-global"><i class="fa fa-check"></i><b>2.6.5</b> 赋值函数外的对象</a></li>
-<li class="chapter" data-level="2.6.6" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.6.6</b> 测速</a></li>
+<li class="chapter" data-level="2.6" data-path="logical-operation.html"><a href="logical-operation.html"><i class="fa fa-check"></i><b>2.6</b> 逻辑</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="logical-operation.html"><a href="logical-operation.html#-logical-values"><i class="fa fa-check"></i><b>2.6.1</b> 逻辑值 {logical-values}</a></li>
+<li class="chapter" data-level="2.6.2" data-path="logical-operation.html"><a href="logical-operation.html#relational-operators"><i class="fa fa-check"></i><b>2.6.2</b> 关系运算符和简单的逻辑运算</a></li>
+<li class="chapter" data-level="2.6.3" data-path="logical-operation.html"><a href="logical-operation.html#logical-logical-operators"><i class="fa fa-check"></i><b>2.6.3</b> 逻辑运算符</a></li>
 </ul></li>
-<li class="chapter" data-level="2.7" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>2.7</b> 列表 (list)</a><ul>
-<li class="chapter" data-level="2.7.1" data-path="list.html"><a href="list.html#list-index"><i class="fa fa-check"></i><b>2.7.1</b> list的索引/取子集</a></li>
-<li class="chapter" data-level="2.7.2" data-path="list.html"><a href="list.html#list-combine-unlist"><i class="fa fa-check"></i><b>2.7.2</b> 合并与拆解</a></li>
-<li class="chapter" data-level="2.7.3" data-path="list.html"><a href="list.html#list-other-properties-operations"><i class="fa fa-check"></i><b>2.7.3</b> 其他性质和操作</a></li>
+<li class="chapter" data-level="2.7" data-path="control-flow.html"><a href="control-flow.html"><i class="fa fa-check"></i><b>2.7</b> 判断和循环（流程控制）</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="control-flow.html"><a href="control-flow.html#control-flow-for-programmers"><i class="fa fa-check"></i><b>2.7.1</b> 给有编程基础者的快速指南</a></li>
+<li class="chapter" data-level="2.7.2" data-path="control-flow.html"><a href="control-flow.html#kickstart"><i class="fa fa-check"></i><b>2.7.2</b> 无编程基础者的快速指南</a></li>
+<li class="chapter" data-level="2.7.3" data-path="control-flow.html"><a href="control-flow.html#control-flow-rigorous"><i class="fa fa-check"></i><b>2.7.3</b> 严谨版</a></li>
+<li class="chapter" data-level="2.7.4" data-path="control-flow.html"><a href="control-flow.html#apply"><i class="fa fa-check"></i><b>2.7.4</b> 如何避免for循环——<code>apply()</code>家族函数</a></li>
+<li class="chapter" data-level="2.7.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.7.5</b> <code>foreach</code> package：for循环的进化版</a></li>
+<li class="chapter" data-level="2.7.6" data-path="control-flow.html"><a href="control-flow.html#purrr-packageapply"><i class="fa fa-check"></i><b>2.7.6</b> <code>purrr</code> package中的<code>apply</code>家族函数替代品和进化产物</a></li>
 </ul></li>
-<li class="chapter" data-level="2.8" data-path="matrix-array.html"><a href="matrix-array.html"><i class="fa fa-check"></i><b>2.8</b> 数组 (array)和矩阵 (matrix)简介</a><ul>
-<li class="chapter" data-level="2.8.1" data-path="matrix-array.html"><a href="matrix-array.html#matrix-array-naming"><i class="fa fa-check"></i><b>2.8.1</b> 给matrices和arrays命名</a></li>
+<li class="chapter" data-level="2.8" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.8</b> 函数</a><ul>
+<li class="chapter" data-level="2.8.1" data-path="functions.html"><a href="functions.html#functions-in-R"><i class="fa fa-check"></i><b>2.8.1</b> R中的函数</a></li>
+<li class="chapter" data-level="2.8.2" data-path="functions.html"><a href="functions.html#abbr"><i class="fa fa-check"></i><b>2.8.2</b> 调用函数</a></li>
+<li class="chapter" data-level="2.8.3" data-path="functions.html"><a href="functions.html#create-functions"><i class="fa fa-check"></i><b>2.8.3</b> 创建函数</a></li>
+<li class="chapter" data-level="2.8.4" data-path="functions.html"><a href="functions.html#about-dot-dot-dot"><i class="fa fa-check"></i><b>2.8.4</b> 关于<code>...</code></a></li>
+<li class="chapter" data-level="2.8.5" data-path="functions.html"><a href="functions.html#functions-assign-global"><i class="fa fa-check"></i><b>2.8.5</b> 赋值函数外的对象</a></li>
+<li class="chapter" data-level="2.8.6" data-path="functions.html"><a href="functions.html#system-time"><i class="fa fa-check"></i><b>2.8.6</b> 测速</a></li>
 </ul></li>
 <li class="chapter" data-level="2.9" data-path="test-base.html"><a href="test-base.html"><i class="fa fa-check"></i><b>2.9</b> 小测</a><ul>
 <li class="chapter" data-level="2.9.1" data-path="test-base.html"><a href="test-base.html#test-base-basics"><i class="fa fa-check"></i><b>2.9.1</b> 基础</a></li>
@@ -353,7 +353,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="matrix-array" class="section level2">
-<h2><span class="header-section-number">2.8</span> 数组 (array)和矩阵 (matrix)简介</h2>
+<h2><span class="header-section-number">2.5</span> 数组 (array)和矩阵 (matrix)简介</h2>
 <p>Vector是一维的数据。Array是多维的数据。Matrix是二维的数据，因此matrix是array的一种特殊情况。</p>
 <p>Dataframe不是matrix（虽然都是方的）. Matrix是二维的，<strong>仅包含数字</strong>的<strong>array</strong>. Dataframe是一个二维的<strong>list</strong>，不同列（即列表的分量）<strong>可以存储不同的数据类型</strong>。</p>
 <p>本质上，矩阵和数组都是以向量的形式存储的。它们只是额外地拥有<code>dim</code>（即“dimensions”，维度）属性。我们可以用<code>dim()</code>函数从向量创建数组/矩阵：</p>
@@ -453,7 +453,7 @@ A</code></pre>
 #&gt; [2,]   32   44
 #&gt; [3,]   33   45</code></pre>
 <div id="matrix-array-naming" class="section level3">
-<h3><span class="header-section-number">2.8.1</span> 给matrices和arrays命名</h3>
+<h3><span class="header-section-number">2.5.1</span> 给matrices和arrays命名</h3>
 <p>假设我们记录了3种药物（chloroquine, artemisinin, doxycycline)
 对5种疟原虫(P. falciparum, P. malariae, P. ovale, P. vivax, P. knowlesi)的疗效，其中每个药物对每种疟原虫做6次实验。为了记录数据，我们可以做3个6*5的矩阵：（这里只是举例子，用的是随机生成的数字）</p>
 <pre class="sourceCode r"><code class="sourceCode r">B &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">90</span>, <span class="dv">0</span>, <span class="dv">1</span>) <span class="co">#从均匀分布中取90个0到1之间的数</span>
@@ -461,33 +461,33 @@ A</code></pre>
 B</code></pre>
 <pre><code>#&gt; , , 1
 #&gt; 
-#&gt;        [,1]  [,2]  [,3]  [,4]  [,5]
-#&gt; [1,] 0.0745 0.037 0.307 0.973 0.807
-#&gt; [2,] 0.6947 0.923 0.815 0.521 0.706
-#&gt; [3,] 0.8143 0.267 0.398 0.739 0.449
-#&gt; [4,] 0.5012 0.920 0.667 0.474 0.896
-#&gt; [5,] 0.5621 0.427 0.198 0.271 0.717
-#&gt; [6,] 0.7429 0.393 0.805 0.793 0.069
+#&gt;        [,1]  [,2]  [,3]  [,4]   [,5]
+#&gt; [1,] 0.3798 0.686 0.621 0.299 0.8967
+#&gt; [2,] 0.8434 0.773 0.765 0.653 0.9751
+#&gt; [3,] 0.0165 0.787 0.882 0.788 0.7943
+#&gt; [4,] 0.7875 0.371 0.394 0.153 0.0962
+#&gt; [5,] 0.7512 0.406 0.927 0.501 0.4919
+#&gt; [6,] 0.9668 0.662 0.488 0.568 0.0375
 #&gt; 
 #&gt; , , 2
 #&gt; 
-#&gt;       [,1]   [,2]   [,3]   [,4]    [,5]
-#&gt; [1,] 0.260 0.9125 0.2095 0.2476 0.91970
-#&gt; [2,] 0.550 0.9864 0.6791 0.0696 0.43929
-#&gt; [3,] 0.908 0.0643 0.9226 0.1422 0.87797
-#&gt; [4,] 0.893 0.8497 0.0858 0.9645 0.00813
-#&gt; [5,] 0.181 0.3692 0.5784 0.5575 0.56831
-#&gt; [6,] 0.261 0.6800 0.0103 0.2126 0.46323
+#&gt;        [,1]  [,2]   [,3]  [,4]  [,5]
+#&gt; [1,] 0.4727 0.817 0.6992 0.634 0.736
+#&gt; [2,] 0.6262 0.856 0.4346 0.824 0.445
+#&gt; [3,] 0.5113 0.708 0.6202 0.747 0.230
+#&gt; [4,] 0.6922 0.898 0.5718 0.823 0.628
+#&gt; [5,] 0.1419 0.473 0.0593 0.731 0.330
+#&gt; [6,] 0.0484 0.269 0.4750 0.257 0.922
 #&gt; 
 #&gt; , , 3
 #&gt; 
-#&gt;       [,1]  [,2]   [,3]  [,4]   [,5]
-#&gt; [1,] 0.587 0.748 0.9722 0.512 0.9159
-#&gt; [2,] 0.514 0.521 0.6365 0.316 0.9899
-#&gt; [3,] 0.532 0.862 0.0901 0.653 0.6901
-#&gt; [4,] 0.982 0.282 0.7048 0.496 0.0472
-#&gt; [5,] 0.350 0.468 0.5280 0.929 0.3457
-#&gt; [6,] 0.118 0.403 0.4688 0.359 0.3701</code></pre>
+#&gt;       [,1]  [,2]  [,3]   [,4]  [,5]
+#&gt; [1,] 0.890 0.118 0.424 0.0476 0.538
+#&gt; [2,] 0.147 0.157 0.914 0.2195 0.258
+#&gt; [3,] 0.341 0.396 0.750 0.5379 0.632
+#&gt; [4,] 0.116 0.960 0.819 0.3844 0.630
+#&gt; [5,] 0.260 0.782 0.571 0.7566 0.434
+#&gt; [6,] 0.495 0.826 0.575 0.5021 0.913</code></pre>
 <p>然后我们用<code>dimnames()</code>来命名：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dimnames</span>(B) &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="kw">paste</span>(<span class="st">&quot;trial.&quot;</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">6</span>), 
                     <span class="kw">c</span>(<span class="st">&#39;P. falciparum&#39;</span>, <span class="st">&#39;P. malariae&#39;</span>, <span class="st">&#39;P. ovale&#39;</span>, <span class="st">&#39;P. vivax&#39;</span>, <span class="st">&#39;P. knowlesi&#39;</span>), 
@@ -496,32 +496,32 @@ B</code></pre>
 <pre><code>#&gt; , , chloroquine
 #&gt; 
 #&gt;          P. falciparum P. malariae P. ovale P. vivax P. knowlesi
-#&gt; trial. 1        0.0745       0.037    0.307    0.973       0.807
-#&gt; trial. 2        0.6947       0.923    0.815    0.521       0.706
-#&gt; trial. 3        0.8143       0.267    0.398    0.739       0.449
-#&gt; trial. 4        0.5012       0.920    0.667    0.474       0.896
-#&gt; trial. 5        0.5621       0.427    0.198    0.271       0.717
-#&gt; trial. 6        0.7429       0.393    0.805    0.793       0.069
+#&gt; trial. 1        0.3798       0.686    0.621    0.299      0.8967
+#&gt; trial. 2        0.8434       0.773    0.765    0.653      0.9751
+#&gt; trial. 3        0.0165       0.787    0.882    0.788      0.7943
+#&gt; trial. 4        0.7875       0.371    0.394    0.153      0.0962
+#&gt; trial. 5        0.7512       0.406    0.927    0.501      0.4919
+#&gt; trial. 6        0.9668       0.662    0.488    0.568      0.0375
 #&gt; 
 #&gt; , , artemisinin
 #&gt; 
 #&gt;          P. falciparum P. malariae P. ovale P. vivax P. knowlesi
-#&gt; trial. 1         0.260      0.9125   0.2095   0.2476     0.91970
-#&gt; trial. 2         0.550      0.9864   0.6791   0.0696     0.43929
-#&gt; trial. 3         0.908      0.0643   0.9226   0.1422     0.87797
-#&gt; trial. 4         0.893      0.8497   0.0858   0.9645     0.00813
-#&gt; trial. 5         0.181      0.3692   0.5784   0.5575     0.56831
-#&gt; trial. 6         0.261      0.6800   0.0103   0.2126     0.46323
+#&gt; trial. 1        0.4727       0.817   0.6992    0.634       0.736
+#&gt; trial. 2        0.6262       0.856   0.4346    0.824       0.445
+#&gt; trial. 3        0.5113       0.708   0.6202    0.747       0.230
+#&gt; trial. 4        0.6922       0.898   0.5718    0.823       0.628
+#&gt; trial. 5        0.1419       0.473   0.0593    0.731       0.330
+#&gt; trial. 6        0.0484       0.269   0.4750    0.257       0.922
 #&gt; 
 #&gt; , , doxycycline
 #&gt; 
 #&gt;          P. falciparum P. malariae P. ovale P. vivax P. knowlesi
-#&gt; trial. 1         0.587       0.748   0.9722    0.512      0.9159
-#&gt; trial. 2         0.514       0.521   0.6365    0.316      0.9899
-#&gt; trial. 3         0.532       0.862   0.0901    0.653      0.6901
-#&gt; trial. 4         0.982       0.282   0.7048    0.496      0.0472
-#&gt; trial. 5         0.350       0.468   0.5280    0.929      0.3457
-#&gt; trial. 6         0.118       0.403   0.4688    0.359      0.3701</code></pre>
+#&gt; trial. 1         0.890       0.118    0.424   0.0476       0.538
+#&gt; trial. 2         0.147       0.157    0.914   0.2195       0.258
+#&gt; trial. 3         0.341       0.396    0.750   0.5379       0.632
+#&gt; trial. 4         0.116       0.960    0.819   0.3844       0.630
+#&gt; trial. 5         0.260       0.782    0.571   0.7566       0.434
+#&gt; trial. 6         0.495       0.826    0.575   0.5021       0.913</code></pre>
 </div>
 </div>
             </section>
@@ -530,7 +530,7 @@ B</code></pre>
         </div>
       </div>
 <a href="list.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="test-base.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="logical-operation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
