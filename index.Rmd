@@ -32,7 +32,7 @@ description: "这是一本R与tidyverse的入门教程"
 # 欢迎 {-#welcome}
 
 ### 简介 {-#intro}
-本书为R和tidyverse的入门向教程。教学视频在b站（还没开播，从6月中旬一直跳票到8月初）。附加资源在[R-Tutorial-Resources Github仓库](https://github.com/TianyiShi2001/R-Tutorial-Resorces)。
+本书为R和tidyverse的入门向教程。教学视频在b站（还没开播，从6月中旬一直跳票至今）。答案在[r-and-tidyverse-book-ans Github仓库](https://github.com/TianyiShi2001/r-and-tidyverse-book-ans)。
 
 本书有Gitbook版本 (https://tianyishi2001.github.io/r-and-tidyverse-book/ )和[通过XeLaTeX排版的PDF版本](https://tianyishi2001.github.io/r-and-tidyverse-book/R与tidyverse——数据分析入门.pdf)。
 
@@ -63,7 +63,7 @@ Hadley Wickham写R for Data Science的时候把绘图放在了第一章，随后
 
 1. **详细的统计学方法。**我本身数学很差，教这个是要谢罪的。
 2. **Python (NumPy/SciPy)。**在数据挖掘/数据分析领域，Python和R一样是我们的好伙伴，而且它们经常被联合使用。但是本书作为R的入门教程，应当专注于R。
-3. **SAS, SPSS, STATA等软件**。它们是资本主义的邪恶产物。
+3. **SAS, SPSS, STATA等软件**（包括它们与R的协同使用）。
 
 ### 版权页 {-#colophon}
 
