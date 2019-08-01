@@ -244,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.7.3" data-path="control-flow.html"><a href="control-flow.html#control-flow-rigorous"><i class="fa fa-check"></i><b>2.7.3</b> 严谨版</a></li>
 <li class="chapter" data-level="2.7.4" data-path="control-flow.html"><a href="control-flow.html#apply"><i class="fa fa-check"></i><b>2.7.4</b> 如何避免for循环——<code>apply()</code>家族函数</a></li>
 <li class="chapter" data-level="2.7.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.7.5</b> <code>foreach</code> package：for循环的进化版</a></li>
-<li class="chapter" data-level="2.7.6" data-path="control-flow.html"><a href="control-flow.html#purrr-packageapply"><i class="fa fa-check"></i><b>2.7.6</b> <code>purrr</code> package中的<code>apply</code>家族函数替代品和进化产物</a></li>
+<li class="chapter" data-level="2.7.6" data-path="control-flow.html"><a href="control-flow.html#apply-purrr"><i class="fa fa-check"></i><b>2.7.6</b> <code>purrr</code> package中的<code>apply</code>家族函数替代品和进化产物</a></li>
 </ul></li>
 <li class="chapter" data-level="2.8" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.8</b> 函数</a><ul>
 <li class="chapter" data-level="2.8.1" data-path="functions.html"><a href="functions.html#functions-in-R"><i class="fa fa-check"></i><b>2.8.1</b> R中的函数</a></li>
@@ -399,8 +399,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="test-base-advanced" class="section level3">
 <h3><span class="header-section-number">2.9.2</span> 进阶</h3>
 <ol style="list-style-type: decimal">
-<li><p><code>seq(0, 20, 5)</code>, <code>seq(by = 5, 0, 20</code>, 和<code>seq(by = 5, 0, y = 30, 20)</code>的结果分别是什么？为什么？（你可能需要参考第(abbr)节和第(about-dot-dot-dot)节）</p></li>
-<li><p>分别用<code>sapply()</code>, <code>rep()</code>, 和<code>rapply()</code>创建第(apply)节提到的数列：<span class="math display">\[x = \left(1\times1\times1, 1\times1\times2\ldots, 40\times50\times59, 40\times50\times60\right)\]</span></p></li>
+<li><p><code>seq(0, 20, 5)</code>, <code>seq(by = 5, 0, 20</code>, 和<code>seq(by = 5, 0, y = 30, 20)</code>的结果分别是什么？为什么？（你可能需要参考第<a href="functions.html#abbr">2.8.2</a>节和第<a href="functions.html#about-dot-dot-dot">2.8.4</a>节）</p></li>
+<li><p>分别用<code>sapply()</code>, <code>rep()</code>, 和<code>rapply()</code>创建第<a href="control-flow.html#apply">2.7.4</a>节提到的数列：<span class="math display">\[x = \left(1\times1\times1, 1\times1\times2\ldots, 40\times50\times59, 40\times50\times60\right)\]</span></p></li>
 <li><p><strong>质数表。</strong>创建一个<code>prime.list()</code>函数，使<code>prime.list(i)</code>得到<span class="math inline">\((2, 3, 5, 7, 11, ... n)\)</span>, 其中<code>i</code>为大于或等于<code>3</code>的整数，<span class="math inline">\(n\)</span>为小于<code>i</code>的最大质数。</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">prime.list</span>(<span class="dv">100</span>)</code></pre>
 <pre><code>#&gt;  [1]  2  3  5  7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83
@@ -426,7 +426,7 @@ Kazuya &lt;-<span class="st"> </span><span class="kw">Turtle</span>(<span class=
 #&gt;  $ speak        : chr &quot;coo&quot;
 #&gt;  $ greet        :function (time = &quot;not_specified&quot;)  
 #&gt;   ..- attr(*, &quot;srcref&quot;)= &#39;srcref&#39; int [1:8] 6 12 12 3 12 3 6 12
-#&gt;   .. ..- attr(*, &quot;srcfile&quot;)=Classes &#39;srcfilecopy&#39;, &#39;srcfile&#39; &lt;environment: 0x7fdc76438fa0&gt;</code></pre>
+#&gt;   .. ..- attr(*, &quot;srcfile&quot;)=Classes &#39;srcfilecopy&#39;, &#39;srcfile&#39; &lt;environment: 0x7fdac5d7ce18&gt;</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(Kazuya)</code></pre>
 <pre><code>#&gt; List of 5
 #&gt;  $ name         : chr &quot;Kazuya&quot;
@@ -435,7 +435,7 @@ Kazuya &lt;-<span class="st"> </span><span class="kw">Turtle</span>(<span class=
 #&gt;  $ speak        : logi NA
 #&gt;  $ greet        :function (time = &quot;not_specified&quot;)  
 #&gt;   ..- attr(*, &quot;srcref&quot;)= &#39;srcref&#39; int [1:8] 6 12 12 3 12 3 6 12
-#&gt;   .. ..- attr(*, &quot;srcfile&quot;)=Classes &#39;srcfilecopy&#39;, &#39;srcfile&#39; &lt;environment: 0x7fdc76438fa0&gt;</code></pre>
+#&gt;   .. ..- attr(*, &quot;srcfile&quot;)=Classes &#39;srcfilecopy&#39;, &#39;srcfile&#39; &lt;environment: 0x7fdac5d7ce18&gt;</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(Felix)</code></pre>
 <pre><code>#&gt; List of 6
 #&gt;  $ name         : chr &quot;Felix&quot;
@@ -444,7 +444,7 @@ Kazuya &lt;-<span class="st"> </span><span class="kw">Turtle</span>(<span class=
 #&gt;  $ speak        : chr &quot;meow&quot;
 #&gt;  $ greet        :function (time = &quot;not_specified&quot;)  
 #&gt;   ..- attr(*, &quot;srcref&quot;)= &#39;srcref&#39; int [1:8] 6 12 12 3 12 3 6 12
-#&gt;   .. ..- attr(*, &quot;srcfile&quot;)=Classes &#39;srcfilecopy&#39;, &#39;srcfile&#39; &lt;environment: 0x7fdc76438fa0&gt; 
+#&gt;   .. ..- attr(*, &quot;srcfile&quot;)=Classes &#39;srcfilecopy&#39;, &#39;srcfile&#39; &lt;environment: 0x7fdac5d7ce18&gt; 
 #&gt;  $ sterilized   : chr &quot;TRUE&quot;</code></pre>
 <p>注意，鸽子，乌龟和猫都有名字 (<code>name</code>)，通称 (<code>common_name</code>)，学名 (<code>binomial_name</code>)，和打招呼函数 (<code>greet()</code>)；此外，乌龟没有叫声<code>speak()</code>，猫额外地有绝育<code>sterilized</code>信息。可以这样查看信息和使用打招呼函数：</p>
 <pre class="sourceCode r"><code class="sourceCode r">Felix<span class="op">$</span>binomial_name</code></pre>

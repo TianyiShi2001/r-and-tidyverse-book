@@ -20,10 +20,12 @@ nocite: |
   - \@ref(math-notation)：数的表达；整数，浮点数，科学计数法
   - \@ref(arithmetic)：基础的数学运算
   - \@ref(statistics)：基础的统计学计算，包括t分布，t检验，卡方检验
-- 第\@ref(logical-operation)节介绍了R中逻辑值(`TRUE`, `FALSE`, `NA`)的概念和玩法。
-- 第\@ref(functions)节介绍了R中的函数的定义和使用。
 - 第\@ref(list)节介绍了R中列表 (list)的性质和使用方法。
 - 第\@ref(matrix-array)节介绍了R中矩阵 (matrix)和数组 (array)的性质和使用方法。
+- 第\@ref(logical-operation)节介绍了R中逻辑值(`TRUE`, `FALSE`, `NA`)的概念和玩法。
+- 第\@ref(control-flow)届介绍了R中的流程控制和`apply()`族函数
+- 第\@ref(functions)节介绍了R中的函数的定义和使用。
+
 
 *注意，R中的变量名/自定义函数名不能以数字和特殊符号开头，中间只能使用"_"和"."作为特殊符号*[^naming]
 
@@ -216,7 +218,7 @@ sample(balls, 3) # 即`sample(balls, 3, replace = FALSE)`
 sample(1:100, 10, replace = TRUE)
 ```
 
-在后面的章节中，比如第\ref(tibble-slice-sample)节，我们会学到`sample()`更实际的用法。
+在后面的章节中，比如第\@ref(tibble-slice-sample)节，我们会学到`sample()`更实际的用法。
 
 ### 向量的其他操作 {#vector-misc}
 
@@ -680,7 +682,7 @@ is.na(NaN)
 
 ### 简易的统计学计算 {#statistics}
 
-本节简要解释了R中的基础统计学函数，t分布，t检验和$\chi^2$检验。统计学方法并不是本书的重点，因此可以酌情跳到第\ref(logical-operation)节（基础内容：逻辑）或第\ref{list}节（进阶内容：列表）。
+本节简要解释了R中的基础统计学函数，t分布，t检验和$\chi^2$检验。统计学方法并不是本书的重点，因此可以酌情跳到第\@ref(logical-operation)节（基础内容：逻辑）或第\@ref{list}节（进阶内容：列表）。
 
 #### 基础 {#stats-basics}
 
@@ -1220,7 +1222,7 @@ while (num <= 100) {
 
 ### 无编程基础者的快速指南 {#kickstart}
 
-我认为，举例子比纯粹的概念灌输更容易理解。
+我认为，举例子比讲述概念更容易理解。
 
 #### `if`, `else if`, `else`语句（“如果……”，“或者，如果……”，“否则……”）
 
@@ -1418,7 +1420,7 @@ for(num in x){
 
 注意到一个for循环实际上返回了多个结果（这里是三个）。这在实际操作中并不是很有用。更多的实际应用没必要在这里赘述，在以后的使用中会有很多例子，现在需要做的只是能看懂它的逻辑。
 
-如果是对一个列表（list）使用for循环，每个`i`是一个分量。关于列表的内容在第\ref(list)节，为进阶内容，可酌情阅读。
+如果是对一个列表（list）使用for循环，每个`i`是一个分量。关于列表的内容在第\@ref(list)节，为进阶内容，可酌情阅读。
 
 #### while循环 {#control-flow-rigorous-while}
 
@@ -1453,11 +1455,57 @@ while (i < 5) {
 
 #### `break`和`next` {#control-flow-rigorous-break-next}
 
-#### repeat循环 {#control-flow-rigorous-repeat}
+`break`可用来跳出当前所在的for或while循环。
+
+```{r}
+for(i in 1:10){
+  if(i <= 3){
+    print(i)
+  } else break
+}
+```
+
+可以看到，本来应对1至10逐个执行`print`，但当`i`等于4时，`i`不再小于等于3，触发`else`后的`break`, 结束for循环。While循环也是同样的道理：
+
+```{r}
+i <- 1
+while(i < 10){
+  if(i <= 3){
+    print(i)
+    i <- i + 1
+  } else break
+}
+```
+
+对于for循环，我们可以用`next`跳过一个元素/分量，比如：
+
+```{r}
+for(i in 1:5){
+  if(i == 3 | i == 4) next
+  print(i)
+}
+```
+
+可以看到3和4被跳过了。
+
+对于多层嵌套的循环，`break`和`next`仅作用于当前所在的循环，比如：
+
+```{r}
+for(i in 1:3){
+  for(j in c(1, 10, 100)){
+    if(i == 2) break
+    print(i * j)
+  }
+}
+```
+
+像这样的结构，可以理解为，对于`i`等于1，2和3，分别执行3次（独立的）里面的for循环。
+
+当`i`等于2时，`break`被触发，但只是退出了里面那个for循环，而外面的for循环继续，使`i`等于3，然后重新执行另一次里面的for循环（因`i`不等于2，这一次不会被打断）。
 
 ### 如何避免for循环——`apply()`家族函数 {#apply}
 
-R中的循环效率是很低的，尤其是有多层嵌套。通过`system.time()`函数，看看你的电脑执行以下运算需要花多少秒：（`system.time()`函数在第\@ref(system-time)小节有介绍）
+R中的循环效率是很低的，尤其是有多层嵌套。通过`system.time()`函数，看看你的电脑执行以下运算需要花多少秒：（`system.time()`函数在第\@ref(system-time)小节有介绍）。如果你还不熟悉R中的函数，不妨先看完第\@ref(functions)节。
 
 ```{r eval=FALSE}
 x <- vector("numeric")
@@ -1465,7 +1513,7 @@ system.time(
   for (l in 1:40) {
     for (m in 1:50) {
       for (n in 1:60) {
-        x <- append(x, l*m*n)
+        x <- c(x, l*m*n)
       }
     }
   }
@@ -1488,7 +1536,7 @@ $$x = \left(1\times1\times1, 1\times1\times2\ldots, 40\times50\times59, 40\times
 
 同样是运算上面那个for循环花了39秒的例子，使用`sapply()`函数和`rep()`函数几乎是瞬间完成；而把$(l,m,n)$增至$(1:500,1:600,1:700)$时（计算量为1750倍），它们仍只需不到3秒，而for循环则是不可行的。
 
-至于如何用这些函数算出来，就作为本章的练习（见第\ref(test-base-advanced)节）。
+至于如何用这些函数算出来，就作为本章的练习（见第\@ref(test-base-advanced)节）。
 
 #### `lapply()` {#apply-lapply}
 
@@ -1557,7 +1605,7 @@ lapply(list(c(1, 2), c(4, 6), c(7, 9)), function(i) i*10)
 sapply(list(c(1, 2, 3), c(4, 6), c(7, 9)), function(i) i*10)
 ```
 
-#### `rapply()`
+#### `rapply()` {#rapply}
 
 `lapply()`无法使用宇含有子列表的列表。比如，你可以尝试：
 
@@ -1583,7 +1631,7 @@ rapply(list(c(1, 2, 3), list(c(4, 5, 6), list(c("a", "b", "c")))), function(x) c
 rapply(list(c(1, 2, 3), list(c(4, 5, 6), list(c("a", "b", "c")))), function(x) c(x, 1), how = "list") 
 ```
 
-#### `mapply()`和`Map()`
+#### `mapply()`和`Map()` {#mapply-and-Map}
 
 `lapply()`和它的衍生产物`sapply()`和`rapply()`本质上是把一个函数应用在**一个**向量/列表上，即这个向量/列表作为函数唯一的“自变量”。`Map()`则可以使用多组自变量。这意味着，`lapply()`能做到的，`Map`都能做到；`Map`能做到的，`lapply()`不一定做得到。
 
@@ -1647,7 +1695,7 @@ x
 
 相比单核for循环的39秒，开挂（四核）的速度是12秒（计算量越大，优势越明显）。
 
-### `purrr` package中的`apply`家族函数替代品和进化产物
+### `purrr` package中的`apply`家族函数替代品和进化产物 {#apply-purrr}
 
 这一节需要使用`purrr`, 它是`tidyverse`的一部分。所以我们首先要加载它：
 
@@ -1656,9 +1704,9 @@ library(tidyverse) # 或library(purrr)
 ```
 
 
-#### `map()`, `map_dbl()`, `map_chr()`, ...
+#### `map()`, `map_dbl()`, `map_chr()`, ... {#purrr-map-map_dbl}
 
-`map()`的使用方法和`lapply()`几乎一样。`lapply(list(5, 6, 7), rnorm, 3, .1)`用`map()`转写就是`map(list(5, 6, 7), rnorm, 3, .1)`。`map()`（和下面介绍的其他函数）有一个绝招就是简写匿名函数。在第\ref(apply-lapply)节讲过，`lapply()`的对象默认会被作为函数的第一个参数（`map()`也是如此）。当不想让它作为第一个参数的时候，要使用匿名函数以保证易读性：
+`map()`的使用方法和`lapply()`几乎一样。`lapply(list(5, 6, 7), rnorm, 3, .1)`用`map()`转写就是`map(list(5, 6, 7), rnorm, 3, .1)`。`map()`（和下面介绍的其他函数）有一个绝招就是简写匿名函数。在第\@ref(apply-lapply)节讲过，`lapply()`的对象默认会被作为函数的第一个参数（`map()`也是如此）。当不想让它作为第一个参数的时候，要使用匿名函数以保证易读性：
 
 ```{r eval=FALSE}
 lapply(list(5, 6, 7), function(x) rnorm(3, x, .1))
@@ -1677,7 +1725,7 @@ x = c(1, 2, 3); y = c(10, 20, 30); z = c(5, 60, 115)
 map_dbl(list(x, y, z), mean)
 ```
 
-#### `map2()`和`pmap()系列
+#### `map2()`和`pmap()系列 {#purrr-map2-pmap}
 
 `map2()`使用两个因变量。
 
@@ -1698,8 +1746,6 @@ args <- tibble(mean = c(1, 100, 10000),
                sd = c(.1, 1, 10))
 pmap(args, rnorm, 3)
 ```
-
-#### `invoke_map()`, `invoke_map_dbl()`, ...
 
 ## 函数 {#functions}
 
@@ -1940,7 +1986,7 @@ calc(list(1, 2, list(10, 20)), pow = 2, times = 2)
 
 `pow`, `times`和`add`不是`calc`的参数，它们以`...`的形式被传递给`calc_l()`和`calc_v()`.
 
-在第\ref(apply-sapply)节讲到，`sapply()`的功能本质上和`lapply()`一致，只是会化简结果。我们看一下`sapply()`函数的结构：
+在第\@ref(apply-sapply)节讲到，`sapply()`的功能本质上和`lapply()`一致，只是会化简结果。我们看一下`sapply()`函数的结构：
 
 ```{r}
 sapply
@@ -2134,9 +2180,9 @@ fibon(10); fibon(-5)
 
 ### 进阶 {#test-base-advanced}
 
-1. `seq(0, 20, 5)`, `seq(by = 5, 0, 20`, 和`seq(by = 5, 0, y = 30, 20)`的结果分别是什么？为什么？（你可能需要参考第\ref(abbr)节和第\ref(about-dot-dot-dot)节）
+1. `seq(0, 20, 5)`, `seq(by = 5, 0, 20`, 和`seq(by = 5, 0, y = 30, 20)`的结果分别是什么？为什么？（你可能需要参考第\@ref(abbr)节和第\@ref(about-dot-dot-dot)节）
 
-1. 分别用`sapply()`, `rep()`, 和`rapply()`创建第\ref(apply)节提到的数列：$$x = \left(1\times1\times1, 1\times1\times2\ldots, 40\times50\times59, 40\times50\times60\right)$$
+1. 分别用`sapply()`, `rep()`, 和`rapply()`创建第\@ref(apply)节提到的数列：$$x = \left(1\times1\times1, 1\times1\times2\ldots, 40\times50\times59, 40\times50\times60\right)$$
 
 1. **质数表。**创建一个`prime.list()`函数，使`prime.list(i)`得到$(2, 3, 5, 7, 11, ... n)$, 其中`i`为大于或等于`3`的整数，$n$为小于`i`的最大质数。
 

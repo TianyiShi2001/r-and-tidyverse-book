@@ -244,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.7.3" data-path="control-flow.html"><a href="control-flow.html#control-flow-rigorous"><i class="fa fa-check"></i><b>2.7.3</b> 严谨版</a></li>
 <li class="chapter" data-level="2.7.4" data-path="control-flow.html"><a href="control-flow.html#apply"><i class="fa fa-check"></i><b>2.7.4</b> 如何避免for循环——<code>apply()</code>家族函数</a></li>
 <li class="chapter" data-level="2.7.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.7.5</b> <code>foreach</code> package：for循环的进化版</a></li>
-<li class="chapter" data-level="2.7.6" data-path="control-flow.html"><a href="control-flow.html#purrr-packageapply"><i class="fa fa-check"></i><b>2.7.6</b> <code>purrr</code> package中的<code>apply</code>家族函数替代品和进化产物</a></li>
+<li class="chapter" data-level="2.7.6" data-path="control-flow.html"><a href="control-flow.html#apply-purrr"><i class="fa fa-check"></i><b>2.7.6</b> <code>purrr</code> package中的<code>apply</code>家族函数替代品和进化产物</a></li>
 </ul></li>
 <li class="chapter" data-level="2.8" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.8</b> 函数</a><ul>
 <li class="chapter" data-level="2.8.1" data-path="functions.html"><a href="functions.html#functions-in-R"><i class="fa fa-check"></i><b>2.8.1</b> R中的函数</a></li>
@@ -763,7 +763,7 @@ wb_summary</code></pre>
 <span class="st">  </span><span class="kw">geom_col</span>(<span class="kw">aes</span>(<span class="dt">y =</span> MEAN), <span class="dt">position =</span> <span class="kw">position_dodge</span>())<span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_errorbar</span>(<span class="kw">aes</span>(<span class="dt">ymax =</span> upper, <span class="dt">ymin =</span> lower), <span class="dt">position =</span> <span class="kw">position_dodge</span>((<span class="dt">width=</span><span class="dv">1</span>)), <span class="dt">width =</span> <span class="fl">0.2</span>, <span class="dt">size =</span> <span class="fl">0.4</span>)<span class="op">+</span>
 <span class="st">  </span><span class="kw">theme_light</span>()</code></pre>
-<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-269-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-273-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>再用<code>ggplot2</code>中的<code>mpg</code>举一个例子：</p>
 <pre class="sourceCode r"><code class="sourceCode r">mpg</code></pre>
 <pre><code>#&gt; # A tibble: 234 x 11
@@ -807,7 +807,7 @@ mpg_summary</code></pre>
 #&gt; 14 toyota          34     18.5  0.694     24.9  1.06 
 #&gt; 15 volkswagen      27     20.9  0.877     29.2  1.02</code></pre>
 <p>最终我们可以利用这些数据绘图（这将是下一章的练习）：</p>
-<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-272-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-276-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>
             </section>

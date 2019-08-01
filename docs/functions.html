@@ -244,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.7.3" data-path="control-flow.html"><a href="control-flow.html#control-flow-rigorous"><i class="fa fa-check"></i><b>2.7.3</b> 严谨版</a></li>
 <li class="chapter" data-level="2.7.4" data-path="control-flow.html"><a href="control-flow.html#apply"><i class="fa fa-check"></i><b>2.7.4</b> 如何避免for循环——<code>apply()</code>家族函数</a></li>
 <li class="chapter" data-level="2.7.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.7.5</b> <code>foreach</code> package：for循环的进化版</a></li>
-<li class="chapter" data-level="2.7.6" data-path="control-flow.html"><a href="control-flow.html#purrr-packageapply"><i class="fa fa-check"></i><b>2.7.6</b> <code>purrr</code> package中的<code>apply</code>家族函数替代品和进化产物</a></li>
+<li class="chapter" data-level="2.7.6" data-path="control-flow.html"><a href="control-flow.html#apply-purrr"><i class="fa fa-check"></i><b>2.7.6</b> <code>purrr</code> package中的<code>apply</code>家族函数替代品和进化产物</a></li>
 </ul></li>
 <li class="chapter" data-level="2.8" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.8</b> 函数</a><ul>
 <li class="chapter" data-level="2.8.1" data-path="functions.html"><a href="functions.html#functions-in-R"><i class="fa fa-check"></i><b>2.8.1</b> R中的函数</a></li>
@@ -493,7 +493,7 @@ myfunc &lt;-<span class="st"> </span><span class="cf">function</span>(i){
 #&gt;     b = 10
 #&gt;     return(a*b)
 #&gt;   }
-#&gt; &lt;environment: 0x7fdc6ff82f58&gt;</code></pre>
+#&gt; &lt;environment: 0x7fdac2a0e408&gt;</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 既然`myfunc()`的结果是一个函数，那么在后面再加上一个括号就是执行内函数了；内函数可以使用外函数中所定义的变量（比如这里使用了外函数的`a = 5`）</span>
 <span class="kw">myfunc</span>()()</code></pre>
 <pre><code>#&gt; [1] 50</code></pre>
@@ -558,7 +558,7 @@ calc &lt;-<span class="st"> </span><span class="cf">function</span>(data, ...) {
 #&gt; [[3]][[2]]
 #&gt; [1] 800</code></pre>
 <p><code>pow</code>, <code>times</code>和<code>add</code>不是<code>calc</code>的参数，它们以<code>...</code>的形式被传递给<code>calc_l()</code>和<code>calc_v()</code>.</p>
-<p>在第(apply-sapply)节讲到，<code>sapply()</code>的功能本质上和<code>lapply()</code>一致，只是会化简结果。我们看一下<code>sapply()</code>函数的结构：</p>
+<p>在第<a href="control-flow.html#apply-sapply">2.7.4.2</a>节讲到，<code>sapply()</code>的功能本质上和<code>lapply()</code>一致，只是会化简结果。我们看一下<code>sapply()</code>函数的结构：</p>
 <pre class="sourceCode r"><code class="sourceCode r">sapply</code></pre>
 <pre><code>#&gt; function (X, FUN, ..., simplify = TRUE, USE.NAMES = TRUE) 
 #&gt; {
@@ -570,7 +570,7 @@ calc &lt;-<span class="st"> </span><span class="cf">function</span>(data, ...) {
 #&gt;         simplify2array(answer, higher = (simplify == &quot;array&quot;))
 #&gt;     else answer
 #&gt; }
-#&gt; &lt;bytecode: 0x7fdc69d7c458&gt;
+#&gt; &lt;bytecode: 0x7fdabf43fe58&gt;
 #&gt; &lt;environment: namespace:base&gt;</code></pre>
 <p>可以看到，<code>answer &lt;- lapply(X = X, FUN = FUN, ...)</code>这一行把<code>sapply()</code>里<code>...</code>中的参数传递到了<code>lapply()</code>中，使用<code>lapply()</code>得到未化解的结果<code>answer</code>, 随后仅需要写用来化简结果的代码，而不需要把与<code>lapply()</code>里的代码重写一遍。</p>
 </div>
@@ -644,7 +644,7 @@ cum</code></pre>
   }
 )</code></pre>
 <pre><code>#&gt;    user  system elapsed 
-#&gt;   0.046   0.020   0.066</code></pre>
+#&gt;   0.052   0.028   0.080</code></pre>
 <p>其中第三个数字 (<code>elapsed</code>)是执行<code>system.time()</code>括号内的语句实际消耗的时间。可以使用索引 (<code>[3]</code>)抓取。</p>
 <p>如果括号内的语句大于一句，像这样：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>(

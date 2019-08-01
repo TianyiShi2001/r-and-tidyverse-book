@@ -39,7 +39,7 @@ mpg
 knitr::include_graphics('img/tibble-intro.png')
 ```
 
-一个正确的dataframe/tibble，每一行代表的是一个observation（硬翻译的话是“观测单位”，但是我觉得这个翻译不好），每一列代表的是一个variable（变量），且同一个变量的数据类型必须一样。像这样的数据被称为“tidy data”（“整齐的数据”）。虽然看起来简单，直观，理所当然，但是现实中上人们经常会做出“不整齐”的数据。把不整齐的数据弄整齐是第\ref(wrangle)章的重点。
+一个正确的dataframe/tibble，每一行代表的是一个observation（硬翻译的话是“观测单位”，但是我觉得这个翻译不好），每一列代表的是一个variable（变量），且同一个变量的数据类型必须一样。像这样的数据被称为“tidy data”（“整齐的数据”）。虽然看起来简单，直观，理所当然，但是现实中上人们经常会做出“不整齐”的数据。把不整齐的数据弄整齐是第\@ref(wrangle)章的重点。
 
 ### 查看更多数据 {#tibble-more-data}
 
