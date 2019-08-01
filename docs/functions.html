@@ -493,7 +493,7 @@ myfunc &lt;-<span class="st"> </span><span class="cf">function</span>(i){
 #&gt;     b = 10
 #&gt;     return(a*b)
 #&gt;   }
-#&gt; &lt;environment: 0x7f84346d0200&gt;</code></pre>
+#&gt; &lt;environment: 0x7fdc6ff82f58&gt;</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 既然`myfunc()`的结果是一个函数，那么在后面再加上一个括号就是执行内函数了；内函数可以使用外函数中所定义的变量（比如这里使用了外函数的`a = 5`）</span>
 <span class="kw">myfunc</span>()()</code></pre>
 <pre><code>#&gt; [1] 50</code></pre>
@@ -570,7 +570,7 @@ calc &lt;-<span class="st"> </span><span class="cf">function</span>(data, ...) {
 #&gt;         simplify2array(answer, higher = (simplify == &quot;array&quot;))
 #&gt;     else answer
 #&gt; }
-#&gt; &lt;bytecode: 0x7f8432c1ed10&gt;
+#&gt; &lt;bytecode: 0x7fdc69d7c458&gt;
 #&gt; &lt;environment: namespace:base&gt;</code></pre>
 <p>可以看到，<code>answer &lt;- lapply(X = X, FUN = FUN, ...)</code>这一行把<code>sapply()</code>里<code>...</code>中的参数传递到了<code>lapply()</code>中，使用<code>lapply()</code>得到未化解的结果<code>answer</code>, 随后仅需要写用来化简结果的代码，而不需要把与<code>lapply()</code>里的代码重写一遍。</p>
 </div>
@@ -644,7 +644,7 @@ cum</code></pre>
   }
 )</code></pre>
 <pre><code>#&gt;    user  system elapsed 
-#&gt;   0.054   0.030   0.084</code></pre>
+#&gt;   0.046   0.020   0.066</code></pre>
 <p>其中第三个数字 (<code>elapsed</code>)是执行<code>system.time()</code>括号内的语句实际消耗的时间。可以使用索引 (<code>[3]</code>)抓取。</p>
 <p>如果括号内的语句大于一句，像这样：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>(

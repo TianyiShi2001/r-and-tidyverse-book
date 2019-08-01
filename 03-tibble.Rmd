@@ -181,7 +181,7 @@ iris_2 <- filter(iris, Species == "virginica", Petal.Length >= 4 & Petal.Length 
 iris_2
 ```
 
-#### 用`slice()`，通过行数（索引）抓取行。
+#### 用`slice()`，通过行数（索引）抓取行 {#tibble-slice-sample}
 
 ```{r}
 iris_3 <- slice(iris, 21:24) # 抓取`iris`的第21行至24行

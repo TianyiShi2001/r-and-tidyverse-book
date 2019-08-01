@@ -184,6 +184,40 @@ hist(x_norm) # 画直方图
 
 此外，还有`rlnorm()`, `rpois()`, `rexp()`等函数。`?stats::distributions`中介绍了R中自带的分布，其中大部分都有对应的随机数生成器。
 
+#### 简单随机抽样 {#math-random-sampling}
+
+随机抽样的应用比随机数要广。
+
+假设一个盒子里有10个球，上面分别写着字母"a"至"j".
+
+```{r}
+balls <- letters[1:10]
+balls
+```
+
+我想从这10个球中随机取20个球，每取一次之后，把球放回去：
+
+```{r}
+sample(balls, 20, replace = TRUE)
+```
+
+
+我想从这10个球中随机取3个球，取完之后不把球放回去：
+
+```{r}
+sample(balls, 3) # 即`sample(balls, 3, replace = FALSE)`
+```
+
+可以看到，`sample()`函数第一个参数是样本空间，第二个参数是样本量。
+
+当然，它经常被用作随机整数生成器（这也是我为什么把它放在这一小节）：
+
+```{r}
+sample(1:100, 10, replace = TRUE)
+```
+
+在后面的章节中，比如第\ref(tibble-slice-sample)节，我们会学到`sample()`更实际的用法。
+
 ### 向量的其他操作 {#vector-misc}
 
 #### 创建长度为0的向量 {#vector-length-0}

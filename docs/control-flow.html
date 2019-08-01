@@ -665,13 +665,13 @@ while (i &lt; 5) {
 <p>另一种是使用有命名的函数。此时，第二个参数是函数名；随后，如果有需要，还可以加上这个函数需要的其它参数：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lapply</span>(<span class="kw">list</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>), rnorm, <span class="dv">3</span>, <span class="fl">.1</span>)</code></pre>
 <pre><code>#&gt; [[1]]
-#&gt; [1] 2.92 2.88 3.03 2.91 3.16
+#&gt; [1] 3.16 3.05 3.08 3.06 3.05
 #&gt; 
 #&gt; [[2]]
-#&gt; [1] 2.98 3.04 2.88 3.04 2.85 3.08
+#&gt; [1] 3.07 2.97 2.98 3.06 3.02 2.92
 #&gt; 
 #&gt; [[3]]
-#&gt; [1] 2.97 3.04 3.19 2.97 2.86 3.10 3.04</code></pre>
+#&gt; [1] 2.98 2.95 2.92 3.05 3.01 3.00 2.93</code></pre>
 <p>默认<code>lapply()</code>的对象的各元素作为函数的第一个参数。上面这个例子等同于：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">list</span>(<span class="kw">rnorm</span>(<span class="dv">5</span>, <span class="dv">3</span>, <span class="fl">.1</span>), <span class="co"># 即 `rnorm(n = 5, mean = 3, sd = .1)`</span>
      <span class="kw">rnorm</span>(<span class="dv">6</span>, <span class="dv">3</span>, <span class="fl">.1</span>),
@@ -679,13 +679,13 @@ while (i &lt; 5) {
 <p>当第一个参数在后面被指定时，<code>lapply()</code>的对象的各元素所代表的参数按照排序顺延，比如：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lapply</span>(<span class="kw">list</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>), rnorm, <span class="dt">n =</span> <span class="dv">3</span>, <span class="fl">.1</span>)</code></pre>
 <pre><code>#&gt; [[1]]
-#&gt; [1] 4.96 5.14 4.98
+#&gt; [1] 4.92 5.21 5.18
 #&gt; 
 #&gt; [[2]]
-#&gt; [1] 6.12 6.11 6.01
+#&gt; [1] 5.98 6.00 5.90
 #&gt; 
 #&gt; [[3]]
-#&gt; [1] 7.06 6.93 7.03</code></pre>
+#&gt; [1] 6.93 6.99 7.00</code></pre>
 <p>等同于：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">list</span>(<span class="kw">rnorm</span>(<span class="dt">n =</span> <span class="dv">3</span>, <span class="dv">5</span>, <span class="fl">.1</span>),
      <span class="kw">rnorm</span>(<span class="dt">n =</span> <span class="dv">3</span>, <span class="dv">6</span>, <span class="fl">.1</span>),
@@ -742,29 +742,29 @@ while (i &lt; 5) {
 <p>之前<code>lapply()</code>的例子<code>lapply(c(5, 6, 7), rnorm, n = 3, .1)</code>的<code>Map()</code>版本是这样的：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">Map</span>(rnorm, <span class="kw">c</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>), <span class="dv">3</span>, <span class="fl">.1</span>)</code></pre>
 <pre><code>#&gt; [[1]]
-#&gt; [1] 2.92 3.10 3.06 3.06 2.96
+#&gt; [1] 2.94 2.99 3.10 2.85 2.82
 #&gt; 
 #&gt; [[2]]
-#&gt; [1] 3.21 2.91 3.00 3.03 2.95 2.96
+#&gt; [1] 2.99 2.87 2.90 2.87 3.02 2.94
 #&gt; 
 #&gt; [[3]]
-#&gt; [1] 2.96 2.97 3.13 3.11 3.30 3.00 3.15</code></pre>
+#&gt; [1] 3.10 2.95 2.90 2.83 2.94 2.99 3.05</code></pre>
 <p>多个自变量的计算也很自然：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">Map</span>(rnorm, <span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>), <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">100</span>), <span class="kw">c</span>(.<span class="dv">1</span>, <span class="fl">.5</span>, <span class="dv">1</span>))</code></pre>
 <pre><code>#&gt; [[1]]
-#&gt; [1] 0.809 1.045
+#&gt; [1] 1.00 1.07
 #&gt; 
 #&gt; [[2]]
-#&gt; [1] 10.1 11.0 10.8
+#&gt; [1] 10.71 10.70  9.86
 #&gt; 
 #&gt; [[3]]
-#&gt; [1] 99.9 99.5 98.5 97.4</code></pre>
+#&gt; [1] 101 100 101 100</code></pre>
 <p><code>mapply()</code>是<code>Map()</code>的自动化简版本：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mapply</span>(rnorm, <span class="dv">3</span>, <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">100</span>), <span class="kw">c</span>(.<span class="dv">1</span>, <span class="fl">.5</span>, <span class="dv">1</span>))</code></pre>
 <pre><code>#&gt;       [,1]  [,2]  [,3]
-#&gt; [1,] 1.004  9.93  98.6
-#&gt; [2,] 1.140  9.98 100.9
-#&gt; [3,] 0.912 10.52 100.2</code></pre>
+#&gt; [1,] 0.994 10.63 101.2
+#&gt; [2,] 1.082  9.26  99.4
+#&gt; [3,] 1.054 10.06 102.2</code></pre>
 <p>想一想，<code>Map(rep, list(c(1,2), list(2,3)), 3)</code>的计算结果是什么？</p>
 </div>
 </div>
@@ -806,13 +806,13 @@ x</code></pre>
 <p>用<code>map()</code>的简写版本则是：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">map</span>(<span class="kw">list</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>), <span class="op">~</span><span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">3</span>, ., <span class="fl">.1</span>))</code></pre>
 <pre><code>#&gt; [[1]]
-#&gt; [1] 4.82 4.94 4.98
+#&gt; [1] 5.10 5.05 5.05
 #&gt; 
 #&gt; [[2]]
-#&gt; [1] 5.95 5.97 5.92
+#&gt; [1] 5.86 5.77 5.85
 #&gt; 
 #&gt; [[3]]
-#&gt; [1] 7.19 7.06 6.94</code></pre>
+#&gt; [1] 7.18 6.92 6.98</code></pre>
 <p><code>map_dbl()</code>, <code>map_chr()</code>函数可以把结果化简为一个向量，前提是每次的计算结果的长度都为1（即一个标量），比如这里，<code>mean(x)</code>, <code>mean(y)</code>, <code>mean(z)</code>的结果都是一个标量，所以<code>map()</code>的结果可以化简为一个浮点数向量。</p>
 <pre class="sourceCode r"><code class="sourceCode r">x =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>); y =<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>); z =<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>, <span class="dv">60</span>, <span class="dv">115</span>)
 <span class="kw">map_dbl</span>(<span class="kw">list</span>(x, y, z), mean)</code></pre>
@@ -823,35 +823,35 @@ x</code></pre>
 <p><code>map2()</code>使用两个因变量。</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">map2</span>(<span class="dt">.x =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">100</span>, <span class="dv">10000</span>), <span class="dt">.y =</span> <span class="kw">c</span>(.<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">10</span>), <span class="op">~</span><span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">5</span>, .x, .y))</code></pre>
 <pre><code>#&gt; [[1]]
-#&gt; [1] 1.087 0.987 1.057 0.936 1.133
+#&gt; [1] 0.760 0.991 1.004 1.209 0.881
 #&gt; 
 #&gt; [[2]]
-#&gt; [1]  99.1 101.4  98.5  99.7  99.2
+#&gt; [1] 100.1  99.4  99.8 100.3 100.5
 #&gt; 
 #&gt; [[3]]
-#&gt; [1] 10014 10002  9993  9989 10001</code></pre>
+#&gt; [1]  9999  9995 10000  9996 10023</code></pre>
 <p><code>pmap()</code>使用多个因变量。与Base R的<code>Map()</code>不同，<code>pmap()</code>的第一个参数是对象，第二个才是函数。你可以使用命名列表来指定使用的函数的参数：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pmap</span>(<span class="kw">list</span>(<span class="dt">mean =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">100</span>, <span class="dv">10000</span>), <span class="dt">sd =</span> <span class="kw">c</span>(.<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">10</span>)), rnorm, <span class="dt">n =</span> <span class="dv">3</span>)</code></pre>
 <pre><code>#&gt; [[1]]
-#&gt; [1] 1.14 1.12 1.02
+#&gt; [1] 0.833 0.967 0.865
 #&gt; 
 #&gt; [[2]]
-#&gt; [1] 100.2 100.1  99.6
+#&gt; [1]  98.8 100.2 101.1
 #&gt; 
 #&gt; [[3]]
-#&gt; [1] 10007 10011  9999</code></pre>
+#&gt; [1] 10008  9993 10027</code></pre>
 <p>下一章会讲到，因为dataframe/tibble的本质是list，上面的操作也可以适用于tibble：</p>
 <pre class="sourceCode r"><code class="sourceCode r">args &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">mean =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">100</span>, <span class="dv">10000</span>),
                <span class="dt">sd =</span> <span class="kw">c</span>(.<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">10</span>))
 <span class="kw">pmap</span>(args, rnorm, <span class="dv">3</span>)</code></pre>
 <pre><code>#&gt; [[1]]
-#&gt; [1] 1.191 0.866 1.007
+#&gt; [1] 0.994 0.922 1.103
 #&gt; 
 #&gt; [[2]]
-#&gt; [1] 100 100 101
+#&gt; [1] 101 100 101
 #&gt; 
 #&gt; [[3]]
-#&gt; [1] 10014 10005  9996</code></pre>
+#&gt; [1] 10004  9990 10000</code></pre>
 </div>
 <div id="invoke_map-invoke_map_dbl" class="section level4">
 <h4><span class="header-section-number">2.7.6.3</span> <code>invoke_map()</code>, <code>invoke_map_dbl()</code>, …</h4>

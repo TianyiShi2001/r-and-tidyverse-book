@@ -438,8 +438,8 @@ iris_<span class="dv">2</span></code></pre>
 #&gt; 5          6.1         3            4.9         1.8 virginica
 #&gt; 6          6           3            4.8         1.8 virginica</code></pre>
 </div>
-<div id="slice" class="section level4">
-<h4><span class="header-section-number">3.3.1.4</span> 用<code>slice()</code>，通过行数（索引）抓取行。</h4>
+<div id="tibble-slice-sample" class="section level4">
+<h4><span class="header-section-number">3.3.1.4</span> 用<code>slice()</code>，通过行数（索引）抓取行</h4>
 <pre class="sourceCode r"><code class="sourceCode r">iris_<span class="dv">3</span> &lt;-<span class="st"> </span><span class="kw">slice</span>(iris, <span class="dv">21</span><span class="op">:</span><span class="dv">24</span>) <span class="co"># 抓取`iris`的第21行至24行</span>
 iris_<span class="dv">3</span></code></pre>
 <pre><code>#&gt; # A tibble: 4 x 5
@@ -453,12 +453,12 @@ iris_<span class="dv">3</span></code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">iris_random &lt;-<span class="st"> </span><span class="kw">slice</span>(iris, <span class="kw">sample</span>(<span class="kw">length</span>(iris[[<span class="dv">1</span>]]), <span class="dv">4</span>, <span class="dt">replace =</span> <span class="ot">FALSE</span>)) <span class="co"># 随机四朵鸢尾花</span>
 iris_random</code></pre>
 <pre><code>#&gt; # A tibble: 4 x 5
-#&gt;   Sepal.Length Sepal.Width Petal.Length Petal.Width Species  
-#&gt;          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;    
-#&gt; 1          7.7         3.8          6.7         2.2 virginica
-#&gt; 2          4.3         3            1.1         0.1 setosa   
-#&gt; 3          5.8         2.8          5.1         2.4 virginica
-#&gt; 4          5.4         3.9          1.3         0.4 setosa</code></pre>
+#&gt;   Sepal.Length Sepal.Width Petal.Length Petal.Width Species   
+#&gt;          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;     
+#&gt; 1          5.7         4.4          1.5         0.4 setosa    
+#&gt; 2          6.5         3            5.8         2.2 virginica 
+#&gt; 3          6           2.9          4.5         1.5 versicolor
+#&gt; 4          6.7         3.3          5.7         2.1 virginica</code></pre>
 <p>还可以使用<code>[n, ]</code>的形式抓取（不需要知道为什么）：</p>
 <pre class="sourceCode r"><code class="sourceCode r">iris[<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, ] <span class="co"># 第1到第3行</span></code></pre>
 <pre><code>#&gt; # A tibble: 3 x 5
@@ -763,7 +763,7 @@ wb_summary</code></pre>
 <span class="st">  </span><span class="kw">geom_col</span>(<span class="kw">aes</span>(<span class="dt">y =</span> MEAN), <span class="dt">position =</span> <span class="kw">position_dodge</span>())<span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_errorbar</span>(<span class="kw">aes</span>(<span class="dt">ymax =</span> upper, <span class="dt">ymin =</span> lower), <span class="dt">position =</span> <span class="kw">position_dodge</span>((<span class="dt">width=</span><span class="dv">1</span>)), <span class="dt">width =</span> <span class="fl">0.2</span>, <span class="dt">size =</span> <span class="fl">0.4</span>)<span class="op">+</span>
 <span class="st">  </span><span class="kw">theme_light</span>()</code></pre>
-<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-265-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-269-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>再用<code>ggplot2</code>中的<code>mpg</code>举一个例子：</p>
 <pre class="sourceCode r"><code class="sourceCode r">mpg</code></pre>
 <pre><code>#&gt; # A tibble: 234 x 11
@@ -807,7 +807,7 @@ mpg_summary</code></pre>
 #&gt; 14 toyota          34     18.5  0.694     24.9  1.06 
 #&gt; 15 volkswagen      27     20.9  0.877     29.2  1.02</code></pre>
 <p>最终我们可以利用这些数据绘图（这将是下一章的练习）：</p>
-<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-268-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="R%E4%B8%8Etidyverse%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8_files/figure-html/unnamed-chunk-272-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>
             </section>
