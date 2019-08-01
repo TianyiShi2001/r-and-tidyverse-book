@@ -113,78 +113,124 @@ d1 <- as_tibble(d) #其中d是一个dataframe
 本小节介绍了如何使用`dplyr` package提供的`select()`, `filter()`, `slice`取子集方法
 更详细的解释请看第\@ref(tbl-subsetting-more)节。
 
+这一小节我们使用名为`iris`的数据。它是一个dataframe，所以首先把它转换成tibble. 
+
+```{r}
+iris <- as_tibble(datasets::iris)
+iris
+```
+
 #### 抓取单列 {#single-column}
 
-抓取单列很简单，也很常用（比如我们只想从一个大的tibble中抓两个变量研究它们之间的关系）。 有两个符号可以用于抓取列，`$`（仅用于变量名称）与`[[]]`（变量名称或索引）。还是以`mpg`为例，假设我们要抓取第3列 (`displ`)：
+抓取单列很简单，也很常用（比如我们只想从一个大的tibble中抓两个变量研究它们之间的关系）。 有两个符号可以用于抓取列，`$`（仅用于变量名称）与`[[]]`（变量名称或索引）。还是以`mpg`为例，假设我们要抓取第2列 (`Sepal.Width`)：
 
 ```{r eval=FALSE}
-########################
-#通过变量名称抓取：
-mpg[["displ"]]
+# 通过变量名称抓取 -----------------------
+iris[["Sepal.Width"]]
 #或
-mpg$displ #一般，在RStudio中此方法最方便，因为打出“$”之后会自动提示变量名。
+iris$Sepal.Width #
 
-########################
-#通过索引抓取：
-mpg[[3]]
+# 通过索引抓取 ------------------------
+iris[[2]]
 ```
 
 以上三种方法都应得到同样的结果（是一个vector）：
 
 ```{r echo=FALSE}
-mpg[[3]][1:20] 
-#因为长度有222，为避免浪费空间我们只显示第1到20个元素。顺便复习一下向量的索引。
+iris[["Sepal.Width"]][1:20] 
+#为避免浪费空间我们只显示第1到10个元素。
 ```
+
+一般，在RStudio中使用`$`符号最方便，因为打出“$”之后会自动提示变量名。
 
 一般我们抓取单列是为了在tibble中新建一个与那一列相关的变量，或是建一个新tibble，或是做统计学分析。以上三种情况（是绝大多数的情况）用vector进行操作很方便。
 
-假设你在写一个复杂的函数，且需要保持数据的完整性和一致性，可以使用单方括号`[`；这样得到的是一个tibble（试试`mpg[3]`）这个特性在第\@ref(tbl-subsetting-more)节中有解释。
+使用单方括号`[`进行取子集得到的结果是一个tibble（试试`iris[2]`）这个特性在第\@ref(tbl-subsetting-more)节中有解释。
 
-#### 抓取多列并返回一个tibble
+#### 使用`select()`函数，抓取多列并返回一个tibble
 
-有时候，一个tibble中含有很多冗余信息，我们可能想把感兴趣的几个变量抓出来做一个新tibble. 这时`select()`函数最为方便。可以用变量名称或者索引来抓取。比如：
+有时候，一个tibble中含有很多冗余信息，我们可能想把感兴趣的几个变量抓出来做一个新tibble. 这时`select()`函数最为方便。可以用变量名称或者索引来抓取；可以在前面加上负号表示“除这个变量以外”。比如：
 
 ```{r}
-mpg_new <- select(mpg, 3:5, 8, 9)
-#等同于
-mpg_new <- select(mpg, displ, year, cyl, cty, hwy)
+iris_1 <- select(iris, 1:2, 5)
+# 等同于
+iris_1 <- select(iris, -(3:4))
+# 等同于
+iris_1 <- select(iris, -Petal.Length, -Petal.Width)
 
-mpg_new
+iris_1[1:3, ] # 节省空间，1至3行。
 ```
 
-显然，使用变量名抓取列比使用索引更好。虽然打字较多，但是易读性比使用索引强太多了。在向其他人展示或者分享你的工作时，易读性尤为重要。
+使用“正”的变量名称进行抓取，可以额外地按照你指定的顺序重排（抓取的是同样的数据，但是`Species`被放在第一列）：
+
+```{r}
+iris_1 <- select(iris, Species, Sepal.Length, Sepal.Width)
+iris_1[1:3, ]
+```
+
 
 #### 通过`filter()`，抓取满足某条件的行
 
 通过`filter()`，我们可以过滤出某个或多个变量满足某种条件的observations. 如果你还不熟悉逻辑运算，请看第\@ref(logical-operation)节
 
-假设我们只想看`mpg`中的奥迪品牌的，排量大于等于2且小于4的车辆的数据：
+假设我们只想看种名为$virginica$且花瓣长度在4和5之间的鸢尾花：
 
 ```{r}
-mpg_audi_displ2to4 <- filter(mpg, manufacturer == "audi", displ >= 2.5 & displ < 4)
+iris_2 <- filter(iris, Species == "virginica", Petal.Length >= 4 & Petal.Length < 5)
 
-mpg_audi_displ2to4
+iris_2
 ```
 
 #### 用`slice()`，通过行数（索引）抓取行。
 
 ```{r}
-mpg_1to6 <- slice(mpg, 21:26) # 抓取mpg的第21行至26行
-mpg_1to6
+iris_3 <- slice(iris, 21:24) # 抓取`iris`的第21行至24行
+iris_3
 ```
 
 `slice()`更实际的用途是随机选择个体：
 
 ```{r}
-mpg_random4 <- slice(mpg, sample(length(mpg[[1]]), 4)) # 随机四辆车
-mpg_random4
+iris_random <- slice(iris, sample(length(iris[[1]]), 4, replace = FALSE)) # 随机四朵鸢尾花
+iris_random
 ```
+
+还可以使用`[n, ]`的形式抓取（不需要知道为什么）：
+
+```{r}
+iris[1:3, ] # 第1到第3行
+```
+
+
+### 使用`arrange()`排序tibble
+
+有时候，你需要把表格展示（打印）出来，为了方便阅读，经常需要重新排列每行的顺序。
+
+把`iris`根据萼片长度`Sepal.Length`从小到大的顺序排列：
+
+```{r}
+arrange(iris, Sepal.Length)
+```
+
+根据`Sepal.Length`从大到小的顺序排列：
+
+```{r}
+arrange(iris, -Sepal.Length) # 或`arrange(iris, desc(Sepal.Length))`
+```
+
+根据`Petal.Width`从小到大的顺序排列，若有并列，再根据`Petal.Length`从大到小的顺序排列：
+
+```{r}
+arrange(iris, Petal.Width, -Petal.Length)
+```
+
+以此类推。
 
 ### 用`mutate()`修改或新增变量 {#mutate}
 
 `mutate()`函数用于新增一列数据（即新增一个变量）。
 
-这里用R自带的一组数据举例，因为它是以dataframe格式存储的，首先我们需要把它转换成tibble.
+这里用另外一组`datasets`里的数据举例。首先我们需要把它转换成tibble.
 
 ```{r}
 women <- as_tibble(datasets::women)
@@ -237,6 +283,18 @@ head(women_bmi_1, 4)
 women_bmi_2 <- transmute(women3, BMI = weight/height^2)
 head(women_bmi_2, 4)
 ```
+
+### 使用`rename()`重命名变量
+
+```{r}
+women_bmi_1[1:3, ]
+```
+
+```{r}
+women_bmi_3 <- dplyr::rename(women_bmi_1,  body_mass_index = BMI)
+women_bmi_3[1:3, ]
+```
+
 
 ### `%>%`符号 (Pipe Operator)
 
@@ -350,7 +408,7 @@ ggplot(wb_summary, aes(tension, fill = wool))+
   theme_light()
 ```
 
-再用我们的老朋友`mpg`举一个例子：
+再用`ggplot2`中的`mpg`举一个例子：
 
 ```{r}
 mpg

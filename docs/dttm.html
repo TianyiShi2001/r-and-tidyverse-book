@@ -273,9 +273,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3.3</b> 数据转换 (Data Transformation)</a><ul>
 <li class="chapter" data-level="3.3.1" data-path="data-transformation.html"><a href="data-transformation.html#tbl-subsetting"><i class="fa fa-check"></i><b>3.3.1</b> 取子集（抓取行，列）{tbl-subsetting}</a></li>
-<li class="chapter" data-level="3.3.2" data-path="data-transformation.html"><a href="data-transformation.html#mutate"><i class="fa fa-check"></i><b>3.3.2</b> 用<code>mutate()</code>修改或新增变量</a></li>
-<li class="chapter" data-level="3.3.3" data-path="data-transformation.html"><a href="data-transformation.html#-pipe-operator"><i class="fa fa-check"></i><b>3.3.3</b> <code>%&gt;%</code>符号 (Pipe Operator)</a></li>
-<li class="chapter" data-level="3.3.4" data-path="data-transformation.html"><a href="data-transformation.html#group_bysummarise"><i class="fa fa-check"></i><b>3.3.4</b> <code>group_by</code>与<code>summarise</code></a></li>
+<li class="chapter" data-level="3.3.2" data-path="data-transformation.html"><a href="data-transformation.html#arrangetibble"><i class="fa fa-check"></i><b>3.3.2</b> 使用<code>arrange()</code>排序tibble</a></li>
+<li class="chapter" data-level="3.3.3" data-path="data-transformation.html"><a href="data-transformation.html#mutate"><i class="fa fa-check"></i><b>3.3.3</b> 用<code>mutate()</code>修改或新增变量</a></li>
+<li class="chapter" data-level="3.3.4" data-path="data-transformation.html"><a href="data-transformation.html#rename"><i class="fa fa-check"></i><b>3.3.4</b> 使用<code>rename()</code>重命名变量</a></li>
+<li class="chapter" data-level="3.3.5" data-path="data-transformation.html"><a href="data-transformation.html#-pipe-operator"><i class="fa fa-check"></i><b>3.3.5</b> <code>%&gt;%</code>符号 (Pipe Operator)</a></li>
+<li class="chapter" data-level="3.3.6" data-path="data-transformation.html"><a href="data-transformation.html#group_bysummarise"><i class="fa fa-check"></i><b>3.3.6</b> <code>group_by</code>与<code>summarise</code></a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="tibble-misc.html"><a href="tibble-misc.html"><i class="fa fa-check"></i><b>3.4</b> 其它</a><ul>
 <li class="chapter" data-level="3.4.1" data-path="tibble-misc.html"><a href="tibble-misc.html#list-and-df"><i class="fa fa-check"></i><b>3.4.1</b> list和dataframe/tibble</a></li>
@@ -362,7 +364,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">5.5.1</span> ISO标准</h3>
 <p>日期/时间的ISO标准格式是这样的：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">now</span>()</code></pre>
-<pre><code>#&gt; [1] &quot;2019-08-01 00:34:39 CST&quot;</code></pre>
+<pre><code>#&gt; [1] &quot;2019-08-01 16:07:46 CST&quot;</code></pre>
 <p>最后三个字母是时区。</p>
 </div>
 <div id="section-5.5.2" class="section level3">
@@ -372,7 +374,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">today</span>()</code></pre>
 <pre><code>#&gt; [1] &quot;2019-08-01&quot;</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">now</span>()</code></pre>
-<pre><code>#&gt; [1] &quot;2019-08-01 00:34:39 CST&quot;</code></pre>
+<pre><code>#&gt; [1] &quot;2019-08-01 16:07:46 CST&quot;</code></pre>
 </div>
 <div id="section-5.5.2.2" class="section level4">
 <h4><span class="header-section-number">5.5.2.2</span> 通过字符串转换</h4>
