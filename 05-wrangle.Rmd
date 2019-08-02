@@ -297,3 +297,9 @@ ymd_hms(010201173245)
 ### 计算
 
 ### 在绘图中的应用
+
+## 小测 {#test-wrangle}
+
+1. *描绘中华民族的伟大复兴之——GDP的腾飞。*
+
+    从世界银行的网站（https://data.worldbank.org/indicator/ny.gdp.mktp.cd?view=map&year=1965 ），我们可以获取到1960年至2018年各国的GDP数据。
