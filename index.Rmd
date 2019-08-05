@@ -77,7 +77,7 @@ Hadley Wickham写R for Data Science的时候把绘图放在了第一章，随后
 
 本书以R Markdown格式 (http://rmarkdown.rstudio.com/ )在RStudio (http://www.rstudio.com/ide/ )中编写。
 
-knitr (http://yihui.name/knitr/ )和pandoc (https://pandoc.org/ )把`Rmd`文件编译成`html`和`tex`，`r knitr::raw_html("<span>LaTeX</span>")`\XeLaTeX 将`tex`排版为PDF；这一系列操作是使用bookdown (https://bookdown.org )自动完成的。
+knitr (http://yihui.name/knitr/ )和pandoc (https://pandoc.org/ )把Rmd文件编译成html和tex，`r knitr::raw_html("<span>XeLaTeX</span>")` `r knitr::raw_latex("\\XeLaTeX")`将tex排版为PDF；这一系列操作是使用bookdown (https://bookdown.org )自动完成的。
 
 本书的源码，Gitbook和PDF版本的书保存在https://github.com/TianyiShi2001/r-and-tidyverse-book/ ，其中Gitbook和PDF保存在`/docs/`目录下，由GitHub Pages生成静态网页，通过https://TianyiShi2001.github.io/r-and-tidyverse-book/ 访问。
 

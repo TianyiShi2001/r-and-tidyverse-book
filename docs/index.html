@@ -405,9 +405,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="technical" class="section level3 unnumbered">
 <h3>关于编写本书的技术信息</h3>
 <p>本书以R Markdown格式 (<a href="http://rmarkdown.rstudio.com/" class="uri">http://rmarkdown.rstudio.com/</a> )在RStudio (<a href="http://www.rstudio.com/ide/" class="uri">http://www.rstudio.com/ide/</a> )中编写。</p>
-<p>knitr (<a href="http://yihui.name/knitr/" class="uri">http://yihui.name/knitr/</a> )和pandoc (<a href="https://pandoc.org/" class="uri">https://pandoc.org/</a> )把<code>Rmd</code>文件编译成<code>html</code>和<code>tex</code>，</p>
-<span>LaTeX</span>
-<p>将<code>tex</code>排版为PDF；这一系列操作是使用bookdown (<a href="https://bookdown.org" class="uri">https://bookdown.org</a> )自动完成的。</p>
+<p>knitr (<a href="http://yihui.name/knitr/" class="uri">http://yihui.name/knitr/</a> )和pandoc (<a href="https://pandoc.org/" class="uri">https://pandoc.org/</a> )把Rmd文件编译成html和tex，</p>
+<span>XeLaTeX</span>
+
+<p>将tex排版为PDF；这一系列操作是使用bookdown (<a href="https://bookdown.org" class="uri">https://bookdown.org</a> )自动完成的。</p>
 <p>本书的源码，Gitbook和PDF版本的书保存在https://github.com/TianyiShi2001/r-and-tidyverse-book/ ，其中Gitbook和PDF保存在<code>/docs/</code>目录下，由GitHub Pages生成静态网页，通过https://TianyiShi2001.github.io/r-and-tidyverse-book/ 访问。</p>
 <p>编写本书使用的R packages，和排版本书时R的sessionInfo显示如下：</p>
 <pre class="sourceCode r"><code class="sourceCode r">utils<span class="op">::</span><span class="kw">sessionInfo</span>(<span class="kw">c</span>(<span class="st">&quot;tibble&quot;</span>, <span class="st">&quot;dplyr&quot;</span>, <span class="st">&quot;forcats&quot;</span>, <span class="st">&quot;ggplot2&quot;</span>, <span class="st">&quot;stringr&quot;</span>, <span class="st">&quot;tidyr&quot;</span>, <span class="st">&quot;readr&quot;</span>, <span class="st">&quot;purrr&quot;</span>, <span class="st">&quot;lubridate&quot;</span>, <span class="st">&quot;doParallel&quot;</span>, <span class="st">&quot;foreach&quot;</span>, <span class="st">&quot;rmarkdown&quot;</span>, <span class="st">&quot;knitr&quot;</span>, <span class="st">&quot;bookdown&quot;</span>))</code></pre>
