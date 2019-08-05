@@ -13,13 +13,13 @@ nocite: |
 
 第\@ref(interface-basics-project)节：带你快速熟悉RStudio界面和基本操作。
 
-第\@ref(packages)节：也**很重要**。介绍packages（包）的概念和功能，并引导安装本书需要使用的packages.
+第\ref(packages)节：也**很重要**。介绍包（packages）的概念和功能，并引导安装本书需要使用的包.
 
 ## 什么是R {#what-is-R}
 
-R [@R-base]包含R语言和一个有着强大的统计分析及作图功能的软件系统，由新西兰奥克兰大学的Ross Ihaka和Robert Gentleman共同开发。R语言虽然看起来只能做统计，实际上它麻雀虽小，五脏俱全，编程语言该有的特性它基本都有（[甚至支持OOP](https://adv-r.hadley.nz/oo.html)）。
+R [@R-base]包含R语言和一个有着强大的统计分析及作图功能的软件系统，由新西兰奥克兰大学的Ross Ihaka和Robert Gentleman共同开发。R语言虽然看起来只能做统计，实际上它麻雀虽小，五脏俱全，编程语言该有的特性它基本都有（[甚至支持OOP（面向对象编程）](https://adv-r.hadley.nz/oo.html)）。
 
-不要看到编程就害怕。**使用R不需要懂编程**。R语言最重要的特性之一就是，不懂编程的人可以轻松地用R自带的和和其他人编写的packages，实现99.9%他们想要的功能（主要是数据分析）；而懂编程的人可以轻松地使用编程，在R中实现他们想要的剩余的0.1%的功能。同时，R的编程语言非常简单易学，尤其是对于编程0基础的R使用者。像SAS，STATA这些商业软件，只能实现你95%的需求，且剩下的5%很难解决。
+不要看到编程就害怕。**使用R不需要懂编程**。R语言最重要的特性之一就是，不懂编程的人可以轻松地用R自带的和和其他人编写的包，实现99.9%他们想要的功能（主要是数据分析）；而懂编程的人可以轻松地使用编程，在R中实现他们想要的剩余的0.1%的功能。同时，R的编程语言非常简单易学，尤其是对于编程0基础的R使用者。像SAS，STATA这些商业软件，只能实现你95%的需求，且剩下的5%很难解决。
 
 安装了R之后，你可以在其自带的“R”软件中使用（也可以直接在命令行使用），但是那个软件对新手的友好度不如RStudio. RStudio [@R-rstudio]是广受欢迎的R语言IDE（集成开发环境），它的一系列功能使得编辑，整理和管理R代码和项目方便很多。
 
@@ -59,11 +59,11 @@ R有巨大的用户社群[^users]，其中有很多热心的使用者/开发者�
 
 [^users]: https://blog.revolutionanalytics.com/2014/04/a-world-map-of-r-user-activity.html
 
-R（RStudio）非常稳定。闪退率极低，而且就算闪退了，也完全不会丢失上一次工作中的数据，可以无缝衔接上一次的工作。我经常会创建一两个实验用的R script文件，我不需要把它们命名并保存在我的工作目录，重启RStudio的时候仍然可以使用它们。总之，关闭RStudio的时候，你甚至可以什么都不用保存；关闭，重启，无忧无虑地继续工作。设置Git后体验更佳。
+R（RStudio）非常稳定。闪退率极低，而且就算闪退了，也完全不会丢失上一次工作中的数据，可以无缝衔接上一次的工作。我经常会创建一两个实验用的R脚本文件，我不需要把它们命名并保存在我的工作目录，重启RStudio的时候仍然可以使用它们。总之，关闭RStudio的时候，你甚至可以什么都不用保存；关闭，重启，无忧无虑地继续工作。设置Git后体验更佳。
 
-R与其它编程语言/数据库之间有很好的接口。比如`dbplyr` package帮助你方便地把R和数据库（MySQL, MariaDB, Postgres等等）连接起来，`reticulate`可以让你在R中使用Python.
+R与其它编程语言/数据库之间有很好的接口。比如`dbplyr` 包帮助你方便地把R和数据库（MySQL, MariaDB, Postgres等等）连接起来，`reticulate`可以让你在R中使用Python.
 
-Python（NumPy和SciPy）是近几年兴起的数据分析处理方案。在数据分析的应用中，R比Python历史更悠久，因此积攒了很多很棒的packages（包）。一般来说，python的强项是数据挖掘，而R的强项是数据分析，它们都是强大的工具。不用担心需要在二者之中做选择，因为`rpy`, `reticulate`等packages可以让你在python中使用R，在R中使用python，详情请见第\@ref(python)章。无论你是数据分析零基础，还是有python数据分析的经验，都能从本书中获益。
+Python（NumPy和SciPy）是近几年兴起的数据分析处理方案。在数据分析的应用中，R比Python历史更悠久，因此积攒了很多很棒的包。一般来说，python的强项是数据挖掘，而R的强项是数据分析，它们都是强大的工具。不用担心需要在二者之中做选择，因为`rpy`, `reticulate`等包可以让你在python中使用R，在R中使用python，详情请见第\@ref(python)章。无论你是数据分析零基础，还是有python数据分析的经验，都能从本书中获益。
 
 至于Excel，它的定位原本就是办公（而不是学术）软件，数据分析的严谨性，大数据的处理能力，和功能的拓展非常局限。有五分之一的使用了Excel的遗传学论文，数据都出现了偏差 [@Ziemann2016Gene-name-errors]。对了，Excel和SPSS和其它一些软件绘图的时候，坐标轴和/或图例中的文字竟然不能上下标！
 
@@ -82,12 +82,12 @@ Python（NumPy和SciPy）是近几年兴起的数据分析处理方案。在数�
 - [爆栈网 (StackOverflow)](https://stackoverflow.com)是著名计算机技术问答网站（如果你有其他的编程语言基础，一定对它不陌生）。查找问题的时候加上`[R]`，这样搜索结果就都是与R相关的了（为了进一步缩小搜索范围，可以加上其他的tag，比如`[ggplot]`, `[dplyr]`)。注意，提问和回答的时候话语尽量精简，不要在任何地方出现与问题无关的话（包括客套话如“谢谢”），了解更多请查看其[新手向导](https://stackoverflow.com/tour)。
 - 由谢益辉大佬在2006年（竟然比爆栈网更早！）创建的[“统计之都”论坛](https://d.cosx.org)，是做的最好的一个面向R的中文论坛（但是客观地来说活跃度还是没爆栈网高）同样不要忘记读新手指引。
 
-#### Reference类（查找特定的function/package的用法） {#reference}
+#### Reference类（查找特定的函数/包的用法） {#reference}
 
-- 直接在R console中执行`?`+`函数名称或者package名或者其它`，比如`?t.test`，可以查看对应函数的帮助文档（documentation）有一些函数/packages/内容名需要加上引号，比如`?"+"`, `?"if"`。有一个相似的方法，`??`+`"内容"`可以根据你输入的内容搜索帮助文档，比如`??"probability distrubution"`。
-- [RDocumentation](https://www.rdocumentation.org)上有基础R语言和来自CRAN，GitHub和Bioconductor上的近18000个packages的所有的函数的说明和使用例。
-- 有些packages会在官网或github仓库提供使用说明，比如[tidyverse](https://www.tidyverse.org)
-- 有些packages会提供vignettes，它们类似于使用指南，相比于函数的帮助文档更为详细且更易读。`vignette()`（无参数）以查看全部可用vignettes. 试试`vignette("Sweave")`。
+- 直接在R console中执行`?`+`函数名称或者包名或者其它`，比如`?t.test`，可以查看对应函数的帮助文档（documentation）有一些函数/包/内容名需要加上引号，比如`?"+"`, `?"if"`。有一个相似的方法，`??`+`"内容"`可以根据你输入的内容搜索帮助文档，比如`??"probability distrubution"`。
+- [RDocumentation](https://www.rdocumentation.org)上有基础R语言和来自CRAN，GitHub和Bioconductor上的近18000个包的所有的函数的说明和使用例。
+- 有些包会在官网或github仓库提供使用说明，比如[tidyverse](https://www.tidyverse.org)
+- 有些包会提供vignettes，它们类似于使用指南，相比于函数的帮助文档更为详细且更易读。`vignette()`（无参数）以查看全部可用vignettes. 试试`vignette("Sweave")`。
 
 #### 教程和书籍类（用来系统地学习） {#manual-type}
 
@@ -102,7 +102,7 @@ Python（NumPy和SciPy）是近几年兴起的数据分析处理方案。在数�
 #### 速查表 (Cheat sheets)（用来贴墙上） {#cheatsheet}
 
 - [R Reference Card 2.0 by Mayy Baggott & Tom Short](https://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf)以及其第一版的[中文翻译](https://cran.r-project.org/doc/contrib/Liu-R-refcard.pdf)
-- [RStudio Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/)包含了RStudio IDE和常用packages的cheat sheets。2019年版的合集[在这里](https://www.rstudio.com/wp-content/uploads/2019/01/Cheatsheets_2019.pdf)。
+- [RStudio Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/)包含了RStudio IDE和常用包的cheat sheets。2019年版的合集[在这里](https://www.rstudio.com/wp-content/uploads/2019/01/Cheatsheets_2019.pdf)。
 
 ### 进阶资源
 
@@ -146,7 +146,7 @@ Help是查看帮助文档的区域。试试在console中执行`?hist`或`?norm`.
 
 Files是查看文件的区域，默认显示工作目录 (working directory)。
 
-Packages是安装/查看/更新packages（包）的区域。详情请看第\@ref(packages)章。
+Packages是安装/查看/更新包的区域。详情请看第\ref(packages)章。
 
 ### 执行代码 {#execution}
 
@@ -256,7 +256,7 @@ abline(model, lwd = 2)
 
 这时，把RStudio关掉，再重新启动，你会发现你的图没了。因此我们需要记录和管理代码。
 
-初学者经常会在console里写代码，或者从别处复制代码，并执行。这对于一次性的计算（比如写统计学作业时用R来算线性回归的参数）很方便，但是如果你想保存你的工作，你需要把它们记录在R script文件里。如果你的工作比较复杂，比如有一个excel表格作为数据源，然后在R中用不同的方法分析，导出图表，这时候你会希望这些文件都集中在一起。你可以使用R Project来管理它们。
+初学者经常会在console里写代码，或者从别处复制代码，并执行。这对于一次性的计算（比如写统计学作业时用R来算线性回归的参数）很方便，但是如果你想保存你的工作，你需要把它们记录在R脚本(R script)文件里。如果你的工作比较复杂，比如有一个excel表格作为数据源，然后在R中用不同的方法分析，导出图表，这时候你会希望这些文件都集中在一起。你可以使用R Project来管理它们。
 
 1. 左上角File > New Project
 2. 点选New Directory > New Project 
@@ -276,13 +276,13 @@ dev.off()
 
 一个正态分布的图像便以pdf格式保存在了工作目录。你可以在系统的文件管理器中，或是在RStudio右下角File面板中找到。
 
-#### 写/保存/运行R script {#Rscript}
+#### 写/保存/运行R脚本 {#Rscript}
 
-在console中运行代码，代码得不到保存。代码需保存在R script文件（后缀为`.R`）里。
+在console中运行代码，代码得不到保存。代码需保存在R脚本文件（后缀为`.R`）里。
 
 `Ctrl`+`Shift`+`N`（Mac是`command`+`shift`+`N`）以创建新R script. 
 
-然后就可以写R script. 合理使用换行可以使你的代码更易读。`#`是注释符号。每行第一个`#`以及之后的内容不会被执行。之前的例子，可以写成这样：
+然后就可以写R脚本. 合理使用换行可以使你的代码更易读。`#`是注释符号。每行第一个`#`以及之后的内容不会被执行。之前的例子，可以写成这样：
 
 ```{r eval=FALSE}
 # 读取数据
@@ -300,11 +300,11 @@ abline(model, lwd = 2) # 回归线
 
 `Ctrl`+`Shift`+`Enter` (`command`+`shift`+`return`)以从头到尾执行所有代码。
 
-通过`Ctrl`（+`Shift`）+`Enter`执行代码时，相关代码相当于是从R script中复制到了console并执行。
+通过`Ctrl`（+`Shift`）+`Enter`执行代码时，相关代码相当于是从R脚本中复制到了console并执行。
 
 试试复制并执行以上代码吧。
 
-`Ctrl`+`S` (`command`+`S`)以保存R script. 保存后会在工作目录找到你新保存的`.R`文件。重新启动RStudio的时候，便可以打开对应的R script文件以重复/继续之前的工作。
+`Ctrl`+`S` (`command`+`S`)以保存R脚本. 保存后会在工作目录找到你新保存的`.R`文件。重新启动RStudio的时候，便可以打开对应的R脚本以重复/继续之前的工作。
 
 ### RStudio的额外福利[^fuli] {rstudio-fuli}
 
@@ -330,7 +330,7 @@ x <- tibble(nums = c(1, 2, 3),
 
 #### 自动完成/建议提示/快速帮助 (autocomplete) {#autocomplete}
 
-当你在console或者source区输入三个[^auto-3]或更多字母时，R会提示以这三个字母开头的所有对象（不一定是packages里的函数，也可以自定义的向量，列表，函数等等）。
+当你在console或者source区输入三个[^auto-3]或更多字母时，R会提示以这三个字母开头的所有对象（不一定是包里的函数，也可以自定义的向量，列表，函数等等）。
 
 [^auto-3]: 可以在设置中，自定义所需输入的最少字母和延迟。默认分别为3个字母和250毫秒。
 
@@ -342,7 +342,7 @@ knitr::include_graphics("img/rstudio-fuli/auto.png")
 
 注意，当你选中一个函数时，右边会有一个黄色的方框，提示这个函数的参数名称和参数选项，以及一段简要说明。如果你这时想查看此函数的帮助文档，按`F1`即可。
 
-通过`$`符号取子集的时候，R会自动列举所有可用的子集（用于列表和数据框/tibble）。类似地，在package名后输入`::`准备调用函数时，R会列举该package所有可用函数（见第\@ref(pkg-colon)节）。
+通过`$`符号取子集的时候，R会自动列举所有可用的子集（用于列表和数据框/tibble）。类似地，在包名后输入`::`准备调用函数时，R会列举该包所有可用函数（见第\@ref(pkg-colon)节）。
 
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics("img/rstudio-fuli/auto-sub.png")
@@ -352,7 +352,7 @@ knitr::include_graphics("img/rstudio-fuli/auto-sub.png")
 
 #### 快速插入标题 {#heading-insert}
 
-当一份R script文件写得很长的时候，用注释+横线作为小标题把整个文件分割成很多块可以增强易读性：
+当一份R脚本文件写得很长的时候，用注释+横线作为小标题把整个文件分割成很多块可以增强易读性：
 
 ```{r}
 # foo ---------------------------------------------------------------------
@@ -382,7 +382,7 @@ knitr::include_graphics('img/rstudio-fuli/heading-nav.png')
 
 当你通过`函数名` + `(`“开启”一次运算时，从这里开始到*这个函数所对应的*反括号，即`)`之前的内容，即使再多，都只是这个函数的参数。
 
-当你在R script里敲击`Ctrl`+`Enter`时，光标所在的位置的那一句指令将会被执行（无需在那一句的开头，可以在那一句之中的任何位置）；如果那句命令不完整，会在console中用`+`提示（见下一小节）。
+当你在R脚本中敲击`Ctrl`+`Enter`时，光标所在的位置的那一句指令将会被执行（无需在那一句的开头，可以在那一句之中的任何位置）；如果那句命令不完整，会在console中用`+`提示（见下一小节）。
 
 单句与单句之间必须换行，或者用分号（`;`）连接：
 
@@ -446,39 +446,39 @@ prompt消失的主要原因是你的代码没有写完，比如括号不完整�
 
 便可以完成计算。
 
-## 安装和使用packages (包) {#packages}
+## 安装和使用包 (packages) {#packages}
 
-### Package是什么，为什么使用它们？{#packages-what}
+### 包是什么，为什么使用它们？{#packages-what}
 
-Package是别人写好的在R中运行的程序（以及附带的数据和文档），你可以免费安装和使用它们。
+包是别人写好的在R中运行的程序（以及附带的数据和文档），你可以免费安装和使用它们。
 
-Packages可以增加在基础R语言中没有的功能，可以精简你代码的语句，或是提升使用体验。比如有个叫做`tikzDevice`的package可以将R中的图表导出成tikz语法的矢量图，方便在LaTeX中使用。本书的编写和排版也是使用R中的一个叫做`bookdown`的package完成的.  
+包可以增加在基础R语言中没有的功能，可以精简你代码的语句，或是提升使用体验。比如有个叫做`tikzDevice`的包可以将R中的图表导出成tikz语法的矢量图，方便在LaTeX中使用。本书的编写和排版也是使用R中的一个叫做`bookdown`的包完成的.  
 
-这个课程主要是学习`tidyverse`这个package，
+这个课程主要是学习`tidyverse`这个包，
 
-### 如何安装packages {#package-install}
+### 如何安装包 {#packages-install}
 
-首先我们安装tidyverse（**很重要，本书接下来的部分都要使用这个package**）：
+首先我们安装tidyverse（**很重要，本书接下来的部分都要使用这个包**）：
 
 ```{r eval=FALSE}
 install.packages("tidyverse")
 ```
 
-在console中运行以上代码，R就会从[CRAN](https://cran.r-project.org)中下载tidyverse并安装到你电脑上的默认位置。因此安装packages需要网络连接。
+在console中运行以上代码，R就会从[CRAN](https://cran.r-project.org)中下载tidyverse并安装到你电脑上的默认位置。因此安装包需要网络连接。
 
-如果想安装多个packages，你可以一行一行地安装，或是把多个packages的名字合成一列，同时安装，比如：
+如果想安装多个包，你可以一行一行地安装，或是把多个包的名字合成一列，同时安装，比如：
 
 ```{r eval=FALSE}
 install.packages(c("nycflights13", "gapminder", "Lahman")
 ```
 
-绝大多数的packages都能用这个方法安装，因为它们是被存储在CRAN上的。Bioconductor packages请看第\@ref(Bioconductor)节。
+绝大多数的包都能用这个方法安装，因为它们是被存储在CRAN上的。Bioconductor 包请看第\@ref(Bioconductor)节。
 
-### 如何使用packages {#package-use}
+### 如何使用包 {#packages-use}
 
-#### 加载packages {#pkg-load}
+#### 加载包 {#pkg-load}
 
-安装packages后，有两种方法使用它们。以`tidyverse`为例：
+安装包后，有两种方法使用它们。以`tidyverse`为例：
 
 ```{r eval=FALSE}
 library('tidyverse')
@@ -488,13 +488,13 @@ library('tidyverse')
 require('tidyverse')
 ```
 
-两者的效果很大程度上都是一样的，都可以用来读取**单个**package。它们的不同，以及如何通过一行指令读取多个packages，请参看第\@ref(require-and-library)节。
+两者的效果很大程度上都是一样的，都可以用来读取**单个**包。它们的不同，以及如何通过一行指令读取多个包，请参看第\@ref(require-and-library)节。
 
-每次重启R的时候，上一次使用的packages都会被清空，所以需要重新读取。因此我们要在R script里面记录此script需要使用的packages（这个特性可以帮助你养成好习惯：当你把你的代码分享给别人的时候，要保证在别人的电脑上也能正常运行，就必须要指明要使用哪些packages）.[^another-reason]
+每次重启R的时候，上一次使用的包都会被清空，所以需要重新读取。因此我们要在R脚本里面记录此script需要使用的包（这个特性可以帮助你养成好习惯：当你把你的代码分享给别人的时候，要保证在别人的电脑上也能正常运行，就必须要指明要使用哪些包）.[^another-reason]
 
-[^another-reason]: 另一个主要原因是，寻找对象时，R需要搜索所有已加载的packages，而且，packages都被加载在RAM里，因此加载过多的packages会使R显著变慢。（虽然有一些开挂的方法）
+[^another-reason]: 另一个主要原因是，寻找对象时，R需要搜索所有已加载的包，而且，包都被加载在RAM里，因此加载过多的包会使R显著变慢。（虽然有一些开挂的方法）
 
-#### 使用packages里的内容 {#pkg-colon}
+#### 使用包里的内容 {#pkg-colon}
 
 刚才加载`tidyverse`的时候，你也许注意到了这样一条提示：
 
@@ -504,7 +504,7 @@ require('tidyverse')
 ✖ dplyr::lag()    masks stats::lag()
 ```
 
-这是因为R本来自带了一个叫做`stats`的package，有俩函数名曰`filter()`和`lag()`，而`dplyr`（`tidyverse`的一部分）也有同名的俩函数，把原来的覆盖了。所以它提示你，当你使用`filter()`和`lag()`时，使用的是`dplyr`的版本，而不是原来`stats`里的。
+这是因为R本来自带了一个叫做`stats`的包，有俩函数名曰`filter()`和`lag()`，而`dplyr`（`tidyverse`的一部分）也有同名的俩函数，把原来的覆盖了。所以它提示你，当你使用`filter()`和`lag()`时，使用的是`dplyr`的版本，而不是原来`stats`里的。
 
 这不意味着`stats`里的这两个函数就不能用了。要使用他们，用这个格式就好了：
 
@@ -512,28 +512,28 @@ require('tidyverse')
 stats::filter()
 ```
 
-同样的道理也适用于其他的packages. 你可以通过
+同样的道理也适用于其他的包. 你可以通过
 
 ```{r eval=FALSE}
 dplyr::filter()
 ```
 
-使用`dplyr`版本的`filter()`。虽然这是个好习惯，但是很少人这么做（除非你是开发者）。Python里每使用一次NumPy里的函数都要加上`np_`的前缀，虽然严谨，但是麻烦。R的一大便利之处就是使用packages里的内容时，不强制要求指定packages的名称。如果函数/对象名称有重叠，以packages的加载顺序决定优先度；最近（即最后）被加载的package里的函数/对象胜出，而其余的要通过`packageName::object`的形式调取。
+使用`dplyr`版本的`filter()`。虽然这是个好习惯，但是很少人这么做（除非你是开发者）。Python里每使用一次NumPy里的函数都要加上`np_`的前缀，虽然严谨，但是麻烦。R的一大便利之处就是使用包里的内容时，不强制要求指定包的名称。如果函数/对象名称有重叠，以包的加载顺序决定优先度；最近（即最后）被加载的包里的函数/对象胜出，而其余的要通过`packageName::object`的形式调取。
 
-#### 更新和卸载packages {#update-and-uninstall}
+#### 更新和卸载包 {#update-and-uninstall}
 
-更新：`update.packages()`；卸载：`remove.packages()`；两者皆可在RStudio右下角的Packages区进行操作。
+更新：`update.packages()`；卸载：`remove.packages()`；两者皆可在RStudio右下角的Package区进行操作。
 
-### 其它 {#package-misc}
+### 其它 {#packages-misc}
 
 这小节是一些不重要的内容，因此**可酌情跳到下一章（第\@ref(vectors-logicals-and-functions)章）。**
 
-#### `library()`和`require`的区别；如何使用一行指令读取多个packages {#require-and-library}
+#### `library()`和`require`的区别；如何使用一行指令读取多个包 {#require-and-library}
 
-1. `require()`会返回一个逻辑值。如果package读取成功，会返回`TRUE`，反之则返回`FALSE`.
-2. `library()`如果读取试图读取不存在的package，会直接造成错误(error)，而`require()`不会造成错误，只会产生一个警告(warning).
+1. `require()`会返回一个逻辑值。如果包读取成功，会返回`TRUE`，反之则返回`FALSE`.
+2. `library()`如果读取试图读取不存在的包，会直接造成错误(error)，而`require()`不会造成错误，只会产生一个警告(warning).
 
-这意味着`require()`可以用来同时读取多个packages：
+这意味着`require()`可以用来同时读取多个包：
 
 ```{r eval=FALSE}
 lapply(c("dplyr","ggplot2"), require, character.only = TRUE)
@@ -544,16 +544,16 @@ lapply(c("dplyr","ggplot2"), require, c = T)
 ```
 
 
-#### 安装Bioconductor packages {#Bioconductor}
+#### 安装Bioconductor中的包 {#Bioconductor}
 
-[Bioconductor](https://bioconductor.org)是一系列用于生物信息学的R packages. 截止2019年7月2日，共有1741个可用的bioconductor packages. 它们没有被存储在CRAN上，因此需要用特殊的方法安装。首先，安装一系列Bioconductor的核心packages（可能需要几分钟）：
+[Bioconductor](https://bioconductor.org)是一系列用于生物信息学的R包. 截止2019年7月2日，共有1741个可用的bioconductor包. 它们没有被存储在CRAN上，因此需要用特殊的方法安装。首先，安装一系列Bioconductor的核心包（可能需要几分钟）：
 
 ```{r eval=FALSE}
 source("http://bioconductor.org/biocLite.R")
 biocLite()
 ```
 
-然后，通过`biocLite()`函数安装其它packages，比如：
+然后，通过`biocLite()`函数安装其它包，比如：
 
 ```{r eval=FALSE}
 biocLite("RforProteomics")

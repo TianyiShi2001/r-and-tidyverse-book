@@ -110,7 +110,7 @@ d1 <- as_tibble(d) #其中d是一个dataframe
 
 ### 取子集（抓取行，列）{tbl-subsetting}
 
-本小节介绍了如何使用`dplyr` package提供的`select()`, `filter()`, `slice`取子集方法
+本小节介绍了如何使用`dplyr` 包提供的`select()`, `filter()`, `slice`取子集方法
 更详细的解释请看第\@ref(tbl-subsetting-more)节。
 
 这一小节我们使用名为`iris`的数据。它是一个dataframe，所以首先把它转换成tibble. 
@@ -158,26 +158,38 @@ iris_1 <- select(iris, -(3:4))
 # 等同于
 iris_1 <- select(iris, -Petal.Length, -Petal.Width)
 
-iris_1[1:3, ] # 节省空间，1至3行。
+head(iris_1, 3) # 节省空间，1至3行。
 ```
 
 使用“正”的变量名称进行抓取，可以额外地按照你指定的顺序重排（抓取的是同样的数据，但是`Species`被放在第一列）：
 
 ```{r}
 iris_1 <- select(iris, Species, Sepal.Length, Sepal.Width)
-iris_1[1:3, ]
+head(iris_1, 3)
 ```
 
-你还可以通过变量名的命名规则（比如首末字符）来抓取：
+你还可以在变量名之间使用冒号：
+
+```{r}
+iris_1 <- select(iris, Species, Sepal.Length:Petal.Length)
+head(iris_1, 3)
+```
+
+你还可以通过变量名的命名规则来抓取：
 
 ```{r}
 iris_2 <- select(iris, Species, ends_with("Length"))
-iris_2[1:3, ]
+head(iris_2, 3)
 ```
 
 ```{r}
-iris_2 <- select(iris, Species, starts_with("Sepal"))
-iris_2[1:3, ]
+iris_3 <- select(iris, Species, starts_with("Sepal"))
+head(iris_3, 3)
+```
+
+```{r}
+iris_4 <- select(iris, contains("al.Le"))
+iris_4
 ```
 
 #### 通过`filter()`，抓取满足某（些）条件的行
@@ -205,13 +217,6 @@ iris_3
 iris_random <- slice(iris, sample(length(iris[[1]]), 4, replace = FALSE)) # 随机四朵鸢尾花
 iris_random
 ```
-
-还可以使用`[n, ]`的形式抓取（不需要知道为什么）：
-
-```{r}
-iris[1:3, ] # 第1到第3行
-```
-
 
 ### 使用`arrange()`排序tibble
 
@@ -298,12 +303,12 @@ head(women_bmi_2, 4)
 ### 使用`rename()`重命名变量
 
 ```{r}
-women_bmi_1[1:3, ]
+head(women_bmi_1, 3)
 ```
 
 ```{r}
 women_bmi_3 <- dplyr::rename(women_bmi_1,  body_mass_index = BMI)
-women_bmi_3[1:3, ]
+head(women_bmi_3, 3)
 ```
 
 

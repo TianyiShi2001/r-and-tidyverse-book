@@ -267,7 +267,9 @@ list(x = x, `sort(x)` = sort(x), `rank(x)` = rank(x), `order(x)` = order(x), `re
 
 `order()`是一个原向量索引的排序，使得`x[order(x)] = sort(x)`，即`x[order(x)] = x[c(3, 1, 2, 5, 4)] = c(-89, -10, 5, 84, 999) = sort(x)`
 
-至于文字向量，英文按`a, b, c, d, e, ...`排列，中文按笔画排列。
+至于文字向量，英文按`a, b, c, d, e, ...`排列，中文按笔画排列。[^specialchars]
+
+[^specialchars]: 标点符号、特殊字符也有固定的排列顺序，通过这串代码查看常用符号的排列顺序：`` sort(strsplit("`~!@#$%^&*()_+-=[]\\{}|:;'\",./<>?", "")[[1]]) ``
 
 #### 元素的命名 {#naming-elements}
 
@@ -280,6 +282,14 @@ scores
 
 ```{r}
 scores[c("math", "bpc")] == scores[c(2, 5)]
+```
+
+#### `unique()`函数 {#unique}
+
+`unique()`函数用来列举一个向量中所含的，不重复的元素，比如：
+
+```{r collapse=TRUE}
+unique(c("a", "a", "x", "x", "x", "b", "h", "h"))
 ```
 
 
@@ -385,7 +395,7 @@ class(NA)
 
 #### `class`, `type`, `mode`和`storage mode`
 
-其实`class`根本不是基础的数据类型。学过编程的应该猜到了，此`class`类似于OOP里的“类”，是“高层”的类型。你可以随意篡改`class`：
+其实`class`根本不是基础的数据类型。学过编程的应该猜到了，此`class`正是R里OOP意义上的“类”，是“抽象”的类型。你可以随意篡改`class`：
 
 ```{r}
 x <- c("Joe", "Lynne", "Pat")
@@ -442,6 +452,16 @@ typeof(x); class(x)
 |国际标准格式的日期+时间|`as.POSIXct("2018-01-02 12:23:56")`|`double`|`numeric`|`double` |`POSIXt`  |
 |日期                  |as.date("2018-01-02")|`double`|`numeric` |`double`        |`date`    |
 
+#### `str()`函数
+
+`str()`函数用于简明扼要地展示一个R对象的结构（对列表尤其好用）。
+
+```{r}
+random_list <- list(first = 1, 2, status = list(has_girlfriend = FALSE, had_girlfriend = FALSE), v = c(3, 4), list(a = "aspirin", z = "zymogen", date = c(y = 2019, m = 8, d = 1)))
+str(random_list)
+```
+
+
 ## 数学表达和运算 {#math}
 
 ### 数的表达 {#math-notation}
@@ -461,6 +481,12 @@ sqrt(3)^2-3
 ```
 
 浮点数的计算比精确数的计算快很多。如果你是第一次接触浮点数，可能会觉得它不可靠，其实不然。在绝大多数情况下，牺牲的这一点点精度并不会影响计算结果（我们的结果所需要的有效数字一般不会超过10位；只有当两个非常，非常大且数值相近对数字相减才会出现较大的误差）。
+
+>作为R版版主，应该做到在凌晨四点突然被人叫醒问你10乘以0.1等于几，你在1秒钟之内斩钉截铁回答，不是1！[^equals1]
+
+——谢益辉
+
+[^equals]: 虽然，`0.1 * 10 - 1 == 0`确实为`TRUE`. 
 
 #### 科学计数法 {#math-sci-not}
 
@@ -1071,7 +1097,9 @@ R中常用的关系运算符有：
 
 这些关系运算符只能用于(atomic) vectors, 不能用于其他类型的R对象；`indentical()`函数可以用于所有类型的对象，用来确认两者是否完全一致。
 
-使用关系运算符进行计算，会产生逻辑值作为结果。比如：
+使用关系运算符进行计算，会产生逻辑值作为结果。比如：[^cos]
+
+[^cos]: 尽量避免直接对浮点数进行比较。COS版主都要被逼疯了（https://d.cosx.org/d/106794-106794/3 ）
 
 ```{r}
 x <- 5
@@ -1655,13 +1683,13 @@ mapply(rnorm, 3, c(1, 10, 100), c(.1, .5, 1))
 
 想一想，`Map(rep, list(c(1,2), list(2,3)), 3)`的计算结果是什么？
 
-### `foreach` package：for循环的进化版 {#foreach}
+### `foreach` 包：for循环的进化版 {#foreach}
 
 ```{r include=FALSE}
 require(doParallel)
 ```
 
-`foreach` package相对于base R中的for循环增加了一些特性，不过最实用的是支持多核并行运算：
+`foreach` 包相对于base R中的for循环增加了一些特性，不过最实用的是支持多核并行运算：
 
 #### 使用多内核进行计算 {#parallel}
 
@@ -1695,7 +1723,7 @@ x
 
 相比单核for循环的39秒，开挂（四核）的速度是12秒（计算量越大，优势越明显）。
 
-### `purrr` package中的`apply`家族函数替代品和进化产物 {#apply-purrr}
+### `purrr` 包中的`apply`家族函数替代品和进化产物 {#apply-purrr}
 
 这一节需要使用`purrr`, 它是`tidyverse`的一部分。所以我们首先要加载它：
 
@@ -1938,7 +1966,9 @@ speak(cat)
 
 ```
 
-利用闭包，可以使用R中的简易的函数实现伪·OOP（R中的真·OOP是有三种，S3，R6和S4），这是本章末的[挑战题](#test-base-challenge)。
+利用闭包，可以使用R中的简易的函数实现伪·OOP[^real-OOP]，这是本章末的[挑战题](#test-base-challenge)。
+
+[^real-OOP]: R中的真·OOP是有三种，S3，R6和S4。
 
 ### 关于`...` {#about-dot-dot-dot}
 
@@ -2106,6 +2136,8 @@ system.time({
   2 + 1
 })
 ```
+
+
 
 ## 小测 {#test-base}
 
