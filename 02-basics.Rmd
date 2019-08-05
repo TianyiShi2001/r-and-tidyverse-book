@@ -694,7 +694,7 @@ is.na(NaN)
 
 ### 简易的统计学计算 {#statistics}
 
-本节简要解释了R中的基础统计学函数，t分布，t检验和$\chi^2$检验。统计学方法并不是本书的重点，因此可以酌情跳到第\@ref(logical-operation)节（基础内容：逻辑）或第\@ref{list}节（进阶内容：列表）。
+本节简要解释了R中的基础统计学函数，t分布，t检验和$\chi^2$检验。统计学方法并不是本书的重点，因此可以酌情跳到第\@ref(logical-operation)节（基础内容：逻辑）或第\@ref(list)节（进阶内容：列表）。
 
 #### 基础 {#stats-basics}
 
@@ -1059,7 +1059,7 @@ B
 
 ## 逻辑 {#logical-operation}
 
-### 逻辑值 {logical-values}
+### 逻辑值 {#logical-values}
 
 逻辑值有三个。`TRUE`, `FALSE`和`NA`.
 

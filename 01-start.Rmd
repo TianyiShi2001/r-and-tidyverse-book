@@ -302,7 +302,7 @@ abline(model, lwd = 2) # 回归线
 
 `Ctrl`+`S` (`command`+`S`)以保存R脚本. 保存后会在工作目录找到你新保存的`.R`文件。重新启动RStudio的时候，便可以打开对应的R脚本以重复/继续之前的工作。
 
-### RStudio的额外福利[^fuli] {rstudio-fuli}
+### RStudio的额外福利[^fuli] {#rstudio-fuli}
 
 [^fuli]: 一切福利都可以在设置中取消。
 
@@ -551,9 +551,9 @@ biocLite()
 biocLite("RforProteomics")
 ```
 
-## 小测 {test-intro}
+## 小测 {#test-intro}
 
-### 基础 {test-intro-basics}
+### 基础 {#test-intro-basics}
 
 1. **计算。**
 
@@ -577,7 +577,7 @@ z <- x <- 0; x + 1
 z <- {x <- 0; x + 1}
     ```
 
-### 进阶 {test-intro-advanced}
+### 进阶 {#test-intro-advanced}
 
 建议读完下一章再来做这些题。
 

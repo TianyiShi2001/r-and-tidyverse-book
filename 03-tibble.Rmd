@@ -5,7 +5,7 @@ nocite: |
 
 # dataframe和tibble {#tibble}
 
-### 本章内容速览
+### 本章内容速览 {-#tibble-overview}
 
 R中的多变量数据的标准保存形式是dataframe；tibble是dataframe的进化版。
 
@@ -108,7 +108,7 @@ d1 <- as_tibble(d) #其中d是一个dataframe
 
 数据转换，简而言之，就是对原有数据的展示形式做一些改动，因而把最有意义的数值以易读的形式展示出来，或是为绘图做准备。
 
-### 取子集（抓取行，列）{tbl-subsetting}
+### 取子集（抓取行，列）{#tbl-subsetting}
 
 本小节介绍了如何使用`dplyr` 包提供的`select()`, `filter()`, `slice`取子集方法
 更详细的解释请看第\@ref(tbl-subsetting-more)节。

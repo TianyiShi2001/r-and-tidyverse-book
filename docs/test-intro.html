@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4.2 基础 | R与tidyverse——数据分析入门</title>
+  <title>1.5 小测 | R与tidyverse——数据分析入门</title>
   <meta name="description" content="这是一本R与tidyverse的入门教程" />
   <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4.2 基础 | R与tidyverse——数据分析入门" />
+  <meta property="og:title" content="1.5 小测 | R与tidyverse——数据分析入门" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="TianyiShi2001/r-and-tidyverse-book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4.2 基础 | R与tidyverse——数据分析入门" />
+  <meta name="twitter:title" content="1.5 小测 | R与tidyverse——数据分析入门" />
   
   <meta name="twitter:description" content="这是一本R与tidyverse的入门教程" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="g-phil.html">
-<link rel="next" href="g-intermediate.html">
+<link rel="prev" href="packages.html">
+<link rel="next" href="vectors-logicals-and-functions.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -358,22 +358,58 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="g-basics" class="section level2">
-<h2><span class="header-section-number">4.2</span> 基础</h2>
-<div id="g-basics-grammar" class="section level3">
-<h3><span class="header-section-number">4.2.1</span> 基本语法</h3>
+<div id="test-intro" class="section level2">
+<h2><span class="header-section-number">1.5</span> 小测</h2>
+<div id="test-intro-basics" class="section level3">
+<h3><span class="header-section-number">1.5.1</span> 基础</h3>
+<ol style="list-style-type: decimal">
+<li><p><strong>计算。</strong></p>
+<p>z`等于多少？为什么？</p>
+<pre class="sourceCode r"><code class="sourceCode r">z &lt;-<span class="st"> </span>{
+  x &lt;-<span class="st"> </span><span class="dv">6</span>
+  y &lt;-<span class="st"> </span><span class="dv">7</span>
+  x <span class="op">+</span><span class="st"> </span>y
+  x &lt;-<span class="st"> </span><span class="dv">10</span>
+  x <span class="op">-</span><span class="st"> </span>y
+  x <span class="op">*</span><span class="st"> </span>y
+}</code></pre>
+<p>下面两行代码的运算结果分别是什么？z的值分别是什么？</p>
+<pre class="sourceCode r"><code class="sourceCode r">z &lt;-<span class="st"> </span>x &lt;-<span class="st"> </span><span class="dv">0</span>; x <span class="op">+</span><span class="st"> </span><span class="dv">1</span>
+z &lt;-<span class="st"> </span>{x &lt;-<span class="st"> </span><span class="dv">0</span>; x <span class="op">+</span><span class="st"> </span><span class="dv">1</span>}</code></pre></li>
+</ol>
 </div>
-<div id="g-basics-types" class="section level3">
-<h3><span class="header-section-number">4.2.2</span> 图像类型</h3>
+<div id="test-intro-advanced" class="section level3">
+<h3><span class="header-section-number">1.5.2</span> 进阶</h3>
+<p>建议读完下一章再来做这些题。</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>计算。</strong></p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(
+  <span class="kw">seq</span>(<span class="dv">10</span>, <span class="dv">100</span>, <span class="dv">10</span>),
+  <span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>, <span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">3</span>))
+)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>({
+  x &lt;-<span class="st"> </span><span class="dv">5</span>
+  x &lt;-<span class="st"> </span>x<span class="op">+</span><span class="dv">5</span>
+  x
+}, <span class="dv">3</span>)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">greet &lt;-<span class="st"> </span><span class="cf">function</span>(t) {
+  <span class="kw">print</span>(<span class="cf">if</span>(t <span class="op">==</span><span class="st"> </span><span class="dv">1</span>) <span class="st">&quot;早上好&quot;</span> <span class="cf">else</span> <span class="cf">if</span>(t <span class="op">==</span><span class="st"> </span><span class="dv">2</span>) <span class="st">&quot;下午好&quot;</span> <span class="cf">else</span> <span class="cf">if</span>(t <span class="op">==</span><span class="st"> </span><span class="dv">3</span>) <span class="st">&quot;晚上好&quot;</span>)
+}
+
+t =<span class="st"> </span><span class="dv">1</span>; <span class="kw">greet</span>(t)
+t =<span class="st"> </span><span class="dv">3</span>; <span class="kw">greet</span>(t)</code></pre></li>
+</ol>
+
 </div>
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="g-phil.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="g-intermediate.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="packages.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="vectors-logicals-and-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -403,7 +439,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/TianyiShi2001/r-and-tidyverse-book/04-plot.Rmd",
+"link": "https://github.com/TianyiShi2001/r-and-tidyverse-book/01-start.Rmd",
 "text": "Github"
 },
 "history": {
