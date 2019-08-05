@@ -21,6 +21,7 @@ output:
     latex_engine: "xelatex"
     includes:
       in_header: partials/header.tex
+always_allow_html: yes
 bibliography: ["bib/main.bib", "bib/packages.bib"]
 biblio-style: ieeetr
 link-citations: true

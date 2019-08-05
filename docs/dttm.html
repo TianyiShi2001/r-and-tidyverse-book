@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-08-01" />
+<meta name="date" content="2019-08-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="factors.html">
-<link rel="next" href="python.html">
+<link rel="next" href="test-wrangle.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -47,6 +47,9 @@
 
 
 
+<script src="libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<link href="libs/str_view-0.1.0/str_view.css" rel="stylesheet" />
+<script src="libs/str_view-binding-1.4.0/str_view.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143786170-1"></script>
 <script>
@@ -193,14 +196,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.3.2" data-path="interface-basics-project.html"><a href="interface-basics-project.html#execution"><i class="fa fa-check"></i><b>1.3.2</b> 执行代码</a></li>
 <li class="chapter" data-level="1.3.3" data-path="interface-basics-project.html"><a href="interface-basics-project.html#code-management"><i class="fa fa-check"></i><b>1.3.3</b> 管理代码</a></li>
 <li class="chapter" data-level="1.3.4" data-path="interface-basics-project.html"><a href="interface-basics-project.html#rstudiofuli-rstudio-fuli"><i class="fa fa-check"></i><b>1.3.4</b> RStudio的额外福利 {rstudio-fuli}</a></li>
-<li class="chapter" data-level="1.3.5" data-path="interface-basics-project.html"><a href="interface-basics-project.html#useful-shortcuts"><i class="fa fa-check"></i><b>1.3.5</b> 一些实用的快捷键</a></li>
-<li class="chapter" data-level="1.3.6" data-path="interface-basics-project.html"><a href="interface-basics-project.html#misc"><i class="fa fa-check"></i><b>1.3.6</b> 其他</a></li>
+<li class="chapter" data-level="1.3.5" data-path="interface-basics-project.html"><a href="interface-basics-project.html#misc"><i class="fa fa-check"></i><b>1.3.5</b> 其他</a></li>
 </ul></li>
-<li class="chapter" data-level="1.4" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>1.4</b> 安装和使用packages (包)</a><ul>
-<li class="chapter" data-level="1.4.1" data-path="packages.html"><a href="packages.html#packages-what"><i class="fa fa-check"></i><b>1.4.1</b> Package是什么，为什么使用它们？</a></li>
-<li class="chapter" data-level="1.4.2" data-path="packages.html"><a href="packages.html#package-install"><i class="fa fa-check"></i><b>1.4.2</b> 如何安装packages</a></li>
-<li class="chapter" data-level="1.4.3" data-path="packages.html"><a href="packages.html#package-use"><i class="fa fa-check"></i><b>1.4.3</b> 如何使用packages</a></li>
-<li class="chapter" data-level="1.4.4" data-path="packages.html"><a href="packages.html#package-misc"><i class="fa fa-check"></i><b>1.4.4</b> 其它</a></li>
+<li class="chapter" data-level="1.4" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>1.4</b> 安装和使用包 (packages)</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="packages.html"><a href="packages.html#packages-what"><i class="fa fa-check"></i><b>1.4.1</b> 包是什么，为什么使用它们？</a></li>
+<li class="chapter" data-level="1.4.2" data-path="packages.html"><a href="packages.html#packages-install"><i class="fa fa-check"></i><b>1.4.2</b> 如何安装包</a></li>
+<li class="chapter" data-level="1.4.3" data-path="packages.html"><a href="packages.html#packages-use"><i class="fa fa-check"></i><b>1.4.3</b> 如何使用包</a></li>
+<li class="chapter" data-level="1.4.4" data-path="packages.html"><a href="packages.html#packages-misc"><i class="fa fa-check"></i><b>1.4.4</b> 其它</a></li>
 </ul></li>
 <li class="chapter" data-level="1.5" data-path="-test-intro.html"><a href="-test-intro.html"><i class="fa fa-check"></i><b>1.5</b> 小测 {test-intro}</a><ul>
 <li class="chapter" data-level="1.5.1" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-basics"><i class="fa fa-check"></i><b>1.5.1</b> 基础 {test-intro-basics}</a></li>
@@ -226,12 +228,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3.3" data-path="math.html"><a href="math.html#statistics"><i class="fa fa-check"></i><b>2.3.3</b> 简易的统计学计算</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>2.4</b> 列表 (list)</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="list.html"><a href="list.html#list-index"><i class="fa fa-check"></i><b>2.4.1</b> list的索引/取子集</a></li>
+<li class="chapter" data-level="2.4.1" data-path="list.html"><a href="list.html#list-index"><i class="fa fa-check"></i><b>2.4.1</b> 列表的索引/取子集</a></li>
 <li class="chapter" data-level="2.4.2" data-path="list.html"><a href="list.html#list-combine-unlist"><i class="fa fa-check"></i><b>2.4.2</b> 合并与拆解</a></li>
 <li class="chapter" data-level="2.4.3" data-path="list.html"><a href="list.html#list-other-properties-operations"><i class="fa fa-check"></i><b>2.4.3</b> 其他性质和操作</a></li>
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="matrix-array.html"><a href="matrix-array.html"><i class="fa fa-check"></i><b>2.5</b> 数组 (array)和矩阵 (matrix)简介</a><ul>
-<li class="chapter" data-level="2.5.1" data-path="matrix-array.html"><a href="matrix-array.html#matrix-array-naming"><i class="fa fa-check"></i><b>2.5.1</b> 给matrices和arrays命名</a></li>
+<li class="chapter" data-level="2.5.1" data-path="matrix-array.html"><a href="matrix-array.html#matrix-array-naming"><i class="fa fa-check"></i><b>2.5.1</b> 给矩阵和列表的维度命名</a></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="logical-operation.html"><a href="logical-operation.html"><i class="fa fa-check"></i><b>2.6</b> 逻辑</a><ul>
 <li class="chapter" data-level="2.6.1" data-path="logical-operation.html"><a href="logical-operation.html#-logical-values"><i class="fa fa-check"></i><b>2.6.1</b> 逻辑值 {logical-values}</a></li>
@@ -243,8 +245,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.7.2" data-path="control-flow.html"><a href="control-flow.html#kickstart"><i class="fa fa-check"></i><b>2.7.2</b> 无编程基础者的快速指南</a></li>
 <li class="chapter" data-level="2.7.3" data-path="control-flow.html"><a href="control-flow.html#control-flow-rigorous"><i class="fa fa-check"></i><b>2.7.3</b> 严谨版</a></li>
 <li class="chapter" data-level="2.7.4" data-path="control-flow.html"><a href="control-flow.html#apply"><i class="fa fa-check"></i><b>2.7.4</b> 如何避免for循环——<code>apply()</code>家族函数</a></li>
-<li class="chapter" data-level="2.7.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.7.5</b> <code>foreach</code> package：for循环的进化版</a></li>
-<li class="chapter" data-level="2.7.6" data-path="control-flow.html"><a href="control-flow.html#apply-purrr"><i class="fa fa-check"></i><b>2.7.6</b> <code>purrr</code> package中的<code>apply</code>家族函数替代品和进化产物</a></li>
+<li class="chapter" data-level="2.7.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.7.5</b> <code>foreach</code> 包：for循环的进化版</a></li>
+<li class="chapter" data-level="2.7.6" data-path="control-flow.html"><a href="control-flow.html#apply-purrr"><i class="fa fa-check"></i><b>2.7.6</b> <code>purrr</code> 包中的<code>apply</code>家族函数替代品和进化产物</a></li>
 </ul></li>
 <li class="chapter" data-level="2.8" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.8</b> 函数</a><ul>
 <li class="chapter" data-level="2.8.1" data-path="functions.html"><a href="functions.html#functions-in-R"><i class="fa fa-check"></i><b>2.8.1</b> R中的函数</a></li>
@@ -312,12 +314,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2.1" data-path="import-export.html"><a href="import-export.html#data-import"><i class="fa fa-check"></i><b>5.2.1</b> 导入</a></li>
 <li class="chapter" data-level="5.2.2" data-path="import-export.html"><a href="import-export.html#section-5.2.2"><i class="fa fa-check"></i><b>5.2.2</b> 导出</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="strings.html"><a href="strings.html"><i class="fa fa-check"></i><b>5.3</b> 字符串的处理</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="strings.html"><a href="strings.html#section-5.3.1"><i class="fa fa-check"></i><b>5.3.1</b> 基础</a></li>
-<li class="chapter" data-level="5.3.2" data-path="strings.html"><a href="strings.html#str_sub"><i class="fa fa-check"></i><b>5.3.2</b> 使用<code>str_sub()</code>取子集</a></li>
-<li class="chapter" data-level="5.3.3" data-path="strings.html"><a href="strings.html#str_c"><i class="fa fa-check"></i><b>5.3.3</b> 使用<code>str_c()</code>进行字符串的合并</a></li>
-<li class="chapter" data-level="5.3.4" data-path="strings.html"><a href="strings.html#str_view"><i class="fa fa-check"></i><b>5.3.4</b> 使用<code>str_view()</code>来查找特定的字符组合</a></li>
-<li class="chapter" data-level="5.3.5" data-path="strings.html"><a href="strings.html#str_detect"><i class="fa fa-check"></i><b>5.3.5</b> <code>str_detect()</code></a></li>
+<li class="chapter" data-level="5.3" data-path="strings.html"><a href="strings.html"><i class="fa fa-check"></i><b>5.3</b> 文本和字符串</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="strings.html"><a href="strings.html#stringrstringi"><i class="fa fa-check"></i><b>5.3.1</b> <code>stringr</code>和<code>stringi</code>包</a></li>
+<li class="chapter" data-level="5.3.2" data-path="strings.html"><a href="strings.html#section-5.3.2"><i class="fa fa-check"></i><b>5.3.2</b> 基础</a></li>
+<li class="chapter" data-level="5.3.3" data-path="strings.html"><a href="strings.html#section-5.3.3"><i class="fa fa-check"></i><b>5.3.3</b> 正则表达式</a></li>
+<li class="chapter" data-level="5.3.4" data-path="strings.html"><a href="strings.html#section-5.3.4"><i class="fa fa-check"></i><b>5.3.4</b> 寻找匹配</a></li>
+<li class="chapter" data-level="5.3.5" data-path="strings.html"><a href="strings.html#section-5.3.5"><i class="fa fa-check"></i><b>5.3.5</b> 子集和修改</a></li>
+<li class="chapter" data-level="5.3.6" data-path="strings.html"><a href="strings.html#section-5.3.6"><i class="fa fa-check"></i><b>5.3.6</b> 合并和分解</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>5.4</b> Factors</a><ul>
 <li class="chapter" data-level="5.4.1" data-path="factors.html"><a href="factors.html#-1"><i class="fa fa-check"></i><b>5.4.1</b> 基础</a></li>
@@ -330,6 +333,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.5.3" data-path="dttm.html"><a href="dttm.html#section-5.5.3"><i class="fa fa-check"></i><b>5.5.3</b> 计算</a></li>
 <li class="chapter" data-level="5.5.4" data-path="factors.html"><a href="factors.html#-1"><i class="fa fa-check"></i><b>5.5.4</b> 在绘图中的应用</a></li>
 </ul></li>
+<li class="chapter" data-level="5.6" data-path="test-wrangle.html"><a href="test-wrangle.html"><i class="fa fa-check"></i><b>5.6</b> 小测</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="python.html"><a href="python.html"><i class="fa fa-check"></i><b>6</b> 与Python的联合使用</a><ul>
 <li class="chapter" data-level="6.1" data-path="reticulate.html"><a href="reticulate.html"><i class="fa fa-check"></i><b>6.1</b> 在R中使用Python: <code>reticulate</code></a></li>
@@ -356,7 +360,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="dttm" class="section level2">
 <h2><span class="header-section-number">5.5</span> 日期和时间</h2>
-<p>日期和时间是一个很令人头疼的话题。不是所有的年都是365天，不是每天都是24小时，不是每分钟都是60秒<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a>。</p>
+<p>日期和时间是一个很令人头疼的话题。不是所有的年都是365天，不是每天都是24小时，不是每分钟都是60秒<a href="#fn29" class="footnote-ref" id="fnref29"><sup>29</sup></a>。</p>
 <p>R自带的日期/时间方法不太好用，因此我们用一个叫做<code>lubridate</code>的package.</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;lubridate&quot;</span>)
 <span class="kw">library</span>(<span class="st">&quot;lubridate&quot;</span>)</code></pre>
@@ -364,7 +368,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">5.5.1</span> ISO标准</h3>
 <p>日期/时间的ISO标准格式是这样的：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">now</span>()</code></pre>
-<pre><code>#&gt; [1] &quot;2019-08-01 19:04:40 CST&quot;</code></pre>
+<pre><code>#&gt; [1] &quot;2019-08-05 18:34:46 CST&quot;</code></pre>
 <p>最后三个字母是时区。</p>
 </div>
 <div id="section-5.5.2" class="section level3">
@@ -372,9 +376,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="section-5.5.2.1" class="section level4">
 <h4><span class="header-section-number">5.5.2.1</span> 现在的日期/时间</h4>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">today</span>()</code></pre>
-<pre><code>#&gt; [1] &quot;2019-08-01&quot;</code></pre>
+<pre><code>#&gt; [1] &quot;2019-08-05&quot;</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">now</span>()</code></pre>
-<pre><code>#&gt; [1] &quot;2019-08-01 19:04:40 CST&quot;</code></pre>
+<pre><code>#&gt; [1] &quot;2019-08-05 18:34:46 CST&quot;</code></pre>
 </div>
 <div id="section-5.5.2.2" class="section level4">
 <h4><span class="header-section-number">5.5.2.2</span> 通过字符串转换</h4>
@@ -404,14 +408,12 @@ C &lt;-<span class="st"> </span><span class="kw">dmy</span>(<span class="st">&qu
 </div>
 <div id="-1" class="section level3">
 <h3><span class="header-section-number">5.5.4</span> 在绘图中的应用</h3>
-
 </div>
 </div>
-<!-- </div> -->
 <div class="footnotes">
 <hr />
-<ol start="24">
-<li id="fn24"><p>闰年为366天；夏令时开始时的那一天只有23小时，结束时为25小时；地球的自转速度在缓慢下降，因此会有“闰秒”。<a href="dttm.html#fnref24" class="footnote-back">↩</a></p></li>
+<ol start="29">
+<li id="fn29"><p>闰年为366天；夏令时开始时的那一天只有23小时，结束时为25小时；地球的自转速度在缓慢下降，因此会有“闰秒”。<a href="dttm.html#fnref29" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>
@@ -420,7 +422,7 @@ C &lt;-<span class="st"> </span><span class="kw">dmy</span>(<span class="st">&qu
         </div>
       </div>
 <a href="factors.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="python.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="test-wrangle.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

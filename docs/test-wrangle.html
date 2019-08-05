@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.4 其它 | R与tidyverse——数据分析入门</title>
+  <title>5.6 小测 | R与tidyverse——数据分析入门</title>
   <meta name="description" content="这是一本R与tidyverse的入门教程" />
   <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.4 其它 | R与tidyverse——数据分析入门" />
+  <meta property="og:title" content="5.6 小测 | R与tidyverse——数据分析入门" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="TianyiShi2001/r-and-tidyverse-book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.4 其它 | R与tidyverse——数据分析入门" />
+  <meta name="twitter:title" content="5.6 小测 | R与tidyverse——数据分析入门" />
   
   <meta name="twitter:description" content="这是一本R与tidyverse的入门教程" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="data-transformation.html">
-<link rel="next" href="test-tibble.html">
+<link rel="prev" href="dttm.html">
+<link rel="next" href="python.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -358,75 +358,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="tibble-misc" class="section level2">
-<h2><span class="header-section-number">3.4</span> 其它</h2>
-<div id="list-and-df" class="section level3">
-<h3><span class="header-section-number">3.4.1</span> list和dataframe/tibble</h3>
-<div id="dataframetibble" class="section level4">
-<h4><span class="header-section-number">3.4.1.1</span> Dataframe和tibble的本质</h4>
-<p>聪明的你也许已经注意到了，dataframe/tibble<a href="data-transformation.html#single-column">抓取单列的方法</a>和list的取子集<a href="list.html#list-index">2.4.1</a>惊人地相似。事实上，dataframe的本质正是list，而tibble也是dataframe（只是进化了一些功能）：</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.list</span>(mpg)</code></pre>
-<pre><code>#&gt; [1] TRUE</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(mpg)</code></pre>
-<pre><code>#&gt; [1] &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</code></pre>
-</div>
-<div id="tbl-subsetting-more" class="section level4">
-<h4><span class="header-section-number">3.4.1.2</span> Dataframe/tibble的取子集</h4>
-<p>Dataframe/tibble既有list的特征，也有matrix的特征。</p>
-<p>当使用一个参数取子集的时候，比如<code>mpg[[3]]</code>，<code>mpg[[&quot;displ&quot;]]</code>或<code>mpg$displ</code>，tibble表现得像list，其中每一列是一个有命名的list element；</p>
-<p>当使用两个参数取子集的时候，比如<code>mpg[3,4]</code>, <code>mpg[3, ]</code>, <code>mpg[ ,4]</code>，tibble表现得像matrix</p>
-<pre class="sourceCode r"><code class="sourceCode r">mpg[<span class="dv">3</span>, ]</code></pre>
-<pre><code>#&gt; # A tibble: 1 x 11
-#&gt;   manufacturer model displ  year   cyl trans  drv     cty   hwy fl    class
-#&gt;   &lt;chr&gt;        &lt;chr&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;  &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
-#&gt; 1 audi         a4        2  2008     4 manua… f        20    31 p     comp…</code></pre>
-</div>
-</div>
-<div id="tibble-df-diff" class="section level3">
-<h3><span class="header-section-number">3.4.2</span> Tidyverse tibble相对于Base R dataframe的优势</h3>
-<p>你可以把<code>mpg</code>转换成dataframe，命名为<code>mpg1</code>，探索两者的区别。</p>
-<pre class="sourceCode r"><code class="sourceCode r">mpg1 &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(mpg)</code></pre>
-<div id="tibble-df-diff-view" class="section level4">
-<h4><span class="header-section-number">3.4.2.1</span> 信息的显示</h4>
-<p>首先，查看<code>print()</code>结果（直接输入<code>mpg1</code>或者<code>print(mpg1)</code>）</p>
-<p>对于行数/列数较多的数据，dataframe的显示结果很乱，而且信息量小。当行数较多时，你需要往上划才能看见变量名；当你的console比较窄或者变量名太多时，dataframe会先显示一部分变量（列），再把剩余的变量（列）显示在后面。这时你需要往上划查看一部分变量，再往上划查看另一部分变量。</p>
-<p><img src="img/tibble/collapse.png" width="100%" style="display: block; margin: auto;" /></p>
-<p>tibble的显示结果一致性强，信息量大。它永远只显示前10行，因此不用往上划就能看到显示的所有信息。它指明了行数和列数，变量的数据类型；当变量较多时，不会影响显示，而是在末尾指明其余的变量名字和数据类型。</p>
-<p><img src="img/tibble/tibble_print.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="tibble-df-diff-simplify" class="section level4">
-<h4><span class="header-section-number">3.4.2.2</span> tibble不会自作主张地化简结果</h4>
-<p>Base R dataframe自带的取子集函数在一些情况下不会化简结果，而在另一些情况下会自动化简结果<a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a>，这经常会造成意想不到而且很难察觉的错误，尤其对于开发者来说简直是噩梦<span class="citation">(Gentleman <a href="#ref-Gentleman2009R-Programming-Bioinfo">2009</a>, 33; Wickham <a href="#ref-Wickham:2019">2019</a>)</span>。对tibble取子集，永远会返回一个tibble；这样可以提高代码的一致性，降低发生错误的可能性。</p>
-<p>请查看<a href="https://adv-r.hadley.nz/subsetting.html#simplify-preserve">Advanced R</a>了解更多。</p>
-</div>
-<div id="tibble-df-diff-compatibility" class="section level4">
-<h4><span class="header-section-number">3.4.2.3</span> tibble与其它<code>tidyverse</code>中的功能兼容性更强</h4>
-<p>很多<code>tidyverse</code>中的神器，如<code>group_by</code>，只能在tibble上使用。</p>
-</div>
-</div>
-</div>
-<h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-Gentleman2009R-Programming-Bioinfo">
-<p>Gentleman, Robert. 2009. <em>R Programming for Bioinformatics</em>. Book. Boca Raton, FL: CRC Press.</p>
-</div>
-<div id="ref-Wickham:2019">
-<p>Wickham, Hadley. 2019. <em>Advanced R</em>. 2nd ed. CRC Press.</p>
-</div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="27">
-<li id="fn27"><p>当选取单个数值或者单列数值的子集时，会返回一个vector，而在其他情况下会返回一个dataframe；试试<code>mpg1 &lt;- as.data.frame(mpg); mpg1[2,3]; mpg1[3:5, 4]; mpg1[3, 4:6]</code>.<a href="tibble-misc.html#fnref27" class="footnote-back">↩</a></p></li>
+<div id="test-wrangle" class="section level2">
+<h2><span class="header-section-number">5.6</span> 小测</h2>
+<ol style="list-style-type: decimal">
+<li><p><em>描绘中华民族的伟大复兴和日、美、英、法等国的走衰。</em></p>
+<p>从<a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.CD">世界银行的网站</a>，我们可以获取到1960年至2018年各国的GDP数据。为了一致性，请使用我做的一份拷贝 (<a href="https://github.com/TianyiShi2001/r-and-tidyverse-book-ans/tree/master/data/GDP/wb" class="uri">https://github.com/TianyiShi2001/r-and-tidyverse-book-ans/tree/master/data/GDP/wb</a> )。</p>
+<p>用这些数据，绘制下面这张面积图：</p>
+<pre class="sourceCode r"><code class="sourceCode r">knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;img/wrangle/gdp.png&quot;</span>)</code></pre>
+<p><img src="img/wrangle/gdp.png" width="2000" style="display: block; margin: auto;" /></p>
+<p>可以无视好看的颜色，标题，坐标轴，国家的排列顺序和其他的小细节。</p></li>
+<li><p><strong>从网页链接中提取信息。</strong></p>
+<pre class="sourceCode r"><code class="sourceCode r">searches &lt;-<span class="st"> </span><span class="kw">c</span>(
+  <span class="st">&quot;https://www.bing.com/search?q=aspirin&amp;go=Submit&amp;qs=ds&amp;form=QBLH&quot;</span>,
+  <span class="st">&quot;https://www.bing.com/search?q=bacillus+thuringiensis&amp;qs=LS&amp;pq=bacillus+th&amp;sc=8-11&amp;cvid=851739CD82A24226B0AF73E8331008EE&amp;FORM=QBRE&amp;sp=1&quot;</span>,
+  <span class="st">&quot;https://www.bing.com/search?q=the+unexamined+life+is+not+worth+living&amp;go=Search&amp;qs=n&amp;form=QBRE&amp;sp=-1&amp;ghc=2&amp;pq=the+unexam&amp;sc=8-10&amp;sk=&amp;cvid=37894978539F4E9EAA213581D6F185AE&quot;</span>, 
+  <span class="st">&quot;https://www.bing.com/search?q=heinz+wilhelm+guderian&amp;qs=AS&amp;pq=heinz+wilh&amp;sk=SC1&amp;sc=4-10&amp;cvid=7C5F3F5769384F70BC0369316EFC51FA&amp;FORM=QBRE&amp;sp=2&amp;ghc=1&quot;</span>
+)</code></pre>
+<p>把这些必应搜索的链接的搜索内容抓取出来（你可以在浏览器里打开这些链接，看看搜索框里的内容是什么）：</p>
+<div id="htmlwidget-3b11cd1d75bf0f92c3c9" style="width:960px;height:100%;" class="str_view html-widget"></div>
+    <script type="application/json" data-for="htmlwidget-3b11cd1d75bf0f92c3c9">{"x":{"html":"<ul>\n  <li>https://www.bing.com/search?q=<span class='match'>aspirin<\/span>&go=Submit&qs=ds&form=QBLH<\/li>\n  <li>https://www.bing.com/search?q=<span class='match'>bacillus+thuringiensis<\/span>&qs=LS&pq=bacillus+th&sc=8-11&cvid=851739CD82A24226B0AF73E8331008EE&FORM=QBRE&sp=1<\/li>\n  <li>https://www.bing.com/search?q=<span class='match'>the+unexamined+life+is+not+worth+living<\/span>&go=Search&qs=n&form=QBRE&sp=-1&ghc=2&pq=the+unexam&sc=8-10&sk=&cvid=37894978539F4E9EAA213581D6F185AE<\/li>\n  <li>https://www.bing.com/search?q=<span class='match'>heinz+wilhelm+guderian<\/span>&qs=AS&pq=heinz+wilh&sk=SC1&sc=4-10&cvid=7C5F3F5769384F70BC0369316EFC51FA&FORM=QBRE&sp=2&ghc=1<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
+<p>进而选择合适的函数把搜索内容做成一个字符向量：</p>
+<pre><code>#&gt; [1] &quot;aspirin&quot;                                
+#&gt; [2] &quot;bacillus thuringiensis&quot;                 
+#&gt; [3] &quot;the unexamined life is not worth living&quot;
+#&gt; [4] &quot;heinz wilhelm guderian&quot;</code></pre></li>
 </ol>
+
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="data-transformation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="test-tibble.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="dttm.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="python.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -456,7 +422,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/TianyiShi2001/r-and-tidyverse-book/03-tibble.Rmd",
+"link": "https://github.com/TianyiShi2001/r-and-tidyverse-book/05-wrangle.Rmd",
 "text": "Github"
 },
 "history": {

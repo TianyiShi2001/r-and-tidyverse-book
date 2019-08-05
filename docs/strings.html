@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5.3 字符串的处理 | R与tidyverse——数据分析入门</title>
+  <title>5.3 文本和字符串 | R与tidyverse——数据分析入门</title>
   <meta name="description" content="这是一本R与tidyverse的入门教程" />
   <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5.3 字符串的处理 | R与tidyverse——数据分析入门" />
+  <meta property="og:title" content="5.3 文本和字符串 | R与tidyverse——数据分析入门" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="TianyiShi2001/r-and-tidyverse-book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5.3 字符串的处理 | R与tidyverse——数据分析入门" />
+  <meta name="twitter:title" content="5.3 文本和字符串 | R与tidyverse——数据分析入门" />
   
   <meta name="twitter:description" content="这是一本R与tidyverse的入门教程" />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="石天熠" />
 
 
-<meta name="date" content="2019-08-01" />
+<meta name="date" content="2019-08-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -47,6 +47,9 @@
 
 
 
+<script src="libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<link href="libs/str_view-0.1.0/str_view.css" rel="stylesheet" />
+<script src="libs/str_view-binding-1.4.0/str_view.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143786170-1"></script>
 <script>
@@ -193,14 +196,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.3.2" data-path="interface-basics-project.html"><a href="interface-basics-project.html#execution"><i class="fa fa-check"></i><b>1.3.2</b> 执行代码</a></li>
 <li class="chapter" data-level="1.3.3" data-path="interface-basics-project.html"><a href="interface-basics-project.html#code-management"><i class="fa fa-check"></i><b>1.3.3</b> 管理代码</a></li>
 <li class="chapter" data-level="1.3.4" data-path="interface-basics-project.html"><a href="interface-basics-project.html#rstudiofuli-rstudio-fuli"><i class="fa fa-check"></i><b>1.3.4</b> RStudio的额外福利 {rstudio-fuli}</a></li>
-<li class="chapter" data-level="1.3.5" data-path="interface-basics-project.html"><a href="interface-basics-project.html#useful-shortcuts"><i class="fa fa-check"></i><b>1.3.5</b> 一些实用的快捷键</a></li>
-<li class="chapter" data-level="1.3.6" data-path="interface-basics-project.html"><a href="interface-basics-project.html#misc"><i class="fa fa-check"></i><b>1.3.6</b> 其他</a></li>
+<li class="chapter" data-level="1.3.5" data-path="interface-basics-project.html"><a href="interface-basics-project.html#misc"><i class="fa fa-check"></i><b>1.3.5</b> 其他</a></li>
 </ul></li>
-<li class="chapter" data-level="1.4" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>1.4</b> 安装和使用packages (包)</a><ul>
-<li class="chapter" data-level="1.4.1" data-path="packages.html"><a href="packages.html#packages-what"><i class="fa fa-check"></i><b>1.4.1</b> Package是什么，为什么使用它们？</a></li>
-<li class="chapter" data-level="1.4.2" data-path="packages.html"><a href="packages.html#package-install"><i class="fa fa-check"></i><b>1.4.2</b> 如何安装packages</a></li>
-<li class="chapter" data-level="1.4.3" data-path="packages.html"><a href="packages.html#package-use"><i class="fa fa-check"></i><b>1.4.3</b> 如何使用packages</a></li>
-<li class="chapter" data-level="1.4.4" data-path="packages.html"><a href="packages.html#package-misc"><i class="fa fa-check"></i><b>1.4.4</b> 其它</a></li>
+<li class="chapter" data-level="1.4" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>1.4</b> 安装和使用包 (packages)</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="packages.html"><a href="packages.html#packages-what"><i class="fa fa-check"></i><b>1.4.1</b> 包是什么，为什么使用它们？</a></li>
+<li class="chapter" data-level="1.4.2" data-path="packages.html"><a href="packages.html#packages-install"><i class="fa fa-check"></i><b>1.4.2</b> 如何安装包</a></li>
+<li class="chapter" data-level="1.4.3" data-path="packages.html"><a href="packages.html#packages-use"><i class="fa fa-check"></i><b>1.4.3</b> 如何使用包</a></li>
+<li class="chapter" data-level="1.4.4" data-path="packages.html"><a href="packages.html#packages-misc"><i class="fa fa-check"></i><b>1.4.4</b> 其它</a></li>
 </ul></li>
 <li class="chapter" data-level="1.5" data-path="-test-intro.html"><a href="-test-intro.html"><i class="fa fa-check"></i><b>1.5</b> 小测 {test-intro}</a><ul>
 <li class="chapter" data-level="1.5.1" data-path="-test-intro.html"><a href="-test-intro.html#-test-intro-basics"><i class="fa fa-check"></i><b>1.5.1</b> 基础 {test-intro-basics}</a></li>
@@ -226,12 +228,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3.3" data-path="math.html"><a href="math.html#statistics"><i class="fa fa-check"></i><b>2.3.3</b> 简易的统计学计算</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>2.4</b> 列表 (list)</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="list.html"><a href="list.html#list-index"><i class="fa fa-check"></i><b>2.4.1</b> list的索引/取子集</a></li>
+<li class="chapter" data-level="2.4.1" data-path="list.html"><a href="list.html#list-index"><i class="fa fa-check"></i><b>2.4.1</b> 列表的索引/取子集</a></li>
 <li class="chapter" data-level="2.4.2" data-path="list.html"><a href="list.html#list-combine-unlist"><i class="fa fa-check"></i><b>2.4.2</b> 合并与拆解</a></li>
 <li class="chapter" data-level="2.4.3" data-path="list.html"><a href="list.html#list-other-properties-operations"><i class="fa fa-check"></i><b>2.4.3</b> 其他性质和操作</a></li>
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="matrix-array.html"><a href="matrix-array.html"><i class="fa fa-check"></i><b>2.5</b> 数组 (array)和矩阵 (matrix)简介</a><ul>
-<li class="chapter" data-level="2.5.1" data-path="matrix-array.html"><a href="matrix-array.html#matrix-array-naming"><i class="fa fa-check"></i><b>2.5.1</b> 给matrices和arrays命名</a></li>
+<li class="chapter" data-level="2.5.1" data-path="matrix-array.html"><a href="matrix-array.html#matrix-array-naming"><i class="fa fa-check"></i><b>2.5.1</b> 给矩阵和列表的维度命名</a></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="logical-operation.html"><a href="logical-operation.html"><i class="fa fa-check"></i><b>2.6</b> 逻辑</a><ul>
 <li class="chapter" data-level="2.6.1" data-path="logical-operation.html"><a href="logical-operation.html#-logical-values"><i class="fa fa-check"></i><b>2.6.1</b> 逻辑值 {logical-values}</a></li>
@@ -243,8 +245,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.7.2" data-path="control-flow.html"><a href="control-flow.html#kickstart"><i class="fa fa-check"></i><b>2.7.2</b> 无编程基础者的快速指南</a></li>
 <li class="chapter" data-level="2.7.3" data-path="control-flow.html"><a href="control-flow.html#control-flow-rigorous"><i class="fa fa-check"></i><b>2.7.3</b> 严谨版</a></li>
 <li class="chapter" data-level="2.7.4" data-path="control-flow.html"><a href="control-flow.html#apply"><i class="fa fa-check"></i><b>2.7.4</b> 如何避免for循环——<code>apply()</code>家族函数</a></li>
-<li class="chapter" data-level="2.7.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.7.5</b> <code>foreach</code> package：for循环的进化版</a></li>
-<li class="chapter" data-level="2.7.6" data-path="control-flow.html"><a href="control-flow.html#apply-purrr"><i class="fa fa-check"></i><b>2.7.6</b> <code>purrr</code> package中的<code>apply</code>家族函数替代品和进化产物</a></li>
+<li class="chapter" data-level="2.7.5" data-path="control-flow.html"><a href="control-flow.html#foreach"><i class="fa fa-check"></i><b>2.7.5</b> <code>foreach</code> 包：for循环的进化版</a></li>
+<li class="chapter" data-level="2.7.6" data-path="control-flow.html"><a href="control-flow.html#apply-purrr"><i class="fa fa-check"></i><b>2.7.6</b> <code>purrr</code> 包中的<code>apply</code>家族函数替代品和进化产物</a></li>
 </ul></li>
 <li class="chapter" data-level="2.8" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.8</b> 函数</a><ul>
 <li class="chapter" data-level="2.8.1" data-path="functions.html"><a href="functions.html#functions-in-R"><i class="fa fa-check"></i><b>2.8.1</b> R中的函数</a></li>
@@ -312,12 +314,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2.1" data-path="import-export.html"><a href="import-export.html#data-import"><i class="fa fa-check"></i><b>5.2.1</b> 导入</a></li>
 <li class="chapter" data-level="5.2.2" data-path="import-export.html"><a href="import-export.html#section-5.2.2"><i class="fa fa-check"></i><b>5.2.2</b> 导出</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="strings.html"><a href="strings.html"><i class="fa fa-check"></i><b>5.3</b> 字符串的处理</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="strings.html"><a href="strings.html#section-5.3.1"><i class="fa fa-check"></i><b>5.3.1</b> 基础</a></li>
-<li class="chapter" data-level="5.3.2" data-path="strings.html"><a href="strings.html#str_sub"><i class="fa fa-check"></i><b>5.3.2</b> 使用<code>str_sub()</code>取子集</a></li>
-<li class="chapter" data-level="5.3.3" data-path="strings.html"><a href="strings.html#str_c"><i class="fa fa-check"></i><b>5.3.3</b> 使用<code>str_c()</code>进行字符串的合并</a></li>
-<li class="chapter" data-level="5.3.4" data-path="strings.html"><a href="strings.html#str_view"><i class="fa fa-check"></i><b>5.3.4</b> 使用<code>str_view()</code>来查找特定的字符组合</a></li>
-<li class="chapter" data-level="5.3.5" data-path="strings.html"><a href="strings.html#str_detect"><i class="fa fa-check"></i><b>5.3.5</b> <code>str_detect()</code></a></li>
+<li class="chapter" data-level="5.3" data-path="strings.html"><a href="strings.html"><i class="fa fa-check"></i><b>5.3</b> 文本和字符串</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="strings.html"><a href="strings.html#stringrstringi"><i class="fa fa-check"></i><b>5.3.1</b> <code>stringr</code>和<code>stringi</code>包</a></li>
+<li class="chapter" data-level="5.3.2" data-path="strings.html"><a href="strings.html#section-5.3.2"><i class="fa fa-check"></i><b>5.3.2</b> 基础</a></li>
+<li class="chapter" data-level="5.3.3" data-path="strings.html"><a href="strings.html#section-5.3.3"><i class="fa fa-check"></i><b>5.3.3</b> 正则表达式</a></li>
+<li class="chapter" data-level="5.3.4" data-path="strings.html"><a href="strings.html#section-5.3.4"><i class="fa fa-check"></i><b>5.3.4</b> 寻找匹配</a></li>
+<li class="chapter" data-level="5.3.5" data-path="strings.html"><a href="strings.html#section-5.3.5"><i class="fa fa-check"></i><b>5.3.5</b> 子集和修改</a></li>
+<li class="chapter" data-level="5.3.6" data-path="strings.html"><a href="strings.html#section-5.3.6"><i class="fa fa-check"></i><b>5.3.6</b> 合并和分解</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>5.4</b> Factors</a><ul>
 <li class="chapter" data-level="5.4.1" data-path="factors.html"><a href="factors.html#-1"><i class="fa fa-check"></i><b>5.4.1</b> 基础</a></li>
@@ -330,6 +333,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.5.3" data-path="dttm.html"><a href="dttm.html#section-5.5.3"><i class="fa fa-check"></i><b>5.5.3</b> 计算</a></li>
 <li class="chapter" data-level="5.5.4" data-path="factors.html"><a href="factors.html#-1"><i class="fa fa-check"></i><b>5.5.4</b> 在绘图中的应用</a></li>
 </ul></li>
+<li class="chapter" data-level="5.6" data-path="test-wrangle.html"><a href="test-wrangle.html"><i class="fa fa-check"></i><b>5.6</b> 小测</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="python.html"><a href="python.html"><i class="fa fa-check"></i><b>6</b> 与Python的联合使用</a><ul>
 <li class="chapter" data-level="6.1" data-path="reticulate.html"><a href="reticulate.html"><i class="fa fa-check"></i><b>6.1</b> 在R中使用Python: <code>reticulate</code></a></li>
@@ -355,13 +359,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="strings" class="section level2">
-<h2><span class="header-section-number">5.3</span> 字符串的处理</h2>
-<p>Base R中有一些用于操作字符串的函数，但是因为各种原因它们很难用。因此我们使用一系列<code>stringr</code>中的函数（<code>stringr</code>是<code>tidyverse</code>的一部分）。<code>stringr</code>的函数都以<code>str_</code>开头。</p>
-<div id="section-5.3.1" class="section level3">
-<h3><span class="header-section-number">5.3.1</span> 基础</h3>
-<div id="section-5.3.1.1" class="section level4">
-<h4><span class="header-section-number">5.3.1.1</span> 引号的使用</h4>
-<p>字符串可以用单引号和双引号包围。在双引号包围的环境下，可以很容易打出英澳常用的单引号和欧洲语言中的“撇”；在单引号包围的环境下，可以很容易打出北美和中国常用的双引号。否则需要使用转义字符 (escape character), <code>\</code>. 以下是几个正确的例子。</p>
+<h2><span class="header-section-number">5.3</span> 文本和字符串</h2>
+<p>文本和字符串是一个复杂的话题。十进制数字永远由0-9构成，并且一个数字永远代表一个值；逻辑值永远只有<code>TRUE</code>, <code>FALSE,</code>NA`；而文本的内容千变万化：它有字母，有数字，有标点符号，有空格空行；不同的语言有不同的书写和标点符号规则；同样的文字可能有不同格式的编码；同样的一个字可能有不同的含义……这使文本的处理比数值的处理丰富且复杂得多。本书仅介绍几个重要的概念，具体的细节请查看相关的文档。</p>
+<div id="stringrstringi" class="section level3">
+<h3><span class="header-section-number">5.3.1</span> <code>stringr</code>和<code>stringi</code>包</h3>
+<p><code>stringi</code>（<a href="http://www.gagolewski.com/software/stringi/" class="uri">http://www.gagolewski.com/software/stringi/</a> ）提供了一系列高效可靠，功能丰富的函数用于处理任何编码的任何语言的文本。<code>stringr</code>（<a href="https://stringr.tidyverse.org" class="uri">https://stringr.tidyverse.org</a> ）是<code>stringi</code>的简洁版，囊括了<code>stringi</code>中对于数据分析最常用的函数。<code>stringr</code>是<code>tidyverse</code>的一部分，因此加载<code>tidyverse</code>的时候会自动加载<code>stringr</code>.</p>
+<p><code>stringr</code>中的函数名都是以<code>str_</code>开头的，后面我们会看到很多例子。</p>
+<p><code>stringr()</code>的cheatsheet（<a href="https://www.rstudio.com/resources/cheatsheets/#stringr" class="uri">https://www.rstudio.com/resources/cheatsheets/#stringr</a> ）非常实用，尤其是第二页的正则表达。一定要把它背熟！</p>
+</div>
+<div id="section-5.3.2" class="section level3">
+<h3><span class="header-section-number">5.3.2</span> 基础</h3>
+<p>字符串必须用单引号和双引号包围。在双引号包围的环境下，可以很容易打出英澳常用的单引号和欧洲语言中的“撇”；在单引号包围的环境下，可以很容易打出北美和中国常用的双引号。否则需要使用转义字符 (escape character), <code>\</code>. 以下是几个正确的例子。</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="st">&quot;&#39;The unexamined life is not worth living&#39; —Socrates&quot;</span></code></pre>
 <pre><code>#&gt; [1] &quot;&#39;The unexamined life is not worth living&#39; —Socrates&quot;</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="st">&quot;La science n&#39;a pas de patrie.&quot;</span></code></pre>
@@ -370,23 +378,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>#&gt; [1] &quot;\&quot;老子曰：“知不知，尚矣；不知知，病矣。\&quot;&quot;</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="st">&#39;l</span><span class="ch">\&#39;</span><span class="st">homme&#39;</span></code></pre>
 <pre><code>#&gt; [1] &quot;l&#39;homme&quot;</code></pre>
-</div>
-<div id="section-5.3.1.2" class="section level4">
-<h4><span class="header-section-number">5.3.1.2</span> 换行符和制表符</h4>
-<p>假设你想显示以下效果：</p>
-<pre><code>#&gt; Guten
-#&gt; 
-#&gt;  Morgen.</code></pre>
-<p>即“Guten”后有两次换行，第三行开头有一个制表符 (TAB)</p>
-<p>你需要的源代码是：</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="st">&quot;Guten</span><span class="ch">\n\n\t</span><span class="st">Morgen.&quot;</span></code></pre>
-<p><code>\n</code> (newline)为换行符，<code>\t</code> (tab)为制表符。所有可用的通过<code>\</code>实现的符号请参见<code>help(&quot;'&quot;)</code>（关于引号的帮助）.</p>
-</div>
-<div id="printwritelines" class="section level4">
-<h4><span class="header-section-number">5.3.1.3</span> <code>print()</code>和<code>writeLines()</code></h4>
-<p><code>print()</code>只显示源码，<code>writeLines()</code>显示真实效果。</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(<span class="kw">c</span>(<span class="st">&quot;Guten</span><span class="ch">\n\n\t</span><span class="st">Morgen.&quot;</span>, <span class="st">&quot;Guten</span><span class="ch">\n\n\t</span><span class="st">Tag&quot;</span>))</code></pre>
-<pre><code>#&gt; [1] &quot;Guten\n\n\tMorgen.&quot; &quot;Guten\n\n\tTag&quot;</code></pre>
+<p>用反斜杠进行转义后，</p>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> &quot;Joe says </span><span class="ch">\&quot;</span><span class="st">Hi!</span><span class="ch">\&quot;</span><span class="st">&quot;</span></code></pre>
+<p>直接<code>print()</code>并不能看出什么名堂：</p>
+<pre class="sourceCode r"><code class="sourceCode r">x <span class="co"># 即`print(x)`</span></code></pre>
+<pre><code>#&gt; [1] &quot;Joe says \&quot;Hi!\&quot;&quot;</code></pre>
+<p>我们要使用<code>writeLines()</code>来查看所有需要转义的地方处理之后的结果：</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">writeLines</span>(x)</code></pre>
+<pre><code>#&gt; Joe says &quot;Hi!&quot;</code></pre>
+<p>如果想表达一个字面意思的反斜杠<code>\</code>，你需要输入<code>&quot;\\&quot;</code>.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">writeLines</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">&quot;</span>)</code></pre>
+<pre><code>#&gt; \</code></pre>
+<p><code>\n</code> (newline)为换行符，<code>\t</code> (tab)为制表符。</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">writeLines</span>(<span class="kw">c</span>(<span class="st">&quot;Guten</span><span class="ch">\n\n\t</span><span class="st">Morgen.&quot;</span>, <span class="st">&quot;Guten</span><span class="ch">\n\n\t</span><span class="st">Tag&quot;</span>))</code></pre>
 <pre><code>#&gt; Guten
 #&gt; 
@@ -394,38 +397,170 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 #&gt; Guten
 #&gt; 
 #&gt;  Tag</code></pre>
-<p>索引和引号消失了，不同的元素之间有换行。</p>
+<p>所有的通过<code>\</code>实现的符号请参见<code>help(&quot;'&quot;)</code>（关于引号的帮助）。此外，请通过<code>stringr()</code>的cheatsheet了解正则表达式中通过<code>\</code>实现的更多patterns.</p>
+</div>
+<div id="section-5.3.3" class="section level3">
+<h3><span class="header-section-number">5.3.3</span> 正则表达式</h3>
+<p>正则表达式 (regular expression, regex, RE)用于匹配符合特定规则/模式 (pattern)的字符组合。</p>
+<p><code>stringr</code>提供了一个帮助理解学习正则表达式的函数，它会高亮所有的匹配字符，<code>str_view_all()</code><a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a>. 它的第一个参数是字符串，第二个是模式（即规则）：</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_view_all</span>(<span class="kw">c</span>(<span class="st">&quot;Plasmodium falciparum&quot;</span>, <span class="st">&quot;Schizosaccharomyces pombe&quot;</span>), <span class="st">&quot;m&quot;</span>)</code></pre>
+<div id="htmlwidget-864640230f358783caad" style="width:960px;height:100%;" class="str_view html-widget"></div>
+<script type="application/json" data-for="htmlwidget-864640230f358783caad">{"x":{"html":"<ul>\n  <li>Plas<span class='match'>m<\/span>odiu<span class='match'>m<\/span> falciparu<span class='match'>m<\/span><\/li>\n  <li>Schizosaccharo<span class='match'>m<\/span>yces po<span class='match'>m<\/span>be<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
+<p>这是最简单的一种匹配：直接用无特殊含义的字母/数字。下面这个例子是用<code>\d</code>匹配字符串中所有的数字：</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_view_all</span>(<span class="st">&quot;as9df2gh5jk7lo2&quot;</span>, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">d&quot;</span>)</code></pre>
+<div id="htmlwidget-559b926a2974adec20d6" style="width:960px;height:100%;" class="str_view html-widget"></div>
+<script type="application/json" data-for="htmlwidget-559b926a2974adec20d6">{"x":{"html":"<ul>\n  <li>as<span class='match'>9<\/span>df<span class='match'>2<\/span>gh<span class='match'>5<\/span>jk<span class='match'>7<\/span>lo<span class='match'>2<\/span><\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
+<p>为什么要输入两个反斜杠呢？因为你要使用<code>\d</code>作为一个regex，而你需要把它通过字符的形式去输入，因此<code>d</code>前面那一个反斜杠需要通过另一个反斜杠去转义。当你实际上输入<code>&quot;\\d&quot;</code>时，R才会把这串字符理解成<code>\d</code>，即<code>writeLines(&quot;\\d&quot;)</code>. 同理，如果你要匹配一个字面的反斜杠，你需要输入<code>\\\\</code>:</p>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> &quot;This is a literal </span><span class="ch">\\</span><span class="st">&quot;</span>
+x</code></pre>
+<pre><code>#&gt; [1] &quot;This is a literal \\&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">writeLines</span>(x)</code></pre>
+<pre><code>#&gt; This is a literal \</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_view_all</span>(x, <span class="st">&quot;</span><span class="ch">\\\\</span><span class="st">&quot;</span>)</code></pre>
+<div id="htmlwidget-27a53cfab649124d3dc2" style="width:960px;height:100%;" class="str_view html-widget"></div>
+<script type="application/json" data-for="htmlwidget-27a53cfab649124d3dc2">{"x":{"html":"<ul>\n  <li>This is a literal <span class='match'>\\<\/span><\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
+<div id="section-5.3.3.1" class="section level4">
+<h4><span class="header-section-number">5.3.3.1</span> 细节</h4>
+<p>正则表达式的规则非常多，R关于正则表达式的官方文档在<code>?rergex</code>，不过我认为RStudio的cheatsheet（和<code>stringr</code>包一起的）更好用（<a href="https://www.rstudio.com/resources/cheatsheets/#stringr" class="uri">https://www.rstudio.com/resources/cheatsheets/#stringr</a> ）。</p>
+<p>虽然刚接触的时候正则表达式很令人头大，但是多背，多用，很快你就能把它们记下来，然后正则表达式将会成为你可靠而强大的助手。</p>
+<p>此外还有一些我认为有用的帮助理解正则表达式的文章（不一定是R语言里的，但是很多内容都是共通的）：</p>
+<ul>
+<li><a href="https://www.cnblogs.com/libin-1/p/7004546.html" class="uri">https://www.cnblogs.com/libin-1/p/7004546.html</a></li>
+</ul>
 </div>
 </div>
-<div id="str_sub" class="section level3">
-<h3><span class="header-section-number">5.3.2</span> 使用<code>str_sub()</code>取子集</h3>
-<pre class="sourceCode r"><code class="sourceCode r">A &lt;-<span class="st"> &quot;D. rerio&quot;</span>
-<span class="kw">str_sub</span>(A, <span class="dv">1</span>, <span class="dv">5</span>) <span class="co"># 第1到第5个字母。计入符号和空格。</span></code></pre>
-<pre><code>#&gt; [1] &quot;D. re&quot;</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_sub</span>(A, <span class="dv">4</span>, <span class="dv">4</span>) <span class="co"># 抓取一个字母</span></code></pre>
-<pre><code>#&gt; [1] &quot;r&quot;</code></pre>
+<div id="section-5.3.4" class="section level3">
+<h3><span class="header-section-number">5.3.4</span> 寻找匹配</h3>
+<p><code>str_detect(string, pattern)</code>: 是否存在匹配？</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_detect</span>(<span class="kw">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;cde&quot;</span>, <span class="st">&quot;bomb&quot;</span>), <span class="st">&quot;b&quot;</span>)</code></pre>
+<pre><code>#&gt; [1]  TRUE FALSE  TRUE</code></pre>
+<p><code>str_which(string, pattern)</code>: 每个元素各有几处匹配？</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_count</span>(<span class="kw">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;cde&quot;</span>, <span class="st">&quot;bomb&quot;</span>, <span class="st">&quot;bbb&quot;</span>), <span class="st">&quot;b&quot;</span>)</code></pre>
+<pre><code>#&gt; [1] 1 0 2 3</code></pre>
+<p><code>str_locate_all(string, pattern)</code>: 查找所有字符串中匹配的位置：</p>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Saccharomyces cerevisiae&quot;</span>, 
+                 <span class="st">&quot;Cannizzaro reaction&quot;</span>, 
+                 <span class="st">&quot;Meerwein-Ponndorf-Verley reduction&quot;</span>, 
+                 <span class="st">&quot;bbb&quot;</span>, 
+                 <span class="st">&quot;acd&quot;</span>)
+<span class="kw">str_view_all</span>(x, <span class="st">&quot;(</span><span class="ch">\\</span><span class="st">w)</span><span class="ch">\\</span><span class="st">1&quot;</span>) <span class="co"># 查找两个连续的字母</span></code></pre>
+<div id="htmlwidget-c8667b8f5f385f01470f" style="width:960px;height:100%;" class="str_view html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c8667b8f5f385f01470f">{"x":{"html":"<ul>\n  <li>Sa<span class='match'>cc<\/span>haromyces cerevisiae<\/li>\n  <li>Ca<span class='match'>nn<\/span>i<span class='match'>zz<\/span>aro reaction<\/li>\n  <li>M<span class='match'>ee<\/span>rwein-Po<span class='match'>nn<\/span>dorf-Verley reduction<\/li>\n  <li><span class='match'>bb<\/span>b<\/li>\n  <li>acd<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_locate_all</span>(x, <span class="st">&quot;(</span><span class="ch">\\</span><span class="st">w)</span><span class="ch">\\</span><span class="st">1&quot;</span>)</code></pre>
+<pre><code>#&gt; [[1]]
+#&gt;      start end
+#&gt; [1,]     3   4
+#&gt; 
+#&gt; [[2]]
+#&gt;      start end
+#&gt; [1,]     3   4
+#&gt; [2,]     6   7
+#&gt; 
+#&gt; [[3]]
+#&gt;      start end
+#&gt; [1,]     2   3
+#&gt; [2,]    12  13
+#&gt; 
+#&gt; [[4]]
+#&gt;      start end
+#&gt; [1,]     1   2
+#&gt; 
+#&gt; [[5]]
+#&gt;      start end</code></pre>
+</div>
+<div id="section-5.3.5" class="section level3">
+<h3><span class="header-section-number">5.3.5</span> 子集和修改</h3>
+<div id="str_sub" class="section level4">
+<h4><span class="header-section-number">5.3.5.1</span> <code>str_sub()</code>：根据索引提取和修改子字符串</h4>
+<p><code>str_sub(string, start = 1, end = -1)</code>: 根据索引提取子字符串。</p>
+<pre class="sourceCode r"><code class="sourceCode r">A &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Danio Rerio&quot;</span>, <span class="st">&quot;Xenopus Laevis&quot;</span>)
+<span class="kw">str_sub</span>(A, <span class="dv">1</span>, <span class="dv">7</span>) <span class="co"># 第1到第7个字符</span></code></pre>
+<pre><code>#&gt; [1] &quot;Danio R&quot; &quot;Xenopus&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_sub</span>(A, <span class="dv">4</span>, <span class="dv">4</span>) <span class="co"># 第4个字符</span></code></pre>
+<pre><code>#&gt; [1] &quot;i&quot; &quot;o&quot;</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_sub</span>(A, <span class="dv">-4</span>, <span class="dv">-2</span>) <span class="co"># 倒数第4至倒数第2</span></code></pre>
-<pre><code>#&gt; [1] &quot;eri&quot;</code></pre>
+<pre><code>#&gt; [1] &quot;eri&quot; &quot;evi&quot;</code></pre>
 <p>我们还可以通过索引修改某个位置的字符：</p>
 <pre class="sourceCode r"><code class="sourceCode r">W &lt;-<span class="st"> &quot;D. Rerio&quot;</span>
 <span class="kw">str_sub</span>(W, <span class="dv">4</span>, <span class="dv">4</span>) &lt;-<span class="st"> </span><span class="kw">str_to_lower</span>(<span class="kw">str_sub</span>(W, <span class="dv">4</span>, <span class="dv">4</span>))
 W</code></pre>
 <pre><code>#&gt; [1] &quot;D. rerio&quot;</code></pre>
+</div>
+<div id="str_subset" class="section level4">
+<h4><span class="header-section-number">5.3.5.2</span> <code>str_subset()</code>：返回有匹配的字符串</h4>
+<p><code>str_subset(string, pattern)</code>：返回有匹配的字符串</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_subset</span>(<span class="kw">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;aaa&quot;</span>, <span class="st">&quot;bbb&quot;</span>, <span class="st">&quot;aca&quot;</span>, <span class="st">&quot;bbc&quot;</span>, <span class="st">&quot;asl&quot;</span>), <span class="st">&quot;a&quot;</span>)</code></pre>
+<pre><code>#&gt; [1] &quot;abc&quot; &quot;aaa&quot; &quot;aca&quot; &quot;asl&quot;</code></pre>
+</div>
+<div id="str_match_allstr_extract_all" class="section level4">
+<h4><span class="header-section-number">5.3.5.3</span> <code>str_match_all()</code>和<code>str_extract_all()</code>：提取匹配的子字符串</h4>
+<p><code>str_match_all(string, pattern)</code>: 第一列是匹配的整个子字符串，第二列和之后是每个正则表达圆括号组对应的子字符串。下面这个例子有两个圆括号组：</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_match_all</span>(sentences[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>], <span class="st">&quot;(a|the) ([^ ]+)&quot;</span>)</code></pre>
+<pre><code>#&gt; [[1]]
+#&gt;      [,1]         [,2]  [,3]    
+#&gt; [1,] &quot;the smooth&quot; &quot;the&quot; &quot;smooth&quot;
+#&gt; 
+#&gt; [[2]]
+#&gt;      [,1]        [,2]  [,3]   
+#&gt; [1,] &quot;the sheet&quot; &quot;the&quot; &quot;sheet&quot;
+#&gt; [2,] &quot;the dark&quot;  &quot;the&quot; &quot;dark&quot; 
+#&gt; 
+#&gt; [[3]]
+#&gt;      [,1]        [,2]  [,3]   
+#&gt; [1,] &quot;the depth&quot; &quot;the&quot; &quot;depth&quot;
+#&gt; [2,] &quot;a well.&quot;   &quot;a&quot;   &quot;well.&quot;
+#&gt; 
+#&gt; [[4]]
+#&gt;      [,1]        [,2] [,3]     
+#&gt; [1,] &quot;a chicken&quot; &quot;a&quot;  &quot;chicken&quot;
+#&gt; [2,] &quot;a rare&quot;    &quot;a&quot;  &quot;rare&quot;   
+#&gt; 
+#&gt; [[5]]
+#&gt;      [,1] [,2] [,3]</code></pre>
+<p><code>str_extract_all(string, pattern)</code>则只会返回整个子字符串。</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_extract_all</span>(sentences[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>], <span class="st">&quot;(a|the) ([^ ]+)&quot;</span>)</code></pre>
+<pre><code>#&gt; [[1]]
+#&gt; [1] &quot;the smooth&quot;
+#&gt; 
+#&gt; [[2]]
+#&gt; [1] &quot;the sheet&quot; &quot;the dark&quot; 
+#&gt; 
+#&gt; [[3]]
+#&gt; [1] &quot;the depth&quot; &quot;a well.&quot;  
+#&gt; 
+#&gt; [[4]]
+#&gt; [1] &quot;a chicken&quot; &quot;a rare&quot;   
+#&gt; 
+#&gt; [[5]]
+#&gt; character(0)</code></pre>
+</div>
+<div id="str_replace_all" class="section level4">
+<h4><span class="header-section-number">5.3.5.4</span> `str_replace_all()：修改匹配的子字符串</h4>
+<p><code>str_replace_all(string, pattern, replacement)</code>: 通过正则表达修改子字符串。这里我们把粗心的种名首字母大写改正成小写，然后再简写属名：</p>
+<pre class="sourceCode r"><code class="sourceCode r">A &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Danio Rerio&quot;</span>, <span class="st">&quot;Xenopus Laevis&quot;</span>)
+p1 &lt;-<span class="st"> &quot;(?&lt;=</span><span class="ch">\\</span><span class="st">s).&quot;</span>
+p2 &lt;-<span class="st"> &quot;[:lower:]+(?=</span><span class="ch">\\</span><span class="st">s)&quot;</span>
+A <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_replace</span>(p1, <span class="kw">str_to_lower</span>(<span class="kw">str_extract</span>(A, p1))) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">str_replace</span>(p2, <span class="st">&quot;.&quot;</span>)</code></pre>
+<pre><code>#&gt; [1] &quot;D. rerio&quot;  &quot;X. laevis&quot;</code></pre>
+<p>来一千个，一万个不标准的，长度不等的双名都不怕。</p>
 <p>和<code>str_to_lower()</code>相关的函数还有<code>str_to_upper()</code>, <code>str_to_title()</code>和<code>str_to_sentence()</code>. 它们的作用都顾名思义。</p>
 </div>
-<div id="str_c" class="section level3">
-<h3><span class="header-section-number">5.3.3</span> 使用<code>str_c()</code>进行字符串的合并</h3>
-<p>一个简单的例子：</p>
+</div>
+<div id="section-5.3.6" class="section level3">
+<h3><span class="header-section-number">5.3.6</span> 合并和分解</h3>
+<div id="str_c" class="section level4">
+<h4><span class="header-section-number">5.3.6.1</span> <code>str_c()</code>：字符串的合并</h4>
+<p><code>str_c(..., sep = &quot;&quot;, collapse = NULL)</code>: 合并字符串：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>)</code></pre>
 <pre><code>#&gt; [1] &quot;abc&quot;</code></pre>
-<p>其中参数<code>sep</code>是被合并的字符串之间的连接字符；它可以是任何字符，包括空格和无（比如上面的例子；用<code>sep = &quot;&quot;</code>表示无连接字符）。</p>
+<p>参数<code>sep</code>是被合并的字符串之间的连接字符；它可以是任何字符，包括空格和无（比如上面的例子；用<code>sep = &quot;&quot;</code>表示无连接字符）。</p>
 <p>当需要合并的字符串保存在一个向量里时，用<code>collapse</code>而不是<code>sep</code>：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_c</span>(<span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>), <span class="dt">collapse =</span> <span class="st">&quot;[x@&quot;</span>)</code></pre>
 <pre><code>#&gt; [1] &quot;a[x@b[x@c&quot;</code></pre>
 <p><code>str_c()</code>可以执行向量化运算：</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_c</span>(<span class="st">&quot;prefix&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>), <span class="st">&quot;suffix&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;-&quot;</span>)</code></pre>
 <pre><code>#&gt; [1] &quot;prefix-a-suffix&quot; &quot;prefix-b-suffix&quot; &quot;prefix-c-suffix&quot;</code></pre>
-<p>所以我们可以这么玩：</p>
 <pre class="sourceCode r"><code class="sourceCode r">混沌在各地的称呼 &lt;-<span class="st"> </span><span class="kw">str_c</span>(
   <span class="kw">str_c</span>(
     <span class="st">&quot;地区&quot;</span>,
@@ -446,7 +581,7 @@ W</code></pre>
 #&gt; 地区：巴蜀 称呼：抄手
 #&gt; 地区：两广 称呼：云吞
 #&gt; 地区：闽台 称呼：扁食</code></pre>
-<p>它还可以和<code>if</code>语句联用：</p>
+<p>它还常与<code>if</code>语句联用：</p>
 <pre class="sourceCode r"><code class="sourceCode r">win &lt;-<span class="st"> </span><span class="dv">2</span>
 score &lt;-<span class="st"> </span><span class="kw">str_c</span>(
   <span class="st">&quot;张三&quot;</span>, 
@@ -459,13 +594,19 @@ score &lt;-<span class="st"> </span><span class="kw">str_c</span>(
 <pre><code>#&gt; 张三输
 #&gt; 李四赢</code></pre>
 </div>
-<div id="str_view" class="section level3">
-<h3><span class="header-section-number">5.3.4</span> 使用<code>str_view()</code>来查找特定的字符组合</h3>
+<div id="str_split-str_split_fixed" class="section level4">
+<h4><span class="header-section-number">5.3.6.2</span> <code>str_split()</code>, <code>str_split_fixed()</code></h4>
 </div>
-<div id="str_detect" class="section level3">
-<h3><span class="header-section-number">5.3.5</span> <code>str_detect()</code></h3>
-<pre class="sourceCode r"><code class="sourceCode r">suomi &lt;-<span class="st"> &quot;Suomen kieli on uralilaisten kielten itämerensuomalaiseen ryhmään kuuluva kieli.&quot;</span></code></pre>
+<div id="str_glue-str_glue_data" class="section level4">
+<h4><span class="header-section-number">5.3.6.3</span> <code>str_glue()</code>, <code>str_glue_data()</code></h4>
 </div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="28">
+<li id="fn28"><p><code>str_view()</code>只会显示第一个匹配，<code>str_view_all()</code>会显示全部。后面讲到的所有以<code>_all</code>结尾的函数都有其对应的非<code>all</code>版本，只会作用于第一个匹配。<a href="strings.html#fnref28" class="footnote-back">↩</a></p></li>
+</ol>
 </div>
             </section>
 
